@@ -1,0 +1,10 @@
+C:\Users\janusdg-win\UCU\Projects\Design04.cydsn\Design04.cyprj|9e3d51cc-9148-4bb2-9e47-6ff67b86ce0f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|3b501712-2eca-496c-8a2a-b7d68645e4da
+C:\Users\janusdg-win\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|9c374222-e6d3-4145-82fe-47146e7debc0
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|ca39af40-d741-4a35-b802-cc3956a8d572
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|4eaab4e6-47c4-4f2e-80b2-10564846a1e5
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|497c10c3-8bfa-4c09-90b3-38e5e48afedb
+C:\Users\janusdg-win\UCU\Projects\Design01.cydsn\Design01.cyprj|0474b69b-5174-46e2-9909-11d8e64e916a
+C:\Users\janusdg-win\UCU\Projects\Design05_PWM.cydsn\Design05_PWM.cyprj|f886c6ec-79ca-4636-af1f-5ef5bcbcd88b
+C:\Users\janusdg-win\UCU\Projects\Design02_Interrapt.cydsn\Design02_Interrapt.cyprj|86f535bc-db13-49ab-ac24-4ce7a89e7a96
+C:\Users\janusdg-win\UCU\Projects\Design03_Bacis_Counter.cydsn\Design03_Bacis_Counter.cyprj|406d701e-1397-46d7-9d57-67d5a8e72cb1

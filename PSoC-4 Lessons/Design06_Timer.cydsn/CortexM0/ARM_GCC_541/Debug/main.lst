@@ -1,0 +1,748 @@
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccAxsZuP.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Timer_Int_Handler,"ax",%progbits
+  20              		.align	2
+  21              		.global	Timer_Int_Handler
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	Timer_Int_Handler, %function
+  25              	Timer_Int_Handler:
+  26              	.LFB35:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** 
+  14:main.c        **** CY_ISR (Timer_Int_Handler)
+  15:main.c        **** {
+  28              		.loc 1 15 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 10B5     		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  16:main.c        ****     uint16 counter = Timer_1_ReadCapture();
+  36              		.loc 1 16 0
+  37 0002 FFF7FEFF 		bl	Timer_1_ReadCapture
+  38              	.LVL0:
+  39 0006 80B2     		uxth	r0, r0
+  40              	.LVL1:
+  17:main.c        ****     
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccAxsZuP.s 			page 2
+
+
+  18:main.c        ****     if (counter > 10000)
+  41              		.loc 1 18 0
+  42 0008 044B     		ldr	r3, .L4
+  43 000a 9842     		cmp	r0, r3
+  44 000c 00D9     		bls	.L2
+  19:main.c        ****     {
+  20:main.c        ****         counter = 10000;
+  45              		.loc 1 20 0
+  46 000e 1800     		movs	r0, r3
+  47              	.LVL2:
+  48              	.L2:
+  21:main.c        ****     }
+  22:main.c        ****     PWM_1_WriteCompare(counter);
+  49              		.loc 1 22 0
+  50 0010 FFF7FEFF 		bl	PWM_1_WriteCompare
+  51              	.LVL3:
+  23:main.c        ****     
+  24:main.c        ****     Timer_1_ClearInterrupt(Timer_1_INTR_MASK_CC_MATCH);
+  52              		.loc 1 24 0
+  53 0014 0220     		movs	r0, #2
+  54 0016 FFF7FEFF 		bl	Timer_1_ClearInterrupt
+  55              	.LVL4:
+  25:main.c        ****  }
+  56              		.loc 1 25 0
+  57              		@ sp needed
+  58 001a 10BD     		pop	{r4, pc}
+  59              	.L5:
+  60              		.align	2
+  61              	.L4:
+  62 001c 10270000 		.word	10000
+  63              		.cfi_endproc
+  64              	.LFE35:
+  65              		.size	Timer_Int_Handler, .-Timer_Int_Handler
+  66              		.section	.text.main,"ax",%progbits
+  67              		.align	2
+  68              		.global	main
+  69              		.code	16
+  70              		.thumb_func
+  71              		.type	main, %function
+  72              	main:
+  73              	.LFB36:
+  26:main.c        **** 
+  27:main.c        **** int main(void)
+  28:main.c        **** {
+  74              		.loc 1 28 0
+  75              		.cfi_startproc
+  76              		@ args = 0, pretend = 0, frame = 0
+  77              		@ frame_needed = 0, uses_anonymous_args = 0
+  78 0000 10B5     		push	{r4, lr}
+  79              		.cfi_def_cfa_offset 8
+  80              		.cfi_offset 4, -8
+  81              		.cfi_offset 14, -4
+  29:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  82              		.loc 1 29 0
+  83              		.syntax divided
+  84              	@ 29 "main.c" 1
+  85 0002 62B6     		CPSIE   i
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccAxsZuP.s 			page 3
+
+
+  86              	@ 0 "" 2
+  30:main.c        ****     
+  31:main.c        ****     PWM_1_Start();
+  87              		.loc 1 31 0
+  88              		.thumb
+  89              		.syntax unified
+  90 0004 FFF7FEFF 		bl	PWM_1_Start
+  91              	.LVL5:
+  32:main.c        ****     
+  33:main.c        ****     Timer_1_Start();
+  92              		.loc 1 33 0
+  93 0008 FFF7FEFF 		bl	Timer_1_Start
+  94              	.LVL6:
+  34:main.c        ****     
+  35:main.c        ****     Timer_Int_StartEx(Timer_Int_Handler);
+  95              		.loc 1 35 0
+  96 000c 0148     		ldr	r0, .L8
+  97 000e FFF7FEFF 		bl	Timer_Int_StartEx
+  98              	.LVL7:
+  99              	.L7:
+ 100 0012 FEE7     		b	.L7
+ 101              	.L9:
+ 102              		.align	2
+ 103              	.L8:
+ 104 0014 00000000 		.word	Timer_Int_Handler
+ 105              		.cfi_endproc
+ 106              	.LFE36:
+ 107              		.size	main, .-main
+ 108              		.text
+ 109              	.Letext0:
+ 110              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 111              		.file 3 "Generated_Source\\PSoC4/Timer_1.h"
+ 112              		.file 4 "Generated_Source\\PSoC4/PWM_1.h"
+ 113              		.file 5 "Generated_Source\\PSoC4/Timer_Int.h"
+ 114              		.section	.debug_info,"",%progbits
+ 115              	.Ldebug_info0:
+ 116 0000 79010000 		.4byte	0x179
+ 117 0004 0400     		.2byte	0x4
+ 118 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 119 000a 04       		.byte	0x4
+ 120 000b 01       		.uleb128 0x1
+ 121 000c C9000000 		.4byte	.LASF23
+ 122 0010 0C       		.byte	0xc
+ 123 0011 22000000 		.4byte	.LASF24
+ 124 0015 D7010000 		.4byte	.LASF25
+ 125 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 126 001d 00000000 		.4byte	0
+ 127 0021 00000000 		.4byte	.Ldebug_line0
+ 128 0025 02       		.uleb128 0x2
+ 129 0026 01       		.byte	0x1
+ 130 0027 06       		.byte	0x6
+ 131 0028 6A010000 		.4byte	.LASF0
+ 132 002c 02       		.uleb128 0x2
+ 133 002d 01       		.byte	0x1
+ 134 002e 08       		.byte	0x8
+ 135 002f 94000000 		.4byte	.LASF1
+ 136 0033 02       		.uleb128 0x2
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccAxsZuP.s 			page 4
+
+
+ 137 0034 02       		.byte	0x2
+ 138 0035 05       		.byte	0x5
+ 139 0036 B0000000 		.4byte	.LASF2
+ 140 003a 02       		.uleb128 0x2
+ 141 003b 02       		.byte	0x2
+ 142 003c 07       		.byte	0x7
+ 143 003d 57010000 		.4byte	.LASF3
+ 144 0041 02       		.uleb128 0x2
+ 145 0042 04       		.byte	0x4
+ 146 0043 05       		.byte	0x5
+ 147 0044 A7000000 		.4byte	.LASF4
+ 148 0048 02       		.uleb128 0x2
+ 149 0049 04       		.byte	0x4
+ 150 004a 07       		.byte	0x7
+ 151 004b 40000000 		.4byte	.LASF5
+ 152 004f 02       		.uleb128 0x2
+ 153 0050 08       		.byte	0x8
+ 154 0051 05       		.byte	0x5
+ 155 0052 00000000 		.4byte	.LASF6
+ 156 0056 02       		.uleb128 0x2
+ 157 0057 08       		.byte	0x8
+ 158 0058 07       		.byte	0x7
+ 159 0059 52000000 		.4byte	.LASF7
+ 160 005d 03       		.uleb128 0x3
+ 161 005e 04       		.byte	0x4
+ 162 005f 05       		.byte	0x5
+ 163 0060 696E7400 		.ascii	"int\000"
+ 164 0064 02       		.uleb128 0x2
+ 165 0065 04       		.byte	0x4
+ 166 0066 07       		.byte	0x7
+ 167 0067 15000000 		.4byte	.LASF8
+ 168 006b 04       		.uleb128 0x4
+ 169 006c C7010000 		.4byte	.LASF9
+ 170 0070 02       		.byte	0x2
+ 171 0071 E501     		.2byte	0x1e5
+ 172 0073 3A000000 		.4byte	0x3a
+ 173 0077 04       		.uleb128 0x4
+ 174 0078 0E000000 		.4byte	.LASF10
+ 175 007c 02       		.byte	0x2
+ 176 007d E601     		.2byte	0x1e6
+ 177 007f 48000000 		.4byte	0x48
+ 178 0083 02       		.uleb128 0x2
+ 179 0084 04       		.byte	0x4
+ 180 0085 04       		.byte	0x4
+ 181 0086 69000000 		.4byte	.LASF11
+ 182 008a 02       		.uleb128 0x2
+ 183 008b 08       		.byte	0x8
+ 184 008c 04       		.byte	0x4
+ 185 008d BA000000 		.4byte	.LASF12
+ 186 0091 02       		.uleb128 0x2
+ 187 0092 01       		.byte	0x1
+ 188 0093 08       		.byte	0x8
+ 189 0094 A2000000 		.4byte	.LASF13
+ 190 0098 02       		.uleb128 0x2
+ 191 0099 08       		.byte	0x8
+ 192 009a 04       		.byte	0x4
+ 193 009b A9010000 		.4byte	.LASF14
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccAxsZuP.s 			page 5
+
+
+ 194 009f 02       		.uleb128 0x2
+ 195 00a0 04       		.byte	0x4
+ 196 00a1 07       		.byte	0x7
+ 197 00a2 CE010000 		.4byte	.LASF15
+ 198 00a6 05       		.uleb128 0x5
+ 199 00a7 B5010000 		.4byte	.LASF26
+ 200 00ab 01       		.byte	0x1
+ 201 00ac 0E       		.byte	0xe
+ 202 00ad 00000000 		.4byte	.LFB35
+ 203 00b1 20000000 		.4byte	.LFE35-.LFB35
+ 204 00b5 01       		.uleb128 0x1
+ 205 00b6 9C       		.byte	0x9c
+ 206 00b7 EC000000 		.4byte	0xec
+ 207 00bb 06       		.uleb128 0x6
+ 208 00bc C1000000 		.4byte	.LASF16
+ 209 00c0 01       		.byte	0x1
+ 210 00c1 10       		.byte	0x10
+ 211 00c2 6B000000 		.4byte	0x6b
+ 212 00c6 00000000 		.4byte	.LLST0
+ 213 00ca 07       		.uleb128 0x7
+ 214 00cb 06000000 		.4byte	.LVL0
+ 215 00cf 35010000 		.4byte	0x135
+ 216 00d3 07       		.uleb128 0x7
+ 217 00d4 14000000 		.4byte	.LVL3
+ 218 00d8 41010000 		.4byte	0x141
+ 219 00dc 08       		.uleb128 0x8
+ 220 00dd 1A000000 		.4byte	.LVL4
+ 221 00e1 4D010000 		.4byte	0x14d
+ 222 00e5 09       		.uleb128 0x9
+ 223 00e6 01       		.uleb128 0x1
+ 224 00e7 50       		.byte	0x50
+ 225 00e8 01       		.uleb128 0x1
+ 226 00e9 32       		.byte	0x32
+ 227 00ea 00       		.byte	0
+ 228 00eb 00       		.byte	0
+ 229 00ec 0A       		.uleb128 0xa
+ 230 00ed 29000000 		.4byte	.LASF27
+ 231 00f1 01       		.byte	0x1
+ 232 00f2 1B       		.byte	0x1b
+ 233 00f3 5D000000 		.4byte	0x5d
+ 234 00f7 00000000 		.4byte	.LFB36
+ 235 00fb 18000000 		.4byte	.LFE36-.LFB36
+ 236 00ff 01       		.uleb128 0x1
+ 237 0100 9C       		.byte	0x9c
+ 238 0101 35010000 		.4byte	0x135
+ 239 0105 0B       		.uleb128 0xb
+ 240 0106 6900     		.ascii	"i\000"
+ 241 0108 01       		.byte	0x1
+ 242 0109 25       		.byte	0x25
+ 243 010a 5D000000 		.4byte	0x5d
+ 244 010e 01       		.byte	0x1
+ 245 010f 07       		.uleb128 0x7
+ 246 0110 08000000 		.4byte	.LVL5
+ 247 0114 59010000 		.4byte	0x159
+ 248 0118 07       		.uleb128 0x7
+ 249 0119 0C000000 		.4byte	.LVL6
+ 250 011d 65010000 		.4byte	0x165
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccAxsZuP.s 			page 6
+
+
+ 251 0121 08       		.uleb128 0x8
+ 252 0122 12000000 		.4byte	.LVL7
+ 253 0126 71010000 		.4byte	0x171
+ 254 012a 09       		.uleb128 0x9
+ 255 012b 01       		.uleb128 0x1
+ 256 012c 50       		.byte	0x50
+ 257 012d 05       		.uleb128 0x5
+ 258 012e 03       		.byte	0x3
+ 259 012f 00000000 		.4byte	Timer_Int_Handler
+ 260 0133 00       		.byte	0
+ 261 0134 00       		.byte	0
+ 262 0135 0C       		.uleb128 0xc
+ 263 0136 82010000 		.4byte	.LASF17
+ 264 013a 82010000 		.4byte	.LASF17
+ 265 013e 03       		.byte	0x3
+ 266 013f 4D01     		.2byte	0x14d
+ 267 0141 0C       		.uleb128 0xc
+ 268 0142 96010000 		.4byte	.LASF18
+ 269 0146 96010000 		.4byte	.LASF18
+ 270 014a 04       		.byte	0x4
+ 271 014b 5501     		.2byte	0x155
+ 272 014d 0C       		.uleb128 0xc
+ 273 014e 7D000000 		.4byte	.LASF19
+ 274 0152 7D000000 		.4byte	.LASF19
+ 275 0156 03       		.byte	0x3
+ 276 0157 4701     		.2byte	0x147
+ 277 0159 0C       		.uleb128 0xc
+ 278 015a 76010000 		.4byte	.LASF20
+ 279 015e 76010000 		.4byte	.LASF20
+ 280 0162 04       		.byte	0x4
+ 281 0163 3201     		.2byte	0x132
+ 282 0165 0C       		.uleb128 0xc
+ 283 0166 6F000000 		.4byte	.LASF21
+ 284 016a 6F000000 		.4byte	.LASF21
+ 285 016e 03       		.byte	0x3
+ 286 016f 3201     		.2byte	0x132
+ 287 0171 0D       		.uleb128 0xd
+ 288 0172 2E000000 		.4byte	.LASF22
+ 289 0176 2E000000 		.4byte	.LASF22
+ 290 017a 05       		.byte	0x5
+ 291 017b 18       		.byte	0x18
+ 292 017c 00       		.byte	0
+ 293              		.section	.debug_abbrev,"",%progbits
+ 294              	.Ldebug_abbrev0:
+ 295 0000 01       		.uleb128 0x1
+ 296 0001 11       		.uleb128 0x11
+ 297 0002 01       		.byte	0x1
+ 298 0003 25       		.uleb128 0x25
+ 299 0004 0E       		.uleb128 0xe
+ 300 0005 13       		.uleb128 0x13
+ 301 0006 0B       		.uleb128 0xb
+ 302 0007 03       		.uleb128 0x3
+ 303 0008 0E       		.uleb128 0xe
+ 304 0009 1B       		.uleb128 0x1b
+ 305 000a 0E       		.uleb128 0xe
+ 306 000b 55       		.uleb128 0x55
+ 307 000c 17       		.uleb128 0x17
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccAxsZuP.s 			page 7
+
+
+ 308 000d 11       		.uleb128 0x11
+ 309 000e 01       		.uleb128 0x1
+ 310 000f 10       		.uleb128 0x10
+ 311 0010 17       		.uleb128 0x17
+ 312 0011 00       		.byte	0
+ 313 0012 00       		.byte	0
+ 314 0013 02       		.uleb128 0x2
+ 315 0014 24       		.uleb128 0x24
+ 316 0015 00       		.byte	0
+ 317 0016 0B       		.uleb128 0xb
+ 318 0017 0B       		.uleb128 0xb
+ 319 0018 3E       		.uleb128 0x3e
+ 320 0019 0B       		.uleb128 0xb
+ 321 001a 03       		.uleb128 0x3
+ 322 001b 0E       		.uleb128 0xe
+ 323 001c 00       		.byte	0
+ 324 001d 00       		.byte	0
+ 325 001e 03       		.uleb128 0x3
+ 326 001f 24       		.uleb128 0x24
+ 327 0020 00       		.byte	0
+ 328 0021 0B       		.uleb128 0xb
+ 329 0022 0B       		.uleb128 0xb
+ 330 0023 3E       		.uleb128 0x3e
+ 331 0024 0B       		.uleb128 0xb
+ 332 0025 03       		.uleb128 0x3
+ 333 0026 08       		.uleb128 0x8
+ 334 0027 00       		.byte	0
+ 335 0028 00       		.byte	0
+ 336 0029 04       		.uleb128 0x4
+ 337 002a 16       		.uleb128 0x16
+ 338 002b 00       		.byte	0
+ 339 002c 03       		.uleb128 0x3
+ 340 002d 0E       		.uleb128 0xe
+ 341 002e 3A       		.uleb128 0x3a
+ 342 002f 0B       		.uleb128 0xb
+ 343 0030 3B       		.uleb128 0x3b
+ 344 0031 05       		.uleb128 0x5
+ 345 0032 49       		.uleb128 0x49
+ 346 0033 13       		.uleb128 0x13
+ 347 0034 00       		.byte	0
+ 348 0035 00       		.byte	0
+ 349 0036 05       		.uleb128 0x5
+ 350 0037 2E       		.uleb128 0x2e
+ 351 0038 01       		.byte	0x1
+ 352 0039 3F       		.uleb128 0x3f
+ 353 003a 19       		.uleb128 0x19
+ 354 003b 03       		.uleb128 0x3
+ 355 003c 0E       		.uleb128 0xe
+ 356 003d 3A       		.uleb128 0x3a
+ 357 003e 0B       		.uleb128 0xb
+ 358 003f 3B       		.uleb128 0x3b
+ 359 0040 0B       		.uleb128 0xb
+ 360 0041 27       		.uleb128 0x27
+ 361 0042 19       		.uleb128 0x19
+ 362 0043 11       		.uleb128 0x11
+ 363 0044 01       		.uleb128 0x1
+ 364 0045 12       		.uleb128 0x12
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccAxsZuP.s 			page 8
+
+
+ 365 0046 06       		.uleb128 0x6
+ 366 0047 40       		.uleb128 0x40
+ 367 0048 18       		.uleb128 0x18
+ 368 0049 9742     		.uleb128 0x2117
+ 369 004b 19       		.uleb128 0x19
+ 370 004c 01       		.uleb128 0x1
+ 371 004d 13       		.uleb128 0x13
+ 372 004e 00       		.byte	0
+ 373 004f 00       		.byte	0
+ 374 0050 06       		.uleb128 0x6
+ 375 0051 34       		.uleb128 0x34
+ 376 0052 00       		.byte	0
+ 377 0053 03       		.uleb128 0x3
+ 378 0054 0E       		.uleb128 0xe
+ 379 0055 3A       		.uleb128 0x3a
+ 380 0056 0B       		.uleb128 0xb
+ 381 0057 3B       		.uleb128 0x3b
+ 382 0058 0B       		.uleb128 0xb
+ 383 0059 49       		.uleb128 0x49
+ 384 005a 13       		.uleb128 0x13
+ 385 005b 02       		.uleb128 0x2
+ 386 005c 17       		.uleb128 0x17
+ 387 005d 00       		.byte	0
+ 388 005e 00       		.byte	0
+ 389 005f 07       		.uleb128 0x7
+ 390 0060 898201   		.uleb128 0x4109
+ 391 0063 00       		.byte	0
+ 392 0064 11       		.uleb128 0x11
+ 393 0065 01       		.uleb128 0x1
+ 394 0066 31       		.uleb128 0x31
+ 395 0067 13       		.uleb128 0x13
+ 396 0068 00       		.byte	0
+ 397 0069 00       		.byte	0
+ 398 006a 08       		.uleb128 0x8
+ 399 006b 898201   		.uleb128 0x4109
+ 400 006e 01       		.byte	0x1
+ 401 006f 11       		.uleb128 0x11
+ 402 0070 01       		.uleb128 0x1
+ 403 0071 31       		.uleb128 0x31
+ 404 0072 13       		.uleb128 0x13
+ 405 0073 00       		.byte	0
+ 406 0074 00       		.byte	0
+ 407 0075 09       		.uleb128 0x9
+ 408 0076 8A8201   		.uleb128 0x410a
+ 409 0079 00       		.byte	0
+ 410 007a 02       		.uleb128 0x2
+ 411 007b 18       		.uleb128 0x18
+ 412 007c 9142     		.uleb128 0x2111
+ 413 007e 18       		.uleb128 0x18
+ 414 007f 00       		.byte	0
+ 415 0080 00       		.byte	0
+ 416 0081 0A       		.uleb128 0xa
+ 417 0082 2E       		.uleb128 0x2e
+ 418 0083 01       		.byte	0x1
+ 419 0084 3F       		.uleb128 0x3f
+ 420 0085 19       		.uleb128 0x19
+ 421 0086 03       		.uleb128 0x3
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccAxsZuP.s 			page 9
+
+
+ 422 0087 0E       		.uleb128 0xe
+ 423 0088 3A       		.uleb128 0x3a
+ 424 0089 0B       		.uleb128 0xb
+ 425 008a 3B       		.uleb128 0x3b
+ 426 008b 0B       		.uleb128 0xb
+ 427 008c 27       		.uleb128 0x27
+ 428 008d 19       		.uleb128 0x19
+ 429 008e 49       		.uleb128 0x49
+ 430 008f 13       		.uleb128 0x13
+ 431 0090 8701     		.uleb128 0x87
+ 432 0092 19       		.uleb128 0x19
+ 433 0093 11       		.uleb128 0x11
+ 434 0094 01       		.uleb128 0x1
+ 435 0095 12       		.uleb128 0x12
+ 436 0096 06       		.uleb128 0x6
+ 437 0097 40       		.uleb128 0x40
+ 438 0098 18       		.uleb128 0x18
+ 439 0099 9742     		.uleb128 0x2117
+ 440 009b 19       		.uleb128 0x19
+ 441 009c 01       		.uleb128 0x1
+ 442 009d 13       		.uleb128 0x13
+ 443 009e 00       		.byte	0
+ 444 009f 00       		.byte	0
+ 445 00a0 0B       		.uleb128 0xb
+ 446 00a1 34       		.uleb128 0x34
+ 447 00a2 00       		.byte	0
+ 448 00a3 03       		.uleb128 0x3
+ 449 00a4 08       		.uleb128 0x8
+ 450 00a5 3A       		.uleb128 0x3a
+ 451 00a6 0B       		.uleb128 0xb
+ 452 00a7 3B       		.uleb128 0x3b
+ 453 00a8 0B       		.uleb128 0xb
+ 454 00a9 49       		.uleb128 0x49
+ 455 00aa 13       		.uleb128 0x13
+ 456 00ab 1C       		.uleb128 0x1c
+ 457 00ac 0B       		.uleb128 0xb
+ 458 00ad 00       		.byte	0
+ 459 00ae 00       		.byte	0
+ 460 00af 0C       		.uleb128 0xc
+ 461 00b0 2E       		.uleb128 0x2e
+ 462 00b1 00       		.byte	0
+ 463 00b2 3F       		.uleb128 0x3f
+ 464 00b3 19       		.uleb128 0x19
+ 465 00b4 3C       		.uleb128 0x3c
+ 466 00b5 19       		.uleb128 0x19
+ 467 00b6 6E       		.uleb128 0x6e
+ 468 00b7 0E       		.uleb128 0xe
+ 469 00b8 03       		.uleb128 0x3
+ 470 00b9 0E       		.uleb128 0xe
+ 471 00ba 3A       		.uleb128 0x3a
+ 472 00bb 0B       		.uleb128 0xb
+ 473 00bc 3B       		.uleb128 0x3b
+ 474 00bd 05       		.uleb128 0x5
+ 475 00be 00       		.byte	0
+ 476 00bf 00       		.byte	0
+ 477 00c0 0D       		.uleb128 0xd
+ 478 00c1 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccAxsZuP.s 			page 10
+
+
+ 479 00c2 00       		.byte	0
+ 480 00c3 3F       		.uleb128 0x3f
+ 481 00c4 19       		.uleb128 0x19
+ 482 00c5 3C       		.uleb128 0x3c
+ 483 00c6 19       		.uleb128 0x19
+ 484 00c7 6E       		.uleb128 0x6e
+ 485 00c8 0E       		.uleb128 0xe
+ 486 00c9 03       		.uleb128 0x3
+ 487 00ca 0E       		.uleb128 0xe
+ 488 00cb 3A       		.uleb128 0x3a
+ 489 00cc 0B       		.uleb128 0xb
+ 490 00cd 3B       		.uleb128 0x3b
+ 491 00ce 0B       		.uleb128 0xb
+ 492 00cf 00       		.byte	0
+ 493 00d0 00       		.byte	0
+ 494 00d1 00       		.byte	0
+ 495              		.section	.debug_loc,"",%progbits
+ 496              	.Ldebug_loc0:
+ 497              	.LLST0:
+ 498 0000 08000000 		.4byte	.LVL1
+ 499 0004 13000000 		.4byte	.LVL3-1
+ 500 0008 0100     		.2byte	0x1
+ 501 000a 50       		.byte	0x50
+ 502 000b 00000000 		.4byte	0
+ 503 000f 00000000 		.4byte	0
+ 504              		.section	.debug_aranges,"",%progbits
+ 505 0000 24000000 		.4byte	0x24
+ 506 0004 0200     		.2byte	0x2
+ 507 0006 00000000 		.4byte	.Ldebug_info0
+ 508 000a 04       		.byte	0x4
+ 509 000b 00       		.byte	0
+ 510 000c 0000     		.2byte	0
+ 511 000e 0000     		.2byte	0
+ 512 0010 00000000 		.4byte	.LFB35
+ 513 0014 20000000 		.4byte	.LFE35-.LFB35
+ 514 0018 00000000 		.4byte	.LFB36
+ 515 001c 18000000 		.4byte	.LFE36-.LFB36
+ 516 0020 00000000 		.4byte	0
+ 517 0024 00000000 		.4byte	0
+ 518              		.section	.debug_ranges,"",%progbits
+ 519              	.Ldebug_ranges0:
+ 520 0000 00000000 		.4byte	.LFB35
+ 521 0004 20000000 		.4byte	.LFE35
+ 522 0008 00000000 		.4byte	.LFB36
+ 523 000c 18000000 		.4byte	.LFE36
+ 524 0010 00000000 		.4byte	0
+ 525 0014 00000000 		.4byte	0
+ 526              		.section	.debug_line,"",%progbits
+ 527              	.Ldebug_line0:
+ 528 0000 96000000 		.section	.debug_str,"MS",%progbits,1
+ 528      02006800 
+ 528      00000201 
+ 528      FB0E0D00 
+ 528      01010101 
+ 529              	.LASF6:
+ 530 0000 6C6F6E67 		.ascii	"long long int\000"
+ 530      206C6F6E 
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccAxsZuP.s 			page 11
+
+
+ 530      6720696E 
+ 530      7400
+ 531              	.LASF10:
+ 532 000e 75696E74 		.ascii	"uint32\000"
+ 532      333200
+ 533              	.LASF8:
+ 534 0015 756E7369 		.ascii	"unsigned int\000"
+ 534      676E6564 
+ 534      20696E74 
+ 534      00
+ 535              	.LASF24:
+ 536 0022 6D61696E 		.ascii	"main.c\000"
+ 536      2E6300
+ 537              	.LASF27:
+ 538 0029 6D61696E 		.ascii	"main\000"
+ 538      00
+ 539              	.LASF22:
+ 540 002e 54696D65 		.ascii	"Timer_Int_StartEx\000"
+ 540      725F496E 
+ 540      745F5374 
+ 540      61727445 
+ 540      7800
+ 541              	.LASF5:
+ 542 0040 6C6F6E67 		.ascii	"long unsigned int\000"
+ 542      20756E73 
+ 542      69676E65 
+ 542      6420696E 
+ 542      7400
+ 543              	.LASF7:
+ 544 0052 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 544      206C6F6E 
+ 544      6720756E 
+ 544      7369676E 
+ 544      65642069 
+ 545              	.LASF11:
+ 546 0069 666C6F61 		.ascii	"float\000"
+ 546      7400
+ 547              	.LASF21:
+ 548 006f 54696D65 		.ascii	"Timer_1_Start\000"
+ 548      725F315F 
+ 548      53746172 
+ 548      7400
+ 549              	.LASF19:
+ 550 007d 54696D65 		.ascii	"Timer_1_ClearInterrupt\000"
+ 550      725F315F 
+ 550      436C6561 
+ 550      72496E74 
+ 550      65727275 
+ 551              	.LASF1:
+ 552 0094 756E7369 		.ascii	"unsigned char\000"
+ 552      676E6564 
+ 552      20636861 
+ 552      7200
+ 553              	.LASF13:
+ 554 00a2 63686172 		.ascii	"char\000"
+ 554      00
+ 555              	.LASF4:
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccAxsZuP.s 			page 12
+
+
+ 556 00a7 6C6F6E67 		.ascii	"long int\000"
+ 556      20696E74 
+ 556      00
+ 557              	.LASF2:
+ 558 00b0 73686F72 		.ascii	"short int\000"
+ 558      7420696E 
+ 558      7400
+ 559              	.LASF12:
+ 560 00ba 646F7562 		.ascii	"double\000"
+ 560      6C6500
+ 561              	.LASF16:
+ 562 00c1 636F756E 		.ascii	"counter\000"
+ 562      74657200 
+ 563              	.LASF23:
+ 564 00c9 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 564      43313120 
+ 564      352E342E 
+ 564      31203230 
+ 564      31363036 
+ 565 00fc 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 565      20726576 
+ 565      6973696F 
+ 565      6E203233 
+ 565      37373135 
+ 566 012f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 566      66756E63 
+ 566      74696F6E 
+ 566      2D736563 
+ 566      74696F6E 
+ 567              	.LASF3:
+ 568 0157 73686F72 		.ascii	"short unsigned int\000"
+ 568      7420756E 
+ 568      7369676E 
+ 568      65642069 
+ 568      6E7400
+ 569              	.LASF0:
+ 570 016a 7369676E 		.ascii	"signed char\000"
+ 570      65642063 
+ 570      68617200 
+ 571              	.LASF20:
+ 572 0176 50574D5F 		.ascii	"PWM_1_Start\000"
+ 572      315F5374 
+ 572      61727400 
+ 573              	.LASF17:
+ 574 0182 54696D65 		.ascii	"Timer_1_ReadCapture\000"
+ 574      725F315F 
+ 574      52656164 
+ 574      43617074 
+ 574      75726500 
+ 575              	.LASF18:
+ 576 0196 50574D5F 		.ascii	"PWM_1_WriteCompare\000"
+ 576      315F5772 
+ 576      69746543 
+ 576      6F6D7061 
+ 576      726500
+ 577              	.LASF14:
+ 578 01a9 6C6F6E67 		.ascii	"long double\000"
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccAxsZuP.s 			page 13
+
+
+ 578      20646F75 
+ 578      626C6500 
+ 579              	.LASF26:
+ 580 01b5 54696D65 		.ascii	"Timer_Int_Handler\000"
+ 580      725F496E 
+ 580      745F4861 
+ 580      6E646C65 
+ 580      7200
+ 581              	.LASF9:
+ 582 01c7 75696E74 		.ascii	"uint16\000"
+ 582      313600
+ 583              	.LASF15:
+ 584 01ce 73697A65 		.ascii	"sizetype\000"
+ 584      74797065 
+ 584      00
+ 585              	.LASF25:
+ 586 01d7 433A5C55 		.ascii	"C:\\Users\\janusdg-win\\UCU\\Projects\\Design05_Tim"
+ 586      73657273 
+ 586      5C6A616E 
+ 586      75736467 
+ 586      2D77696E 
+ 587 0205 65722E63 		.ascii	"er.cydsn\000"
+ 587      7964736E 
+ 587      00
+ 588              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -1,0 +1,164 @@
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/Clock_1.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Clock_1.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Clock_1.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Clock_1.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Clock_1.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/Clock_2.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Clock_2.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Clock_2.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Clock_2.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Clock_2.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/Cm0Start.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Cm0Start.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/cyapicallbacks.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Cm0Start.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLib.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/cyapicallbacks.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/CyDMA.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyDMA.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyDMA.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyDMA.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyDMA.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/CyFlash.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyFlash.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyFlash.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyFlash.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/CyLFClk.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLFClk.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLFClk.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/CyLib.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLib.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLib.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/PWM_1.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/PWM_1.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/PWM_1.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/PWM_1.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/PWM_1.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/PWM_1_PM.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/PWM_1.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/PWM_1_PM.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/PWM_1_PM.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/Pin_Blue.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Blue.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Blue.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Blue_aliases.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Blue.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Blue.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Blue_aliases.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cypins.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/Pin_Blue_PM.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Blue.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Blue_PM.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Blue_aliases.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Blue_PM.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/Pin_Green.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Green.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Green.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Green_aliases.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Green.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Green.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Green_aliases.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/Pin_Green_PM.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Green.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Green_PM.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Green_aliases.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Green_PM.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/Pin_Red.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Red.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Red.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Red_aliases.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Red.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Red.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Red_aliases.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/Pin_Red_PM.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Red.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Red_PM.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Red_aliases.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Red_PM.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/Pin_SW2.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_SW2.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_SW2.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_SW2_aliases.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_SW2.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_SW2.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_SW2_aliases.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/Pin_SW2_PM.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_SW2.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_SW2_PM.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_SW2_aliases.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_SW2_PM.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/Timer_1.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Timer_1.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Timer_1.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Timer_1.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Timer_1.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/Timer_1_PM.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Timer_1.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Timer_1_PM.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Timer_1_PM.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/Timer_Int.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Timer_Int.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Timer_Int.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/cyapicallbacks.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Timer_Int.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Timer_Int.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/cyPm.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyPm.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyPm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyPm.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyPm.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/cy_em_eeprom.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cy_em_eeprom.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cy_em_eeprom.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cy_em_eeprom.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cy_em_eeprom.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/cyfitter_cfg.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter_cfg.c C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/cyapicallbacks.h 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter_cfg.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/cyutils.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyutils.c 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyutils.c : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/CortexM0/ARM_GCC_541/Debug/main.o : C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cmsis_armcc.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cmsis_compiler.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cmsis_gcc.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/core_cm0.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydisabledsheets.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/project.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Clock_1.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Clock_2.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyDMA.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/PWM_1.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Blue.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Blue_aliases.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Green.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Green_aliases.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Red.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_Red_aliases.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_SW2.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Pin_SW2_aliases.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Timer_1.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/Timer_Int.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyPm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cy_em_eeprom.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/main.c 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cmsis_armcc.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cmsis_compiler.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cmsis_gcc.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/core_cm0.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/cydisabledsheets.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/Generated_Source/PSoC4/project.h : 
+
+C:/Users/janusdg-win/UCU/Projects/Design05_Timer.cydsn/main.c : 
+
