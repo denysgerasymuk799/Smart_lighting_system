@@ -1,0 +1,8 @@
+C:\Users\dmytro\Documents\PSoC Creator\PSoC-101\Lesson1.cydsn\Lesson1.cyprj|e61c7109-ab0b-4e6e-8fcd-aedbb9ef7db1
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|8ff2eeca-7640-406e-8793-c2851068a0bc
+C:\Users\dmytro\Documents\PSoC Creator\4.3\Downloads ( 4.3).cylib\Downloads ( 4.3).cyprj|f31459d2-30a1-41dc-9048-3705f3158cf8
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|4e41f48c-7307-4d02-9f02-e6910b8999f2
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|1a97e57b-9191-41aa-a339-fa34f3bae89a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|d72fc04e-cea2-4cbb-9c51-6c8347c4b16f
+C:\Users\dmytro\Documents\PSoC Creator\PSoC-101\Lesson1_New.cydsn\Lesson1_New.cyprj|d231b5ac-94c9-4cd9-a95c-77f6c5bf9a67
+C:\Users\dmytro\Documents\PSoC Creator\PSoC-101\Lesson2.cydsn\Lesson2.cyprj|2e9ecd63-8554-4eb7-8e07-ca1a503846d6
