@@ -17,6 +17,7 @@
 
 char TEXT_BUF[20];
 
+
 int get_letter_pos(char letter){
     int n_letter_in_table = -1;
     
