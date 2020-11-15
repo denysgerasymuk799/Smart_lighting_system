@@ -1,0 +1,6 @@
+D:\programs\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|615e7d99-2ccb-4c80-a61c-718d71f7344a
+C:\Users\ASUS\Documents\PSoC Creator\4.3\Downloads ( 4.3).cylib\Downloads ( 4.3).cyprj|8bce27b7-02d8-4b74-8348-87e17dae0f5e
+D:\programs\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|a7f91064-d3ce-4ffb-b690-2a2b2f1f43ce
+D:\programs\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|c608a881-128d-436a-b82d-dd0a41c2b8be
+D:\programs\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|3a6db7e0-92a7-4862-9f34-af2e34c96176
+D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\Code_Morse.cyprj|83860e6e-7dc5-4d21-a875-de4a459dbc36
