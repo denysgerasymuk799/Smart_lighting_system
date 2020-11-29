@@ -1,0 +1,2361 @@
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.comm	current_watchdog_counter,2,2
+  20              		.section	.text.main,"ax",%progbits
+  21              		.align	2
+  22              		.global	main
+  23              		.code	16
+  24              		.thumb_func
+  25              		.type	main, %function
+  26              	main:
+  27              	.LFB35:
+  28              		.file 1 "main.c"
+   1:main.c        **** /******************************************************************************
+   2:main.c        **** * Project Name		: Mesh_Flood_PSoC4BLE
+   3:main.c        **** * File Name			: main.c
+   4:main.c        **** * Version 			: 1.0
+   5:main.c        **** * Device Used		: CY8C4247LQI-BL483
+   6:main.c        **** * Software Used		: PSoC Creator 3.1 SP1
+   7:main.c        **** * Compiler    		: ARM GCC 4.8.4, ARM RVDS Generic, ARM MDK Generic
+   8:main.c        **** * Related Hardware	: CY8CKIT-042-BLE Bluetooth Low Energy Pioneer Kit 
+   9:main.c        **** * Owner             : roit@cypress.com
+  10:main.c        **** *
+  11:main.c        **** ********************************************************************************
+  12:main.c        **** * Copyright (2014-15), Cypress Semiconductor Corporation. All Rights Reserved.
+  13:main.c        **** ********************************************************************************
+  14:main.c        **** * This software is owned by Cypress Semiconductor Corporation (Cypress)
+  15:main.c        **** * and is protected by and subject to worldwide patent protection (United
+  16:main.c        **** * States and foreign), United States copyright laws and international treaty
+  17:main.c        **** * provisions. Cypress hereby grants to licensee a personal, non-exclusive,
+  18:main.c        **** * non-transferable license to copy, use, modify, create derivative works of,
+  19:main.c        **** * and compile the Cypress Source Code and derivative works for the sole
+  20:main.c        **** * purpose of creating custom software in support of licensee product to be
+  21:main.c        **** * used only in conjunction with a Cypress integrated circuit as specified in
+  22:main.c        **** * the applicable agreement. Any reproduction, modification, translation,
+  23:main.c        **** * compilation, or representation of this software except as specified above 
+  24:main.c        **** * is prohibited without the express written permission of Cypress.
+  25:main.c        **** *
+  26:main.c        **** * Disclaimer: CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH 
+  27:main.c        **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  28:main.c        **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  29:main.c        **** * Cypress reserves the right to make changes without further notice to the 
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 2
+
+
+  30:main.c        **** * materials described herein. Cypress does not assume any liability arising out 
+  31:main.c        **** * of the application or use of any product or circuit described herein. Cypress 
+  32:main.c        **** * does not authorize its products for use as critical components in life-support 
+  33:main.c        **** * systems where a malfunction or failure may reasonably be expected to result in 
+  34:main.c        **** * significant injury to the user. The inclusion of Cypress' product in a life-
+  35:main.c        **** * support systems application implies that the manufacturer assumes all risk of 
+  36:main.c        **** * such use and in doing so indemnifies Cypress against all charges. 
+  37:main.c        **** *
+  38:main.c        **** * Use of this Software may be limited by and subject to the applicable Cypress
+  39:main.c        **** * software license agreement. 
+  40:main.c        **** *******************************************************************************/
+  41:main.c        **** #include <main.h>
+  42:main.c        **** 
+  43:main.c        **** extern uint8 switch_Role;
+  44:main.c        **** extern uint8 ble_gap_state;
+  45:main.c        **** extern uint8 deviceConnected;
+  46:main.c        **** 
+  47:main.c        **** extern uint8 restartScanning;
+  48:main.c        **** 
+  49:main.c        **** extern uint8 dataADVCounter;
+  50:main.c        **** 
+  51:main.c        **** #ifdef ENABLE_ADV_DATA_COUNTER
+  52:main.c        **** extern CYBLE_GAPP_DISC_DATA_T  new_advData;
+  53:main.c        **** extern uint8 potential_node_found;
+  54:main.c        **** extern uint8 potential_node_bdAddr[6];
+  55:main.c        **** extern uint8 potential_node_bdAddrType;
+  56:main.c        **** #endif
+  57:main.c        **** 
+  58:main.c        **** extern uint8 clientConnectToDevice;
+  59:main.c        **** extern CYBLE_GAP_BD_ADDR_T				peripAddr;;
+  60:main.c        **** /*******************************************************************************
+  61:main.c        **** * Function Name: main
+  62:main.c        **** ********************************************************************************
+  63:main.c        **** * Summary:
+  64:main.c        **** *       Entry point for the firmware, Starts the system and continuously processes
+  65:main.c        **** * Application and BLE events.
+  66:main.c        **** *
+  67:main.c        **** * Parameters:
+  68:main.c        **** *  void
+  69:main.c        **** *
+  70:main.c        **** * Return:
+  71:main.c        **** *  int
+  72:main.c        **** *
+  73:main.c        **** *******************************************************************************/
+  74:main.c        **** int main()
+  75:main.c        **** {
+  29              		.loc 1 75 0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 1, uses_anonymous_args = 0
+  33 0000 80B5     		push	{r7, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 7, -8
+  36              		.cfi_offset 14, -4
+  37 0002 00AF     		add	r7, sp, #0
+  38              		.cfi_def_cfa_register 7
+  76:main.c        ****     /* Initialize system */	
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 3
+
+
+  77:main.c        **** 	InitializeSystem();
+  39              		.loc 1 77 0
+  40 0004 FFF7FEFF 		bl	InitializeSystem
+  41              	.L2:
+  78:main.c        **** 	
+  79:main.c        **** 	#ifdef DEBUG_ENABLED
+  80:main.c        **** 		UART_UartPutString("Sytem Started ");
+  81:main.c        **** 		UART_UartPutCRLF(' ');
+  82:main.c        **** 	#endif
+  83:main.c        **** 	
+  84:main.c        ****     for(;;)
+  85:main.c        ****     {
+  86:main.c        **** 		/* Process BLE Events. This function generates the respective 
+  87:main.c        **** 		* events to application layer */
+  88:main.c        **** 		CyBle_ProcessEvents();
+  42              		.loc 1 88 0 discriminator 1
+  43 0008 FFF7FEFF 		bl	CyBle_ProcessEvents
+  89:main.c        **** 
+  90:main.c        **** 		/* If flag is set, then switch the GAP role between Peripheral and 
+  91:main.c        **** 		* Central. This function disconnects existing connection, if any, 
+  92:main.c        **** 		* before switching role. Depending on switched role, the system will
+  93:main.c        **** 		* either start scanning or start advertisement */
+  94:main.c        **** 		SwitchRole();
+  44              		.loc 1 94 0 discriminator 1
+  45 000c FFF7FEFF 		bl	SwitchRole
+  95:main.c        **** 		
+  96:main.c        **** 		/* If a valid node is found, then this function will initiate a connection 
+  97:main.c        **** 		* to that node. */
+  98:main.c        **** 		ConnectToPeripheralDevice();
+  46              		.loc 1 98 0 discriminator 1
+  47 0010 FFF7FEFF 		bl	ConnectToPeripheralDevice
+  99:main.c        **** 		
+ 100:main.c        **** 		/* This function will restart scanning when earlier connection has been
+ 101:main.c        **** 		* disconnected. This function also checks internal counter and sets flag to
+ 102:main.c        **** 		* switch role from Central to Peripheral when the count is above set value. */
+ 103:main.c        **** 		RestartCentralScanning();
+  48              		.loc 1 103 0 discriminator 1
+  49 0014 FFF7FEFF 		bl	RestartCentralScanning
+ 104:main.c        ****     }
+  50              		.loc 1 104 0 discriminator 1
+  51 0018 F6E7     		b	.L2
+  52              		.cfi_endproc
+  53              	.LFE35:
+  54              		.size	main, .-main
+  55 001a C046     		.section	.text.InitializeSystem,"ax",%progbits
+  56              		.align	2
+  57              		.global	InitializeSystem
+  58              		.code	16
+  59              		.thumb_func
+  60              		.type	InitializeSystem, %function
+  61              	InitializeSystem:
+  62              	.LFB36:
+ 105:main.c        **** }
+ 106:main.c        **** 
+ 107:main.c        **** /*******************************************************************************
+ 108:main.c        **** * Function Name: InitializeSystem
+ 109:main.c        **** ********************************************************************************
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 4
+
+
+ 110:main.c        **** * Summary:
+ 111:main.c        **** *       Starts the components in the project and registers BLE event handler 
+ 112:main.c        **** * function. It also modifies the advertisement packet and appends data counter
+ 113:main.c        **** * at its end.
+ 114:main.c        **** *
+ 115:main.c        **** * Parameters:
+ 116:main.c        **** *  void
+ 117:main.c        **** *
+ 118:main.c        **** * Return:
+ 119:main.c        **** *  void
+ 120:main.c        **** *
+ 121:main.c        **** *******************************************************************************/
+ 122:main.c        **** void InitializeSystem(void)
+ 123:main.c        **** {
+  63              		.loc 1 123 0
+  64              		.cfi_startproc
+  65              		@ args = 0, pretend = 0, frame = 0
+  66              		@ frame_needed = 1, uses_anonymous_args = 0
+  67 0000 80B5     		push	{r7, lr}
+  68              		.cfi_def_cfa_offset 8
+  69              		.cfi_offset 7, -8
+  70              		.cfi_offset 14, -4
+  71 0002 00AF     		add	r7, sp, #0
+  72              		.cfi_def_cfa_register 7
+ 124:main.c        **** 	/* Enable global interrupts. */
+ 125:main.c        **** 	CyGlobalIntEnable;
+  73              		.loc 1 125 0
+  74              		.syntax divided
+  75              	@ 125 "main.c" 1
+  76 0004 62B6     		CPSIE   i
+  77              	@ 0 "" 2
+ 126:main.c        **** 	
+ 127:main.c        **** 	/* Start BLE component and Register the generic Event callback function */
+ 128:main.c        **** 	CyBle_Start(GenericEventHandler);
+  78              		.loc 1 128 0
+  79              		.thumb
+  80              		.syntax unified
+  81 0006 284B     		ldr	r3, .L5
+  82 0008 1800     		movs	r0, r3
+  83 000a FFF7FEFF 		bl	CyBle_Start
+ 129:main.c        **** 	
+ 130:main.c        **** 	/* Start the PrISM component and configure drive mode of LED pins to be
+ 131:main.c        **** 	* initially OFF*/
+ 132:main.c        **** 	PrISM_1_Start();
+  84              		.loc 1 132 0
+  85 000e FFF7FEFF 		bl	PrISM_1_Start
+ 133:main.c        **** 	PrISM_2_Start();
+  86              		.loc 1 133 0
+  87 0012 FFF7FEFF 		bl	PrISM_2_Start
+ 134:main.c        **** 	
+ 135:main.c        **** 	PrISM_1_WritePulse0(255);
+  88              		.loc 1 135 0
+  89 0016 FF20     		movs	r0, #255
+  90 0018 FFF7FEFF 		bl	PrISM_1_WritePulse0
+ 136:main.c        **** 	PrISM_1_WritePulse1(255);
+  91              		.loc 1 136 0
+  92 001c FF20     		movs	r0, #255
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 5
+
+
+  93 001e FFF7FEFF 		bl	PrISM_1_WritePulse1
+ 137:main.c        **** 	PrISM_2_WritePulse0(255);
+  94              		.loc 1 137 0
+  95 0022 FF20     		movs	r0, #255
+  96 0024 FFF7FEFF 		bl	PrISM_2_WritePulse0
+ 138:main.c        **** 	
+ 139:main.c        **** 	RED_SetDriveMode(RED_DM_STRONG);
+  97              		.loc 1 139 0
+  98 0028 0620     		movs	r0, #6
+  99 002a FFF7FEFF 		bl	RED_SetDriveMode
+ 140:main.c        **** 	GREEN_SetDriveMode(GREEN_DM_STRONG);
+ 100              		.loc 1 140 0
+ 101 002e 0620     		movs	r0, #6
+ 102 0030 FFF7FEFF 		bl	GREEN_SetDriveMode
+ 141:main.c        **** 	BLUE_SetDriveMode(BLUE_DM_STRONG);
+ 103              		.loc 1 141 0
+ 104 0034 0620     		movs	r0, #6
+ 105 0036 FFF7FEFF 		bl	BLUE_SetDriveMode
+ 142:main.c        **** 	
+ 143:main.c        **** 	/* Configure the Watchdog (WDT) timer for 100 millisecond timing */
+ 144:main.c        **** 	InitializeWatchdog(WATCHDOG_COUNT_VAL);
+ 106              		.loc 1 144 0
+ 107 003a 1C4B     		ldr	r3, .L5+4
+ 108 003c 1800     		movs	r0, r3
+ 109 003e FFF7FEFF 		bl	InitializeWatchdog
+ 145:main.c        **** 
+ 146:main.c        **** 	#ifdef ENABLE_ADV_DATA_COUNTER
+ 147:main.c        **** 	new_advData = *cyBle_discoveryModeInfo.advData;
+ 110              		.loc 1 147 0
+ 111 0042 1B4B     		ldr	r3, .L5+8
+ 112 0044 9B68     		ldr	r3, [r3, #8]
+ 113 0046 1B4A     		ldr	r2, .L5+12
+ 114 0048 1000     		movs	r0, r2
+ 115 004a 1900     		movs	r1, r3
+ 116 004c 2023     		movs	r3, #32
+ 117 004e 1A00     		movs	r2, r3
+ 118 0050 FFF7FEFF 		bl	memcpy
+ 148:main.c        **** 	
+ 149:main.c        **** 	if( cyBle_discoveryModeInfo.advData->advDataLen < 29)
+ 119              		.loc 1 149 0
+ 120 0054 164B     		ldr	r3, .L5+8
+ 121 0056 9B68     		ldr	r3, [r3, #8]
+ 122 0058 DB7F     		ldrb	r3, [r3, #31]
+ 123 005a 1C2B     		cmp	r3, #28
+ 124 005c 15D8     		bhi	.L4
+ 150:main.c        **** 	{
+ 151:main.c        **** 		/* Initialize the DataCounter data in advertisement packet. This is custom data in 
+ 152:main.c        **** 		* ADV packet and used to track whether the RGB LED data is latest or not */
+ 153:main.c        **** 		new_advData.advData[cyBle_discoveryModeInfo.advData->advDataLen] = CUSTOM_ADV_DATA_MARKER;	
+ 125              		.loc 1 153 0
+ 126 005e 144B     		ldr	r3, .L5+8
+ 127 0060 9B68     		ldr	r3, [r3, #8]
+ 128 0062 DB7F     		ldrb	r3, [r3, #31]
+ 129 0064 1A00     		movs	r2, r3
+ 130 0066 134B     		ldr	r3, .L5+12
+ 131 0068 0121     		movs	r1, #1
+ 132 006a 9954     		strb	r1, [r3, r2]
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 6
+
+
+ 154:main.c        **** 		new_advData.advData[cyBle_discoveryModeInfo.advData->advDataLen+1] = dataADVCounter;
+ 133              		.loc 1 154 0
+ 134 006c 104B     		ldr	r3, .L5+8
+ 135 006e 9B68     		ldr	r3, [r3, #8]
+ 136 0070 DB7F     		ldrb	r3, [r3, #31]
+ 137 0072 0133     		adds	r3, r3, #1
+ 138 0074 104A     		ldr	r2, .L5+16
+ 139 0076 1178     		ldrb	r1, [r2]
+ 140 0078 0E4A     		ldr	r2, .L5+12
+ 141 007a D154     		strb	r1, [r2, r3]
+ 155:main.c        **** 		new_advData.advDataLen = cyBle_discoveryModeInfo.advData->advDataLen+2;
+ 142              		.loc 1 155 0
+ 143 007c 0C4B     		ldr	r3, .L5+8
+ 144 007e 9B68     		ldr	r3, [r3, #8]
+ 145 0080 DB7F     		ldrb	r3, [r3, #31]
+ 146 0082 0233     		adds	r3, r3, #2
+ 147 0084 DAB2     		uxtb	r2, r3
+ 148 0086 0B4B     		ldr	r3, .L5+12
+ 149 0088 DA77     		strb	r2, [r3, #31]
+ 150              	.L4:
+ 156:main.c        **** 	}
+ 157:main.c        **** 	
+ 158:main.c        **** 	/* Assign the new ADV data to stack */
+ 159:main.c        **** 	cyBle_discoveryModeInfo.advData = &new_advData;
+ 151              		.loc 1 159 0
+ 152 008a 094B     		ldr	r3, .L5+8
+ 153 008c 094A     		ldr	r2, .L5+12
+ 154 008e 9A60     		str	r2, [r3, #8]
+ 160:main.c        **** 	#endif
+ 161:main.c        **** 		
+ 162:main.c        **** 	/* Provide a color pusle on RGB LED to indicate startup */
+ 163:main.c        **** 	PrISM_1_WritePulse1(128);
+ 155              		.loc 1 163 0
+ 156 0090 8020     		movs	r0, #128
+ 157 0092 FFF7FEFF 		bl	PrISM_1_WritePulse1
+ 164:main.c        **** 	CyDelay(20);
+ 158              		.loc 1 164 0
+ 159 0096 1420     		movs	r0, #20
+ 160 0098 FFF7FEFF 		bl	CyDelay
+ 165:main.c        **** 	PrISM_1_WritePulse1(255);
+ 161              		.loc 1 165 0
+ 162 009c FF20     		movs	r0, #255
+ 163 009e FFF7FEFF 		bl	PrISM_1_WritePulse1
+ 166:main.c        **** 	
+ 167:main.c        **** 	#ifdef DEBUG_ENABLED
+ 168:main.c        **** 		UART_Start();
+ 169:main.c        **** 		UART_UartPutString("--------------------------Mesh Flood-----------------------------------------
+ 170:main.c        **** 		UART_UartPutCRLF(' ');
+ 171:main.c        **** 	#endif
+ 172:main.c        **** }
+ 164              		.loc 1 172 0
+ 165 00a2 C046     		nop
+ 166 00a4 BD46     		mov	sp, r7
+ 167              		@ sp needed
+ 168 00a6 80BD     		pop	{r7, pc}
+ 169              	.L6:
+ 170              		.align	2
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 7
+
+
+ 171              	.L5:
+ 172 00a8 00000000 		.word	GenericEventHandler
+ 173 00ac CC0C0000 		.word	3276
+ 174 00b0 00000000 		.word	cyBle_discoveryModeInfo
+ 175 00b4 00000000 		.word	new_advData
+ 176 00b8 00000000 		.word	dataADVCounter
+ 177              		.cfi_endproc
+ 178              	.LFE36:
+ 179              		.size	InitializeSystem, .-InitializeSystem
+ 180              		.global	__aeabi_idiv
+ 181              		.section	.text.UpdateRGBled,"ax",%progbits
+ 182              		.align	2
+ 183              		.global	UpdateRGBled
+ 184              		.code	16
+ 185              		.thumb_func
+ 186              		.type	UpdateRGBled, %function
+ 187              	UpdateRGBled:
+ 188              	.LFB37:
+ 173:main.c        **** 
+ 174:main.c        **** /*******************************************************************************
+ 175:main.c        **** * Function Name: UpdateRGBled
+ 176:main.c        **** ********************************************************************************
+ 177:main.c        **** * Summary:
+ 178:main.c        **** *        Update the RGB LED color by reconfiguring PrISM component. This function 
+ 179:main.c        **** * is valid for PSoC 4 BLE parts and not PROC BLE, as PRoC BLE does not have UDBs
+ 180:main.c        **** * that makes up the PrISM component. To replace this with software PrISM, refer to
+ 181:main.c        **** * CY8CKIT-042-BLE Pioneer Kit example project, PRoC_BLE_CapSense_Slider_LED, from
+ 182:main.c        **** * http://www.cypress.com/CY8CKIT-042-BLE
+ 183:main.c        **** *
+ 184:main.c        **** * Parameters:
+ 185:main.c        **** *  rgb_led_data: array storing the RGB and Intensity vlaue
+ 186:main.c        **** *  len: length of the array.
+ 187:main.c        **** *
+ 188:main.c        **** * Return:
+ 189:main.c        **** *  void
+ 190:main.c        **** *
+ 191:main.c        **** *******************************************************************************/
+ 192:main.c        **** void UpdateRGBled(uint8 * rgb_led_data, uint8 len)
+ 193:main.c        **** {
+ 189              		.loc 1 193 0
+ 190              		.cfi_startproc
+ 191              		@ args = 0, pretend = 0, frame = 16
+ 192              		@ frame_needed = 1, uses_anonymous_args = 0
+ 193 0000 80B5     		push	{r7, lr}
+ 194              		.cfi_def_cfa_offset 8
+ 195              		.cfi_offset 7, -8
+ 196              		.cfi_offset 14, -4
+ 197 0002 84B0     		sub	sp, sp, #16
+ 198              		.cfi_def_cfa_offset 24
+ 199 0004 00AF     		add	r7, sp, #0
+ 200              		.cfi_def_cfa_register 7
+ 201 0006 7860     		str	r0, [r7, #4]
+ 202 0008 0A00     		movs	r2, r1
+ 203 000a FB1C     		adds	r3, r7, #3
+ 204 000c 1A70     		strb	r2, [r3]
+ 194:main.c        **** 	uint8 calc_red, calc_green, calc_blue;
+ 195:main.c        **** 	
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 8
+
+
+ 196:main.c        **** 	if(len == RGB_LED_DATA_LEN)
+ 205              		.loc 1 196 0
+ 206 000e FB1C     		adds	r3, r7, #3
+ 207 0010 1B78     		ldrb	r3, [r3]
+ 208 0012 042B     		cmp	r3, #4
+ 209 0014 49D1     		bne	.L9
+ 197:main.c        **** 	{
+ 198:main.c        **** 		/* If a valid length packet has been sent, calculate the intensity of each of
+ 199:main.c        **** 		* R, G and B color and update the PrISM module */
+ 200:main.c        **** 		calc_red = (uint8)(((uint16)rgb_led_data[RGB_RED_INDEX]*rgb_led_data[RGB_INTENSITY_INDEX])/RGB_LE
+ 210              		.loc 1 200 0
+ 211 0016 7B68     		ldr	r3, [r7, #4]
+ 212 0018 1B78     		ldrb	r3, [r3]
+ 213 001a 1A00     		movs	r2, r3
+ 214 001c 7B68     		ldr	r3, [r7, #4]
+ 215 001e 0333     		adds	r3, r3, #3
+ 216 0020 1B78     		ldrb	r3, [r3]
+ 217 0022 5343     		muls	r3, r2
+ 218 0024 FF21     		movs	r1, #255
+ 219 0026 1800     		movs	r0, r3
+ 220 0028 FFF7FEFF 		bl	__aeabi_idiv
+ 221 002c 0300     		movs	r3, r0
+ 222 002e 1A00     		movs	r2, r3
+ 223 0030 0F23     		movs	r3, #15
+ 224 0032 FB18     		adds	r3, r7, r3
+ 225 0034 1A70     		strb	r2, [r3]
+ 201:main.c        **** 		calc_green = (uint8)(((uint16)rgb_led_data[RGB_GREEN_INDEX]*rgb_led_data[RGB_INTENSITY_INDEX])/RG
+ 226              		.loc 1 201 0
+ 227 0036 7B68     		ldr	r3, [r7, #4]
+ 228 0038 0133     		adds	r3, r3, #1
+ 229 003a 1B78     		ldrb	r3, [r3]
+ 230 003c 1A00     		movs	r2, r3
+ 231 003e 7B68     		ldr	r3, [r7, #4]
+ 232 0040 0333     		adds	r3, r3, #3
+ 233 0042 1B78     		ldrb	r3, [r3]
+ 234 0044 5343     		muls	r3, r2
+ 235 0046 FF21     		movs	r1, #255
+ 236 0048 1800     		movs	r0, r3
+ 237 004a FFF7FEFF 		bl	__aeabi_idiv
+ 238 004e 0300     		movs	r3, r0
+ 239 0050 1A00     		movs	r2, r3
+ 240 0052 0E23     		movs	r3, #14
+ 241 0054 FB18     		adds	r3, r7, r3
+ 242 0056 1A70     		strb	r2, [r3]
+ 202:main.c        **** 		calc_blue = (uint8)(((uint16)rgb_led_data[RGB_BLUE_INDEX]*rgb_led_data[RGB_INTENSITY_INDEX])/RGB_
+ 243              		.loc 1 202 0
+ 244 0058 7B68     		ldr	r3, [r7, #4]
+ 245 005a 0233     		adds	r3, r3, #2
+ 246 005c 1B78     		ldrb	r3, [r3]
+ 247 005e 1A00     		movs	r2, r3
+ 248 0060 7B68     		ldr	r3, [r7, #4]
+ 249 0062 0333     		adds	r3, r3, #3
+ 250 0064 1B78     		ldrb	r3, [r3]
+ 251 0066 5343     		muls	r3, r2
+ 252 0068 FF21     		movs	r1, #255
+ 253 006a 1800     		movs	r0, r3
+ 254 006c FFF7FEFF 		bl	__aeabi_idiv
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 9
+
+
+ 255 0070 0300     		movs	r3, r0
+ 256 0072 1A00     		movs	r2, r3
+ 257 0074 0D23     		movs	r3, #13
+ 258 0076 FB18     		adds	r3, r7, r3
+ 259 0078 1A70     		strb	r2, [r3]
+ 203:main.c        **** 		
+ 204:main.c        **** 		PrISM_1_WritePulse0(RGB_LED_MAX_VAL - calc_red);
+ 260              		.loc 1 204 0
+ 261 007a 0F23     		movs	r3, #15
+ 262 007c FB18     		adds	r3, r7, r3
+ 263 007e 1B78     		ldrb	r3, [r3]
+ 264 0080 DB43     		mvns	r3, r3
+ 265 0082 DBB2     		uxtb	r3, r3
+ 266 0084 1800     		movs	r0, r3
+ 267 0086 FFF7FEFF 		bl	PrISM_1_WritePulse0
+ 205:main.c        **** 		PrISM_1_WritePulse1(RGB_LED_MAX_VAL - calc_green);
+ 268              		.loc 1 205 0
+ 269 008a 0E23     		movs	r3, #14
+ 270 008c FB18     		adds	r3, r7, r3
+ 271 008e 1B78     		ldrb	r3, [r3]
+ 272 0090 DB43     		mvns	r3, r3
+ 273 0092 DBB2     		uxtb	r3, r3
+ 274 0094 1800     		movs	r0, r3
+ 275 0096 FFF7FEFF 		bl	PrISM_1_WritePulse1
+ 206:main.c        **** 		PrISM_2_WritePulse0(RGB_LED_MAX_VAL - calc_blue);
+ 276              		.loc 1 206 0
+ 277 009a 0D23     		movs	r3, #13
+ 278 009c FB18     		adds	r3, r7, r3
+ 279 009e 1B78     		ldrb	r3, [r3]
+ 280 00a0 DB43     		mvns	r3, r3
+ 281 00a2 DBB2     		uxtb	r3, r3
+ 282 00a4 1800     		movs	r0, r3
+ 283 00a6 FFF7FEFF 		bl	PrISM_2_WritePulse0
+ 284              	.L9:
+ 207:main.c        **** 		
+ 208:main.c        **** 		#ifdef DEBUG_ENABLED
+ 209:main.c        **** 			UART_UartPutString("PrISM Updated ");
+ 210:main.c        **** 			UART_UartPutCRLF(' ');
+ 211:main.c        **** 		#endif
+ 212:main.c        **** 	}
+ 213:main.c        **** }
+ 285              		.loc 1 213 0
+ 286 00aa C046     		nop
+ 287 00ac BD46     		mov	sp, r7
+ 288 00ae 04B0     		add	sp, sp, #16
+ 289              		@ sp needed
+ 290 00b0 80BD     		pop	{r7, pc}
+ 291              		.cfi_endproc
+ 292              	.LFE37:
+ 293              		.size	UpdateRGBled, .-UpdateRGBled
+ 294 00b2 C046     		.text
+ 295              	.Letext0:
+ 296              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 297              		.file 3 "Generated_Source\\PSoC4/BLE_Stack.h"
+ 298              		.file 4 "Generated_Source\\PSoC4/BLE_StackGap.h"
+ 299              		.file 5 "Generated_Source\\PSoC4/BLE_eventHandler.h"
+ 300              		.file 6 "Generated_Source\\PSoC4/BLE.h"
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 10
+
+
+ 301              		.file 7 "./main.h"
+ 302              		.section	.debug_info,"",%progbits
+ 303              	.Ldebug_info0:
+ 304 0000 EA040000 		.4byte	0x4ea
+ 305 0004 0400     		.2byte	0x4
+ 306 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 307 000a 04       		.byte	0x4
+ 308 000b 01       		.uleb128 0x1
+ 309 000c 3A060000 		.4byte	.LASF128
+ 310 0010 0C       		.byte	0xc
+ 311 0011 12060000 		.4byte	.LASF129
+ 312 0015 B80C0000 		.4byte	.LASF130
+ 313 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 314 001d 00000000 		.4byte	0
+ 315 0021 00000000 		.4byte	.Ldebug_line0
+ 316 0025 02       		.uleb128 0x2
+ 317 0026 01       		.byte	0x1
+ 318 0027 06       		.byte	0x6
+ 319 0028 D7020000 		.4byte	.LASF0
+ 320 002c 02       		.uleb128 0x2
+ 321 002d 01       		.byte	0x1
+ 322 002e 08       		.byte	0x8
+ 323 002f 08090000 		.4byte	.LASF1
+ 324 0033 02       		.uleb128 0x2
+ 325 0034 02       		.byte	0x2
+ 326 0035 05       		.byte	0x5
+ 327 0036 4B090000 		.4byte	.LASF2
+ 328 003a 02       		.uleb128 0x2
+ 329 003b 02       		.byte	0x2
+ 330 003c 07       		.byte	0x7
+ 331 003d 7D050000 		.4byte	.LASF3
+ 332 0041 02       		.uleb128 0x2
+ 333 0042 04       		.byte	0x4
+ 334 0043 05       		.byte	0x5
+ 335 0044 D2010000 		.4byte	.LASF4
+ 336 0048 02       		.uleb128 0x2
+ 337 0049 04       		.byte	0x4
+ 338 004a 07       		.byte	0x7
+ 339 004b B9040000 		.4byte	.LASF5
+ 340 004f 02       		.uleb128 0x2
+ 341 0050 08       		.byte	0x8
+ 342 0051 05       		.byte	0x5
+ 343 0052 C9020000 		.4byte	.LASF6
+ 344 0056 02       		.uleb128 0x2
+ 345 0057 08       		.byte	0x8
+ 346 0058 07       		.byte	0x7
+ 347 0059 DB010000 		.4byte	.LASF7
+ 348 005d 03       		.uleb128 0x3
+ 349 005e 04       		.byte	0x4
+ 350 005f 05       		.byte	0x5
+ 351 0060 696E7400 		.ascii	"int\000"
+ 352 0064 02       		.uleb128 0x2
+ 353 0065 04       		.byte	0x4
+ 354 0066 07       		.byte	0x7
+ 355 0067 87040000 		.4byte	.LASF8
+ 356 006b 04       		.uleb128 0x4
+ 357 006c A6030000 		.4byte	.LASF9
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 11
+
+
+ 358 0070 02       		.byte	0x2
+ 359 0071 FB01     		.2byte	0x1fb
+ 360 0073 2C000000 		.4byte	0x2c
+ 361 0077 04       		.uleb128 0x4
+ 362 0078 3F000000 		.4byte	.LASF10
+ 363 007c 02       		.byte	0x2
+ 364 007d FC01     		.2byte	0x1fc
+ 365 007f 3A000000 		.4byte	0x3a
+ 366 0083 02       		.uleb128 0x2
+ 367 0084 04       		.byte	0x4
+ 368 0085 04       		.byte	0x4
+ 369 0086 E8080000 		.4byte	.LASF11
+ 370 008a 02       		.uleb128 0x2
+ 371 008b 08       		.byte	0x8
+ 372 008c 04       		.byte	0x4
+ 373 008d D7030000 		.4byte	.LASF12
+ 374 0091 02       		.uleb128 0x2
+ 375 0092 01       		.byte	0x1
+ 376 0093 08       		.byte	0x8
+ 377 0094 960A0000 		.4byte	.LASF13
+ 378 0098 05       		.uleb128 0x5
+ 379 0099 77000000 		.4byte	0x77
+ 380 009d 02       		.uleb128 0x2
+ 381 009e 08       		.byte	0x8
+ 382 009f 04       		.byte	0x4
+ 383 00a0 720A0000 		.4byte	.LASF14
+ 384 00a4 02       		.uleb128 0x2
+ 385 00a5 04       		.byte	0x4
+ 386 00a6 07       		.byte	0x7
+ 387 00a7 C8070000 		.4byte	.LASF15
+ 388 00ab 06       		.uleb128 0x6
+ 389 00ac 01       		.byte	0x1
+ 390 00ad 2C000000 		.4byte	0x2c
+ 391 00b1 03       		.byte	0x3
+ 392 00b2 3501     		.2byte	0x135
+ 393 00b4 69020000 		.4byte	0x269
+ 394 00b8 07       		.uleb128 0x7
+ 395 00b9 90050000 		.4byte	.LASF16
+ 396 00bd 00       		.byte	0
+ 397 00be 07       		.uleb128 0x7
+ 398 00bf E3020000 		.4byte	.LASF17
+ 399 00c3 01       		.byte	0x1
+ 400 00c4 07       		.uleb128 0x7
+ 401 00c5 C0010000 		.4byte	.LASF18
+ 402 00c9 02       		.byte	0x2
+ 403 00ca 07       		.uleb128 0x7
+ 404 00cb 570B0000 		.4byte	.LASF19
+ 405 00cf 03       		.byte	0x3
+ 406 00d0 07       		.uleb128 0x7
+ 407 00d1 FC010000 		.4byte	.LASF20
+ 408 00d5 04       		.byte	0x4
+ 409 00d6 07       		.uleb128 0x7
+ 410 00d7 23000000 		.4byte	.LASF21
+ 411 00db 05       		.byte	0x5
+ 412 00dc 07       		.uleb128 0x7
+ 413 00dd B6050000 		.4byte	.LASF22
+ 414 00e1 06       		.byte	0x6
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 12
+
+
+ 415 00e2 07       		.uleb128 0x7
+ 416 00e3 FF060000 		.4byte	.LASF23
+ 417 00e7 20       		.byte	0x20
+ 418 00e8 07       		.uleb128 0x7
+ 419 00e9 20030000 		.4byte	.LASF24
+ 420 00ed 21       		.byte	0x21
+ 421 00ee 07       		.uleb128 0x7
+ 422 00ef CF050000 		.4byte	.LASF25
+ 423 00f3 22       		.byte	0x22
+ 424 00f4 07       		.uleb128 0x7
+ 425 00f5 310B0000 		.4byte	.LASF26
+ 426 00f9 23       		.byte	0x23
+ 427 00fa 07       		.uleb128 0x7
+ 428 00fb 53080000 		.4byte	.LASF27
+ 429 00ff 24       		.byte	0x24
+ 430 0100 07       		.uleb128 0x7
+ 431 0101 DD070000 		.4byte	.LASF28
+ 432 0105 25       		.byte	0x25
+ 433 0106 07       		.uleb128 0x7
+ 434 0107 7E030000 		.4byte	.LASF29
+ 435 010b 26       		.byte	0x26
+ 436 010c 07       		.uleb128 0x7
+ 437 010d F3050000 		.4byte	.LASF30
+ 438 0111 27       		.byte	0x27
+ 439 0112 07       		.uleb128 0x7
+ 440 0113 9B0A0000 		.4byte	.LASF31
+ 441 0117 28       		.byte	0x28
+ 442 0118 07       		.uleb128 0x7
+ 443 0119 83020000 		.4byte	.LASF32
+ 444 011d 29       		.byte	0x29
+ 445 011e 07       		.uleb128 0x7
+ 446 011f 7C000000 		.4byte	.LASF33
+ 447 0123 2A       		.byte	0x2a
+ 448 0124 07       		.uleb128 0x7
+ 449 0125 F6020000 		.4byte	.LASF34
+ 450 0129 2B       		.byte	0x2b
+ 451 012a 07       		.uleb128 0x7
+ 452 012b 4D0C0000 		.4byte	.LASF35
+ 453 012f 2C       		.byte	0x2c
+ 454 0130 07       		.uleb128 0x7
+ 455 0131 A0020000 		.4byte	.LASF36
+ 456 0135 2D       		.byte	0x2d
+ 457 0136 07       		.uleb128 0x7
+ 458 0137 16090000 		.4byte	.LASF37
+ 459 013b 2E       		.byte	0x2e
+ 460 013c 07       		.uleb128 0x7
+ 461 013d 0B010000 		.4byte	.LASF38
+ 462 0141 2F       		.byte	0x2f
+ 463 0142 07       		.uleb128 0x7
+ 464 0143 32080000 		.4byte	.LASF39
+ 465 0147 30       		.byte	0x30
+ 466 0148 07       		.uleb128 0x7
+ 467 0149 260D0000 		.4byte	.LASF40
+ 468 014d 31       		.byte	0x31
+ 469 014e 07       		.uleb128 0x7
+ 470 014f 11080000 		.4byte	.LASF41
+ 471 0153 32       		.byte	0x32
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 13
+
+
+ 472 0154 07       		.uleb128 0x7
+ 473 0155 2B0A0000 		.4byte	.LASF42
+ 474 0159 33       		.byte	0x33
+ 475 015a 07       		.uleb128 0x7
+ 476 015b CB040000 		.4byte	.LASF43
+ 477 015f 34       		.byte	0x34
+ 478 0160 07       		.uleb128 0x7
+ 479 0161 48040000 		.4byte	.LASF44
+ 480 0165 35       		.byte	0x35
+ 481 0166 07       		.uleb128 0x7
+ 482 0167 19060000 		.4byte	.LASF45
+ 483 016b 36       		.byte	0x36
+ 484 016c 07       		.uleb128 0x7
+ 485 016d 3C070000 		.4byte	.LASF46
+ 486 0171 37       		.byte	0x37
+ 487 0172 07       		.uleb128 0x7
+ 488 0173 110A0000 		.4byte	.LASF47
+ 489 0177 40       		.byte	0x40
+ 490 0178 07       		.uleb128 0x7
+ 491 0179 C8060000 		.4byte	.LASF48
+ 492 017d 41       		.byte	0x41
+ 493 017e 07       		.uleb128 0x7
+ 494 017f 4A0D0000 		.4byte	.LASF49
+ 495 0183 42       		.byte	0x42
+ 496 0184 07       		.uleb128 0x7
+ 497 0185 7D0B0000 		.4byte	.LASF50
+ 498 0189 43       		.byte	0x43
+ 499 018a 07       		.uleb128 0x7
+ 500 018b FD040000 		.4byte	.LASF51
+ 501 018f 44       		.byte	0x44
+ 502 0190 07       		.uleb128 0x7
+ 503 0191 C1080000 		.4byte	.LASF52
+ 504 0195 45       		.byte	0x45
+ 505 0196 07       		.uleb128 0x7
+ 506 0197 8F070000 		.4byte	.LASF53
+ 507 019b 46       		.byte	0x46
+ 508 019c 07       		.uleb128 0x7
+ 509 019d A2010000 		.4byte	.LASF54
+ 510 01a1 47       		.byte	0x47
+ 511 01a2 07       		.uleb128 0x7
+ 512 01a3 260C0000 		.4byte	.LASF55
+ 513 01a7 48       		.byte	0x48
+ 514 01a8 07       		.uleb128 0x7
+ 515 01a9 37030000 		.4byte	.LASF56
+ 516 01ad 49       		.byte	0x49
+ 517 01ae 07       		.uleb128 0x7
+ 518 01af 080C0000 		.4byte	.LASF57
+ 519 01b3 4A       		.byte	0x4a
+ 520 01b4 07       		.uleb128 0x7
+ 521 01b5 34010000 		.4byte	.LASF58
+ 522 01b9 4B       		.byte	0x4b
+ 523 01ba 07       		.uleb128 0x7
+ 524 01bb E3040000 		.4byte	.LASF59
+ 525 01bf 4C       		.byte	0x4c
+ 526 01c0 07       		.uleb128 0x7
+ 527 01c1 F7070000 		.4byte	.LASF60
+ 528 01c5 4D       		.byte	0x4d
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 14
+
+
+ 529 01c6 07       		.uleb128 0x7
+ 530 01c7 60030000 		.4byte	.LASF61
+ 531 01cb 4E       		.byte	0x4e
+ 532 01cc 07       		.uleb128 0x7
+ 533 01cd 93090000 		.4byte	.LASF62
+ 534 01d1 4F       		.byte	0x4f
+ 535 01d2 07       		.uleb128 0x7
+ 536 01d3 53010000 		.4byte	.LASF63
+ 537 01d7 50       		.byte	0x50
+ 538 01d8 07       		.uleb128 0x7
+ 539 01d9 B8030000 		.4byte	.LASF64
+ 540 01dd 51       		.byte	0x51
+ 541 01de 07       		.uleb128 0x7
+ 542 01df 6F080000 		.4byte	.LASF65
+ 543 01e3 52       		.byte	0x52
+ 544 01e4 07       		.uleb128 0x7
+ 545 01e5 55090000 		.4byte	.LASF66
+ 546 01e9 53       		.byte	0x53
+ 547 01ea 07       		.uleb128 0x7
+ 548 01eb F0090000 		.4byte	.LASF67
+ 549 01ef 54       		.byte	0x54
+ 550 01f0 07       		.uleb128 0x7
+ 551 01f1 1B050000 		.4byte	.LASF68
+ 552 01f5 55       		.byte	0x55
+ 553 01f6 07       		.uleb128 0x7
+ 554 01f7 65040000 		.4byte	.LASF69
+ 555 01fb 56       		.byte	0x56
+ 556 01fc 07       		.uleb128 0x7
+ 557 01fd CD0A0000 		.4byte	.LASF70
+ 558 0201 57       		.byte	0x57
+ 559 0202 07       		.uleb128 0x7
+ 560 0203 3F050000 		.4byte	.LASF71
+ 561 0207 58       		.byte	0x58
+ 562 0208 07       		.uleb128 0x7
+ 563 0209 5D020000 		.4byte	.LASF72
+ 564 020d 70       		.byte	0x70
+ 565 020e 07       		.uleb128 0x7
+ 566 020f 920C0000 		.4byte	.LASF73
+ 567 0213 71       		.byte	0x71
+ 568 0214 07       		.uleb128 0x7
+ 569 0215 E3060000 		.4byte	.LASF74
+ 570 0219 72       		.byte	0x72
+ 571 021a 07       		.uleb128 0x7
+ 572 021b 71070000 		.4byte	.LASF75
+ 573 021f 73       		.byte	0x73
+ 574 0220 07       		.uleb128 0x7
+ 575 0221 A3080000 		.4byte	.LASF76
+ 576 0225 74       		.byte	0x74
+ 577 0226 07       		.uleb128 0x7
+ 578 0227 710C0000 		.4byte	.LASF77
+ 579 022b 75       		.byte	0x75
+ 580 022c 07       		.uleb128 0x7
+ 581 022d B3000000 		.4byte	.LASF78
+ 582 0231 76       		.byte	0x76
+ 583 0232 07       		.uleb128 0x7
+ 584 0233 46000000 		.4byte	.LASF79
+ 585 0237 77       		.byte	0x77
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 15
+
+
+ 586 0238 07       		.uleb128 0x7
+ 587 0239 00000000 		.4byte	.LASF80
+ 588 023d 78       		.byte	0x78
+ 589 023e 07       		.uleb128 0x7
+ 590 023f 0E0B0000 		.4byte	.LASF81
+ 591 0243 79       		.byte	0x79
+ 592 0244 07       		.uleb128 0x7
+ 593 0245 0D040000 		.4byte	.LASF82
+ 594 0249 7A       		.byte	0x7a
+ 595 024a 07       		.uleb128 0x7
+ 596 024b 19020000 		.4byte	.LASF83
+ 597 024f FA       		.byte	0xfa
+ 598 0250 07       		.uleb128 0x7
+ 599 0251 94040000 		.4byte	.LASF84
+ 600 0255 FB       		.byte	0xfb
+ 601 0256 07       		.uleb128 0x7
+ 602 0257 81090000 		.4byte	.LASF85
+ 603 025b FC       		.byte	0xfc
+ 604 025c 07       		.uleb128 0x7
+ 605 025d 7E0A0000 		.4byte	.LASF86
+ 606 0261 FD       		.byte	0xfd
+ 607 0262 07       		.uleb128 0x7
+ 608 0263 F0030000 		.4byte	.LASF87
+ 609 0267 FF       		.byte	0xff
+ 610 0268 00       		.byte	0
+ 611 0269 08       		.uleb128 0x8
+ 612 026a 6B000000 		.4byte	0x6b
+ 613 026e 79020000 		.4byte	0x279
+ 614 0272 09       		.uleb128 0x9
+ 615 0273 A4000000 		.4byte	0xa4
+ 616 0277 05       		.byte	0x5
+ 617 0278 00       		.byte	0
+ 618 0279 0A       		.uleb128 0xa
+ 619 027a 04       		.byte	0x4
+ 620 027b 6B000000 		.4byte	0x6b
+ 621 027f 0B       		.uleb128 0xb
+ 622 0280 01       		.byte	0x1
+ 623 0281 2C000000 		.4byte	0x2c
+ 624 0285 04       		.byte	0x4
+ 625 0286 E0       		.byte	0xe0
+ 626 0287 AA020000 		.4byte	0x2aa
+ 627 028b 07       		.uleb128 0x7
+ 628 028c 37020000 		.4byte	.LASF88
+ 629 0290 00       		.byte	0
+ 630 0291 07       		.uleb128 0x7
+ 631 0292 DF000000 		.4byte	.LASF89
+ 632 0296 01       		.byte	0x1
+ 633 0297 07       		.uleb128 0x7
+ 634 0298 72010000 		.4byte	.LASF90
+ 635 029c 02       		.byte	0x2
+ 636 029d 07       		.uleb128 0x7
+ 637 029e DE0B0000 		.4byte	.LASF91
+ 638 02a2 03       		.byte	0x3
+ 639 02a3 07       		.uleb128 0x7
+ 640 02a4 BD090000 		.4byte	.LASF92
+ 641 02a8 04       		.byte	0x4
+ 642 02a9 00       		.byte	0
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 16
+
+
+ 643 02aa 0C       		.uleb128 0xc
+ 644 02ab CD0B0000 		.4byte	.LASF93
+ 645 02af 04       		.byte	0x4
+ 646 02b0 F0       		.byte	0xf0
+ 647 02b1 7F020000 		.4byte	0x27f
+ 648 02b5 0D       		.uleb128 0xd
+ 649 02b6 10       		.byte	0x10
+ 650 02b7 04       		.byte	0x4
+ 651 02b8 2102     		.2byte	0x221
+ 652 02ba 27030000 		.4byte	0x327
+ 653 02be 0E       		.uleb128 0xe
+ 654 02bf B2090000 		.4byte	.LASF94
+ 655 02c3 04       		.byte	0x4
+ 656 02c4 2702     		.2byte	0x227
+ 657 02c6 77000000 		.4byte	0x77
+ 658 02ca 00       		.byte	0
+ 659 02cb 0E       		.uleb128 0xe
+ 660 02cc 76090000 		.4byte	.LASF95
+ 661 02d0 04       		.byte	0x4
+ 662 02d1 2D02     		.2byte	0x22d
+ 663 02d3 77000000 		.4byte	0x77
+ 664 02d7 02       		.byte	0x2
+ 665 02d8 0E       		.uleb128 0xe
+ 666 02d9 11020000 		.4byte	.LASF96
+ 667 02dd 04       		.byte	0x4
+ 668 02de 3602     		.2byte	0x236
+ 669 02e0 AA020000 		.4byte	0x2aa
+ 670 02e4 04       		.byte	0x4
+ 671 02e5 0E       		.uleb128 0xe
+ 672 02e6 D1070000 		.4byte	.LASF97
+ 673 02ea 04       		.byte	0x4
+ 674 02eb 3E02     		.2byte	0x23e
+ 675 02ed 6B000000 		.4byte	0x6b
+ 676 02f1 05       		.byte	0x5
+ 677 02f2 0E       		.uleb128 0xe
+ 678 02f3 F9080000 		.4byte	.LASF98
+ 679 02f7 04       		.byte	0x4
+ 680 02f8 4502     		.2byte	0x245
+ 681 02fa 6B000000 		.4byte	0x6b
+ 682 02fe 06       		.byte	0x6
+ 683 02ff 0E       		.uleb128 0xe
+ 684 0300 15030000 		.4byte	.LASF99
+ 685 0304 04       		.byte	0x4
+ 686 0305 4B02     		.2byte	0x24b
+ 687 0307 69020000 		.4byte	0x269
+ 688 030b 07       		.byte	0x7
+ 689 030c 0E       		.uleb128 0xe
+ 690 030d A5000000 		.4byte	.LASF100
+ 691 0311 04       		.byte	0x4
+ 692 0312 5302     		.2byte	0x253
+ 693 0314 6B000000 		.4byte	0x6b
+ 694 0318 0D       		.byte	0xd
+ 695 0319 0E       		.uleb128 0xe
+ 696 031a 50030000 		.4byte	.LASF101
+ 697 031e 04       		.byte	0x4
+ 698 031f 5F02     		.2byte	0x25f
+ 699 0321 6B000000 		.4byte	0x6b
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 17
+
+
+ 700 0325 0E       		.byte	0xe
+ 701 0326 00       		.byte	0
+ 702 0327 04       		.uleb128 0x4
+ 703 0328 F60A0000 		.4byte	.LASF102
+ 704 032c 04       		.byte	0x4
+ 705 032d 6102     		.2byte	0x261
+ 706 032f B5020000 		.4byte	0x2b5
+ 707 0333 0D       		.uleb128 0xd
+ 708 0334 20       		.byte	0x20
+ 709 0335 04       		.byte	0x4
+ 710 0336 6402     		.2byte	0x264
+ 711 0338 57030000 		.4byte	0x357
+ 712 033c 0E       		.uleb128 0xe
+ 713 033d E8090000 		.4byte	.LASF103
+ 714 0341 04       		.byte	0x4
+ 715 0342 6702     		.2byte	0x267
+ 716 0344 57030000 		.4byte	0x357
+ 717 0348 00       		.byte	0
+ 718 0349 0E       		.uleb128 0xe
+ 719 034a EE080000 		.4byte	.LASF104
+ 720 034e 04       		.byte	0x4
+ 721 034f 6A02     		.2byte	0x26a
+ 722 0351 6B000000 		.4byte	0x6b
+ 723 0355 1F       		.byte	0x1f
+ 724 0356 00       		.byte	0
+ 725 0357 08       		.uleb128 0x8
+ 726 0358 6B000000 		.4byte	0x6b
+ 727 035c 67030000 		.4byte	0x367
+ 728 0360 09       		.uleb128 0x9
+ 729 0361 A4000000 		.4byte	0xa4
+ 730 0365 1E       		.byte	0x1e
+ 731 0366 00       		.byte	0
+ 732 0367 04       		.uleb128 0x4
+ 733 0368 65000000 		.4byte	.LASF105
+ 734 036c 04       		.byte	0x4
+ 735 036d 6C02     		.2byte	0x26c
+ 736 036f 33030000 		.4byte	0x333
+ 737 0373 0D       		.uleb128 0xd
+ 738 0374 20       		.byte	0x20
+ 739 0375 04       		.byte	0x4
+ 740 0376 6F02     		.2byte	0x26f
+ 741 0378 97030000 		.4byte	0x397
+ 742 037c 0E       		.uleb128 0xe
+ 743 037d AC030000 		.4byte	.LASF106
+ 744 0381 04       		.byte	0x4
+ 745 0382 7302     		.2byte	0x273
+ 746 0384 57030000 		.4byte	0x357
+ 747 0388 00       		.byte	0
+ 748 0389 0E       		.uleb128 0xe
+ 749 038a FE030000 		.4byte	.LASF107
+ 750 038e 04       		.byte	0x4
+ 751 038f 7602     		.2byte	0x276
+ 752 0391 6B000000 		.4byte	0x6b
+ 753 0395 1F       		.byte	0x1f
+ 754 0396 00       		.byte	0
+ 755 0397 04       		.uleb128 0x4
+ 756 0398 62050000 		.4byte	.LASF108
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 18
+
+
+ 757 039c 04       		.byte	0x4
+ 758 039d 7802     		.2byte	0x278
+ 759 039f 73030000 		.4byte	0x373
+ 760 03a3 0D       		.uleb128 0xd
+ 761 03a4 14       		.byte	0x14
+ 762 03a5 04       		.byte	0x4
+ 763 03a6 7B02     		.2byte	0x27b
+ 764 03a8 EE030000 		.4byte	0x3ee
+ 765 03ac 0E       		.uleb128 0xe
+ 766 03ad DE030000 		.4byte	.LASF109
+ 767 03b1 04       		.byte	0x4
+ 768 03b2 8302     		.2byte	0x283
+ 769 03b4 6B000000 		.4byte	0x6b
+ 770 03b8 00       		.byte	0
+ 771 03b9 0E       		.uleb128 0xe
+ 772 03ba B70B0000 		.4byte	.LASF110
+ 773 03be 04       		.byte	0x4
+ 774 03bf 8602     		.2byte	0x286
+ 775 03c1 EE030000 		.4byte	0x3ee
+ 776 03c5 04       		.byte	0x4
+ 777 03c6 0E       		.uleb128 0xe
+ 778 03c7 E8090000 		.4byte	.LASF103
+ 779 03cb 04       		.byte	0x4
+ 780 03cc 8802     		.2byte	0x288
+ 781 03ce F4030000 		.4byte	0x3f4
+ 782 03d2 08       		.byte	0x8
+ 783 03d3 0E       		.uleb128 0xe
+ 784 03d4 AC030000 		.4byte	.LASF106
+ 785 03d8 04       		.byte	0x4
+ 786 03d9 8A02     		.2byte	0x28a
+ 787 03db FA030000 		.4byte	0x3fa
+ 788 03df 0C       		.byte	0xc
+ 789 03e0 0E       		.uleb128 0xe
+ 790 03e1 B3040000 		.4byte	.LASF111
+ 791 03e5 04       		.byte	0x4
+ 792 03e6 9402     		.2byte	0x294
+ 793 03e8 77000000 		.4byte	0x77
+ 794 03ec 10       		.byte	0x10
+ 795 03ed 00       		.byte	0
+ 796 03ee 0A       		.uleb128 0xa
+ 797 03ef 04       		.byte	0x4
+ 798 03f0 27030000 		.4byte	0x327
+ 799 03f4 0A       		.uleb128 0xa
+ 800 03f5 04       		.byte	0x4
+ 801 03f6 67030000 		.4byte	0x367
+ 802 03fa 0A       		.uleb128 0xa
+ 803 03fb 04       		.byte	0x4
+ 804 03fc 97030000 		.4byte	0x397
+ 805 0400 04       		.uleb128 0x4
+ 806 0401 9B0B0000 		.4byte	.LASF112
+ 807 0405 04       		.byte	0x4
+ 808 0406 9602     		.2byte	0x296
+ 809 0408 A3030000 		.4byte	0x3a3
+ 810 040c 06       		.uleb128 0x6
+ 811 040d 01       		.byte	0x1
+ 812 040e 2C000000 		.4byte	0x2c
+ 813 0412 05       		.byte	0x5
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 19
+
+
+ 814 0413 EB08     		.2byte	0x8eb
+ 815 0415 38040000 		.4byte	0x438
+ 816 0419 07       		.uleb128 0x7
+ 817 041a 630A0000 		.4byte	.LASF113
+ 818 041e 00       		.byte	0
+ 819 041f 07       		.uleb128 0x7
+ 820 0420 BD0A0000 		.4byte	.LASF114
+ 821 0424 01       		.byte	0x1
+ 822 0425 07       		.uleb128 0x7
+ 823 0426 90080000 		.4byte	.LASF115
+ 824 042a 02       		.byte	0x2
+ 825 042b 07       		.uleb128 0x7
+ 826 042c 31040000 		.4byte	.LASF116
+ 827 0430 02       		.byte	0x2
+ 828 0431 07       		.uleb128 0x7
+ 829 0432 520A0000 		.4byte	.LASF117
+ 830 0436 03       		.byte	0x3
+ 831 0437 00       		.byte	0
+ 832 0438 0F       		.uleb128 0xf
+ 833 0439 210D0000 		.4byte	.LASF118
+ 834 043d 01       		.byte	0x1
+ 835 043e 4A       		.byte	0x4a
+ 836 043f 5D000000 		.4byte	0x5d
+ 837 0443 00000000 		.4byte	.LFB35
+ 838 0447 1A000000 		.4byte	.LFE35-.LFB35
+ 839 044b 01       		.uleb128 0x1
+ 840 044c 9C       		.byte	0x9c
+ 841 044d 10       		.uleb128 0x10
+ 842 044e 3A090000 		.4byte	.LASF119
+ 843 0452 01       		.byte	0x1
+ 844 0453 7A       		.byte	0x7a
+ 845 0454 00000000 		.4byte	.LFB36
+ 846 0458 BC000000 		.4byte	.LFE36-.LFB36
+ 847 045c 01       		.uleb128 0x1
+ 848 045d 9C       		.byte	0x9c
+ 849 045e 11       		.uleb128 0x11
+ 850 045f C00B0000 		.4byte	.LASF131
+ 851 0463 01       		.byte	0x1
+ 852 0464 C0       		.byte	0xc0
+ 853 0465 00000000 		.4byte	.LFB37
+ 854 0469 B2000000 		.4byte	.LFE37-.LFB37
+ 855 046d 01       		.uleb128 0x1
+ 856 046e 9C       		.byte	0x9c
+ 857 046f BA040000 		.4byte	0x4ba
+ 858 0473 12       		.uleb128 0x12
+ 859 0474 700B0000 		.4byte	.LASF120
+ 860 0478 01       		.byte	0x1
+ 861 0479 C0       		.byte	0xc0
+ 862 047a 79020000 		.4byte	0x279
+ 863 047e 02       		.uleb128 0x2
+ 864 047f 91       		.byte	0x91
+ 865 0480 6C       		.sleb128 -20
+ 866 0481 13       		.uleb128 0x13
+ 867 0482 6C656E00 		.ascii	"len\000"
+ 868 0486 01       		.byte	0x1
+ 869 0487 C0       		.byte	0xc0
+ 870 0488 6B000000 		.4byte	0x6b
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 20
+
+
+ 871 048c 02       		.uleb128 0x2
+ 872 048d 91       		.byte	0x91
+ 873 048e 6B       		.sleb128 -21
+ 874 048f 14       		.uleb128 0x14
+ 875 0490 E7030000 		.4byte	.LASF121
+ 876 0494 01       		.byte	0x1
+ 877 0495 C2       		.byte	0xc2
+ 878 0496 6B000000 		.4byte	0x6b
+ 879 049a 02       		.uleb128 0x2
+ 880 049b 91       		.byte	0x91
+ 881 049c 77       		.sleb128 -9
+ 882 049d 14       		.uleb128 0x14
+ 883 049e D4000000 		.4byte	.LASF122
+ 884 04a2 01       		.byte	0x1
+ 885 04a3 C2       		.byte	0xc2
+ 886 04a4 6B000000 		.4byte	0x6b
+ 887 04a8 02       		.uleb128 0x2
+ 888 04a9 91       		.byte	0x91
+ 889 04aa 76       		.sleb128 -10
+ 890 04ab 14       		.uleb128 0x14
+ 891 04ac F2010000 		.4byte	.LASF123
+ 892 04b0 01       		.byte	0x1
+ 893 04b1 C2       		.byte	0xc2
+ 894 04b2 6B000000 		.4byte	0x6b
+ 895 04b6 02       		.uleb128 0x2
+ 896 04b7 91       		.byte	0x91
+ 897 04b8 75       		.sleb128 -11
+ 898 04b9 00       		.byte	0
+ 899 04ba 15       		.uleb128 0x15
+ 900 04bb B0070000 		.4byte	.LASF124
+ 901 04bf 06       		.byte	0x6
+ 902 04c0 B602     		.2byte	0x2b6
+ 903 04c2 00040000 		.4byte	0x400
+ 904 04c6 16       		.uleb128 0x16
+ 905 04c7 23070000 		.4byte	.LASF125
+ 906 04cb 07       		.byte	0x7
+ 907 04cc 21       		.byte	0x21
+ 908 04cd 98000000 		.4byte	0x98
+ 909 04d1 05       		.uleb128 0x5
+ 910 04d2 03       		.byte	0x3
+ 911 04d3 00000000 		.4byte	current_watchdog_counter
+ 912 04d7 17       		.uleb128 0x17
+ 913 04d8 A7050000 		.4byte	.LASF126
+ 914 04dc 01       		.byte	0x1
+ 915 04dd 31       		.byte	0x31
+ 916 04de 6B000000 		.4byte	0x6b
+ 917 04e2 17       		.uleb128 0x17
+ 918 04e3 96010000 		.4byte	.LASF127
+ 919 04e7 01       		.byte	0x1
+ 920 04e8 34       		.byte	0x34
+ 921 04e9 67030000 		.4byte	0x367
+ 922 04ed 00       		.byte	0
+ 923              		.section	.debug_abbrev,"",%progbits
+ 924              	.Ldebug_abbrev0:
+ 925 0000 01       		.uleb128 0x1
+ 926 0001 11       		.uleb128 0x11
+ 927 0002 01       		.byte	0x1
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 21
+
+
+ 928 0003 25       		.uleb128 0x25
+ 929 0004 0E       		.uleb128 0xe
+ 930 0005 13       		.uleb128 0x13
+ 931 0006 0B       		.uleb128 0xb
+ 932 0007 03       		.uleb128 0x3
+ 933 0008 0E       		.uleb128 0xe
+ 934 0009 1B       		.uleb128 0x1b
+ 935 000a 0E       		.uleb128 0xe
+ 936 000b 55       		.uleb128 0x55
+ 937 000c 17       		.uleb128 0x17
+ 938 000d 11       		.uleb128 0x11
+ 939 000e 01       		.uleb128 0x1
+ 940 000f 10       		.uleb128 0x10
+ 941 0010 17       		.uleb128 0x17
+ 942 0011 00       		.byte	0
+ 943 0012 00       		.byte	0
+ 944 0013 02       		.uleb128 0x2
+ 945 0014 24       		.uleb128 0x24
+ 946 0015 00       		.byte	0
+ 947 0016 0B       		.uleb128 0xb
+ 948 0017 0B       		.uleb128 0xb
+ 949 0018 3E       		.uleb128 0x3e
+ 950 0019 0B       		.uleb128 0xb
+ 951 001a 03       		.uleb128 0x3
+ 952 001b 0E       		.uleb128 0xe
+ 953 001c 00       		.byte	0
+ 954 001d 00       		.byte	0
+ 955 001e 03       		.uleb128 0x3
+ 956 001f 24       		.uleb128 0x24
+ 957 0020 00       		.byte	0
+ 958 0021 0B       		.uleb128 0xb
+ 959 0022 0B       		.uleb128 0xb
+ 960 0023 3E       		.uleb128 0x3e
+ 961 0024 0B       		.uleb128 0xb
+ 962 0025 03       		.uleb128 0x3
+ 963 0026 08       		.uleb128 0x8
+ 964 0027 00       		.byte	0
+ 965 0028 00       		.byte	0
+ 966 0029 04       		.uleb128 0x4
+ 967 002a 16       		.uleb128 0x16
+ 968 002b 00       		.byte	0
+ 969 002c 03       		.uleb128 0x3
+ 970 002d 0E       		.uleb128 0xe
+ 971 002e 3A       		.uleb128 0x3a
+ 972 002f 0B       		.uleb128 0xb
+ 973 0030 3B       		.uleb128 0x3b
+ 974 0031 05       		.uleb128 0x5
+ 975 0032 49       		.uleb128 0x49
+ 976 0033 13       		.uleb128 0x13
+ 977 0034 00       		.byte	0
+ 978 0035 00       		.byte	0
+ 979 0036 05       		.uleb128 0x5
+ 980 0037 35       		.uleb128 0x35
+ 981 0038 00       		.byte	0
+ 982 0039 49       		.uleb128 0x49
+ 983 003a 13       		.uleb128 0x13
+ 984 003b 00       		.byte	0
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 22
+
+
+ 985 003c 00       		.byte	0
+ 986 003d 06       		.uleb128 0x6
+ 987 003e 04       		.uleb128 0x4
+ 988 003f 01       		.byte	0x1
+ 989 0040 0B       		.uleb128 0xb
+ 990 0041 0B       		.uleb128 0xb
+ 991 0042 49       		.uleb128 0x49
+ 992 0043 13       		.uleb128 0x13
+ 993 0044 3A       		.uleb128 0x3a
+ 994 0045 0B       		.uleb128 0xb
+ 995 0046 3B       		.uleb128 0x3b
+ 996 0047 05       		.uleb128 0x5
+ 997 0048 01       		.uleb128 0x1
+ 998 0049 13       		.uleb128 0x13
+ 999 004a 00       		.byte	0
+ 1000 004b 00       		.byte	0
+ 1001 004c 07       		.uleb128 0x7
+ 1002 004d 28       		.uleb128 0x28
+ 1003 004e 00       		.byte	0
+ 1004 004f 03       		.uleb128 0x3
+ 1005 0050 0E       		.uleb128 0xe
+ 1006 0051 1C       		.uleb128 0x1c
+ 1007 0052 0B       		.uleb128 0xb
+ 1008 0053 00       		.byte	0
+ 1009 0054 00       		.byte	0
+ 1010 0055 08       		.uleb128 0x8
+ 1011 0056 01       		.uleb128 0x1
+ 1012 0057 01       		.byte	0x1
+ 1013 0058 49       		.uleb128 0x49
+ 1014 0059 13       		.uleb128 0x13
+ 1015 005a 01       		.uleb128 0x1
+ 1016 005b 13       		.uleb128 0x13
+ 1017 005c 00       		.byte	0
+ 1018 005d 00       		.byte	0
+ 1019 005e 09       		.uleb128 0x9
+ 1020 005f 21       		.uleb128 0x21
+ 1021 0060 00       		.byte	0
+ 1022 0061 49       		.uleb128 0x49
+ 1023 0062 13       		.uleb128 0x13
+ 1024 0063 2F       		.uleb128 0x2f
+ 1025 0064 0B       		.uleb128 0xb
+ 1026 0065 00       		.byte	0
+ 1027 0066 00       		.byte	0
+ 1028 0067 0A       		.uleb128 0xa
+ 1029 0068 0F       		.uleb128 0xf
+ 1030 0069 00       		.byte	0
+ 1031 006a 0B       		.uleb128 0xb
+ 1032 006b 0B       		.uleb128 0xb
+ 1033 006c 49       		.uleb128 0x49
+ 1034 006d 13       		.uleb128 0x13
+ 1035 006e 00       		.byte	0
+ 1036 006f 00       		.byte	0
+ 1037 0070 0B       		.uleb128 0xb
+ 1038 0071 04       		.uleb128 0x4
+ 1039 0072 01       		.byte	0x1
+ 1040 0073 0B       		.uleb128 0xb
+ 1041 0074 0B       		.uleb128 0xb
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 23
+
+
+ 1042 0075 49       		.uleb128 0x49
+ 1043 0076 13       		.uleb128 0x13
+ 1044 0077 3A       		.uleb128 0x3a
+ 1045 0078 0B       		.uleb128 0xb
+ 1046 0079 3B       		.uleb128 0x3b
+ 1047 007a 0B       		.uleb128 0xb
+ 1048 007b 01       		.uleb128 0x1
+ 1049 007c 13       		.uleb128 0x13
+ 1050 007d 00       		.byte	0
+ 1051 007e 00       		.byte	0
+ 1052 007f 0C       		.uleb128 0xc
+ 1053 0080 16       		.uleb128 0x16
+ 1054 0081 00       		.byte	0
+ 1055 0082 03       		.uleb128 0x3
+ 1056 0083 0E       		.uleb128 0xe
+ 1057 0084 3A       		.uleb128 0x3a
+ 1058 0085 0B       		.uleb128 0xb
+ 1059 0086 3B       		.uleb128 0x3b
+ 1060 0087 0B       		.uleb128 0xb
+ 1061 0088 49       		.uleb128 0x49
+ 1062 0089 13       		.uleb128 0x13
+ 1063 008a 00       		.byte	0
+ 1064 008b 00       		.byte	0
+ 1065 008c 0D       		.uleb128 0xd
+ 1066 008d 13       		.uleb128 0x13
+ 1067 008e 01       		.byte	0x1
+ 1068 008f 0B       		.uleb128 0xb
+ 1069 0090 0B       		.uleb128 0xb
+ 1070 0091 3A       		.uleb128 0x3a
+ 1071 0092 0B       		.uleb128 0xb
+ 1072 0093 3B       		.uleb128 0x3b
+ 1073 0094 05       		.uleb128 0x5
+ 1074 0095 01       		.uleb128 0x1
+ 1075 0096 13       		.uleb128 0x13
+ 1076 0097 00       		.byte	0
+ 1077 0098 00       		.byte	0
+ 1078 0099 0E       		.uleb128 0xe
+ 1079 009a 0D       		.uleb128 0xd
+ 1080 009b 00       		.byte	0
+ 1081 009c 03       		.uleb128 0x3
+ 1082 009d 0E       		.uleb128 0xe
+ 1083 009e 3A       		.uleb128 0x3a
+ 1084 009f 0B       		.uleb128 0xb
+ 1085 00a0 3B       		.uleb128 0x3b
+ 1086 00a1 05       		.uleb128 0x5
+ 1087 00a2 49       		.uleb128 0x49
+ 1088 00a3 13       		.uleb128 0x13
+ 1089 00a4 38       		.uleb128 0x38
+ 1090 00a5 0B       		.uleb128 0xb
+ 1091 00a6 00       		.byte	0
+ 1092 00a7 00       		.byte	0
+ 1093 00a8 0F       		.uleb128 0xf
+ 1094 00a9 2E       		.uleb128 0x2e
+ 1095 00aa 00       		.byte	0
+ 1096 00ab 3F       		.uleb128 0x3f
+ 1097 00ac 19       		.uleb128 0x19
+ 1098 00ad 03       		.uleb128 0x3
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 24
+
+
+ 1099 00ae 0E       		.uleb128 0xe
+ 1100 00af 3A       		.uleb128 0x3a
+ 1101 00b0 0B       		.uleb128 0xb
+ 1102 00b1 3B       		.uleb128 0x3b
+ 1103 00b2 0B       		.uleb128 0xb
+ 1104 00b3 49       		.uleb128 0x49
+ 1105 00b4 13       		.uleb128 0x13
+ 1106 00b5 11       		.uleb128 0x11
+ 1107 00b6 01       		.uleb128 0x1
+ 1108 00b7 12       		.uleb128 0x12
+ 1109 00b8 06       		.uleb128 0x6
+ 1110 00b9 40       		.uleb128 0x40
+ 1111 00ba 18       		.uleb128 0x18
+ 1112 00bb 9642     		.uleb128 0x2116
+ 1113 00bd 19       		.uleb128 0x19
+ 1114 00be 00       		.byte	0
+ 1115 00bf 00       		.byte	0
+ 1116 00c0 10       		.uleb128 0x10
+ 1117 00c1 2E       		.uleb128 0x2e
+ 1118 00c2 00       		.byte	0
+ 1119 00c3 3F       		.uleb128 0x3f
+ 1120 00c4 19       		.uleb128 0x19
+ 1121 00c5 03       		.uleb128 0x3
+ 1122 00c6 0E       		.uleb128 0xe
+ 1123 00c7 3A       		.uleb128 0x3a
+ 1124 00c8 0B       		.uleb128 0xb
+ 1125 00c9 3B       		.uleb128 0x3b
+ 1126 00ca 0B       		.uleb128 0xb
+ 1127 00cb 27       		.uleb128 0x27
+ 1128 00cc 19       		.uleb128 0x19
+ 1129 00cd 11       		.uleb128 0x11
+ 1130 00ce 01       		.uleb128 0x1
+ 1131 00cf 12       		.uleb128 0x12
+ 1132 00d0 06       		.uleb128 0x6
+ 1133 00d1 40       		.uleb128 0x40
+ 1134 00d2 18       		.uleb128 0x18
+ 1135 00d3 9642     		.uleb128 0x2116
+ 1136 00d5 19       		.uleb128 0x19
+ 1137 00d6 00       		.byte	0
+ 1138 00d7 00       		.byte	0
+ 1139 00d8 11       		.uleb128 0x11
+ 1140 00d9 2E       		.uleb128 0x2e
+ 1141 00da 01       		.byte	0x1
+ 1142 00db 3F       		.uleb128 0x3f
+ 1143 00dc 19       		.uleb128 0x19
+ 1144 00dd 03       		.uleb128 0x3
+ 1145 00de 0E       		.uleb128 0xe
+ 1146 00df 3A       		.uleb128 0x3a
+ 1147 00e0 0B       		.uleb128 0xb
+ 1148 00e1 3B       		.uleb128 0x3b
+ 1149 00e2 0B       		.uleb128 0xb
+ 1150 00e3 27       		.uleb128 0x27
+ 1151 00e4 19       		.uleb128 0x19
+ 1152 00e5 11       		.uleb128 0x11
+ 1153 00e6 01       		.uleb128 0x1
+ 1154 00e7 12       		.uleb128 0x12
+ 1155 00e8 06       		.uleb128 0x6
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 25
+
+
+ 1156 00e9 40       		.uleb128 0x40
+ 1157 00ea 18       		.uleb128 0x18
+ 1158 00eb 9642     		.uleb128 0x2116
+ 1159 00ed 19       		.uleb128 0x19
+ 1160 00ee 01       		.uleb128 0x1
+ 1161 00ef 13       		.uleb128 0x13
+ 1162 00f0 00       		.byte	0
+ 1163 00f1 00       		.byte	0
+ 1164 00f2 12       		.uleb128 0x12
+ 1165 00f3 05       		.uleb128 0x5
+ 1166 00f4 00       		.byte	0
+ 1167 00f5 03       		.uleb128 0x3
+ 1168 00f6 0E       		.uleb128 0xe
+ 1169 00f7 3A       		.uleb128 0x3a
+ 1170 00f8 0B       		.uleb128 0xb
+ 1171 00f9 3B       		.uleb128 0x3b
+ 1172 00fa 0B       		.uleb128 0xb
+ 1173 00fb 49       		.uleb128 0x49
+ 1174 00fc 13       		.uleb128 0x13
+ 1175 00fd 02       		.uleb128 0x2
+ 1176 00fe 18       		.uleb128 0x18
+ 1177 00ff 00       		.byte	0
+ 1178 0100 00       		.byte	0
+ 1179 0101 13       		.uleb128 0x13
+ 1180 0102 05       		.uleb128 0x5
+ 1181 0103 00       		.byte	0
+ 1182 0104 03       		.uleb128 0x3
+ 1183 0105 08       		.uleb128 0x8
+ 1184 0106 3A       		.uleb128 0x3a
+ 1185 0107 0B       		.uleb128 0xb
+ 1186 0108 3B       		.uleb128 0x3b
+ 1187 0109 0B       		.uleb128 0xb
+ 1188 010a 49       		.uleb128 0x49
+ 1189 010b 13       		.uleb128 0x13
+ 1190 010c 02       		.uleb128 0x2
+ 1191 010d 18       		.uleb128 0x18
+ 1192 010e 00       		.byte	0
+ 1193 010f 00       		.byte	0
+ 1194 0110 14       		.uleb128 0x14
+ 1195 0111 34       		.uleb128 0x34
+ 1196 0112 00       		.byte	0
+ 1197 0113 03       		.uleb128 0x3
+ 1198 0114 0E       		.uleb128 0xe
+ 1199 0115 3A       		.uleb128 0x3a
+ 1200 0116 0B       		.uleb128 0xb
+ 1201 0117 3B       		.uleb128 0x3b
+ 1202 0118 0B       		.uleb128 0xb
+ 1203 0119 49       		.uleb128 0x49
+ 1204 011a 13       		.uleb128 0x13
+ 1205 011b 02       		.uleb128 0x2
+ 1206 011c 18       		.uleb128 0x18
+ 1207 011d 00       		.byte	0
+ 1208 011e 00       		.byte	0
+ 1209 011f 15       		.uleb128 0x15
+ 1210 0120 34       		.uleb128 0x34
+ 1211 0121 00       		.byte	0
+ 1212 0122 03       		.uleb128 0x3
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 26
+
+
+ 1213 0123 0E       		.uleb128 0xe
+ 1214 0124 3A       		.uleb128 0x3a
+ 1215 0125 0B       		.uleb128 0xb
+ 1216 0126 3B       		.uleb128 0x3b
+ 1217 0127 05       		.uleb128 0x5
+ 1218 0128 49       		.uleb128 0x49
+ 1219 0129 13       		.uleb128 0x13
+ 1220 012a 3F       		.uleb128 0x3f
+ 1221 012b 19       		.uleb128 0x19
+ 1222 012c 3C       		.uleb128 0x3c
+ 1223 012d 19       		.uleb128 0x19
+ 1224 012e 00       		.byte	0
+ 1225 012f 00       		.byte	0
+ 1226 0130 16       		.uleb128 0x16
+ 1227 0131 34       		.uleb128 0x34
+ 1228 0132 00       		.byte	0
+ 1229 0133 03       		.uleb128 0x3
+ 1230 0134 0E       		.uleb128 0xe
+ 1231 0135 3A       		.uleb128 0x3a
+ 1232 0136 0B       		.uleb128 0xb
+ 1233 0137 3B       		.uleb128 0x3b
+ 1234 0138 0B       		.uleb128 0xb
+ 1235 0139 49       		.uleb128 0x49
+ 1236 013a 13       		.uleb128 0x13
+ 1237 013b 3F       		.uleb128 0x3f
+ 1238 013c 19       		.uleb128 0x19
+ 1239 013d 02       		.uleb128 0x2
+ 1240 013e 18       		.uleb128 0x18
+ 1241 013f 00       		.byte	0
+ 1242 0140 00       		.byte	0
+ 1243 0141 17       		.uleb128 0x17
+ 1244 0142 34       		.uleb128 0x34
+ 1245 0143 00       		.byte	0
+ 1246 0144 03       		.uleb128 0x3
+ 1247 0145 0E       		.uleb128 0xe
+ 1248 0146 3A       		.uleb128 0x3a
+ 1249 0147 0B       		.uleb128 0xb
+ 1250 0148 3B       		.uleb128 0x3b
+ 1251 0149 0B       		.uleb128 0xb
+ 1252 014a 49       		.uleb128 0x49
+ 1253 014b 13       		.uleb128 0x13
+ 1254 014c 3F       		.uleb128 0x3f
+ 1255 014d 19       		.uleb128 0x19
+ 1256 014e 3C       		.uleb128 0x3c
+ 1257 014f 19       		.uleb128 0x19
+ 1258 0150 00       		.byte	0
+ 1259 0151 00       		.byte	0
+ 1260 0152 00       		.byte	0
+ 1261              		.section	.debug_aranges,"",%progbits
+ 1262 0000 2C000000 		.4byte	0x2c
+ 1263 0004 0200     		.2byte	0x2
+ 1264 0006 00000000 		.4byte	.Ldebug_info0
+ 1265 000a 04       		.byte	0x4
+ 1266 000b 00       		.byte	0
+ 1267 000c 0000     		.2byte	0
+ 1268 000e 0000     		.2byte	0
+ 1269 0010 00000000 		.4byte	.LFB35
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 27
+
+
+ 1270 0014 1A000000 		.4byte	.LFE35-.LFB35
+ 1271 0018 00000000 		.4byte	.LFB36
+ 1272 001c BC000000 		.4byte	.LFE36-.LFB36
+ 1273 0020 00000000 		.4byte	.LFB37
+ 1274 0024 B2000000 		.4byte	.LFE37-.LFB37
+ 1275 0028 00000000 		.4byte	0
+ 1276 002c 00000000 		.4byte	0
+ 1277              		.section	.debug_ranges,"",%progbits
+ 1278              	.Ldebug_ranges0:
+ 1279 0000 00000000 		.4byte	.LFB35
+ 1280 0004 1A000000 		.4byte	.LFE35
+ 1281 0008 00000000 		.4byte	.LFB36
+ 1282 000c BC000000 		.4byte	.LFE36
+ 1283 0010 00000000 		.4byte	.LFB37
+ 1284 0014 B2000000 		.4byte	.LFE37
+ 1285 0018 00000000 		.4byte	0
+ 1286 001c 00000000 		.4byte	0
+ 1287              		.section	.debug_line,"",%progbits
+ 1288              	.Ldebug_line0:
+ 1289 0000 FE000000 		.section	.debug_str,"MS",%progbits,1
+ 1289      02008D00 
+ 1289      00000201 
+ 1289      FB0E0D00 
+ 1289      01010101 
+ 1290              	.LASF80:
+ 1291 0000 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_RX_CREDIT_IND\000"
+ 1291      455F4556 
+ 1291      545F4C32 
+ 1291      4341505F 
+ 1291      43424643 
+ 1292              	.LASF21:
+ 1293 0023 4359424C 		.ascii	"CYBLE_EVT_STACK_BUSY_STATUS\000"
+ 1293      455F4556 
+ 1293      545F5354 
+ 1293      41434B5F 
+ 1293      42555359 
+ 1294              	.LASF10:
+ 1295 003f 75696E74 		.ascii	"uint16\000"
+ 1295      313600
+ 1296              	.LASF79:
+ 1297 0046 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_READ\000"
+ 1297      455F4556 
+ 1297      545F4C32 
+ 1297      4341505F 
+ 1297      43424643 
+ 1298              	.LASF105:
+ 1299 0065 4359424C 		.ascii	"CYBLE_GAPP_DISC_DATA_T\000"
+ 1299      455F4741 
+ 1299      50505F44 
+ 1299      4953435F 
+ 1299      44415441 
+ 1300              	.LASF33:
+ 1301 007c 4359424C 		.ascii	"CYBLE_EVT_GAP_CONNECTION_UPDATE_COMPLETE\000"
+ 1301      455F4556 
+ 1301      545F4741 
+ 1301      505F434F 
+ 1301      4E4E4543 
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 28
+
+
+ 1302              	.LASF100:
+ 1303 00a5 61647643 		.ascii	"advChannelMap\000"
+ 1303      68616E6E 
+ 1303      656C4D61 
+ 1303      7000
+ 1304              	.LASF78:
+ 1305 00b3 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_CNF\000"
+ 1305      455F4556 
+ 1305      545F4C32 
+ 1305      4341505F 
+ 1305      43424643 
+ 1306              	.LASF122:
+ 1307 00d4 63616C63 		.ascii	"calc_green\000"
+ 1307      5F677265 
+ 1307      656E00
+ 1308              	.LASF89:
+ 1309 00df 4359424C 		.ascii	"CYBLE_GAPP_CONNECTABLE_HIGH_DC_DIRECTED_ADV\000"
+ 1309      455F4741 
+ 1309      50505F43 
+ 1309      4F4E4E45 
+ 1309      43544142 
+ 1310              	.LASF38:
+ 1311 010b 4359424C 		.ascii	"CYBLE_EVT_GAP_OOB_GENERATED_NOTIFICATION\000"
+ 1311      455F4556 
+ 1311      545F4741 
+ 1311      505F4F4F 
+ 1311      425F4745 
+ 1312              	.LASF58:
+ 1313 0134 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_MULTI_RSP\000"
+ 1313      455F4556 
+ 1313      545F4741 
+ 1313      5454435F 
+ 1313      52454144 
+ 1314              	.LASF63:
+ 1315 0153 4359424C 		.ascii	"CYBLE_EVT_GATTS_EXEC_WRITE_REQ\000"
+ 1315      455F4556 
+ 1315      545F4741 
+ 1315      5454535F 
+ 1315      45584543 
+ 1316              	.LASF90:
+ 1317 0172 4359424C 		.ascii	"CYBLE_GAPP_SCANNABLE_UNDIRECTED_ADV\000"
+ 1317      455F4741 
+ 1317      50505F53 
+ 1317      43414E4E 
+ 1317      41424C45 
+ 1318              	.LASF127:
+ 1319 0196 6E65775F 		.ascii	"new_advData\000"
+ 1319      61647644 
+ 1319      61746100 
+ 1320              	.LASF54:
+ 1321 01a2 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_INFO_RSP\000"
+ 1321      455F4556 
+ 1321      545F4741 
+ 1321      5454435F 
+ 1321      46494E44 
+ 1322              	.LASF18:
+ 1323 01c0 4359424C 		.ascii	"CYBLE_EVT_TIMEOUT\000"
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 29
+
+
+ 1323      455F4556 
+ 1323      545F5449 
+ 1323      4D454F55 
+ 1323      5400
+ 1324              	.LASF4:
+ 1325 01d2 6C6F6E67 		.ascii	"long int\000"
+ 1325      20696E74 
+ 1325      00
+ 1326              	.LASF7:
+ 1327 01db 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1327      206C6F6E 
+ 1327      6720756E 
+ 1327      7369676E 
+ 1327      65642069 
+ 1328              	.LASF123:
+ 1329 01f2 63616C63 		.ascii	"calc_blue\000"
+ 1329      5F626C75 
+ 1329      6500
+ 1330              	.LASF20:
+ 1331 01fc 4359424C 		.ascii	"CYBLE_EVT_HCI_STATUS\000"
+ 1331      455F4556 
+ 1331      545F4843 
+ 1331      495F5354 
+ 1331      41545553 
+ 1332              	.LASF96:
+ 1333 0211 61647654 		.ascii	"advType\000"
+ 1333      79706500 
+ 1334              	.LASF83:
+ 1335 0219 4359424C 		.ascii	"CYBLE_EVT_PENDING_FLASH_WRITE\000"
+ 1335      455F4556 
+ 1335      545F5045 
+ 1335      4E44494E 
+ 1335      475F464C 
+ 1336              	.LASF88:
+ 1337 0237 4359424C 		.ascii	"CYBLE_GAPP_CONNECTABLE_UNDIRECTED_ADV\000"
+ 1337      455F4741 
+ 1337      50505F43 
+ 1337      4F4E4E45 
+ 1337      43544142 
+ 1338              	.LASF72:
+ 1339 025d 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_REQ\000"
+ 1339      455F4556 
+ 1339      545F4C32 
+ 1339      4341505F 
+ 1339      434F4E4E 
+ 1340              	.LASF32:
+ 1341 0283 4359424C 		.ascii	"CYBLE_EVT_GAP_ENCRYPT_CHANGE\000"
+ 1341      455F4556 
+ 1341      545F4741 
+ 1341      505F454E 
+ 1341      43525950 
+ 1342              	.LASF36:
+ 1343 02a0 4359424C 		.ascii	"CYBLE_EVT_GAP_NUMERIC_COMPARISON_REQUEST\000"
+ 1343      455F4556 
+ 1343      545F4741 
+ 1343      505F4E55 
+ 1343      4D455249 
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 30
+
+
+ 1344              	.LASF6:
+ 1345 02c9 6C6F6E67 		.ascii	"long long int\000"
+ 1345      206C6F6E 
+ 1345      6720696E 
+ 1345      7400
+ 1346              	.LASF0:
+ 1347 02d7 7369676E 		.ascii	"signed char\000"
+ 1347      65642063 
+ 1347      68617200 
+ 1348              	.LASF17:
+ 1349 02e3 4359424C 		.ascii	"CYBLE_EVT_STACK_ON\000"
+ 1349      455F4556 
+ 1349      545F5354 
+ 1349      41434B5F 
+ 1349      4F4E00
+ 1350              	.LASF34:
+ 1351 02f6 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_START_STOP\000"
+ 1351      455F4556 
+ 1351      545F4741 
+ 1351      50435F53 
+ 1351      43414E5F 
+ 1352              	.LASF99:
+ 1353 0315 64697265 		.ascii	"directAddr\000"
+ 1353      63744164 
+ 1353      647200
+ 1354              	.LASF24:
+ 1355 0320 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_REQ\000"
+ 1355      455F4556 
+ 1355      545F4741 
+ 1355      505F4155 
+ 1355      54485F52 
+ 1356              	.LASF56:
+ 1357 0337 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_RSP\000"
+ 1357      455F4556 
+ 1357      545F4741 
+ 1357      5454435F 
+ 1357      52454144 
+ 1358              	.LASF101:
+ 1359 0350 61647646 		.ascii	"advFilterPolicy\000"
+ 1359      696C7465 
+ 1359      72506F6C 
+ 1359      69637900 
+ 1360              	.LASF61:
+ 1361 0360 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_CMD_REQ\000"
+ 1361      455F4556 
+ 1361      545F4741 
+ 1361      5454535F 
+ 1361      57524954 
+ 1362              	.LASF29:
+ 1363 037e 4359424C 		.ascii	"CYBLE_EVT_GAPP_ADVERTISEMENT_START_STOP\000"
+ 1363      455F4556 
+ 1363      545F4741 
+ 1363      50505F41 
+ 1363      44564552 
+ 1364              	.LASF9:
+ 1365 03a6 75696E74 		.ascii	"uint8\000"
+ 1365      3800
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 31
+
+
+ 1366              	.LASF106:
+ 1367 03ac 7363616E 		.ascii	"scanRspData\000"
+ 1367      52737044 
+ 1367      61746100 
+ 1368              	.LASF64:
+ 1369 03b8 4359424C 		.ascii	"CYBLE_EVT_GATTC_EXEC_WRITE_RSP\000"
+ 1369      455F4556 
+ 1369      545F4741 
+ 1369      5454435F 
+ 1369      45584543 
+ 1370              	.LASF12:
+ 1371 03d7 646F7562 		.ascii	"double\000"
+ 1371      6C6500
+ 1372              	.LASF109:
+ 1373 03de 64697363 		.ascii	"discMode\000"
+ 1373      4D6F6465 
+ 1373      00
+ 1374              	.LASF121:
+ 1375 03e7 63616C63 		.ascii	"calc_red\000"
+ 1375      5F726564 
+ 1375      00
+ 1376              	.LASF87:
+ 1377 03f0 4359424C 		.ascii	"CYBLE_EVT_MAX\000"
+ 1377      455F4556 
+ 1377      545F4D41 
+ 1377      5800
+ 1378              	.LASF107:
+ 1379 03fe 7363616E 		.ascii	"scanRspDataLen\000"
+ 1379      52737044 
+ 1379      6174614C 
+ 1379      656E00
+ 1380              	.LASF82:
+ 1381 040d 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_WRITE_IND\000"
+ 1381      455F4556 
+ 1381      545F4C32 
+ 1381      4341505F 
+ 1381      43424643 
+ 1382              	.LASF116:
+ 1383 0431 4359424C 		.ascii	"CYBLE_SRVI_CUSTOMS_END\000"
+ 1383      455F5352 
+ 1383      56495F43 
+ 1383      5553544F 
+ 1383      4D535F45 
+ 1384              	.LASF44:
+ 1385 0448 4359424C 		.ascii	"CYBLE_EVT_GAP_SCAN_REQ_RECVD\000"
+ 1385      455F4556 
+ 1385      545F4741 
+ 1385      505F5343 
+ 1385      414E5F52 
+ 1386              	.LASF69:
+ 1387 0465 4359424C 		.ascii	"CYBLE_EVT_GATTC_STOP_CMD_COMPLETE\000"
+ 1387      455F4556 
+ 1387      545F4741 
+ 1387      5454435F 
+ 1387      53544F50 
+ 1388              	.LASF8:
+ 1389 0487 756E7369 		.ascii	"unsigned int\000"
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 32
+
+
+ 1389      676E6564 
+ 1389      20696E74 
+ 1389      00
+ 1390              	.LASF84:
+ 1391 0494 4359424C 		.ascii	"CYBLE_EVT_LE_PING_AUTH_TIMEOUT\000"
+ 1391      455F4556 
+ 1391      545F4C45 
+ 1391      5F50494E 
+ 1391      475F4155 
+ 1392              	.LASF111:
+ 1393 04b3 61647654 		.ascii	"advTo\000"
+ 1393      6F00
+ 1394              	.LASF5:
+ 1395 04b9 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1395      20756E73 
+ 1395      69676E65 
+ 1395      6420696E 
+ 1395      7400
+ 1396              	.LASF43:
+ 1397 04cb 4359424C 		.ascii	"CYBLE_EVT_GAP_CONN_ESTB\000"
+ 1397      455F4556 
+ 1397      545F4741 
+ 1397      505F434F 
+ 1397      4E4E5F45 
+ 1398              	.LASF59:
+ 1399 04e3 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_REQ\000"
+ 1399      455F4556 
+ 1399      545F4741 
+ 1399      5454535F 
+ 1399      57524954 
+ 1400              	.LASF51:
+ 1401 04fd 4359424C 		.ascii	"CYBLE_EVT_GATTC_XCHNG_MTU_RSP\000"
+ 1401      455F4556 
+ 1401      545F4741 
+ 1401      5454435F 
+ 1401      5843484E 
+ 1402              	.LASF68:
+ 1403 051b 4359424C 		.ascii	"CYBLE_EVT_GATTS_DATA_SIGNED_CMD_REQ\000"
+ 1403      455F4556 
+ 1403      545F4741 
+ 1403      5454535F 
+ 1403      44415441 
+ 1404              	.LASF71:
+ 1405 053f 4359424C 		.ascii	"CYBLE_EVT_GATTC_LONG_PROCEDURE_END\000"
+ 1405      455F4556 
+ 1405      545F4741 
+ 1405      5454435F 
+ 1405      4C4F4E47 
+ 1406              	.LASF108:
+ 1407 0562 4359424C 		.ascii	"CYBLE_GAPP_SCAN_RSP_DATA_T\000"
+ 1407      455F4741 
+ 1407      50505F53 
+ 1407      43414E5F 
+ 1407      5253505F 
+ 1408              	.LASF3:
+ 1409 057d 73686F72 		.ascii	"short unsigned int\000"
+ 1409      7420756E 
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 33
+
+
+ 1409      7369676E 
+ 1409      65642069 
+ 1409      6E7400
+ 1410              	.LASF16:
+ 1411 0590 4359424C 		.ascii	"CYBLE_EVT_HOST_INVALID\000"
+ 1411      455F4556 
+ 1411      545F484F 
+ 1411      53545F49 
+ 1411      4E56414C 
+ 1412              	.LASF126:
+ 1413 05a7 64617461 		.ascii	"dataADVCounter\000"
+ 1413      41445643 
+ 1413      6F756E74 
+ 1413      657200
+ 1414              	.LASF22:
+ 1415 05b6 4359424C 		.ascii	"CYBLE_EVT_MEMORY_REQUEST\000"
+ 1415      455F4556 
+ 1415      545F4D45 
+ 1415      4D4F5259 
+ 1415      5F524551 
+ 1416              	.LASF25:
+ 1417 05cf 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_ENTRY_REQUEST\000"
+ 1417      455F4556 
+ 1417      545F4741 
+ 1417      505F5041 
+ 1417      53534B45 
+ 1418              	.LASF30:
+ 1419 05f3 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_CONNECTED\000"
+ 1419      455F4556 
+ 1419      545F4741 
+ 1419      505F4445 
+ 1419      56494345 
+ 1420              	.LASF129:
+ 1421 0612 6D61696E 		.ascii	"main.c\000"
+ 1421      2E6300
+ 1422              	.LASF45:
+ 1423 0619 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_REQ_REPLY_ERR\000"
+ 1423      455F4556 
+ 1423      545F4741 
+ 1423      505F4155 
+ 1423      54485F52 
+ 1424              	.LASF128:
+ 1425 063a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1425      43313120 
+ 1425      352E342E 
+ 1425      31203230 
+ 1425      31363036 
+ 1426 066d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1426      20726576 
+ 1426      6973696F 
+ 1426      6E203233 
+ 1426      37373135 
+ 1427 06a0 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1427      66756E63 
+ 1427      74696F6E 
+ 1427      2D736563 
+ 1427      74696F6E 
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 34
+
+
+ 1428              	.LASF48:
+ 1429 06c8 4359424C 		.ascii	"CYBLE_EVT_GATT_CONNECT_IND\000"
+ 1429      455F4556 
+ 1429      545F4741 
+ 1429      54545F43 
+ 1429      4F4E4E45 
+ 1430              	.LASF74:
+ 1431 06e3 4359424C 		.ascii	"CYBLE_EVT_L2CAP_COMMAND_REJ\000"
+ 1431      455F4556 
+ 1431      545F4C32 
+ 1431      4341505F 
+ 1431      434F4D4D 
+ 1432              	.LASF23:
+ 1433 06ff 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT\000"
+ 1433      455F4556 
+ 1433      545F4741 
+ 1433      50435F53 
+ 1433      43414E5F 
+ 1434              	.LASF125:
+ 1435 0723 63757272 		.ascii	"current_watchdog_counter\000"
+ 1435      656E745F 
+ 1435      77617463 
+ 1435      68646F67 
+ 1435      5F636F75 
+ 1436              	.LASF46:
+ 1437 073c 4359424C 		.ascii	"CYBLE_EVT_GAP_SMP_LOC_P256_KEYS_GEN_AND_SET_COMPLET"
+ 1437      455F4556 
+ 1437      545F4741 
+ 1437      505F534D 
+ 1437      505F4C4F 
+ 1438 076f 4500     		.ascii	"E\000"
+ 1439              	.LASF75:
+ 1440 0771 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_IND\000"
+ 1440      455F4556 
+ 1440      545F4C32 
+ 1440      4341505F 
+ 1440      43424643 
+ 1441              	.LASF53:
+ 1442 078f 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_TYPE_RSP\000"
+ 1442      455F4556 
+ 1442      545F4741 
+ 1442      5454435F 
+ 1442      52454144 
+ 1443              	.LASF124:
+ 1444 07b0 6379426C 		.ascii	"cyBle_discoveryModeInfo\000"
+ 1444      655F6469 
+ 1444      73636F76 
+ 1444      6572794D 
+ 1444      6F646549 
+ 1445              	.LASF15:
+ 1446 07c8 73697A65 		.ascii	"sizetype\000"
+ 1446      74797065 
+ 1446      00
+ 1447              	.LASF97:
+ 1448 07d1 6F776E41 		.ascii	"ownAddrType\000"
+ 1448      64647254 
+ 1448      79706500 
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 35
+
+
+ 1449              	.LASF28:
+ 1450 07dd 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_FAILED\000"
+ 1450      455F4556 
+ 1450      545F4741 
+ 1450      505F4155 
+ 1450      54485F46 
+ 1451              	.LASF60:
+ 1452 07f7 4359424C 		.ascii	"CYBLE_EVT_GATTC_WRITE_RSP\000"
+ 1452      455F4556 
+ 1452      545F4741 
+ 1452      5454435F 
+ 1452      57524954 
+ 1453              	.LASF41:
+ 1454 0811 4359424C 		.ascii	"CYBLE_EVT_GAPC_DIRECT_ADV_REPORT\000"
+ 1454      455F4556 
+ 1454      545F4741 
+ 1454      50435F44 
+ 1454      49524543 
+ 1455              	.LASF39:
+ 1456 0832 4359424C 		.ascii	"CYBLE_EVT_GAP_DATA_LENGTH_CHANGE\000"
+ 1456      455F4556 
+ 1456      545F4741 
+ 1456      505F4441 
+ 1456      54415F4C 
+ 1457              	.LASF27:
+ 1458 0853 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_COMPLETE\000"
+ 1458      455F4556 
+ 1458      545F4741 
+ 1458      505F4155 
+ 1458      54485F43 
+ 1459              	.LASF65:
+ 1460 086f 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_NTF\000"
+ 1460      455F4556 
+ 1460      545F4741 
+ 1460      5454435F 
+ 1460      48414E44 
+ 1461              	.LASF115:
+ 1462 0890 4359424C 		.ascii	"CYBLE_SRVI_CUSTOMS\000"
+ 1462      455F5352 
+ 1462      56495F43 
+ 1462      5553544F 
+ 1462      4D5300
+ 1463              	.LASF76:
+ 1464 08a3 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_CNF\000"
+ 1464      455F4556 
+ 1464      545F4C32 
+ 1464      4341505F 
+ 1464      43424643 
+ 1465              	.LASF52:
+ 1466 08c1 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_GROUP_TYPE_RSP\000"
+ 1466      455F4556 
+ 1466      545F4741 
+ 1466      5454435F 
+ 1466      52454144 
+ 1467              	.LASF11:
+ 1468 08e8 666C6F61 		.ascii	"float\000"
+ 1468      7400
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 36
+
+
+ 1469              	.LASF104:
+ 1470 08ee 61647644 		.ascii	"advDataLen\000"
+ 1470      6174614C 
+ 1470      656E00
+ 1471              	.LASF98:
+ 1472 08f9 64697265 		.ascii	"directAddrType\000"
+ 1472      63744164 
+ 1472      64725479 
+ 1472      706500
+ 1473              	.LASF1:
+ 1474 0908 756E7369 		.ascii	"unsigned char\000"
+ 1474      676E6564 
+ 1474      20636861 
+ 1474      7200
+ 1475              	.LASF37:
+ 1476 0916 4359424C 		.ascii	"CYBLE_EVT_GAP_KEYPRESS_NOTIFICATION\000"
+ 1476      455F4556 
+ 1476      545F4741 
+ 1476      505F4B45 
+ 1476      59505245 
+ 1477              	.LASF119:
+ 1478 093a 496E6974 		.ascii	"InitializeSystem\000"
+ 1478      69616C69 
+ 1478      7A655379 
+ 1478      7374656D 
+ 1478      00
+ 1479              	.LASF2:
+ 1480 094b 73686F72 		.ascii	"short int\000"
+ 1480      7420696E 
+ 1480      7400
+ 1481              	.LASF66:
+ 1482 0955 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_IND\000"
+ 1482      455F4556 
+ 1482      545F4741 
+ 1482      5454435F 
+ 1482      48414E44 
+ 1483              	.LASF95:
+ 1484 0976 61647649 		.ascii	"advIntvMax\000"
+ 1484      6E74764D 
+ 1484      617800
+ 1485              	.LASF85:
+ 1486 0981 4359424C 		.ascii	"CYBLE_EVT_HCI_PKT\000"
+ 1486      455F4556 
+ 1486      545F4843 
+ 1486      495F504B 
+ 1486      5400
+ 1487              	.LASF62:
+ 1488 0993 4359424C 		.ascii	"CYBLE_EVT_GATTS_PREP_WRITE_REQ\000"
+ 1488      455F4556 
+ 1488      545F4741 
+ 1488      5454535F 
+ 1488      50524550 
+ 1489              	.LASF94:
+ 1490 09b2 61647649 		.ascii	"advIntvMin\000"
+ 1490      6E74764D 
+ 1490      696E00
+ 1491              	.LASF92:
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 37
+
+
+ 1492 09bd 4359424C 		.ascii	"CYBLE_GAPP_CONNECTABLE_LOW_DC_DIRECTED_ADV\000"
+ 1492      455F4741 
+ 1492      50505F43 
+ 1492      4F4E4E45 
+ 1492      43544142 
+ 1493              	.LASF103:
+ 1494 09e8 61647644 		.ascii	"advData\000"
+ 1494      61746100 
+ 1495              	.LASF67:
+ 1496 09f0 4359424C 		.ascii	"CYBLE_EVT_GATTS_HANDLE_VALUE_CNF\000"
+ 1496      455F4556 
+ 1496      545F4741 
+ 1496      5454535F 
+ 1496      48414E44 
+ 1497              	.LASF47:
+ 1498 0a11 4359424C 		.ascii	"CYBLE_EVT_GATTC_ERROR_RSP\000"
+ 1498      455F4556 
+ 1498      545F4741 
+ 1498      5454435F 
+ 1498      4552524F 
+ 1499              	.LASF42:
+ 1500 0a2b 4359424C 		.ascii	"CYBLE_EVT_GAP_SMP_NEGOTIATED_AUTH_INFO\000"
+ 1500      455F4556 
+ 1500      545F4741 
+ 1500      505F534D 
+ 1500      505F4E45 
+ 1501              	.LASF117:
+ 1502 0a52 4359424C 		.ascii	"CYBLE_SRVI_COUNT\000"
+ 1502      455F5352 
+ 1502      56495F43 
+ 1502      4F554E54 
+ 1502      00
+ 1503              	.LASF113:
+ 1504 0a63 4359424C 		.ascii	"CYBLE_SRVI_GAP\000"
+ 1504      455F5352 
+ 1504      56495F47 
+ 1504      415000
+ 1505              	.LASF14:
+ 1506 0a72 6C6F6E67 		.ascii	"long double\000"
+ 1506      20646F75 
+ 1506      626C6500 
+ 1507              	.LASF86:
+ 1508 0a7e 4359424C 		.ascii	"CYBLE_EVT_FLASH_CORRUPT\000"
+ 1508      455F4556 
+ 1508      545F464C 
+ 1508      4153485F 
+ 1508      434F5252 
+ 1509              	.LASF13:
+ 1510 0a96 63686172 		.ascii	"char\000"
+ 1510      00
+ 1511              	.LASF31:
+ 1512 0a9b 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_DISCONNECTED\000"
+ 1512      455F4556 
+ 1512      545F4741 
+ 1512      505F4445 
+ 1512      56494345 
+ 1513              	.LASF114:
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 38
+
+
+ 1514 0abd 4359424C 		.ascii	"CYBLE_SRVI_GATT\000"
+ 1514      455F5352 
+ 1514      56495F47 
+ 1514      41545400 
+ 1515              	.LASF70:
+ 1516 0acd 4359424C 		.ascii	"CYBLE_EVT_GATTS_READ_CHAR_VAL_ACCESS_REQ\000"
+ 1516      455F4556 
+ 1516      545F4741 
+ 1516      5454535F 
+ 1516      52454144 
+ 1517              	.LASF102:
+ 1518 0af6 4359424C 		.ascii	"CYBLE_GAPP_DISC_PARAM_T\000"
+ 1518      455F4741 
+ 1518      50505F44 
+ 1518      4953435F 
+ 1518      50415241 
+ 1519              	.LASF81:
+ 1520 0b0e 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_TX_CREDIT_IND\000"
+ 1520      455F4556 
+ 1520      545F4C32 
+ 1520      4341505F 
+ 1520      43424643 
+ 1521              	.LASF26:
+ 1522 0b31 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_DISPLAY_REQUEST\000"
+ 1522      455F4556 
+ 1522      545F4741 
+ 1522      505F5041 
+ 1522      53534B45 
+ 1523              	.LASF19:
+ 1524 0b57 4359424C 		.ascii	"CYBLE_EVT_HARDWARE_ERROR\000"
+ 1524      455F4556 
+ 1524      545F4841 
+ 1524      52445741 
+ 1524      52455F45 
+ 1525              	.LASF120:
+ 1526 0b70 7267625F 		.ascii	"rgb_led_data\000"
+ 1526      6C65645F 
+ 1526      64617461 
+ 1526      00
+ 1527              	.LASF50:
+ 1528 0b7d 4359424C 		.ascii	"CYBLE_EVT_GATTS_XCNHG_MTU_REQ\000"
+ 1528      455F4556 
+ 1528      545F4741 
+ 1528      5454535F 
+ 1528      58434E48 
+ 1529              	.LASF112:
+ 1530 0b9b 4359424C 		.ascii	"CYBLE_GAPP_DISC_MODE_INFO_T\000"
+ 1530      455F4741 
+ 1530      50505F44 
+ 1530      4953435F 
+ 1530      4D4F4445 
+ 1531              	.LASF110:
+ 1532 0bb7 61647650 		.ascii	"advParam\000"
+ 1532      6172616D 
+ 1532      00
+ 1533              	.LASF131:
+ 1534 0bc0 55706461 		.ascii	"UpdateRGBled\000"
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 39
+
+
+ 1534      74655247 
+ 1534      426C6564 
+ 1534      00
+ 1535              	.LASF93:
+ 1536 0bcd 4359424C 		.ascii	"CYBLE_GAPP_ADV_T\000"
+ 1536      455F4741 
+ 1536      50505F41 
+ 1536      44565F54 
+ 1536      00
+ 1537              	.LASF91:
+ 1538 0bde 4359424C 		.ascii	"CYBLE_GAPP_NON_CONNECTABLE_UNDIRECTED_ADV\000"
+ 1538      455F4741 
+ 1538      50505F4E 
+ 1538      4F4E5F43 
+ 1538      4F4E4E45 
+ 1539              	.LASF57:
+ 1540 0c08 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BLOB_RSP\000"
+ 1540      455F4556 
+ 1540      545F4741 
+ 1540      5454435F 
+ 1540      52454144 
+ 1541              	.LASF55:
+ 1542 0c26 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_BY_TYPE_VALUE_RSP\000"
+ 1542      455F4556 
+ 1542      545F4741 
+ 1542      5454435F 
+ 1542      46494E44 
+ 1543              	.LASF35:
+ 1544 0c4d 4359424C 		.ascii	"CYBLE_EVT_GAP_KEYINFO_EXCHNGE_CMPLT\000"
+ 1544      455F4556 
+ 1544      545F4741 
+ 1544      505F4B45 
+ 1544      59494E46 
+ 1545              	.LASF77:
+ 1546 0c71 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_IND\000"
+ 1546      455F4556 
+ 1546      545F4C32 
+ 1546      4341505F 
+ 1546      43424643 
+ 1547              	.LASF73:
+ 1548 0c92 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_RSP\000"
+ 1548      455F4556 
+ 1548      545F4C32 
+ 1548      4341505F 
+ 1548      434F4E4E 
+ 1549              	.LASF130:
+ 1550 0cb8 433A5C55 		.ascii	"C:\\Users\\dmytro\\Documents\\PSoC Creator\\PSoC-10"
+ 1550      73657273 
+ 1550      5C646D79 
+ 1550      74726F5C 
+ 1550      446F6375 
+ 1551 0ce6 315C4D65 		.ascii	"1\\Mesh_Flood\\Mesh_Flood_Original\\Mesh_Flood_PSoC"
+ 1551      73685F46 
+ 1551      6C6F6F64 
+ 1551      5C4D6573 
+ 1551      685F466C 
+ 1552 0d16 34424C45 		.ascii	"4BLE.cydsn\000"
+ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccPPiRzI.s 			page 40
+
+
+ 1552      2E637964 
+ 1552      736E00
+ 1553              	.LASF118:
+ 1554 0d21 6D61696E 		.ascii	"main\000"
+ 1554      00
+ 1555              	.LASF40:
+ 1556 0d26 4359424C 		.ascii	"CYBLE_EVT_GAP_ENHANCE_CONN_COMPLETE\000"
+ 1556      455F4556 
+ 1556      545F4741 
+ 1556      505F454E 
+ 1556      48414E43 
+ 1557              	.LASF49:
+ 1558 0d4a 4359424C 		.ascii	"CYBLE_EVT_GATT_DISCONNECT_IND\000"
+ 1558      455F4556 
+ 1558      545F4741 
+ 1558      54545F44 
+ 1558      4953434F 
+ 1559              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
