@@ -2,20 +2,21 @@
 <CyXmlSerializer>
 <!--This file is machine generated and read. It is not intended to be edited by hand.-->
 <!--Due to this, there is no schema for this file.-->
-<CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspc" version="5" xml_contents_version="3" name="Mesh_Flood" persistent="" platform="NOT_USED">
-<current_project name=".\Mesh_Flood_PSoC4BLE.cydsn\Mesh_Flood_PSoC4BLE.cyprj" />
+<CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize" version="5" xml_contents_version="3" name="Mesh_Flood" persistent="Mesh_Flood.cywrk" platform="NOT_USED">
+<current_project name=".\Mesh_Flood_PSoC4BLE_Main.cydsn\Mesh_Flood_PSoC4BLE_Main.cyprj" />
 <wrkspc_folders />
 <files />
 <projects>
-<v>.\Mesh_Flood_PSoC4BLE.cydsn\Mesh_Flood_PSoC4BLE.cyprj</v>
+<v>.\Mesh_Flood_PSoC4BLE_Original.cydsn\Mesh_Flood_PSoC4BLE_Original.cyprj</v>
+<v>.\Mesh_Flood_PSoC4BLE_Main.cydsn\Mesh_Flood_PSoC4BLE_Main.cyprj</v>
 </projects>
 <workspace_id v="c2c09564-bd43-4e52-86a2-aca451c91d04" />
-<WriteAppVersionLastSavedWith v="3.1.0.1722" />
-<WriteAppMarketingVersionLastSavedWith v="3.1 SP1" />
-<CyGuid_dcbd9771-0334-43dc-9cc3-fe99dc3c5316 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjDependencyList" version="4">
+<WriteAppVersionLastSavedWith v="4.3.0.1445" />
+<WriteAppMarketingVersionLastSavedWith v="4.3" />
+<CyGuid_dcbd9771-0334-43dc-9cc3-fe99dc3c5316 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize+CyPrjDependencyList" version="4">
 <wrkspc_dependencies />
 </CyGuid_dcbd9771-0334-43dc-9cc3-fe99dc3c5316>
-<CyGuid_63b68103-67f5-4406-8da6-5c8625765b82 type_name="CyDesigner.Common.ProjMgmt.Model.CyIgnoredSystemDepsList" version="1">
+<CyGuid_63b68103-67f5-4406-8da6-5c8625765b82 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize+CyIgnoredSystemDepsList" version="1">
 <wrkspc_dependencies />
 </CyGuid_63b68103-67f5-4406-8da6-5c8625765b82>
 </CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd>
