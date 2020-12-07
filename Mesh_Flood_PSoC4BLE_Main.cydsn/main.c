@@ -140,7 +140,7 @@ void InitializeSystem(void)
 	CyBle_Start(GenericEventHandler);
     
     // Define interrupt handle for color changes
-    PWM_1sWindow_Start();
+    //PWM_1sWindow_Start();
     isr_Counter_StartEx(CC_TC_InterruptHandler);
 	
 	/* Start the PrISM component and configure drive mode of LED pins to be
@@ -176,9 +176,9 @@ void InitializeSystem(void)
 	#endif
 		
 	/* Provide a color pusle on RGB LED to indicate startup */
-	PrISM_1_WritePulse1(128);
-	CyDelay(20);
-	PrISM_1_WritePulse1(255);
+	//PrISM_1_WritePulse1(128);
+	//CyDelay(20);
+	//PrISM_1_WritePulse1(255);
 	
     UART_Start();
     UART_UartPutString("Helloushki\n");
@@ -200,8 +200,8 @@ CY_ISR(CC_TC_InterruptHandler)
     if (interrupt_counter == 4) {
         interrupt_counter = 0;
     }
-    PWM_1sWindow_ClearInterrupt(PWM_1sWindow_INTR_MASK_CC_MATCH);
-    PWM_1sWindow_ClearInterrupt(PWM_1sWindow_INTR_MASK_TC);
+    //PWM_1sWindow_ClearInterrupt(PWM_1sWindow_INTR_MASK_CC_MATCH);
+    //PWM_1sWindow_ClearInterrupt(PWM_1sWindow_INTR_MASK_TC);
 }
 
 

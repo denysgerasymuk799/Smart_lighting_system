@@ -1,5 +1,5 @@
 # Mesh_Flood_PSoC4BLE_Main
-# 2020-11-29 18:02:43Z
+# 2020-12-07 16:21:57Z
 
 # IO_6@[IOP=(0)][IoId=(6)] is reserved: SWDDebugEnabled
 dont_use_io iocell 0 6
@@ -15,3 +15,4 @@ set_io "GREEN(0)" iocell 3 6
 set_io "BLUE(0)" iocell 3 7
 set_io "\UART:tx(0)\" iocell 1 5
 set_io "\UART:rx(0)\" iocell 1 4
+set_io "Pin_1(0)" iocell 1 0

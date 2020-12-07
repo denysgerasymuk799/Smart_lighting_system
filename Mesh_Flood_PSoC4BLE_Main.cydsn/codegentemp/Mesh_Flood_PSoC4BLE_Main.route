@@ -193,8 +193,8 @@ net ClockBlock_HFCLK
 	term   ":udb@[UDB=(1,0)]:dp_wrapper:datapath.busclk"
 	switch ":m0s8clockblockcell.hfclk==>:interrupt_8.clock"
 	term   ":interrupt_8.clock"
-	switch ":m0s8clockblockcell.hfclk==>:interrupt_17.clock"
-	term   ":interrupt_17.clock"
+	switch ":m0s8clockblockcell.hfclk==>:interrupt_1.clock"
+	term   ":interrupt_1.clock"
 end ClockBlock_HFCLK
 net __ONE__
 	term   ":udb@[UDB=(1,0)]:pld1:mc0.q"
@@ -213,12 +213,18 @@ net __ONE__
 	switch ":udb@[UDB=(1,0)]:dp_wrapper:input_permute.cs_addr_0==>:udb@[UDB=(1,0)]:dp_wrapper:datapath.cs_addr_0"
 	term   ":udb@[UDB=(1,0)]:dp_wrapper:datapath.cs_addr_0"
 end __ONE__
-net Net_6
-	term   ":m0s8tcpwmcell_0.interrupt"
-	switch ":m0s8tcpwmcell_0.interrupt==>:interrupt_idmux_17.in_0"
-	switch ":interrupt_idmux_17.interrupt_idmux_17__out==>:interrupt_17.interrupt"
-	term   ":interrupt_17.interrupt"
-end Net_6
+net Net_139
+	term   ":ioport1:pin0.fb"
+	switch ":ioport1:pin0.fb==>:ioport1:hsiom_in0.hsiom0_in"
+	switch ":ioport1:hsiom_in0.dsi==>Stub-:dsiswitch_bottom@[DSI=(1,0)][side=bottom]:dsihc_bottom:v0+:dsiswitch_bottom@[DSI=(1,0)][side=bottom]:dsihc_bottom:v2"
+	switch "OStub-:dsiswitch_bottom@[DSI=(1,0)][side=bottom]:dsihc_bottom:v0+:dsiswitch_bottom@[DSI=(1,0)][side=bottom]:dsihc_bottom:v2"
+	switch ":dsiswitch_bottom@[DSI=(1,0)][side=bottom]:dsihc_bottom:2,89"
+	switch ":dsiswitch_bottom@[DSI=(1,0)][side=bottom]:dsihc_bottom:109,89_f"
+	switch "IStub-:dsiswitch_bottom@[DSI=(1,0)][side=bottom]:dsihc_bottom:v105+:dsiswitch_bottom@[DSI=(1,0)][side=bottom]:dsihc_bottom:v107+:dsiswitch_bottom@[DSI=(1,0)][side=bottom]:dsihc_bottom:v109"
+	switch "Stub-:dsiswitch_bottom@[DSI=(1,0)][side=bottom]:dsihc_bottom:v105+:dsiswitch_bottom@[DSI=(1,0)][side=bottom]:dsihc_bottom:v107+:dsiswitch_bottom@[DSI=(1,0)][side=bottom]:dsihc_bottom:v109==>:interrupt_idmux_1.in_1"
+	switch ":interrupt_idmux_1.interrupt_idmux_1__out==>:interrupt_1.interrupt"
+	term   ":interrupt_1.interrupt"
+end Net_139
 net Net_64
 	term   ":udb@[UDB=(0,0)]:pld1:mc0.q"
 	switch ":udb@[UDB=(0,0)]:pld1:mc0.q==>:udb@[UDB=(0,0)]:pld1:output_permute3.q_0"

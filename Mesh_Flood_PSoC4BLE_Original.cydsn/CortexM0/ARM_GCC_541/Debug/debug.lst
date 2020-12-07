@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
   27:debug.c       **** *
   28:debug.c       **** * Return:
   29:debug.c       **** *  void
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 2
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 2
 
 
   30:debug.c       **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
   47:debug.c       **** 		
   48:debug.c       **** 		case CYBLE_STATE_CONNECTED:
   49:debug.c       **** 		#ifdef DEBUG_ENABLED
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 3
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 3
 
 
   50:debug.c       **** 			UART_UartPutString(" |BLE State: CYBLE_STATE_CONNECTED ");
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
   84              	.LFE35:
   85              		.size	SendBLEStatetoUART, .-SendBLEStatetoUART
   86              		.section	.text.PrintNum,"ax",%progbits
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 4
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 4
 
 
   87              		.align	2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  117:debug.c       **** 		else
  118:debug.c       **** 		{
  119:debug.c       **** 			UART_UartPutChar('0' + temp[1]);
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 5
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 5
 
 
  120:debug.c       **** 			UART_UartPutChar('0' + temp[0]);	
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  133              		@ args = 0, pretend = 0, frame = 8
  134              		@ frame_needed = 1, uses_anonymous_args = 0
  135 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 6
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 6
 
 
  136              		.cfi_def_cfa_offset 8
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  161              	.Letext0:
  162              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
  163              		.file 3 "Generated_Source\\PSoC4/BLE_Stack.h"
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 7
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 7
 
 
  164              		.file 4 "Generated_Source\\PSoC4/BLE_eventHandler.h"
@@ -372,15 +372,15 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  172 000b 01       		.uleb128 0x1
  173 000c A6040000 		.4byte	.LASF105
  174 0010 0C       		.byte	0xc
- 175 0011 5D060000 		.4byte	.LASF106
- 176 0015 D5050000 		.4byte	.LASF107
+ 175 0011 F4050000 		.4byte	.LASF106
+ 176 0015 C2080000 		.4byte	.LASF107
  177 0019 00000000 		.4byte	.Ldebug_ranges0+0
  178 001d 00000000 		.4byte	0
  179 0021 00000000 		.4byte	.Ldebug_line0
  180 0025 02       		.uleb128 0x2
  181 0026 01       		.byte	0x1
  182 0027 06       		.byte	0x6
- 183 0028 65060000 		.4byte	.LASF0
+ 183 0028 FC050000 		.4byte	.LASF0
  184 002c 02       		.uleb128 0x2
  185 002d 01       		.byte	0x1
  186 002e 08       		.byte	0x8
@@ -392,7 +392,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  192 003a 02       		.uleb128 0x2
  193 003b 02       		.byte	0x2
  194 003c 07       		.byte	0x7
- 195 003d A6070000 		.4byte	.LASF3
+ 195 003d 3D070000 		.4byte	.LASF3
  196 0041 02       		.uleb128 0x2
  197 0042 04       		.byte	0x4
  198 0043 05       		.byte	0x5
@@ -400,7 +400,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  200 0048 02       		.uleb128 0x2
  201 0049 04       		.byte	0x4
  202 004a 07       		.byte	0x7
- 203 004b F6060000 		.4byte	.LASF5
+ 203 004b 8D060000 		.4byte	.LASF5
  204 004f 02       		.uleb128 0x2
  205 0050 08       		.byte	0x8
  206 0051 05       		.byte	0x5
@@ -416,19 +416,19 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  216 0064 02       		.uleb128 0x2
  217 0065 04       		.byte	0x4
  218 0066 07       		.byte	0x7
- 219 0067 CE060000 		.4byte	.LASF8
+ 219 0067 65060000 		.4byte	.LASF8
  220 006b 04       		.uleb128 0x4
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 8
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 8
 
 
- 221 006c 5B080000 		.4byte	.LASF9
+ 221 006c F2070000 		.4byte	.LASF9
  222 0070 02       		.byte	0x2
- 223 0071 FB01     		.2byte	0x1fb
+ 223 0071 E601     		.2byte	0x1e6
  224 0073 2C000000 		.4byte	0x2c
  225 0077 04       		.uleb128 0x4
  226 0078 25020000 		.4byte	.LASF10
  227 007c 02       		.byte	0x2
- 228 007d FC01     		.2byte	0x1fc
+ 228 007d E701     		.2byte	0x1e7
  229 007f 3A000000 		.4byte	0x3a
  230 0083 02       		.uleb128 0x2
  231 0084 04       		.byte	0x4
@@ -437,11 +437,11 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  234 008a 02       		.uleb128 0x2
  235 008b 08       		.byte	0x8
  236 008c 04       		.byte	0x4
- 237 008d 2B090000 		.4byte	.LASF12
+ 237 008d 15090000 		.4byte	.LASF12
  238 0091 02       		.uleb128 0x2
  239 0092 01       		.byte	0x1
  240 0093 08       		.byte	0x8
- 241 0094 21080000 		.4byte	.LASF13
+ 241 0094 B8070000 		.4byte	.LASF13
  242 0098 05       		.uleb128 0x5
  243 0099 77000000 		.4byte	0x77
  244 009d 02       		.uleb128 0x2
@@ -465,10 +465,10 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  262 00bf A9010000 		.4byte	.LASF17
  263 00c3 01       		.byte	0x1
  264 00c4 07       		.uleb128 0x7
- 265 00c5 A30A0000 		.4byte	.LASF18
+ 265 00c5 8D0A0000 		.4byte	.LASF18
  266 00c9 02       		.byte	0x2
  267 00ca 07       		.uleb128 0x7
- 268 00cb 9A090000 		.4byte	.LASF19
+ 268 00cb 84090000 		.4byte	.LASF19
  269 00cf 03       		.byte	0x3
  270 00d0 07       		.uleb128 0x7
  271 00d1 73010000 		.4byte	.LASF20
@@ -478,15 +478,15 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  275 00db 05       		.byte	0x5
  276 00dc 07       		.uleb128 0x7
  277 00dd 5B000000 		.4byte	.LASF22
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 9
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 9
 
 
  278 00e1 06       		.byte	0x6
  279 00e2 07       		.uleb128 0x7
- 280 00e3 F8090000 		.4byte	.LASF23
+ 280 00e3 E2090000 		.4byte	.LASF23
  281 00e7 20       		.byte	0x20
  282 00e8 07       		.uleb128 0x7
- 283 00e9 08070000 		.4byte	.LASF24
+ 283 00e9 9F060000 		.4byte	.LASF24
  284 00ed 21       		.byte	0x21
  285 00ee 07       		.uleb128 0x7
  286 00ef 14000000 		.4byte	.LASF25
@@ -495,28 +495,28 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  289 00f5 80040000 		.4byte	.LASF26
  290 00f9 23       		.byte	0x23
  291 00fa 07       		.uleb128 0x7
- 292 00fb B2060000 		.4byte	.LASF27
+ 292 00fb 49060000 		.4byte	.LASF27
  293 00ff 24       		.byte	0x24
  294 0100 07       		.uleb128 0x7
  295 0101 CE000000 		.4byte	.LASF28
  296 0105 25       		.byte	0x25
  297 0106 07       		.uleb128 0x7
- 298 0107 72090000 		.4byte	.LASF29
+ 298 0107 5C090000 		.4byte	.LASF29
  299 010b 26       		.byte	0x26
  300 010c 07       		.uleb128 0x7
  301 010d 04040000 		.4byte	.LASF30
  302 0111 27       		.byte	0x27
  303 0112 07       		.uleb128 0x7
- 304 0113 550B0000 		.4byte	.LASF31
+ 304 0113 3F0B0000 		.4byte	.LASF31
  305 0117 28       		.byte	0x28
  306 0118 07       		.uleb128 0x7
- 307 0119 4E070000 		.4byte	.LASF32
+ 307 0119 E5060000 		.4byte	.LASF32
  308 011d 29       		.byte	0x29
  309 011e 07       		.uleb128 0x7
- 310 011f D1070000 		.4byte	.LASF33
+ 310 011f 68070000 		.4byte	.LASF33
  311 0123 2A       		.byte	0x2a
  312 0124 07       		.uleb128 0x7
- 313 0125 CB080000 		.4byte	.LASF34
+ 313 0125 62080000 		.4byte	.LASF34
  314 0129 2B       		.byte	0x2b
  315 012a 07       		.uleb128 0x7
  316 012b 2C020000 		.4byte	.LASF35
@@ -528,7 +528,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  322 0137 A0000000 		.4byte	.LASF37
  323 013b 2E       		.byte	0x2e
  324 013c 07       		.uleb128 0x7
- 325 013d B20B0000 		.4byte	.LASF38
+ 325 013d 9C0B0000 		.4byte	.LASF38
  326 0141 2F       		.byte	0x2f
  327 0142 07       		.uleb128 0x7
  328 0143 44010000 		.4byte	.LASF39
@@ -538,18 +538,18 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  332 014d 31       		.byte	0x31
  333 014e 07       		.uleb128 0x7
  334 014f 58030000 		.4byte	.LASF41
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 10
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 10
 
 
  335 0153 32       		.byte	0x32
  336 0154 07       		.uleb128 0x7
- 337 0155 FA070000 		.4byte	.LASF42
+ 337 0155 91070000 		.4byte	.LASF42
  338 0159 33       		.byte	0x33
  339 015a 07       		.uleb128 0x7
- 340 015b 6B070000 		.4byte	.LASF43
+ 340 015b 02070000 		.4byte	.LASF43
  341 015f 34       		.byte	0x34
  342 0160 07       		.uleb128 0x7
- 343 0161 55090000 		.4byte	.LASF44
+ 343 0161 3F090000 		.4byte	.LASF44
  344 0165 35       		.byte	0x35
  345 0166 07       		.uleb128 0x7
  346 0167 90030000 		.4byte	.LASF45
@@ -561,7 +561,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  352 0173 74000000 		.4byte	.LASF47
  353 0177 40       		.byte	0x40
  354 0178 07       		.uleb128 0x7
- 355 0179 DB060000 		.4byte	.LASF48
+ 355 0179 72060000 		.4byte	.LASF48
  356 017d 41       		.byte	0x41
  357 017e 07       		.uleb128 0x7
  358 017f E8000000 		.4byte	.LASF49
@@ -570,49 +570,49 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  361 0185 07020000 		.4byte	.LASF50
  362 0189 43       		.byte	0x43
  363 018a 07       		.uleb128 0x7
- 364 018b 610A0000 		.4byte	.LASF51
+ 364 018b 4B0A0000 		.4byte	.LASF51
  365 018f 44       		.byte	0x44
  366 0190 07       		.uleb128 0x7
- 367 0191 1C0A0000 		.4byte	.LASF52
+ 367 0191 060A0000 		.4byte	.LASF52
  368 0195 45       		.byte	0x45
  369 0196 07       		.uleb128 0x7
  370 0197 88010000 		.4byte	.LASF53
  371 019b 46       		.byte	0x46
  372 019c 07       		.uleb128 0x7
- 373 019d EC0A0000 		.4byte	.LASF54
+ 373 019d D60A0000 		.4byte	.LASF54
  374 01a1 47       		.byte	0x47
  375 01a2 07       		.uleb128 0x7
- 376 01a3 8B060000 		.4byte	.LASF55
+ 376 01a3 22060000 		.4byte	.LASF55
  377 01a7 48       		.byte	0x48
  378 01a8 07       		.uleb128 0x7
  379 01a9 16030000 		.4byte	.LASF56
  380 01ad 49       		.byte	0x49
  381 01ae 07       		.uleb128 0x7
- 382 01af 76080000 		.4byte	.LASF57
+ 382 01af 0D080000 		.4byte	.LASF57
  383 01b3 4A       		.byte	0x4a
  384 01b4 07       		.uleb128 0x7
  385 01b5 50020000 		.4byte	.LASF58
  386 01b9 4B       		.byte	0x4b
  387 01ba 07       		.uleb128 0x7
- 388 01bb 71060000 		.4byte	.LASF59
+ 388 01bb 08060000 		.4byte	.LASF59
  389 01bf 4C       		.byte	0x4c
  390 01c0 07       		.uleb128 0x7
  391 01c1 41000000 		.4byte	.LASF60
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 11
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 11
 
 
  392 01c5 4D       		.byte	0x4d
  393 01c6 07       		.uleb128 0x7
- 394 01c7 430A0000 		.4byte	.LASF61
+ 394 01c7 2D0A0000 		.4byte	.LASF61
  395 01cb 4E       		.byte	0x4e
  396 01cc 07       		.uleb128 0x7
  397 01cd B6050000 		.4byte	.LASF62
  398 01d1 4F       		.byte	0x4f
  399 01d2 07       		.uleb128 0x7
- 400 01d3 360B0000 		.4byte	.LASF63
+ 400 01d3 200B0000 		.4byte	.LASF63
  401 01d7 50       		.byte	0x50
  402 01d8 07       		.uleb128 0x7
- 403 01d9 AC080000 		.4byte	.LASF64
+ 403 01d9 43080000 		.4byte	.LASF64
  404 01dd 51       		.byte	0x51
  405 01de 07       		.uleb128 0x7
  406 01df 43040000 		.4byte	.LASF65
@@ -624,25 +624,25 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  412 01eb 6F020000 		.4byte	.LASF67
  413 01ef 54       		.byte	0x54
  414 01f0 07       		.uleb128 0x7
- 415 01f1 770B0000 		.4byte	.LASF68
+ 415 01f1 610B0000 		.4byte	.LASF68
  416 01f5 55       		.byte	0x55
  417 01f6 07       		.uleb128 0x7
- 418 01f7 0A0B0000 		.4byte	.LASF69
+ 418 01f7 F40A0000 		.4byte	.LASF69
  419 01fb 56       		.byte	0x56
  420 01fc 07       		.uleb128 0x7
- 421 01fd C30A0000 		.4byte	.LASF70
+ 421 01fd AD0A0000 		.4byte	.LASF70
  422 0201 57       		.byte	0x57
  423 0202 07       		.uleb128 0x7
- 424 0203 83070000 		.4byte	.LASF71
+ 424 0203 1A070000 		.4byte	.LASF71
  425 0207 58       		.byte	0x58
  426 0208 07       		.uleb128 0x7
  427 0209 82050000 		.4byte	.LASF72
  428 020d 70       		.byte	0x70
  429 020e 07       		.uleb128 0x7
- 430 020f D2090000 		.4byte	.LASF73
+ 430 020f BC090000 		.4byte	.LASF73
  431 0213 71       		.byte	0x71
  432 0214 07       		.uleb128 0x7
- 433 0215 26080000 		.4byte	.LASF74
+ 433 0215 BD070000 		.4byte	.LASF74
  434 0219 72       		.byte	0x72
  435 021a 07       		.uleb128 0x7
  436 021b B8020000 		.4byte	.LASF75
@@ -651,40 +651,40 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  439 0221 34050000 		.4byte	.LASF76
  440 0225 74       		.byte	0x74
  441 0226 07       		.uleb128 0x7
- 442 0227 2D070000 		.4byte	.LASF77
+ 442 0227 C4060000 		.4byte	.LASF77
  443 022b 75       		.byte	0x75
  444 022c 07       		.uleb128 0x7
  445 022d D6020000 		.4byte	.LASF78
  446 0231 76       		.byte	0x76
  447 0232 07       		.uleb128 0x7
- 448 0233 B3090000 		.4byte	.LASF79
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 12
+ 448 0233 9D090000 		.4byte	.LASF79
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 12
 
 
  449 0237 77       		.byte	0x77
  450 0238 07       		.uleb128 0x7
- 451 0239 08090000 		.4byte	.LASF80
+ 451 0239 9F080000 		.4byte	.LASF80
  452 023d 78       		.byte	0x78
  453 023e 07       		.uleb128 0x7
- 454 023f 32090000 		.4byte	.LASF81
+ 454 023f 1C090000 		.4byte	.LASF81
  455 0243 79       		.byte	0x79
  456 0244 07       		.uleb128 0x7
- 457 0245 7F0A0000 		.4byte	.LASF82
+ 457 0245 690A0000 		.4byte	.LASF82
  458 0249 7A       		.byte	0x7a
  459 024a 07       		.uleb128 0x7
- 460 024b EA080000 		.4byte	.LASF83
+ 460 024b 81080000 		.4byte	.LASF83
  461 024f FA       		.byte	0xfa
  462 0250 07       		.uleb128 0x7
- 463 0251 3E060000 		.4byte	.LASF84
+ 463 0251 D5050000 		.4byte	.LASF84
  464 0255 FB       		.byte	0xfb
  465 0256 07       		.uleb128 0x7
  466 0257 8E000000 		.4byte	.LASF85
  467 025b FC       		.byte	0xfc
  468 025c 07       		.uleb128 0x7
- 469 025d B9070000 		.4byte	.LASF86
+ 469 025d 50070000 		.4byte	.LASF86
  470 0261 FD       		.byte	0xfd
  471 0262 07       		.uleb128 0x7
- 472 0263 B50A0000 		.4byte	.LASF87
+ 472 0263 9F0A0000 		.4byte	.LASF87
  473 0267 FF       		.byte	0xff
  474 0268 00       		.byte	0
  475 0269 06       		.uleb128 0x6
@@ -703,22 +703,22 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  488 0283 BC010000 		.4byte	.LASF90
  489 0287 02       		.byte	0x2
  490 0288 07       		.uleb128 0x7
- 491 0289 94080000 		.4byte	.LASF91
+ 491 0289 2B080000 		.4byte	.LASF91
  492 028d 03       		.byte	0x3
  493 028e 07       		.uleb128 0x7
- 494 028f 61080000 		.4byte	.LASF92
+ 494 028f F8070000 		.4byte	.LASF92
  495 0293 04       		.byte	0x4
  496 0294 07       		.uleb128 0x7
- 497 0295 9B0B0000 		.4byte	.LASF93
+ 497 0295 850B0000 		.4byte	.LASF93
  498 0299 05       		.byte	0x5
  499 029a 07       		.uleb128 0x7
- 500 029b 42080000 		.4byte	.LASF94
+ 500 029b D9070000 		.4byte	.LASF94
  501 029f 06       		.byte	0x6
  502 02a0 00       		.byte	0
  503 02a1 04       		.uleb128 0x4
- 504 02a2 1F070000 		.4byte	.LASF95
+ 504 02a2 B6060000 		.4byte	.LASF95
  505 02a6 04       		.byte	0x4
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 13
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 13
 
 
  506 02a7 B608     		.2byte	0x8b6
@@ -755,7 +755,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  537 02e9 9C       		.byte	0x9c
  538 02ea FD020000 		.4byte	0x2fd
  539 02ee 09       		.uleb128 0x9
- 540 02ef 2C0B0000 		.4byte	.LASF103
+ 540 02ef 160B0000 		.4byte	.LASF103
  541 02f3 01       		.byte	0x1
  542 02f4 20       		.byte	0x20
  543 02f5 A1020000 		.4byte	0x2a1
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  560 0318 64       		.byte	0x64
  561 0319 6B000000 		.4byte	0x6b
  562 031d 02       		.uleb128 0x2
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 14
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 14
 
 
  563 031e 91       		.byte	0x91
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  617 0016 0B       		.uleb128 0xb
  618 0017 0B       		.uleb128 0xb
  619 0018 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 15
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 15
 
 
  620 0019 0B       		.uleb128 0xb
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  674 004f 03       		.uleb128 0x3
  675 0050 0E       		.uleb128 0xe
  676 0051 1C       		.uleb128 0x1c
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 16
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 16
 
 
  677 0052 0B       		.uleb128 0xb
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  731 0089 02       		.uleb128 0x2
  732 008a 18       		.uleb128 0x18
  733 008b 00       		.byte	0
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 17
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 17
 
 
  734 008c 00       		.byte	0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  783      455F5354 
  783      4154455F 
  783      53544F50 
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 18
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 18
 
 
  783      50454400 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  803      545F4741 
  803      54545F44 
  803      4953434F 
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 19
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 19
 
 
  804              	.LASF98:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  823      434F4E4E 
  823      45435445 
  824              	.LASF46:
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 20
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 20
 
 
  825 01d2 4359424C 		.ascii	"CYBLE_EVT_GAP_SMP_LOC_P256_KEYS_GEN_AND_SET_COMPLET"
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  844      545F4C32 
  844      4341505F 
  844      43424643 
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 21
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 21
 
 
  845              	.LASF89:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  864      48414E44 
  865              	.LASF97:
  866 03f4 4359424C 		.ascii	"CYBLE_SRVI_GATT\000"
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 22
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 22
 
 
  866      455F5352 
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  884 0534 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_CNF\000"
  884      455F4556 
  884      545F4C32 
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 23
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 23
 
 
  884      4341505F 
@@ -1350,335 +1350,329 @@ ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 1
  894      545F4741 
  894      5454535F 
  894      50524550 
- 895              	.LASF107:
- 896 05d5 433A5C55 		.ascii	"C:\\Users\\dmytro\\Documents\\PSoC Creator\\PSoC-10"
- 896      73657273 
- 896      5C646D79 
- 896      74726F5C 
- 896      446F6375 
- 897 0603 315C4D65 		.ascii	"1\\Mesh_Flood\\Mesh_Flood_Original\\Mesh_Flood_PSoC"
- 897      73685F46 
- 897      6C6F6F64 
- 897      5C4D6573 
- 897      685F466C 
- 898 0633 34424C45 		.ascii	"4BLE.cydsn\000"
- 898      2E637964 
- 898      736E00
- 899              	.LASF84:
- 900 063e 4359424C 		.ascii	"CYBLE_EVT_LE_PING_AUTH_TIMEOUT\000"
- 900      455F4556 
- 900      545F4C45 
- 900      5F50494E 
- 900      475F4155 
- 901              	.LASF106:
- 902 065d 64656275 		.ascii	"debug.c\000"
- 902      672E6300 
- 903              	.LASF0:
- 904 0665 7369676E 		.ascii	"signed char\000"
- 904      65642063 
- 904      68617200 
- 905              	.LASF59:
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 24
-
-
- 906 0671 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_REQ\000"
+ 895              	.LASF84:
+ 896 05d5 4359424C 		.ascii	"CYBLE_EVT_LE_PING_AUTH_TIMEOUT\000"
+ 896      455F4556 
+ 896      545F4C45 
+ 896      5F50494E 
+ 896      475F4155 
+ 897              	.LASF106:
+ 898 05f4 64656275 		.ascii	"debug.c\000"
+ 898      672E6300 
+ 899              	.LASF0:
+ 900 05fc 7369676E 		.ascii	"signed char\000"
+ 900      65642063 
+ 900      68617200 
+ 901              	.LASF59:
+ 902 0608 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_REQ\000"
+ 902      455F4556 
+ 902      545F4741 
+ 902      5454535F 
+ 902      57524954 
+ 903              	.LASF55:
+ 904 0622 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_BY_TYPE_VALUE_RSP\000"
+ 904      455F4556 
+ 904      545F4741 
+ 904      5454435F 
+ 904      46494E44 
+ 905              	.LASF27:
+ 906 0649 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_COMPLETE\000"
  906      455F4556 
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 24
+
+
  906      545F4741 
- 906      5454535F 
- 906      57524954 
- 907              	.LASF55:
- 908 068b 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_BY_TYPE_VALUE_RSP\000"
- 908      455F4556 
- 908      545F4741 
- 908      5454435F 
- 908      46494E44 
- 909              	.LASF27:
- 910 06b2 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_COMPLETE\000"
+ 906      505F4155 
+ 906      54485F43 
+ 907              	.LASF8:
+ 908 0665 756E7369 		.ascii	"unsigned int\000"
+ 908      676E6564 
+ 908      20696E74 
+ 908      00
+ 909              	.LASF48:
+ 910 0672 4359424C 		.ascii	"CYBLE_EVT_GATT_CONNECT_IND\000"
  910      455F4556 
  910      545F4741 
- 910      505F4155 
- 910      54485F43 
- 911              	.LASF8:
- 912 06ce 756E7369 		.ascii	"unsigned int\000"
- 912      676E6564 
- 912      20696E74 
- 912      00
- 913              	.LASF48:
- 914 06db 4359424C 		.ascii	"CYBLE_EVT_GATT_CONNECT_IND\000"
+ 910      54545F43 
+ 910      4F4E4E45 
+ 911              	.LASF5:
+ 912 068d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 912      20756E73 
+ 912      69676E65 
+ 912      6420696E 
+ 912      7400
+ 913              	.LASF24:
+ 914 069f 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_REQ\000"
  914      455F4556 
  914      545F4741 
- 914      54545F43 
- 914      4F4E4E45 
- 915              	.LASF5:
- 916 06f6 6C6F6E67 		.ascii	"long unsigned int\000"
- 916      20756E73 
- 916      69676E65 
- 916      6420696E 
- 916      7400
- 917              	.LASF24:
- 918 0708 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_REQ\000"
+ 914      505F4155 
+ 914      54485F52 
+ 915              	.LASF95:
+ 916 06b6 4359424C 		.ascii	"CYBLE_STATE_T\000"
+ 916      455F5354 
+ 916      4154455F 
+ 916      5400
+ 917              	.LASF77:
+ 918 06c4 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_IND\000"
  918      455F4556 
- 918      545F4741 
- 918      505F4155 
- 918      54485F52 
- 919              	.LASF95:
- 920 071f 4359424C 		.ascii	"CYBLE_STATE_T\000"
- 920      455F5354 
- 920      4154455F 
- 920      5400
- 921              	.LASF77:
- 922 072d 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_IND\000"
+ 918      545F4C32 
+ 918      4341505F 
+ 918      43424643 
+ 919              	.LASF32:
+ 920 06e5 4359424C 		.ascii	"CYBLE_EVT_GAP_ENCRYPT_CHANGE\000"
+ 920      455F4556 
+ 920      545F4741 
+ 920      505F454E 
+ 920      43525950 
+ 921              	.LASF43:
+ 922 0702 4359424C 		.ascii	"CYBLE_EVT_GAP_CONN_ESTB\000"
  922      455F4556 
- 922      545F4C32 
- 922      4341505F 
- 922      43424643 
- 923              	.LASF32:
- 924 074e 4359424C 		.ascii	"CYBLE_EVT_GAP_ENCRYPT_CHANGE\000"
+ 922      545F4741 
+ 922      505F434F 
+ 922      4E4E5F45 
+ 923              	.LASF71:
+ 924 071a 4359424C 		.ascii	"CYBLE_EVT_GATTC_LONG_PROCEDURE_END\000"
  924      455F4556 
  924      545F4741 
- 924      505F454E 
- 924      43525950 
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 25
+ 924      5454435F 
+ 924      4C4F4E47 
+ 925              	.LASF3:
+ 926 073d 73686F72 		.ascii	"short unsigned int\000"
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 25
 
 
- 925              	.LASF43:
- 926 076b 4359424C 		.ascii	"CYBLE_EVT_GAP_CONN_ESTB\000"
- 926      455F4556 
- 926      545F4741 
- 926      505F434F 
- 926      4E4E5F45 
- 927              	.LASF71:
- 928 0783 4359424C 		.ascii	"CYBLE_EVT_GATTC_LONG_PROCEDURE_END\000"
+ 926      7420756E 
+ 926      7369676E 
+ 926      65642069 
+ 926      6E7400
+ 927              	.LASF86:
+ 928 0750 4359424C 		.ascii	"CYBLE_EVT_FLASH_CORRUPT\000"
  928      455F4556 
- 928      545F4741 
- 928      5454435F 
- 928      4C4F4E47 
- 929              	.LASF3:
- 930 07a6 73686F72 		.ascii	"short unsigned int\000"
- 930      7420756E 
- 930      7369676E 
- 930      65642069 
- 930      6E7400
- 931              	.LASF86:
- 932 07b9 4359424C 		.ascii	"CYBLE_EVT_FLASH_CORRUPT\000"
+ 928      545F464C 
+ 928      4153485F 
+ 928      434F5252 
+ 929              	.LASF33:
+ 930 0768 4359424C 		.ascii	"CYBLE_EVT_GAP_CONNECTION_UPDATE_COMPLETE\000"
+ 930      455F4556 
+ 930      545F4741 
+ 930      505F434F 
+ 930      4E4E4543 
+ 931              	.LASF42:
+ 932 0791 4359424C 		.ascii	"CYBLE_EVT_GAP_SMP_NEGOTIATED_AUTH_INFO\000"
  932      455F4556 
- 932      545F464C 
- 932      4153485F 
- 932      434F5252 
- 933              	.LASF33:
- 934 07d1 4359424C 		.ascii	"CYBLE_EVT_GAP_CONNECTION_UPDATE_COMPLETE\000"
- 934      455F4556 
- 934      545F4741 
- 934      505F434F 
- 934      4E4E4543 
- 935              	.LASF42:
- 936 07fa 4359424C 		.ascii	"CYBLE_EVT_GAP_SMP_NEGOTIATED_AUTH_INFO\000"
+ 932      545F4741 
+ 932      505F534D 
+ 932      505F4E45 
+ 933              	.LASF13:
+ 934 07b8 63686172 		.ascii	"char\000"
+ 934      00
+ 935              	.LASF74:
+ 936 07bd 4359424C 		.ascii	"CYBLE_EVT_L2CAP_COMMAND_REJ\000"
  936      455F4556 
- 936      545F4741 
- 936      505F534D 
- 936      505F4E45 
- 937              	.LASF13:
- 938 0821 63686172 		.ascii	"char\000"
- 938      00
- 939              	.LASF74:
- 940 0826 4359424C 		.ascii	"CYBLE_EVT_L2CAP_COMMAND_REJ\000"
- 940      455F4556 
- 940      545F4C32 
- 940      4341505F 
- 940      434F4D4D 
- 941              	.LASF94:
- 942 0842 4359424C 		.ascii	"CYBLE_STATE_DISCONNECTED\000"
+ 936      545F4C32 
+ 936      4341505F 
+ 936      434F4D4D 
+ 937              	.LASF94:
+ 938 07d9 4359424C 		.ascii	"CYBLE_STATE_DISCONNECTED\000"
+ 938      455F5354 
+ 938      4154455F 
+ 938      44495343 
+ 938      4F4E4E45 
+ 939              	.LASF9:
+ 940 07f2 75696E74 		.ascii	"uint8\000"
+ 940      3800
+ 941              	.LASF92:
+ 942 07f8 4359424C 		.ascii	"CYBLE_STATE_SCANNING\000"
  942      455F5354 
  942      4154455F 
- 942      44495343 
- 942      4F4E4E45 
- 943              	.LASF9:
- 944 085b 75696E74 		.ascii	"uint8\000"
- 944      3800
- 945              	.LASF92:
- 946 0861 4359424C 		.ascii	"CYBLE_STATE_SCANNING\000"
+ 942      5343414E 
+ 942      4E494E47 
+ 943              	.LASF57:
+ 944 080d 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BLOB_RSP\000"
+ 944      455F4556 
+ 944      545F4741 
+ 944      5454435F 
+ 944      52454144 
+ 945              	.LASF91:
+ 946 082b 4359424C 		.ascii	"CYBLE_STATE_ADVERTISING\000"
  946      455F5354 
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 26
-
-
  946      4154455F 
- 946      5343414E 
- 946      4E494E47 
- 947              	.LASF57:
- 948 0876 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BLOB_RSP\000"
+ 946      41445645 
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 26
+
+
+ 946      52544953 
+ 947              	.LASF64:
+ 948 0843 4359424C 		.ascii	"CYBLE_EVT_GATTC_EXEC_WRITE_RSP\000"
  948      455F4556 
  948      545F4741 
  948      5454435F 
- 948      52454144 
- 949              	.LASF91:
- 950 0894 4359424C 		.ascii	"CYBLE_STATE_ADVERTISING\000"
- 950      455F5354 
- 950      4154455F 
- 950      41445645 
- 950      52544953 
- 951              	.LASF64:
- 952 08ac 4359424C 		.ascii	"CYBLE_EVT_GATTC_EXEC_WRITE_RSP\000"
+ 948      45584543 
+ 949              	.LASF34:
+ 950 0862 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_START_STOP\000"
+ 950      455F4556 
+ 950      545F4741 
+ 950      50435F53 
+ 950      43414E5F 
+ 951              	.LASF83:
+ 952 0881 4359424C 		.ascii	"CYBLE_EVT_PENDING_FLASH_WRITE\000"
  952      455F4556 
- 952      545F4741 
- 952      5454435F 
- 952      45584543 
- 953              	.LASF34:
- 954 08cb 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_START_STOP\000"
+ 952      545F5045 
+ 952      4E44494E 
+ 952      475F464C 
+ 953              	.LASF80:
+ 954 089f 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_RX_CREDIT_IND\000"
  954      455F4556 
- 954      545F4741 
- 954      50435F53 
- 954      43414E5F 
- 955              	.LASF83:
- 956 08ea 4359424C 		.ascii	"CYBLE_EVT_PENDING_FLASH_WRITE\000"
- 956      455F4556 
- 956      545F5045 
- 956      4E44494E 
- 956      475F464C 
- 957              	.LASF80:
- 958 0908 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_RX_CREDIT_IND\000"
- 958      455F4556 
- 958      545F4C32 
- 958      4341505F 
- 958      43424643 
- 959              	.LASF12:
- 960 092b 646F7562 		.ascii	"double\000"
- 960      6C6500
- 961              	.LASF81:
- 962 0932 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_TX_CREDIT_IND\000"
- 962      455F4556 
- 962      545F4C32 
- 962      4341505F 
- 962      43424643 
- 963              	.LASF44:
- 964 0955 4359424C 		.ascii	"CYBLE_EVT_GAP_SCAN_REQ_RECVD\000"
- 964      455F4556 
- 964      545F4741 
- 964      505F5343 
- 964      414E5F52 
- 965              	.LASF29:
- 966 0972 4359424C 		.ascii	"CYBLE_EVT_GAPP_ADVERTISEMENT_START_STOP\000"
- 966      455F4556 
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 27
+ 954      545F4C32 
+ 954      4341505F 
+ 954      43424643 
+ 955              	.LASF107:
+ 956 08c2 433A5C55 		.ascii	"C:\\Users\\janusdg-win\\UCU\\Smart_lightning_system"
+ 956      73657273 
+ 956      5C6A616E 
+ 956      75736467 
+ 956      2D77696E 
+ 957 08f1 5C4D6573 		.ascii	"\\Mesh_Flood_PSoC4BLE_Original.cydsn\000"
+ 957      685F466C 
+ 957      6F6F645F 
+ 957      50536F43 
+ 957      34424C45 
+ 958              	.LASF12:
+ 959 0915 646F7562 		.ascii	"double\000"
+ 959      6C6500
+ 960              	.LASF81:
+ 961 091c 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_TX_CREDIT_IND\000"
+ 961      455F4556 
+ 961      545F4C32 
+ 961      4341505F 
+ 961      43424643 
+ 962              	.LASF44:
+ 963 093f 4359424C 		.ascii	"CYBLE_EVT_GAP_SCAN_REQ_RECVD\000"
+ 963      455F4556 
+ 963      545F4741 
+ 963      505F5343 
+ 963      414E5F52 
+ 964              	.LASF29:
+ 965 095c 4359424C 		.ascii	"CYBLE_EVT_GAPP_ADVERTISEMENT_START_STOP\000"
+ 965      455F4556 
+ 965      545F4741 
+ 965      50505F41 
+ 965      44564552 
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 27
 
 
- 966      545F4741 
- 966      50505F41 
- 966      44564552 
- 967              	.LASF19:
- 968 099a 4359424C 		.ascii	"CYBLE_EVT_HARDWARE_ERROR\000"
- 968      455F4556 
- 968      545F4841 
- 968      52445741 
- 968      52455F45 
- 969              	.LASF79:
- 970 09b3 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_READ\000"
- 970      455F4556 
- 970      545F4C32 
- 970      4341505F 
- 970      43424643 
- 971              	.LASF73:
- 972 09d2 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_RSP\000"
- 972      455F4556 
- 972      545F4C32 
- 972      4341505F 
- 972      434F4E4E 
- 973              	.LASF23:
- 974 09f8 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT\000"
- 974      455F4556 
- 974      545F4741 
- 974      50435F53 
- 974      43414E5F 
- 975              	.LASF52:
- 976 0a1c 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_GROUP_TYPE_RSP\000"
- 976      455F4556 
- 976      545F4741 
- 976      5454435F 
- 976      52454144 
- 977              	.LASF61:
- 978 0a43 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_CMD_REQ\000"
- 978      455F4556 
- 978      545F4741 
- 978      5454535F 
- 978      57524954 
- 979              	.LASF51:
- 980 0a61 4359424C 		.ascii	"CYBLE_EVT_GATTC_XCHNG_MTU_RSP\000"
- 980      455F4556 
- 980      545F4741 
- 980      5454435F 
- 980      5843484E 
- 981              	.LASF82:
- 982 0a7f 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_WRITE_IND\000"
- 982      455F4556 
- 982      545F4C32 
- 982      4341505F 
- 982      43424643 
- 983              	.LASF18:
- 984 0aa3 4359424C 		.ascii	"CYBLE_EVT_TIMEOUT\000"
- 984      455F4556 
- 984      545F5449 
- 984      4D454F55 
- 984      5400
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 28
+ 966              	.LASF19:
+ 967 0984 4359424C 		.ascii	"CYBLE_EVT_HARDWARE_ERROR\000"
+ 967      455F4556 
+ 967      545F4841 
+ 967      52445741 
+ 967      52455F45 
+ 968              	.LASF79:
+ 969 099d 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_READ\000"
+ 969      455F4556 
+ 969      545F4C32 
+ 969      4341505F 
+ 969      43424643 
+ 970              	.LASF73:
+ 971 09bc 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_RSP\000"
+ 971      455F4556 
+ 971      545F4C32 
+ 971      4341505F 
+ 971      434F4E4E 
+ 972              	.LASF23:
+ 973 09e2 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT\000"
+ 973      455F4556 
+ 973      545F4741 
+ 973      50435F53 
+ 973      43414E5F 
+ 974              	.LASF52:
+ 975 0a06 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_GROUP_TYPE_RSP\000"
+ 975      455F4556 
+ 975      545F4741 
+ 975      5454435F 
+ 975      52454144 
+ 976              	.LASF61:
+ 977 0a2d 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_CMD_REQ\000"
+ 977      455F4556 
+ 977      545F4741 
+ 977      5454535F 
+ 977      57524954 
+ 978              	.LASF51:
+ 979 0a4b 4359424C 		.ascii	"CYBLE_EVT_GATTC_XCHNG_MTU_RSP\000"
+ 979      455F4556 
+ 979      545F4741 
+ 979      5454435F 
+ 979      5843484E 
+ 980              	.LASF82:
+ 981 0a69 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_WRITE_IND\000"
+ 981      455F4556 
+ 981      545F4C32 
+ 981      4341505F 
+ 981      43424643 
+ 982              	.LASF18:
+ 983 0a8d 4359424C 		.ascii	"CYBLE_EVT_TIMEOUT\000"
+ 983      455F4556 
+ 983      545F5449 
+ 983      4D454F55 
+ 983      5400
+ 984              	.LASF87:
+ 985 0a9f 4359424C 		.ascii	"CYBLE_EVT_MAX\000"
+ 985      455F4556 
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccBBOMp8.s 			page 28
 
 
- 985              	.LASF87:
- 986 0ab5 4359424C 		.ascii	"CYBLE_EVT_MAX\000"
- 986      455F4556 
- 986      545F4D41 
- 986      5800
- 987              	.LASF70:
- 988 0ac3 4359424C 		.ascii	"CYBLE_EVT_GATTS_READ_CHAR_VAL_ACCESS_REQ\000"
- 988      455F4556 
- 988      545F4741 
- 988      5454535F 
- 988      52454144 
- 989              	.LASF54:
- 990 0aec 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_INFO_RSP\000"
- 990      455F4556 
- 990      545F4741 
- 990      5454435F 
- 990      46494E44 
- 991              	.LASF69:
- 992 0b0a 4359424C 		.ascii	"CYBLE_EVT_GATTC_STOP_CMD_COMPLETE\000"
- 992      455F4556 
- 992      545F4741 
- 992      5454435F 
- 992      53544F50 
- 993              	.LASF103:
- 994 0b2c 626C655F 		.ascii	"ble_state\000"
- 994      73746174 
- 994      6500
- 995              	.LASF63:
- 996 0b36 4359424C 		.ascii	"CYBLE_EVT_GATTS_EXEC_WRITE_REQ\000"
- 996      455F4556 
- 996      545F4741 
- 996      5454535F 
- 996      45584543 
- 997              	.LASF31:
- 998 0b55 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_DISCONNECTED\000"
- 998      455F4556 
- 998      545F4741 
- 998      505F4445 
- 998      56494345 
- 999              	.LASF68:
- 1000 0b77 4359424C 		.ascii	"CYBLE_EVT_GATTS_DATA_SIGNED_CMD_REQ\000"
- 1000      455F4556 
- 1000      545F4741 
- 1000      5454535F 
- 1000      44415441 
- 1001              	.LASF93:
- 1002 0b9b 4359424C 		.ascii	"CYBLE_STATE_CONNECTING\000"
- 1002      455F5354 
- 1002      4154455F 
- 1002      434F4E4E 
- 1002      45435449 
- 1003              	.LASF38:
- 1004 0bb2 4359424C 		.ascii	"CYBLE_EVT_GAP_OOB_GENERATED_NOTIFICATION\000"
- 1004      455F4556 
- 1004      545F4741 
- 1004      505F4F4F 
- 1004      425F4745 
-ARM GAS  C:\Users\dmytro\AppData\Local\Temp\ccJMMfPU.s 			page 29
-
-
- 1005              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 985      545F4D41 
+ 985      5800
+ 986              	.LASF70:
+ 987 0aad 4359424C 		.ascii	"CYBLE_EVT_GATTS_READ_CHAR_VAL_ACCESS_REQ\000"
+ 987      455F4556 
+ 987      545F4741 
+ 987      5454535F 
+ 987      52454144 
+ 988              	.LASF54:
+ 989 0ad6 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_INFO_RSP\000"
+ 989      455F4556 
+ 989      545F4741 
+ 989      5454435F 
+ 989      46494E44 
+ 990              	.LASF69:
+ 991 0af4 4359424C 		.ascii	"CYBLE_EVT_GATTC_STOP_CMD_COMPLETE\000"
+ 991      455F4556 
+ 991      545F4741 
+ 991      5454435F 
+ 991      53544F50 
+ 992              	.LASF103:
+ 993 0b16 626C655F 		.ascii	"ble_state\000"
+ 993      73746174 
+ 993      6500
+ 994              	.LASF63:
+ 995 0b20 4359424C 		.ascii	"CYBLE_EVT_GATTS_EXEC_WRITE_REQ\000"
+ 995      455F4556 
+ 995      545F4741 
+ 995      5454535F 
+ 995      45584543 
+ 996              	.LASF31:
+ 997 0b3f 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_DISCONNECTED\000"
+ 997      455F4556 
+ 997      545F4741 
+ 997      505F4445 
+ 997      56494345 
+ 998              	.LASF68:
+ 999 0b61 4359424C 		.ascii	"CYBLE_EVT_GATTS_DATA_SIGNED_CMD_REQ\000"
+ 999      455F4556 
+ 999      545F4741 
+ 999      5454535F 
+ 999      44415441 
+ 1000              	.LASF93:
+ 1001 0b85 4359424C 		.ascii	"CYBLE_STATE_CONNECTING\000"
+ 1001      455F5354 
+ 1001      4154455F 
+ 1001      434F4E4E 
+ 1001      45435449 
+ 1002              	.LASF38:
+ 1003 0b9c 4359424C 		.ascii	"CYBLE_EVT_GAP_OOB_GENERATED_NOTIFICATION\000"
+ 1003      455F4556 
+ 1003      545F4741 
+ 1003      505F4F4F 
+ 1003      425F4745 
+ 1004              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

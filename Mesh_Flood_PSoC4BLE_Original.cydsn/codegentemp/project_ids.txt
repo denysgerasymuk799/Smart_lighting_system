@@ -1,7 +1,7 @@
-C:\Users\dmytro\Documents\PSoC Creator\PSoC-101\Mesh_Flood\Mesh_Flood_PSoC4BLE.cydsn\Mesh_Flood_PSoC4BLE.cyprj|57974577-2c00-4a6a-9dfe-37353f0dc234
-C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|0f5ba8b7-8b20-4676-a7c4-23684251f582
-C:\Users\dmytro\Documents\PSoC Creator\4.3\Downloads ( 4.3).cylib\Downloads ( 4.3).cyprj|14605b3d-0263-43f7-a57b-fae7d623567c
-C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|bd12e8c4-812e-45a7-8a55-b36ee585567d
-C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|373f07bd-8e51-49ba-bd0b-70a41712c6ea
-C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|f197fdf7-ab44-4a0f-ac70-d5b8b012e2e3
-C:\Users\dmytro\Documents\PSoC Creator\PSoC-101\Mesh_Flood\Mesh_Flood_Original\Mesh_Flood_PSoC4BLE.cydsn\Mesh_Flood_PSoC4BLE.cyprj|2738c3a9-d7cb-4873-b9ee-7e1b6fc54634
+C:\Users\janusdg-win\UCU\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Original.cydsn\Mesh_Flood_PSoC4BLE_Original.cyprj|9281849a-b781-4770-a8b2-355caace12b6
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|fcf627ba-08f9-4780-be6e-b335030eb667
+C:\Users\janusdg-win\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|b11fc124-1281-4688-b661-689964e27302
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|da2efcfb-8297-4a74-b41a-857311e259de
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|585d5e01-d486-4c11-82a6-1f80c8e9625e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|7372a2f6-3ce2-475e-937d-a95d9d7d1ff3
+C:\Users\janusdg-win\UCU\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Main.cydsn\Mesh_Flood_PSoC4BLE_Main.cyprj|04b9fc7e-acff-4613-82a6-ce53618a8826

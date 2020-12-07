@@ -18,9 +18,7 @@
 ##################################################################### 
                     1::Clock Frequency Summary
 ===================================================================== 
-Number of clocks: 13
-Clock: Clock_1kHz        | N/A                   | Target: 0.00 MHz   | 
-Clock: Clock_1kHz(FFB)   | N/A                   | Target: 0.00 MHz   | 
+Number of clocks: 11
 Clock: CyECO             | N/A                   | Target: 24.00 MHz  | 
 Clock: CyHFCLK           | N/A                   | Target: 24.00 MHz  | 
 Clock: CyILO             | N/A                   | Target: 0.03 MHz   | 

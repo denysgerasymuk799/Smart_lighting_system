@@ -2,7 +2,7 @@
 --	Conversion of Mesh_Flood_PSoC4BLE_Main.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sun Nov 29 20:02:35 2020
+--	Mon Dec 07 18:21:57 2020
 --
 
 USE cypress.cypress.all;
@@ -250,19 +250,11 @@ SIGNAL Net_109 : bit;
 SIGNAL Net_110 : bit;
 SIGNAL Net_112 : bit;
 SIGNAL Net_115 : bit;
-SIGNAL \PWM_1sWindow:Net_81\ : bit;
-SIGNAL \PWM_1sWindow:Net_75\ : bit;
-SIGNAL \PWM_1sWindow:Net_69\ : bit;
-SIGNAL \PWM_1sWindow:Net_66\ : bit;
-SIGNAL \PWM_1sWindow:Net_82\ : bit;
-SIGNAL \PWM_1sWindow:Net_72\ : bit;
-SIGNAL Net_131 : bit;
-SIGNAL Net_130 : bit;
-SIGNAL Net_132 : bit;
-SIGNAL Net_5 : bit;
-SIGNAL Net_133 : bit;
-SIGNAL Net_6 : bit;
-SIGNAL Net_24 : bit;
+SIGNAL Net_139 : bit;
+SIGNAL tmpOE__Pin_1_net_0 : bit;
+SIGNAL tmpIO_0__Pin_1_net_0 : bit;
+TERMINAL tmpSIOVREF__Pin_1_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Pin_1_net_0 : bit;
 SIGNAL \PrISM_1:enable_final_reg\\D\ : bit;
 SIGNAL \PrISM_1:reset_reg\\D\ : bit;
 SIGNAL Net_64D : bit;
@@ -921,34 +913,80 @@ isr_WDT:cy_isr_v1_0
 		sda=>Net_114,
 		tx_req=>Net_99,
 		rx_req=>Net_98);
-\PWM_1sWindow:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
-	GENERIC MAP(cy_registers=>"")
-	PORT MAP(clock=>Net_24,
-		capture=>zero,
-		count=>one,
-		reload=>zero,
-		stop=>zero,
-		start=>zero,
-		underflow=>Net_131,
-		overflow=>Net_130,
-		compare_match=>Net_132,
-		line_out=>Net_5,
-		line_out_compl=>Net_133,
-		interrupt=>Net_6);
-Clock_1kHz:cy_clock_v1_0
-	GENERIC MAP(cy_registers=>"",
-		id=>"ebf5d4e5-862d-4cc4-bff1-8f13a435d7e1",
-		source_clock_id=>"",
-		divisor=>0,
-		period=>"1000000000000",
-		is_direct=>'0',
-		is_digital=>'0')
-	PORT MAP(clock_out=>Net_24,
-		dig_domain_out=>open);
 isr_Counter:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10",
 		is_nmi=>'0')
-	PORT MAP(int_signal=>Net_6);
+	PORT MAP(int_signal=>Net_139);
+Pin_1:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba",
+		drive_mode=>"001",
+		ibuf_enabled=>"1",
+		init_dr_st=>"0",
+		input_sync=>"0",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"I",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"00",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(one),
+		y=>(zero),
+		fb=>Net_139,
+		analog=>(open),
+		io=>(tmpIO_0__Pin_1_net_0),
+		siovref=>(tmpSIOVREF__Pin_1_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>one,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>one,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__Pin_1_net_0);
 \PrISM_1:enable_final_reg\:cy_dff
 	PORT MAP(d=>\PrISM_1:ctrl_enable\,
 		clk=>\PrISM_1:clock_cnt\,
