@@ -1,11 +1,4 @@
-net ClockBlock_HFClk
-	term   ":m0s8clockblockcell.hfclk"
-	switch ":m0s8clockblockcell.hfclk==>:ioport2_clock_io_mux.hfclk"
-	switch ":ioport2_clock_io_mux.clk_in==>:ioport2_clock_io_mux.clk_in_limit"
-	switch ":ioport2_clock_io_mux.clk_in_limit==>:ioport2:pin7.in_clock"
-	term   ":ioport2:pin7.in_clock"
-end ClockBlock_HFClk
-net Net_58
+net Net_81
 	term   ":m0s8tcpwmcell_0.line"
 	switch ":m0s8tcpwmcell_0.line==>Stub-:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v16+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v18"
 	switch "OStub-:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v16+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v18"
@@ -16,7 +9,7 @@ net Net_58
 	switch ":ioport2:inputs2_mux.pin6__pin_input==>:ioport2:hsiom_out6.dsi"
 	switch ":ioport2:hsiom_out6.hsiom6_out==>:ioport2:pin6.pin_input"
 	term   ":ioport2:pin6.pin_input"
-end Net_58
+end Net_81
 net \UART:rx_wire\
 	term   ":ioport1:pin4.fb"
 	switch ":ioport1:pin4.fb==>:ioport1:hsiom_in4.hsiom4_in"

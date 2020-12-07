@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2020-11-15T17:06:35Z")
+ (DATE "2020-12-07T17:47:23Z")
  (DESIGN "Code_Morse")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
@@ -12,7 +12,6 @@
   (INSTANCE *)
   (DELAY
    (ABSOLUTE
-    (INTERCONNECT ClockBlock.hfclk Pin_SW2\(0\).in_clock (0.000:0.000:0.000))
     (INTERCONNECT ClockBlock.ff_div_7 \\PWM_1\:cy_m0s8_tcpwm_1\\.clock (0.000:0.000:0.000))
     (INTERCONNECT \\PWM_1\:cy_m0s8_tcpwm_1\\.line Pin_Red\(0\).pin_input (2.663:2.663:2.663))
     (INTERCONNECT Pin_Red\(0\).pad_out Pin_Red\(0\).pad_in (0.000:0.000:0.000))
@@ -20,11 +19,8 @@
     (INTERCONNECT \\UART\:rx\(0\)\\.fb \\UART\:SCB\\.uart_rx (0.000:0.000:0.000))
     (INTERCONNECT \\UART\:tx\(0\)\\.pad_out \\UART\:tx\(0\)\\.pad_in (0.000:0.000:0.000))
     (INTERCONNECT \\UART\:SCB\\.uart_tx \\UART\:tx\(0\)\\.pin_input (0.000:0.000:0.000))
-    (INTERCONNECT Pin_Green\(0\)_PAD Pin_Green\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT Pin_Red\(0\).pad_out Pin_Red\(0\)_PAD (0.000:0.000:0.000))
     (INTERCONNECT Pin_Red\(0\)_PAD Pin_Red\(0\).pad_in (0.000:0.000:0.000))
-    (INTERCONNECT Pin_Blue\(0\)_PAD Pin_Blue\(0\).pad_in (0.000:0.000:0.000))
-    (INTERCONNECT Pin_SW2\(0\)_PAD Pin_SW2\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT \\UART\:tx\(0\)\\.pad_out \\UART\:tx\(0\)_PAD\\ (0.000:0.000:0.000))
     (INTERCONNECT \\UART\:tx\(0\)_PAD\\ \\UART\:tx\(0\)\\.pad_in (0.000:0.000:0.000))
     (INTERCONNECT \\UART\:rx\(0\)_PAD\\ \\UART\:rx\(0\)\\.pad_in (0.000:0.000:0.000))

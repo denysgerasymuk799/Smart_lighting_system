@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 1
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 1
 
 
    1              		.syntax unified
@@ -44,61 +44,64 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 1
   14:main.c        **** 
   15:main.c        **** #include <stdio.h>
   16:main.c        **** #include <string.h>
-  17:main.c        **** 
-  18:main.c        **** char TEXT_BUF[20];
-  19:main.c        **** 
-  20:main.c        **** int get_letter_pos(char letter){
-  28              		.loc 1 20 0
+  17:main.c        **** #include <stdlib.h>
+  18:main.c        **** 
+  19:main.c        **** char TEXT_BUF[20];
+  20:main.c        **** int DOT_LEN_DELAY = 600;
+  21:main.c        **** 
+  22:main.c        **** 
+  23:main.c        **** int get_letter_pos(char letter){
+  28              		.loc 1 23 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
   32              		@ link register save eliminated.
   33              	.LVL0:
   34              	.LBB2:
-  21:main.c        ****     int n_letter_in_table = -1;
-  22:main.c        ****     
-  23:main.c        ****     for (int n_letter_detail = 0; n_letter_detail < 4; n_letter_detail++){
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 2
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 2
 
 
-  35              		.loc 1 23 0
+  24:main.c        ****     int n_letter_in_table = -1;
+  25:main.c        ****     
+  26:main.c        ****     for (int n_letter_detail = 0; n_letter_detail < 20; n_letter_detail++){
+  35              		.loc 1 26 0
   36 0000 0023     		movs	r3, #0
   37 0002 06E0     		b	.L2
   38              	.LVL1:
   39              	.L4:
-  24:main.c        ****         if (letter == letter_to_morse[n_letter_detail][0]){
-  40              		.loc 1 24 0
+  27:main.c        ****         if (letter == letter_to_morse[n_letter_detail][0]){
+  40              		.loc 1 27 0
   41 0004 5A00     		lsls	r2, r3, #1
   42 0006 D218     		adds	r2, r2, r3
   43 0008 0549     		ldr	r1, .L5
   44 000a 525C     		ldrb	r2, [r2, r1]
   45 000c 8242     		cmp	r2, r0
   46 000e 04D0     		beq	.L3
-  23:main.c        ****         if (letter == letter_to_morse[n_letter_detail][0]){
-  47              		.loc 1 23 0 discriminator 2
+  26:main.c        ****         if (letter == letter_to_morse[n_letter_detail][0]){
+  47              		.loc 1 26 0 discriminator 2
   48 0010 0133     		adds	r3, r3, #1
   49              	.LVL2:
   50              	.L2:
-  23:main.c        ****         if (letter == letter_to_morse[n_letter_detail][0]){
-  51              		.loc 1 23 0 is_stmt 0 discriminator 1
-  52 0012 032B     		cmp	r3, #3
+  26:main.c        ****         if (letter == letter_to_morse[n_letter_detail][0]){
+  51              		.loc 1 26 0 is_stmt 0 discriminator 1
+  52 0012 132B     		cmp	r3, #19
   53 0014 F6DD     		ble	.L4
   54              	.LBE2:
-  21:main.c        ****     int n_letter_in_table = -1;
-  55              		.loc 1 21 0 is_stmt 1
+  24:main.c        ****     int n_letter_in_table = -1;
+  55              		.loc 1 24 0 is_stmt 1
   56 0016 0123     		movs	r3, #1
   57              	.LVL3:
   58 0018 5B42     		rsbs	r3, r3, #0
   59              	.L3:
   60              	.LVL4:
-  25:main.c        ****             n_letter_in_table = n_letter_detail;
-  26:main.c        ****             break;
-  27:main.c        ****         }
-  28:main.c        ****     }
-  29:main.c        ****     
-  30:main.c        ****     return n_letter_in_table;
-  31:main.c        **** }
-  61              		.loc 1 31 0
+  28:main.c        ****             n_letter_in_table = n_letter_detail;
+  29:main.c        ****             break;
+  30:main.c        ****         }
+  31:main.c        ****     }
+  32:main.c        ****     
+  33:main.c        ****     return n_letter_in_table;
+  34:main.c        **** }
+  61              		.loc 1 34 0
   62 001a 1800     		movs	r0, r3
   63              	.LVL5:
   64              		@ sp needed
@@ -115,15 +118,15 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 1
   75              		.global	word_to_morse
   76              		.code	16
   77              		.thumb_func
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 3
+
+
   78              		.type	word_to_morse, %function
   79              	word_to_morse:
   80              	.LFB37:
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 3
-
-
-  32:main.c        **** 
-  33:main.c        **** void word_to_morse(char word[]){
-  81              		.loc 1 33 0
+  35:main.c        **** 
+  36:main.c        **** void word_to_morse(char word[]){
+  81              		.loc 1 36 0
   82              		.cfi_startproc
   83              		@ args = 0, pretend = 0, frame = 0
   84              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -145,1678 +148,2031 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 1
  100              		.cfi_offset 10, -24
  101 000a 8146     		mov	r9, r0
  102              	.LVL7:
- 103              	.LBB3:
-  34:main.c        ****     int dot_len_delay = 500;
-  35:main.c        ****     int dash_period = 500;
-  36:main.c        ****     int dot_period = 9500;
-  37:main.c        ****     
-  38:main.c        ****     int i = 0;
-  39:main.c        ****     //int interrupt_flag  = 0;
-  40:main.c        ****     int n_letter_in_table = 0;
-  41:main.c        ****     
-  42:main.c        ****     for (uint16 n_letter = 0; n_letter < strlen(word); n_letter++){
- 104              		.loc 1 42 0
- 105 000c 0023     		movs	r3, #0
- 106 000e 9846     		mov	r8, r3
- 107 0010 51E0     		b	.L8
- 108              	.LVL8:
- 109              	.L13:
- 110              	.LBB4:
-  43:main.c        ****         n_letter_in_table = get_letter_pos(word[n_letter]);
- 111              		.loc 1 43 0
- 112 0012 4B46     		mov	r3, r9
- 113 0014 4246     		mov	r2, r8
- 114 0016 985C     		ldrb	r0, [r3, r2]
- 115 0018 FFF7FEFF 		bl	get_letter_pos
- 116              	.LVL9:
-  44:main.c        ****         
-  45:main.c        ****         uint16 letter_morze_code = letter_to_morse[n_letter_in_table][1];
- 117              		.loc 1 45 0
- 118 001c 4300     		lsls	r3, r0, #1
- 119 001e 1818     		adds	r0, r3, r0
- 120              	.LVL10:
- 121 0020 2A4B     		ldr	r3, .L14
- 122 0022 1818     		adds	r0, r3, r0
- 123 0024 4378     		ldrb	r3, [r0, #1]
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 4
+  37:main.c        ****     int dash_period = 500;
+  38:main.c        ****     int dot_period = 9500;
+  39:main.c        ****     
+  40:main.c        ****     int i = 0;
+  41:main.c        ****     int n_letter_in_table = 0;
+  42:main.c        ****     
+  43:main.c        ****     PWM_1_Start();
+ 103              		.loc 1 43 0
+ 104 000c FFF7FEFF 		bl	PWM_1_Start
+ 105              	.LVL8:
+  44:main.c        ****     //Pin_Red_Write(0);
+  45:main.c        ****     CyDelay(1000);
+ 106              		.loc 1 45 0
+ 107 0010 FA20     		movs	r0, #250
+ 108 0012 8000     		lsls	r0, r0, #2
+ 109 0014 FFF7FEFF 		bl	CyDelay
+ 110              	.LVL9:
+ 111              	.LBB3:
+  46:main.c        ****     for (uint16 n_letter = 0; n_letter < strlen(word); n_letter++){
+ 112              		.loc 1 46 0
+ 113 0018 0023     		movs	r3, #0
+ 114 001a 9846     		mov	r8, r3
+ 115 001c 6DE0     		b	.L8
+ 116              	.LVL10:
+ 117              	.L15:
+ 118              	.LBB4:
+  47:main.c        ****         if (word[n_letter] == ' ') {
+ 119              		.loc 1 47 0
+ 120 001e 4B46     		mov	r3, r9
+ 121 0020 4246     		mov	r2, r8
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 4
 
 
- 124 0026 9A46     		mov	r10, r3
+ 122 0022 9D5C     		ldrb	r5, [r3, r2]
+ 123 0024 202D     		cmp	r5, #32
+ 124 0026 0FD1     		bne	.L9
  125              	.LVL11:
-  46:main.c        ****         uint16 dash_or_dot_bit = 0x01;
-  47:main.c        ****         int len_morse_letter = letter_to_morse[n_letter_in_table][2];
- 126              		.loc 1 47 0
- 127 0028 8678     		ldrb	r6, [r0, #2]
+  48:main.c        ****             CyDelay(7 * DOT_LEN_DELAY);
+ 126              		.loc 1 48 0
+ 127 0028 394B     		ldr	r3, .L16
  128              	.LVL12:
-  48:main.c        ****         
-  49:main.c        ****         sprintf(TEXT_BUF,"\n");
- 129              		.loc 1 49 0
- 130 002a 294C     		ldr	r4, .L14+4
- 131 002c 0222     		movs	r2, #2
- 132 002e 2949     		ldr	r1, .L14+8
- 133 0030 2000     		movs	r0, r4
- 134 0032 FFF7FEFF 		bl	memcpy
- 135              	.LVL13:
-  50:main.c        ****         UART_UartPutString(TEXT_BUF);
- 136              		.loc 1 50 0
- 137 0036 2000     		movs	r0, r4
- 138 0038 FFF7FEFF 		bl	UART_UartPutString
- 139              	.LVL14:
-  46:main.c        ****         uint16 dash_or_dot_bit = 0x01;
- 140              		.loc 1 46 0
- 141 003c 0124     		movs	r4, #1
-  51:main.c        ****         
-  52:main.c        ****         for (i = 0; i < len_morse_letter; i++){
- 142              		.loc 1 52 0
- 143 003e 0027     		movs	r7, #0
- 144 0040 30E0     		b	.L9
- 145              	.LVL15:
- 146              	.L12:
-  53:main.c        ****             //interrupt_flag = 0;
-  54:main.c        ****             Pin_Red_Write(1);
- 147              		.loc 1 54 0
- 148 0042 0120     		movs	r0, #1
- 149 0044 FFF7FEFF 		bl	Pin_Red_Write
- 150              	.LVL16:
-  55:main.c        ****             
-  56:main.c        ****             sprintf(TEXT_BUF,"%d\r\n", dash_or_dot_bit);
- 151              		.loc 1 56 0
- 152 0048 214D     		ldr	r5, .L14+4
- 153 004a 2200     		movs	r2, r4
- 154 004c 2249     		ldr	r1, .L14+12
- 155 004e 2800     		movs	r0, r5
- 156 0050 FFF7FEFF 		bl	sprintf
- 157              	.LVL17:
-  57:main.c        ****             UART_UartPutString(TEXT_BUF);
- 158              		.loc 1 57 0
- 159 0054 2800     		movs	r0, r5
- 160 0056 FFF7FEFF 		bl	UART_UartPutString
- 161              	.LVL18:
-  58:main.c        ****             
-  59:main.c        ****             if (letter_morze_code & dash_or_dot_bit){ // even if result == 4 will make this part of
- 162              		.loc 1 59 0
- 163 005a 5346     		mov	r3, r10
- 164 005c 2342     		tst	r3, r4
- 165 005e 0CD0     		beq	.L10
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 5
+ 129 002a 586A     		ldr	r0, [r3, #36]
+ 130 002c C300     		lsls	r3, r0, #3
+ 131 002e 181A     		subs	r0, r3, r0
+ 132 0030 FFF7FEFF 		bl	CyDelay
+ 133              	.LVL13:
+  49:main.c        ****             sprintf(TEXT_BUF,"\nspace\r\n");
+ 134              		.loc 1 49 0
+ 135 0034 374C     		ldr	r4, .L16+4
+ 136 0036 0922     		movs	r2, #9
+ 137 0038 3749     		ldr	r1, .L16+8
+ 138 003a 2000     		movs	r0, r4
+ 139 003c FFF7FEFF 		bl	memcpy
+ 140              	.LVL14:
+  50:main.c        ****             UART_UartPutString(TEXT_BUF);
+ 141              		.loc 1 50 0
+ 142 0040 2000     		movs	r0, r4
+ 143 0042 FFF7FEFF 		bl	UART_UartPutString
+ 144              	.LVL15:
+  51:main.c        ****             continue;
+ 145              		.loc 1 51 0
+ 146 0046 54E0     		b	.L10
+ 147              	.LVL16:
+ 148              	.L9:
+  52:main.c        ****         }
+  53:main.c        ****         n_letter_in_table = get_letter_pos(word[n_letter]);
+ 149              		.loc 1 53 0
+ 150 0048 2800     		movs	r0, r5
+ 151 004a FFF7FEFF 		bl	get_letter_pos
+ 152              	.LVL17:
+  54:main.c        ****         
+  55:main.c        ****         uint16 letter_morze_code = letter_to_morse[n_letter_in_table][1];
+ 153              		.loc 1 55 0
+ 154 004e 4300     		lsls	r3, r0, #1
+ 155 0050 1818     		adds	r0, r3, r0
+ 156              	.LVL18:
+ 157 0052 2F4B     		ldr	r3, .L16
+ 158 0054 1818     		adds	r0, r3, r0
+ 159 0056 4378     		ldrb	r3, [r0, #1]
+ 160 0058 9A46     		mov	r10, r3
+ 161              	.LVL19:
+  56:main.c        ****         uint16 dash_or_dot_bit = 0x01;
+  57:main.c        ****         int len_morse_letter = letter_to_morse[n_letter_in_table][2];
+ 162              		.loc 1 57 0
+ 163 005a 8678     		ldrb	r6, [r0, #2]
+ 164              	.LVL20:
+  58:main.c        ****         
+  59:main.c        ****         //sprintf(TEXT_BUF,"\n");
+  60:main.c        ****         //UART_UartPutString(TEXT_BUF);
+  61:main.c        ****         
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 5
 
 
-  60:main.c        ****                 // Dash
-  61:main.c        ****                 PWM_1_WriteCompare(dash_period); // switches from low to high, if more - so less br
- 166              		.loc 1 61 0
- 167 0060 FA20     		movs	r0, #250
- 168 0062 4000     		lsls	r0, r0, #1
- 169 0064 FFF7FEFF 		bl	PWM_1_WriteCompare
- 170              	.LVL19:
-  62:main.c        ****                 PWM_1_Start();
- 171              		.loc 1 62 0
- 172 0068 FFF7FEFF 		bl	PWM_1_Start
- 173              	.LVL20:
-  63:main.c        ****                 
-  64:main.c        ****                 CyDelay(3 * dot_len_delay);
- 174              		.loc 1 64 0
- 175 006c 1B48     		ldr	r0, .L14+16
- 176 006e FFF7FEFF 		bl	CyDelay
- 177              	.LVL21:
-  65:main.c        ****                 Pin_Red_Write(0);
+  62:main.c        ****         sprintf(TEXT_BUF,"\nletter == %c\r\n", word[n_letter]);
+ 165              		.loc 1 62 0
+ 166 005c 2D4C     		ldr	r4, .L16+4
+ 167 005e 2A00     		movs	r2, r5
+ 168 0060 2E49     		ldr	r1, .L16+12
+ 169 0062 2000     		movs	r0, r4
+ 170 0064 FFF7FEFF 		bl	sprintf
+ 171              	.LVL21:
+  63:main.c        ****         UART_UartPutString(TEXT_BUF);
+ 172              		.loc 1 63 0
+ 173 0068 2000     		movs	r0, r4
+ 174 006a FFF7FEFF 		bl	UART_UartPutString
+ 175              	.LVL22:
+  56:main.c        ****         uint16 dash_or_dot_bit = 0x01;
+ 176              		.loc 1 56 0
+ 177 006e 0124     		movs	r4, #1
+  64:main.c        ****         
+  65:main.c        ****         for (i = 0; i < len_morse_letter; i++){
  178              		.loc 1 65 0
- 179 0072 0020     		movs	r0, #0
- 180 0074 FFF7FEFF 		bl	Pin_Red_Write
- 181              	.LVL22:
- 182 0078 0BE0     		b	.L11
- 183              	.L10:
-  66:main.c        ****             } else {
-  67:main.c        ****                 // Dot
-  68:main.c        ****                 PWM_1_WriteCompare(dot_period);
- 184              		.loc 1 68 0
- 185 007a 1948     		ldr	r0, .L14+20
- 186 007c FFF7FEFF 		bl	PWM_1_WriteCompare
- 187              	.LVL23:
-  69:main.c        ****                 PWM_1_Start();
- 188              		.loc 1 69 0
- 189 0080 FFF7FEFF 		bl	PWM_1_Start
- 190              	.LVL24:
-  70:main.c        ****                 
-  71:main.c        ****                 CyDelay(dot_len_delay);
+ 179 0070 0027     		movs	r7, #0
+ 180 0072 36E0     		b	.L11
+ 181              	.LVL23:
+ 182              	.L14:
+  66:main.c        ****             Pin_Red_Write(1);
+ 183              		.loc 1 66 0
+ 184 0074 0120     		movs	r0, #1
+ 185 0076 FFF7FEFF 		bl	Pin_Red_Write
+ 186              	.LVL24:
+  67:main.c        ****             
+  68:main.c        ****             if (letter_morze_code & dash_or_dot_bit){ // even if result == 4 will make this part of
+ 187              		.loc 1 68 0
+ 188 007a 5346     		mov	r3, r10
+ 189 007c 2342     		tst	r3, r4
+ 190 007e 16D0     		beq	.L12
+  69:main.c        ****                 // Dash
+  70:main.c        ****                 //Pin_Red_Write(0);
+  71:main.c        ****                 sprintf(TEXT_BUF,"1 ");
  191              		.loc 1 71 0
- 192 0084 FA20     		movs	r0, #250
- 193 0086 4000     		lsls	r0, r0, #1
- 194 0088 FFF7FEFF 		bl	CyDelay
- 195              	.LVL25:
-  72:main.c        ****                 Pin_Red_Write(0);
- 196              		.loc 1 72 0
- 197 008c 0020     		movs	r0, #0
- 198 008e FFF7FEFF 		bl	Pin_Red_Write
- 199              	.LVL26:
- 200              	.L11:
-  73:main.c        ****                 }
-  74:main.c        **** 
-  75:main.c        ****             dash_or_dot_bit = dash_or_dot_bit << 1;
- 201              		.loc 1 75 0 discriminator 2
- 202 0092 6400     		lsls	r4, r4, #1
- 203              	.LVL27:
- 204 0094 A4B2     		uxth	r4, r4
- 205              	.LVL28:
-  76:main.c        ****             CyDelay(dot_len_delay);
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 6
+ 192 0080 244D     		ldr	r5, .L16+4
+ 193 0082 0322     		movs	r2, #3
+ 194 0084 2649     		ldr	r1, .L16+16
+ 195 0086 2800     		movs	r0, r5
+ 196 0088 FFF7FEFF 		bl	memcpy
+ 197              	.LVL25:
+  72:main.c        ****                 UART_UartPutString(TEXT_BUF);
+ 198              		.loc 1 72 0
+ 199 008c 2800     		movs	r0, r5
+ 200 008e FFF7FEFF 		bl	UART_UartPutString
+ 201              	.LVL26:
+  73:main.c        ****                 
+  74:main.c        ****                 PWM_1_WriteCompare(dash_period); // switches from low to high, if more - so less br
+ 202              		.loc 1 74 0
+ 203 0092 FA20     		movs	r0, #250
+ 204 0094 4000     		lsls	r0, r0, #1
+ 205 0096 FFF7FEFF 		bl	PWM_1_WriteCompare
+ 206              	.LVL27:
+  75:main.c        ****                 //PWM_1_Start();
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 6
 
 
- 206              		.loc 1 76 0 discriminator 2
- 207 0096 FA20     		movs	r0, #250
- 208 0098 4000     		lsls	r0, r0, #1
- 209 009a FFF7FEFF 		bl	CyDelay
- 210              	.LVL29:
-  77:main.c        ****             PWM_1_Stop();
- 211              		.loc 1 77 0 discriminator 2
- 212 009e FFF7FEFF 		bl	PWM_1_Stop
- 213              	.LVL30:
-  52:main.c        ****             //interrupt_flag = 0;
- 214              		.loc 1 52 0 discriminator 2
- 215 00a2 0137     		adds	r7, r7, #1
- 216              	.LVL31:
- 217              	.L9:
-  52:main.c        ****             //interrupt_flag = 0;
- 218              		.loc 1 52 0 is_stmt 0 discriminator 1
- 219 00a4 B742     		cmp	r7, r6
- 220 00a6 CCDB     		blt	.L12
-  78:main.c        ****         }
-  79:main.c        ****         CyDelay(3 * dot_len_delay);
- 221              		.loc 1 79 0 is_stmt 1 discriminator 2
- 222 00a8 0C48     		ldr	r0, .L14+16
- 223 00aa FFF7FEFF 		bl	CyDelay
- 224              	.LVL32:
- 225              	.LBE4:
-  42:main.c        ****         n_letter_in_table = get_letter_pos(word[n_letter]);
- 226              		.loc 1 42 0 discriminator 2
- 227 00ae 4346     		mov	r3, r8
- 228 00b0 0133     		adds	r3, r3, #1
- 229 00b2 9BB2     		uxth	r3, r3
- 230 00b4 9846     		mov	r8, r3
- 231              	.LVL33:
- 232              	.L8:
-  42:main.c        ****         n_letter_in_table = get_letter_pos(word[n_letter]);
- 233              		.loc 1 42 0 is_stmt 0 discriminator 1
- 234 00b6 4846     		mov	r0, r9
- 235 00b8 FFF7FEFF 		bl	strlen
- 236              	.LVL34:
- 237 00bc 8045     		cmp	r8, r0
- 238 00be A8D3     		bcc	.L13
- 239              	.LBE3:
-  80:main.c        ****         }
-  81:main.c        **** }
- 240              		.loc 1 81 0 is_stmt 1
- 241              		@ sp needed
- 242              	.LVL35:
- 243              	.LVL36:
- 244 00c0 1CBC     		pop	{r2, r3, r4}
- 245 00c2 9046     		mov	r8, r2
- 246 00c4 9946     		mov	r9, r3
- 247 00c6 A246     		mov	r10, r4
- 248 00c8 F0BD     		pop	{r4, r5, r6, r7, pc}
- 249              	.L15:
- 250 00ca C046     		.align	2
- 251              	.L14:
- 252 00cc 00000000 		.word	.LANCHOR0
- 253 00d0 00000000 		.word	TEXT_BUF
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 7
+  76:main.c        ****                 
+  77:main.c        ****                 CyDelay(3 * DOT_LEN_DELAY);
+ 207              		.loc 1 77 0
+ 208 009a 1D4B     		ldr	r3, .L16
+ 209 009c 586A     		ldr	r0, [r3, #36]
+ 210 009e 4300     		lsls	r3, r0, #1
+ 211 00a0 1818     		adds	r0, r3, r0
+ 212 00a2 FFF7FEFF 		bl	CyDelay
+ 213              	.LVL28:
+  78:main.c        ****                 Pin_Red_Write(0);
+ 214              		.loc 1 78 0
+ 215 00a6 0020     		movs	r0, #0
+ 216 00a8 FFF7FEFF 		bl	Pin_Red_Write
+ 217              	.LVL29:
+ 218 00ac 12E0     		b	.L13
+ 219              	.L12:
+  79:main.c        ****             } else {
+  80:main.c        ****                 // Dot
+  81:main.c        ****                 //Pin_Red_Write(1);
+  82:main.c        ****                 sprintf(TEXT_BUF,"0 ");
+ 220              		.loc 1 82 0
+ 221 00ae 194D     		ldr	r5, .L16+4
+ 222 00b0 0322     		movs	r2, #3
+ 223 00b2 1C49     		ldr	r1, .L16+20
+ 224 00b4 2800     		movs	r0, r5
+ 225 00b6 FFF7FEFF 		bl	memcpy
+ 226              	.LVL30:
+  83:main.c        ****                 UART_UartPutString(TEXT_BUF);
+ 227              		.loc 1 83 0
+ 228 00ba 2800     		movs	r0, r5
+ 229 00bc FFF7FEFF 		bl	UART_UartPutString
+ 230              	.LVL31:
+  84:main.c        ****                 PWM_1_WriteCompare(dot_period);
+ 231              		.loc 1 84 0
+ 232 00c0 1948     		ldr	r0, .L16+24
+ 233 00c2 FFF7FEFF 		bl	PWM_1_WriteCompare
+ 234              	.LVL32:
+  85:main.c        ****                 //PWM_1_Start();
+  86:main.c        ****                 
+  87:main.c        ****                 CyDelay(DOT_LEN_DELAY);
+ 235              		.loc 1 87 0
+ 236 00c6 124B     		ldr	r3, .L16
+ 237 00c8 586A     		ldr	r0, [r3, #36]
+ 238 00ca FFF7FEFF 		bl	CyDelay
+ 239              	.LVL33:
+  88:main.c        ****                 Pin_Red_Write(0);
+ 240              		.loc 1 88 0
+ 241 00ce 0020     		movs	r0, #0
+ 242 00d0 FFF7FEFF 		bl	Pin_Red_Write
+ 243              	.LVL34:
+ 244              	.L13:
+  89:main.c        ****                 }
+  90:main.c        **** 
+  91:main.c        ****             dash_or_dot_bit = dash_or_dot_bit << 1;
+ 245              		.loc 1 91 0 discriminator 2
+ 246 00d4 6400     		lsls	r4, r4, #1
+ 247              	.LVL35:
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 7
 
 
- 254 00d4 00000000 		.word	.LC4
- 255 00d8 04000000 		.word	.LC6
- 256 00dc DC050000 		.word	1500
- 257 00e0 1C250000 		.word	9500
- 258              		.cfi_endproc
- 259              	.LFE37:
- 260              		.size	word_to_morse, .-word_to_morse
- 261              		.section	.text.main,"ax",%progbits
- 262              		.align	2
- 263              		.global	main
- 264              		.code	16
- 265              		.thumb_func
- 266              		.type	main, %function
- 267              	main:
- 268              	.LFB38:
-  82:main.c        **** 
-  83:main.c        **** int main(void)
-  84:main.c        **** {
- 269              		.loc 1 84 0
- 270              		.cfi_startproc
- 271              		@ args = 0, pretend = 0, frame = 8
- 272              		@ frame_needed = 0, uses_anonymous_args = 0
- 273 0000 00B5     		push	{lr}
- 274              		.cfi_def_cfa_offset 4
- 275              		.cfi_offset 14, -4
- 276 0002 83B0     		sub	sp, sp, #12
- 277              		.cfi_def_cfa_offset 16
-  85:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
- 278              		.loc 1 85 0
- 279              		.syntax divided
- 280              	@ 85 "main.c" 1
- 281 0004 62B6     		CPSIE   i
- 282              	@ 0 "" 2
-  86:main.c        ****     
-  87:main.c        ****     /* Start SCB UART TX+RX operation */    
-  88:main.c        ****     UART_Start(); 
- 283              		.loc 1 88 0
- 284              		.thumb
- 285              		.syntax unified
- 286 0006 FFF7FEFF 		bl	UART_Start
- 287              	.LVL37:
-  89:main.c        ****     UART_UartPutString("Start UART\n");
- 288              		.loc 1 89 0
- 289 000a 0848     		ldr	r0, .L17
- 290 000c FFF7FEFF 		bl	UART_UartPutString
- 291              	.LVL38:
-  90:main.c        ****     
-  91:main.c        ****     CyDelay(100);
- 292              		.loc 1 91 0
- 293 0010 6420     		movs	r0, #100
- 294 0012 FFF7FEFF 		bl	CyDelay
- 295              	.LVL39:
-  92:main.c        ****     
-  93:main.c        ****     char word[] = {'a', 'b', 'd'};
- 296              		.loc 1 93 0
- 297 0016 0322     		movs	r2, #3
- 298 0018 0549     		ldr	r1, .L17+4
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 8
-
-
- 299 001a 01A8     		add	r0, sp, #4
- 300 001c FFF7FEFF 		bl	memcpy
- 301              	.LVL40:
-  94:main.c        ****     
-  95:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-  96:main.c        ****     word_to_morse(word);
- 302              		.loc 1 96 0
- 303 0020 01A8     		add	r0, sp, #4
- 304 0022 FFF7FEFF 		bl	word_to_morse
- 305              	.LVL41:
+ 248 00d6 A4B2     		uxth	r4, r4
+ 249              	.LVL36:
+  92:main.c        ****             CyDelay(DOT_LEN_DELAY);
+ 250              		.loc 1 92 0 discriminator 2
+ 251 00d8 0D4B     		ldr	r3, .L16
+ 252 00da 586A     		ldr	r0, [r3, #36]
+ 253 00dc FFF7FEFF 		bl	CyDelay
+ 254              	.LVL37:
+  65:main.c        ****             Pin_Red_Write(1);
+ 255              		.loc 1 65 0 discriminator 2
+ 256 00e0 0137     		adds	r7, r7, #1
+ 257              	.LVL38:
+ 258              	.L11:
+  65:main.c        ****             Pin_Red_Write(1);
+ 259              		.loc 1 65 0 is_stmt 0 discriminator 1
+ 260 00e2 B742     		cmp	r7, r6
+ 261 00e4 C6DB     		blt	.L14
+  93:main.c        ****             //PWM_1_Stop();
+  94:main.c        ****         }
+  95:main.c        ****         CyDelay(3 * DOT_LEN_DELAY);
+ 262              		.loc 1 95 0 is_stmt 1
+ 263 00e6 0A4B     		ldr	r3, .L16
+ 264 00e8 586A     		ldr	r0, [r3, #36]
+ 265 00ea 4300     		lsls	r3, r0, #1
+ 266 00ec 1818     		adds	r0, r3, r0
+ 267 00ee FFF7FEFF 		bl	CyDelay
+ 268              	.LVL39:
+ 269              	.L10:
+ 270              	.LBE4:
+  46:main.c        ****         if (word[n_letter] == ' ') {
+ 271              		.loc 1 46 0 discriminator 2
+ 272 00f2 4346     		mov	r3, r8
+ 273 00f4 0133     		adds	r3, r3, #1
+ 274 00f6 9BB2     		uxth	r3, r3
+ 275 00f8 9846     		mov	r8, r3
+ 276              	.LVL40:
+ 277              	.L8:
+  46:main.c        ****         if (word[n_letter] == ' ') {
+ 278              		.loc 1 46 0 is_stmt 0 discriminator 1
+ 279 00fa 4846     		mov	r0, r9
+ 280 00fc FFF7FEFF 		bl	strlen
+ 281              	.LVL41:
+ 282 0100 8045     		cmp	r8, r0
+ 283 0102 8CD3     		bcc	.L15
+ 284              	.LBE3:
+  96:main.c        ****         }
   97:main.c        **** }
- 306              		.loc 1 97 0
- 307 0026 0020     		movs	r0, #0
- 308 0028 03B0     		add	sp, sp, #12
- 309              		@ sp needed
- 310 002a 00BD     		pop	{pc}
- 311              	.L18:
- 312              		.align	2
- 313              	.L17:
- 314 002c 0C000000 		.word	.LC8
- 315 0030 00000000 		.word	.LANCHOR1
- 316              		.cfi_endproc
- 317              	.LFE38:
- 318              		.size	main, .-main
- 319              		.comm	TEXT_BUF,20,4
- 320              		.global	letter_to_morse
- 321              		.section	.rodata
- 322              		.align	2
- 323              		.set	.LANCHOR1,. + 0
- 324              	.LC0:
- 325 0000 61       		.byte	97
- 326 0001 62       		.byte	98
- 327 0002 64       		.byte	100
- 328              		.data
- 329              		.align	2
- 330              		.set	.LANCHOR0,. + 0
- 331              		.type	letter_to_morse, %object
- 332              		.size	letter_to_morse, 18
- 333              	letter_to_morse:
- 334 0000 61       		.byte	97
- 335 0001 02       		.byte	2
- 336 0002 02       		.byte	2
- 337 0003 62       		.byte	98
- 338 0004 01       		.byte	1
- 339 0005 04       		.byte	4
- 340 0006 63       		.byte	99
- 341 0007 05       		.byte	5
- 342 0008 04       		.byte	4
- 343 0009 64       		.byte	100
- 344 000a 01       		.byte	1
- 345 000b 03       		.byte	3
- 346 000c 65       		.byte	101
- 347 000d 00       		.byte	0
- 348 000e 01       		.byte	1
- 349 000f 66       		.byte	102
- 350 0010 04       		.byte	4
- 351 0011 04       		.byte	4
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 9
+ 285              		.loc 1 97 0 is_stmt 1
+ 286              		@ sp needed
+ 287              	.LVL42:
+ 288              	.LVL43:
+ 289 0104 1CBC     		pop	{r2, r3, r4}
+ 290 0106 9046     		mov	r8, r2
+ 291 0108 9946     		mov	r9, r3
+ 292 010a A246     		mov	r10, r4
+ 293 010c F0BD     		pop	{r4, r5, r6, r7, pc}
+ 294              	.L17:
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 8
 
 
- 352              		.section	.rodata.str1.4,"aMS",%progbits,1
- 353              		.align	2
- 354              	.LC4:
- 355 0000 0A00     		.ascii	"\012\000"
- 356 0002 0000     		.space	2
- 357              	.LC6:
- 358 0004 25640D0A 		.ascii	"%d\015\012\000"
- 358      00
- 359 0009 000000   		.space	3
- 360              	.LC8:
- 361 000c 53746172 		.ascii	"Start UART\012\000"
- 361      74205541 
- 361      52540A00 
- 362              		.text
- 363              	.Letext0:
- 364              		.file 2 "letters_to_Morze_table.h"
- 365              		.file 3 "Generated_Source\\PSoC4/UART_SPI_UART.h"
- 366              		.file 4 "Generated_Source\\PSoC4/Pin_Red.h"
- 367              		.file 5 "d:\\programs\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-none
- 368              		.file 6 "Generated_Source\\PSoC4/PWM_1.h"
- 369              		.file 7 "Generated_Source\\PSoC4/CyLib.h"
- 370              		.file 8 "d:\\programs\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-none
- 371              		.file 9 "Generated_Source\\PSoC4/UART.h"
- 372              		.file 10 "Generated_Source\\PSoC4/cytypes.h"
- 373              		.section	.debug_info,"",%progbits
- 374              	.Ldebug_info0:
- 375 0000 54040000 		.4byte	0x454
- 376 0004 0400     		.2byte	0x4
- 377 0006 00000000 		.4byte	.Ldebug_abbrev0
- 378 000a 04       		.byte	0x4
- 379 000b 01       		.uleb128 0x1
- 380 000c 96010000 		.4byte	.LASF38
- 381 0010 0C       		.byte	0xc
- 382 0011 4E020000 		.4byte	.LASF39
- 383 0015 00000000 		.4byte	.LASF40
- 384 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 385 001d 00000000 		.4byte	0
- 386 0021 00000000 		.4byte	.Ldebug_line0
- 387 0025 02       		.uleb128 0x2
- 388 0026 01       		.byte	0x1
- 389 0027 06       		.byte	0x6
- 390 0028 A2020000 		.4byte	.LASF0
- 391 002c 02       		.uleb128 0x2
- 392 002d 01       		.byte	0x1
- 393 002e 08       		.byte	0x8
- 394 002f 5C010000 		.4byte	.LASF1
- 395 0033 02       		.uleb128 0x2
- 396 0034 02       		.byte	0x2
- 397 0035 05       		.byte	0x5
- 398 0036 6A020000 		.4byte	.LASF2
- 399 003a 02       		.uleb128 0x2
- 400 003b 02       		.byte	0x2
- 401 003c 07       		.byte	0x7
- 402 003d 8A000000 		.4byte	.LASF3
- 403 0041 02       		.uleb128 0x2
- 404 0042 04       		.byte	0x4
- 405 0043 05       		.byte	0x5
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 10
+ 295 010e C046     		.align	2
+ 296              	.L16:
+ 297 0110 00000000 		.word	.LANCHOR0
+ 298 0114 00000000 		.word	TEXT_BUF
+ 299 0118 00000000 		.word	.LC3
+ 300 011c 0C000000 		.word	.LC5
+ 301 0120 1C000000 		.word	.LC7
+ 302 0124 20000000 		.word	.LC9
+ 303 0128 1C250000 		.word	9500
+ 304              		.cfi_endproc
+ 305              	.LFE37:
+ 306              		.size	word_to_morse, .-word_to_morse
+ 307              		.section	.text.main,"ax",%progbits
+ 308              		.align	2
+ 309              		.global	main
+ 310              		.code	16
+ 311              		.thumb_func
+ 312              		.type	main, %function
+ 313              	main:
+ 314              	.LFB38:
+  98:main.c        **** 
+  99:main.c        **** int main(void)
+ 100:main.c        **** {
+ 315              		.loc 1 100 0
+ 316              		.cfi_startproc
+ 317              		@ args = 0, pretend = 0, frame = 104
+ 318              		@ frame_needed = 0, uses_anonymous_args = 0
+ 319 0000 30B5     		push	{r4, r5, lr}
+ 320              		.cfi_def_cfa_offset 12
+ 321              		.cfi_offset 4, -12
+ 322              		.cfi_offset 5, -8
+ 323              		.cfi_offset 14, -4
+ 324 0002 9BB0     		sub	sp, sp, #108
+ 325              		.cfi_def_cfa_offset 120
+ 101:main.c        ****     Pin_Red_Write(0);
+ 326              		.loc 1 101 0
+ 327 0004 0020     		movs	r0, #0
+ 328 0006 FFF7FEFF 		bl	Pin_Red_Write
+ 329              	.LVL44:
+ 102:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+ 330              		.loc 1 102 0
+ 331              		.syntax divided
+ 332              	@ 102 "main.c" 1
+ 333 000a 62B6     		CPSIE   i
+ 334              	@ 0 "" 2
+ 103:main.c        ****     
+ 104:main.c        ****     /* Start SCB UART TX+RX operation */    
+ 105:main.c        ****     UART_Start(); 
+ 335              		.loc 1 105 0
+ 336              		.thumb
+ 337              		.syntax unified
+ 338 000c FFF7FEFF 		bl	UART_Start
+ 339              	.LVL45:
+ 106:main.c        ****     UART_UartPutString("Start UART\n");
+ 340              		.loc 1 106 0
+ 341 0010 1048     		ldr	r0, .L22
+ 342 0012 FFF7FEFF 		bl	UART_UartPutString
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 9
 
 
- 406 0044 86020000 		.4byte	.LASF4
- 407 0048 02       		.uleb128 0x2
- 408 0049 04       		.byte	0x4
- 409 004a 07       		.byte	0x7
- 410 004b 25010000 		.4byte	.LASF5
- 411 004f 02       		.uleb128 0x2
- 412 0050 08       		.byte	0x8
- 413 0051 05       		.byte	0x5
- 414 0052 40020000 		.4byte	.LASF6
- 415 0056 02       		.uleb128 0x2
- 416 0057 08       		.byte	0x8
- 417 0058 07       		.byte	0x7
- 418 0059 71010000 		.4byte	.LASF7
- 419 005d 03       		.uleb128 0x3
- 420 005e 04       		.byte	0x4
- 421 005f 05       		.byte	0x5
- 422 0060 696E7400 		.ascii	"int\000"
- 423 0064 02       		.uleb128 0x2
- 424 0065 04       		.byte	0x4
- 425 0066 07       		.byte	0x7
- 426 0067 9D000000 		.4byte	.LASF8
- 427 006b 04       		.uleb128 0x4
- 428 006c 3C010000 		.4byte	.LASF41
- 429 0070 0A       		.byte	0xa
- 430 0071 F801     		.2byte	0x1f8
- 431 0073 3A000000 		.4byte	0x3a
- 432 0077 02       		.uleb128 0x2
- 433 0078 04       		.byte	0x4
- 434 0079 04       		.byte	0x4
- 435 007a D0000000 		.4byte	.LASF9
- 436 007e 02       		.uleb128 0x2
- 437 007f 08       		.byte	0x8
- 438 0080 04       		.byte	0x4
- 439 0081 AA000000 		.4byte	.LASF10
- 440 0085 02       		.uleb128 0x2
- 441 0086 01       		.byte	0x1
- 442 0087 08       		.byte	0x8
- 443 0088 55020000 		.4byte	.LASF11
- 444 008c 02       		.uleb128 0x2
- 445 008d 08       		.byte	0x8
- 446 008e 04       		.byte	0x4
- 447 008f 8F020000 		.4byte	.LASF12
- 448 0093 02       		.uleb128 0x2
- 449 0094 04       		.byte	0x4
- 450 0095 07       		.byte	0x7
- 451 0096 24020000 		.4byte	.LASF13
- 452 009a 05       		.uleb128 0x5
- 453 009b 04       		.byte	0x4
- 454 009c 85000000 		.4byte	0x85
- 455 00a0 06       		.uleb128 0x6
- 456 00a1 16010000 		.4byte	.LASF25
- 457 00a5 01       		.byte	0x1
- 458 00a6 14       		.byte	0x14
- 459 00a7 5D000000 		.4byte	0x5d
- 460 00ab 00000000 		.4byte	.LFB36
- 461 00af 24000000 		.4byte	.LFE36-.LFB36
- 462 00b3 01       		.uleb128 0x1
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 11
+ 343              	.LVL46:
+ 107:main.c        ****     
+ 108:main.c        ****     CyDelay(1000);
+ 344              		.loc 1 108 0
+ 345 0016 FA20     		movs	r0, #250
+ 346 0018 8000     		lsls	r0, r0, #2
+ 347 001a FFF7FEFF 		bl	CyDelay
+ 348              	.LVL47:
+ 109:main.c        ****     
+ 110:main.c        ****     //char word[] = {'a', 'b', 'd', 'e'};
+ 111:main.c        ****     //char word[] = {'h', 'e', 'l', 'l', 'o'};
+ 112:main.c        ****     char word[100];
+ 113:main.c        ****     
+ 114:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+ 115:main.c        ****     //word_to_morse(word);
+ 116:main.c        ****     
+ 117:main.c        ****     uint8 ch;
+ 118:main.c        ****     int idx = 0;
+ 349              		.loc 1 118 0
+ 350 001e 0025     		movs	r5, #0
+ 351              	.LVL48:
+ 352              	.L19:
+ 119:main.c        ****     for(;;)
+ 120:main.c        ****     {
+ 121:main.c        ****         ch = UART_UartGetChar();
+ 353              		.loc 1 121 0
+ 354 0020 FFF7FEFF 		bl	UART_UartGetChar
+ 355              	.LVL49:
+ 356 0024 C4B2     		uxtb	r4, r0
+ 357              	.LVL50:
+ 122:main.c        ****         
+ 123:main.c        ****         if (ch==0) continue;
+ 358              		.loc 1 123 0
+ 359 0026 002C     		cmp	r4, #0
+ 360 0028 FAD0     		beq	.L19
+ 124:main.c        ****         
+ 125:main.c        ****         UART_UartPutChar(ch);
+ 361              		.loc 1 125 0
+ 362 002a FF23     		movs	r3, #255
+ 363 002c 1840     		ands	r0, r3
+ 364 002e FFF7FEFF 		bl	UART_SpiUartWriteTxData
+ 365              	.LVL51:
+ 126:main.c        ****         
+ 127:main.c        ****         if (ch == '.') {
+ 366              		.loc 1 127 0
+ 367 0032 2E2C     		cmp	r4, #46
+ 368 0034 0AD1     		bne	.L21
+ 369              	.LVL52:
+ 128:main.c        ****             word[idx++] = '\0';
+ 370              		.loc 1 128 0
+ 371 0036 01AC     		add	r4, sp, #4
+ 372              	.LVL53:
+ 373 0038 0023     		movs	r3, #0
+ 374 003a 6355     		strb	r3, [r4, r5]
+ 129:main.c        ****             word_to_morse(word);
+ 375              		.loc 1 129 0
+ 376 003c 2000     		movs	r0, r4
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 10
 
 
- 463 00b4 9C       		.byte	0x9c
- 464 00b5 F1000000 		.4byte	0xf1
- 465 00b9 07       		.uleb128 0x7
- 466 00ba 9B020000 		.4byte	.LASF16
- 467 00be 01       		.byte	0x1
- 468 00bf 14       		.byte	0x14
- 469 00c0 85000000 		.4byte	0x85
- 470 00c4 00000000 		.4byte	.LLST0
- 471 00c8 08       		.uleb128 0x8
- 472 00c9 D6000000 		.4byte	.LASF14
- 473 00cd 01       		.byte	0x1
- 474 00ce 15       		.byte	0x15
- 475 00cf 5D000000 		.4byte	0x5d
- 476 00d3 21000000 		.4byte	.LLST1
- 477 00d7 09       		.uleb128 0x9
- 478 00d8 00000000 		.4byte	.LBB2
- 479 00dc 16000000 		.4byte	.LBE2-.LBB2
- 480 00e0 08       		.uleb128 0x8
- 481 00e1 5A020000 		.4byte	.LASF15
- 482 00e5 01       		.byte	0x1
- 483 00e6 17       		.byte	0x17
- 484 00e7 5D000000 		.4byte	0x5d
- 485 00eb 41000000 		.4byte	.LLST2
- 486 00ef 00       		.byte	0
- 487 00f0 00       		.byte	0
- 488 00f1 0A       		.uleb128 0xa
- 489 00f2 E8000000 		.4byte	.LASF42
- 490 00f6 01       		.byte	0x1
- 491 00f7 21       		.byte	0x21
- 492 00f8 00000000 		.4byte	.LFB37
- 493 00fc E4000000 		.4byte	.LFE37-.LFB37
- 494 0100 01       		.uleb128 0x1
- 495 0101 9C       		.byte	0x9c
- 496 0102 01030000 		.4byte	0x301
- 497 0106 07       		.uleb128 0x7
- 498 0107 54000000 		.4byte	.LASF17
- 499 010b 01       		.byte	0x1
- 500 010c 21       		.byte	0x21
- 501 010d 9A000000 		.4byte	0x9a
- 502 0111 60000000 		.4byte	.LLST3
- 503 0115 0B       		.uleb128 0xb
- 504 0116 4E010000 		.4byte	.LASF18
- 505 011a 01       		.byte	0x1
- 506 011b 22       		.byte	0x22
- 507 011c 5D000000 		.4byte	0x5d
- 508 0120 F401     		.2byte	0x1f4
- 509 0122 0B       		.uleb128 0xb
- 510 0123 C4000000 		.4byte	.LASF19
- 511 0127 01       		.byte	0x1
- 512 0128 23       		.byte	0x23
- 513 0129 5D000000 		.4byte	0x5d
- 514 012d F401     		.2byte	0x1f4
- 515 012f 0B       		.uleb128 0xb
- 516 0130 43010000 		.4byte	.LASF20
- 517 0134 01       		.byte	0x1
- 518 0135 24       		.byte	0x24
- 519 0136 5D000000 		.4byte	0x5d
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 12
+ 377 003e FFF7FEFF 		bl	word_to_morse
+ 378              	.LVL54:
+ 130:main.c        ****             free(word);
+ 379              		.loc 1 130 0
+ 380 0042 2000     		movs	r0, r4
+ 381 0044 FFF7FEFF 		bl	free
+ 382              	.LVL55:
+ 131:main.c        ****             idx = 0;
+ 383              		.loc 1 131 0
+ 384 0048 0025     		movs	r5, #0
+ 385 004a E9E7     		b	.L19
+ 386              	.LVL56:
+ 387              	.L21:
+ 132:main.c        ****         } else {
+ 133:main.c        ****             word[idx++] = ch;
+ 388              		.loc 1 133 0
+ 389 004c 01AB     		add	r3, sp, #4
+ 390 004e 5C55     		strb	r4, [r3, r5]
+ 391 0050 0135     		adds	r5, r5, #1
+ 392              	.LVL57:
+ 393 0052 E5E7     		b	.L19
+ 394              	.L23:
+ 395              		.align	2
+ 396              	.L22:
+ 397 0054 24000000 		.word	.LC11
+ 398              		.cfi_endproc
+ 399              	.LFE38:
+ 400              		.size	main, .-main
+ 401              		.global	DOT_LEN_DELAY
+ 402              		.comm	TEXT_BUF,20,4
+ 403              		.global	letter_to_morse
+ 404              		.data
+ 405              		.align	2
+ 406              		.set	.LANCHOR0,. + 0
+ 407              		.type	letter_to_morse, %object
+ 408              		.size	letter_to_morse, 33
+ 409              	letter_to_morse:
+ 410 0000 61       		.byte	97
+ 411 0001 02       		.byte	2
+ 412 0002 02       		.byte	2
+ 413 0003 62       		.byte	98
+ 414 0004 01       		.byte	1
+ 415 0005 04       		.byte	4
+ 416 0006 63       		.byte	99
+ 417 0007 05       		.byte	5
+ 418 0008 04       		.byte	4
+ 419 0009 64       		.byte	100
+ 420 000a 01       		.byte	1
+ 421 000b 03       		.byte	3
+ 422 000c 65       		.byte	101
+ 423 000d 00       		.byte	0
+ 424 000e 01       		.byte	1
+ 425 000f 66       		.byte	102
+ 426 0010 04       		.byte	4
+ 427 0011 04       		.byte	4
+ 428 0012 68       		.byte	104
+ 429 0013 00       		.byte	0
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 11
 
 
- 520 013a 1C25     		.2byte	0x251c
- 521 013c 0C       		.uleb128 0xc
- 522 013d 6900     		.ascii	"i\000"
- 523 013f 01       		.byte	0x1
- 524 0140 26       		.byte	0x26
- 525 0141 5D000000 		.4byte	0x5d
- 526 0145 8C000000 		.4byte	.LLST4
- 527 0149 08       		.uleb128 0x8
- 528 014a D6000000 		.4byte	.LASF14
- 529 014e 01       		.byte	0x1
- 530 014f 28       		.byte	0x28
- 531 0150 5D000000 		.4byte	0x5d
- 532 0154 B7000000 		.4byte	.LLST5
- 533 0158 09       		.uleb128 0x9
- 534 0159 0C000000 		.4byte	.LBB3
- 535 015d B4000000 		.4byte	.LBE3-.LBB3
- 536 0161 08       		.uleb128 0x8
- 537 0162 D0020000 		.4byte	.LASF21
- 538 0166 01       		.byte	0x1
- 539 0167 2A       		.byte	0x2a
- 540 0168 6B000000 		.4byte	0x6b
- 541 016c D6000000 		.4byte	.LLST6
- 542 0170 0D       		.uleb128 0xd
- 543 0171 12000000 		.4byte	.LBB4
- 544 0175 9C000000 		.4byte	.LBE4-.LBB4
- 545 0179 EF020000 		.4byte	0x2ef
- 546 017d 08       		.uleb128 0x8
- 547 017e AE020000 		.4byte	.LASF22
- 548 0182 01       		.byte	0x1
- 549 0183 2D       		.byte	0x2d
- 550 0184 6B000000 		.4byte	0x6b
- 551 0188 F5000000 		.4byte	.LLST7
- 552 018c 08       		.uleb128 0x8
- 553 018d 7A000000 		.4byte	.LASF23
- 554 0191 01       		.byte	0x1
- 555 0192 2E       		.byte	0x2e
- 556 0193 6B000000 		.4byte	0x6b
- 557 0197 08010000 		.4byte	.LLST8
- 558 019b 08       		.uleb128 0x8
- 559 019c 69000000 		.4byte	.LASF24
- 560 01a0 01       		.byte	0x1
- 561 01a1 2F       		.byte	0x2f
- 562 01a2 5D000000 		.4byte	0x5d
- 563 01a6 32010000 		.4byte	.LLST9
- 564 01aa 0E       		.uleb128 0xe
- 565 01ab 1C000000 		.4byte	.LVL9
- 566 01af A0000000 		.4byte	0xa0
- 567 01b3 0F       		.uleb128 0xf
- 568 01b4 36000000 		.4byte	.LVL13
- 569 01b8 E7030000 		.4byte	0x3e7
- 570 01bc D5010000 		.4byte	0x1d5
- 571 01c0 10       		.uleb128 0x10
- 572 01c1 01       		.uleb128 0x1
- 573 01c2 50       		.byte	0x50
- 574 01c3 02       		.uleb128 0x2
- 575 01c4 74       		.byte	0x74
- 576 01c5 00       		.sleb128 0
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 13
+ 430 0014 04       		.byte	4
+ 431 0015 6C       		.byte	108
+ 432 0016 02       		.byte	2
+ 433 0017 04       		.byte	4
+ 434 0018 6F       		.byte	111
+ 435 0019 07       		.byte	7
+ 436 001a 03       		.byte	3
+ 437 001b 72       		.byte	114
+ 438 001c 02       		.byte	2
+ 439 001d 03       		.byte	3
+ 440 001e 77       		.byte	119
+ 441 001f 06       		.byte	6
+ 442 0020 03       		.byte	3
+ 443 0021 000000   		.space	3
+ 444              		.type	DOT_LEN_DELAY, %object
+ 445              		.size	DOT_LEN_DELAY, 4
+ 446              	DOT_LEN_DELAY:
+ 447 0024 58020000 		.word	600
+ 448              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 449              		.align	2
+ 450              	.LC3:
+ 451 0000 0A737061 		.ascii	"\012space\015\012\000"
+ 451      63650D0A 
+ 451      00
+ 452 0009 000000   		.space	3
+ 453              	.LC5:
+ 454 000c 0A6C6574 		.ascii	"\012letter == %c\015\012\000"
+ 454      74657220 
+ 454      3D3D2025 
+ 454      630D0A00 
+ 455              	.LC7:
+ 456 001c 312000   		.ascii	"1 \000"
+ 457 001f 00       		.space	1
+ 458              	.LC9:
+ 459 0020 302000   		.ascii	"0 \000"
+ 460 0023 00       		.space	1
+ 461              	.LC11:
+ 462 0024 53746172 		.ascii	"Start UART\012\000"
+ 462      74205541 
+ 462      52540A00 
+ 463              		.text
+ 464              	.Letext0:
+ 465              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 466              		.file 3 "letters_to_Morze_table.h"
+ 467              		.file 4 "Generated_Source\\PSoC4/CyLib.h"
+ 468              		.file 5 "Generated_Source\\PSoC4/UART_SPI_UART.h"
+ 469              		.file 6 "d:\\programs\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-none
+ 470              		.file 7 "Generated_Source\\PSoC4/Pin_Red.h"
+ 471              		.file 8 "Generated_Source\\PSoC4/PWM_1.h"
+ 472              		.file 9 "d:\\programs\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-none
+ 473              		.file 10 "Generated_Source\\PSoC4/UART.h"
+ 474              		.file 11 "d:\\programs\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-non
+ 475              		.section	.debug_info,"",%progbits
+ 476              	.Ldebug_info0:
+ 477 0000 14050000 		.4byte	0x514
+ 478 0004 0400     		.2byte	0x4
+ 479 0006 00000000 		.4byte	.Ldebug_abbrev0
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 12
 
 
- 577 01c6 10       		.uleb128 0x10
- 578 01c7 01       		.uleb128 0x1
- 579 01c8 51       		.byte	0x51
- 580 01c9 05       		.uleb128 0x5
- 581 01ca 03       		.byte	0x3
- 582 01cb 00000000 		.4byte	.LC4
- 583 01cf 10       		.uleb128 0x10
- 584 01d0 01       		.uleb128 0x1
- 585 01d1 52       		.byte	0x52
- 586 01d2 01       		.uleb128 0x1
- 587 01d3 32       		.byte	0x32
- 588 01d4 00       		.byte	0
- 589 01d5 0F       		.uleb128 0xf
- 590 01d6 3C000000 		.4byte	.LVL14
- 591 01da F0030000 		.4byte	0x3f0
- 592 01de E9010000 		.4byte	0x1e9
- 593 01e2 10       		.uleb128 0x10
- 594 01e3 01       		.uleb128 0x1
- 595 01e4 50       		.byte	0x50
- 596 01e5 02       		.uleb128 0x2
- 597 01e6 74       		.byte	0x74
- 598 01e7 00       		.sleb128 0
- 599 01e8 00       		.byte	0
- 600 01e9 0F       		.uleb128 0xf
- 601 01ea 48000000 		.4byte	.LVL16
- 602 01ee FC030000 		.4byte	0x3fc
- 603 01f2 FC010000 		.4byte	0x1fc
- 604 01f6 10       		.uleb128 0x10
- 605 01f7 01       		.uleb128 0x1
- 606 01f8 50       		.byte	0x50
- 607 01f9 01       		.uleb128 0x1
- 608 01fa 31       		.byte	0x31
- 609 01fb 00       		.byte	0
- 610 01fc 0F       		.uleb128 0xf
- 611 01fd 54000000 		.4byte	.LVL17
- 612 0201 07040000 		.4byte	0x407
- 613 0205 1F020000 		.4byte	0x21f
- 614 0209 10       		.uleb128 0x10
- 615 020a 01       		.uleb128 0x1
- 616 020b 50       		.byte	0x50
- 617 020c 02       		.uleb128 0x2
- 618 020d 75       		.byte	0x75
- 619 020e 00       		.sleb128 0
- 620 020f 10       		.uleb128 0x10
- 621 0210 01       		.uleb128 0x1
- 622 0211 51       		.byte	0x51
- 623 0212 05       		.uleb128 0x5
- 624 0213 03       		.byte	0x3
- 625 0214 04000000 		.4byte	.LC6
- 626 0218 10       		.uleb128 0x10
- 627 0219 01       		.uleb128 0x1
- 628 021a 52       		.byte	0x52
- 629 021b 02       		.uleb128 0x2
- 630 021c 74       		.byte	0x74
- 631 021d 00       		.sleb128 0
- 632 021e 00       		.byte	0
- 633 021f 0F       		.uleb128 0xf
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 14
+ 480 000a 04       		.byte	0x4
+ 481 000b 01       		.uleb128 0x1
+ 482 000c E8000000 		.4byte	.LASF41
+ 483 0010 0C       		.byte	0xc
+ 484 0011 72020000 		.4byte	.LASF42
+ 485 0015 00000000 		.4byte	.LASF43
+ 486 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 487 001d 00000000 		.4byte	0
+ 488 0021 00000000 		.4byte	.Ldebug_line0
+ 489 0025 02       		.uleb128 0x2
+ 490 0026 01       		.byte	0x1
+ 491 0027 06       		.byte	0x6
+ 492 0028 C1020000 		.4byte	.LASF0
+ 493 002c 02       		.uleb128 0x2
+ 494 002d 01       		.byte	0x1
+ 495 002e 08       		.byte	0x8
+ 496 002f 1C020000 		.4byte	.LASF1
+ 497 0033 02       		.uleb128 0x2
+ 498 0034 02       		.byte	0x2
+ 499 0035 05       		.byte	0x5
+ 500 0036 8E020000 		.4byte	.LASF2
+ 501 003a 02       		.uleb128 0x2
+ 502 003b 02       		.byte	0x2
+ 503 003c 07       		.byte	0x7
+ 504 003d EB010000 		.4byte	.LASF3
+ 505 0041 02       		.uleb128 0x2
+ 506 0042 04       		.byte	0x4
+ 507 0043 05       		.byte	0x5
+ 508 0044 A5020000 		.4byte	.LASF4
+ 509 0048 02       		.uleb128 0x2
+ 510 0049 04       		.byte	0x4
+ 511 004a 07       		.byte	0x7
+ 512 004b D9010000 		.4byte	.LASF5
+ 513 004f 02       		.uleb128 0x2
+ 514 0050 08       		.byte	0x8
+ 515 0051 05       		.byte	0x5
+ 516 0052 64020000 		.4byte	.LASF6
+ 517 0056 02       		.uleb128 0x2
+ 518 0057 08       		.byte	0x8
+ 519 0058 07       		.byte	0x7
+ 520 0059 31020000 		.4byte	.LASF7
+ 521 005d 03       		.uleb128 0x3
+ 522 005e 04       		.byte	0x4
+ 523 005f 05       		.byte	0x5
+ 524 0060 696E7400 		.ascii	"int\000"
+ 525 0064 02       		.uleb128 0x2
+ 526 0065 04       		.byte	0x4
+ 527 0066 07       		.byte	0x7
+ 528 0067 AE000000 		.4byte	.LASF8
+ 529 006b 04       		.uleb128 0x4
+ 530 006c 98020000 		.4byte	.LASF9
+ 531 0070 02       		.byte	0x2
+ 532 0071 F701     		.2byte	0x1f7
+ 533 0073 2C000000 		.4byte	0x2c
+ 534 0077 04       		.uleb128 0x4
+ 535 0078 FE010000 		.4byte	.LASF10
+ 536 007c 02       		.byte	0x2
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 13
 
 
- 634 0220 5A000000 		.4byte	.LVL18
- 635 0224 F0030000 		.4byte	0x3f0
- 636 0228 33020000 		.4byte	0x233
- 637 022c 10       		.uleb128 0x10
- 638 022d 01       		.uleb128 0x1
- 639 022e 50       		.byte	0x50
- 640 022f 02       		.uleb128 0x2
- 641 0230 75       		.byte	0x75
- 642 0231 00       		.sleb128 0
- 643 0232 00       		.byte	0
- 644 0233 0F       		.uleb128 0xf
- 645 0234 68000000 		.4byte	.LVL19
- 646 0238 12040000 		.4byte	0x412
- 647 023c 48020000 		.4byte	0x248
- 648 0240 10       		.uleb128 0x10
- 649 0241 01       		.uleb128 0x1
- 650 0242 50       		.byte	0x50
- 651 0243 03       		.uleb128 0x3
- 652 0244 0A       		.byte	0xa
- 653 0245 F401     		.2byte	0x1f4
- 654 0247 00       		.byte	0
- 655 0248 0E       		.uleb128 0xe
- 656 0249 6C000000 		.4byte	.LVL20
- 657 024d 1E040000 		.4byte	0x41e
- 658 0251 0F       		.uleb128 0xf
- 659 0252 72000000 		.4byte	.LVL21
- 660 0256 2A040000 		.4byte	0x42a
- 661 025a 66020000 		.4byte	0x266
- 662 025e 10       		.uleb128 0x10
- 663 025f 01       		.uleb128 0x1
- 664 0260 50       		.byte	0x50
- 665 0261 03       		.uleb128 0x3
- 666 0262 0A       		.byte	0xa
- 667 0263 DC05     		.2byte	0x5dc
- 668 0265 00       		.byte	0
- 669 0266 0F       		.uleb128 0xf
- 670 0267 78000000 		.4byte	.LVL22
- 671 026b FC030000 		.4byte	0x3fc
- 672 026f 79020000 		.4byte	0x279
- 673 0273 10       		.uleb128 0x10
- 674 0274 01       		.uleb128 0x1
- 675 0275 50       		.byte	0x50
- 676 0276 01       		.uleb128 0x1
- 677 0277 30       		.byte	0x30
- 678 0278 00       		.byte	0
- 679 0279 0F       		.uleb128 0xf
- 680 027a 80000000 		.4byte	.LVL23
- 681 027e 12040000 		.4byte	0x412
- 682 0282 8E020000 		.4byte	0x28e
- 683 0286 10       		.uleb128 0x10
- 684 0287 01       		.uleb128 0x1
- 685 0288 50       		.byte	0x50
- 686 0289 03       		.uleb128 0x3
- 687 028a 0A       		.byte	0xa
- 688 028b 1C25     		.2byte	0x251c
- 689 028d 00       		.byte	0
- 690 028e 0E       		.uleb128 0xe
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 15
+ 537 007d F801     		.2byte	0x1f8
+ 538 007f 3A000000 		.4byte	0x3a
+ 539 0083 04       		.uleb128 0x4
+ 540 0084 10020000 		.4byte	.LASF11
+ 541 0088 02       		.byte	0x2
+ 542 0089 F901     		.2byte	0x1f9
+ 543 008b 48000000 		.4byte	0x48
+ 544 008f 02       		.uleb128 0x2
+ 545 0090 04       		.byte	0x4
+ 546 0091 04       		.byte	0x4
+ 547 0092 76010000 		.4byte	.LASF12
+ 548 0096 02       		.uleb128 0x2
+ 549 0097 08       		.byte	0x8
+ 550 0098 04       		.byte	0x4
+ 551 0099 BB000000 		.4byte	.LASF13
+ 552 009d 02       		.uleb128 0x2
+ 553 009e 01       		.byte	0x1
+ 554 009f 08       		.byte	0x8
+ 555 00a0 79020000 		.4byte	.LASF14
+ 556 00a4 02       		.uleb128 0x2
+ 557 00a5 08       		.byte	0x8
+ 558 00a6 04       		.byte	0x4
+ 559 00a7 AE020000 		.4byte	.LASF15
+ 560 00ab 02       		.uleb128 0x2
+ 561 00ac 04       		.byte	0x4
+ 562 00ad 07       		.byte	0x7
+ 563 00ae 56020000 		.4byte	.LASF16
+ 564 00b2 05       		.uleb128 0x5
+ 565 00b3 04       		.byte	0x4
+ 566 00b4 9D000000 		.4byte	0x9d
+ 567 00b8 06       		.uleb128 0x6
+ 568 00b9 BC010000 		.4byte	.LASF44
+ 569 00bd 01       		.byte	0x1
+ 570 00be 17       		.byte	0x17
+ 571 00bf 5D000000 		.4byte	0x5d
+ 572 00c3 00000000 		.4byte	.LFB36
+ 573 00c7 24000000 		.4byte	.LFE36-.LFB36
+ 574 00cb 01       		.uleb128 0x1
+ 575 00cc 9C       		.byte	0x9c
+ 576 00cd 09010000 		.4byte	0x109
+ 577 00d1 07       		.uleb128 0x7
+ 578 00d2 BA020000 		.4byte	.LASF19
+ 579 00d6 01       		.byte	0x1
+ 580 00d7 17       		.byte	0x17
+ 581 00d8 9D000000 		.4byte	0x9d
+ 582 00dc 00000000 		.4byte	.LLST0
+ 583 00e0 08       		.uleb128 0x8
+ 584 00e1 7C010000 		.4byte	.LASF17
+ 585 00e5 01       		.byte	0x1
+ 586 00e6 18       		.byte	0x18
+ 587 00e7 5D000000 		.4byte	0x5d
+ 588 00eb 21000000 		.4byte	.LLST1
+ 589 00ef 09       		.uleb128 0x9
+ 590 00f0 00000000 		.4byte	.LBB2
+ 591 00f4 16000000 		.4byte	.LBE2-.LBB2
+ 592 00f8 08       		.uleb128 0x8
+ 593 00f9 7E020000 		.4byte	.LASF18
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 14
 
 
- 691 028f 84000000 		.4byte	.LVL24
- 692 0293 1E040000 		.4byte	0x41e
- 693 0297 0F       		.uleb128 0xf
- 694 0298 8C000000 		.4byte	.LVL25
- 695 029c 2A040000 		.4byte	0x42a
- 696 02a0 AC020000 		.4byte	0x2ac
- 697 02a4 10       		.uleb128 0x10
- 698 02a5 01       		.uleb128 0x1
- 699 02a6 50       		.byte	0x50
- 700 02a7 03       		.uleb128 0x3
- 701 02a8 0A       		.byte	0xa
- 702 02a9 F401     		.2byte	0x1f4
- 703 02ab 00       		.byte	0
- 704 02ac 0F       		.uleb128 0xf
- 705 02ad 92000000 		.4byte	.LVL26
- 706 02b1 FC030000 		.4byte	0x3fc
- 707 02b5 BF020000 		.4byte	0x2bf
- 708 02b9 10       		.uleb128 0x10
- 709 02ba 01       		.uleb128 0x1
- 710 02bb 50       		.byte	0x50
- 711 02bc 01       		.uleb128 0x1
- 712 02bd 30       		.byte	0x30
- 713 02be 00       		.byte	0
- 714 02bf 0F       		.uleb128 0xf
- 715 02c0 9E000000 		.4byte	.LVL29
- 716 02c4 2A040000 		.4byte	0x42a
- 717 02c8 D4020000 		.4byte	0x2d4
- 718 02cc 10       		.uleb128 0x10
- 719 02cd 01       		.uleb128 0x1
- 720 02ce 50       		.byte	0x50
- 721 02cf 03       		.uleb128 0x3
- 722 02d0 0A       		.byte	0xa
- 723 02d1 F401     		.2byte	0x1f4
- 724 02d3 00       		.byte	0
- 725 02d4 0E       		.uleb128 0xe
- 726 02d5 A2000000 		.4byte	.LVL30
- 727 02d9 35040000 		.4byte	0x435
- 728 02dd 11       		.uleb128 0x11
- 729 02de AE000000 		.4byte	.LVL32
- 730 02e2 2A040000 		.4byte	0x42a
- 731 02e6 10       		.uleb128 0x10
- 732 02e7 01       		.uleb128 0x1
- 733 02e8 50       		.byte	0x50
- 734 02e9 03       		.uleb128 0x3
- 735 02ea 0A       		.byte	0xa
- 736 02eb DC05     		.2byte	0x5dc
- 737 02ed 00       		.byte	0
- 738 02ee 00       		.byte	0
- 739 02ef 11       		.uleb128 0x11
- 740 02f0 BC000000 		.4byte	.LVL34
- 741 02f4 41040000 		.4byte	0x441
- 742 02f8 10       		.uleb128 0x10
- 743 02f9 01       		.uleb128 0x1
- 744 02fa 50       		.byte	0x50
- 745 02fb 02       		.uleb128 0x2
- 746 02fc 79       		.byte	0x79
- 747 02fd 00       		.sleb128 0
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 16
+ 594 00fd 01       		.byte	0x1
+ 595 00fe 1A       		.byte	0x1a
+ 596 00ff 5D000000 		.4byte	0x5d
+ 597 0103 41000000 		.4byte	.LLST2
+ 598 0107 00       		.byte	0
+ 599 0108 00       		.byte	0
+ 600 0109 0A       		.uleb128 0xa
+ 601 010a 8E010000 		.4byte	.LASF45
+ 602 010e 01       		.byte	0x1
+ 603 010f 24       		.byte	0x24
+ 604 0110 00000000 		.4byte	.LFB37
+ 605 0114 2C010000 		.4byte	.LFE37-.LFB37
+ 606 0118 01       		.uleb128 0x1
+ 607 0119 9C       		.byte	0x9c
+ 608 011a 63030000 		.4byte	0x363
+ 609 011e 07       		.uleb128 0x7
+ 610 011f 54000000 		.4byte	.LASF20
+ 611 0123 01       		.byte	0x1
+ 612 0124 24       		.byte	0x24
+ 613 0125 B2000000 		.4byte	0xb2
+ 614 0129 60000000 		.4byte	.LLST3
+ 615 012d 0B       		.uleb128 0xb
+ 616 012e 8A000000 		.4byte	.LASF21
+ 617 0132 01       		.byte	0x1
+ 618 0133 25       		.byte	0x25
+ 619 0134 5D000000 		.4byte	0x5d
+ 620 0138 F401     		.2byte	0x1f4
+ 621 013a 0B       		.uleb128 0xb
+ 622 013b 05020000 		.4byte	.LASF22
+ 623 013f 01       		.byte	0x1
+ 624 0140 26       		.byte	0x26
+ 625 0141 5D000000 		.4byte	0x5d
+ 626 0145 1C25     		.2byte	0x251c
+ 627 0147 0C       		.uleb128 0xc
+ 628 0148 6900     		.ascii	"i\000"
+ 629 014a 01       		.byte	0x1
+ 630 014b 28       		.byte	0x28
+ 631 014c 5D000000 		.4byte	0x5d
+ 632 0150 B8000000 		.4byte	.LLST4
+ 633 0154 08       		.uleb128 0x8
+ 634 0155 7C010000 		.4byte	.LASF17
+ 635 0159 01       		.byte	0x1
+ 636 015a 29       		.byte	0x29
+ 637 015b 5D000000 		.4byte	0x5d
+ 638 015f E3000000 		.4byte	.LLST5
+ 639 0163 0D       		.uleb128 0xd
+ 640 0164 18000000 		.4byte	.LBB3
+ 641 0168 EC000000 		.4byte	.LBE3-.LBB3
+ 642 016c 48030000 		.4byte	0x348
+ 643 0170 08       		.uleb128 0x8
+ 644 0171 00030000 		.4byte	.LASF23
+ 645 0175 01       		.byte	0x1
+ 646 0176 2E       		.byte	0x2e
+ 647 0177 77000000 		.4byte	0x77
+ 648 017b 02010000 		.4byte	.LLST6
+ 649 017f 0D       		.uleb128 0xd
+ 650 0180 1E000000 		.4byte	.LBB4
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 15
 
 
- 748 02fe 00       		.byte	0
- 749 02ff 00       		.byte	0
- 750 0300 00       		.byte	0
- 751 0301 06       		.uleb128 0x6
- 752 0302 37010000 		.4byte	.LASF26
- 753 0306 01       		.byte	0x1
- 754 0307 53       		.byte	0x53
- 755 0308 5D000000 		.4byte	0x5d
- 756 030c 00000000 		.4byte	.LFB38
- 757 0310 34000000 		.4byte	.LFE38-.LFB38
- 758 0314 01       		.uleb128 0x1
- 759 0315 9C       		.byte	0x9c
- 760 0316 8F030000 		.4byte	0x38f
- 761 031a 12       		.uleb128 0x12
- 762 031b 54000000 		.4byte	.LASF17
- 763 031f 01       		.byte	0x1
- 764 0320 5D       		.byte	0x5d
- 765 0321 8F030000 		.4byte	0x38f
- 766 0325 02       		.uleb128 0x2
- 767 0326 91       		.byte	0x91
- 768 0327 74       		.sleb128 -12
- 769 0328 0E       		.uleb128 0xe
- 770 0329 0A000000 		.4byte	.LVL37
- 771 032d 4C040000 		.4byte	0x44c
- 772 0331 0F       		.uleb128 0xf
- 773 0332 10000000 		.4byte	.LVL38
- 774 0336 F0030000 		.4byte	0x3f0
- 775 033a 48030000 		.4byte	0x348
- 776 033e 10       		.uleb128 0x10
- 777 033f 01       		.uleb128 0x1
- 778 0340 50       		.byte	0x50
- 779 0341 05       		.uleb128 0x5
- 780 0342 03       		.byte	0x3
- 781 0343 0C000000 		.4byte	.LC8
- 782 0347 00       		.byte	0
- 783 0348 0F       		.uleb128 0xf
- 784 0349 16000000 		.4byte	.LVL39
- 785 034d 2A040000 		.4byte	0x42a
- 786 0351 5C030000 		.4byte	0x35c
- 787 0355 10       		.uleb128 0x10
- 788 0356 01       		.uleb128 0x1
- 789 0357 50       		.byte	0x50
- 790 0358 02       		.uleb128 0x2
- 791 0359 08       		.byte	0x8
- 792 035a 64       		.byte	0x64
- 793 035b 00       		.byte	0
- 794 035c 0F       		.uleb128 0xf
- 795 035d 20000000 		.4byte	.LVL40
- 796 0361 E7030000 		.4byte	0x3e7
- 797 0365 7E030000 		.4byte	0x37e
- 798 0369 10       		.uleb128 0x10
- 799 036a 01       		.uleb128 0x1
- 800 036b 50       		.byte	0x50
- 801 036c 02       		.uleb128 0x2
- 802 036d 91       		.byte	0x91
- 803 036e 74       		.sleb128 -12
- 804 036f 10       		.uleb128 0x10
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 17
+ 651 0184 D4000000 		.4byte	.LBE4-.LBB4
+ 652 0188 37030000 		.4byte	0x337
+ 653 018c 08       		.uleb128 0x8
+ 654 018d CD020000 		.4byte	.LASF24
+ 655 0191 01       		.byte	0x1
+ 656 0192 37       		.byte	0x37
+ 657 0193 77000000 		.4byte	0x77
+ 658 0197 21010000 		.4byte	.LLST7
+ 659 019b 08       		.uleb128 0x8
+ 660 019c 7A000000 		.4byte	.LASF25
+ 661 01a0 01       		.byte	0x1
+ 662 01a1 38       		.byte	0x38
+ 663 01a2 77000000 		.4byte	0x77
+ 664 01a6 34010000 		.4byte	.LLST8
+ 665 01aa 08       		.uleb128 0x8
+ 666 01ab 69000000 		.4byte	.LASF26
+ 667 01af 01       		.byte	0x1
+ 668 01b0 39       		.byte	0x39
+ 669 01b1 5D000000 		.4byte	0x5d
+ 670 01b5 5E010000 		.4byte	.LLST9
+ 671 01b9 0E       		.uleb128 0xe
+ 672 01ba 34000000 		.4byte	.LVL13
+ 673 01be 90040000 		.4byte	0x490
+ 674 01c2 0F       		.uleb128 0xf
+ 675 01c3 40000000 		.4byte	.LVL14
+ 676 01c7 9B040000 		.4byte	0x49b
+ 677 01cb E4010000 		.4byte	0x1e4
+ 678 01cf 10       		.uleb128 0x10
+ 679 01d0 01       		.uleb128 0x1
+ 680 01d1 50       		.byte	0x50
+ 681 01d2 02       		.uleb128 0x2
+ 682 01d3 74       		.byte	0x74
+ 683 01d4 00       		.sleb128 0
+ 684 01d5 10       		.uleb128 0x10
+ 685 01d6 01       		.uleb128 0x1
+ 686 01d7 51       		.byte	0x51
+ 687 01d8 05       		.uleb128 0x5
+ 688 01d9 03       		.byte	0x3
+ 689 01da 00000000 		.4byte	.LC3
+ 690 01de 10       		.uleb128 0x10
+ 691 01df 01       		.uleb128 0x1
+ 692 01e0 52       		.byte	0x52
+ 693 01e1 01       		.uleb128 0x1
+ 694 01e2 39       		.byte	0x39
+ 695 01e3 00       		.byte	0
+ 696 01e4 0F       		.uleb128 0xf
+ 697 01e5 46000000 		.4byte	.LVL15
+ 698 01e9 A4040000 		.4byte	0x4a4
+ 699 01ed F8010000 		.4byte	0x1f8
+ 700 01f1 10       		.uleb128 0x10
+ 701 01f2 01       		.uleb128 0x1
+ 702 01f3 50       		.byte	0x50
+ 703 01f4 02       		.uleb128 0x2
+ 704 01f5 74       		.byte	0x74
+ 705 01f6 00       		.sleb128 0
+ 706 01f7 00       		.byte	0
+ 707 01f8 0F       		.uleb128 0xf
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 16
 
 
- 805 0370 01       		.uleb128 0x1
- 806 0371 51       		.byte	0x51
- 807 0372 05       		.uleb128 0x5
- 808 0373 03       		.byte	0x3
- 809 0374 00000000 		.4byte	.LANCHOR1
- 810 0378 10       		.uleb128 0x10
- 811 0379 01       		.uleb128 0x1
- 812 037a 52       		.byte	0x52
- 813 037b 01       		.uleb128 0x1
- 814 037c 33       		.byte	0x33
- 815 037d 00       		.byte	0
- 816 037e 11       		.uleb128 0x11
- 817 037f 26000000 		.4byte	.LVL41
- 818 0383 F1000000 		.4byte	0xf1
- 819 0387 10       		.uleb128 0x10
- 820 0388 01       		.uleb128 0x1
- 821 0389 50       		.byte	0x50
- 822 038a 02       		.uleb128 0x2
- 823 038b 91       		.byte	0x91
- 824 038c 74       		.sleb128 -12
- 825 038d 00       		.byte	0
- 826 038e 00       		.byte	0
- 827 038f 13       		.uleb128 0x13
- 828 0390 85000000 		.4byte	0x85
- 829 0394 9F030000 		.4byte	0x39f
- 830 0398 14       		.uleb128 0x14
- 831 0399 93000000 		.4byte	0x93
- 832 039d 02       		.byte	0x2
- 833 039e 00       		.byte	0
- 834 039f 13       		.uleb128 0x13
- 835 03a0 2C000000 		.4byte	0x2c
- 836 03a4 B5030000 		.4byte	0x3b5
- 837 03a8 14       		.uleb128 0x14
- 838 03a9 93000000 		.4byte	0x93
- 839 03ad 05       		.byte	0x5
- 840 03ae 14       		.uleb128 0x14
- 841 03af 93000000 		.4byte	0x93
- 842 03b3 02       		.byte	0x2
- 843 03b4 00       		.byte	0
- 844 03b5 15       		.uleb128 0x15
- 845 03b6 59000000 		.4byte	.LASF27
- 846 03ba 02       		.byte	0x2
- 847 03bb 0C       		.byte	0xc
- 848 03bc 9F030000 		.4byte	0x39f
- 849 03c0 05       		.uleb128 0x5
- 850 03c1 03       		.byte	0x3
- 851 03c2 00000000 		.4byte	letter_to_morse
- 852 03c6 13       		.uleb128 0x13
- 853 03c7 85000000 		.4byte	0x85
- 854 03cb D6030000 		.4byte	0x3d6
- 855 03cf 14       		.uleb128 0x14
- 856 03d0 93000000 		.4byte	0x93
- 857 03d4 13       		.byte	0x13
- 858 03d5 00       		.byte	0
- 859 03d6 15       		.uleb128 0x15
- 860 03d7 F6000000 		.4byte	.LASF28
- 861 03db 01       		.byte	0x1
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 18
+ 708 01f9 4E000000 		.4byte	.LVL17
+ 709 01fd B8000000 		.4byte	0xb8
+ 710 0201 0C020000 		.4byte	0x20c
+ 711 0205 10       		.uleb128 0x10
+ 712 0206 01       		.uleb128 0x1
+ 713 0207 50       		.byte	0x50
+ 714 0208 02       		.uleb128 0x2
+ 715 0209 75       		.byte	0x75
+ 716 020a 00       		.sleb128 0
+ 717 020b 00       		.byte	0
+ 718 020c 0F       		.uleb128 0xf
+ 719 020d 68000000 		.4byte	.LVL21
+ 720 0211 B0040000 		.4byte	0x4b0
+ 721 0215 2F020000 		.4byte	0x22f
+ 722 0219 10       		.uleb128 0x10
+ 723 021a 01       		.uleb128 0x1
+ 724 021b 50       		.byte	0x50
+ 725 021c 02       		.uleb128 0x2
+ 726 021d 74       		.byte	0x74
+ 727 021e 00       		.sleb128 0
+ 728 021f 10       		.uleb128 0x10
+ 729 0220 01       		.uleb128 0x1
+ 730 0221 51       		.byte	0x51
+ 731 0222 05       		.uleb128 0x5
+ 732 0223 03       		.byte	0x3
+ 733 0224 0C000000 		.4byte	.LC5
+ 734 0228 10       		.uleb128 0x10
+ 735 0229 01       		.uleb128 0x1
+ 736 022a 52       		.byte	0x52
+ 737 022b 02       		.uleb128 0x2
+ 738 022c 75       		.byte	0x75
+ 739 022d 00       		.sleb128 0
+ 740 022e 00       		.byte	0
+ 741 022f 0F       		.uleb128 0xf
+ 742 0230 6E000000 		.4byte	.LVL22
+ 743 0234 A4040000 		.4byte	0x4a4
+ 744 0238 43020000 		.4byte	0x243
+ 745 023c 10       		.uleb128 0x10
+ 746 023d 01       		.uleb128 0x1
+ 747 023e 50       		.byte	0x50
+ 748 023f 02       		.uleb128 0x2
+ 749 0240 74       		.byte	0x74
+ 750 0241 00       		.sleb128 0
+ 751 0242 00       		.byte	0
+ 752 0243 0F       		.uleb128 0xf
+ 753 0244 7A000000 		.4byte	.LVL24
+ 754 0248 BB040000 		.4byte	0x4bb
+ 755 024c 56020000 		.4byte	0x256
+ 756 0250 10       		.uleb128 0x10
+ 757 0251 01       		.uleb128 0x1
+ 758 0252 50       		.byte	0x50
+ 759 0253 01       		.uleb128 0x1
+ 760 0254 31       		.byte	0x31
+ 761 0255 00       		.byte	0
+ 762 0256 0F       		.uleb128 0xf
+ 763 0257 8C000000 		.4byte	.LVL25
+ 764 025b 9B040000 		.4byte	0x49b
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 17
 
 
- 862 03dc 12       		.byte	0x12
- 863 03dd C6030000 		.4byte	0x3c6
- 864 03e1 05       		.uleb128 0x5
- 865 03e2 03       		.byte	0x3
- 866 03e3 00000000 		.4byte	TEXT_BUF
- 867 03e7 16       		.uleb128 0x16
- 868 03e8 74020000 		.4byte	.LASF43
- 869 03ec 74020000 		.4byte	.LASF43
- 870 03f0 17       		.uleb128 0x17
- 871 03f1 B1000000 		.4byte	.LASF29
- 872 03f5 B1000000 		.4byte	.LASF29
- 873 03f9 03       		.byte	0x3
- 874 03fa 2A03     		.2byte	0x32a
- 875 03fc 18       		.uleb128 0x18
- 876 03fd 88010000 		.4byte	.LASF30
- 877 0401 88010000 		.4byte	.LASF30
- 878 0405 04       		.byte	0x4
- 879 0406 33       		.byte	0x33
- 880 0407 18       		.uleb128 0x18
- 881 0408 C0020000 		.4byte	.LASF31
- 882 040c C0020000 		.4byte	.LASF31
- 883 0410 05       		.byte	0x5
- 884 0411 E7       		.byte	0xe7
- 885 0412 17       		.uleb128 0x17
- 886 0413 2D020000 		.4byte	.LASF32
- 887 0417 2D020000 		.4byte	.LASF32
- 888 041b 06       		.byte	0x6
- 889 041c 5501     		.2byte	0x155
- 890 041e 17       		.uleb128 0x17
- 891 041f FF000000 		.4byte	.LASF33
- 892 0423 FF000000 		.4byte	.LASF33
- 893 0427 06       		.byte	0x6
- 894 0428 3201     		.2byte	0x132
- 895 042a 18       		.uleb128 0x18
- 896 042b C8020000 		.4byte	.LASF34
- 897 042f C8020000 		.4byte	.LASF34
- 898 0433 07       		.byte	0x7
- 899 0434 EC       		.byte	0xec
- 900 0435 17       		.uleb128 0x17
- 901 0436 7B020000 		.4byte	.LASF35
- 902 043a 7B020000 		.4byte	.LASF35
- 903 043e 06       		.byte	0x6
- 904 043f 3301     		.2byte	0x133
- 905 0441 18       		.uleb128 0x18
- 906 0442 6A010000 		.4byte	.LASF36
- 907 0446 6A010000 		.4byte	.LASF36
- 908 044a 08       		.byte	0x8
- 909 044b 21       		.byte	0x21
- 910 044c 18       		.uleb128 0x18
- 911 044d 0B010000 		.4byte	.LASF37
- 912 0451 0B010000 		.4byte	.LASF37
- 913 0455 09       		.byte	0x9
- 914 0456 72       		.byte	0x72
- 915 0457 00       		.byte	0
- 916              		.section	.debug_abbrev,"",%progbits
- 917              	.Ldebug_abbrev0:
- 918 0000 01       		.uleb128 0x1
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 19
+ 765 025f 78020000 		.4byte	0x278
+ 766 0263 10       		.uleb128 0x10
+ 767 0264 01       		.uleb128 0x1
+ 768 0265 50       		.byte	0x50
+ 769 0266 02       		.uleb128 0x2
+ 770 0267 75       		.byte	0x75
+ 771 0268 00       		.sleb128 0
+ 772 0269 10       		.uleb128 0x10
+ 773 026a 01       		.uleb128 0x1
+ 774 026b 51       		.byte	0x51
+ 775 026c 05       		.uleb128 0x5
+ 776 026d 03       		.byte	0x3
+ 777 026e 1C000000 		.4byte	.LC7
+ 778 0272 10       		.uleb128 0x10
+ 779 0273 01       		.uleb128 0x1
+ 780 0274 52       		.byte	0x52
+ 781 0275 01       		.uleb128 0x1
+ 782 0276 33       		.byte	0x33
+ 783 0277 00       		.byte	0
+ 784 0278 0F       		.uleb128 0xf
+ 785 0279 92000000 		.4byte	.LVL26
+ 786 027d A4040000 		.4byte	0x4a4
+ 787 0281 8C020000 		.4byte	0x28c
+ 788 0285 10       		.uleb128 0x10
+ 789 0286 01       		.uleb128 0x1
+ 790 0287 50       		.byte	0x50
+ 791 0288 02       		.uleb128 0x2
+ 792 0289 75       		.byte	0x75
+ 793 028a 00       		.sleb128 0
+ 794 028b 00       		.byte	0
+ 795 028c 0F       		.uleb128 0xf
+ 796 028d 9A000000 		.4byte	.LVL27
+ 797 0291 C6040000 		.4byte	0x4c6
+ 798 0295 A1020000 		.4byte	0x2a1
+ 799 0299 10       		.uleb128 0x10
+ 800 029a 01       		.uleb128 0x1
+ 801 029b 50       		.byte	0x50
+ 802 029c 03       		.uleb128 0x3
+ 803 029d 0A       		.byte	0xa
+ 804 029e F401     		.2byte	0x1f4
+ 805 02a0 00       		.byte	0
+ 806 02a1 0E       		.uleb128 0xe
+ 807 02a2 A6000000 		.4byte	.LVL28
+ 808 02a6 90040000 		.4byte	0x490
+ 809 02aa 0F       		.uleb128 0xf
+ 810 02ab AC000000 		.4byte	.LVL29
+ 811 02af BB040000 		.4byte	0x4bb
+ 812 02b3 BD020000 		.4byte	0x2bd
+ 813 02b7 10       		.uleb128 0x10
+ 814 02b8 01       		.uleb128 0x1
+ 815 02b9 50       		.byte	0x50
+ 816 02ba 01       		.uleb128 0x1
+ 817 02bb 30       		.byte	0x30
+ 818 02bc 00       		.byte	0
+ 819 02bd 0F       		.uleb128 0xf
+ 820 02be BA000000 		.4byte	.LVL30
+ 821 02c2 9B040000 		.4byte	0x49b
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 18
 
 
- 919 0001 11       		.uleb128 0x11
- 920 0002 01       		.byte	0x1
- 921 0003 25       		.uleb128 0x25
- 922 0004 0E       		.uleb128 0xe
- 923 0005 13       		.uleb128 0x13
- 924 0006 0B       		.uleb128 0xb
- 925 0007 03       		.uleb128 0x3
- 926 0008 0E       		.uleb128 0xe
- 927 0009 1B       		.uleb128 0x1b
- 928 000a 0E       		.uleb128 0xe
- 929 000b 55       		.uleb128 0x55
- 930 000c 17       		.uleb128 0x17
- 931 000d 11       		.uleb128 0x11
- 932 000e 01       		.uleb128 0x1
- 933 000f 10       		.uleb128 0x10
- 934 0010 17       		.uleb128 0x17
- 935 0011 00       		.byte	0
- 936 0012 00       		.byte	0
- 937 0013 02       		.uleb128 0x2
- 938 0014 24       		.uleb128 0x24
- 939 0015 00       		.byte	0
- 940 0016 0B       		.uleb128 0xb
- 941 0017 0B       		.uleb128 0xb
- 942 0018 3E       		.uleb128 0x3e
- 943 0019 0B       		.uleb128 0xb
- 944 001a 03       		.uleb128 0x3
- 945 001b 0E       		.uleb128 0xe
- 946 001c 00       		.byte	0
- 947 001d 00       		.byte	0
- 948 001e 03       		.uleb128 0x3
- 949 001f 24       		.uleb128 0x24
- 950 0020 00       		.byte	0
- 951 0021 0B       		.uleb128 0xb
- 952 0022 0B       		.uleb128 0xb
- 953 0023 3E       		.uleb128 0x3e
- 954 0024 0B       		.uleb128 0xb
- 955 0025 03       		.uleb128 0x3
- 956 0026 08       		.uleb128 0x8
- 957 0027 00       		.byte	0
- 958 0028 00       		.byte	0
- 959 0029 04       		.uleb128 0x4
- 960 002a 16       		.uleb128 0x16
- 961 002b 00       		.byte	0
- 962 002c 03       		.uleb128 0x3
- 963 002d 0E       		.uleb128 0xe
- 964 002e 3A       		.uleb128 0x3a
- 965 002f 0B       		.uleb128 0xb
- 966 0030 3B       		.uleb128 0x3b
- 967 0031 05       		.uleb128 0x5
- 968 0032 49       		.uleb128 0x49
- 969 0033 13       		.uleb128 0x13
- 970 0034 00       		.byte	0
- 971 0035 00       		.byte	0
- 972 0036 05       		.uleb128 0x5
- 973 0037 0F       		.uleb128 0xf
- 974 0038 00       		.byte	0
- 975 0039 0B       		.uleb128 0xb
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 20
+ 822 02c6 DF020000 		.4byte	0x2df
+ 823 02ca 10       		.uleb128 0x10
+ 824 02cb 01       		.uleb128 0x1
+ 825 02cc 50       		.byte	0x50
+ 826 02cd 02       		.uleb128 0x2
+ 827 02ce 75       		.byte	0x75
+ 828 02cf 00       		.sleb128 0
+ 829 02d0 10       		.uleb128 0x10
+ 830 02d1 01       		.uleb128 0x1
+ 831 02d2 51       		.byte	0x51
+ 832 02d3 05       		.uleb128 0x5
+ 833 02d4 03       		.byte	0x3
+ 834 02d5 20000000 		.4byte	.LC9
+ 835 02d9 10       		.uleb128 0x10
+ 836 02da 01       		.uleb128 0x1
+ 837 02db 52       		.byte	0x52
+ 838 02dc 01       		.uleb128 0x1
+ 839 02dd 33       		.byte	0x33
+ 840 02de 00       		.byte	0
+ 841 02df 0F       		.uleb128 0xf
+ 842 02e0 C0000000 		.4byte	.LVL31
+ 843 02e4 A4040000 		.4byte	0x4a4
+ 844 02e8 F3020000 		.4byte	0x2f3
+ 845 02ec 10       		.uleb128 0x10
+ 846 02ed 01       		.uleb128 0x1
+ 847 02ee 50       		.byte	0x50
+ 848 02ef 02       		.uleb128 0x2
+ 849 02f0 75       		.byte	0x75
+ 850 02f1 00       		.sleb128 0
+ 851 02f2 00       		.byte	0
+ 852 02f3 0F       		.uleb128 0xf
+ 853 02f4 C6000000 		.4byte	.LVL32
+ 854 02f8 C6040000 		.4byte	0x4c6
+ 855 02fc 08030000 		.4byte	0x308
+ 856 0300 10       		.uleb128 0x10
+ 857 0301 01       		.uleb128 0x1
+ 858 0302 50       		.byte	0x50
+ 859 0303 03       		.uleb128 0x3
+ 860 0304 0A       		.byte	0xa
+ 861 0305 1C25     		.2byte	0x251c
+ 862 0307 00       		.byte	0
+ 863 0308 0E       		.uleb128 0xe
+ 864 0309 CE000000 		.4byte	.LVL33
+ 865 030d 90040000 		.4byte	0x490
+ 866 0311 0F       		.uleb128 0xf
+ 867 0312 D4000000 		.4byte	.LVL34
+ 868 0316 BB040000 		.4byte	0x4bb
+ 869 031a 24030000 		.4byte	0x324
+ 870 031e 10       		.uleb128 0x10
+ 871 031f 01       		.uleb128 0x1
+ 872 0320 50       		.byte	0x50
+ 873 0321 01       		.uleb128 0x1
+ 874 0322 30       		.byte	0x30
+ 875 0323 00       		.byte	0
+ 876 0324 0E       		.uleb128 0xe
+ 877 0325 E0000000 		.4byte	.LVL37
+ 878 0329 90040000 		.4byte	0x490
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 19
 
 
- 976 003a 0B       		.uleb128 0xb
- 977 003b 49       		.uleb128 0x49
- 978 003c 13       		.uleb128 0x13
- 979 003d 00       		.byte	0
- 980 003e 00       		.byte	0
- 981 003f 06       		.uleb128 0x6
- 982 0040 2E       		.uleb128 0x2e
- 983 0041 01       		.byte	0x1
- 984 0042 3F       		.uleb128 0x3f
- 985 0043 19       		.uleb128 0x19
- 986 0044 03       		.uleb128 0x3
- 987 0045 0E       		.uleb128 0xe
- 988 0046 3A       		.uleb128 0x3a
- 989 0047 0B       		.uleb128 0xb
- 990 0048 3B       		.uleb128 0x3b
- 991 0049 0B       		.uleb128 0xb
- 992 004a 27       		.uleb128 0x27
- 993 004b 19       		.uleb128 0x19
- 994 004c 49       		.uleb128 0x49
- 995 004d 13       		.uleb128 0x13
- 996 004e 11       		.uleb128 0x11
- 997 004f 01       		.uleb128 0x1
- 998 0050 12       		.uleb128 0x12
- 999 0051 06       		.uleb128 0x6
- 1000 0052 40       		.uleb128 0x40
- 1001 0053 18       		.uleb128 0x18
- 1002 0054 9742     		.uleb128 0x2117
- 1003 0056 19       		.uleb128 0x19
- 1004 0057 01       		.uleb128 0x1
- 1005 0058 13       		.uleb128 0x13
- 1006 0059 00       		.byte	0
- 1007 005a 00       		.byte	0
- 1008 005b 07       		.uleb128 0x7
- 1009 005c 05       		.uleb128 0x5
- 1010 005d 00       		.byte	0
- 1011 005e 03       		.uleb128 0x3
- 1012 005f 0E       		.uleb128 0xe
- 1013 0060 3A       		.uleb128 0x3a
- 1014 0061 0B       		.uleb128 0xb
- 1015 0062 3B       		.uleb128 0x3b
- 1016 0063 0B       		.uleb128 0xb
- 1017 0064 49       		.uleb128 0x49
- 1018 0065 13       		.uleb128 0x13
- 1019 0066 02       		.uleb128 0x2
- 1020 0067 17       		.uleb128 0x17
- 1021 0068 00       		.byte	0
- 1022 0069 00       		.byte	0
- 1023 006a 08       		.uleb128 0x8
- 1024 006b 34       		.uleb128 0x34
- 1025 006c 00       		.byte	0
- 1026 006d 03       		.uleb128 0x3
- 1027 006e 0E       		.uleb128 0xe
- 1028 006f 3A       		.uleb128 0x3a
- 1029 0070 0B       		.uleb128 0xb
- 1030 0071 3B       		.uleb128 0x3b
- 1031 0072 0B       		.uleb128 0xb
- 1032 0073 49       		.uleb128 0x49
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 21
+ 879 032d 0E       		.uleb128 0xe
+ 880 032e F2000000 		.4byte	.LVL39
+ 881 0332 90040000 		.4byte	0x490
+ 882 0336 00       		.byte	0
+ 883 0337 11       		.uleb128 0x11
+ 884 0338 00010000 		.4byte	.LVL41
+ 885 033c D2040000 		.4byte	0x4d2
+ 886 0340 10       		.uleb128 0x10
+ 887 0341 01       		.uleb128 0x1
+ 888 0342 50       		.byte	0x50
+ 889 0343 02       		.uleb128 0x2
+ 890 0344 79       		.byte	0x79
+ 891 0345 00       		.sleb128 0
+ 892 0346 00       		.byte	0
+ 893 0347 00       		.byte	0
+ 894 0348 0E       		.uleb128 0xe
+ 895 0349 10000000 		.4byte	.LVL8
+ 896 034d DD040000 		.4byte	0x4dd
+ 897 0351 11       		.uleb128 0x11
+ 898 0352 18000000 		.4byte	.LVL9
+ 899 0356 90040000 		.4byte	0x490
+ 900 035a 10       		.uleb128 0x10
+ 901 035b 01       		.uleb128 0x1
+ 902 035c 50       		.byte	0x50
+ 903 035d 03       		.uleb128 0x3
+ 904 035e 0A       		.byte	0xa
+ 905 035f E803     		.2byte	0x3e8
+ 906 0361 00       		.byte	0
+ 907 0362 00       		.byte	0
+ 908 0363 12       		.uleb128 0x12
+ 909 0364 17020000 		.4byte	.LASF46
+ 910 0368 01       		.byte	0x1
+ 911 0369 63       		.byte	0x63
+ 912 036a 5D000000 		.4byte	0x5d
+ 913 036e 00000000 		.4byte	.LFB38
+ 914 0372 58000000 		.4byte	.LFE38-.LFB38
+ 915 0376 01       		.uleb128 0x1
+ 916 0377 9C       		.byte	0x9c
+ 917 0378 27040000 		.4byte	0x427
+ 918 037c 13       		.uleb128 0x13
+ 919 037d 54000000 		.4byte	.LASF20
+ 920 0381 01       		.byte	0x1
+ 921 0382 70       		.byte	0x70
+ 922 0383 27040000 		.4byte	0x427
+ 923 0387 03       		.uleb128 0x3
+ 924 0388 91       		.byte	0x91
+ 925 0389 8C7F     		.sleb128 -116
+ 926 038b 0C       		.uleb128 0xc
+ 927 038c 636800   		.ascii	"ch\000"
+ 928 038f 01       		.byte	0x1
+ 929 0390 75       		.byte	0x75
+ 930 0391 6B000000 		.4byte	0x6b
+ 931 0395 71010000 		.4byte	.LLST10
+ 932 0399 0C       		.uleb128 0xc
+ 933 039a 69647800 		.ascii	"idx\000"
+ 934 039e 01       		.byte	0x1
+ 935 039f 76       		.byte	0x76
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 20
 
 
- 1033 0074 13       		.uleb128 0x13
- 1034 0075 02       		.uleb128 0x2
- 1035 0076 17       		.uleb128 0x17
- 1036 0077 00       		.byte	0
- 1037 0078 00       		.byte	0
- 1038 0079 09       		.uleb128 0x9
- 1039 007a 0B       		.uleb128 0xb
- 1040 007b 01       		.byte	0x1
- 1041 007c 11       		.uleb128 0x11
- 1042 007d 01       		.uleb128 0x1
- 1043 007e 12       		.uleb128 0x12
- 1044 007f 06       		.uleb128 0x6
- 1045 0080 00       		.byte	0
- 1046 0081 00       		.byte	0
- 1047 0082 0A       		.uleb128 0xa
- 1048 0083 2E       		.uleb128 0x2e
- 1049 0084 01       		.byte	0x1
- 1050 0085 3F       		.uleb128 0x3f
- 1051 0086 19       		.uleb128 0x19
- 1052 0087 03       		.uleb128 0x3
- 1053 0088 0E       		.uleb128 0xe
- 1054 0089 3A       		.uleb128 0x3a
- 1055 008a 0B       		.uleb128 0xb
- 1056 008b 3B       		.uleb128 0x3b
- 1057 008c 0B       		.uleb128 0xb
- 1058 008d 27       		.uleb128 0x27
- 1059 008e 19       		.uleb128 0x19
- 1060 008f 11       		.uleb128 0x11
- 1061 0090 01       		.uleb128 0x1
- 1062 0091 12       		.uleb128 0x12
- 1063 0092 06       		.uleb128 0x6
- 1064 0093 40       		.uleb128 0x40
- 1065 0094 18       		.uleb128 0x18
- 1066 0095 9742     		.uleb128 0x2117
- 1067 0097 19       		.uleb128 0x19
- 1068 0098 01       		.uleb128 0x1
- 1069 0099 13       		.uleb128 0x13
- 1070 009a 00       		.byte	0
- 1071 009b 00       		.byte	0
- 1072 009c 0B       		.uleb128 0xb
- 1073 009d 34       		.uleb128 0x34
- 1074 009e 00       		.byte	0
- 1075 009f 03       		.uleb128 0x3
- 1076 00a0 0E       		.uleb128 0xe
- 1077 00a1 3A       		.uleb128 0x3a
- 1078 00a2 0B       		.uleb128 0xb
- 1079 00a3 3B       		.uleb128 0x3b
- 1080 00a4 0B       		.uleb128 0xb
- 1081 00a5 49       		.uleb128 0x49
- 1082 00a6 13       		.uleb128 0x13
- 1083 00a7 1C       		.uleb128 0x1c
- 1084 00a8 05       		.uleb128 0x5
- 1085 00a9 00       		.byte	0
- 1086 00aa 00       		.byte	0
- 1087 00ab 0C       		.uleb128 0xc
- 1088 00ac 34       		.uleb128 0x34
- 1089 00ad 00       		.byte	0
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 22
+ 936 03a0 5D000000 		.4byte	0x5d
+ 937 03a4 8F010000 		.4byte	.LLST11
+ 938 03a8 0F       		.uleb128 0xf
+ 939 03a9 0A000000 		.4byte	.LVL44
+ 940 03ad BB040000 		.4byte	0x4bb
+ 941 03b1 BB030000 		.4byte	0x3bb
+ 942 03b5 10       		.uleb128 0x10
+ 943 03b6 01       		.uleb128 0x1
+ 944 03b7 50       		.byte	0x50
+ 945 03b8 01       		.uleb128 0x1
+ 946 03b9 30       		.byte	0x30
+ 947 03ba 00       		.byte	0
+ 948 03bb 0E       		.uleb128 0xe
+ 949 03bc 10000000 		.4byte	.LVL45
+ 950 03c0 E9040000 		.4byte	0x4e9
+ 951 03c4 0F       		.uleb128 0xf
+ 952 03c5 16000000 		.4byte	.LVL46
+ 953 03c9 A4040000 		.4byte	0x4a4
+ 954 03cd DB030000 		.4byte	0x3db
+ 955 03d1 10       		.uleb128 0x10
+ 956 03d2 01       		.uleb128 0x1
+ 957 03d3 50       		.byte	0x50
+ 958 03d4 05       		.uleb128 0x5
+ 959 03d5 03       		.byte	0x3
+ 960 03d6 24000000 		.4byte	.LC11
+ 961 03da 00       		.byte	0
+ 962 03db 0F       		.uleb128 0xf
+ 963 03dc 1E000000 		.4byte	.LVL47
+ 964 03e0 90040000 		.4byte	0x490
+ 965 03e4 F0030000 		.4byte	0x3f0
+ 966 03e8 10       		.uleb128 0x10
+ 967 03e9 01       		.uleb128 0x1
+ 968 03ea 50       		.byte	0x50
+ 969 03eb 03       		.uleb128 0x3
+ 970 03ec 0A       		.byte	0xa
+ 971 03ed E803     		.2byte	0x3e8
+ 972 03ef 00       		.byte	0
+ 973 03f0 0E       		.uleb128 0xe
+ 974 03f1 24000000 		.4byte	.LVL49
+ 975 03f5 F4040000 		.4byte	0x4f4
+ 976 03f9 0E       		.uleb128 0xe
+ 977 03fa 32000000 		.4byte	.LVL51
+ 978 03fe 00050000 		.4byte	0x500
+ 979 0402 0F       		.uleb128 0xf
+ 980 0403 42000000 		.4byte	.LVL54
+ 981 0407 09010000 		.4byte	0x109
+ 982 040b 16040000 		.4byte	0x416
+ 983 040f 10       		.uleb128 0x10
+ 984 0410 01       		.uleb128 0x1
+ 985 0411 50       		.byte	0x50
+ 986 0412 02       		.uleb128 0x2
+ 987 0413 74       		.byte	0x74
+ 988 0414 00       		.sleb128 0
+ 989 0415 00       		.byte	0
+ 990 0416 11       		.uleb128 0x11
+ 991 0417 48000000 		.4byte	.LVL55
+ 992 041b 0C050000 		.4byte	0x50c
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 21
 
 
- 1090 00ae 03       		.uleb128 0x3
- 1091 00af 08       		.uleb128 0x8
- 1092 00b0 3A       		.uleb128 0x3a
- 1093 00b1 0B       		.uleb128 0xb
- 1094 00b2 3B       		.uleb128 0x3b
- 1095 00b3 0B       		.uleb128 0xb
- 1096 00b4 49       		.uleb128 0x49
- 1097 00b5 13       		.uleb128 0x13
- 1098 00b6 02       		.uleb128 0x2
- 1099 00b7 17       		.uleb128 0x17
- 1100 00b8 00       		.byte	0
- 1101 00b9 00       		.byte	0
- 1102 00ba 0D       		.uleb128 0xd
- 1103 00bb 0B       		.uleb128 0xb
- 1104 00bc 01       		.byte	0x1
- 1105 00bd 11       		.uleb128 0x11
- 1106 00be 01       		.uleb128 0x1
- 1107 00bf 12       		.uleb128 0x12
- 1108 00c0 06       		.uleb128 0x6
- 1109 00c1 01       		.uleb128 0x1
- 1110 00c2 13       		.uleb128 0x13
- 1111 00c3 00       		.byte	0
- 1112 00c4 00       		.byte	0
- 1113 00c5 0E       		.uleb128 0xe
- 1114 00c6 898201   		.uleb128 0x4109
- 1115 00c9 00       		.byte	0
- 1116 00ca 11       		.uleb128 0x11
- 1117 00cb 01       		.uleb128 0x1
- 1118 00cc 31       		.uleb128 0x31
- 1119 00cd 13       		.uleb128 0x13
- 1120 00ce 00       		.byte	0
- 1121 00cf 00       		.byte	0
- 1122 00d0 0F       		.uleb128 0xf
- 1123 00d1 898201   		.uleb128 0x4109
- 1124 00d4 01       		.byte	0x1
- 1125 00d5 11       		.uleb128 0x11
- 1126 00d6 01       		.uleb128 0x1
- 1127 00d7 31       		.uleb128 0x31
- 1128 00d8 13       		.uleb128 0x13
- 1129 00d9 01       		.uleb128 0x1
- 1130 00da 13       		.uleb128 0x13
- 1131 00db 00       		.byte	0
- 1132 00dc 00       		.byte	0
- 1133 00dd 10       		.uleb128 0x10
- 1134 00de 8A8201   		.uleb128 0x410a
- 1135 00e1 00       		.byte	0
- 1136 00e2 02       		.uleb128 0x2
- 1137 00e3 18       		.uleb128 0x18
- 1138 00e4 9142     		.uleb128 0x2111
- 1139 00e6 18       		.uleb128 0x18
- 1140 00e7 00       		.byte	0
- 1141 00e8 00       		.byte	0
- 1142 00e9 11       		.uleb128 0x11
- 1143 00ea 898201   		.uleb128 0x4109
- 1144 00ed 01       		.byte	0x1
- 1145 00ee 11       		.uleb128 0x11
- 1146 00ef 01       		.uleb128 0x1
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 23
+ 993 041f 10       		.uleb128 0x10
+ 994 0420 01       		.uleb128 0x1
+ 995 0421 50       		.byte	0x50
+ 996 0422 02       		.uleb128 0x2
+ 997 0423 74       		.byte	0x74
+ 998 0424 00       		.sleb128 0
+ 999 0425 00       		.byte	0
+ 1000 0426 00       		.byte	0
+ 1001 0427 14       		.uleb128 0x14
+ 1002 0428 9D000000 		.4byte	0x9d
+ 1003 042c 37040000 		.4byte	0x437
+ 1004 0430 15       		.uleb128 0x15
+ 1005 0431 AB000000 		.4byte	0xab
+ 1006 0435 63       		.byte	0x63
+ 1007 0436 00       		.byte	0
+ 1008 0437 14       		.uleb128 0x14
+ 1009 0438 2C000000 		.4byte	0x2c
+ 1010 043c 4D040000 		.4byte	0x44d
+ 1011 0440 15       		.uleb128 0x15
+ 1012 0441 AB000000 		.4byte	0xab
+ 1013 0445 0A       		.byte	0xa
+ 1014 0446 15       		.uleb128 0x15
+ 1015 0447 AB000000 		.4byte	0xab
+ 1016 044b 02       		.byte	0x2
+ 1017 044c 00       		.byte	0
+ 1018 044d 16       		.uleb128 0x16
+ 1019 044e 59000000 		.4byte	.LASF27
+ 1020 0452 03       		.byte	0x3
+ 1021 0453 0C       		.byte	0xc
+ 1022 0454 37040000 		.4byte	0x437
+ 1023 0458 05       		.uleb128 0x5
+ 1024 0459 03       		.byte	0x3
+ 1025 045a 00000000 		.4byte	letter_to_morse
+ 1026 045e 14       		.uleb128 0x14
+ 1027 045f 9D000000 		.4byte	0x9d
+ 1028 0463 6E040000 		.4byte	0x46e
+ 1029 0467 15       		.uleb128 0x15
+ 1030 0468 AB000000 		.4byte	0xab
+ 1031 046c 13       		.byte	0x13
+ 1032 046d 00       		.byte	0
+ 1033 046e 16       		.uleb128 0x16
+ 1034 046f 9C010000 		.4byte	.LASF28
+ 1035 0473 01       		.byte	0x1
+ 1036 0474 13       		.byte	0x13
+ 1037 0475 5E040000 		.4byte	0x45e
+ 1038 0479 05       		.uleb128 0x5
+ 1039 047a 03       		.byte	0x3
+ 1040 047b 00000000 		.4byte	TEXT_BUF
+ 1041 047f 16       		.uleb128 0x16
+ 1042 0480 CB010000 		.4byte	.LASF29
+ 1043 0484 01       		.byte	0x1
+ 1044 0485 14       		.byte	0x14
+ 1045 0486 5D000000 		.4byte	0x5d
+ 1046 048a 05       		.uleb128 0x5
+ 1047 048b 03       		.byte	0x3
+ 1048 048c 00000000 		.4byte	DOT_LEN_DELAY
+ 1049 0490 17       		.uleb128 0x17
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 22
 
 
- 1147 00f0 31       		.uleb128 0x31
- 1148 00f1 13       		.uleb128 0x13
- 1149 00f2 00       		.byte	0
- 1150 00f3 00       		.byte	0
- 1151 00f4 12       		.uleb128 0x12
- 1152 00f5 34       		.uleb128 0x34
- 1153 00f6 00       		.byte	0
- 1154 00f7 03       		.uleb128 0x3
- 1155 00f8 0E       		.uleb128 0xe
- 1156 00f9 3A       		.uleb128 0x3a
- 1157 00fa 0B       		.uleb128 0xb
- 1158 00fb 3B       		.uleb128 0x3b
- 1159 00fc 0B       		.uleb128 0xb
- 1160 00fd 49       		.uleb128 0x49
- 1161 00fe 13       		.uleb128 0x13
- 1162 00ff 02       		.uleb128 0x2
- 1163 0100 18       		.uleb128 0x18
- 1164 0101 00       		.byte	0
- 1165 0102 00       		.byte	0
- 1166 0103 13       		.uleb128 0x13
- 1167 0104 01       		.uleb128 0x1
- 1168 0105 01       		.byte	0x1
- 1169 0106 49       		.uleb128 0x49
- 1170 0107 13       		.uleb128 0x13
- 1171 0108 01       		.uleb128 0x1
- 1172 0109 13       		.uleb128 0x13
- 1173 010a 00       		.byte	0
- 1174 010b 00       		.byte	0
- 1175 010c 14       		.uleb128 0x14
- 1176 010d 21       		.uleb128 0x21
- 1177 010e 00       		.byte	0
- 1178 010f 49       		.uleb128 0x49
- 1179 0110 13       		.uleb128 0x13
- 1180 0111 2F       		.uleb128 0x2f
- 1181 0112 0B       		.uleb128 0xb
- 1182 0113 00       		.byte	0
- 1183 0114 00       		.byte	0
- 1184 0115 15       		.uleb128 0x15
- 1185 0116 34       		.uleb128 0x34
- 1186 0117 00       		.byte	0
- 1187 0118 03       		.uleb128 0x3
- 1188 0119 0E       		.uleb128 0xe
- 1189 011a 3A       		.uleb128 0x3a
- 1190 011b 0B       		.uleb128 0xb
- 1191 011c 3B       		.uleb128 0x3b
- 1192 011d 0B       		.uleb128 0xb
- 1193 011e 49       		.uleb128 0x49
- 1194 011f 13       		.uleb128 0x13
- 1195 0120 3F       		.uleb128 0x3f
- 1196 0121 19       		.uleb128 0x19
- 1197 0122 02       		.uleb128 0x2
- 1198 0123 18       		.uleb128 0x18
- 1199 0124 00       		.byte	0
- 1200 0125 00       		.byte	0
- 1201 0126 16       		.uleb128 0x16
- 1202 0127 2E       		.uleb128 0x2e
- 1203 0128 00       		.byte	0
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 24
+ 1050 0491 F8020000 		.4byte	.LASF30
+ 1051 0495 F8020000 		.4byte	.LASF30
+ 1052 0499 04       		.byte	0x4
+ 1053 049a EC       		.byte	0xec
+ 1054 049b 18       		.uleb128 0x18
+ 1055 049c 9E020000 		.4byte	.LASF47
+ 1056 04a0 9E020000 		.4byte	.LASF47
+ 1057 04a4 19       		.uleb128 0x19
+ 1058 04a5 D5000000 		.4byte	.LASF31
+ 1059 04a9 D5000000 		.4byte	.LASF31
+ 1060 04ad 05       		.byte	0x5
+ 1061 04ae 2A03     		.2byte	0x32a
+ 1062 04b0 17       		.uleb128 0x17
+ 1063 04b1 F0020000 		.4byte	.LASF32
+ 1064 04b5 F0020000 		.4byte	.LASF32
+ 1065 04b9 06       		.byte	0x6
+ 1066 04ba E7       		.byte	0xe7
+ 1067 04bb 17       		.uleb128 0x17
+ 1068 04bc 48020000 		.4byte	.LASF33
+ 1069 04c0 48020000 		.4byte	.LASF33
+ 1070 04c4 07       		.byte	0x7
+ 1071 04c5 33       		.byte	0x33
+ 1072 04c6 19       		.uleb128 0x19
+ 1073 04c7 C2000000 		.4byte	.LASF34
+ 1074 04cb C2000000 		.4byte	.LASF34
+ 1075 04cf 08       		.byte	0x8
+ 1076 04d0 5501     		.2byte	0x155
+ 1077 04d2 17       		.uleb128 0x17
+ 1078 04d3 2A020000 		.4byte	.LASF35
+ 1079 04d7 2A020000 		.4byte	.LASF35
+ 1080 04db 09       		.byte	0x9
+ 1081 04dc 21       		.byte	0x21
+ 1082 04dd 19       		.uleb128 0x19
+ 1083 04de A5010000 		.4byte	.LASF36
+ 1084 04e2 A5010000 		.4byte	.LASF36
+ 1085 04e6 08       		.byte	0x8
+ 1086 04e7 3201     		.2byte	0x132
+ 1087 04e9 17       		.uleb128 0x17
+ 1088 04ea B1010000 		.4byte	.LASF37
+ 1089 04ee B1010000 		.4byte	.LASF37
+ 1090 04f2 0A       		.byte	0xa
+ 1091 04f3 72       		.byte	0x72
+ 1092 04f4 19       		.uleb128 0x19
+ 1093 04f5 DF020000 		.4byte	.LASF38
+ 1094 04f9 DF020000 		.4byte	.LASF38
+ 1095 04fd 05       		.byte	0x5
+ 1096 04fe 0F03     		.2byte	0x30f
+ 1097 0500 19       		.uleb128 0x19
+ 1098 0501 96000000 		.4byte	.LASF39
+ 1099 0505 96000000 		.4byte	.LASF39
+ 1100 0509 05       		.byte	0x5
+ 1101 050a 4403     		.2byte	0x344
+ 1102 050c 17       		.uleb128 0x17
+ 1103 050d 5F020000 		.4byte	.LASF40
+ 1104 0511 5F020000 		.4byte	.LASF40
+ 1105 0515 0B       		.byte	0xb
+ 1106 0516 59       		.byte	0x59
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 23
 
 
- 1204 0129 3F       		.uleb128 0x3f
- 1205 012a 19       		.uleb128 0x19
- 1206 012b 3C       		.uleb128 0x3c
- 1207 012c 19       		.uleb128 0x19
- 1208 012d 6E       		.uleb128 0x6e
- 1209 012e 0E       		.uleb128 0xe
- 1210 012f 03       		.uleb128 0x3
- 1211 0130 0E       		.uleb128 0xe
- 1212 0131 00       		.byte	0
- 1213 0132 00       		.byte	0
- 1214 0133 17       		.uleb128 0x17
- 1215 0134 2E       		.uleb128 0x2e
- 1216 0135 00       		.byte	0
- 1217 0136 3F       		.uleb128 0x3f
- 1218 0137 19       		.uleb128 0x19
- 1219 0138 3C       		.uleb128 0x3c
- 1220 0139 19       		.uleb128 0x19
- 1221 013a 6E       		.uleb128 0x6e
- 1222 013b 0E       		.uleb128 0xe
- 1223 013c 03       		.uleb128 0x3
- 1224 013d 0E       		.uleb128 0xe
- 1225 013e 3A       		.uleb128 0x3a
- 1226 013f 0B       		.uleb128 0xb
- 1227 0140 3B       		.uleb128 0x3b
- 1228 0141 05       		.uleb128 0x5
- 1229 0142 00       		.byte	0
- 1230 0143 00       		.byte	0
- 1231 0144 18       		.uleb128 0x18
- 1232 0145 2E       		.uleb128 0x2e
- 1233 0146 00       		.byte	0
- 1234 0147 3F       		.uleb128 0x3f
- 1235 0148 19       		.uleb128 0x19
- 1236 0149 3C       		.uleb128 0x3c
- 1237 014a 19       		.uleb128 0x19
- 1238 014b 6E       		.uleb128 0x6e
- 1239 014c 0E       		.uleb128 0xe
- 1240 014d 03       		.uleb128 0x3
- 1241 014e 0E       		.uleb128 0xe
- 1242 014f 3A       		.uleb128 0x3a
- 1243 0150 0B       		.uleb128 0xb
- 1244 0151 3B       		.uleb128 0x3b
- 1245 0152 0B       		.uleb128 0xb
- 1246 0153 00       		.byte	0
- 1247 0154 00       		.byte	0
- 1248 0155 00       		.byte	0
- 1249              		.section	.debug_loc,"",%progbits
- 1250              	.Ldebug_loc0:
- 1251              	.LLST0:
- 1252 0000 00000000 		.4byte	.LVL0
- 1253 0004 1C000000 		.4byte	.LVL5
- 1254 0008 0100     		.2byte	0x1
- 1255 000a 50       		.byte	0x50
- 1256 000b 1C000000 		.4byte	.LVL5
- 1257 000f 24000000 		.4byte	.LFE36
- 1258 0013 0400     		.2byte	0x4
- 1259 0015 F3       		.byte	0xf3
- 1260 0016 01       		.uleb128 0x1
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 25
+ 1107 0517 00       		.byte	0
+ 1108              		.section	.debug_abbrev,"",%progbits
+ 1109              	.Ldebug_abbrev0:
+ 1110 0000 01       		.uleb128 0x1
+ 1111 0001 11       		.uleb128 0x11
+ 1112 0002 01       		.byte	0x1
+ 1113 0003 25       		.uleb128 0x25
+ 1114 0004 0E       		.uleb128 0xe
+ 1115 0005 13       		.uleb128 0x13
+ 1116 0006 0B       		.uleb128 0xb
+ 1117 0007 03       		.uleb128 0x3
+ 1118 0008 0E       		.uleb128 0xe
+ 1119 0009 1B       		.uleb128 0x1b
+ 1120 000a 0E       		.uleb128 0xe
+ 1121 000b 55       		.uleb128 0x55
+ 1122 000c 17       		.uleb128 0x17
+ 1123 000d 11       		.uleb128 0x11
+ 1124 000e 01       		.uleb128 0x1
+ 1125 000f 10       		.uleb128 0x10
+ 1126 0010 17       		.uleb128 0x17
+ 1127 0011 00       		.byte	0
+ 1128 0012 00       		.byte	0
+ 1129 0013 02       		.uleb128 0x2
+ 1130 0014 24       		.uleb128 0x24
+ 1131 0015 00       		.byte	0
+ 1132 0016 0B       		.uleb128 0xb
+ 1133 0017 0B       		.uleb128 0xb
+ 1134 0018 3E       		.uleb128 0x3e
+ 1135 0019 0B       		.uleb128 0xb
+ 1136 001a 03       		.uleb128 0x3
+ 1137 001b 0E       		.uleb128 0xe
+ 1138 001c 00       		.byte	0
+ 1139 001d 00       		.byte	0
+ 1140 001e 03       		.uleb128 0x3
+ 1141 001f 24       		.uleb128 0x24
+ 1142 0020 00       		.byte	0
+ 1143 0021 0B       		.uleb128 0xb
+ 1144 0022 0B       		.uleb128 0xb
+ 1145 0023 3E       		.uleb128 0x3e
+ 1146 0024 0B       		.uleb128 0xb
+ 1147 0025 03       		.uleb128 0x3
+ 1148 0026 08       		.uleb128 0x8
+ 1149 0027 00       		.byte	0
+ 1150 0028 00       		.byte	0
+ 1151 0029 04       		.uleb128 0x4
+ 1152 002a 16       		.uleb128 0x16
+ 1153 002b 00       		.byte	0
+ 1154 002c 03       		.uleb128 0x3
+ 1155 002d 0E       		.uleb128 0xe
+ 1156 002e 3A       		.uleb128 0x3a
+ 1157 002f 0B       		.uleb128 0xb
+ 1158 0030 3B       		.uleb128 0x3b
+ 1159 0031 05       		.uleb128 0x5
+ 1160 0032 49       		.uleb128 0x49
+ 1161 0033 13       		.uleb128 0x13
+ 1162 0034 00       		.byte	0
+ 1163 0035 00       		.byte	0
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 24
 
 
- 1261 0017 50       		.byte	0x50
- 1262 0018 9F       		.byte	0x9f
- 1263 0019 00000000 		.4byte	0
- 1264 001d 00000000 		.4byte	0
- 1265              	.LLST1:
- 1266 0021 00000000 		.4byte	.LVL0
- 1267 0025 1A000000 		.4byte	.LVL4
- 1268 0029 0300     		.2byte	0x3
- 1269 002b 09       		.byte	0x9
- 1270 002c FF       		.byte	0xff
- 1271 002d 9F       		.byte	0x9f
- 1272 002e 1A000000 		.4byte	.LVL4
- 1273 0032 24000000 		.4byte	.LFE36
- 1274 0036 0100     		.2byte	0x1
- 1275 0038 53       		.byte	0x53
- 1276 0039 00000000 		.4byte	0
- 1277 003d 00000000 		.4byte	0
- 1278              	.LLST2:
- 1279 0041 00000000 		.4byte	.LVL0
- 1280 0045 04000000 		.4byte	.LVL1
- 1281 0049 0200     		.2byte	0x2
- 1282 004b 30       		.byte	0x30
- 1283 004c 9F       		.byte	0x9f
- 1284 004d 04000000 		.4byte	.LVL1
- 1285 0051 18000000 		.4byte	.LVL3
- 1286 0055 0100     		.2byte	0x1
- 1287 0057 53       		.byte	0x53
- 1288 0058 00000000 		.4byte	0
- 1289 005c 00000000 		.4byte	0
- 1290              	.LLST3:
- 1291 0060 00000000 		.4byte	.LVL6
- 1292 0064 12000000 		.4byte	.LVL8
- 1293 0068 0100     		.2byte	0x1
- 1294 006a 50       		.byte	0x50
- 1295 006b 12000000 		.4byte	.LVL8
- 1296 006f C0000000 		.4byte	.LVL36
- 1297 0073 0100     		.2byte	0x1
- 1298 0075 59       		.byte	0x59
- 1299 0076 C0000000 		.4byte	.LVL36
- 1300 007a E4000000 		.4byte	.LFE37
- 1301 007e 0400     		.2byte	0x4
- 1302 0080 F3       		.byte	0xf3
- 1303 0081 01       		.uleb128 0x1
- 1304 0082 50       		.byte	0x50
- 1305 0083 9F       		.byte	0x9f
- 1306 0084 00000000 		.4byte	0
- 1307 0088 00000000 		.4byte	0
- 1308              	.LLST4:
- 1309 008c 0C000000 		.4byte	.LVL7
- 1310 0090 12000000 		.4byte	.LVL8
- 1311 0094 0200     		.2byte	0x2
- 1312 0096 30       		.byte	0x30
- 1313 0097 9F       		.byte	0x9f
- 1314 0098 3C000000 		.4byte	.LVL14
- 1315 009c 42000000 		.4byte	.LVL15
- 1316 00a0 0200     		.2byte	0x2
- 1317 00a2 30       		.byte	0x30
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 26
+ 1164 0036 05       		.uleb128 0x5
+ 1165 0037 0F       		.uleb128 0xf
+ 1166 0038 00       		.byte	0
+ 1167 0039 0B       		.uleb128 0xb
+ 1168 003a 0B       		.uleb128 0xb
+ 1169 003b 49       		.uleb128 0x49
+ 1170 003c 13       		.uleb128 0x13
+ 1171 003d 00       		.byte	0
+ 1172 003e 00       		.byte	0
+ 1173 003f 06       		.uleb128 0x6
+ 1174 0040 2E       		.uleb128 0x2e
+ 1175 0041 01       		.byte	0x1
+ 1176 0042 3F       		.uleb128 0x3f
+ 1177 0043 19       		.uleb128 0x19
+ 1178 0044 03       		.uleb128 0x3
+ 1179 0045 0E       		.uleb128 0xe
+ 1180 0046 3A       		.uleb128 0x3a
+ 1181 0047 0B       		.uleb128 0xb
+ 1182 0048 3B       		.uleb128 0x3b
+ 1183 0049 0B       		.uleb128 0xb
+ 1184 004a 27       		.uleb128 0x27
+ 1185 004b 19       		.uleb128 0x19
+ 1186 004c 49       		.uleb128 0x49
+ 1187 004d 13       		.uleb128 0x13
+ 1188 004e 11       		.uleb128 0x11
+ 1189 004f 01       		.uleb128 0x1
+ 1190 0050 12       		.uleb128 0x12
+ 1191 0051 06       		.uleb128 0x6
+ 1192 0052 40       		.uleb128 0x40
+ 1193 0053 18       		.uleb128 0x18
+ 1194 0054 9742     		.uleb128 0x2117
+ 1195 0056 19       		.uleb128 0x19
+ 1196 0057 01       		.uleb128 0x1
+ 1197 0058 13       		.uleb128 0x13
+ 1198 0059 00       		.byte	0
+ 1199 005a 00       		.byte	0
+ 1200 005b 07       		.uleb128 0x7
+ 1201 005c 05       		.uleb128 0x5
+ 1202 005d 00       		.byte	0
+ 1203 005e 03       		.uleb128 0x3
+ 1204 005f 0E       		.uleb128 0xe
+ 1205 0060 3A       		.uleb128 0x3a
+ 1206 0061 0B       		.uleb128 0xb
+ 1207 0062 3B       		.uleb128 0x3b
+ 1208 0063 0B       		.uleb128 0xb
+ 1209 0064 49       		.uleb128 0x49
+ 1210 0065 13       		.uleb128 0x13
+ 1211 0066 02       		.uleb128 0x2
+ 1212 0067 17       		.uleb128 0x17
+ 1213 0068 00       		.byte	0
+ 1214 0069 00       		.byte	0
+ 1215 006a 08       		.uleb128 0x8
+ 1216 006b 34       		.uleb128 0x34
+ 1217 006c 00       		.byte	0
+ 1218 006d 03       		.uleb128 0x3
+ 1219 006e 0E       		.uleb128 0xe
+ 1220 006f 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 25
 
 
- 1318 00a3 9F       		.byte	0x9f
- 1319 00a4 42000000 		.4byte	.LVL15
- 1320 00a8 B6000000 		.4byte	.LVL33
- 1321 00ac 0100     		.2byte	0x1
- 1322 00ae 57       		.byte	0x57
- 1323 00af 00000000 		.4byte	0
- 1324 00b3 00000000 		.4byte	0
- 1325              	.LLST5:
- 1326 00b7 0C000000 		.4byte	.LVL7
- 1327 00bb 12000000 		.4byte	.LVL8
- 1328 00bf 0200     		.2byte	0x2
- 1329 00c1 30       		.byte	0x30
- 1330 00c2 9F       		.byte	0x9f
- 1331 00c3 1C000000 		.4byte	.LVL9
- 1332 00c7 20000000 		.4byte	.LVL10
- 1333 00cb 0100     		.2byte	0x1
- 1334 00cd 50       		.byte	0x50
- 1335 00ce 00000000 		.4byte	0
- 1336 00d2 00000000 		.4byte	0
- 1337              	.LLST6:
- 1338 00d6 0C000000 		.4byte	.LVL7
- 1339 00da 12000000 		.4byte	.LVL8
- 1340 00de 0200     		.2byte	0x2
- 1341 00e0 30       		.byte	0x30
- 1342 00e1 9F       		.byte	0x9f
- 1343 00e2 12000000 		.4byte	.LVL8
- 1344 00e6 C0000000 		.4byte	.LVL35
- 1345 00ea 0100     		.2byte	0x1
- 1346 00ec 58       		.byte	0x58
- 1347 00ed 00000000 		.4byte	0
- 1348 00f1 00000000 		.4byte	0
- 1349              	.LLST7:
- 1350 00f5 28000000 		.4byte	.LVL11
- 1351 00f9 B6000000 		.4byte	.LVL33
- 1352 00fd 0100     		.2byte	0x1
- 1353 00ff 5A       		.byte	0x5a
- 1354 0100 00000000 		.4byte	0
- 1355 0104 00000000 		.4byte	0
- 1356              	.LLST8:
- 1357 0108 28000000 		.4byte	.LVL11
- 1358 010c 42000000 		.4byte	.LVL15
- 1359 0110 0200     		.2byte	0x2
- 1360 0112 31       		.byte	0x31
- 1361 0113 9F       		.byte	0x9f
- 1362 0114 42000000 		.4byte	.LVL15
- 1363 0118 94000000 		.4byte	.LVL27
- 1364 011c 0100     		.2byte	0x1
- 1365 011e 54       		.byte	0x54
- 1366 011f 96000000 		.4byte	.LVL28
- 1367 0123 B6000000 		.4byte	.LVL33
- 1368 0127 0100     		.2byte	0x1
- 1369 0129 54       		.byte	0x54
- 1370 012a 00000000 		.4byte	0
- 1371 012e 00000000 		.4byte	0
- 1372              	.LLST9:
- 1373 0132 2A000000 		.4byte	.LVL12
- 1374 0136 B6000000 		.4byte	.LVL33
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 27
+ 1221 0070 0B       		.uleb128 0xb
+ 1222 0071 3B       		.uleb128 0x3b
+ 1223 0072 0B       		.uleb128 0xb
+ 1224 0073 49       		.uleb128 0x49
+ 1225 0074 13       		.uleb128 0x13
+ 1226 0075 02       		.uleb128 0x2
+ 1227 0076 17       		.uleb128 0x17
+ 1228 0077 00       		.byte	0
+ 1229 0078 00       		.byte	0
+ 1230 0079 09       		.uleb128 0x9
+ 1231 007a 0B       		.uleb128 0xb
+ 1232 007b 01       		.byte	0x1
+ 1233 007c 11       		.uleb128 0x11
+ 1234 007d 01       		.uleb128 0x1
+ 1235 007e 12       		.uleb128 0x12
+ 1236 007f 06       		.uleb128 0x6
+ 1237 0080 00       		.byte	0
+ 1238 0081 00       		.byte	0
+ 1239 0082 0A       		.uleb128 0xa
+ 1240 0083 2E       		.uleb128 0x2e
+ 1241 0084 01       		.byte	0x1
+ 1242 0085 3F       		.uleb128 0x3f
+ 1243 0086 19       		.uleb128 0x19
+ 1244 0087 03       		.uleb128 0x3
+ 1245 0088 0E       		.uleb128 0xe
+ 1246 0089 3A       		.uleb128 0x3a
+ 1247 008a 0B       		.uleb128 0xb
+ 1248 008b 3B       		.uleb128 0x3b
+ 1249 008c 0B       		.uleb128 0xb
+ 1250 008d 27       		.uleb128 0x27
+ 1251 008e 19       		.uleb128 0x19
+ 1252 008f 11       		.uleb128 0x11
+ 1253 0090 01       		.uleb128 0x1
+ 1254 0091 12       		.uleb128 0x12
+ 1255 0092 06       		.uleb128 0x6
+ 1256 0093 40       		.uleb128 0x40
+ 1257 0094 18       		.uleb128 0x18
+ 1258 0095 9742     		.uleb128 0x2117
+ 1259 0097 19       		.uleb128 0x19
+ 1260 0098 01       		.uleb128 0x1
+ 1261 0099 13       		.uleb128 0x13
+ 1262 009a 00       		.byte	0
+ 1263 009b 00       		.byte	0
+ 1264 009c 0B       		.uleb128 0xb
+ 1265 009d 34       		.uleb128 0x34
+ 1266 009e 00       		.byte	0
+ 1267 009f 03       		.uleb128 0x3
+ 1268 00a0 0E       		.uleb128 0xe
+ 1269 00a1 3A       		.uleb128 0x3a
+ 1270 00a2 0B       		.uleb128 0xb
+ 1271 00a3 3B       		.uleb128 0x3b
+ 1272 00a4 0B       		.uleb128 0xb
+ 1273 00a5 49       		.uleb128 0x49
+ 1274 00a6 13       		.uleb128 0x13
+ 1275 00a7 1C       		.uleb128 0x1c
+ 1276 00a8 05       		.uleb128 0x5
+ 1277 00a9 00       		.byte	0
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 26
 
 
- 1375 013a 0100     		.2byte	0x1
- 1376 013c 56       		.byte	0x56
- 1377 013d 00000000 		.4byte	0
- 1378 0141 00000000 		.4byte	0
- 1379              		.section	.debug_aranges,"",%progbits
- 1380 0000 2C000000 		.4byte	0x2c
- 1381 0004 0200     		.2byte	0x2
- 1382 0006 00000000 		.4byte	.Ldebug_info0
- 1383 000a 04       		.byte	0x4
- 1384 000b 00       		.byte	0
- 1385 000c 0000     		.2byte	0
- 1386 000e 0000     		.2byte	0
- 1387 0010 00000000 		.4byte	.LFB36
- 1388 0014 24000000 		.4byte	.LFE36-.LFB36
- 1389 0018 00000000 		.4byte	.LFB37
- 1390 001c E4000000 		.4byte	.LFE37-.LFB37
- 1391 0020 00000000 		.4byte	.LFB38
- 1392 0024 34000000 		.4byte	.LFE38-.LFB38
- 1393 0028 00000000 		.4byte	0
- 1394 002c 00000000 		.4byte	0
- 1395              		.section	.debug_ranges,"",%progbits
- 1396              	.Ldebug_ranges0:
- 1397 0000 00000000 		.4byte	.LFB36
- 1398 0004 24000000 		.4byte	.LFE36
- 1399 0008 00000000 		.4byte	.LFB37
- 1400 000c E4000000 		.4byte	.LFE37
- 1401 0010 00000000 		.4byte	.LFB38
- 1402 0014 34000000 		.4byte	.LFE38
- 1403 0018 00000000 		.4byte	0
- 1404 001c 00000000 		.4byte	0
- 1405              		.section	.debug_line,"",%progbits
- 1406              	.Ldebug_line0:
- 1407 0000 A9010000 		.section	.debug_str,"MS",%progbits,1
- 1407      02001101 
- 1407      00000201 
- 1407      FB0E0D00 
- 1407      01010101 
- 1408              	.LASF40:
- 1409 0000 443A5C75 		.ascii	"D:\\ucu\\2_course1_term\\POC\\programs\\my_works\\S"
- 1409      63755C32 
- 1409      5F636F75 
- 1409      72736531 
- 1409      5F746572 
- 1410 002d 6D617274 		.ascii	"mart_lightning_system\\Code_Morse.cydsn\000"
- 1410      5F6C6967 
- 1410      68746E69 
- 1410      6E675F73 
- 1410      79737465 
- 1411              	.LASF17:
- 1412 0054 776F7264 		.ascii	"word\000"
- 1412      00
- 1413              	.LASF27:
- 1414 0059 6C657474 		.ascii	"letter_to_morse\000"
- 1414      65725F74 
- 1414      6F5F6D6F 
- 1414      72736500 
- 1415              	.LASF24:
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 28
+ 1278 00aa 00       		.byte	0
+ 1279 00ab 0C       		.uleb128 0xc
+ 1280 00ac 34       		.uleb128 0x34
+ 1281 00ad 00       		.byte	0
+ 1282 00ae 03       		.uleb128 0x3
+ 1283 00af 08       		.uleb128 0x8
+ 1284 00b0 3A       		.uleb128 0x3a
+ 1285 00b1 0B       		.uleb128 0xb
+ 1286 00b2 3B       		.uleb128 0x3b
+ 1287 00b3 0B       		.uleb128 0xb
+ 1288 00b4 49       		.uleb128 0x49
+ 1289 00b5 13       		.uleb128 0x13
+ 1290 00b6 02       		.uleb128 0x2
+ 1291 00b7 17       		.uleb128 0x17
+ 1292 00b8 00       		.byte	0
+ 1293 00b9 00       		.byte	0
+ 1294 00ba 0D       		.uleb128 0xd
+ 1295 00bb 0B       		.uleb128 0xb
+ 1296 00bc 01       		.byte	0x1
+ 1297 00bd 11       		.uleb128 0x11
+ 1298 00be 01       		.uleb128 0x1
+ 1299 00bf 12       		.uleb128 0x12
+ 1300 00c0 06       		.uleb128 0x6
+ 1301 00c1 01       		.uleb128 0x1
+ 1302 00c2 13       		.uleb128 0x13
+ 1303 00c3 00       		.byte	0
+ 1304 00c4 00       		.byte	0
+ 1305 00c5 0E       		.uleb128 0xe
+ 1306 00c6 898201   		.uleb128 0x4109
+ 1307 00c9 00       		.byte	0
+ 1308 00ca 11       		.uleb128 0x11
+ 1309 00cb 01       		.uleb128 0x1
+ 1310 00cc 31       		.uleb128 0x31
+ 1311 00cd 13       		.uleb128 0x13
+ 1312 00ce 00       		.byte	0
+ 1313 00cf 00       		.byte	0
+ 1314 00d0 0F       		.uleb128 0xf
+ 1315 00d1 898201   		.uleb128 0x4109
+ 1316 00d4 01       		.byte	0x1
+ 1317 00d5 11       		.uleb128 0x11
+ 1318 00d6 01       		.uleb128 0x1
+ 1319 00d7 31       		.uleb128 0x31
+ 1320 00d8 13       		.uleb128 0x13
+ 1321 00d9 01       		.uleb128 0x1
+ 1322 00da 13       		.uleb128 0x13
+ 1323 00db 00       		.byte	0
+ 1324 00dc 00       		.byte	0
+ 1325 00dd 10       		.uleb128 0x10
+ 1326 00de 8A8201   		.uleb128 0x410a
+ 1327 00e1 00       		.byte	0
+ 1328 00e2 02       		.uleb128 0x2
+ 1329 00e3 18       		.uleb128 0x18
+ 1330 00e4 9142     		.uleb128 0x2111
+ 1331 00e6 18       		.uleb128 0x18
+ 1332 00e7 00       		.byte	0
+ 1333 00e8 00       		.byte	0
+ 1334 00e9 11       		.uleb128 0x11
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 27
 
 
- 1416 0069 6C656E5F 		.ascii	"len_morse_letter\000"
- 1416      6D6F7273 
- 1416      655F6C65 
- 1416      74746572 
- 1416      00
- 1417              	.LASF23:
- 1418 007a 64617368 		.ascii	"dash_or_dot_bit\000"
- 1418      5F6F725F 
- 1418      646F745F 
- 1418      62697400 
- 1419              	.LASF3:
- 1420 008a 73686F72 		.ascii	"short unsigned int\000"
- 1420      7420756E 
- 1420      7369676E 
- 1420      65642069 
- 1420      6E7400
- 1421              	.LASF8:
- 1422 009d 756E7369 		.ascii	"unsigned int\000"
- 1422      676E6564 
- 1422      20696E74 
- 1422      00
- 1423              	.LASF10:
- 1424 00aa 646F7562 		.ascii	"double\000"
- 1424      6C6500
- 1425              	.LASF29:
- 1426 00b1 55415254 		.ascii	"UART_UartPutString\000"
- 1426      5F556172 
- 1426      74507574 
- 1426      53747269 
- 1426      6E6700
- 1427              	.LASF19:
- 1428 00c4 64617368 		.ascii	"dash_period\000"
- 1428      5F706572 
- 1428      696F6400 
- 1429              	.LASF9:
- 1430 00d0 666C6F61 		.ascii	"float\000"
- 1430      7400
- 1431              	.LASF14:
- 1432 00d6 6E5F6C65 		.ascii	"n_letter_in_table\000"
- 1432      74746572 
- 1432      5F696E5F 
- 1432      7461626C 
- 1432      6500
- 1433              	.LASF42:
- 1434 00e8 776F7264 		.ascii	"word_to_morse\000"
- 1434      5F746F5F 
- 1434      6D6F7273 
- 1434      6500
- 1435              	.LASF28:
- 1436 00f6 54455854 		.ascii	"TEXT_BUF\000"
- 1436      5F425546 
- 1436      00
- 1437              	.LASF33:
- 1438 00ff 50574D5F 		.ascii	"PWM_1_Start\000"
- 1438      315F5374 
- 1438      61727400 
- 1439              	.LASF37:
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 29
+ 1335 00ea 898201   		.uleb128 0x4109
+ 1336 00ed 01       		.byte	0x1
+ 1337 00ee 11       		.uleb128 0x11
+ 1338 00ef 01       		.uleb128 0x1
+ 1339 00f0 31       		.uleb128 0x31
+ 1340 00f1 13       		.uleb128 0x13
+ 1341 00f2 00       		.byte	0
+ 1342 00f3 00       		.byte	0
+ 1343 00f4 12       		.uleb128 0x12
+ 1344 00f5 2E       		.uleb128 0x2e
+ 1345 00f6 01       		.byte	0x1
+ 1346 00f7 3F       		.uleb128 0x3f
+ 1347 00f8 19       		.uleb128 0x19
+ 1348 00f9 03       		.uleb128 0x3
+ 1349 00fa 0E       		.uleb128 0xe
+ 1350 00fb 3A       		.uleb128 0x3a
+ 1351 00fc 0B       		.uleb128 0xb
+ 1352 00fd 3B       		.uleb128 0x3b
+ 1353 00fe 0B       		.uleb128 0xb
+ 1354 00ff 27       		.uleb128 0x27
+ 1355 0100 19       		.uleb128 0x19
+ 1356 0101 49       		.uleb128 0x49
+ 1357 0102 13       		.uleb128 0x13
+ 1358 0103 8701     		.uleb128 0x87
+ 1359 0105 19       		.uleb128 0x19
+ 1360 0106 11       		.uleb128 0x11
+ 1361 0107 01       		.uleb128 0x1
+ 1362 0108 12       		.uleb128 0x12
+ 1363 0109 06       		.uleb128 0x6
+ 1364 010a 40       		.uleb128 0x40
+ 1365 010b 18       		.uleb128 0x18
+ 1366 010c 9742     		.uleb128 0x2117
+ 1367 010e 19       		.uleb128 0x19
+ 1368 010f 01       		.uleb128 0x1
+ 1369 0110 13       		.uleb128 0x13
+ 1370 0111 00       		.byte	0
+ 1371 0112 00       		.byte	0
+ 1372 0113 13       		.uleb128 0x13
+ 1373 0114 34       		.uleb128 0x34
+ 1374 0115 00       		.byte	0
+ 1375 0116 03       		.uleb128 0x3
+ 1376 0117 0E       		.uleb128 0xe
+ 1377 0118 3A       		.uleb128 0x3a
+ 1378 0119 0B       		.uleb128 0xb
+ 1379 011a 3B       		.uleb128 0x3b
+ 1380 011b 0B       		.uleb128 0xb
+ 1381 011c 49       		.uleb128 0x49
+ 1382 011d 13       		.uleb128 0x13
+ 1383 011e 02       		.uleb128 0x2
+ 1384 011f 18       		.uleb128 0x18
+ 1385 0120 00       		.byte	0
+ 1386 0121 00       		.byte	0
+ 1387 0122 14       		.uleb128 0x14
+ 1388 0123 01       		.uleb128 0x1
+ 1389 0124 01       		.byte	0x1
+ 1390 0125 49       		.uleb128 0x49
+ 1391 0126 13       		.uleb128 0x13
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 28
 
 
- 1440 010b 55415254 		.ascii	"UART_Start\000"
- 1440      5F537461 
- 1440      727400
- 1441              	.LASF25:
- 1442 0116 6765745F 		.ascii	"get_letter_pos\000"
- 1442      6C657474 
- 1442      65725F70 
- 1442      6F7300
- 1443              	.LASF5:
- 1444 0125 6C6F6E67 		.ascii	"long unsigned int\000"
- 1444      20756E73 
- 1444      69676E65 
- 1444      6420696E 
- 1444      7400
- 1445              	.LASF26:
- 1446 0137 6D61696E 		.ascii	"main\000"
- 1446      00
- 1447              	.LASF41:
- 1448 013c 75696E74 		.ascii	"uint16\000"
- 1448      313600
- 1449              	.LASF20:
- 1450 0143 646F745F 		.ascii	"dot_period\000"
- 1450      70657269 
- 1450      6F6400
- 1451              	.LASF18:
- 1452 014e 646F745F 		.ascii	"dot_len_delay\000"
- 1452      6C656E5F 
- 1452      64656C61 
- 1452      7900
- 1453              	.LASF1:
- 1454 015c 756E7369 		.ascii	"unsigned char\000"
- 1454      676E6564 
- 1454      20636861 
- 1454      7200
- 1455              	.LASF36:
- 1456 016a 7374726C 		.ascii	"strlen\000"
- 1456      656E00
- 1457              	.LASF7:
- 1458 0171 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1458      206C6F6E 
- 1458      6720756E 
- 1458      7369676E 
- 1458      65642069 
- 1459              	.LASF30:
- 1460 0188 50696E5F 		.ascii	"Pin_Red_Write\000"
- 1460      5265645F 
- 1460      57726974 
- 1460      6500
- 1461              	.LASF38:
- 1462 0196 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1462      43313120 
- 1462      352E342E 
- 1462      31203230 
- 1462      31363036 
- 1463 01c9 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 1463      20726576 
- 1463      6973696F 
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 30
+ 1392 0127 01       		.uleb128 0x1
+ 1393 0128 13       		.uleb128 0x13
+ 1394 0129 00       		.byte	0
+ 1395 012a 00       		.byte	0
+ 1396 012b 15       		.uleb128 0x15
+ 1397 012c 21       		.uleb128 0x21
+ 1398 012d 00       		.byte	0
+ 1399 012e 49       		.uleb128 0x49
+ 1400 012f 13       		.uleb128 0x13
+ 1401 0130 2F       		.uleb128 0x2f
+ 1402 0131 0B       		.uleb128 0xb
+ 1403 0132 00       		.byte	0
+ 1404 0133 00       		.byte	0
+ 1405 0134 16       		.uleb128 0x16
+ 1406 0135 34       		.uleb128 0x34
+ 1407 0136 00       		.byte	0
+ 1408 0137 03       		.uleb128 0x3
+ 1409 0138 0E       		.uleb128 0xe
+ 1410 0139 3A       		.uleb128 0x3a
+ 1411 013a 0B       		.uleb128 0xb
+ 1412 013b 3B       		.uleb128 0x3b
+ 1413 013c 0B       		.uleb128 0xb
+ 1414 013d 49       		.uleb128 0x49
+ 1415 013e 13       		.uleb128 0x13
+ 1416 013f 3F       		.uleb128 0x3f
+ 1417 0140 19       		.uleb128 0x19
+ 1418 0141 02       		.uleb128 0x2
+ 1419 0142 18       		.uleb128 0x18
+ 1420 0143 00       		.byte	0
+ 1421 0144 00       		.byte	0
+ 1422 0145 17       		.uleb128 0x17
+ 1423 0146 2E       		.uleb128 0x2e
+ 1424 0147 00       		.byte	0
+ 1425 0148 3F       		.uleb128 0x3f
+ 1426 0149 19       		.uleb128 0x19
+ 1427 014a 3C       		.uleb128 0x3c
+ 1428 014b 19       		.uleb128 0x19
+ 1429 014c 6E       		.uleb128 0x6e
+ 1430 014d 0E       		.uleb128 0xe
+ 1431 014e 03       		.uleb128 0x3
+ 1432 014f 0E       		.uleb128 0xe
+ 1433 0150 3A       		.uleb128 0x3a
+ 1434 0151 0B       		.uleb128 0xb
+ 1435 0152 3B       		.uleb128 0x3b
+ 1436 0153 0B       		.uleb128 0xb
+ 1437 0154 00       		.byte	0
+ 1438 0155 00       		.byte	0
+ 1439 0156 18       		.uleb128 0x18
+ 1440 0157 2E       		.uleb128 0x2e
+ 1441 0158 00       		.byte	0
+ 1442 0159 3F       		.uleb128 0x3f
+ 1443 015a 19       		.uleb128 0x19
+ 1444 015b 3C       		.uleb128 0x3c
+ 1445 015c 19       		.uleb128 0x19
+ 1446 015d 6E       		.uleb128 0x6e
+ 1447 015e 0E       		.uleb128 0xe
+ 1448 015f 03       		.uleb128 0x3
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 29
 
 
- 1463      6E203233 
- 1463      37373135 
- 1464 01fc 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1464      66756E63 
- 1464      74696F6E 
- 1464      2D736563 
- 1464      74696F6E 
- 1465              	.LASF13:
- 1466 0224 73697A65 		.ascii	"sizetype\000"
- 1466      74797065 
- 1466      00
- 1467              	.LASF32:
- 1468 022d 50574D5F 		.ascii	"PWM_1_WriteCompare\000"
- 1468      315F5772 
- 1468      69746543 
- 1468      6F6D7061 
- 1468      726500
- 1469              	.LASF6:
- 1470 0240 6C6F6E67 		.ascii	"long long int\000"
- 1470      206C6F6E 
- 1470      6720696E 
- 1470      7400
- 1471              	.LASF39:
- 1472 024e 6D61696E 		.ascii	"main.c\000"
- 1472      2E6300
- 1473              	.LASF11:
- 1474 0255 63686172 		.ascii	"char\000"
- 1474      00
- 1475              	.LASF15:
- 1476 025a 6E5F6C65 		.ascii	"n_letter_detail\000"
- 1476      74746572 
- 1476      5F646574 
- 1476      61696C00 
- 1477              	.LASF2:
- 1478 026a 73686F72 		.ascii	"short int\000"
- 1478      7420696E 
- 1478      7400
- 1479              	.LASF43:
- 1480 0274 6D656D63 		.ascii	"memcpy\000"
- 1480      707900
- 1481              	.LASF35:
- 1482 027b 50574D5F 		.ascii	"PWM_1_Stop\000"
- 1482      315F5374 
- 1482      6F7000
- 1483              	.LASF4:
- 1484 0286 6C6F6E67 		.ascii	"long int\000"
- 1484      20696E74 
- 1484      00
- 1485              	.LASF12:
- 1486 028f 6C6F6E67 		.ascii	"long double\000"
- 1486      20646F75 
- 1486      626C6500 
- 1487              	.LASF16:
- 1488 029b 6C657474 		.ascii	"letter\000"
- 1488      657200
- 1489              	.LASF0:
- 1490 02a2 7369676E 		.ascii	"signed char\000"
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cczxEqG3.s 			page 31
+ 1449 0160 0E       		.uleb128 0xe
+ 1450 0161 00       		.byte	0
+ 1451 0162 00       		.byte	0
+ 1452 0163 19       		.uleb128 0x19
+ 1453 0164 2E       		.uleb128 0x2e
+ 1454 0165 00       		.byte	0
+ 1455 0166 3F       		.uleb128 0x3f
+ 1456 0167 19       		.uleb128 0x19
+ 1457 0168 3C       		.uleb128 0x3c
+ 1458 0169 19       		.uleb128 0x19
+ 1459 016a 6E       		.uleb128 0x6e
+ 1460 016b 0E       		.uleb128 0xe
+ 1461 016c 03       		.uleb128 0x3
+ 1462 016d 0E       		.uleb128 0xe
+ 1463 016e 3A       		.uleb128 0x3a
+ 1464 016f 0B       		.uleb128 0xb
+ 1465 0170 3B       		.uleb128 0x3b
+ 1466 0171 05       		.uleb128 0x5
+ 1467 0172 00       		.byte	0
+ 1468 0173 00       		.byte	0
+ 1469 0174 00       		.byte	0
+ 1470              		.section	.debug_loc,"",%progbits
+ 1471              	.Ldebug_loc0:
+ 1472              	.LLST0:
+ 1473 0000 00000000 		.4byte	.LVL0
+ 1474 0004 1C000000 		.4byte	.LVL5
+ 1475 0008 0100     		.2byte	0x1
+ 1476 000a 50       		.byte	0x50
+ 1477 000b 1C000000 		.4byte	.LVL5
+ 1478 000f 24000000 		.4byte	.LFE36
+ 1479 0013 0400     		.2byte	0x4
+ 1480 0015 F3       		.byte	0xf3
+ 1481 0016 01       		.uleb128 0x1
+ 1482 0017 50       		.byte	0x50
+ 1483 0018 9F       		.byte	0x9f
+ 1484 0019 00000000 		.4byte	0
+ 1485 001d 00000000 		.4byte	0
+ 1486              	.LLST1:
+ 1487 0021 00000000 		.4byte	.LVL0
+ 1488 0025 1A000000 		.4byte	.LVL4
+ 1489 0029 0300     		.2byte	0x3
+ 1490 002b 09       		.byte	0x9
+ 1491 002c FF       		.byte	0xff
+ 1492 002d 9F       		.byte	0x9f
+ 1493 002e 1A000000 		.4byte	.LVL4
+ 1494 0032 24000000 		.4byte	.LFE36
+ 1495 0036 0100     		.2byte	0x1
+ 1496 0038 53       		.byte	0x53
+ 1497 0039 00000000 		.4byte	0
+ 1498 003d 00000000 		.4byte	0
+ 1499              	.LLST2:
+ 1500 0041 00000000 		.4byte	.LVL0
+ 1501 0045 04000000 		.4byte	.LVL1
+ 1502 0049 0200     		.2byte	0x2
+ 1503 004b 30       		.byte	0x30
+ 1504 004c 9F       		.byte	0x9f
+ 1505 004d 04000000 		.4byte	.LVL1
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 30
 
 
- 1490      65642063 
- 1490      68617200 
- 1491              	.LASF22:
- 1492 02ae 6C657474 		.ascii	"letter_morze_code\000"
- 1492      65725F6D 
- 1492      6F727A65 
- 1492      5F636F64 
- 1492      6500
- 1493              	.LASF31:
- 1494 02c0 73707269 		.ascii	"sprintf\000"
- 1494      6E746600 
- 1495              	.LASF34:
- 1496 02c8 43794465 		.ascii	"CyDelay\000"
- 1496      6C617900 
- 1497              	.LASF21:
- 1498 02d0 6E5F6C65 		.ascii	"n_letter\000"
- 1498      74746572 
- 1498      00
- 1499              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1506 0051 18000000 		.4byte	.LVL3
+ 1507 0055 0100     		.2byte	0x1
+ 1508 0057 53       		.byte	0x53
+ 1509 0058 00000000 		.4byte	0
+ 1510 005c 00000000 		.4byte	0
+ 1511              	.LLST3:
+ 1512 0060 00000000 		.4byte	.LVL6
+ 1513 0064 0F000000 		.4byte	.LVL8-1
+ 1514 0068 0100     		.2byte	0x1
+ 1515 006a 50       		.byte	0x50
+ 1516 006b 0F000000 		.4byte	.LVL8-1
+ 1517 006f 28000000 		.4byte	.LVL11
+ 1518 0073 0100     		.2byte	0x1
+ 1519 0075 59       		.byte	0x59
+ 1520 0076 28000000 		.4byte	.LVL11
+ 1521 007a 2A000000 		.4byte	.LVL12
+ 1522 007e 0100     		.2byte	0x1
+ 1523 0080 53       		.byte	0x53
+ 1524 0081 2A000000 		.4byte	.LVL12
+ 1525 0085 48000000 		.4byte	.LVL16
+ 1526 0089 0100     		.2byte	0x1
+ 1527 008b 59       		.byte	0x59
+ 1528 008c 48000000 		.4byte	.LVL16
+ 1529 0090 4D000000 		.4byte	.LVL17-1
+ 1530 0094 0100     		.2byte	0x1
+ 1531 0096 53       		.byte	0x53
+ 1532 0097 4D000000 		.4byte	.LVL17-1
+ 1533 009b 04010000 		.4byte	.LVL43
+ 1534 009f 0100     		.2byte	0x1
+ 1535 00a1 59       		.byte	0x59
+ 1536 00a2 04010000 		.4byte	.LVL43
+ 1537 00a6 2C010000 		.4byte	.LFE37
+ 1538 00aa 0400     		.2byte	0x4
+ 1539 00ac F3       		.byte	0xf3
+ 1540 00ad 01       		.uleb128 0x1
+ 1541 00ae 50       		.byte	0x50
+ 1542 00af 9F       		.byte	0x9f
+ 1543 00b0 00000000 		.4byte	0
+ 1544 00b4 00000000 		.4byte	0
+ 1545              	.LLST4:
+ 1546 00b8 0C000000 		.4byte	.LVL7
+ 1547 00bc 1E000000 		.4byte	.LVL10
+ 1548 00c0 0200     		.2byte	0x2
+ 1549 00c2 30       		.byte	0x30
+ 1550 00c3 9F       		.byte	0x9f
+ 1551 00c4 6E000000 		.4byte	.LVL22
+ 1552 00c8 74000000 		.4byte	.LVL23
+ 1553 00cc 0200     		.2byte	0x2
+ 1554 00ce 30       		.byte	0x30
+ 1555 00cf 9F       		.byte	0x9f
+ 1556 00d0 74000000 		.4byte	.LVL23
+ 1557 00d4 F2000000 		.4byte	.LVL39
+ 1558 00d8 0100     		.2byte	0x1
+ 1559 00da 57       		.byte	0x57
+ 1560 00db 00000000 		.4byte	0
+ 1561 00df 00000000 		.4byte	0
+ 1562              	.LLST5:
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 31
+
+
+ 1563 00e3 0C000000 		.4byte	.LVL7
+ 1564 00e7 1E000000 		.4byte	.LVL10
+ 1565 00eb 0200     		.2byte	0x2
+ 1566 00ed 30       		.byte	0x30
+ 1567 00ee 9F       		.byte	0x9f
+ 1568 00ef 4E000000 		.4byte	.LVL17
+ 1569 00f3 52000000 		.4byte	.LVL18
+ 1570 00f7 0100     		.2byte	0x1
+ 1571 00f9 50       		.byte	0x50
+ 1572 00fa 00000000 		.4byte	0
+ 1573 00fe 00000000 		.4byte	0
+ 1574              	.LLST6:
+ 1575 0102 18000000 		.4byte	.LVL9
+ 1576 0106 1E000000 		.4byte	.LVL10
+ 1577 010a 0200     		.2byte	0x2
+ 1578 010c 30       		.byte	0x30
+ 1579 010d 9F       		.byte	0x9f
+ 1580 010e 1E000000 		.4byte	.LVL10
+ 1581 0112 04010000 		.4byte	.LVL42
+ 1582 0116 0100     		.2byte	0x1
+ 1583 0118 58       		.byte	0x58
+ 1584 0119 00000000 		.4byte	0
+ 1585 011d 00000000 		.4byte	0
+ 1586              	.LLST7:
+ 1587 0121 5A000000 		.4byte	.LVL19
+ 1588 0125 F2000000 		.4byte	.LVL39
+ 1589 0129 0100     		.2byte	0x1
+ 1590 012b 5A       		.byte	0x5a
+ 1591 012c 00000000 		.4byte	0
+ 1592 0130 00000000 		.4byte	0
+ 1593              	.LLST8:
+ 1594 0134 5A000000 		.4byte	.LVL19
+ 1595 0138 74000000 		.4byte	.LVL23
+ 1596 013c 0200     		.2byte	0x2
+ 1597 013e 31       		.byte	0x31
+ 1598 013f 9F       		.byte	0x9f
+ 1599 0140 74000000 		.4byte	.LVL23
+ 1600 0144 D6000000 		.4byte	.LVL35
+ 1601 0148 0100     		.2byte	0x1
+ 1602 014a 54       		.byte	0x54
+ 1603 014b D8000000 		.4byte	.LVL36
+ 1604 014f F2000000 		.4byte	.LVL39
+ 1605 0153 0100     		.2byte	0x1
+ 1606 0155 54       		.byte	0x54
+ 1607 0156 00000000 		.4byte	0
+ 1608 015a 00000000 		.4byte	0
+ 1609              	.LLST9:
+ 1610 015e 5C000000 		.4byte	.LVL20
+ 1611 0162 F2000000 		.4byte	.LVL39
+ 1612 0166 0100     		.2byte	0x1
+ 1613 0168 56       		.byte	0x56
+ 1614 0169 00000000 		.4byte	0
+ 1615 016d 00000000 		.4byte	0
+ 1616              	.LLST10:
+ 1617 0171 26000000 		.4byte	.LVL50
+ 1618 0175 38000000 		.4byte	.LVL53
+ 1619 0179 0100     		.2byte	0x1
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 32
+
+
+ 1620 017b 54       		.byte	0x54
+ 1621 017c 4C000000 		.4byte	.LVL56
+ 1622 0180 58000000 		.4byte	.LFE38
+ 1623 0184 0100     		.2byte	0x1
+ 1624 0186 54       		.byte	0x54
+ 1625 0187 00000000 		.4byte	0
+ 1626 018b 00000000 		.4byte	0
+ 1627              	.LLST11:
+ 1628 018f 1E000000 		.4byte	.LVL47
+ 1629 0193 20000000 		.4byte	.LVL48
+ 1630 0197 0200     		.2byte	0x2
+ 1631 0199 30       		.byte	0x30
+ 1632 019a 9F       		.byte	0x9f
+ 1633 019b 20000000 		.4byte	.LVL48
+ 1634 019f 36000000 		.4byte	.LVL52
+ 1635 01a3 0100     		.2byte	0x1
+ 1636 01a5 55       		.byte	0x55
+ 1637 01a6 36000000 		.4byte	.LVL52
+ 1638 01aa 48000000 		.4byte	.LVL55
+ 1639 01ae 0300     		.2byte	0x3
+ 1640 01b0 75       		.byte	0x75
+ 1641 01b1 01       		.sleb128 1
+ 1642 01b2 9F       		.byte	0x9f
+ 1643 01b3 48000000 		.4byte	.LVL55
+ 1644 01b7 4C000000 		.4byte	.LVL56
+ 1645 01bb 0200     		.2byte	0x2
+ 1646 01bd 30       		.byte	0x30
+ 1647 01be 9F       		.byte	0x9f
+ 1648 01bf 4C000000 		.4byte	.LVL56
+ 1649 01c3 52000000 		.4byte	.LVL57
+ 1650 01c7 0300     		.2byte	0x3
+ 1651 01c9 75       		.byte	0x75
+ 1652 01ca 01       		.sleb128 1
+ 1653 01cb 9F       		.byte	0x9f
+ 1654 01cc 52000000 		.4byte	.LVL57
+ 1655 01d0 58000000 		.4byte	.LFE38
+ 1656 01d4 0100     		.2byte	0x1
+ 1657 01d6 55       		.byte	0x55
+ 1658 01d7 00000000 		.4byte	0
+ 1659 01db 00000000 		.4byte	0
+ 1660              		.section	.debug_aranges,"",%progbits
+ 1661 0000 2C000000 		.4byte	0x2c
+ 1662 0004 0200     		.2byte	0x2
+ 1663 0006 00000000 		.4byte	.Ldebug_info0
+ 1664 000a 04       		.byte	0x4
+ 1665 000b 00       		.byte	0
+ 1666 000c 0000     		.2byte	0
+ 1667 000e 0000     		.2byte	0
+ 1668 0010 00000000 		.4byte	.LFB36
+ 1669 0014 24000000 		.4byte	.LFE36-.LFB36
+ 1670 0018 00000000 		.4byte	.LFB37
+ 1671 001c 2C010000 		.4byte	.LFE37-.LFB37
+ 1672 0020 00000000 		.4byte	.LFB38
+ 1673 0024 58000000 		.4byte	.LFE38-.LFB38
+ 1674 0028 00000000 		.4byte	0
+ 1675 002c 00000000 		.4byte	0
+ 1676              		.section	.debug_ranges,"",%progbits
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 33
+
+
+ 1677              	.Ldebug_ranges0:
+ 1678 0000 00000000 		.4byte	.LFB36
+ 1679 0004 24000000 		.4byte	.LFE36
+ 1680 0008 00000000 		.4byte	.LFB37
+ 1681 000c 2C010000 		.4byte	.LFE37
+ 1682 0010 00000000 		.4byte	.LFB38
+ 1683 0014 58000000 		.4byte	.LFE38
+ 1684 0018 00000000 		.4byte	0
+ 1685 001c 00000000 		.4byte	0
+ 1686              		.section	.debug_line,"",%progbits
+ 1687              	.Ldebug_line0:
+ 1688 0000 BF010000 		.section	.debug_str,"MS",%progbits,1
+ 1688      02001D01 
+ 1688      00000201 
+ 1688      FB0E0D00 
+ 1688      01010101 
+ 1689              	.LASF43:
+ 1690 0000 443A5C75 		.ascii	"D:\\ucu\\2_course1_term\\POC\\programs\\my_works\\S"
+ 1690      63755C32 
+ 1690      5F636F75 
+ 1690      72736531 
+ 1690      5F746572 
+ 1691 002d 6D617274 		.ascii	"mart_lightning_system\\Code_Morse.cydsn\000"
+ 1691      5F6C6967 
+ 1691      68746E69 
+ 1691      6E675F73 
+ 1691      79737465 
+ 1692              	.LASF20:
+ 1693 0054 776F7264 		.ascii	"word\000"
+ 1693      00
+ 1694              	.LASF27:
+ 1695 0059 6C657474 		.ascii	"letter_to_morse\000"
+ 1695      65725F74 
+ 1695      6F5F6D6F 
+ 1695      72736500 
+ 1696              	.LASF26:
+ 1697 0069 6C656E5F 		.ascii	"len_morse_letter\000"
+ 1697      6D6F7273 
+ 1697      655F6C65 
+ 1697      74746572 
+ 1697      00
+ 1698              	.LASF25:
+ 1699 007a 64617368 		.ascii	"dash_or_dot_bit\000"
+ 1699      5F6F725F 
+ 1699      646F745F 
+ 1699      62697400 
+ 1700              	.LASF21:
+ 1701 008a 64617368 		.ascii	"dash_period\000"
+ 1701      5F706572 
+ 1701      696F6400 
+ 1702              	.LASF39:
+ 1703 0096 55415254 		.ascii	"UART_SpiUartWriteTxData\000"
+ 1703      5F537069 
+ 1703      55617274 
+ 1703      57726974 
+ 1703      65547844 
+ 1704              	.LASF8:
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 34
+
+
+ 1705 00ae 756E7369 		.ascii	"unsigned int\000"
+ 1705      676E6564 
+ 1705      20696E74 
+ 1705      00
+ 1706              	.LASF13:
+ 1707 00bb 646F7562 		.ascii	"double\000"
+ 1707      6C6500
+ 1708              	.LASF34:
+ 1709 00c2 50574D5F 		.ascii	"PWM_1_WriteCompare\000"
+ 1709      315F5772 
+ 1709      69746543 
+ 1709      6F6D7061 
+ 1709      726500
+ 1710              	.LASF31:
+ 1711 00d5 55415254 		.ascii	"UART_UartPutString\000"
+ 1711      5F556172 
+ 1711      74507574 
+ 1711      53747269 
+ 1711      6E6700
+ 1712              	.LASF41:
+ 1713 00e8 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1713      43313120 
+ 1713      352E342E 
+ 1713      31203230 
+ 1713      31363036 
+ 1714 011b 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1714      20726576 
+ 1714      6973696F 
+ 1714      6E203233 
+ 1714      37373135 
+ 1715 014e 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1715      66756E63 
+ 1715      74696F6E 
+ 1715      2D736563 
+ 1715      74696F6E 
+ 1716              	.LASF12:
+ 1717 0176 666C6F61 		.ascii	"float\000"
+ 1717      7400
+ 1718              	.LASF17:
+ 1719 017c 6E5F6C65 		.ascii	"n_letter_in_table\000"
+ 1719      74746572 
+ 1719      5F696E5F 
+ 1719      7461626C 
+ 1719      6500
+ 1720              	.LASF45:
+ 1721 018e 776F7264 		.ascii	"word_to_morse\000"
+ 1721      5F746F5F 
+ 1721      6D6F7273 
+ 1721      6500
+ 1722              	.LASF28:
+ 1723 019c 54455854 		.ascii	"TEXT_BUF\000"
+ 1723      5F425546 
+ 1723      00
+ 1724              	.LASF36:
+ 1725 01a5 50574D5F 		.ascii	"PWM_1_Start\000"
+ 1725      315F5374 
+ 1725      61727400 
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 35
+
+
+ 1726              	.LASF37:
+ 1727 01b1 55415254 		.ascii	"UART_Start\000"
+ 1727      5F537461 
+ 1727      727400
+ 1728              	.LASF44:
+ 1729 01bc 6765745F 		.ascii	"get_letter_pos\000"
+ 1729      6C657474 
+ 1729      65725F70 
+ 1729      6F7300
+ 1730              	.LASF29:
+ 1731 01cb 444F545F 		.ascii	"DOT_LEN_DELAY\000"
+ 1731      4C454E5F 
+ 1731      44454C41 
+ 1731      5900
+ 1732              	.LASF5:
+ 1733 01d9 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1733      20756E73 
+ 1733      69676E65 
+ 1733      6420696E 
+ 1733      7400
+ 1734              	.LASF3:
+ 1735 01eb 73686F72 		.ascii	"short unsigned int\000"
+ 1735      7420756E 
+ 1735      7369676E 
+ 1735      65642069 
+ 1735      6E7400
+ 1736              	.LASF10:
+ 1737 01fe 75696E74 		.ascii	"uint16\000"
+ 1737      313600
+ 1738              	.LASF22:
+ 1739 0205 646F745F 		.ascii	"dot_period\000"
+ 1739      70657269 
+ 1739      6F6400
+ 1740              	.LASF11:
+ 1741 0210 75696E74 		.ascii	"uint32\000"
+ 1741      333200
+ 1742              	.LASF46:
+ 1743 0217 6D61696E 		.ascii	"main\000"
+ 1743      00
+ 1744              	.LASF1:
+ 1745 021c 756E7369 		.ascii	"unsigned char\000"
+ 1745      676E6564 
+ 1745      20636861 
+ 1745      7200
+ 1746              	.LASF35:
+ 1747 022a 7374726C 		.ascii	"strlen\000"
+ 1747      656E00
+ 1748              	.LASF7:
+ 1749 0231 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1749      206C6F6E 
+ 1749      6720756E 
+ 1749      7369676E 
+ 1749      65642069 
+ 1750              	.LASF33:
+ 1751 0248 50696E5F 		.ascii	"Pin_Red_Write\000"
+ 1751      5265645F 
+ 1751      57726974 
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 36
+
+
+ 1751      6500
+ 1752              	.LASF16:
+ 1753 0256 73697A65 		.ascii	"sizetype\000"
+ 1753      74797065 
+ 1753      00
+ 1754              	.LASF40:
+ 1755 025f 66726565 		.ascii	"free\000"
+ 1755      00
+ 1756              	.LASF6:
+ 1757 0264 6C6F6E67 		.ascii	"long long int\000"
+ 1757      206C6F6E 
+ 1757      6720696E 
+ 1757      7400
+ 1758              	.LASF42:
+ 1759 0272 6D61696E 		.ascii	"main.c\000"
+ 1759      2E6300
+ 1760              	.LASF14:
+ 1761 0279 63686172 		.ascii	"char\000"
+ 1761      00
+ 1762              	.LASF18:
+ 1763 027e 6E5F6C65 		.ascii	"n_letter_detail\000"
+ 1763      74746572 
+ 1763      5F646574 
+ 1763      61696C00 
+ 1764              	.LASF2:
+ 1765 028e 73686F72 		.ascii	"short int\000"
+ 1765      7420696E 
+ 1765      7400
+ 1766              	.LASF9:
+ 1767 0298 75696E74 		.ascii	"uint8\000"
+ 1767      3800
+ 1768              	.LASF47:
+ 1769 029e 6D656D63 		.ascii	"memcpy\000"
+ 1769      707900
+ 1770              	.LASF4:
+ 1771 02a5 6C6F6E67 		.ascii	"long int\000"
+ 1771      20696E74 
+ 1771      00
+ 1772              	.LASF15:
+ 1773 02ae 6C6F6E67 		.ascii	"long double\000"
+ 1773      20646F75 
+ 1773      626C6500 
+ 1774              	.LASF19:
+ 1775 02ba 6C657474 		.ascii	"letter\000"
+ 1775      657200
+ 1776              	.LASF0:
+ 1777 02c1 7369676E 		.ascii	"signed char\000"
+ 1777      65642063 
+ 1777      68617200 
+ 1778              	.LASF24:
+ 1779 02cd 6C657474 		.ascii	"letter_morze_code\000"
+ 1779      65725F6D 
+ 1779      6F727A65 
+ 1779      5F636F64 
+ 1779      6500
+ 1780              	.LASF38:
+ 1781 02df 55415254 		.ascii	"UART_UartGetChar\000"
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccEebgcv.s 			page 37
+
+
+ 1781      5F556172 
+ 1781      74476574 
+ 1781      43686172 
+ 1781      00
+ 1782              	.LASF32:
+ 1783 02f0 73707269 		.ascii	"sprintf\000"
+ 1783      6E746600 
+ 1784              	.LASF30:
+ 1785 02f8 43794465 		.ascii	"CyDelay\000"
+ 1785      6C617900 
+ 1786              	.LASF23:
+ 1787 0300 6E5F6C65 		.ascii	"n_letter\000"
+ 1787      74746572 
+ 1787      00
+ 1788              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

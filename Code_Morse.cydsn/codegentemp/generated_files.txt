@@ -13,22 +13,10 @@
   <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\cyfitteriar.inc" value="HEADER;;;;;" />
   <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\cyfitter.h" value="HEADER;;;;;" />
   <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\cydisabledsheets.h" value="HEADER;;;;;" />
-  <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\Pin_Green.c" value="SOURCE_C;CortexM0;;;;Pin_Green" />
-  <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\Pin_Green.h" value="HEADER;;;;;Pin_Green" />
-  <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\Pin_Green_aliases.h" value="HEADER;;;;;Pin_Green" />
-  <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\Pin_Green_PM.c" value="SOURCE_C;CortexM0;;;;Pin_Green" />
   <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\Pin_Red.c" value="SOURCE_C;CortexM0;;;;Pin_Red" />
   <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\Pin_Red.h" value="HEADER;;;;;Pin_Red" />
   <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\Pin_Red_aliases.h" value="HEADER;;;;;Pin_Red" />
   <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\Pin_Red_PM.c" value="SOURCE_C;CortexM0;;;;Pin_Red" />
-  <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\Pin_Blue.c" value="SOURCE_C;CortexM0;;;;Pin_Blue" />
-  <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\Pin_Blue.h" value="HEADER;;;;;Pin_Blue" />
-  <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\Pin_Blue_aliases.h" value="HEADER;;;;;Pin_Blue" />
-  <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\Pin_Blue_PM.c" value="SOURCE_C;CortexM0;;;;Pin_Blue" />
-  <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\Pin_SW2.c" value="SOURCE_C;CortexM0;;;;Pin_SW2" />
-  <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\Pin_SW2.h" value="HEADER;;;;;Pin_SW2" />
-  <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\Pin_SW2_aliases.h" value="HEADER;;;;;Pin_SW2" />
-  <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\Pin_SW2_PM.c" value="SOURCE_C;CortexM0;;;;Pin_SW2" />
   <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\Clock_1.c" value="SOURCE_C;CortexM0;;;;Clock_1" />
   <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\Clock_1.h" value="HEADER;;;;;Clock_1" />
   <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Code_Morse.cydsn\codegentemp\PWM_1.c" value="SOURCE_C;CortexM0;;;;PWM_1" />

@@ -55,18 +55,10 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitteriar.inc</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cydisabledsheets.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Green.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Green.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Green_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Green_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Red.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Red.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Red_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Red_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Blue.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Blue.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Blue_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Blue_PM.c</File>
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">Generated_Source\PSoC4\cm0gcc.ld</File>
           <File BuildType="BUILD" Toolchain="ARM MDK Generic">Generated_Source\PSoC4\Cm0RealView.scat</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Cm0Start.c</File>
@@ -100,10 +92,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareimport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareexport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareimport.scat</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_SW2.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_SW2.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_SW2_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_SW2_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_1.c</File>
