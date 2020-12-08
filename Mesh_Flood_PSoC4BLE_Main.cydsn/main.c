@@ -174,7 +174,8 @@ void InitializeSystem(void)
 	/* Assign the new ADV data to stack */
 	cyBle_discoveryModeInfo.advData = &new_advData;
 	#endif
-		
+	
+    //Timet_new
 	/* Provide a color pusle on RGB LED to indicate startup */
 	//PrISM_1_WritePulse1(128);
 	//CyDelay(20);
@@ -182,6 +183,7 @@ void InitializeSystem(void)
 	
     UART_Start();
     UART_UartPutString("Helloushki\n");
+    
 	#ifdef DEBUG_ENABLED
 		
 		UART_UartPutString("--------------------------Mesh Flood------------------------------------------");
@@ -200,6 +202,9 @@ CY_ISR(CC_TC_InterruptHandler)
     if (interrupt_counter == 4) {
         interrupt_counter = 0;
     }
+    isr_Counter_ClearPending();
+    
+    
     //PWM_1sWindow_ClearInterrupt(PWM_1sWindow_INTR_MASK_CC_MATCH);
     //PWM_1sWindow_ClearInterrupt(PWM_1sWindow_INTR_MASK_TC);
 }

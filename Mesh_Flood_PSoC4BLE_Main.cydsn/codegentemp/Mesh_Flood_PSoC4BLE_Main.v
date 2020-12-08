@@ -1,6 +1,6 @@
 // ======================================================================
 // Mesh_Flood_PSoC4BLE_Main.v generated from TopDesign.cysch
-// 12/07/2020 at 18:21
+// 12/07/2020 at 19:54
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -548,6 +548,7 @@ endmodule
 // top
 module top ;
 
+          wire  Net_139;
           wire  Net_115;
           wire  Net_114;
           wire  Net_113;
@@ -582,7 +583,6 @@ module top ;
           wire  Net_64;
           wire  Net_93;
           wire  Net_92;
-          wire  Net_139;
           wire  Net_60;
           wire  Net_62;
           wire  Net_63;
