@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="Micro" Path="C:\Users\janusdg-win\UCU\Sample_1\Workspace\Micro.cydsn" Version="5.81" Type="Normal">
+  <Project Name="Micro" Path="C:\Users\janusdg-win\UCU\Workspace\Micro.cydsn" Version="5.81" Type="Normal">
     <CMSIS_SVD_File>Micro.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -34,14 +34,14 @@
       <LinkerFile Toolchain="ARM IAR Generic">.\Generated_Source\PSoC4\Cm0Iar.icf</LinkerFile>
     </LinkerFiles>
     <Folders>
-      <Folder BuildType="STRICT" Path="C:\Users\janusdg-win\UCU\Sample_1\Workspace\Micro.cydsn">
-        <Files Root="C:\Users\janusdg-win\UCU\Sample_1\Workspace\Micro.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\janusdg-win\UCU\Workspace\Micro.cydsn">
+        <Files Root="C:\Users\janusdg-win\UCU\Workspace\Micro.cydsn">
           <File BuildType="BUILD" Toolchain="">main.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\janusdg-win\UCU\Sample_1\Workspace\Micro.cydsn\Generated_Source\PSoC4">
-        <Files Root="C:\Users\janusdg-win\UCU\Sample_1\Workspace\Micro.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\janusdg-win\UCU\Workspace\Micro.cydsn\Generated_Source\PSoC4">
+        <Files Root="C:\Users\janusdg-win\UCU\Workspace\Micro.cydsn">
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter_cfg.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cymetadata.c</File>
@@ -54,10 +54,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitteriar.inc</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cydisabledsheets.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_1_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_1_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_SPI_UART.h</File>
@@ -114,41 +110,68 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareimport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareexport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareimport.scat</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_2.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_2.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_2_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_2_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Mic_D.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Mic_D.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Mic_D_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Mic_D_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Mic_A.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Mic_A.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Mic_A_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Mic_A_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC_MIC.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC_MIC.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC_MIC_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC_MIC_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC_MIC_IRQ.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC_MIC_IRQ.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC_MIC_intClock.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC_MIC_intClock.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_Brightness.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_Brightness.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_Brightness_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_DLed.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_DLed.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_DLed_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_DLed_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_ALed.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_ALed.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_ALed_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_ALed_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_Counter.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_Counter.h</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
-        <Files Root="C:\Users\janusdg-win\UCU\Sample_1\Workspace\Micro.cydsn" />
+        <Files Root="C:\Users\janusdg-win\UCU\Workspace\Micro.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_441">
-        <Files Root="C:\Users\janusdg-win\UCU\Sample_1\Workspace\Micro.cydsn" />
+        <Files Root="C:\Users\janusdg-win\UCU\Workspace\Micro.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_473">
-        <Files Root="C:\Users\janusdg-win\UCU\Sample_1\Workspace\Micro.cydsn" />
+        <Files Root="C:\Users\janusdg-win\UCU\Workspace\Micro.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051_Keil_952">
-        <Files Root="C:\Users\janusdg-win\UCU\Sample_1\Workspace\Micro.cydsn" />
+        <Files Root="C:\Users\janusdg-win\UCU\Workspace\Micro.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051">
-        <Files Root="C:\Users\janusdg-win\UCU\Sample_1\Workspace\Micro.cydsn" />
+        <Files Root="C:\Users\janusdg-win\UCU\Workspace\Micro.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0">
-        <Files Root="C:\Users\janusdg-win\UCU\Sample_1\Workspace\Micro.cydsn" />
+        <Files Root="C:\Users\janusdg-win\UCU\Workspace\Micro.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0p">
-        <Files Root="C:\Users\janusdg-win\UCU\Sample_1\Workspace\Micro.cydsn" />
+        <Files Root="C:\Users\janusdg-win\UCU\Workspace\Micro.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM3">
-        <Files Root="C:\Users\janusdg-win\UCU\Sample_1\Workspace\Micro.cydsn" />
+        <Files Root="C:\Users\janusdg-win\UCU\Workspace\Micro.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM4">
-        <Files Root="C:\Users\janusdg-win\UCU\Sample_1\Workspace\Micro.cydsn" />
+        <Files Root="C:\Users\janusdg-win\UCU\Workspace\Micro.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM7">
-        <Files Root="C:\Users\janusdg-win\UCU\Sample_1\Workspace\Micro.cydsn" />
+        <Files Root="C:\Users\janusdg-win\UCU\Workspace\Micro.cydsn" />
       </Folder>
     </Folders>
   </Project>

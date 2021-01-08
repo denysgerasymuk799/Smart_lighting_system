@@ -1,3 +1,3 @@
-# Component constraints for C:\Users\janusdg-win\UCU\Sample_1\Workspace\Micro.cydsn\TopDesign\TopDesign.cysch
-# Project: C:\Users\janusdg-win\UCU\Sample_1\Workspace\Micro.cydsn\Micro.cyprj
-# Date: Fri, 04 Dec 2020 17:30:10 GMT
+# Component constraints for C:\Users\janusdg-win\UCU\Workspace\Micro.cydsn\TopDesign\TopDesign.cysch
+# Project: C:\Users\janusdg-win\UCU\Workspace\Micro.cydsn\Micro.cyprj
+# Date: Fri, 08 Jan 2021 01:29:32 GMT

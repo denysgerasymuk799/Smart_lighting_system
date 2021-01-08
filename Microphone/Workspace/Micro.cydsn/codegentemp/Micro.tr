@@ -16,17 +16,22 @@
 ##################################################################### 
                     1::Clock Frequency Summary
 ===================================================================== 
-Number of clocks: 10
-Clock: CyECO             | N/A  | Target: 24.00 MHz  | 
-Clock: CyHFClk           | N/A  | Target: 48.00 MHz  | 
-Clock: CyILO             | N/A  | Target: 0.03 MHz   | 
-Clock: CyIMO             | N/A  | Target: 48.00 MHz  | 
-Clock: CyLFClk           | N/A  | Target: 0.03 MHz   | 
-Clock: CyRouted1         | N/A  | Target: 48.00 MHz  | 
-Clock: CySysClk          | N/A  | Target: 48.00 MHz  | 
-Clock: CyWCO             | N/A  | Target: 0.03 MHz   | 
-Clock: UART_SCBCLK       | N/A  | Target: 1.85 MHz   | 
-Clock: UART_SCBCLK(FFB)  | N/A  | Target: 1.85 MHz   | 
+Number of clocks: 15
+Clock: ADC_MIC_intClock       | N/A  | Target: 3.00 MHz    | 
+Clock: ADC_MIC_intClock(FFB)  | N/A  | Target: 3.00 MHz    | 
+Clock: ClockBlock/ff_div_8    | N/A  | Target: 100.00 MHz  | 
+Clock: Clock_1                | N/A  | Target: 12.00 MHz   | 
+Clock: Clock_1(FFB)           | N/A  | Target: 12.00 MHz   | 
+Clock: CyECO                  | N/A  | Target: 24.00 MHz   | 
+Clock: CyHFClk                | N/A  | Target: 48.00 MHz   | 
+Clock: CyILO                  | N/A  | Target: 0.03 MHz    | 
+Clock: CyIMO                  | N/A  | Target: 48.00 MHz   | 
+Clock: CyLFClk                | N/A  | Target: 0.03 MHz    | 
+Clock: CyRouted1              | N/A  | Target: 48.00 MHz   | 
+Clock: CySysClk               | N/A  | Target: 48.00 MHz   | 
+Clock: CyWCO                  | N/A  | Target: 0.03 MHz    | 
+Clock: UART_SCBCLK            | N/A  | Target: 0.15 MHz    | 
+Clock: UART_SCBCLK(FFB)       | N/A  | Target: 0.15 MHz    | 
 
  =====================================================================
                     End of Clock Frequency Summary
@@ -60,36 +65,36 @@ Port Name  Setup to Clk  Clock Name:Phase
 -----------------------3.2::Clock to Out
 ----------------------------------------
 
-Port Name  Clock to Out  Clock Name:Phase  
----------  ------------  ----------------  
+Port Name        Clock to Out  Clock Name:Phase       
+---------------  ------------  ---------------------  
+Pin_ALed(0)_PAD  14193         ClockBlock/ff_div_8:R  
 
 
--------------------------3.3::Pad to Pad
-----------------------------------------
+                         3.3::Pad to Pad
+                         ---------------
 
 Port Name (Source)  Port Name (Destination)  Delay  
 ------------------  -----------------------  -----  
-Pin_1(0)_PAD        Pin_2(0)_PAD             30928  
 
- =====================================================================
+===================================================================== 
                     End of Datasheet Report
- #####################################################################
- #####################################################################
+##################################################################### 
+##################################################################### 
                     4::Path Details for Clock Frequency Summary
 
- =====================================================================
+===================================================================== 
                     End of Path Details for Clock Frequency Summary
- #####################################################################
+##################################################################### 
 
 
- #####################################################################
+##################################################################### 
                     5::Path Details for Clock Relationship Summary
- =====================================================================
+===================================================================== 
 
 
- =====================================================================
+===================================================================== 
                     End of Path Details for Clock Relationship Summary
- #####################################################################
+##################################################################### 
 
 ##################################################################### 
                     Detailed Report for all timing paths 

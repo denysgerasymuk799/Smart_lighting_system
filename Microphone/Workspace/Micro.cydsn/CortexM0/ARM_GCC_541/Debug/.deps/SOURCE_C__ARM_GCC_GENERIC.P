@@ -1,172 +1,90 @@
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/Cm0Start.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Cm0Start.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/cyapicallbacks.h 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/main.o : C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/ADC_MIC.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/ADC_MIC_IRQ.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/ADC_MIC_intClock.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/Clock_1.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyDMA.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/PWM_Brightness.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_ALed.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_ALed_aliases.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_DLed.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_DLed_aliases.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_Mic_A.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_Mic_A_aliases.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_Mic_D.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_Mic_D_aliases.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_BOOT.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PINS.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PVT.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SCBCLK.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART_PVT.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx_aliases.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx_aliases.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cmsis_armcc.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cmsis_compiler.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cmsis_gcc.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/core_cm0.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyPm.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cy_em_eeprom.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydisabledsheets.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/isr_Counter.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/project.h C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/main.c 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Cm0Start.c : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/ADC_MIC.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/ADC_MIC_IRQ.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/ADC_MIC_intClock.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/Clock_1.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyDMA.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyFlash.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/cyapicallbacks.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/CyDMA.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyDMA.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyDMA.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/PWM_Brightness.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyDMA.c : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_ALed.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyDMA.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_ALed_aliases.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/CyFlash.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyFlash.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_DLed.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyFlash.c : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_DLed_aliases.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyFlash.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_Mic_A.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/CyLFClk.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_Mic_A_aliases.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.c : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_Mic_D.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/CyLib.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_Mic_D_aliases.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.c : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/Pin_1.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_1.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_1.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_1_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_BOOT.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_1.c : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PINS.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_1.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PVT.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_1_aliases.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SCBCLK.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/Pin_1_PM.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_1.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_1_PM.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_1_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART_PVT.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_1_PM.c : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/Pin_2.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_2.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_2.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_2_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx_aliases.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_2.c : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_2.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx_aliases.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_2_aliases.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cmsis_armcc.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/Pin_2_PM.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_2.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_2_PM.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_2_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cmsis_compiler.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_2_PM.c : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cmsis_gcc.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/UART.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PINS.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PVT.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SCBCLK.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART_PVT.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/core_cm0.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART.c : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyPm.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PINS.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cy_em_eeprom.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PVT.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SCBCLK.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydisabledsheets.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART_PVT.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx_aliases.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/isr_Counter.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx_aliases.h : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/Generated_Source/PSoC4/project.h : 
 
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/UART_BOOT.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_BOOT.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_BOOT.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PINS.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PVT.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SCBCLK.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_BOOT.c : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_BOOT.h : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/UART_PM.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PINS.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PM.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PVT.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SCBCLK.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART_PVT.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PM.c : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/UART_SCBCLK.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SCBCLK.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SCBCLK.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SCBCLK.c : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/UART_SPI_UART.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PINS.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PVT.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SCBCLK.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART_PVT.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART.c : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/UART_SPI_UART_INT.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PINS.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PVT.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SCBCLK.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART_INT.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART_PVT.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/cyapicallbacks.h 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART_INT.c : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/UART_UART.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PINS.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PVT.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SCBCLK.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART_PVT.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_UART.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/cyapicallbacks.h 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_UART.c : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/UART_UART_BOOT.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_BOOT.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PINS.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PVT.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SCBCLK.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_UART_BOOT.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_UART_BOOT.c : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/UART_rx.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx.c : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/UART_rx_PM.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx_PM.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx_PM.c : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/UART_tx.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx.c : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/UART_tx_PM.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx_PM.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx_PM.c : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/cyPm.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyPm.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyPm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyPm.c : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyPm.h : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/cy_em_eeprom.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cy_em_eeprom.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cy_em_eeprom.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cy_em_eeprom.c : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cy_em_eeprom.h : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/cyfitter_cfg.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter_cfg.c C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/cyapicallbacks.h 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter_cfg.c : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/cyutils.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyutils.c 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyutils.c : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/CortexM0/ARM_GCC_541/Debug/main.o : C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cmsis_armcc.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cmsis_compiler.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cmsis_gcc.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/core_cm0.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydisabledsheets.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/project.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyDMA.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_1.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_1_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_2.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/Pin_2_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_BOOT.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PINS.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_PVT.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SCBCLK.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_SPI_UART_PVT.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_rx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/UART_tx_aliases.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyPm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cy_em_eeprom.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/main.c 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cmsis_armcc.h : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cmsis_compiler.h : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cmsis_gcc.h : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/core_cm0.h : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/cydisabledsheets.h : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/Generated_Source/PSoC4/project.h : 
-
-C:/Users/janusdg-win/UCU/Sample_1/Workspace/Micro.cydsn/main.c : 
+C:/Users/janusdg-win/UCU/Workspace/Micro.cydsn/main.c : 
 

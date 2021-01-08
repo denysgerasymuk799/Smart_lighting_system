@@ -12,11 +12,13 @@
   <Data key="DataVersionKey" value="2" />
   <Group key="DWRInstGuidMapping">
     <Group key="Pin">
+      <Data key="0ef97bf9-3fd6-4b3a-9fcb-e58497261af1" value="Pin_ALed" />
       <Data key="4cfab5fb-f133-4995-8a8a-1f2e39cbfa24" value="Pin_2" />
-      <Data key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba" value="Pin_1" />
+      <Data key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba" value="Pin_Mic_D" />
       <Data key="43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/23b8206d-1c77-4e61-be4a-b4037d5de5fc" value="UART_tx" />
       <Data key="43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/78e33e5d-45ea-4b75-88d5-73274e8a7ce4" value="UART_rx" />
-      <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="Pin_2" />
+      <Data key="77715107-f8d5-47e5-a629-0fb83101ac6b" value="Pin_Mic_A" />
+      <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="Pin_DLed" />
     </Group>
   </Group>
   <Group key="FlashSecurity">
@@ -3555,6 +3557,11 @@
     </Group>
   </Group>
   <Group key="Pin2">
+    <Group key="0ef97bf9-3fd6-4b3a-9fcb-e58497261af1">
+      <Group key="0">
+        <Data key="Port Format" value="1,2" />
+      </Group>
+    </Group>
     <Group key="4cfab5fb-f133-4995-8a8a-1f2e39cbfa24">
       <Group key="0">
         <Data key="Port Format" value="3,6" />
@@ -3575,9 +3582,14 @@
         <Data key="Port Format" value="1,4" />
       </Group>
     </Group>
+    <Group key="77715107-f8d5-47e5-a629-0fb83101ac6b">
+      <Group key="0">
+        <Data key="Port Format" value="1,1" />
+      </Group>
+    </Group>
     <Group key="e851a3b9-efb8-48be-bbb8-b303b216c393">
       <Group key="0">
-        <Data key="Port Format" value="3,6" />
+        <Data key="Port Format" value="1,3" />
       </Group>
     </Group>
   </Group>
