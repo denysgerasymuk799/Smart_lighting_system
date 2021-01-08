@@ -1,0 +1,8 @@
+D:/ucu/2_course1_term/POC/programs/my_works/SLS3/Smart_lighting_system/Mesh_Flood_Main_Auto_Reassignment2.cydsn/CortexM0/ARM_GCC_541/Debug/CyBootAsmGnu.o : D:/ucu/2_course1_term/POC/programs/my_works/SLS3/Smart_lighting_system/Mesh_Flood_Main_Auto_Reassignment2.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s D:/ucu/2_course1_term/POC/programs/my_works/SLS3/Smart_lighting_system/Mesh_Flood_Main_Auto_Reassignment2.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc D:/ucu/2_course1_term/POC/programs/my_works/SLS3/Smart_lighting_system/Mesh_Flood_Main_Auto_Reassignment2.cydsn/Generated_Source/PSoC4/cyfittergnu.inc 
+
+D:/ucu/2_course1_term/POC/programs/my_works/SLS3/Smart_lighting_system/Mesh_Flood_Main_Auto_Reassignment2.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
+
+D:/ucu/2_course1_term/POC/programs/my_works/SLS3/Smart_lighting_system/Mesh_Flood_Main_Auto_Reassignment2.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc : 
+
+D:/ucu/2_course1_term/POC/programs/my_works/SLS3/Smart_lighting_system/Mesh_Flood_Main_Auto_Reassignment2.cydsn/Generated_Source/PSoC4/cyfittergnu.inc : 
+
