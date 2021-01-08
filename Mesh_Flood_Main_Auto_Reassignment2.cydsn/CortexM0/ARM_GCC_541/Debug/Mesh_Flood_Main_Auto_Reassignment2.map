@@ -11692,67 +11692,67 @@ i.CyBle_BleSSInterruptHandler
  .debug_frame   0x0001e8a0       0x28 d:/programs/cypress/psoc_creator/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
  .debug_frame   0x0001e8c8       0x20 d:/programs/cypress/psoc_creator/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x8b56
+.debug_str      0x00000000     0x8bc2
  *(.debug_str)
- .debug_str     0x00000000      0xd5a .\CortexM0\ARM_GCC_541\Debug\main.o
-                                0xdae (size before relaxing)
- .debug_str     0x00000d5a       0xea .\CortexM0\ARM_GCC_541\Debug\debug.o
-                                0xbee (size before relaxing)
- .debug_str     0x00000e44       0x2d .\CortexM0\ARM_GCC_541\Debug\WDT.o
-                                0xb31 (size before relaxing)
- .debug_str     0x00000e71     0x3940 .\CortexM0\ARM_GCC_541\Debug\ble_process.o
-                               0x473f (size before relaxing)
- .debug_str     0x000047b1        0xc .\CortexM0\ARM_GCC_541\Debug\customize.o
-                                0xb03 (size before relaxing)
- .debug_str     0x000047bd      0x108 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_str     0x00000000      0xd56 .\CortexM0\ARM_GCC_541\Debug\main.o
+                                0xdaa (size before relaxing)
+ .debug_str     0x00000d56       0xea .\CortexM0\ARM_GCC_541\Debug\debug.o
+                                0xbea (size before relaxing)
+ .debug_str     0x00000e40       0x2d .\CortexM0\ARM_GCC_541\Debug\WDT.o
+                                0xb2d (size before relaxing)
+ .debug_str     0x00000e6d     0x3940 .\CortexM0\ARM_GCC_541\Debug\ble_process.o
+                               0x473b (size before relaxing)
+ .debug_str     0x000047ad        0xc .\CortexM0\ARM_GCC_541\Debug\customize.o
+                                0xaff (size before relaxing)
+ .debug_str     0x000047b9      0x178 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
                                 0x2ee (size before relaxing)
- .debug_str     0x000048c5       0x63 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .debug_str     0x00004931       0x63 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
                                 0x1f6 (size before relaxing)
- .debug_str     0x00004928      0x119 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .debug_str     0x00004994      0x119 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
                                 0x2fc (size before relaxing)
- .debug_str     0x00004a41      0x946 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(BLE.o)
+ .debug_str     0x00004aad      0x946 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(BLE.o)
                                0x1bc1 (size before relaxing)
- .debug_str     0x00005387      0x2ac .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(BLE_gatt.o)
+ .debug_str     0x000053f3      0x2ac .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(BLE_gatt.o)
                                0x44d9 (size before relaxing)
- .debug_str     0x00005633      0xd78 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(BLE_eventHandler.o)
+ .debug_str     0x0000569f      0xd78 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(BLE_eventHandler.o)
                                0x54f3 (size before relaxing)
- .debug_str     0x000063ab      0x2d0 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(BLE_custom.o)
+ .debug_str     0x00006417      0x2d0 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(BLE_custom.o)
                                 0xf9a (size before relaxing)
- .debug_str     0x0000667b      0x187 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(PrISM_1.o)
+ .debug_str     0x000066e7      0x187 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(PrISM_1.o)
                                 0x33b (size before relaxing)
- .debug_str     0x00006802       0xa2 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(RED.o)
+ .debug_str     0x0000686e       0xa2 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(RED.o)
                                 0x256 (size before relaxing)
- .debug_str     0x000068a4       0x87 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(GREEN.o)
+ .debug_str     0x00006910       0x87 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(GREEN.o)
                                 0x264 (size before relaxing)
- .debug_str     0x0000692b       0x80 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(BLUE.o)
+ .debug_str     0x00006997       0x80 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(BLUE.o)
                                 0x25d (size before relaxing)
- .debug_str     0x000069ab      0x134 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(PrISM_2.o)
+ .debug_str     0x00006a17      0x134 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(PrISM_2.o)
                                 0x33b (size before relaxing)
- .debug_str     0x00006adf      0x129 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(isr_WDT.o)
+ .debug_str     0x00006b4b      0x129 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(isr_WDT.o)
                                 0x307 (size before relaxing)
- .debug_str     0x00006c08       0xe5 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(UART.o)
+ .debug_str     0x00006c74       0xe5 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(UART.o)
                                 0x2a8 (size before relaxing)
- .debug_str     0x00006ced      0x135 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(UART_SPI_UART.o)
+ .debug_str     0x00006d59      0x135 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(UART_SPI_UART.o)
                                 0x2fc (size before relaxing)
- .debug_str     0x00006e22      0x1c3 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(UART_UART.o)
+ .debug_str     0x00006e8e      0x1c3 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(UART_UART.o)
                                 0x3ab (size before relaxing)
- .debug_str     0x00006fe5      0x5df .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(CyLib.o)
+ .debug_str     0x00007051      0x5df .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(CyLib.o)
                                 0x7eb (size before relaxing)
- .debug_str     0x000075c4      0x710 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(CyLFClk.o)
+ .debug_str     0x00007630      0x710 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(CyLFClk.o)
                                 0x928 (size before relaxing)
- .debug_str     0x00007cd4      0x4f3 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(PWM_1sWindow.o)
-                                0x6d8 (size before relaxing)
- .debug_str     0x000081c7      0x13a .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(isr_Counter.o)
+ .debug_str     0x00007d40      0x4f3 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(PWM_1sWindow.o)
+                                0x6d4 (size before relaxing)
+ .debug_str     0x00008233      0x13a .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(isr_Counter.o)
                                 0x33f (size before relaxing)
- .debug_str     0x00008301      0x526 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(BLE_HAL_PVT.o)
+ .debug_str     0x0000836d      0x526 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(BLE_HAL_PVT.o)
                                 0xb43 (size before relaxing)
- .debug_str     0x00008827      0x156 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(BLE_bless_isr.o)
+ .debug_str     0x00008893      0x156 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(BLE_bless_isr.o)
                                 0x35b (size before relaxing)
- .debug_str     0x0000897d       0xc3 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(CyFlash.o)
+ .debug_str     0x000089e9       0xc3 .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(CyFlash.o)
                                 0x2a3 (size before relaxing)
- .debug_str     0x00008a40       0xdb .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(cyPm.o)
+ .debug_str     0x00008aac       0xdb .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(cyPm.o)
                                 0x2bd (size before relaxing)
- .debug_str     0x00008b1b       0x3b .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(BLE_HAL_INT.o)
+ .debug_str     0x00008b87       0x3b .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a(BLE_HAL_INT.o)
                                 0x1e4 (size before relaxing)
 
 .debug_loc
@@ -12466,4 +12466,4 @@ i.CyBle_BleSSInterruptHandler
 
 /DISCARD/
  *(.note.GNU-stack)
-OUTPUT(D:\ucu\2_course1_term\POC\programs\my_works\SLS3\Smart_lighting_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.elf elf32-littlearm)
+OUTPUT(D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.elf elf32-littlearm)

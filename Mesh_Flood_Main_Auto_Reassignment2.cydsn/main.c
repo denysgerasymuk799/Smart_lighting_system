@@ -93,6 +93,7 @@ int main()
 		UART_UartPutCRLF(' ');
 	#endif
    
+    /* infinite loop */
     for(;;)
     {
 		/* Process BLE Events. This function generates the respective 

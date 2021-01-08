@@ -135,7 +135,7 @@ extern uint8  PWM_1sWindow_initVar;
 #define PWM_1sWindow_TC_COMPARE_SWAP                (0lu)
 
 /* PWM Mode */
-#define PWM_1sWindow_PWM_PERIOD_VALUE               (9999lu)
+#define PWM_1sWindow_PWM_PERIOD_VALUE               (4999lu)
 #define PWM_1sWindow_PWM_PERIOD_BUF_VALUE           (65535lu)
 #define PWM_1sWindow_PWM_PERIOD_SWAP                (0lu)
 #define PWM_1sWindow_PWM_COMPARE_VALUE              (2lu)
