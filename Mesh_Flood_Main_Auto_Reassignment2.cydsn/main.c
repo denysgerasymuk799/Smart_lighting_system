@@ -39,7 +39,6 @@
 * software license agreement. 
 *******************************************************************************/
 #include <main.h>
-#include <stdio.h>
 
 extern uint8 switch_Role;
 extern uint8 ble_gap_state;
@@ -61,9 +60,6 @@ extern uint8 clientConnectToDevice;
 extern CYBLE_GAP_BD_ADDR_T				peripAddr;
 
 CY_ISR_PROTO(CC_TC_InterruptHandler);
-CY_ISR_PROTO(Timer_1_Interrupt_Handler);
-
-int DEVICE_INDEX = 1;
 
 uint8 RGB_Collection[4][4] = {
     {0, 0, 0xFF, 0xFF},
@@ -71,10 +67,6 @@ uint8 RGB_Collection[4][4] = {
     {0, 0xFF, 0, 0xFF},
     {0xFF, 0xFF, 0, 0xFF},
 };
-
-uint8 RED_COLOR[4] = {0xFF, 0, 0, 0xFF};
-char TEXT_BUF[20];
-
 int interrupt_counter = 0;
 
 /*******************************************************************************
@@ -101,7 +93,6 @@ int main()
 		UART_UartPutCRLF(' ');
 	#endif
    
-    /* infinite loop */
     for(;;)
     {
 		/* Process BLE Events. This function generates the respective 
@@ -151,11 +142,7 @@ void InitializeSystem(void)
     // Define interrupt handle for color changes
     PWM_1sWindow_Start();
     isr_Counter_StartEx(CC_TC_InterruptHandler);
-    
-    
-    Timer_1_isr_StartEx(Timer_1_Interrupt_Handler);
-    
-    
+	
 	/* Start the PrISM component and configure drive mode of LED pins to be
 	* initially OFF*/
 	PrISM_1_Start();
@@ -205,42 +192,16 @@ void InitializeSystem(void)
 
 CY_ISR(CC_TC_InterruptHandler)
 {
-    if (DEVICE_INDEX == 0) 
-    {
-        sprintf(TEXT_BUF,"\n\n RGB_Collection[interrupt_counter] %d, %d, %d, %d", RGB_Collection[interrupt_counter][0],
-        RGB_Collection[interrupt_counter][1], RGB_Collection[interrupt_counter][2], RGB_Collection[interrupt_counter][3]);
-        UART_UartPutString(TEXT_BUF);
-        
-        sendColorDataToNetwork(RGB_Collection[interrupt_counter]);
-        SwitchRole();
-    	ConnectToPeripheralDevice();
-    	RestartCentralScanning();
-        interrupt_counter++;
-        if (interrupt_counter == 4) {
-            interrupt_counter = 0;
-        }
+    sendColorDataToNetwork(RGB_Collection[interrupt_counter]);
+    SwitchRole();
+	ConnectToPeripheralDevice();
+	RestartCentralScanning();
+    interrupt_counter++;
+    if (interrupt_counter == 4) {
+        interrupt_counter = 0;
     }
-    
     PWM_1sWindow_ClearInterrupt(PWM_1sWindow_INTR_MASK_CC_MATCH);
     PWM_1sWindow_ClearInterrupt(PWM_1sWindow_INTR_MASK_TC);
-}
-
-
-CY_ISR(Timer_1_Interrupt_Handler)
-{   
-    /* CC_MATCH interrupt is triggered when 1s time window is gone */
-    if(Timer_1_INTR_MASK_CC_MATCH != 0)
-    {
-        Timer_1_ClearInterrupt(Timer_1_INTR_MASK_CC_MATCH);
-    }
-       
-    /* TC interrupt is triggered when overflow is happened */
-    if(Timer_1_INTR_MASK_TC != 0)
-    {
-        UART_UartPutString("==================== UpdateRGBled ==================== ");
-        UpdateRGBled(RED_COLOR, 4);
-        Timer_1_ClearInterrupt(Timer_1_INTR_MASK_TC);
-    }
 }
 
 
@@ -273,10 +234,7 @@ void UpdateRGBled(uint8 * rgb_led_data, uint8 len)
 		calc_red = (uint8)(((uint16)rgb_led_data[RGB_RED_INDEX]*rgb_led_data[RGB_INTENSITY_INDEX])/RGB_LED_MAX_VAL);
 		calc_green = (uint8)(((uint16)rgb_led_data[RGB_GREEN_INDEX]*rgb_led_data[RGB_INTENSITY_INDEX])/RGB_LED_MAX_VAL);
 		calc_blue = (uint8)(((uint16)rgb_led_data[RGB_BLUE_INDEX]*rgb_led_data[RGB_INTENSITY_INDEX])/RGB_LED_MAX_VAL);
-        
-        sprintf(TEXT_BUF,"\n\n calc_red = %d, calc_green %d, calc_blue %d", calc_red, calc_green, calc_blue);
-        UART_UartPutString(TEXT_BUF);
-        
+		
 		PrISM_1_WritePulse0(RGB_LED_MAX_VAL - calc_red);
 		PrISM_1_WritePulse1(RGB_LED_MAX_VAL - calc_green);
 		PrISM_2_WritePulse0(RGB_LED_MAX_VAL - calc_blue);

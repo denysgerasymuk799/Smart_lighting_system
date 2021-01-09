@@ -6,7 +6,7 @@
 
 #Build Date:         Dec  5 2017 15:35:27
 
-#File Generated:     Jan 9 2021 22:45:34
+#File Generated:     Jan 9 2021 17:23:35
 
 #Purpose:            
 
@@ -76,7 +76,7 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 15
+Number of clocks: 13
 Clock: Clock_1kHz           | Frequency: N/A       | Target:   0.0 MHz
 Clock: Clock_1kHz(FFB)      | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyECO                | Frequency: N/A       | Target:  24.0 MHz
@@ -88,8 +88,6 @@ Clock: CyRouted1            | Frequency: N/A       | Target:  24.0 MHz
 Clock: CySYSCLK             | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: PrISM_Clock          | Frequency:  87.5 MHz | Target:   0.1 MHz
-Clock: Timer_1_Clock        | Frequency: N/A       | Target:   0.0 MHz
-Clock: Timer_1_Clock(FFB)   | Frequency: N/A       | Target:   0.0 MHz
 Clock: UART_SCBCLK          | Frequency: N/A       | Target:   0.7 MHz
 Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   0.7 MHz
 
@@ -103,7 +101,7 @@ Phase 7
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 15
+Number of clocks: 13
 Clock: Clock_1kHz           | Frequency: N/A       | Target:   0.0 MHz
 Clock: Clock_1kHz(FFB)      | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyECO                | Frequency: N/A       | Target:  24.0 MHz
@@ -115,8 +113,6 @@ Clock: CyRouted1            | Frequency: N/A       | Target:  24.0 MHz
 Clock: CySYSCLK             | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: PrISM_Clock          | Frequency:  87.5 MHz | Target:   0.1 MHz
-Clock: Timer_1_Clock        | Frequency: N/A       | Target:   0.0 MHz
-Clock: Timer_1_Clock(FFB)   | Frequency: N/A       | Target:   0.0 MHz
 Clock: UART_SCBCLK          | Frequency: N/A       | Target:   0.7 MHz
 Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   0.7 MHz
 
@@ -153,7 +149,7 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 15
+Number of clocks: 13
 Clock: Clock_1kHz           | Frequency: N/A       | Target:   0.0 MHz
 Clock: Clock_1kHz(FFB)      | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyECO                | Frequency: N/A       | Target:  24.0 MHz
@@ -165,8 +161,6 @@ Clock: CyRouted1            | Frequency: N/A       | Target:  24.0 MHz
 Clock: CySYSCLK             | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: PrISM_Clock          | Frequency:  87.5 MHz | Target:   0.1 MHz
-Clock: Timer_1_Clock        | Frequency: N/A       | Target:   0.0 MHz
-Clock: Timer_1_Clock(FFB)   | Frequency: N/A       | Target:   0.0 MHz
 Clock: UART_SCBCLK          | Frequency: N/A       | Target:   0.7 MHz
 Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   0.7 MHz
 
@@ -179,5 +173,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 0.6 sec.
+I2076: Total run-time: 0.5 sec.
 

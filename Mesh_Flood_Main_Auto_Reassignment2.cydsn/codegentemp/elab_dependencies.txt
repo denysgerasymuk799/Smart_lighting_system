@@ -1,4 +1,4 @@
-D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\TopDesign\TopDesign.cysch
+D:\ucu\2_course1_term\POC\programs\my_works\SLS3\Smart_lighting_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\TopDesign\TopDesign.cysch
 C:\Users\ASUS\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\BLE_v3_66\BLE_v3_66.cysym
 C:\Users\ASUS\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\BLE_v3_66\BLE_v3_66.chm
 C:\Users\ASUS\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\BLE_v3_66\BLE_v3_66.dll
@@ -333,7 +333,7 @@ D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\psoc\content\CyCo
 D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\TCPWM_P4_v2_10\PSoC4\API\TCPWM_PM.c
 D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_m0s8_tcpwm_v1_0\cy_m0s8_tcpwm_v1_0.cysym
 D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_m0s8_tcpwm_v1_0\PSoC4\cy_m0s8_tcpwm_v1_0.cyprimitive
-D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\Mesh_Flood_Main_Auto_Reassignment2.cydwr
+D:\ucu\2_course1_term\POC\programs\my_works\SLS3\Smart_lighting_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\Mesh_Flood_Main_Auto_Reassignment2.cydwr
 C:\Users\ASUS\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Em_EEPROM_Dynamic_v2_20\API\cy_em_eeprom.c
 C:\Users\ASUS\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Em_EEPROM_Dynamic_v2_20\API\cy_em_eeprom.h
 C:\Users\ASUS\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_81\PSoC4\API\cm0gcc.ld

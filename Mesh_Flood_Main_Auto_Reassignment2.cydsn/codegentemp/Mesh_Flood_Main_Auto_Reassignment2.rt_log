@@ -13,9 +13,12 @@ I1206: Completed Reading of file Mesh_Flood_Main_Auto_Reassignment2.sdc
 I1204: Reading architecture from file D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\dev\psoc4/3/256dma/route_arch-rrg.cydata
 I1206: Completed Reading of file D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\dev\psoc4/3/256dma/route_arch-rrg.cydata
 I1209: Started routing
-I1223: Total Nets : 26 
-I1212: Iteration  1 :    10 unrouted : 0 seconds
-I1212: Iteration  2 :     0 unrouted : 0 seconds
+I1223: Total Nets : 25 
+I1212: Iteration  1 :    11 unrouted : 0 seconds
+I1212: Iteration  2 :     2 unrouted : 0 seconds
+I1212: Iteration  3 :     2 unrouted : 0 seconds
+I1212: Iteration  4 :     2 unrouted : 0 seconds
+I1212: Iteration  5 :     0 unrouted : 0 seconds
 I1215: Routing is successful
 I1207: Completed routing
 I1210: Writing routes

@@ -13,11 +13,7 @@
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.
 *******************************************************************************/
-#include <stdio.h>
 #include <main.h>
-
-
-#include <utils.h>
 
 uint8 RGBData[4];
 uint8 dataADVCounter = 1;
@@ -41,8 +37,6 @@ uint8 ble_gap_state = BLE_PERIPHERAL;
 uint8 deviceConnected = FALSE;
 uint8 restartScanning = FALSE;
 volatile uint16 centralStartedTime = 0;
-
-char TEXT_BUF[30];
 
 /*******************************************************************************
 * Function Name: GenericEventHandler
@@ -140,7 +134,6 @@ void GenericEventHandler(uint32 event, void * eventParam)
 			* connected Client device */
 			/* Save the associated event parameter in local variable */
 			writeReqData = *(CYBLE_GATTS_WRITE_REQ_PARAM_T*)eventParam;
-            UART_UartPutString("\n\n start case CYBLE_EVT_GATTS_WRITE_REQ ");
 
 			if(writeReqData.handleValPair.attrHandle == CYBLE_RGB_LED_CONTROL_CHAR_HANDLE)
 			{
@@ -167,7 +160,6 @@ void GenericEventHandler(uint32 event, void * eventParam)
                     
 					/* Modify RGB Color my configuring the PrISM components with new density 
 					* value*/
-                    restart_peripheral_waiting_time();
 					UpdateRGBled(RGBData, RGB_LED_DATA_LEN);
 					
 					/* Update the RGB LED Control characteristic in GATT DB  to allow
@@ -841,10 +833,6 @@ void sendColorDataToNetwork(uint8 RGB_Collection[4]) {
     RGBData[RGB_BLUE_INDEX] = RGB_Collection[1];
     RGBData[RGB_GREEN_INDEX] = RGB_Collection[2];
     RGBData[RGB_INTENSITY_INDEX] = RGB_Collection[3];
-    
-    sprintf(TEXT_BUF,"\n\n RGB_Collection[0] = %d, RGB_Collection[1] %d,\n RGB_Collection[2] %d, RGB_Collection[3] %d", RGB_Collection[0],
-    RGB_Collection[1], RGB_Collection[2], RGB_Collection[3]);
-    UART_UartPutString(TEXT_BUF);
     
 	/* Modify RGB Color my configuring the PrISM components with new density 
 	* value*/
