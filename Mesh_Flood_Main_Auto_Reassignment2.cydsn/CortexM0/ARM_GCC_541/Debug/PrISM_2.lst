@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
   22:Generated_Source\PSoC4/PrISM_2.c **** /***************************************
   23:Generated_Source\PSoC4/PrISM_2.c **** * Local data allocation
   24:Generated_Source\PSoC4/PrISM_2.c **** ***************************************/
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 2
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 2
 
 
   25:Generated_Source\PSoC4/PrISM_2.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
   52 0010 034B     		ldr	r3, .L3
   53 0012 0122     		movs	r2, #1
   54 0014 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 3
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 3
 
 
   55              	.L2:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
   86              		.cfi_offset 14, -4
   87 0002 83B0     		sub	sp, sp, #12
   88              		.cfi_def_cfa_offset 24
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 4
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 4
 
 
   89 0004 00AF     		add	r7, sp, #0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  123 0042 0B4A     		ldr	r2, .L6+4
  124 0044 0A4B     		ldr	r3, .L6+4
  125 0046 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 5
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 5
 
 
  126 0048 DBB2     		uxtb	r3, r3
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  122:Generated_Source\PSoC4/PrISM_2.c **** * Parameters:  
  123:Generated_Source\PSoC4/PrISM_2.c **** *  None.
  124:Generated_Source\PSoC4/PrISM_2.c **** *
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 6
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 6
 
 
  125:Generated_Source\PSoC4/PrISM_2.c **** * Return: 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  140:Generated_Source\PSoC4/PrISM_2.c **** ********************************************************************************
  141:Generated_Source\PSoC4/PrISM_2.c **** *
  142:Generated_Source\PSoC4/PrISM_2.c **** * Summary:
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 7
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 7
 
 
  143:Generated_Source\PSoC4/PrISM_2.c **** *  Stops PrISM computation. Outputs remain constant.
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  238              	PrISM_2_SetPulse0Mode:
  239              	.LFB6:
  160:Generated_Source\PSoC4/PrISM_2.c **** 
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 8
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 8
 
 
  161:Generated_Source\PSoC4/PrISM_2.c **** #if(!PrISM_2_PULSE_TYPE_HARDCODED)
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  186:Generated_Source\PSoC4/PrISM_2.c ****         {
  187:Generated_Source\PSoC4/PrISM_2.c ****             PrISM_2_CONTROL_REG &= (uint8)~PrISM_2_CTRL_COMPARE_TYPE0_GREATER_THAN_OR_EQUAL;
  188:Generated_Source\PSoC4/PrISM_2.c ****         }
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 9
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 9
 
 
  189:Generated_Source\PSoC4/PrISM_2.c ****     }
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  208:Generated_Source\PSoC4/PrISM_2.c ****     {
  303              		.loc 1 208 0
  304              		.cfi_startproc
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 10
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 10
 
 
  305              		@ args = 0, pretend = 0, frame = 8
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  349              		@ sp needed
  350 003c 80BD     		pop	{r7, pc}
  351              	.L25:
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 11
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 11
 
 
  352 003e C046     		.align	2
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  384 000e 80BD     		pop	{r7, pc}
  385              	.L29:
  386              		.align	2
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 12
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 12
 
 
  387              	.L28:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  420              		.loc 1 260 0
  421 0014 054A     		ldr	r2, .L33
  422 0016 FB1D     		adds	r3, r7, #7
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 13
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 13
 
 
  423 0018 1B78     		ldrb	r3, [r3]
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  456              		@ frame_needed = 1, uses_anonymous_args = 0
  457 0000 80B5     		push	{r7, lr}
  458              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 14
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 14
 
 
  459              		.cfi_offset 7, -8
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  492              		.cfi_def_cfa_offset 8
  493              		.cfi_offset 7, -8
  494              		.cfi_offset 14, -4
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 15
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 15
 
 
  495 0002 82B0     		sub	sp, sp, #8
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  528              		.loc 1 323 0
  529              		.cfi_startproc
  530              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 16
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 16
 
 
  531              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  564              		@ args = 0, pretend = 0, frame = 8
  565              		@ frame_needed = 1, uses_anonymous_args = 0
  566 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 17
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 17
 
 
  567              		.cfi_def_cfa_offset 8
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  363:Generated_Source\PSoC4/PrISM_2.c **** uint8 PrISM_2_ReadPulse1(void) 
  364:Generated_Source\PSoC4/PrISM_2.c **** {
  603              		.loc 1 364 0
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 18
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 18
 
 
  604              		.cfi_startproc
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  637              		.loc 1 385 0
  638              		.cfi_startproc
  639              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 19
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 19
 
 
  640              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  692 002d 01       		.byte	0x1
  693 002e 08       		.byte	0x8
  694 002f 60000000 		.4byte	.LASF1
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 20
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 20
 
 
  695 0033 02       		.uleb128 0x2
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  749 0098 05       		.uleb128 0x5
  750 0099 6B000000 		.4byte	0x6b
  751 009d 02       		.uleb128 0x2
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 21
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 21
 
 
  752 009e 08       		.byte	0x8
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  806 010d 44000000 		.4byte	.LFE6-.LFB6
  807 0111 01       		.uleb128 0x1
  808 0112 9C       		.byte	0x9c
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 22
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 22
 
 
  809 0113 26010000 		.4byte	0x126
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  863 0184 00       		.byte	0
  864 0185 0F       		.uleb128 0xf
  865 0186 B8020000 		.4byte	.LASF27
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 23
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 23
 
 
  866 018a 01       		.byte	0x1
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  920 0202 01       		.byte	0x1
  921 0203 6B01     		.2byte	0x16b
  922 0205 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 24
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 24
 
 
  923 0209 00000000 		.4byte	.LFB14
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  977 0015 00       		.byte	0
  978 0016 0B       		.uleb128 0xb
  979 0017 0B       		.uleb128 0xb
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 25
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 25
 
 
  980 0018 3E       		.uleb128 0x3e
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  1034 004e 40       		.uleb128 0x40
  1035 004f 18       		.uleb128 0x18
  1036 0050 9642     		.uleb128 0x2116
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 26
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 26
 
 
  1037 0052 19       		.uleb128 0x19
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  1091 0089 27       		.uleb128 0x27
  1092 008a 19       		.uleb128 0x19
  1093 008b 11       		.uleb128 0x11
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 27
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 27
 
 
  1094 008c 01       		.uleb128 0x1
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  1148 00c4 03       		.uleb128 0x3
  1149 00c5 0E       		.uleb128 0xe
  1150 00c6 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 28
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 28
 
 
  1151 00c7 0B       		.uleb128 0xb
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  1205 00ff 18       		.uleb128 0x18
  1206 0100 00       		.byte	0
  1207 0101 00       		.byte	0
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 29
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 29
 
 
  1208 0102 0F       		.uleb128 0xf
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  1262 001c 74000000 		.4byte	.LFE3-.LFB3
  1263 0020 00000000 		.4byte	.LFB4
  1264 0024 20000000 		.4byte	.LFE4-.LFB4
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 30
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 30
 
 
  1265 0028 00000000 		.4byte	.LFB5
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  1319 0070 00000000 		.4byte	0
  1320 0074 00000000 		.4byte	0
  1321              		.section	.debug_line,"",%progbits
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 31
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 31
 
 
  1322              	.Ldebug_line0:
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  1343      7400
  1344              	.LASF38:
  1345 0092 443A5C75 		.ascii	"D:\\ucu\\2_course1_term\\POC\\programs\\my_works\\S"
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 32
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 32
 
 
  1345      63755C32 
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  1361 01d9 646F7562 		.ascii	"double\000"
  1361      6C6500
  1362              	.LASF29:
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 33
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 33
 
 
  1363 01e0 706F6C79 		.ascii	"polynomial\000"
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  1385      645F536F 
  1385      75726365 
  1385      5C50536F 
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 34
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 34
 
 
  1386              	.LASF26:
@@ -2038,6 +2038,6 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 1
  1409      6550756C 
  1409      73653100 
  1410              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccFwlAIK.s 			page 35
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccQSOtA9.s 			page 35
 
 

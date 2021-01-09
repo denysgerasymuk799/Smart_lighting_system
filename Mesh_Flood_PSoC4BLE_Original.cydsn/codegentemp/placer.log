@@ -6,7 +6,7 @@
 
 #Build Date:         Dec  5 2017 15:35:27
 
-#File Generated:     Dec 7 2020 18:09:41
+#File Generated:     Jan 8 2021 23:18:22
 
 #Purpose:            
 
@@ -14,7 +14,7 @@
 
 #***************************************************************************
 
-Executing : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\bin/sjplacer.exe --proj-name Mesh_Flood_PSoC4BLE_Original --netlist-vh2 Mesh_Flood_PSoC4BLE_Original_p.vh2 --arch p4_udb2x2 --arch-file C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\arch/udbdsi_2x2_04.cydata --ip-file C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc4/3/256dma/ip_blocks.cydata --rrg-file C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc4/3/256dma/route_arch-rrg.cydata --irq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc4/3/256dma/irqconn.cydata --drq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc4/3/256dma/triggerconn.cydata --dsi-conn-file C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc4/3/256dma/dsiconn.cydata --pins-file pins_76-WLCSP.xml --lib-file Mesh_Flood_PSoC4BLE_Original_p.lib --sdc-file Mesh_Flood_PSoC4BLE_Original.sdc --io-pcf Mesh_Flood_PSoC4BLE_Original.pci --outdir .
+Executing : D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\bin/sjplacer.exe --proj-name Mesh_Flood_PSoC4BLE_Original --netlist-vh2 Mesh_Flood_PSoC4BLE_Original_p.vh2 --arch p4_udb2x2 --arch-file D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\dev\arch/udbdsi_2x2_04.cydata --ip-file D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\dev\psoc4/3/256dma/ip_blocks.cydata --rrg-file D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\dev\psoc4/3/256dma/route_arch-rrg.cydata --irq-file D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\dev\psoc4/3/256dma/irqconn.cydata --drq-file D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\dev\psoc4/3/256dma/triggerconn.cydata --dsi-conn-file D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\dev\psoc4/3/256dma/dsiconn.cydata --pins-file pins_76-WLCSP.xml --lib-file Mesh_Flood_PSoC4BLE_Original_p.lib --sdc-file Mesh_Flood_PSoC4BLE_Original.sdc --io-pcf Mesh_Flood_PSoC4BLE_Original.pci --outdir .
 
 		Softjin Techologies Placer, Version 1.1
 
@@ -23,7 +23,7 @@ Build Date : Dec  5 2017	15:33:41
 D2004: Option and Settings Summary
 =============================================================
 Netlist vh2 file          - Mesh_Flood_PSoC4BLE_Original_p.vh2
-Architecture file         - C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\arch/udbdsi_2x2_04.cydata
+Architecture file         - D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\dev\arch/udbdsi_2x2_04.cydata
 Package                   - 
 Defparam file             - 
 SDC file                  - Mesh_Flood_PSoC4BLE_Original.sdc
@@ -34,7 +34,7 @@ IO Placement file         - Mesh_Flood_PSoC4BLE_Original.pci
 D2050: Starting reading inputs for placer
 =============================================================
 D2065: Reading netlist file : "Mesh_Flood_PSoC4BLE_Original_p.vh2"
-D2065: Reading arch file : "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\arch/udbdsi_2x2_04.cydata"
+D2065: Reading arch file : "D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\dev\arch/udbdsi_2x2_04.cydata"
 D2051: Reading of inputs for placer completed successfully
 
 D2053: Starting placement of the design

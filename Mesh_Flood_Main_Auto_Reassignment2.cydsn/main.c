@@ -63,7 +63,7 @@ extern CYBLE_GAP_BD_ADDR_T				peripAddr;
 CY_ISR_PROTO(CC_TC_InterruptHandler);
 CY_ISR_PROTO(Timer_1_Interrupt_Handler);
 
-int DEVICE_INDEX = 0;
+int DEVICE_INDEX = 1;
 
 uint8 RGB_Collection[4][4] = {
     {0, 0, 0xFF, 0xFF},
