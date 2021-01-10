@@ -18,8 +18,11 @@ int MIN_WAITING_TIME = 2000;
 void restart_peripheral_waiting_time()
 {
     UART_UartPutString("\n\n start restart_peripheral_waiting_time \n \n");
+    Timer_1_Stop();
+    Timer_1_WriteCounter(0);
+    
     Timer_1_Start();
-    Timer_1_SetPeriodSwap(DEVICE_INDEX * MIN_WAITING_TIME);
+    Timer_1_WritePeriod(DEVICE_INDEX * MIN_WAITING_TIME);
 }
 
 

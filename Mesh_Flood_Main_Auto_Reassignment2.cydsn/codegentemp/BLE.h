@@ -139,8 +139,8 @@
     #define CYBLE_SLOW_ADV_INT_MIN                  (0x0640u)
     #define CYBLE_SLOW_ADV_INT_MAX                  (0x4000u)
     #define CYBLE_SLOW_ADV_TIMEOUT                  (0x0096u)
-    #define CYBLE_GAPP_CONNECTION_INTERVAL_MIN      (0x000Cu)
-    #define CYBLE_GAPP_CONNECTION_INTERVAL_MAX      (0x0010u)
+    #define CYBLE_GAPP_CONNECTION_INTERVAL_MIN      (0x0010u)
+    #define CYBLE_GAPP_CONNECTION_INTERVAL_MAX      (0x0014u)
     #define CYBLE_GAPP_CONNECTION_SLAVE_LATENCY     (0x0000u)
     #define CYBLE_GAPP_CONNECTION_TIME_OUT          (0x00C8u)
 #endif /* CYBLE_GAP_ROLE_PERIPHERAL */
@@ -153,8 +153,8 @@
     #define CYBLE_SLOW_SCAN_INTERVAL                (0x0800u)
     #define CYBLE_SLOW_SCAN_WINDOW                  (0x0708u)
     #define CYBLE_SLOW_SCAN_TIMEOUT                 (0x0096u)
-    #define CYBLE_GAPC_CONNECTION_INTERVAL_MIN      (0x0006u)
-    #define CYBLE_GAPC_CONNECTION_INTERVAL_MAX      (0x0008u)
+    #define CYBLE_GAPC_CONNECTION_INTERVAL_MIN      (0x0008u)
+    #define CYBLE_GAPC_CONNECTION_INTERVAL_MAX      (0x000Au)
     #define CYBLE_GAPC_CONNECTION_SLAVE_LATENCY     (0x0000u)
     #define CYBLE_GAPC_CONNECTION_TIME_OUT          (0x0064u)
 #endif /* CYBLE_GAP_ROLE_CENTRAL */

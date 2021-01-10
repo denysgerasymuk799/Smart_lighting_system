@@ -15,6 +15,11 @@
 *******************************************************************************/
 #include <main.h>
 
+#include <stdio.h>
+#include <utils.h>
+
+char TEXT_BUF[50];
+
 uint8 RGBData[4];
 uint8 dataADVCounter = 1;
 uint8 switch_Role = FALSE;
@@ -152,14 +157,22 @@ void GenericEventHandler(uint32 event, void * eventParam)
 					RGBData[RGB_BLUE_INDEX] = writeReqData.handleValPair.value.val[2];
 					RGBData[RGB_INTENSITY_INDEX] = writeReqData.handleValPair.value.val[3];
 					
-                    uint8 RGB_Collection[4] = {0xFF, 0xFF, 0xFF, 0xFF};
-                    RGBData[RGB_RED_INDEX] = RGB_Collection[0];
-                    RGBData[RGB_BLUE_INDEX] = RGB_Collection[1];
-                    RGBData[RGB_GREEN_INDEX] = RGB_Collection[2];
-                    RGBData[RGB_INTENSITY_INDEX] = RGB_Collection[3];
+//                    uint8 RGB_Collection[4] = {0xFF, 0xFF, 0xFF, 0xFF};
+//                    RGBData[RGB_RED_INDEX] = RGB_Collection[0];
+//                    RGBData[RGB_BLUE_INDEX] = RGB_Collection[1];
+//                    RGBData[RGB_GREEN_INDEX] = RGB_Collection[2];
+//                    RGBData[RGB_INTENSITY_INDEX] = RGB_Collection[3];
                     
 					/* Modify RGB Color my configuring the PrISM components with new density 
 					* value*/
+                    sprintf(TEXT_BUF,"\n\n DEVICE_INDEX in case CYBLE_EVT_GATTS_WRITE_REQ  %d ", DEVICE_INDEX);
+                    UART_UartPutString(TEXT_BUF);
+                    
+                    if (DEVICE_INDEX != 0)
+                    {
+                        restart_peripheral_waiting_time();
+                    }
+                    
 					UpdateRGBled(RGBData, RGB_LED_DATA_LEN);
 					
 					/* Update the RGB LED Control characteristic in GATT DB  to allow

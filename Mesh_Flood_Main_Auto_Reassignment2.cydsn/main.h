@@ -23,7 +23,7 @@
 /*****************************************************
 *             Pre-processor Directives
 *****************************************************/ 
-//#define DEBUG_ENABLED
+#define DEBUG_ENABLED
 #define ENABLE_ADV_DATA_COUNTER
 //#define ENABLE_CENTRAL_DISCOVERY
 
@@ -32,6 +32,10 @@
 *****************************************************/ 
 volatile uint16 current_watchdog_counter;
 
+    
+extern int DEVICE_INDEX;
+
+    
 /*****************************************************
 *                  Enums and macros
 *****************************************************/ 
