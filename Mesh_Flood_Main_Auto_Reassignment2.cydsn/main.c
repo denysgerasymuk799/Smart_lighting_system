@@ -62,6 +62,7 @@ extern CYBLE_GAP_BD_ADDR_T				peripAddr;
 CY_ISR_PROTO(CC_TC_InterruptHandler);
 CY_ISR_PROTO(Timer_Waiting_Time_Interrupt_Handler);
 CY_ISR_PROTO(Timer_Is_Free_Interrupt_Handler);
+CY_ISR_PROTO(Timer_Heart_beat_Interrupt_Handler);
 
 uint8 RGB_Collection[4][4] = {
     {0, 0, 0xFF, 0xFF},
@@ -72,7 +73,7 @@ uint8 RGB_Collection[4][4] = {
 
 uint8 RED_COLOR[4] = {0xFF, 0, 0, 0xFF};
 
-int DEVICE_INDEX = 0;
+int DEVICE_INDEX = 1;
 bool NETWORK_IS_FREE = true;
 
 int interrupt_counter = 0;
@@ -155,6 +156,12 @@ void InitializeSystem(void)
     
     Isr_Waiting_Time_StartEx(Timer_Waiting_Time_Interrupt_Handler);
     Timer_Is_Free_isr_StartEx(Timer_Is_Free_Interrupt_Handler);
+    
+    if (DEVICE_INDEX == 0)
+    {
+        Timer_Heart_beat_Start();
+        Isr_Heart_beat_StartEx(Timer_Heart_beat_Interrupt_Handler);
+    }
     
 	
 	/* Start the PrISM component and configure drive mode of LED pins to be
@@ -241,6 +248,10 @@ CY_ISR(CC_TC_InterruptHandler)
         Timer_Is_Free_Stop();
         Timer_Is_Free_WriteCounter(0);
         Timer_Is_Free_Start();
+        
+        Timer_Heart_beat_Stop();
+        Timer_Heart_beat_WriteCounter(0);
+        Timer_Heart_beat_Start();
     }
 //    PWM_1sWindow_ClearInterrupt(PWM_1sWindow_INTR_MASK_CC_MATCH);
 //    PWM_1sWindow_ClearInterrupt(PWM_1sWindow_INTR_MASK_TC);
@@ -258,6 +269,48 @@ CY_ISR(Timer_Is_Free_Interrupt_Handler)
     }
 
     Timer_Is_Free_ClearInterrupt(Timer_Is_Free_INTR_MASK_CC_MATCH);
+}
+
+
+
+CY_ISR(Timer_Heart_beat_Interrupt_Handler)
+{   
+    /* TC interrupt is triggered when overflow is happened */
+    if(Timer_Heart_beat_INTR_MASK_TC != 0)
+    {
+        if (DEVICE_INDEX == 0)
+        {
+            // MODIFY FOR MICROPHONE -- without changing colors if two times
+            // no interrrupt for micr
+            interrupt_counter--;
+            if (interrupt_counter == -1) {
+                interrupt_counter = 3;
+            }
+            
+            sendColorDataToNetwork(RGB_Collection[interrupt_counter]);
+            SwitchRole();
+        	ConnectToPeripheralDevice();
+        	RestartCentralScanning();
+            
+            interrupt_counter++;
+            if (interrupt_counter == 4) {
+                interrupt_counter = 0;
+            }
+            
+            NETWORK_IS_FREE = false;
+            
+            Timer_Is_Free_Stop();
+            Timer_Is_Free_WriteCounter(0);
+            Timer_Is_Free_Start();
+        }
+        
+        
+        Timer_Heart_beat_ClearInterrupt(Timer_Is_Free_INTR_MASK_TC);
+    }
+    
+
+    Timer_Heart_beat_ClearInterrupt(Timer_Heart_beat_INTR_MASK_CC_MATCH);
+    Timer_Heart_beat_ClearInterrupt(Timer_Heart_beat_INTR_MASK_TC);
 }
 
 

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
   28:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** ********************************************************************************/
   29:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** /* `#START isr_Timer_Change_Color_intc` */
   30:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 2
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 2
 
 
   31:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** /* `#END` */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
   66:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
   67:Generated_Source\PSoC4/isr_Timer_Change_Color.c ****     /* Enable it. */
   68:Generated_Source\PSoC4/isr_Timer_Change_Color.c ****     isr_Timer_Change_Color_Enable();
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 3
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 3
 
 
   47              		.loc 1 68 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
   69              		.loc 1 100 0
   70              		.cfi_startproc
   71              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 4
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 4
 
 
   72              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
  117:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** ********************************************************************************
  118:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** *
  119:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** * Summary:
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 5
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 5
 
 
  120:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** *   Disables and removes the interrupt.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
  138:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
  139:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** /*******************************************************************************
  140:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** * Function Name: isr_Timer_Change_Color_Interrupt
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 6
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 6
 
 
  141:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** ********************************************************************************
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
  171              	.LFB6:
  170:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
  171:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 7
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 7
 
 
  172:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** /*******************************************************************************
@@ -406,7 +406,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
  201:Generated_Source\PSoC4/isr_Timer_Change_Color.c ****     CyRamVectors[CYINT_IRQ_BASE + isr_Timer_Change_Color__INTC_NUMBER] = address;
  185              		.loc 1 201 0
  186 0008 034B     		ldr	r3, .L10
- 187 000a 8421     		movs	r1, #132
+ 187 000a 8C21     		movs	r1, #140
  188 000c 7A68     		ldr	r2, [r7, #4]
  189 000e 5A50     		str	r2, [r3, r1]
  202:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** }
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
  195 0016 80BD     		pop	{r7, pc}
  196              	.L11:
  197              		.align	2
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 8
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 8
 
 
  198              	.L10:
@@ -465,7 +465,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
  221:Generated_Source\PSoC4/isr_Timer_Change_Color.c ****     return CyRamVectors[CYINT_IRQ_BASE + isr_Timer_Change_Color__INTC_NUMBER];
  221              		.loc 1 221 0
  222 0004 024B     		ldr	r3, .L14
- 223 0006 8422     		movs	r2, #132
+ 223 0006 8C22     		movs	r2, #140
  224 0008 9B58     		ldr	r3, [r3, r2]
  222:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** }
  225              		.loc 1 222 0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
  232              	.L14:
  233 0010 00000000 		.word	CyRamVectors
  234              		.cfi_endproc
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 9
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 9
 
 
  235              	.LFE7:
@@ -538,10 +538,10 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
  251:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 	uint8 interruptState;
  252:Generated_Source\PSoC4/isr_Timer_Change_Color.c ****     uint32 priorityOffset = ((isr_Timer_Change_Color__INTC_NUMBER % 4u) * 8u) + 6u;
  261              		.loc 1 252 0
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 10
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 10
 
 
- 262 000c 0E23     		movs	r3, #14
+ 262 000c 1E23     		movs	r3, #30
  263 000e FB60     		str	r3, [r7, #12]
  253:Generated_Source\PSoC4/isr_Timer_Change_Color.c ****     
  254:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 	interruptState = CyEnterCriticalSection();
@@ -556,8 +556,8 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
  271 001c 0A4B     		ldr	r3, .L17
  272 001e 0A4A     		ldr	r2, .L17
  273 0020 1268     		ldr	r2, [r2]
- 274 0022 0A49     		ldr	r1, .L17+4
- 275 0024 1140     		ands	r1, r2
+ 274 0022 9200     		lsls	r2, r2, #2
+ 275 0024 9108     		lsrs	r1, r2, #2
  256:Generated_Source\PSoC4/isr_Timer_Change_Color.c ****                                     ((uint32)priority << priorityOffset);
  276              		.loc 1 256 0
  277 0026 FA1D     		adds	r2, r7, #7
@@ -587,21 +587,20 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
  298              		.align	2
  299              	.L17:
  300 0048 10E400E0 		.word	-536812528
- 301 004c FF3FFFFF 		.word	-49153
- 302              		.cfi_endproc
- 303              	.LFE8:
- 304              		.size	isr_Timer_Change_Color_SetPriority, .-isr_Timer_Change_Color_SetPriority
- 305              		.section	.text.isr_Timer_Change_Color_GetPriority,"ax",%progbits
- 306              		.align	2
- 307              		.global	isr_Timer_Change_Color_GetPriority
- 308              		.code	16
- 309              		.thumb_func
- 310              		.type	isr_Timer_Change_Color_GetPriority, %function
- 311              	isr_Timer_Change_Color_GetPriority:
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 11
+ 301              		.cfi_endproc
+ 302              	.LFE8:
+ 303              		.size	isr_Timer_Change_Color_SetPriority, .-isr_Timer_Change_Color_SetPriority
+ 304              		.section	.text.isr_Timer_Change_Color_GetPriority,"ax",%progbits
+ 305              		.align	2
+ 306              		.global	isr_Timer_Change_Color_GetPriority
+ 307              		.code	16
+ 308              		.thumb_func
+ 309              		.type	isr_Timer_Change_Color_GetPriority, %function
+ 310              	isr_Timer_Change_Color_GetPriority:
+ 311              	.LFB9:
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 11
 
 
- 312              	.LFB9:
  259:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
  260:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
  261:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** /*******************************************************************************
@@ -622,65 +621,64 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
  276:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** *******************************************************************************/
  277:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** uint8 isr_Timer_Change_Color_GetPriority(void)
  278:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** {
- 313              		.loc 1 278 0
- 314              		.cfi_startproc
- 315              		@ args = 0, pretend = 0, frame = 8
- 316              		@ frame_needed = 1, uses_anonymous_args = 0
- 317 0000 80B5     		push	{r7, lr}
- 318              		.cfi_def_cfa_offset 8
- 319              		.cfi_offset 7, -8
- 320              		.cfi_offset 14, -4
- 321 0002 82B0     		sub	sp, sp, #8
- 322              		.cfi_def_cfa_offset 16
- 323 0004 00AF     		add	r7, sp, #0
- 324              		.cfi_def_cfa_register 7
+ 312              		.loc 1 278 0
+ 313              		.cfi_startproc
+ 314              		@ args = 0, pretend = 0, frame = 8
+ 315              		@ frame_needed = 1, uses_anonymous_args = 0
+ 316 0000 80B5     		push	{r7, lr}
+ 317              		.cfi_def_cfa_offset 8
+ 318              		.cfi_offset 7, -8
+ 319              		.cfi_offset 14, -4
+ 320 0002 82B0     		sub	sp, sp, #8
+ 321              		.cfi_def_cfa_offset 16
+ 322 0004 00AF     		add	r7, sp, #0
+ 323              		.cfi_def_cfa_register 7
  279:Generated_Source\PSoC4/isr_Timer_Change_Color.c ****     uint32 priority;
  280:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 	uint32 priorityOffset = ((isr_Timer_Change_Color__INTC_NUMBER % 4u) * 8u) + 6u;
- 325              		.loc 1 280 0
- 326 0006 0E23     		movs	r3, #14
- 327 0008 7B60     		str	r3, [r7, #4]
+ 324              		.loc 1 280 0
+ 325 0006 1E23     		movs	r3, #30
+ 326 0008 7B60     		str	r3, [r7, #4]
  281:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
  282:Generated_Source\PSoC4/isr_Timer_Change_Color.c ****     priority = (*isr_Timer_Change_Color_INTC_PRIOR & isr_Timer_Change_Color__INTC_PRIOR_MASK) >> pr
- 328              		.loc 1 282 0
- 329 000a 074B     		ldr	r3, .L21
- 330 000c 1A68     		ldr	r2, [r3]
- 331 000e C023     		movs	r3, #192
- 332 0010 1B02     		lsls	r3, r3, #8
- 333 0012 1A40     		ands	r2, r3
- 334 0014 7B68     		ldr	r3, [r7, #4]
- 335 0016 DA40     		lsrs	r2, r2, r3
- 336 0018 1300     		movs	r3, r2
- 337 001a 3B60     		str	r3, [r7]
+ 327              		.loc 1 282 0
+ 328 000a 074B     		ldr	r3, .L21
+ 329 000c 1B68     		ldr	r3, [r3]
+ 330 000e 9B0F     		lsrs	r3, r3, #30
+ 331 0010 9A07     		lsls	r2, r3, #30
+ 332 0012 7B68     		ldr	r3, [r7, #4]
+ 333 0014 DA40     		lsrs	r2, r2, r3
+ 334 0016 1300     		movs	r3, r2
+ 335 0018 3B60     		str	r3, [r7]
  283:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
  284:Generated_Source\PSoC4/isr_Timer_Change_Color.c ****     return (uint8)priority;
- 338              		.loc 1 284 0
- 339 001c 3B68     		ldr	r3, [r7]
- 340 001e DBB2     		uxtb	r3, r3
+ 336              		.loc 1 284 0
+ 337 001a 3B68     		ldr	r3, [r7]
+ 338 001c DBB2     		uxtb	r3, r3
  285:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** }
- 341              		.loc 1 285 0
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 12
+ 339              		.loc 1 285 0
+ 340 001e 1800     		movs	r0, r3
+ 341 0020 BD46     		mov	sp, r7
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 12
 
 
- 342 0020 1800     		movs	r0, r3
- 343 0022 BD46     		mov	sp, r7
- 344 0024 02B0     		add	sp, sp, #8
- 345              		@ sp needed
- 346 0026 80BD     		pop	{r7, pc}
- 347              	.L22:
- 348              		.align	2
- 349              	.L21:
- 350 0028 10E400E0 		.word	-536812528
- 351              		.cfi_endproc
- 352              	.LFE9:
- 353              		.size	isr_Timer_Change_Color_GetPriority, .-isr_Timer_Change_Color_GetPriority
- 354              		.section	.text.isr_Timer_Change_Color_Enable,"ax",%progbits
- 355              		.align	2
- 356              		.global	isr_Timer_Change_Color_Enable
- 357              		.code	16
- 358              		.thumb_func
- 359              		.type	isr_Timer_Change_Color_Enable, %function
- 360              	isr_Timer_Change_Color_Enable:
- 361              	.LFB10:
+ 342 0022 02B0     		add	sp, sp, #8
+ 343              		@ sp needed
+ 344 0024 80BD     		pop	{r7, pc}
+ 345              	.L22:
+ 346 0026 C046     		.align	2
+ 347              	.L21:
+ 348 0028 10E400E0 		.word	-536812528
+ 349              		.cfi_endproc
+ 350              	.LFE9:
+ 351              		.size	isr_Timer_Change_Color_GetPriority, .-isr_Timer_Change_Color_GetPriority
+ 352              		.section	.text.isr_Timer_Change_Color_Enable,"ax",%progbits
+ 353              		.align	2
+ 354              		.global	isr_Timer_Change_Color_Enable
+ 355              		.code	16
+ 356              		.thumb_func
+ 357              		.type	isr_Timer_Change_Color_Enable, %function
+ 358              	isr_Timer_Change_Color_Enable:
+ 359              	.LFB10:
  286:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
  287:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
  288:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** /*******************************************************************************
@@ -701,47 +699,47 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
  303:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** *******************************************************************************/
  304:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** void isr_Timer_Change_Color_Enable(void)
  305:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** {
- 362              		.loc 1 305 0
- 363              		.cfi_startproc
- 364              		@ args = 0, pretend = 0, frame = 0
- 365              		@ frame_needed = 1, uses_anonymous_args = 0
- 366 0000 80B5     		push	{r7, lr}
- 367              		.cfi_def_cfa_offset 8
- 368              		.cfi_offset 7, -8
- 369              		.cfi_offset 14, -4
- 370 0002 00AF     		add	r7, sp, #0
- 371              		.cfi_def_cfa_register 7
+ 360              		.loc 1 305 0
+ 361              		.cfi_startproc
+ 362              		@ args = 0, pretend = 0, frame = 0
+ 363              		@ frame_needed = 1, uses_anonymous_args = 0
+ 364 0000 80B5     		push	{r7, lr}
+ 365              		.cfi_def_cfa_offset 8
+ 366              		.cfi_offset 7, -8
+ 367              		.cfi_offset 14, -4
+ 368 0002 00AF     		add	r7, sp, #0
+ 369              		.cfi_def_cfa_register 7
  306:Generated_Source\PSoC4/isr_Timer_Change_Color.c ****     /* Enable the general interrupt. */
  307:Generated_Source\PSoC4/isr_Timer_Change_Color.c ****     *isr_Timer_Change_Color_INTC_SET_EN = isr_Timer_Change_Color__INTC_MASK;
- 372              		.loc 1 307 0
- 373 0004 034B     		ldr	r3, .L24
- 374 0006 8022     		movs	r2, #128
- 375 0008 9202     		lsls	r2, r2, #10
- 376 000a 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 13
-
-
+ 370              		.loc 1 307 0
+ 371 0004 034B     		ldr	r3, .L24
+ 372 0006 8022     		movs	r2, #128
+ 373 0008 1203     		lsls	r2, r2, #12
+ 374 000a 1A60     		str	r2, [r3]
  308:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** }
- 377              		.loc 1 308 0
- 378 000c C046     		nop
- 379 000e BD46     		mov	sp, r7
- 380              		@ sp needed
- 381 0010 80BD     		pop	{r7, pc}
- 382              	.L25:
- 383 0012 C046     		.align	2
- 384              	.L24:
- 385 0014 00E100E0 		.word	-536813312
- 386              		.cfi_endproc
- 387              	.LFE10:
- 388              		.size	isr_Timer_Change_Color_Enable, .-isr_Timer_Change_Color_Enable
- 389              		.section	.text.isr_Timer_Change_Color_GetState,"ax",%progbits
- 390              		.align	2
- 391              		.global	isr_Timer_Change_Color_GetState
- 392              		.code	16
- 393              		.thumb_func
- 394              		.type	isr_Timer_Change_Color_GetState, %function
- 395              	isr_Timer_Change_Color_GetState:
- 396              	.LFB11:
+ 375              		.loc 1 308 0
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 13
+
+
+ 376 000c C046     		nop
+ 377 000e BD46     		mov	sp, r7
+ 378              		@ sp needed
+ 379 0010 80BD     		pop	{r7, pc}
+ 380              	.L25:
+ 381 0012 C046     		.align	2
+ 382              	.L24:
+ 383 0014 00E100E0 		.word	-536813312
+ 384              		.cfi_endproc
+ 385              	.LFE10:
+ 386              		.size	isr_Timer_Change_Color_Enable, .-isr_Timer_Change_Color_Enable
+ 387              		.section	.text.isr_Timer_Change_Color_GetState,"ax",%progbits
+ 388              		.align	2
+ 389              		.global	isr_Timer_Change_Color_GetState
+ 390              		.code	16
+ 391              		.thumb_func
+ 392              		.type	isr_Timer_Change_Color_GetState, %function
+ 393              	isr_Timer_Change_Color_GetState:
+ 394              	.LFB11:
  309:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
  310:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
  311:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** /*******************************************************************************
@@ -760,56 +758,56 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
  324:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** *******************************************************************************/
  325:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** uint8 isr_Timer_Change_Color_GetState(void)
  326:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** {
- 397              		.loc 1 326 0
- 398              		.cfi_startproc
- 399              		@ args = 0, pretend = 0, frame = 0
- 400              		@ frame_needed = 1, uses_anonymous_args = 0
- 401 0000 80B5     		push	{r7, lr}
- 402              		.cfi_def_cfa_offset 8
- 403              		.cfi_offset 7, -8
- 404              		.cfi_offset 14, -4
- 405 0002 00AF     		add	r7, sp, #0
- 406              		.cfi_def_cfa_register 7
+ 395              		.loc 1 326 0
+ 396              		.cfi_startproc
+ 397              		@ args = 0, pretend = 0, frame = 0
+ 398              		@ frame_needed = 1, uses_anonymous_args = 0
+ 399 0000 80B5     		push	{r7, lr}
+ 400              		.cfi_def_cfa_offset 8
+ 401              		.cfi_offset 7, -8
+ 402              		.cfi_offset 14, -4
+ 403 0002 00AF     		add	r7, sp, #0
+ 404              		.cfi_def_cfa_register 7
  327:Generated_Source\PSoC4/isr_Timer_Change_Color.c ****     /* Get the state of the general interrupt. */
  328:Generated_Source\PSoC4/isr_Timer_Change_Color.c ****     return ((*isr_Timer_Change_Color_INTC_SET_EN & (uint32)isr_Timer_Change_Color__INTC_MASK) != 0u
- 407              		.loc 1 328 0
- 408 0004 054B     		ldr	r3, .L30
- 409 0006 1A68     		ldr	r2, [r3]
- 410 0008 8023     		movs	r3, #128
- 411 000a 9B02     		lsls	r3, r3, #10
- 412 000c 1340     		ands	r3, r2
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 14
+ 405              		.loc 1 328 0
+ 406 0004 054B     		ldr	r3, .L30
+ 407 0006 1A68     		ldr	r2, [r3]
+ 408 0008 8023     		movs	r3, #128
+ 409 000a 1B03     		lsls	r3, r3, #12
+ 410 000c 1340     		ands	r3, r2
+ 411 000e 01D0     		beq	.L27
+ 412              		.loc 1 328 0 is_stmt 0 discriminator 1
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 14
 
 
- 413 000e 01D0     		beq	.L27
- 414              		.loc 1 328 0 is_stmt 0 discriminator 1
- 415 0010 0123     		movs	r3, #1
- 416 0012 00E0     		b	.L28
- 417              	.L27:
- 418              		.loc 1 328 0 discriminator 2
- 419 0014 0023     		movs	r3, #0
- 420              	.L28:
+ 413 0010 0123     		movs	r3, #1
+ 414 0012 00E0     		b	.L28
+ 415              	.L27:
+ 416              		.loc 1 328 0 discriminator 2
+ 417 0014 0023     		movs	r3, #0
+ 418              	.L28:
  329:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** }
- 421              		.loc 1 329 0 is_stmt 1 discriminator 4
- 422 0016 1800     		movs	r0, r3
- 423 0018 BD46     		mov	sp, r7
- 424              		@ sp needed
- 425 001a 80BD     		pop	{r7, pc}
- 426              	.L31:
- 427              		.align	2
- 428              	.L30:
- 429 001c 00E100E0 		.word	-536813312
- 430              		.cfi_endproc
- 431              	.LFE11:
- 432              		.size	isr_Timer_Change_Color_GetState, .-isr_Timer_Change_Color_GetState
- 433              		.section	.text.isr_Timer_Change_Color_Disable,"ax",%progbits
- 434              		.align	2
- 435              		.global	isr_Timer_Change_Color_Disable
- 436              		.code	16
- 437              		.thumb_func
- 438              		.type	isr_Timer_Change_Color_Disable, %function
- 439              	isr_Timer_Change_Color_Disable:
- 440              	.LFB12:
+ 419              		.loc 1 329 0 is_stmt 1 discriminator 4
+ 420 0016 1800     		movs	r0, r3
+ 421 0018 BD46     		mov	sp, r7
+ 422              		@ sp needed
+ 423 001a 80BD     		pop	{r7, pc}
+ 424              	.L31:
+ 425              		.align	2
+ 426              	.L30:
+ 427 001c 00E100E0 		.word	-536813312
+ 428              		.cfi_endproc
+ 429              	.LFE11:
+ 430              		.size	isr_Timer_Change_Color_GetState, .-isr_Timer_Change_Color_GetState
+ 431              		.section	.text.isr_Timer_Change_Color_Disable,"ax",%progbits
+ 432              		.align	2
+ 433              		.global	isr_Timer_Change_Color_Disable
+ 434              		.code	16
+ 435              		.thumb_func
+ 436              		.type	isr_Timer_Change_Color_Disable, %function
+ 437              	isr_Timer_Change_Color_Disable:
+ 438              	.LFB12:
  330:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
  331:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
  332:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** /*******************************************************************************
@@ -828,47 +826,47 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
  345:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** *******************************************************************************/
  346:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** void isr_Timer_Change_Color_Disable(void)
  347:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** {
- 441              		.loc 1 347 0
- 442              		.cfi_startproc
- 443              		@ args = 0, pretend = 0, frame = 0
- 444              		@ frame_needed = 1, uses_anonymous_args = 0
- 445 0000 80B5     		push	{r7, lr}
- 446              		.cfi_def_cfa_offset 8
- 447              		.cfi_offset 7, -8
- 448              		.cfi_offset 14, -4
- 449 0002 00AF     		add	r7, sp, #0
- 450              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 15
-
-
+ 439              		.loc 1 347 0
+ 440              		.cfi_startproc
+ 441              		@ args = 0, pretend = 0, frame = 0
+ 442              		@ frame_needed = 1, uses_anonymous_args = 0
+ 443 0000 80B5     		push	{r7, lr}
+ 444              		.cfi_def_cfa_offset 8
+ 445              		.cfi_offset 7, -8
+ 446              		.cfi_offset 14, -4
+ 447 0002 00AF     		add	r7, sp, #0
+ 448              		.cfi_def_cfa_register 7
  348:Generated_Source\PSoC4/isr_Timer_Change_Color.c ****     /* Disable the general interrupt. */
  349:Generated_Source\PSoC4/isr_Timer_Change_Color.c ****     *isr_Timer_Change_Color_INTC_CLR_EN = isr_Timer_Change_Color__INTC_MASK;
- 451              		.loc 1 349 0
- 452 0004 034B     		ldr	r3, .L33
- 453 0006 8022     		movs	r2, #128
- 454 0008 9202     		lsls	r2, r2, #10
- 455 000a 1A60     		str	r2, [r3]
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 15
+
+
+ 449              		.loc 1 349 0
+ 450 0004 034B     		ldr	r3, .L33
+ 451 0006 8022     		movs	r2, #128
+ 452 0008 1203     		lsls	r2, r2, #12
+ 453 000a 1A60     		str	r2, [r3]
  350:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** }
- 456              		.loc 1 350 0
- 457 000c C046     		nop
- 458 000e BD46     		mov	sp, r7
- 459              		@ sp needed
- 460 0010 80BD     		pop	{r7, pc}
- 461              	.L34:
- 462 0012 C046     		.align	2
- 463              	.L33:
- 464 0014 80E100E0 		.word	-536813184
- 465              		.cfi_endproc
- 466              	.LFE12:
- 467              		.size	isr_Timer_Change_Color_Disable, .-isr_Timer_Change_Color_Disable
- 468              		.section	.text.isr_Timer_Change_Color_SetPending,"ax",%progbits
- 469              		.align	2
- 470              		.global	isr_Timer_Change_Color_SetPending
- 471              		.code	16
- 472              		.thumb_func
- 473              		.type	isr_Timer_Change_Color_SetPending, %function
- 474              	isr_Timer_Change_Color_SetPending:
- 475              	.LFB13:
+ 454              		.loc 1 350 0
+ 455 000c C046     		nop
+ 456 000e BD46     		mov	sp, r7
+ 457              		@ sp needed
+ 458 0010 80BD     		pop	{r7, pc}
+ 459              	.L34:
+ 460 0012 C046     		.align	2
+ 461              	.L33:
+ 462 0014 80E100E0 		.word	-536813184
+ 463              		.cfi_endproc
+ 464              	.LFE12:
+ 465              		.size	isr_Timer_Change_Color_Disable, .-isr_Timer_Change_Color_Disable
+ 466              		.section	.text.isr_Timer_Change_Color_SetPending,"ax",%progbits
+ 467              		.align	2
+ 468              		.global	isr_Timer_Change_Color_SetPending
+ 469              		.code	16
+ 470              		.thumb_func
+ 471              		.type	isr_Timer_Change_Color_SetPending, %function
+ 472              	isr_Timer_Change_Color_SetPending:
+ 473              	.LFB13:
  351:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
  352:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
  353:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** /*******************************************************************************
@@ -893,46 +891,46 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
  372:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** *******************************************************************************/
  373:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** void isr_Timer_Change_Color_SetPending(void)
  374:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** {
- 476              		.loc 1 374 0
- 477              		.cfi_startproc
- 478              		@ args = 0, pretend = 0, frame = 0
- 479              		@ frame_needed = 1, uses_anonymous_args = 0
- 480 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 16
+ 474              		.loc 1 374 0
+ 475              		.cfi_startproc
+ 476              		@ args = 0, pretend = 0, frame = 0
+ 477              		@ frame_needed = 1, uses_anonymous_args = 0
+ 478 0000 80B5     		push	{r7, lr}
+ 479              		.cfi_def_cfa_offset 8
+ 480              		.cfi_offset 7, -8
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 16
 
 
- 481              		.cfi_def_cfa_offset 8
- 482              		.cfi_offset 7, -8
- 483              		.cfi_offset 14, -4
- 484 0002 00AF     		add	r7, sp, #0
- 485              		.cfi_def_cfa_register 7
+ 481              		.cfi_offset 14, -4
+ 482 0002 00AF     		add	r7, sp, #0
+ 483              		.cfi_def_cfa_register 7
  375:Generated_Source\PSoC4/isr_Timer_Change_Color.c ****     *isr_Timer_Change_Color_INTC_SET_PD = isr_Timer_Change_Color__INTC_MASK;
- 486              		.loc 1 375 0
- 487 0004 034B     		ldr	r3, .L36
- 488 0006 8022     		movs	r2, #128
- 489 0008 9202     		lsls	r2, r2, #10
- 490 000a 1A60     		str	r2, [r3]
+ 484              		.loc 1 375 0
+ 485 0004 034B     		ldr	r3, .L36
+ 486 0006 8022     		movs	r2, #128
+ 487 0008 1203     		lsls	r2, r2, #12
+ 488 000a 1A60     		str	r2, [r3]
  376:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** }
- 491              		.loc 1 376 0
- 492 000c C046     		nop
- 493 000e BD46     		mov	sp, r7
- 494              		@ sp needed
- 495 0010 80BD     		pop	{r7, pc}
- 496              	.L37:
- 497 0012 C046     		.align	2
- 498              	.L36:
- 499 0014 00E200E0 		.word	-536813056
- 500              		.cfi_endproc
- 501              	.LFE13:
- 502              		.size	isr_Timer_Change_Color_SetPending, .-isr_Timer_Change_Color_SetPending
- 503              		.section	.text.isr_Timer_Change_Color_ClearPending,"ax",%progbits
- 504              		.align	2
- 505              		.global	isr_Timer_Change_Color_ClearPending
- 506              		.code	16
- 507              		.thumb_func
- 508              		.type	isr_Timer_Change_Color_ClearPending, %function
- 509              	isr_Timer_Change_Color_ClearPending:
- 510              	.LFB14:
+ 489              		.loc 1 376 0
+ 490 000c C046     		nop
+ 491 000e BD46     		mov	sp, r7
+ 492              		@ sp needed
+ 493 0010 80BD     		pop	{r7, pc}
+ 494              	.L37:
+ 495 0012 C046     		.align	2
+ 496              	.L36:
+ 497 0014 00E200E0 		.word	-536813056
+ 498              		.cfi_endproc
+ 499              	.LFE13:
+ 500              		.size	isr_Timer_Change_Color_SetPending, .-isr_Timer_Change_Color_SetPending
+ 501              		.section	.text.isr_Timer_Change_Color_ClearPending,"ax",%progbits
+ 502              		.align	2
+ 503              		.global	isr_Timer_Change_Color_ClearPending
+ 504              		.code	16
+ 505              		.thumb_func
+ 506              		.type	isr_Timer_Change_Color_ClearPending, %function
+ 507              	isr_Timer_Change_Color_ClearPending:
+ 508              	.LFB14:
  377:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
  378:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** 
  379:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** /*******************************************************************************
@@ -956,1013 +954,1013 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 1
  397:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** *******************************************************************************/
  398:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** void isr_Timer_Change_Color_ClearPending(void)
  399:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** {
- 511              		.loc 1 399 0
- 512              		.cfi_startproc
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 17
+ 509              		.loc 1 399 0
+ 510              		.cfi_startproc
+ 511              		@ args = 0, pretend = 0, frame = 0
+ 512              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 17
 
 
- 513              		@ args = 0, pretend = 0, frame = 0
- 514              		@ frame_needed = 1, uses_anonymous_args = 0
- 515 0000 80B5     		push	{r7, lr}
- 516              		.cfi_def_cfa_offset 8
- 517              		.cfi_offset 7, -8
- 518              		.cfi_offset 14, -4
- 519 0002 00AF     		add	r7, sp, #0
- 520              		.cfi_def_cfa_register 7
+ 513 0000 80B5     		push	{r7, lr}
+ 514              		.cfi_def_cfa_offset 8
+ 515              		.cfi_offset 7, -8
+ 516              		.cfi_offset 14, -4
+ 517 0002 00AF     		add	r7, sp, #0
+ 518              		.cfi_def_cfa_register 7
  400:Generated_Source\PSoC4/isr_Timer_Change_Color.c ****     *isr_Timer_Change_Color_INTC_CLR_PD = isr_Timer_Change_Color__INTC_MASK;
- 521              		.loc 1 400 0
- 522 0004 034B     		ldr	r3, .L39
- 523 0006 8022     		movs	r2, #128
- 524 0008 9202     		lsls	r2, r2, #10
- 525 000a 1A60     		str	r2, [r3]
+ 519              		.loc 1 400 0
+ 520 0004 034B     		ldr	r3, .L39
+ 521 0006 8022     		movs	r2, #128
+ 522 0008 1203     		lsls	r2, r2, #12
+ 523 000a 1A60     		str	r2, [r3]
  401:Generated_Source\PSoC4/isr_Timer_Change_Color.c **** }
- 526              		.loc 1 401 0
- 527 000c C046     		nop
- 528 000e BD46     		mov	sp, r7
- 529              		@ sp needed
- 530 0010 80BD     		pop	{r7, pc}
- 531              	.L40:
- 532 0012 C046     		.align	2
- 533              	.L39:
- 534 0014 80E200E0 		.word	-536812928
- 535              		.cfi_endproc
- 536              	.LFE14:
- 537              		.size	isr_Timer_Change_Color_ClearPending, .-isr_Timer_Change_Color_ClearPending
- 538              		.text
- 539              	.Letext0:
- 540              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
- 541              		.section	.debug_info,"",%progbits
- 542              	.Ldebug_info0:
- 543 0000 49020000 		.4byte	0x249
- 544 0004 0400     		.2byte	0x4
- 545 0006 00000000 		.4byte	.Ldebug_abbrev0
- 546 000a 04       		.byte	0x4
- 547 000b 01       		.uleb128 0x1
- 548 000c 94010000 		.4byte	.LASF34
- 549 0010 0C       		.byte	0xc
- 550 0011 A7000000 		.4byte	.LASF35
- 551 0015 0C010000 		.4byte	.LASF36
- 552 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 553 001d 00000000 		.4byte	0
- 554 0021 00000000 		.4byte	.Ldebug_line0
- 555 0025 02       		.uleb128 0x2
- 556 0026 01       		.byte	0x1
- 557 0027 06       		.byte	0x6
- 558 0028 A8030000 		.4byte	.LASF0
- 559 002c 02       		.uleb128 0x2
- 560 002d 01       		.byte	0x1
- 561 002e 08       		.byte	0x8
- 562 002f DD000000 		.4byte	.LASF1
- 563 0033 02       		.uleb128 0x2
- 564 0034 02       		.byte	0x2
- 565 0035 05       		.byte	0x5
- 566 0036 1C030000 		.4byte	.LASF2
- 567 003a 02       		.uleb128 0x2
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 18
+ 524              		.loc 1 401 0
+ 525 000c C046     		nop
+ 526 000e BD46     		mov	sp, r7
+ 527              		@ sp needed
+ 528 0010 80BD     		pop	{r7, pc}
+ 529              	.L40:
+ 530 0012 C046     		.align	2
+ 531              	.L39:
+ 532 0014 80E200E0 		.word	-536812928
+ 533              		.cfi_endproc
+ 534              	.LFE14:
+ 535              		.size	isr_Timer_Change_Color_ClearPending, .-isr_Timer_Change_Color_ClearPending
+ 536              		.text
+ 537              	.Letext0:
+ 538              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 539              		.section	.debug_info,"",%progbits
+ 540              	.Ldebug_info0:
+ 541 0000 49020000 		.4byte	0x249
+ 542 0004 0400     		.2byte	0x4
+ 543 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 544 000a 04       		.byte	0x4
+ 545 000b 01       		.uleb128 0x1
+ 546 000c 94010000 		.4byte	.LASF34
+ 547 0010 0C       		.byte	0xc
+ 548 0011 A7000000 		.4byte	.LASF35
+ 549 0015 0C010000 		.4byte	.LASF36
+ 550 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 551 001d 00000000 		.4byte	0
+ 552 0021 00000000 		.4byte	.Ldebug_line0
+ 553 0025 02       		.uleb128 0x2
+ 554 0026 01       		.byte	0x1
+ 555 0027 06       		.byte	0x6
+ 556 0028 A8030000 		.4byte	.LASF0
+ 557 002c 02       		.uleb128 0x2
+ 558 002d 01       		.byte	0x1
+ 559 002e 08       		.byte	0x8
+ 560 002f DD000000 		.4byte	.LASF1
+ 561 0033 02       		.uleb128 0x2
+ 562 0034 02       		.byte	0x2
+ 563 0035 05       		.byte	0x5
+ 564 0036 1C030000 		.4byte	.LASF2
+ 565 003a 02       		.uleb128 0x2
+ 566 003b 02       		.byte	0x2
+ 567 003c 07       		.byte	0x7
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 18
 
 
- 568 003b 02       		.byte	0x2
- 569 003c 07       		.byte	0x7
- 570 003d 32000000 		.4byte	.LASF3
- 571 0041 02       		.uleb128 0x2
- 572 0042 04       		.byte	0x4
- 573 0043 05       		.byte	0x5
- 574 0044 7F030000 		.4byte	.LASF4
- 575 0048 02       		.uleb128 0x2
- 576 0049 04       		.byte	0x4
- 577 004a 07       		.byte	0x7
- 578 004b FA000000 		.4byte	.LASF5
- 579 004f 02       		.uleb128 0x2
- 580 0050 08       		.byte	0x8
- 581 0051 05       		.byte	0x5
- 582 0052 EC020000 		.4byte	.LASF6
- 583 0056 02       		.uleb128 0x2
- 584 0057 08       		.byte	0x8
- 585 0058 07       		.byte	0x7
- 586 0059 B3020000 		.4byte	.LASF7
- 587 005d 03       		.uleb128 0x3
- 588 005e 04       		.byte	0x4
- 589 005f 05       		.byte	0x5
- 590 0060 696E7400 		.ascii	"int\000"
- 591 0064 02       		.uleb128 0x2
- 592 0065 04       		.byte	0x4
- 593 0066 07       		.byte	0x7
- 594 0067 9E020000 		.4byte	.LASF8
- 595 006b 04       		.uleb128 0x4
- 596 006c 49030000 		.4byte	.LASF9
- 597 0070 02       		.byte	0x2
- 598 0071 E601     		.2byte	0x1e6
- 599 0073 2C000000 		.4byte	0x2c
- 600 0077 04       		.uleb128 0x4
- 601 0078 55020000 		.4byte	.LASF10
- 602 007c 02       		.byte	0x2
- 603 007d E801     		.2byte	0x1e8
- 604 007f 48000000 		.4byte	0x48
- 605 0083 02       		.uleb128 0x2
- 606 0084 04       		.byte	0x4
- 607 0085 04       		.byte	0x4
- 608 0086 D7000000 		.4byte	.LASF11
- 609 008a 02       		.uleb128 0x2
- 610 008b 08       		.byte	0x8
- 611 008c 04       		.byte	0x4
- 612 008d 2B020000 		.4byte	.LASF12
- 613 0091 02       		.uleb128 0x2
- 614 0092 01       		.byte	0x1
- 615 0093 08       		.byte	0x8
- 616 0094 FA020000 		.4byte	.LASF13
- 617 0098 04       		.uleb128 0x4
- 618 0099 1F000000 		.4byte	.LASF14
- 619 009d 02       		.byte	0x2
- 620 009e 9202     		.2byte	0x292
- 621 00a0 A4000000 		.4byte	0xa4
- 622 00a4 05       		.uleb128 0x5
- 623 00a5 77000000 		.4byte	0x77
- 624 00a9 04       		.uleb128 0x4
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 19
+ 568 003d 32000000 		.4byte	.LASF3
+ 569 0041 02       		.uleb128 0x2
+ 570 0042 04       		.byte	0x4
+ 571 0043 05       		.byte	0x5
+ 572 0044 7F030000 		.4byte	.LASF4
+ 573 0048 02       		.uleb128 0x2
+ 574 0049 04       		.byte	0x4
+ 575 004a 07       		.byte	0x7
+ 576 004b FA000000 		.4byte	.LASF5
+ 577 004f 02       		.uleb128 0x2
+ 578 0050 08       		.byte	0x8
+ 579 0051 05       		.byte	0x5
+ 580 0052 EC020000 		.4byte	.LASF6
+ 581 0056 02       		.uleb128 0x2
+ 582 0057 08       		.byte	0x8
+ 583 0058 07       		.byte	0x7
+ 584 0059 B3020000 		.4byte	.LASF7
+ 585 005d 03       		.uleb128 0x3
+ 586 005e 04       		.byte	0x4
+ 587 005f 05       		.byte	0x5
+ 588 0060 696E7400 		.ascii	"int\000"
+ 589 0064 02       		.uleb128 0x2
+ 590 0065 04       		.byte	0x4
+ 591 0066 07       		.byte	0x7
+ 592 0067 9E020000 		.4byte	.LASF8
+ 593 006b 04       		.uleb128 0x4
+ 594 006c 49030000 		.4byte	.LASF9
+ 595 0070 02       		.byte	0x2
+ 596 0071 E601     		.2byte	0x1e6
+ 597 0073 2C000000 		.4byte	0x2c
+ 598 0077 04       		.uleb128 0x4
+ 599 0078 55020000 		.4byte	.LASF10
+ 600 007c 02       		.byte	0x2
+ 601 007d E801     		.2byte	0x1e8
+ 602 007f 48000000 		.4byte	0x48
+ 603 0083 02       		.uleb128 0x2
+ 604 0084 04       		.byte	0x4
+ 605 0085 04       		.byte	0x4
+ 606 0086 D7000000 		.4byte	.LASF11
+ 607 008a 02       		.uleb128 0x2
+ 608 008b 08       		.byte	0x8
+ 609 008c 04       		.byte	0x4
+ 610 008d 2B020000 		.4byte	.LASF12
+ 611 0091 02       		.uleb128 0x2
+ 612 0092 01       		.byte	0x1
+ 613 0093 08       		.byte	0x8
+ 614 0094 FA020000 		.4byte	.LASF13
+ 615 0098 04       		.uleb128 0x4
+ 616 0099 1F000000 		.4byte	.LASF14
+ 617 009d 02       		.byte	0x2
+ 618 009e 9202     		.2byte	0x292
+ 619 00a0 A4000000 		.4byte	0xa4
+ 620 00a4 05       		.uleb128 0x5
+ 621 00a5 77000000 		.4byte	0x77
+ 622 00a9 04       		.uleb128 0x4
+ 623 00aa CA020000 		.4byte	.LASF15
+ 624 00ae 02       		.byte	0x2
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 19
 
 
- 625 00aa CA020000 		.4byte	.LASF15
- 626 00ae 02       		.byte	0x2
- 627 00af A202     		.2byte	0x2a2
- 628 00b1 B5000000 		.4byte	0xb5
- 629 00b5 06       		.uleb128 0x6
- 630 00b6 04       		.byte	0x4
- 631 00b7 BB000000 		.4byte	0xbb
- 632 00bb 07       		.uleb128 0x7
- 633 00bc 02       		.uleb128 0x2
- 634 00bd 08       		.byte	0x8
- 635 00be 04       		.byte	0x4
- 636 00bf D7020000 		.4byte	.LASF16
- 637 00c3 02       		.uleb128 0x2
- 638 00c4 04       		.byte	0x4
- 639 00c5 07       		.byte	0x7
- 640 00c6 E3020000 		.4byte	.LASF17
- 641 00ca 08       		.uleb128 0x8
- 642 00cb FF020000 		.4byte	.LASF18
- 643 00cf 01       		.byte	0x1
- 644 00d0 38       		.byte	0x38
- 645 00d1 00000000 		.4byte	.LFB2
- 646 00d5 24000000 		.4byte	.LFE2-.LFB2
- 647 00d9 01       		.uleb128 0x1
- 648 00da 9C       		.byte	0x9c
- 649 00db 09       		.uleb128 0x9
- 650 00dc 00000000 		.4byte	.LASF21
- 651 00e0 01       		.byte	0x1
- 652 00e1 63       		.byte	0x63
- 653 00e2 00000000 		.4byte	.LFB3
- 654 00e6 26000000 		.4byte	.LFE3-.LFB3
- 655 00ea 01       		.uleb128 0x1
- 656 00eb 9C       		.byte	0x9c
- 657 00ec FF000000 		.4byte	0xff
- 658 00f0 0A       		.uleb128 0xa
- 659 00f1 AB020000 		.4byte	.LASF23
- 660 00f5 01       		.byte	0x1
- 661 00f6 63       		.byte	0x63
- 662 00f7 A9000000 		.4byte	0xa9
- 663 00fb 02       		.uleb128 0x2
- 664 00fc 91       		.byte	0x91
- 665 00fd 74       		.sleb128 -12
- 666 00fe 00       		.byte	0
- 667 00ff 08       		.uleb128 0x8
- 668 0100 78010000 		.4byte	.LASF19
- 669 0104 01       		.byte	0x1
- 670 0105 81       		.byte	0x81
- 671 0106 00000000 		.4byte	.LFB4
- 672 010a 1C000000 		.4byte	.LFE4-.LFB4
- 673 010e 01       		.uleb128 0x1
- 674 010f 9C       		.byte	0x9c
- 675 0110 0B       		.uleb128 0xb
- 676 0111 86000000 		.4byte	.LASF20
- 677 0115 01       		.byte	0x1
- 678 0116 9F       		.byte	0x9f
- 679 0117 00000000 		.4byte	.LFB5
- 680 011b 0A000000 		.4byte	.LFE5-.LFB5
- 681 011f 01       		.uleb128 0x1
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 20
+ 625 00af A202     		.2byte	0x2a2
+ 626 00b1 B5000000 		.4byte	0xb5
+ 627 00b5 06       		.uleb128 0x6
+ 628 00b6 04       		.byte	0x4
+ 629 00b7 BB000000 		.4byte	0xbb
+ 630 00bb 07       		.uleb128 0x7
+ 631 00bc 02       		.uleb128 0x2
+ 632 00bd 08       		.byte	0x8
+ 633 00be 04       		.byte	0x4
+ 634 00bf D7020000 		.4byte	.LASF16
+ 635 00c3 02       		.uleb128 0x2
+ 636 00c4 04       		.byte	0x4
+ 637 00c5 07       		.byte	0x7
+ 638 00c6 E3020000 		.4byte	.LASF17
+ 639 00ca 08       		.uleb128 0x8
+ 640 00cb FF020000 		.4byte	.LASF18
+ 641 00cf 01       		.byte	0x1
+ 642 00d0 38       		.byte	0x38
+ 643 00d1 00000000 		.4byte	.LFB2
+ 644 00d5 24000000 		.4byte	.LFE2-.LFB2
+ 645 00d9 01       		.uleb128 0x1
+ 646 00da 9C       		.byte	0x9c
+ 647 00db 09       		.uleb128 0x9
+ 648 00dc 00000000 		.4byte	.LASF21
+ 649 00e0 01       		.byte	0x1
+ 650 00e1 63       		.byte	0x63
+ 651 00e2 00000000 		.4byte	.LFB3
+ 652 00e6 26000000 		.4byte	.LFE3-.LFB3
+ 653 00ea 01       		.uleb128 0x1
+ 654 00eb 9C       		.byte	0x9c
+ 655 00ec FF000000 		.4byte	0xff
+ 656 00f0 0A       		.uleb128 0xa
+ 657 00f1 AB020000 		.4byte	.LASF23
+ 658 00f5 01       		.byte	0x1
+ 659 00f6 63       		.byte	0x63
+ 660 00f7 A9000000 		.4byte	0xa9
+ 661 00fb 02       		.uleb128 0x2
+ 662 00fc 91       		.byte	0x91
+ 663 00fd 74       		.sleb128 -12
+ 664 00fe 00       		.byte	0
+ 665 00ff 08       		.uleb128 0x8
+ 666 0100 78010000 		.4byte	.LASF19
+ 667 0104 01       		.byte	0x1
+ 668 0105 81       		.byte	0x81
+ 669 0106 00000000 		.4byte	.LFB4
+ 670 010a 1C000000 		.4byte	.LFE4-.LFB4
+ 671 010e 01       		.uleb128 0x1
+ 672 010f 9C       		.byte	0x9c
+ 673 0110 0B       		.uleb128 0xb
+ 674 0111 86000000 		.4byte	.LASF20
+ 675 0115 01       		.byte	0x1
+ 676 0116 9F       		.byte	0x9f
+ 677 0117 00000000 		.4byte	.LFB5
+ 678 011b 0A000000 		.4byte	.LFE5-.LFB5
+ 679 011f 01       		.uleb128 0x1
+ 680 0120 9C       		.byte	0x9c
+ 681 0121 0C       		.uleb128 0xc
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 20
 
 
- 682 0120 9C       		.byte	0x9c
- 683 0121 0C       		.uleb128 0xc
- 684 0122 4F030000 		.4byte	.LASF22
- 685 0126 01       		.byte	0x1
- 686 0127 C7       		.byte	0xc7
- 687 0128 00000000 		.4byte	.LFB6
- 688 012c 1C000000 		.4byte	.LFE6-.LFB6
- 689 0130 01       		.uleb128 0x1
- 690 0131 9C       		.byte	0x9c
- 691 0132 45010000 		.4byte	0x145
- 692 0136 0A       		.uleb128 0xa
- 693 0137 AB020000 		.4byte	.LASF23
- 694 013b 01       		.byte	0x1
- 695 013c C7       		.byte	0xc7
- 696 013d A9000000 		.4byte	0xa9
- 697 0141 02       		.uleb128 0x2
- 698 0142 91       		.byte	0x91
- 699 0143 74       		.sleb128 -12
- 700 0144 00       		.byte	0
- 701 0145 0D       		.uleb128 0xd
- 702 0146 B4030000 		.4byte	.LASF29
- 703 014a 01       		.byte	0x1
- 704 014b DB       		.byte	0xdb
- 705 014c A9000000 		.4byte	0xa9
- 706 0150 00000000 		.4byte	.LFB7
- 707 0154 14000000 		.4byte	.LFE7-.LFB7
- 708 0158 01       		.uleb128 0x1
- 709 0159 9C       		.byte	0x9c
- 710 015a 09       		.uleb128 0x9
- 711 015b 26030000 		.4byte	.LASF24
- 712 015f 01       		.byte	0x1
- 713 0160 F9       		.byte	0xf9
- 714 0161 00000000 		.4byte	.LFB8
- 715 0165 50000000 		.4byte	.LFE8-.LFB8
- 716 0169 01       		.uleb128 0x1
- 717 016a 9C       		.byte	0x9c
- 718 016b 9A010000 		.4byte	0x19a
- 719 016f 0A       		.uleb128 0xa
- 720 0170 22020000 		.4byte	.LASF25
- 721 0174 01       		.byte	0x1
- 722 0175 F9       		.byte	0xf9
- 723 0176 6B000000 		.4byte	0x6b
- 724 017a 02       		.uleb128 0x2
- 725 017b 91       		.byte	0x91
- 726 017c 67       		.sleb128 -25
- 727 017d 0E       		.uleb128 0xe
- 728 017e EB000000 		.4byte	.LASF26
- 729 0182 01       		.byte	0x1
- 730 0183 FB       		.byte	0xfb
- 731 0184 6B000000 		.4byte	0x6b
- 732 0188 02       		.uleb128 0x2
- 733 0189 91       		.byte	0x91
- 734 018a 6B       		.sleb128 -21
- 735 018b 0E       		.uleb128 0xe
- 736 018c 70030000 		.4byte	.LASF27
- 737 0190 01       		.byte	0x1
- 738 0191 FC       		.byte	0xfc
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 21
+ 682 0122 4F030000 		.4byte	.LASF22
+ 683 0126 01       		.byte	0x1
+ 684 0127 C7       		.byte	0xc7
+ 685 0128 00000000 		.4byte	.LFB6
+ 686 012c 1C000000 		.4byte	.LFE6-.LFB6
+ 687 0130 01       		.uleb128 0x1
+ 688 0131 9C       		.byte	0x9c
+ 689 0132 45010000 		.4byte	0x145
+ 690 0136 0A       		.uleb128 0xa
+ 691 0137 AB020000 		.4byte	.LASF23
+ 692 013b 01       		.byte	0x1
+ 693 013c C7       		.byte	0xc7
+ 694 013d A9000000 		.4byte	0xa9
+ 695 0141 02       		.uleb128 0x2
+ 696 0142 91       		.byte	0x91
+ 697 0143 74       		.sleb128 -12
+ 698 0144 00       		.byte	0
+ 699 0145 0D       		.uleb128 0xd
+ 700 0146 B4030000 		.4byte	.LASF29
+ 701 014a 01       		.byte	0x1
+ 702 014b DB       		.byte	0xdb
+ 703 014c A9000000 		.4byte	0xa9
+ 704 0150 00000000 		.4byte	.LFB7
+ 705 0154 14000000 		.4byte	.LFE7-.LFB7
+ 706 0158 01       		.uleb128 0x1
+ 707 0159 9C       		.byte	0x9c
+ 708 015a 09       		.uleb128 0x9
+ 709 015b 26030000 		.4byte	.LASF24
+ 710 015f 01       		.byte	0x1
+ 711 0160 F9       		.byte	0xf9
+ 712 0161 00000000 		.4byte	.LFB8
+ 713 0165 4C000000 		.4byte	.LFE8-.LFB8
+ 714 0169 01       		.uleb128 0x1
+ 715 016a 9C       		.byte	0x9c
+ 716 016b 9A010000 		.4byte	0x19a
+ 717 016f 0A       		.uleb128 0xa
+ 718 0170 22020000 		.4byte	.LASF25
+ 719 0174 01       		.byte	0x1
+ 720 0175 F9       		.byte	0xf9
+ 721 0176 6B000000 		.4byte	0x6b
+ 722 017a 02       		.uleb128 0x2
+ 723 017b 91       		.byte	0x91
+ 724 017c 67       		.sleb128 -25
+ 725 017d 0E       		.uleb128 0xe
+ 726 017e EB000000 		.4byte	.LASF26
+ 727 0182 01       		.byte	0x1
+ 728 0183 FB       		.byte	0xfb
+ 729 0184 6B000000 		.4byte	0x6b
+ 730 0188 02       		.uleb128 0x2
+ 731 0189 91       		.byte	0x91
+ 732 018a 6B       		.sleb128 -21
+ 733 018b 0E       		.uleb128 0xe
+ 734 018c 70030000 		.4byte	.LASF27
+ 735 0190 01       		.byte	0x1
+ 736 0191 FC       		.byte	0xfc
+ 737 0192 77000000 		.4byte	0x77
+ 738 0196 02       		.uleb128 0x2
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 21
 
 
- 739 0192 77000000 		.4byte	0x77
- 740 0196 02       		.uleb128 0x2
- 741 0197 91       		.byte	0x91
- 742 0198 6C       		.sleb128 -20
- 743 0199 00       		.byte	0
- 744 019a 0F       		.uleb128 0xf
- 745 019b 32020000 		.4byte	.LASF37
- 746 019f 01       		.byte	0x1
- 747 01a0 1501     		.2byte	0x115
- 748 01a2 6B000000 		.4byte	0x6b
- 749 01a6 00000000 		.4byte	.LFB9
- 750 01aa 2C000000 		.4byte	.LFE9-.LFB9
- 751 01ae 01       		.uleb128 0x1
- 752 01af 9C       		.byte	0x9c
- 753 01b0 D3010000 		.4byte	0x1d3
- 754 01b4 10       		.uleb128 0x10
- 755 01b5 22020000 		.4byte	.LASF25
- 756 01b9 01       		.byte	0x1
- 757 01ba 1701     		.2byte	0x117
- 758 01bc 77000000 		.4byte	0x77
- 759 01c0 02       		.uleb128 0x2
- 760 01c1 91       		.byte	0x91
- 761 01c2 70       		.sleb128 -16
- 762 01c3 10       		.uleb128 0x10
- 763 01c4 70030000 		.4byte	.LASF27
- 764 01c8 01       		.byte	0x1
- 765 01c9 1801     		.2byte	0x118
- 766 01cb 77000000 		.4byte	0x77
- 767 01cf 02       		.uleb128 0x2
- 768 01d0 91       		.byte	0x91
- 769 01d1 74       		.sleb128 -12
- 770 01d2 00       		.byte	0
- 771 01d3 11       		.uleb128 0x11
- 772 01d4 5C020000 		.4byte	.LASF28
- 773 01d8 01       		.byte	0x1
- 774 01d9 3001     		.2byte	0x130
- 775 01db 00000000 		.4byte	.LFB10
- 776 01df 18000000 		.4byte	.LFE10-.LFB10
- 777 01e3 01       		.uleb128 0x1
- 778 01e4 9C       		.byte	0x9c
- 779 01e5 12       		.uleb128 0x12
- 780 01e6 88030000 		.4byte	.LASF30
- 781 01ea 01       		.byte	0x1
- 782 01eb 4501     		.2byte	0x145
- 783 01ed 6B000000 		.4byte	0x6b
- 784 01f1 00000000 		.4byte	.LFB11
- 785 01f5 20000000 		.4byte	.LFE11-.LFB11
- 786 01f9 01       		.uleb128 0x1
- 787 01fa 9C       		.byte	0x9c
- 788 01fb 11       		.uleb128 0x11
- 789 01fc 45000000 		.4byte	.LASF31
- 790 0200 01       		.byte	0x1
- 791 0201 5A01     		.2byte	0x15a
- 792 0203 00000000 		.4byte	.LFB12
- 793 0207 18000000 		.4byte	.LFE12-.LFB12
- 794 020b 01       		.uleb128 0x1
- 795 020c 9C       		.byte	0x9c
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 22
+ 739 0197 91       		.byte	0x91
+ 740 0198 6C       		.sleb128 -20
+ 741 0199 00       		.byte	0
+ 742 019a 0F       		.uleb128 0xf
+ 743 019b 32020000 		.4byte	.LASF37
+ 744 019f 01       		.byte	0x1
+ 745 01a0 1501     		.2byte	0x115
+ 746 01a2 6B000000 		.4byte	0x6b
+ 747 01a6 00000000 		.4byte	.LFB9
+ 748 01aa 2C000000 		.4byte	.LFE9-.LFB9
+ 749 01ae 01       		.uleb128 0x1
+ 750 01af 9C       		.byte	0x9c
+ 751 01b0 D3010000 		.4byte	0x1d3
+ 752 01b4 10       		.uleb128 0x10
+ 753 01b5 22020000 		.4byte	.LASF25
+ 754 01b9 01       		.byte	0x1
+ 755 01ba 1701     		.2byte	0x117
+ 756 01bc 77000000 		.4byte	0x77
+ 757 01c0 02       		.uleb128 0x2
+ 758 01c1 91       		.byte	0x91
+ 759 01c2 70       		.sleb128 -16
+ 760 01c3 10       		.uleb128 0x10
+ 761 01c4 70030000 		.4byte	.LASF27
+ 762 01c8 01       		.byte	0x1
+ 763 01c9 1801     		.2byte	0x118
+ 764 01cb 77000000 		.4byte	0x77
+ 765 01cf 02       		.uleb128 0x2
+ 766 01d0 91       		.byte	0x91
+ 767 01d1 74       		.sleb128 -12
+ 768 01d2 00       		.byte	0
+ 769 01d3 11       		.uleb128 0x11
+ 770 01d4 5C020000 		.4byte	.LASF28
+ 771 01d8 01       		.byte	0x1
+ 772 01d9 3001     		.2byte	0x130
+ 773 01db 00000000 		.4byte	.LFB10
+ 774 01df 18000000 		.4byte	.LFE10-.LFB10
+ 775 01e3 01       		.uleb128 0x1
+ 776 01e4 9C       		.byte	0x9c
+ 777 01e5 12       		.uleb128 0x12
+ 778 01e6 88030000 		.4byte	.LASF30
+ 779 01ea 01       		.byte	0x1
+ 780 01eb 4501     		.2byte	0x145
+ 781 01ed 6B000000 		.4byte	0x6b
+ 782 01f1 00000000 		.4byte	.LFB11
+ 783 01f5 20000000 		.4byte	.LFE11-.LFB11
+ 784 01f9 01       		.uleb128 0x1
+ 785 01fa 9C       		.byte	0x9c
+ 786 01fb 11       		.uleb128 0x11
+ 787 01fc 45000000 		.4byte	.LASF31
+ 788 0200 01       		.byte	0x1
+ 789 0201 5A01     		.2byte	0x15a
+ 790 0203 00000000 		.4byte	.LFB12
+ 791 0207 18000000 		.4byte	.LFE12-.LFB12
+ 792 020b 01       		.uleb128 0x1
+ 793 020c 9C       		.byte	0x9c
+ 794 020d 11       		.uleb128 0x11
+ 795 020e 64000000 		.4byte	.LASF32
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 22
 
 
- 796 020d 11       		.uleb128 0x11
- 797 020e 64000000 		.4byte	.LASF32
- 798 0212 01       		.byte	0x1
- 799 0213 7501     		.2byte	0x175
- 800 0215 00000000 		.4byte	.LFB13
- 801 0219 18000000 		.4byte	.LFE13-.LFB13
- 802 021d 01       		.uleb128 0x1
- 803 021e 9C       		.byte	0x9c
- 804 021f 11       		.uleb128 0x11
- 805 0220 7A020000 		.4byte	.LASF33
- 806 0224 01       		.byte	0x1
- 807 0225 8E01     		.2byte	0x18e
- 808 0227 00000000 		.4byte	.LFB14
- 809 022b 18000000 		.4byte	.LFE14-.LFB14
- 810 022f 01       		.uleb128 0x1
- 811 0230 9C       		.byte	0x9c
- 812 0231 13       		.uleb128 0x13
- 813 0232 A9000000 		.4byte	0xa9
- 814 0236 41020000 		.4byte	0x241
- 815 023a 14       		.uleb128 0x14
- 816 023b C3000000 		.4byte	0xc3
- 817 023f 2F       		.byte	0x2f
- 818 0240 00       		.byte	0
- 819 0241 15       		.uleb128 0x15
- 820 0242 25000000 		.4byte	.LASF38
- 821 0246 01       		.byte	0x1
- 822 0247 21       		.byte	0x21
- 823 0248 31020000 		.4byte	0x231
- 824 024c 00       		.byte	0
- 825              		.section	.debug_abbrev,"",%progbits
- 826              	.Ldebug_abbrev0:
- 827 0000 01       		.uleb128 0x1
- 828 0001 11       		.uleb128 0x11
- 829 0002 01       		.byte	0x1
- 830 0003 25       		.uleb128 0x25
- 831 0004 0E       		.uleb128 0xe
- 832 0005 13       		.uleb128 0x13
- 833 0006 0B       		.uleb128 0xb
- 834 0007 03       		.uleb128 0x3
- 835 0008 0E       		.uleb128 0xe
- 836 0009 1B       		.uleb128 0x1b
- 837 000a 0E       		.uleb128 0xe
- 838 000b 55       		.uleb128 0x55
- 839 000c 17       		.uleb128 0x17
- 840 000d 11       		.uleb128 0x11
- 841 000e 01       		.uleb128 0x1
- 842 000f 10       		.uleb128 0x10
- 843 0010 17       		.uleb128 0x17
- 844 0011 00       		.byte	0
- 845 0012 00       		.byte	0
- 846 0013 02       		.uleb128 0x2
- 847 0014 24       		.uleb128 0x24
- 848 0015 00       		.byte	0
- 849 0016 0B       		.uleb128 0xb
- 850 0017 0B       		.uleb128 0xb
- 851 0018 3E       		.uleb128 0x3e
- 852 0019 0B       		.uleb128 0xb
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 23
+ 796 0212 01       		.byte	0x1
+ 797 0213 7501     		.2byte	0x175
+ 798 0215 00000000 		.4byte	.LFB13
+ 799 0219 18000000 		.4byte	.LFE13-.LFB13
+ 800 021d 01       		.uleb128 0x1
+ 801 021e 9C       		.byte	0x9c
+ 802 021f 11       		.uleb128 0x11
+ 803 0220 7A020000 		.4byte	.LASF33
+ 804 0224 01       		.byte	0x1
+ 805 0225 8E01     		.2byte	0x18e
+ 806 0227 00000000 		.4byte	.LFB14
+ 807 022b 18000000 		.4byte	.LFE14-.LFB14
+ 808 022f 01       		.uleb128 0x1
+ 809 0230 9C       		.byte	0x9c
+ 810 0231 13       		.uleb128 0x13
+ 811 0232 A9000000 		.4byte	0xa9
+ 812 0236 41020000 		.4byte	0x241
+ 813 023a 14       		.uleb128 0x14
+ 814 023b C3000000 		.4byte	0xc3
+ 815 023f 2F       		.byte	0x2f
+ 816 0240 00       		.byte	0
+ 817 0241 15       		.uleb128 0x15
+ 818 0242 25000000 		.4byte	.LASF38
+ 819 0246 01       		.byte	0x1
+ 820 0247 21       		.byte	0x21
+ 821 0248 31020000 		.4byte	0x231
+ 822 024c 00       		.byte	0
+ 823              		.section	.debug_abbrev,"",%progbits
+ 824              	.Ldebug_abbrev0:
+ 825 0000 01       		.uleb128 0x1
+ 826 0001 11       		.uleb128 0x11
+ 827 0002 01       		.byte	0x1
+ 828 0003 25       		.uleb128 0x25
+ 829 0004 0E       		.uleb128 0xe
+ 830 0005 13       		.uleb128 0x13
+ 831 0006 0B       		.uleb128 0xb
+ 832 0007 03       		.uleb128 0x3
+ 833 0008 0E       		.uleb128 0xe
+ 834 0009 1B       		.uleb128 0x1b
+ 835 000a 0E       		.uleb128 0xe
+ 836 000b 55       		.uleb128 0x55
+ 837 000c 17       		.uleb128 0x17
+ 838 000d 11       		.uleb128 0x11
+ 839 000e 01       		.uleb128 0x1
+ 840 000f 10       		.uleb128 0x10
+ 841 0010 17       		.uleb128 0x17
+ 842 0011 00       		.byte	0
+ 843 0012 00       		.byte	0
+ 844 0013 02       		.uleb128 0x2
+ 845 0014 24       		.uleb128 0x24
+ 846 0015 00       		.byte	0
+ 847 0016 0B       		.uleb128 0xb
+ 848 0017 0B       		.uleb128 0xb
+ 849 0018 3E       		.uleb128 0x3e
+ 850 0019 0B       		.uleb128 0xb
+ 851 001a 03       		.uleb128 0x3
+ 852 001b 0E       		.uleb128 0xe
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 23
 
 
- 853 001a 03       		.uleb128 0x3
- 854 001b 0E       		.uleb128 0xe
- 855 001c 00       		.byte	0
- 856 001d 00       		.byte	0
- 857 001e 03       		.uleb128 0x3
- 858 001f 24       		.uleb128 0x24
- 859 0020 00       		.byte	0
- 860 0021 0B       		.uleb128 0xb
- 861 0022 0B       		.uleb128 0xb
- 862 0023 3E       		.uleb128 0x3e
- 863 0024 0B       		.uleb128 0xb
- 864 0025 03       		.uleb128 0x3
- 865 0026 08       		.uleb128 0x8
- 866 0027 00       		.byte	0
- 867 0028 00       		.byte	0
- 868 0029 04       		.uleb128 0x4
- 869 002a 16       		.uleb128 0x16
- 870 002b 00       		.byte	0
- 871 002c 03       		.uleb128 0x3
- 872 002d 0E       		.uleb128 0xe
- 873 002e 3A       		.uleb128 0x3a
- 874 002f 0B       		.uleb128 0xb
- 875 0030 3B       		.uleb128 0x3b
- 876 0031 05       		.uleb128 0x5
- 877 0032 49       		.uleb128 0x49
- 878 0033 13       		.uleb128 0x13
- 879 0034 00       		.byte	0
- 880 0035 00       		.byte	0
- 881 0036 05       		.uleb128 0x5
- 882 0037 35       		.uleb128 0x35
- 883 0038 00       		.byte	0
- 884 0039 49       		.uleb128 0x49
- 885 003a 13       		.uleb128 0x13
- 886 003b 00       		.byte	0
- 887 003c 00       		.byte	0
- 888 003d 06       		.uleb128 0x6
- 889 003e 0F       		.uleb128 0xf
- 890 003f 00       		.byte	0
- 891 0040 0B       		.uleb128 0xb
- 892 0041 0B       		.uleb128 0xb
- 893 0042 49       		.uleb128 0x49
- 894 0043 13       		.uleb128 0x13
- 895 0044 00       		.byte	0
- 896 0045 00       		.byte	0
- 897 0046 07       		.uleb128 0x7
- 898 0047 15       		.uleb128 0x15
- 899 0048 00       		.byte	0
- 900 0049 27       		.uleb128 0x27
- 901 004a 19       		.uleb128 0x19
- 902 004b 00       		.byte	0
- 903 004c 00       		.byte	0
- 904 004d 08       		.uleb128 0x8
- 905 004e 2E       		.uleb128 0x2e
- 906 004f 00       		.byte	0
- 907 0050 3F       		.uleb128 0x3f
- 908 0051 19       		.uleb128 0x19
- 909 0052 03       		.uleb128 0x3
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 24
+ 853 001c 00       		.byte	0
+ 854 001d 00       		.byte	0
+ 855 001e 03       		.uleb128 0x3
+ 856 001f 24       		.uleb128 0x24
+ 857 0020 00       		.byte	0
+ 858 0021 0B       		.uleb128 0xb
+ 859 0022 0B       		.uleb128 0xb
+ 860 0023 3E       		.uleb128 0x3e
+ 861 0024 0B       		.uleb128 0xb
+ 862 0025 03       		.uleb128 0x3
+ 863 0026 08       		.uleb128 0x8
+ 864 0027 00       		.byte	0
+ 865 0028 00       		.byte	0
+ 866 0029 04       		.uleb128 0x4
+ 867 002a 16       		.uleb128 0x16
+ 868 002b 00       		.byte	0
+ 869 002c 03       		.uleb128 0x3
+ 870 002d 0E       		.uleb128 0xe
+ 871 002e 3A       		.uleb128 0x3a
+ 872 002f 0B       		.uleb128 0xb
+ 873 0030 3B       		.uleb128 0x3b
+ 874 0031 05       		.uleb128 0x5
+ 875 0032 49       		.uleb128 0x49
+ 876 0033 13       		.uleb128 0x13
+ 877 0034 00       		.byte	0
+ 878 0035 00       		.byte	0
+ 879 0036 05       		.uleb128 0x5
+ 880 0037 35       		.uleb128 0x35
+ 881 0038 00       		.byte	0
+ 882 0039 49       		.uleb128 0x49
+ 883 003a 13       		.uleb128 0x13
+ 884 003b 00       		.byte	0
+ 885 003c 00       		.byte	0
+ 886 003d 06       		.uleb128 0x6
+ 887 003e 0F       		.uleb128 0xf
+ 888 003f 00       		.byte	0
+ 889 0040 0B       		.uleb128 0xb
+ 890 0041 0B       		.uleb128 0xb
+ 891 0042 49       		.uleb128 0x49
+ 892 0043 13       		.uleb128 0x13
+ 893 0044 00       		.byte	0
+ 894 0045 00       		.byte	0
+ 895 0046 07       		.uleb128 0x7
+ 896 0047 15       		.uleb128 0x15
+ 897 0048 00       		.byte	0
+ 898 0049 27       		.uleb128 0x27
+ 899 004a 19       		.uleb128 0x19
+ 900 004b 00       		.byte	0
+ 901 004c 00       		.byte	0
+ 902 004d 08       		.uleb128 0x8
+ 903 004e 2E       		.uleb128 0x2e
+ 904 004f 00       		.byte	0
+ 905 0050 3F       		.uleb128 0x3f
+ 906 0051 19       		.uleb128 0x19
+ 907 0052 03       		.uleb128 0x3
+ 908 0053 0E       		.uleb128 0xe
+ 909 0054 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 24
 
 
- 910 0053 0E       		.uleb128 0xe
- 911 0054 3A       		.uleb128 0x3a
- 912 0055 0B       		.uleb128 0xb
- 913 0056 3B       		.uleb128 0x3b
- 914 0057 0B       		.uleb128 0xb
- 915 0058 27       		.uleb128 0x27
- 916 0059 19       		.uleb128 0x19
- 917 005a 11       		.uleb128 0x11
- 918 005b 01       		.uleb128 0x1
- 919 005c 12       		.uleb128 0x12
- 920 005d 06       		.uleb128 0x6
- 921 005e 40       		.uleb128 0x40
- 922 005f 18       		.uleb128 0x18
- 923 0060 9642     		.uleb128 0x2116
- 924 0062 19       		.uleb128 0x19
- 925 0063 00       		.byte	0
- 926 0064 00       		.byte	0
- 927 0065 09       		.uleb128 0x9
- 928 0066 2E       		.uleb128 0x2e
- 929 0067 01       		.byte	0x1
- 930 0068 3F       		.uleb128 0x3f
- 931 0069 19       		.uleb128 0x19
- 932 006a 03       		.uleb128 0x3
- 933 006b 0E       		.uleb128 0xe
- 934 006c 3A       		.uleb128 0x3a
- 935 006d 0B       		.uleb128 0xb
- 936 006e 3B       		.uleb128 0x3b
- 937 006f 0B       		.uleb128 0xb
- 938 0070 27       		.uleb128 0x27
- 939 0071 19       		.uleb128 0x19
- 940 0072 11       		.uleb128 0x11
- 941 0073 01       		.uleb128 0x1
- 942 0074 12       		.uleb128 0x12
- 943 0075 06       		.uleb128 0x6
- 944 0076 40       		.uleb128 0x40
- 945 0077 18       		.uleb128 0x18
- 946 0078 9642     		.uleb128 0x2116
- 947 007a 19       		.uleb128 0x19
- 948 007b 01       		.uleb128 0x1
- 949 007c 13       		.uleb128 0x13
- 950 007d 00       		.byte	0
- 951 007e 00       		.byte	0
- 952 007f 0A       		.uleb128 0xa
- 953 0080 05       		.uleb128 0x5
- 954 0081 00       		.byte	0
- 955 0082 03       		.uleb128 0x3
- 956 0083 0E       		.uleb128 0xe
- 957 0084 3A       		.uleb128 0x3a
- 958 0085 0B       		.uleb128 0xb
- 959 0086 3B       		.uleb128 0x3b
- 960 0087 0B       		.uleb128 0xb
- 961 0088 49       		.uleb128 0x49
- 962 0089 13       		.uleb128 0x13
- 963 008a 02       		.uleb128 0x2
- 964 008b 18       		.uleb128 0x18
- 965 008c 00       		.byte	0
- 966 008d 00       		.byte	0
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 25
+ 910 0055 0B       		.uleb128 0xb
+ 911 0056 3B       		.uleb128 0x3b
+ 912 0057 0B       		.uleb128 0xb
+ 913 0058 27       		.uleb128 0x27
+ 914 0059 19       		.uleb128 0x19
+ 915 005a 11       		.uleb128 0x11
+ 916 005b 01       		.uleb128 0x1
+ 917 005c 12       		.uleb128 0x12
+ 918 005d 06       		.uleb128 0x6
+ 919 005e 40       		.uleb128 0x40
+ 920 005f 18       		.uleb128 0x18
+ 921 0060 9642     		.uleb128 0x2116
+ 922 0062 19       		.uleb128 0x19
+ 923 0063 00       		.byte	0
+ 924 0064 00       		.byte	0
+ 925 0065 09       		.uleb128 0x9
+ 926 0066 2E       		.uleb128 0x2e
+ 927 0067 01       		.byte	0x1
+ 928 0068 3F       		.uleb128 0x3f
+ 929 0069 19       		.uleb128 0x19
+ 930 006a 03       		.uleb128 0x3
+ 931 006b 0E       		.uleb128 0xe
+ 932 006c 3A       		.uleb128 0x3a
+ 933 006d 0B       		.uleb128 0xb
+ 934 006e 3B       		.uleb128 0x3b
+ 935 006f 0B       		.uleb128 0xb
+ 936 0070 27       		.uleb128 0x27
+ 937 0071 19       		.uleb128 0x19
+ 938 0072 11       		.uleb128 0x11
+ 939 0073 01       		.uleb128 0x1
+ 940 0074 12       		.uleb128 0x12
+ 941 0075 06       		.uleb128 0x6
+ 942 0076 40       		.uleb128 0x40
+ 943 0077 18       		.uleb128 0x18
+ 944 0078 9642     		.uleb128 0x2116
+ 945 007a 19       		.uleb128 0x19
+ 946 007b 01       		.uleb128 0x1
+ 947 007c 13       		.uleb128 0x13
+ 948 007d 00       		.byte	0
+ 949 007e 00       		.byte	0
+ 950 007f 0A       		.uleb128 0xa
+ 951 0080 05       		.uleb128 0x5
+ 952 0081 00       		.byte	0
+ 953 0082 03       		.uleb128 0x3
+ 954 0083 0E       		.uleb128 0xe
+ 955 0084 3A       		.uleb128 0x3a
+ 956 0085 0B       		.uleb128 0xb
+ 957 0086 3B       		.uleb128 0x3b
+ 958 0087 0B       		.uleb128 0xb
+ 959 0088 49       		.uleb128 0x49
+ 960 0089 13       		.uleb128 0x13
+ 961 008a 02       		.uleb128 0x2
+ 962 008b 18       		.uleb128 0x18
+ 963 008c 00       		.byte	0
+ 964 008d 00       		.byte	0
+ 965 008e 0B       		.uleb128 0xb
+ 966 008f 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 25
 
 
- 967 008e 0B       		.uleb128 0xb
- 968 008f 2E       		.uleb128 0x2e
- 969 0090 00       		.byte	0
- 970 0091 3F       		.uleb128 0x3f
- 971 0092 19       		.uleb128 0x19
- 972 0093 03       		.uleb128 0x3
- 973 0094 0E       		.uleb128 0xe
- 974 0095 3A       		.uleb128 0x3a
- 975 0096 0B       		.uleb128 0xb
- 976 0097 3B       		.uleb128 0x3b
- 977 0098 0B       		.uleb128 0xb
- 978 0099 27       		.uleb128 0x27
- 979 009a 19       		.uleb128 0x19
- 980 009b 11       		.uleb128 0x11
- 981 009c 01       		.uleb128 0x1
- 982 009d 12       		.uleb128 0x12
- 983 009e 06       		.uleb128 0x6
- 984 009f 40       		.uleb128 0x40
- 985 00a0 18       		.uleb128 0x18
- 986 00a1 9742     		.uleb128 0x2117
- 987 00a3 19       		.uleb128 0x19
- 988 00a4 00       		.byte	0
- 989 00a5 00       		.byte	0
- 990 00a6 0C       		.uleb128 0xc
- 991 00a7 2E       		.uleb128 0x2e
- 992 00a8 01       		.byte	0x1
- 993 00a9 3F       		.uleb128 0x3f
- 994 00aa 19       		.uleb128 0x19
- 995 00ab 03       		.uleb128 0x3
- 996 00ac 0E       		.uleb128 0xe
- 997 00ad 3A       		.uleb128 0x3a
- 998 00ae 0B       		.uleb128 0xb
- 999 00af 3B       		.uleb128 0x3b
- 1000 00b0 0B       		.uleb128 0xb
- 1001 00b1 27       		.uleb128 0x27
- 1002 00b2 19       		.uleb128 0x19
- 1003 00b3 11       		.uleb128 0x11
- 1004 00b4 01       		.uleb128 0x1
- 1005 00b5 12       		.uleb128 0x12
- 1006 00b6 06       		.uleb128 0x6
- 1007 00b7 40       		.uleb128 0x40
- 1008 00b8 18       		.uleb128 0x18
- 1009 00b9 9742     		.uleb128 0x2117
- 1010 00bb 19       		.uleb128 0x19
- 1011 00bc 01       		.uleb128 0x1
- 1012 00bd 13       		.uleb128 0x13
- 1013 00be 00       		.byte	0
- 1014 00bf 00       		.byte	0
- 1015 00c0 0D       		.uleb128 0xd
- 1016 00c1 2E       		.uleb128 0x2e
- 1017 00c2 00       		.byte	0
- 1018 00c3 3F       		.uleb128 0x3f
- 1019 00c4 19       		.uleb128 0x19
- 1020 00c5 03       		.uleb128 0x3
- 1021 00c6 0E       		.uleb128 0xe
- 1022 00c7 3A       		.uleb128 0x3a
- 1023 00c8 0B       		.uleb128 0xb
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 26
+ 967 0090 00       		.byte	0
+ 968 0091 3F       		.uleb128 0x3f
+ 969 0092 19       		.uleb128 0x19
+ 970 0093 03       		.uleb128 0x3
+ 971 0094 0E       		.uleb128 0xe
+ 972 0095 3A       		.uleb128 0x3a
+ 973 0096 0B       		.uleb128 0xb
+ 974 0097 3B       		.uleb128 0x3b
+ 975 0098 0B       		.uleb128 0xb
+ 976 0099 27       		.uleb128 0x27
+ 977 009a 19       		.uleb128 0x19
+ 978 009b 11       		.uleb128 0x11
+ 979 009c 01       		.uleb128 0x1
+ 980 009d 12       		.uleb128 0x12
+ 981 009e 06       		.uleb128 0x6
+ 982 009f 40       		.uleb128 0x40
+ 983 00a0 18       		.uleb128 0x18
+ 984 00a1 9742     		.uleb128 0x2117
+ 985 00a3 19       		.uleb128 0x19
+ 986 00a4 00       		.byte	0
+ 987 00a5 00       		.byte	0
+ 988 00a6 0C       		.uleb128 0xc
+ 989 00a7 2E       		.uleb128 0x2e
+ 990 00a8 01       		.byte	0x1
+ 991 00a9 3F       		.uleb128 0x3f
+ 992 00aa 19       		.uleb128 0x19
+ 993 00ab 03       		.uleb128 0x3
+ 994 00ac 0E       		.uleb128 0xe
+ 995 00ad 3A       		.uleb128 0x3a
+ 996 00ae 0B       		.uleb128 0xb
+ 997 00af 3B       		.uleb128 0x3b
+ 998 00b0 0B       		.uleb128 0xb
+ 999 00b1 27       		.uleb128 0x27
+ 1000 00b2 19       		.uleb128 0x19
+ 1001 00b3 11       		.uleb128 0x11
+ 1002 00b4 01       		.uleb128 0x1
+ 1003 00b5 12       		.uleb128 0x12
+ 1004 00b6 06       		.uleb128 0x6
+ 1005 00b7 40       		.uleb128 0x40
+ 1006 00b8 18       		.uleb128 0x18
+ 1007 00b9 9742     		.uleb128 0x2117
+ 1008 00bb 19       		.uleb128 0x19
+ 1009 00bc 01       		.uleb128 0x1
+ 1010 00bd 13       		.uleb128 0x13
+ 1011 00be 00       		.byte	0
+ 1012 00bf 00       		.byte	0
+ 1013 00c0 0D       		.uleb128 0xd
+ 1014 00c1 2E       		.uleb128 0x2e
+ 1015 00c2 00       		.byte	0
+ 1016 00c3 3F       		.uleb128 0x3f
+ 1017 00c4 19       		.uleb128 0x19
+ 1018 00c5 03       		.uleb128 0x3
+ 1019 00c6 0E       		.uleb128 0xe
+ 1020 00c7 3A       		.uleb128 0x3a
+ 1021 00c8 0B       		.uleb128 0xb
+ 1022 00c9 3B       		.uleb128 0x3b
+ 1023 00ca 0B       		.uleb128 0xb
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 26
 
 
- 1024 00c9 3B       		.uleb128 0x3b
- 1025 00ca 0B       		.uleb128 0xb
- 1026 00cb 27       		.uleb128 0x27
- 1027 00cc 19       		.uleb128 0x19
- 1028 00cd 49       		.uleb128 0x49
- 1029 00ce 13       		.uleb128 0x13
- 1030 00cf 11       		.uleb128 0x11
- 1031 00d0 01       		.uleb128 0x1
- 1032 00d1 12       		.uleb128 0x12
- 1033 00d2 06       		.uleb128 0x6
- 1034 00d3 40       		.uleb128 0x40
- 1035 00d4 18       		.uleb128 0x18
- 1036 00d5 9742     		.uleb128 0x2117
- 1037 00d7 19       		.uleb128 0x19
- 1038 00d8 00       		.byte	0
- 1039 00d9 00       		.byte	0
- 1040 00da 0E       		.uleb128 0xe
- 1041 00db 34       		.uleb128 0x34
- 1042 00dc 00       		.byte	0
- 1043 00dd 03       		.uleb128 0x3
- 1044 00de 0E       		.uleb128 0xe
- 1045 00df 3A       		.uleb128 0x3a
- 1046 00e0 0B       		.uleb128 0xb
- 1047 00e1 3B       		.uleb128 0x3b
- 1048 00e2 0B       		.uleb128 0xb
- 1049 00e3 49       		.uleb128 0x49
- 1050 00e4 13       		.uleb128 0x13
- 1051 00e5 02       		.uleb128 0x2
- 1052 00e6 18       		.uleb128 0x18
- 1053 00e7 00       		.byte	0
- 1054 00e8 00       		.byte	0
- 1055 00e9 0F       		.uleb128 0xf
- 1056 00ea 2E       		.uleb128 0x2e
- 1057 00eb 01       		.byte	0x1
- 1058 00ec 3F       		.uleb128 0x3f
- 1059 00ed 19       		.uleb128 0x19
- 1060 00ee 03       		.uleb128 0x3
- 1061 00ef 0E       		.uleb128 0xe
- 1062 00f0 3A       		.uleb128 0x3a
- 1063 00f1 0B       		.uleb128 0xb
- 1064 00f2 3B       		.uleb128 0x3b
- 1065 00f3 05       		.uleb128 0x5
- 1066 00f4 27       		.uleb128 0x27
- 1067 00f5 19       		.uleb128 0x19
- 1068 00f6 49       		.uleb128 0x49
- 1069 00f7 13       		.uleb128 0x13
- 1070 00f8 11       		.uleb128 0x11
- 1071 00f9 01       		.uleb128 0x1
- 1072 00fa 12       		.uleb128 0x12
- 1073 00fb 06       		.uleb128 0x6
- 1074 00fc 40       		.uleb128 0x40
- 1075 00fd 18       		.uleb128 0x18
- 1076 00fe 9742     		.uleb128 0x2117
- 1077 0100 19       		.uleb128 0x19
- 1078 0101 01       		.uleb128 0x1
- 1079 0102 13       		.uleb128 0x13
- 1080 0103 00       		.byte	0
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 27
+ 1024 00cb 27       		.uleb128 0x27
+ 1025 00cc 19       		.uleb128 0x19
+ 1026 00cd 49       		.uleb128 0x49
+ 1027 00ce 13       		.uleb128 0x13
+ 1028 00cf 11       		.uleb128 0x11
+ 1029 00d0 01       		.uleb128 0x1
+ 1030 00d1 12       		.uleb128 0x12
+ 1031 00d2 06       		.uleb128 0x6
+ 1032 00d3 40       		.uleb128 0x40
+ 1033 00d4 18       		.uleb128 0x18
+ 1034 00d5 9742     		.uleb128 0x2117
+ 1035 00d7 19       		.uleb128 0x19
+ 1036 00d8 00       		.byte	0
+ 1037 00d9 00       		.byte	0
+ 1038 00da 0E       		.uleb128 0xe
+ 1039 00db 34       		.uleb128 0x34
+ 1040 00dc 00       		.byte	0
+ 1041 00dd 03       		.uleb128 0x3
+ 1042 00de 0E       		.uleb128 0xe
+ 1043 00df 3A       		.uleb128 0x3a
+ 1044 00e0 0B       		.uleb128 0xb
+ 1045 00e1 3B       		.uleb128 0x3b
+ 1046 00e2 0B       		.uleb128 0xb
+ 1047 00e3 49       		.uleb128 0x49
+ 1048 00e4 13       		.uleb128 0x13
+ 1049 00e5 02       		.uleb128 0x2
+ 1050 00e6 18       		.uleb128 0x18
+ 1051 00e7 00       		.byte	0
+ 1052 00e8 00       		.byte	0
+ 1053 00e9 0F       		.uleb128 0xf
+ 1054 00ea 2E       		.uleb128 0x2e
+ 1055 00eb 01       		.byte	0x1
+ 1056 00ec 3F       		.uleb128 0x3f
+ 1057 00ed 19       		.uleb128 0x19
+ 1058 00ee 03       		.uleb128 0x3
+ 1059 00ef 0E       		.uleb128 0xe
+ 1060 00f0 3A       		.uleb128 0x3a
+ 1061 00f1 0B       		.uleb128 0xb
+ 1062 00f2 3B       		.uleb128 0x3b
+ 1063 00f3 05       		.uleb128 0x5
+ 1064 00f4 27       		.uleb128 0x27
+ 1065 00f5 19       		.uleb128 0x19
+ 1066 00f6 49       		.uleb128 0x49
+ 1067 00f7 13       		.uleb128 0x13
+ 1068 00f8 11       		.uleb128 0x11
+ 1069 00f9 01       		.uleb128 0x1
+ 1070 00fa 12       		.uleb128 0x12
+ 1071 00fb 06       		.uleb128 0x6
+ 1072 00fc 40       		.uleb128 0x40
+ 1073 00fd 18       		.uleb128 0x18
+ 1074 00fe 9742     		.uleb128 0x2117
+ 1075 0100 19       		.uleb128 0x19
+ 1076 0101 01       		.uleb128 0x1
+ 1077 0102 13       		.uleb128 0x13
+ 1078 0103 00       		.byte	0
+ 1079 0104 00       		.byte	0
+ 1080 0105 10       		.uleb128 0x10
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 27
 
 
- 1081 0104 00       		.byte	0
- 1082 0105 10       		.uleb128 0x10
- 1083 0106 34       		.uleb128 0x34
- 1084 0107 00       		.byte	0
- 1085 0108 03       		.uleb128 0x3
- 1086 0109 0E       		.uleb128 0xe
- 1087 010a 3A       		.uleb128 0x3a
- 1088 010b 0B       		.uleb128 0xb
- 1089 010c 3B       		.uleb128 0x3b
- 1090 010d 05       		.uleb128 0x5
- 1091 010e 49       		.uleb128 0x49
- 1092 010f 13       		.uleb128 0x13
- 1093 0110 02       		.uleb128 0x2
- 1094 0111 18       		.uleb128 0x18
- 1095 0112 00       		.byte	0
- 1096 0113 00       		.byte	0
- 1097 0114 11       		.uleb128 0x11
- 1098 0115 2E       		.uleb128 0x2e
- 1099 0116 00       		.byte	0
- 1100 0117 3F       		.uleb128 0x3f
- 1101 0118 19       		.uleb128 0x19
- 1102 0119 03       		.uleb128 0x3
- 1103 011a 0E       		.uleb128 0xe
- 1104 011b 3A       		.uleb128 0x3a
- 1105 011c 0B       		.uleb128 0xb
- 1106 011d 3B       		.uleb128 0x3b
- 1107 011e 05       		.uleb128 0x5
- 1108 011f 27       		.uleb128 0x27
- 1109 0120 19       		.uleb128 0x19
- 1110 0121 11       		.uleb128 0x11
- 1111 0122 01       		.uleb128 0x1
- 1112 0123 12       		.uleb128 0x12
- 1113 0124 06       		.uleb128 0x6
- 1114 0125 40       		.uleb128 0x40
- 1115 0126 18       		.uleb128 0x18
- 1116 0127 9742     		.uleb128 0x2117
- 1117 0129 19       		.uleb128 0x19
- 1118 012a 00       		.byte	0
- 1119 012b 00       		.byte	0
- 1120 012c 12       		.uleb128 0x12
- 1121 012d 2E       		.uleb128 0x2e
- 1122 012e 00       		.byte	0
- 1123 012f 3F       		.uleb128 0x3f
- 1124 0130 19       		.uleb128 0x19
- 1125 0131 03       		.uleb128 0x3
- 1126 0132 0E       		.uleb128 0xe
- 1127 0133 3A       		.uleb128 0x3a
- 1128 0134 0B       		.uleb128 0xb
- 1129 0135 3B       		.uleb128 0x3b
- 1130 0136 05       		.uleb128 0x5
- 1131 0137 27       		.uleb128 0x27
- 1132 0138 19       		.uleb128 0x19
- 1133 0139 49       		.uleb128 0x49
- 1134 013a 13       		.uleb128 0x13
- 1135 013b 11       		.uleb128 0x11
- 1136 013c 01       		.uleb128 0x1
- 1137 013d 12       		.uleb128 0x12
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 28
+ 1081 0106 34       		.uleb128 0x34
+ 1082 0107 00       		.byte	0
+ 1083 0108 03       		.uleb128 0x3
+ 1084 0109 0E       		.uleb128 0xe
+ 1085 010a 3A       		.uleb128 0x3a
+ 1086 010b 0B       		.uleb128 0xb
+ 1087 010c 3B       		.uleb128 0x3b
+ 1088 010d 05       		.uleb128 0x5
+ 1089 010e 49       		.uleb128 0x49
+ 1090 010f 13       		.uleb128 0x13
+ 1091 0110 02       		.uleb128 0x2
+ 1092 0111 18       		.uleb128 0x18
+ 1093 0112 00       		.byte	0
+ 1094 0113 00       		.byte	0
+ 1095 0114 11       		.uleb128 0x11
+ 1096 0115 2E       		.uleb128 0x2e
+ 1097 0116 00       		.byte	0
+ 1098 0117 3F       		.uleb128 0x3f
+ 1099 0118 19       		.uleb128 0x19
+ 1100 0119 03       		.uleb128 0x3
+ 1101 011a 0E       		.uleb128 0xe
+ 1102 011b 3A       		.uleb128 0x3a
+ 1103 011c 0B       		.uleb128 0xb
+ 1104 011d 3B       		.uleb128 0x3b
+ 1105 011e 05       		.uleb128 0x5
+ 1106 011f 27       		.uleb128 0x27
+ 1107 0120 19       		.uleb128 0x19
+ 1108 0121 11       		.uleb128 0x11
+ 1109 0122 01       		.uleb128 0x1
+ 1110 0123 12       		.uleb128 0x12
+ 1111 0124 06       		.uleb128 0x6
+ 1112 0125 40       		.uleb128 0x40
+ 1113 0126 18       		.uleb128 0x18
+ 1114 0127 9742     		.uleb128 0x2117
+ 1115 0129 19       		.uleb128 0x19
+ 1116 012a 00       		.byte	0
+ 1117 012b 00       		.byte	0
+ 1118 012c 12       		.uleb128 0x12
+ 1119 012d 2E       		.uleb128 0x2e
+ 1120 012e 00       		.byte	0
+ 1121 012f 3F       		.uleb128 0x3f
+ 1122 0130 19       		.uleb128 0x19
+ 1123 0131 03       		.uleb128 0x3
+ 1124 0132 0E       		.uleb128 0xe
+ 1125 0133 3A       		.uleb128 0x3a
+ 1126 0134 0B       		.uleb128 0xb
+ 1127 0135 3B       		.uleb128 0x3b
+ 1128 0136 05       		.uleb128 0x5
+ 1129 0137 27       		.uleb128 0x27
+ 1130 0138 19       		.uleb128 0x19
+ 1131 0139 49       		.uleb128 0x49
+ 1132 013a 13       		.uleb128 0x13
+ 1133 013b 11       		.uleb128 0x11
+ 1134 013c 01       		.uleb128 0x1
+ 1135 013d 12       		.uleb128 0x12
+ 1136 013e 06       		.uleb128 0x6
+ 1137 013f 40       		.uleb128 0x40
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 28
 
 
- 1138 013e 06       		.uleb128 0x6
- 1139 013f 40       		.uleb128 0x40
- 1140 0140 18       		.uleb128 0x18
- 1141 0141 9742     		.uleb128 0x2117
- 1142 0143 19       		.uleb128 0x19
- 1143 0144 00       		.byte	0
- 1144 0145 00       		.byte	0
- 1145 0146 13       		.uleb128 0x13
- 1146 0147 01       		.uleb128 0x1
- 1147 0148 01       		.byte	0x1
- 1148 0149 49       		.uleb128 0x49
- 1149 014a 13       		.uleb128 0x13
- 1150 014b 01       		.uleb128 0x1
- 1151 014c 13       		.uleb128 0x13
- 1152 014d 00       		.byte	0
- 1153 014e 00       		.byte	0
- 1154 014f 14       		.uleb128 0x14
- 1155 0150 21       		.uleb128 0x21
- 1156 0151 00       		.byte	0
- 1157 0152 49       		.uleb128 0x49
- 1158 0153 13       		.uleb128 0x13
- 1159 0154 2F       		.uleb128 0x2f
- 1160 0155 0B       		.uleb128 0xb
- 1161 0156 00       		.byte	0
- 1162 0157 00       		.byte	0
- 1163 0158 15       		.uleb128 0x15
- 1164 0159 34       		.uleb128 0x34
- 1165 015a 00       		.byte	0
- 1166 015b 03       		.uleb128 0x3
- 1167 015c 0E       		.uleb128 0xe
- 1168 015d 3A       		.uleb128 0x3a
- 1169 015e 0B       		.uleb128 0xb
- 1170 015f 3B       		.uleb128 0x3b
- 1171 0160 0B       		.uleb128 0xb
- 1172 0161 49       		.uleb128 0x49
- 1173 0162 13       		.uleb128 0x13
- 1174 0163 3F       		.uleb128 0x3f
- 1175 0164 19       		.uleb128 0x19
- 1176 0165 3C       		.uleb128 0x3c
- 1177 0166 19       		.uleb128 0x19
- 1178 0167 00       		.byte	0
- 1179 0168 00       		.byte	0
- 1180 0169 00       		.byte	0
- 1181              		.section	.debug_aranges,"",%progbits
- 1182 0000 7C000000 		.4byte	0x7c
- 1183 0004 0200     		.2byte	0x2
- 1184 0006 00000000 		.4byte	.Ldebug_info0
- 1185 000a 04       		.byte	0x4
- 1186 000b 00       		.byte	0
- 1187 000c 0000     		.2byte	0
- 1188 000e 0000     		.2byte	0
- 1189 0010 00000000 		.4byte	.LFB2
- 1190 0014 24000000 		.4byte	.LFE2-.LFB2
- 1191 0018 00000000 		.4byte	.LFB3
- 1192 001c 26000000 		.4byte	.LFE3-.LFB3
- 1193 0020 00000000 		.4byte	.LFB4
- 1194 0024 1C000000 		.4byte	.LFE4-.LFB4
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 29
+ 1138 0140 18       		.uleb128 0x18
+ 1139 0141 9742     		.uleb128 0x2117
+ 1140 0143 19       		.uleb128 0x19
+ 1141 0144 00       		.byte	0
+ 1142 0145 00       		.byte	0
+ 1143 0146 13       		.uleb128 0x13
+ 1144 0147 01       		.uleb128 0x1
+ 1145 0148 01       		.byte	0x1
+ 1146 0149 49       		.uleb128 0x49
+ 1147 014a 13       		.uleb128 0x13
+ 1148 014b 01       		.uleb128 0x1
+ 1149 014c 13       		.uleb128 0x13
+ 1150 014d 00       		.byte	0
+ 1151 014e 00       		.byte	0
+ 1152 014f 14       		.uleb128 0x14
+ 1153 0150 21       		.uleb128 0x21
+ 1154 0151 00       		.byte	0
+ 1155 0152 49       		.uleb128 0x49
+ 1156 0153 13       		.uleb128 0x13
+ 1157 0154 2F       		.uleb128 0x2f
+ 1158 0155 0B       		.uleb128 0xb
+ 1159 0156 00       		.byte	0
+ 1160 0157 00       		.byte	0
+ 1161 0158 15       		.uleb128 0x15
+ 1162 0159 34       		.uleb128 0x34
+ 1163 015a 00       		.byte	0
+ 1164 015b 03       		.uleb128 0x3
+ 1165 015c 0E       		.uleb128 0xe
+ 1166 015d 3A       		.uleb128 0x3a
+ 1167 015e 0B       		.uleb128 0xb
+ 1168 015f 3B       		.uleb128 0x3b
+ 1169 0160 0B       		.uleb128 0xb
+ 1170 0161 49       		.uleb128 0x49
+ 1171 0162 13       		.uleb128 0x13
+ 1172 0163 3F       		.uleb128 0x3f
+ 1173 0164 19       		.uleb128 0x19
+ 1174 0165 3C       		.uleb128 0x3c
+ 1175 0166 19       		.uleb128 0x19
+ 1176 0167 00       		.byte	0
+ 1177 0168 00       		.byte	0
+ 1178 0169 00       		.byte	0
+ 1179              		.section	.debug_aranges,"",%progbits
+ 1180 0000 7C000000 		.4byte	0x7c
+ 1181 0004 0200     		.2byte	0x2
+ 1182 0006 00000000 		.4byte	.Ldebug_info0
+ 1183 000a 04       		.byte	0x4
+ 1184 000b 00       		.byte	0
+ 1185 000c 0000     		.2byte	0
+ 1186 000e 0000     		.2byte	0
+ 1187 0010 00000000 		.4byte	.LFB2
+ 1188 0014 24000000 		.4byte	.LFE2-.LFB2
+ 1189 0018 00000000 		.4byte	.LFB3
+ 1190 001c 26000000 		.4byte	.LFE3-.LFB3
+ 1191 0020 00000000 		.4byte	.LFB4
+ 1192 0024 1C000000 		.4byte	.LFE4-.LFB4
+ 1193 0028 00000000 		.4byte	.LFB5
+ 1194 002c 0A000000 		.4byte	.LFE5-.LFB5
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 29
 
 
- 1195 0028 00000000 		.4byte	.LFB5
- 1196 002c 0A000000 		.4byte	.LFE5-.LFB5
- 1197 0030 00000000 		.4byte	.LFB6
- 1198 0034 1C000000 		.4byte	.LFE6-.LFB6
- 1199 0038 00000000 		.4byte	.LFB7
- 1200 003c 14000000 		.4byte	.LFE7-.LFB7
- 1201 0040 00000000 		.4byte	.LFB8
- 1202 0044 50000000 		.4byte	.LFE8-.LFB8
- 1203 0048 00000000 		.4byte	.LFB9
- 1204 004c 2C000000 		.4byte	.LFE9-.LFB9
- 1205 0050 00000000 		.4byte	.LFB10
- 1206 0054 18000000 		.4byte	.LFE10-.LFB10
- 1207 0058 00000000 		.4byte	.LFB11
- 1208 005c 20000000 		.4byte	.LFE11-.LFB11
- 1209 0060 00000000 		.4byte	.LFB12
- 1210 0064 18000000 		.4byte	.LFE12-.LFB12
- 1211 0068 00000000 		.4byte	.LFB13
- 1212 006c 18000000 		.4byte	.LFE13-.LFB13
- 1213 0070 00000000 		.4byte	.LFB14
- 1214 0074 18000000 		.4byte	.LFE14-.LFB14
- 1215 0078 00000000 		.4byte	0
- 1216 007c 00000000 		.4byte	0
- 1217              		.section	.debug_ranges,"",%progbits
- 1218              	.Ldebug_ranges0:
- 1219 0000 00000000 		.4byte	.LFB2
- 1220 0004 24000000 		.4byte	.LFE2
- 1221 0008 00000000 		.4byte	.LFB3
- 1222 000c 26000000 		.4byte	.LFE3
- 1223 0010 00000000 		.4byte	.LFB4
- 1224 0014 1C000000 		.4byte	.LFE4
- 1225 0018 00000000 		.4byte	.LFB5
- 1226 001c 0A000000 		.4byte	.LFE5
- 1227 0020 00000000 		.4byte	.LFB6
- 1228 0024 1C000000 		.4byte	.LFE6
- 1229 0028 00000000 		.4byte	.LFB7
- 1230 002c 14000000 		.4byte	.LFE7
- 1231 0030 00000000 		.4byte	.LFB8
- 1232 0034 50000000 		.4byte	.LFE8
- 1233 0038 00000000 		.4byte	.LFB9
- 1234 003c 2C000000 		.4byte	.LFE9
- 1235 0040 00000000 		.4byte	.LFB10
- 1236 0044 18000000 		.4byte	.LFE10
- 1237 0048 00000000 		.4byte	.LFB11
- 1238 004c 20000000 		.4byte	.LFE11
- 1239 0050 00000000 		.4byte	.LFB12
- 1240 0054 18000000 		.4byte	.LFE12
- 1241 0058 00000000 		.4byte	.LFB13
- 1242 005c 18000000 		.4byte	.LFE13
- 1243 0060 00000000 		.4byte	.LFB14
- 1244 0064 18000000 		.4byte	.LFE14
- 1245 0068 00000000 		.4byte	0
- 1246 006c 00000000 		.4byte	0
- 1247              		.section	.debug_line,"",%progbits
- 1248              	.Ldebug_line0:
- 1249 0000 61010000 		.section	.debug_str,"MS",%progbits,1
- 1249      02005300 
- 1249      00000201 
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 30
+ 1195 0030 00000000 		.4byte	.LFB6
+ 1196 0034 1C000000 		.4byte	.LFE6-.LFB6
+ 1197 0038 00000000 		.4byte	.LFB7
+ 1198 003c 14000000 		.4byte	.LFE7-.LFB7
+ 1199 0040 00000000 		.4byte	.LFB8
+ 1200 0044 4C000000 		.4byte	.LFE8-.LFB8
+ 1201 0048 00000000 		.4byte	.LFB9
+ 1202 004c 2C000000 		.4byte	.LFE9-.LFB9
+ 1203 0050 00000000 		.4byte	.LFB10
+ 1204 0054 18000000 		.4byte	.LFE10-.LFB10
+ 1205 0058 00000000 		.4byte	.LFB11
+ 1206 005c 20000000 		.4byte	.LFE11-.LFB11
+ 1207 0060 00000000 		.4byte	.LFB12
+ 1208 0064 18000000 		.4byte	.LFE12-.LFB12
+ 1209 0068 00000000 		.4byte	.LFB13
+ 1210 006c 18000000 		.4byte	.LFE13-.LFB13
+ 1211 0070 00000000 		.4byte	.LFB14
+ 1212 0074 18000000 		.4byte	.LFE14-.LFB14
+ 1213 0078 00000000 		.4byte	0
+ 1214 007c 00000000 		.4byte	0
+ 1215              		.section	.debug_ranges,"",%progbits
+ 1216              	.Ldebug_ranges0:
+ 1217 0000 00000000 		.4byte	.LFB2
+ 1218 0004 24000000 		.4byte	.LFE2
+ 1219 0008 00000000 		.4byte	.LFB3
+ 1220 000c 26000000 		.4byte	.LFE3
+ 1221 0010 00000000 		.4byte	.LFB4
+ 1222 0014 1C000000 		.4byte	.LFE4
+ 1223 0018 00000000 		.4byte	.LFB5
+ 1224 001c 0A000000 		.4byte	.LFE5
+ 1225 0020 00000000 		.4byte	.LFB6
+ 1226 0024 1C000000 		.4byte	.LFE6
+ 1227 0028 00000000 		.4byte	.LFB7
+ 1228 002c 14000000 		.4byte	.LFE7
+ 1229 0030 00000000 		.4byte	.LFB8
+ 1230 0034 4C000000 		.4byte	.LFE8
+ 1231 0038 00000000 		.4byte	.LFB9
+ 1232 003c 2C000000 		.4byte	.LFE9
+ 1233 0040 00000000 		.4byte	.LFB10
+ 1234 0044 18000000 		.4byte	.LFE10
+ 1235 0048 00000000 		.4byte	.LFB11
+ 1236 004c 20000000 		.4byte	.LFE11
+ 1237 0050 00000000 		.4byte	.LFB12
+ 1238 0054 18000000 		.4byte	.LFE12
+ 1239 0058 00000000 		.4byte	.LFB13
+ 1240 005c 18000000 		.4byte	.LFE13
+ 1241 0060 00000000 		.4byte	.LFB14
+ 1242 0064 18000000 		.4byte	.LFE14
+ 1243 0068 00000000 		.4byte	0
+ 1244 006c 00000000 		.4byte	0
+ 1245              		.section	.debug_line,"",%progbits
+ 1246              	.Ldebug_line0:
+ 1247 0000 61010000 		.section	.debug_str,"MS",%progbits,1
+ 1247      02005300 
+ 1247      00000201 
+ 1247      FB0E0D00 
+ 1247      01010101 
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 30
 
 
- 1249      FB0E0D00 
- 1249      01010101 
- 1250              	.LASF21:
- 1251 0000 6973725F 		.ascii	"isr_Timer_Change_Color_StartEx\000"
- 1251      54696D65 
- 1251      725F4368 
- 1251      616E6765 
- 1251      5F436F6C 
- 1252              	.LASF14:
- 1253 001f 72656733 		.ascii	"reg32\000"
- 1253      3200
- 1254              	.LASF38:
- 1255 0025 43795261 		.ascii	"CyRamVectors\000"
- 1255      6D566563 
- 1255      746F7273 
- 1255      00
- 1256              	.LASF3:
- 1257 0032 73686F72 		.ascii	"short unsigned int\000"
- 1257      7420756E 
- 1257      7369676E 
- 1257      65642069 
- 1257      6E7400
- 1258              	.LASF31:
- 1259 0045 6973725F 		.ascii	"isr_Timer_Change_Color_Disable\000"
+ 1248              	.LASF21:
+ 1249 0000 6973725F 		.ascii	"isr_Timer_Change_Color_StartEx\000"
+ 1249      54696D65 
+ 1249      725F4368 
+ 1249      616E6765 
+ 1249      5F436F6C 
+ 1250              	.LASF14:
+ 1251 001f 72656733 		.ascii	"reg32\000"
+ 1251      3200
+ 1252              	.LASF38:
+ 1253 0025 43795261 		.ascii	"CyRamVectors\000"
+ 1253      6D566563 
+ 1253      746F7273 
+ 1253      00
+ 1254              	.LASF3:
+ 1255 0032 73686F72 		.ascii	"short unsigned int\000"
+ 1255      7420756E 
+ 1255      7369676E 
+ 1255      65642069 
+ 1255      6E7400
+ 1256              	.LASF31:
+ 1257 0045 6973725F 		.ascii	"isr_Timer_Change_Color_Disable\000"
+ 1257      54696D65 
+ 1257      725F4368 
+ 1257      616E6765 
+ 1257      5F436F6C 
+ 1258              	.LASF32:
+ 1259 0064 6973725F 		.ascii	"isr_Timer_Change_Color_SetPending\000"
  1259      54696D65 
  1259      725F4368 
  1259      616E6765 
  1259      5F436F6C 
- 1260              	.LASF32:
- 1261 0064 6973725F 		.ascii	"isr_Timer_Change_Color_SetPending\000"
+ 1260              	.LASF20:
+ 1261 0086 6973725F 		.ascii	"isr_Timer_Change_Color_Interrupt\000"
  1261      54696D65 
  1261      725F4368 
  1261      616E6765 
  1261      5F436F6C 
- 1262              	.LASF20:
- 1263 0086 6973725F 		.ascii	"isr_Timer_Change_Color_Interrupt\000"
- 1263      54696D65 
- 1263      725F4368 
- 1263      616E6765 
- 1263      5F436F6C 
- 1264              	.LASF35:
- 1265 00a7 47656E65 		.ascii	"Generated_Source\\PSoC4\\isr_Timer_Change_Color.c\000"
- 1265      72617465 
- 1265      645F536F 
- 1265      75726365 
- 1265      5C50536F 
- 1266              	.LASF11:
- 1267 00d7 666C6F61 		.ascii	"float\000"
- 1267      7400
- 1268              	.LASF1:
- 1269 00dd 756E7369 		.ascii	"unsigned char\000"
- 1269      676E6564 
- 1269      20636861 
- 1269      7200
- 1270              	.LASF26:
- 1271 00eb 696E7465 		.ascii	"interruptState\000"
- 1271      72727570 
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 31
+ 1262              	.LASF35:
+ 1263 00a7 47656E65 		.ascii	"Generated_Source\\PSoC4\\isr_Timer_Change_Color.c\000"
+ 1263      72617465 
+ 1263      645F536F 
+ 1263      75726365 
+ 1263      5C50536F 
+ 1264              	.LASF11:
+ 1265 00d7 666C6F61 		.ascii	"float\000"
+ 1265      7400
+ 1266              	.LASF1:
+ 1267 00dd 756E7369 		.ascii	"unsigned char\000"
+ 1267      676E6564 
+ 1267      20636861 
+ 1267      7200
+ 1268              	.LASF26:
+ 1269 00eb 696E7465 		.ascii	"interruptState\000"
+ 1269      72727570 
+ 1269      74537461 
+ 1269      746500
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 31
 
 
- 1271      74537461 
- 1271      746500
- 1272              	.LASF5:
- 1273 00fa 6C6F6E67 		.ascii	"long unsigned int\000"
- 1273      20756E73 
- 1273      69676E65 
- 1273      6420696E 
- 1273      7400
- 1274              	.LASF36:
- 1275 010c 443A5C75 		.ascii	"D:\\ucu\\2_course1_term\\POC\\programs\\my_works\\S"
- 1275      63755C32 
- 1275      5F636F75 
- 1275      72736531 
- 1275      5F746572 
- 1276 0139 6D617274 		.ascii	"mart_lightning_system\\Mesh_Flood_Main_Auto_Reassig"
- 1276      5F6C6967 
- 1276      68746E69 
- 1276      6E675F73 
- 1276      79737465 
- 1277 016b 6E6D656E 		.ascii	"nment2.cydsn\000"
- 1277      74322E63 
- 1277      7964736E 
- 1277      00
- 1278              	.LASF19:
- 1279 0178 6973725F 		.ascii	"isr_Timer_Change_Color_Stop\000"
- 1279      54696D65 
- 1279      725F4368 
- 1279      616E6765 
- 1279      5F436F6C 
- 1280              	.LASF34:
- 1281 0194 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1281      43313120 
- 1281      352E342E 
- 1281      31203230 
- 1281      31363036 
- 1282 01c7 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 1282      20726576 
- 1282      6973696F 
- 1282      6E203233 
- 1282      37373135 
- 1283 01fa 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 1283      66756E63 
- 1283      74696F6E 
- 1283      2D736563 
- 1283      74696F6E 
- 1284              	.LASF25:
- 1285 0222 7072696F 		.ascii	"priority\000"
- 1285      72697479 
- 1285      00
- 1286              	.LASF12:
- 1287 022b 646F7562 		.ascii	"double\000"
- 1287      6C6500
- 1288              	.LASF37:
- 1289 0232 6973725F 		.ascii	"isr_Timer_Change_Color_GetPriority\000"
- 1289      54696D65 
- 1289      725F4368 
- 1289      616E6765 
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 32
+ 1270              	.LASF5:
+ 1271 00fa 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1271      20756E73 
+ 1271      69676E65 
+ 1271      6420696E 
+ 1271      7400
+ 1272              	.LASF36:
+ 1273 010c 443A5C75 		.ascii	"D:\\ucu\\2_course1_term\\POC\\programs\\my_works\\S"
+ 1273      63755C32 
+ 1273      5F636F75 
+ 1273      72736531 
+ 1273      5F746572 
+ 1274 0139 6D617274 		.ascii	"mart_lightning_system\\Mesh_Flood_Main_Auto_Reassig"
+ 1274      5F6C6967 
+ 1274      68746E69 
+ 1274      6E675F73 
+ 1274      79737465 
+ 1275 016b 6E6D656E 		.ascii	"nment2.cydsn\000"
+ 1275      74322E63 
+ 1275      7964736E 
+ 1275      00
+ 1276              	.LASF19:
+ 1277 0178 6973725F 		.ascii	"isr_Timer_Change_Color_Stop\000"
+ 1277      54696D65 
+ 1277      725F4368 
+ 1277      616E6765 
+ 1277      5F436F6C 
+ 1278              	.LASF34:
+ 1279 0194 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1279      43313120 
+ 1279      352E342E 
+ 1279      31203230 
+ 1279      31363036 
+ 1280 01c7 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1280      20726576 
+ 1280      6973696F 
+ 1280      6E203233 
+ 1280      37373135 
+ 1281 01fa 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1281      66756E63 
+ 1281      74696F6E 
+ 1281      2D736563 
+ 1281      74696F6E 
+ 1282              	.LASF25:
+ 1283 0222 7072696F 		.ascii	"priority\000"
+ 1283      72697479 
+ 1283      00
+ 1284              	.LASF12:
+ 1285 022b 646F7562 		.ascii	"double\000"
+ 1285      6C6500
+ 1286              	.LASF37:
+ 1287 0232 6973725F 		.ascii	"isr_Timer_Change_Color_GetPriority\000"
+ 1287      54696D65 
+ 1287      725F4368 
+ 1287      616E6765 
+ 1287      5F436F6C 
+ 1288              	.LASF10:
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 32
 
 
- 1289      5F436F6C 
- 1290              	.LASF10:
- 1291 0255 75696E74 		.ascii	"uint32\000"
- 1291      333200
- 1292              	.LASF28:
- 1293 025c 6973725F 		.ascii	"isr_Timer_Change_Color_Enable\000"
+ 1289 0255 75696E74 		.ascii	"uint32\000"
+ 1289      333200
+ 1290              	.LASF28:
+ 1291 025c 6973725F 		.ascii	"isr_Timer_Change_Color_Enable\000"
+ 1291      54696D65 
+ 1291      725F4368 
+ 1291      616E6765 
+ 1291      5F436F6C 
+ 1292              	.LASF33:
+ 1293 027a 6973725F 		.ascii	"isr_Timer_Change_Color_ClearPending\000"
  1293      54696D65 
  1293      725F4368 
  1293      616E6765 
  1293      5F436F6C 
- 1294              	.LASF33:
- 1295 027a 6973725F 		.ascii	"isr_Timer_Change_Color_ClearPending\000"
- 1295      54696D65 
- 1295      725F4368 
- 1295      616E6765 
- 1295      5F436F6C 
- 1296              	.LASF8:
- 1297 029e 756E7369 		.ascii	"unsigned int\000"
- 1297      676E6564 
- 1297      20696E74 
- 1297      00
- 1298              	.LASF23:
- 1299 02ab 61646472 		.ascii	"address\000"
- 1299      65737300 
- 1300              	.LASF7:
- 1301 02b3 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1301      206C6F6E 
- 1301      6720756E 
- 1301      7369676E 
- 1301      65642069 
- 1302              	.LASF15:
- 1303 02ca 63796973 		.ascii	"cyisraddress\000"
- 1303      72616464 
- 1303      72657373 
- 1303      00
- 1304              	.LASF16:
- 1305 02d7 6C6F6E67 		.ascii	"long double\000"
- 1305      20646F75 
- 1305      626C6500 
- 1306              	.LASF17:
- 1307 02e3 73697A65 		.ascii	"sizetype\000"
- 1307      74797065 
- 1307      00
- 1308              	.LASF6:
- 1309 02ec 6C6F6E67 		.ascii	"long long int\000"
- 1309      206C6F6E 
- 1309      6720696E 
- 1309      7400
- 1310              	.LASF13:
- 1311 02fa 63686172 		.ascii	"char\000"
- 1311      00
- 1312              	.LASF18:
- 1313 02ff 6973725F 		.ascii	"isr_Timer_Change_Color_Start\000"
- 1313      54696D65 
- 1313      725F4368 
- 1313      616E6765 
- 1313      5F436F6C 
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccpN2DNH.s 			page 33
+ 1294              	.LASF8:
+ 1295 029e 756E7369 		.ascii	"unsigned int\000"
+ 1295      676E6564 
+ 1295      20696E74 
+ 1295      00
+ 1296              	.LASF23:
+ 1297 02ab 61646472 		.ascii	"address\000"
+ 1297      65737300 
+ 1298              	.LASF7:
+ 1299 02b3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1299      206C6F6E 
+ 1299      6720756E 
+ 1299      7369676E 
+ 1299      65642069 
+ 1300              	.LASF15:
+ 1301 02ca 63796973 		.ascii	"cyisraddress\000"
+ 1301      72616464 
+ 1301      72657373 
+ 1301      00
+ 1302              	.LASF16:
+ 1303 02d7 6C6F6E67 		.ascii	"long double\000"
+ 1303      20646F75 
+ 1303      626C6500 
+ 1304              	.LASF17:
+ 1305 02e3 73697A65 		.ascii	"sizetype\000"
+ 1305      74797065 
+ 1305      00
+ 1306              	.LASF6:
+ 1307 02ec 6C6F6E67 		.ascii	"long long int\000"
+ 1307      206C6F6E 
+ 1307      6720696E 
+ 1307      7400
+ 1308              	.LASF13:
+ 1309 02fa 63686172 		.ascii	"char\000"
+ 1309      00
+ 1310              	.LASF18:
+ 1311 02ff 6973725F 		.ascii	"isr_Timer_Change_Color_Start\000"
+ 1311      54696D65 
+ 1311      725F4368 
+ 1311      616E6765 
+ 1311      5F436F6C 
+ 1312              	.LASF2:
+ 1313 031c 73686F72 		.ascii	"short int\000"
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc2MxTPD.s 			page 33
 
 
- 1314              	.LASF2:
- 1315 031c 73686F72 		.ascii	"short int\000"
- 1315      7420696E 
- 1315      7400
- 1316              	.LASF24:
- 1317 0326 6973725F 		.ascii	"isr_Timer_Change_Color_SetPriority\000"
- 1317      54696D65 
- 1317      725F4368 
- 1317      616E6765 
- 1317      5F436F6C 
- 1318              	.LASF9:
- 1319 0349 75696E74 		.ascii	"uint8\000"
- 1319      3800
- 1320              	.LASF22:
- 1321 034f 6973725F 		.ascii	"isr_Timer_Change_Color_SetVector\000"
- 1321      54696D65 
- 1321      725F4368 
- 1321      616E6765 
- 1321      5F436F6C 
- 1322              	.LASF27:
- 1323 0370 7072696F 		.ascii	"priorityOffset\000"
- 1323      72697479 
- 1323      4F666673 
- 1323      657400
- 1324              	.LASF4:
- 1325 037f 6C6F6E67 		.ascii	"long int\000"
- 1325      20696E74 
- 1325      00
- 1326              	.LASF30:
- 1327 0388 6973725F 		.ascii	"isr_Timer_Change_Color_GetState\000"
- 1327      54696D65 
- 1327      725F4368 
- 1327      616E6765 
- 1327      5F436F6C 
- 1328              	.LASF0:
- 1329 03a8 7369676E 		.ascii	"signed char\000"
- 1329      65642063 
- 1329      68617200 
- 1330              	.LASF29:
- 1331 03b4 6973725F 		.ascii	"isr_Timer_Change_Color_GetVector\000"
- 1331      54696D65 
- 1331      725F4368 
- 1331      616E6765 
- 1331      5F436F6C 
- 1332              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1313      7420696E 
+ 1313      7400
+ 1314              	.LASF24:
+ 1315 0326 6973725F 		.ascii	"isr_Timer_Change_Color_SetPriority\000"
+ 1315      54696D65 
+ 1315      725F4368 
+ 1315      616E6765 
+ 1315      5F436F6C 
+ 1316              	.LASF9:
+ 1317 0349 75696E74 		.ascii	"uint8\000"
+ 1317      3800
+ 1318              	.LASF22:
+ 1319 034f 6973725F 		.ascii	"isr_Timer_Change_Color_SetVector\000"
+ 1319      54696D65 
+ 1319      725F4368 
+ 1319      616E6765 
+ 1319      5F436F6C 
+ 1320              	.LASF27:
+ 1321 0370 7072696F 		.ascii	"priorityOffset\000"
+ 1321      72697479 
+ 1321      4F666673 
+ 1321      657400
+ 1322              	.LASF4:
+ 1323 037f 6C6F6E67 		.ascii	"long int\000"
+ 1323      20696E74 
+ 1323      00
+ 1324              	.LASF30:
+ 1325 0388 6973725F 		.ascii	"isr_Timer_Change_Color_GetState\000"
+ 1325      54696D65 
+ 1325      725F4368 
+ 1325      616E6765 
+ 1325      5F436F6C 
+ 1326              	.LASF0:
+ 1327 03a8 7369676E 		.ascii	"signed char\000"
+ 1327      65642063 
+ 1327      68617200 
+ 1328              	.LASF29:
+ 1329 03b4 6973725F 		.ascii	"isr_Timer_Change_Color_GetVector\000"
+ 1329      54696D65 
+ 1329      725F4368 
+ 1329      616E6765 
+ 1329      5F436F6C 
+ 1330              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

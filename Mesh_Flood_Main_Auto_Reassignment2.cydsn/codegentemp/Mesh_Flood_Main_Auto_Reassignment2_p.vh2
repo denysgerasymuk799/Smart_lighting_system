@@ -1,5 +1,5 @@
 -- Project:   Mesh_Flood_Main_Auto_Reassignment2
--- Generated: 01/12/2021 00:26:34
+-- Generated: 01/12/2021 00:53:30
 -- PSoC Creator  4.2
 
 ENTITY Mesh_Flood_Main_Auto_Reassignment2 IS
@@ -36,8 +36,8 @@ ARCHITECTURE __DEFAULT__ OF Mesh_Flood_Main_Auto_Reassignment2 IS
     SIGNAL ClockBlock_WCO : bit;
     SIGNAL GREEN(0)__PA : bit;
     SIGNAL Net_171 : bit;
-    SIGNAL Net_185_ff9 : bit;
-    ATTRIBUTE global_signal OF Net_185_ff9 : SIGNAL IS true;
+    SIGNAL Net_185_ff10 : bit;
+    ATTRIBUTE global_signal OF Net_185_ff10 : SIGNAL IS true;
     SIGNAL Net_193 : bit;
     SIGNAL Net_194 : bit;
     SIGNAL Net_195 : bit;
@@ -61,6 +61,14 @@ ARCHITECTURE __DEFAULT__ OF Mesh_Flood_Main_Auto_Reassignment2 IS
     SIGNAL Net_468 : bit;
     SIGNAL Net_469 : bit;
     SIGNAL Net_470 : bit;
+    SIGNAL Net_477 : bit;
+    SIGNAL Net_478 : bit;
+    SIGNAL Net_479 : bit;
+    SIGNAL Net_480 : bit;
+    SIGNAL Net_481 : bit;
+    SIGNAL Net_483 : bit;
+    SIGNAL Net_486_ff9 : bit;
+    ATTRIBUTE global_signal OF Net_486_ff9 : SIGNAL IS true;
     SIGNAL Net_60_digital : bit;
     ATTRIBUTE udbclken_assigned OF Net_60_digital : SIGNAL IS "True";
     ATTRIBUTE global_signal OF Net_60_digital : SIGNAL IS true;
@@ -557,7 +565,8 @@ BEGIN
             udb_div_0 => dclk_to_genclk,
             ff_div_7 => Net_243_ff7,
             ff_div_8 => Net_453_ff8,
-            ff_div_9 => Net_185_ff9);
+            ff_div_9 => Net_486_ff9,
+            ff_div_10 => Net_185_ff10);
 
     RED:logicalport
         GENERIC MAP(
@@ -1206,7 +1215,7 @@ BEGIN
         GENERIC MAP(
             cy_registers => "")
         PORT MAP(
-            clock => Net_185_ff9,
+            clock => Net_185_ff10,
             capture => '0',
             count => '1',
             reload => '0',
@@ -1267,6 +1276,31 @@ BEGIN
             is_nmi => 0)
         PORT MAP(
             interrupt => Net_447,
+            clock => ClockBlock_HFCLK);
+
+    \Timer_Heart_beat:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
+        GENERIC MAP(
+            cy_registers => "")
+        PORT MAP(
+            clock => Net_486_ff9,
+            capture => '0',
+            count => '1',
+            reload => '0',
+            stop => '0',
+            start => '0',
+            tr_underflow => Net_478,
+            tr_overflow => Net_477,
+            tr_compare_match => Net_479,
+            line => Net_480,
+            line_compl => Net_481,
+            interrupt => Net_483);
+
+    Isr_Heart_beat:interrupt
+        GENERIC MAP(
+            int_type => "10",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_483,
             clock => ClockBlock_HFCLK);
 
     \PrISM_1:enable_final_reg\:macrocell

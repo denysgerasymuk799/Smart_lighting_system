@@ -6,7 +6,7 @@
 
 #Build Date:         Dec  5 2017 15:35:27
 
-#File Generated:     Jan 12 2021 00:26:34
+#File Generated:     Jan 12 2021 00:53:30
 
 #Purpose:            
 
@@ -76,7 +76,9 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 17
+Number of clocks: 19
+Clock: Clock_Heart_beat     | Frequency: N/A       | Target:   0.0 MHz
+Clock: Clock_Heart_beat(FFB) | Frequency: N/A       | Target:   0.0 MHz
 Clock: Clock_Timer_Change_Color | Frequency: N/A       | Target:   0.0 MHz
 Clock: Clock_Timer_Change_Color(FFB) | Frequency: N/A       | Target:   0.0 MHz
 Clock: Clock_Waiting_Time   | Frequency: N/A       | Target:   0.0 MHz
@@ -105,7 +107,9 @@ Phase 7
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 17
+Number of clocks: 19
+Clock: Clock_Heart_beat     | Frequency: N/A       | Target:   0.0 MHz
+Clock: Clock_Heart_beat(FFB) | Frequency: N/A       | Target:   0.0 MHz
 Clock: Clock_Timer_Change_Color | Frequency: N/A       | Target:   0.0 MHz
 Clock: Clock_Timer_Change_Color(FFB) | Frequency: N/A       | Target:   0.0 MHz
 Clock: Clock_Waiting_Time   | Frequency: N/A       | Target:   0.0 MHz
@@ -157,7 +161,9 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 17
+Number of clocks: 19
+Clock: Clock_Heart_beat     | Frequency: N/A       | Target:   0.0 MHz
+Clock: Clock_Heart_beat(FFB) | Frequency: N/A       | Target:   0.0 MHz
 Clock: Clock_Timer_Change_Color | Frequency: N/A       | Target:   0.0 MHz
 Clock: Clock_Timer_Change_Color(FFB) | Frequency: N/A       | Target:   0.0 MHz
 Clock: Clock_Waiting_Time   | Frequency: N/A       | Target:   0.0 MHz
@@ -185,5 +191,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 0.3 sec.
+I2076: Total run-time: 0.4 sec.
 

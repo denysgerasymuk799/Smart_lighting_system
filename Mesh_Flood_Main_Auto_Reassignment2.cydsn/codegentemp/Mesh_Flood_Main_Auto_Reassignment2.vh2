@@ -2,7 +2,7 @@
 --	Conversion of Mesh_Flood_Main_Auto_Reassignment2.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Jan 12 00:26:33 2021
+--	Tue Jan 12 00:53:30 2021
 --
 
 USE cypress.cypress.all;
@@ -289,6 +289,19 @@ SIGNAL Net_469 : bit;
 SIGNAL Net_470 : bit;
 SIGNAL Net_447 : bit;
 SIGNAL Net_453 : bit;
+SIGNAL \Timer_Heart_beat:Net_81\ : bit;
+SIGNAL \Timer_Heart_beat:Net_75\ : bit;
+SIGNAL \Timer_Heart_beat:Net_69\ : bit;
+SIGNAL \Timer_Heart_beat:Net_66\ : bit;
+SIGNAL \Timer_Heart_beat:Net_82\ : bit;
+SIGNAL \Timer_Heart_beat:Net_72\ : bit;
+SIGNAL Net_478 : bit;
+SIGNAL Net_477 : bit;
+SIGNAL Net_479 : bit;
+SIGNAL Net_480 : bit;
+SIGNAL Net_481 : bit;
+SIGNAL Net_483 : bit;
+SIGNAL Net_486 : bit;
 SIGNAL \PrISM_1:enable_final_reg\\D\ : bit;
 SIGNAL \PrISM_1:reset_reg\\D\ : bit;
 SIGNAL Net_441D : bit;
@@ -1030,6 +1043,34 @@ Timer_Is_Free_Clock:cy_clock_v1_0
 		is_direct=>'0',
 		is_digital=>'0')
 	PORT MAP(clock_out=>Net_453,
+		dig_domain_out=>open);
+\Timer_Heart_beat:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(clock=>Net_486,
+		capture=>zero,
+		count=>one,
+		reload=>zero,
+		stop=>zero,
+		start=>zero,
+		underflow=>Net_478,
+		overflow=>Net_477,
+		compare_match=>Net_479,
+		line_out=>Net_480,
+		line_out_compl=>Net_481,
+		interrupt=>Net_483);
+Isr_Heart_beat:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_483);
+Clock_Heart_beat:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"440a5fc6-5e42-4a96-9767-27ca37c5320f",
+		source_clock_id=>"",
+		divisor=>0,
+		period=>"1000000000000",
+		is_direct=>'0',
+		is_digital=>'0')
+	PORT MAP(clock_out=>Net_486,
 		dig_domain_out=>open);
 \PrISM_1:enable_final_reg\:cy_dff
 	PORT MAP(d=>\PrISM_1:ctrl_enable\,

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 1
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 1
   29:Generated_Source\PSoC4/cyfitter_cfg.c ****     #define CYPACKED_ATTR __attribute__ ((packed))
   30:Generated_Source\PSoC4/cyfitter_cfg.c ****     #define CYALIGNED __attribute__ ((aligned))
   31:Generated_Source\PSoC4/cyfitter_cfg.c ****     #define CY_CFG_UNUSED __attribute__ ((unused))
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 2
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 2
 
 
   32:Generated_Source\PSoC4/cyfitter_cfg.c ****     #ifndef CY_CFG_SECTION
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 1
   37 0004 00AF     		add	r7, sp, #0
   38              		.cfi_def_cfa_register 7
   39 0006 7860     		str	r0, [r7, #4]
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 3
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 3
 
 
   40 0008 3960     		str	r1, [r7]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 1
   85 0018 C046     		nop
   86 001a BD46     		mov	sp, r7
   87 001c 04B0     		add	sp, sp, #16
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 4
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 4
 
 
   88              		@ sp needed
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 1
  135              	cfg_write_bytes32:
  136              	.LFB5:
   92:Generated_Source\PSoC4/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 5
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 5
 
 
   93:Generated_Source\PSoC4/cyfitter_cfg.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 1
  147:Generated_Source\PSoC4/cyfitter_cfg.c **** 
  148:Generated_Source\PSoC4/cyfitter_cfg.c **** #define CY_CFG_BASE_ADDR_COUNT 5u
  149:Generated_Source\PSoC4/cyfitter_cfg.c **** CYPACKED typedef struct
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 6
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 6
 
 
  150:Generated_Source\PSoC4/cyfitter_cfg.c **** {
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 1
  162 0016 9B00     		lsls	r3, r3, #2
  163 0018 7A68     		ldr	r2, [r7, #4]
  164 001a D318     		adds	r3, r2, r3
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 7
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 7
 
 
  165 001c 1B68     		ldr	r3, [r3]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 1
  211 0066 FB18     		adds	r3, r7, r3
  212 0068 1B78     		ldrb	r3, [r3]
  213 006a 002B     		cmp	r3, #0
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 8
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 8
 
 
  214 006c E1D1     		bne	.L7
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 1
  241              		.loc 1 210 0
  242              		.cfi_startproc
  243              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 9
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 9
 
 
  244              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -492,7 +492,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 1
  212:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Set Flash Cycles based on max possible frequency in case a glitch occurs during ClockSetup(). *
  213:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void CYXDATA *)(CYREG_CPUSS_FLASH_CTL), (0x0012u));
  251              		.loc 1 213 0
- 252 0004 384B     		ldr	r3, .L10
+ 252 0004 3C4B     		ldr	r3, .L10
  253 0006 1222     		movs	r2, #18
  254 0008 1A60     		str	r2, [r3]
  214:Generated_Source\PSoC4/cyfitter_cfg.c **** 
@@ -502,7 +502,7 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 1
  256 000a FFF7FEFF 		bl	CySysClkWcoStart
  217:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CyDelayCycles(12000000u); /* WCO may take up to 500ms to start */
  257              		.loc 1 217 0
- 258 000e 374B     		ldr	r3, .L10+4
+ 258 000e 3B4B     		ldr	r3, .L10+4
  259 0010 1800     		movs	r0, r3
  260 0012 FFF7FEFF 		bl	CyDelayCycles
  218:Generated_Source\PSoC4/cyfitter_cfg.c **** 	(void)CySysClkWcoSetPowerMode(CY_SYS_CLK_WCO_LPM);    /* Switch to the low power mode */
@@ -518,14 +518,14 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 1
  222:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_CLK_ILO_CONFIG Starting address: CYDEV_CLK_ILO_CONFIG */
  223:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_CLK_ILO_CONFIG), 0x80000006u);
  267              		.loc 1 223 0
- 268 0022 334B     		ldr	r3, .L10+8
- 269 0024 334A     		ldr	r2, .L10+12
+ 268 0022 374B     		ldr	r3, .L10+8
+ 269 0024 374A     		ldr	r2, .L10+12
  270 0026 1A60     		str	r2, [r3]
  224:Generated_Source\PSoC4/cyfitter_cfg.c **** 
  225:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_WDT_CONFIG Starting address: CYDEV_WDT_CONFIG */
  226:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_WDT_CONFIG), 0x40000000u);
  271              		.loc 1 226 0
- 272 0028 334B     		ldr	r3, .L10+16
+ 272 0028 374B     		ldr	r3, .L10+16
  273 002a 8022     		movs	r2, #128
  274 002c D205     		lsls	r2, r2, #23
  275 002e 1A60     		str	r2, [r3]
@@ -534,31 +534,31 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 1
  229:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Enable fast start mode for XO */
  230:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void*)CYREG_BLE_BLERD_BB_XO, CY_GET_REG32((void*)CYREG_BLE_BLERD_BB_XO) | (uint32)0x
  276              		.loc 1 230 0
- 277 0030 324B     		ldr	r3, .L10+20
- 278 0032 324A     		ldr	r2, .L10+20
+ 277 0030 364B     		ldr	r3, .L10+20
+ 278 0032 364A     		ldr	r2, .L10+20
  279 0034 1268     		ldr	r2, [r2]
  280 0036 0221     		movs	r1, #2
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 10
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 10
 
 
  281 0038 0A43     		orrs	r2, r1
  282 003a 1A60     		str	r2, [r3]
  231:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_BLE_BLERD_BB_XO_CAPTRIM), 0x00003E2Du);
  283              		.loc 1 231 0
- 284 003c 304B     		ldr	r3, .L10+24
- 285 003e 314A     		ldr	r2, .L10+28
+ 284 003c 344B     		ldr	r3, .L10+24
+ 285 003e 354A     		ldr	r2, .L10+28
  286 0040 1A60     		str	r2, [r3]
  232:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/*Set XTAL(ECO) divider*/
  233:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_BLE_BLESS_XTAL_CLK_DIV_CONFIG), 0x00000000u);
  287              		.loc 1 233 0
- 288 0042 314B     		ldr	r3, .L10+32
+ 288 0042 354B     		ldr	r3, .L10+32
  289 0044 0022     		movs	r2, #0
  290 0046 1A60     		str	r2, [r3]
  234:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Disable Crystal Stable Interrupt before enabling ECO */
  235:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void*)CYREG_BLE_BLESS_LL_DSM_CTRL, CY_GET_REG32((void*)CYREG_BLE_BLESS_LL_DSM_CTRL) 
  291              		.loc 1 235 0
- 292 0048 304B     		ldr	r3, .L10+36
- 293 004a 304A     		ldr	r2, .L10+36
+ 292 0048 344B     		ldr	r3, .L10+36
+ 293 004a 344A     		ldr	r2, .L10+36
  294 004c 1268     		ldr	r2, [r2]
  295 004e 0821     		movs	r1, #8
  296 0050 8A43     		bics	r2, r1
@@ -572,2150 +572,2167 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 1
  302 005a FFF7FEFF 		bl	CySysClkEcoStart
  238:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CyDelayUs(1500u); /* Wait to stabilize */
  303              		.loc 1 238 0
- 304 005e 2C4B     		ldr	r3, .L10+40
+ 304 005e 304B     		ldr	r3, .L10+40
  305 0060 1800     		movs	r0, r3
  306 0062 FFF7FEFF 		bl	CyDelayUs
  239:Generated_Source\PSoC4/cyfitter_cfg.c **** 
  240:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Setup phase aligned clocks */
  241:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_16_CTL1, 0x0000EF00u);
  307              		.loc 1 241 0
- 308 0066 2B4B     		ldr	r3, .L10+44
+ 308 0066 2F4B     		ldr	r3, .L10+44
  309 0068 EF22     		movs	r2, #239
  310 006a 1202     		lsls	r2, r2, #8
  311 006c 1A60     		str	r2, [r3]
  242:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_CMD, 0x8000FF41u);
  312              		.loc 1 242 0
- 313 006e 2A4B     		ldr	r3, .L10+48
- 314 0070 2A4A     		ldr	r2, .L10+52
+ 313 006e 2E4B     		ldr	r3, .L10+48
+ 314 0070 2E4A     		ldr	r2, .L10+52
  315 0072 1A60     		str	r2, [r3]
  243:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_16_CTL3, 0x005DBF00u);
  316              		.loc 1 243 0
- 317 0074 2A4B     		ldr	r3, .L10+56
- 318 0076 2B4A     		ldr	r2, .L10+60
+ 317 0074 2E4B     		ldr	r3, .L10+56
+ 318 0076 2F4A     		ldr	r2, .L10+60
  319 0078 1A60     		str	r2, [r3]
  244:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_CMD, 0x8000FF43u);
  320              		.loc 1 244 0
- 321 007a 274B     		ldr	r3, .L10+48
- 322 007c 2A4A     		ldr	r2, .L10+64
+ 321 007a 2B4B     		ldr	r3, .L10+48
+ 322 007c 2E4A     		ldr	r2, .L10+64
  323 007e 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 11
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 11
 
 
- 245:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_16_CTL2, 0x005DBF00u);
+ 245:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_16_CTL5, 0x005DBF00u);
  324              		.loc 1 245 0
- 325 0080 2A4B     		ldr	r3, .L10+68
- 326 0082 284A     		ldr	r2, .L10+60
+ 325 0080 2E4B     		ldr	r3, .L10+68
+ 326 0082 2C4A     		ldr	r2, .L10+60
  327 0084 1A60     		str	r2, [r3]
- 246:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_CMD, 0x8000FF42u);
+ 246:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_CMD, 0x8000FF45u);
  328              		.loc 1 246 0
- 329 0086 244B     		ldr	r3, .L10+48
- 330 0088 294A     		ldr	r2, .L10+72
+ 329 0086 284B     		ldr	r3, .L10+48
+ 330 0088 2D4A     		ldr	r2, .L10+72
  331 008a 1A60     		str	r2, [r3]
- 247:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_16_CTL4, 0x005DBF00u);
+ 247:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_16_CTL2, 0x005DBF00u);
  332              		.loc 1 247 0
- 333 008c 294B     		ldr	r3, .L10+76
- 334 008e 254A     		ldr	r2, .L10+60
+ 333 008c 2D4B     		ldr	r3, .L10+76
+ 334 008e 294A     		ldr	r2, .L10+60
  335 0090 1A60     		str	r2, [r3]
- 248:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_CMD, 0x8000FF44u);
+ 248:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_CMD, 0x8000FF42u);
  336              		.loc 1 248 0
- 337 0092 214B     		ldr	r3, .L10+48
- 338 0094 284A     		ldr	r2, .L10+80
+ 337 0092 254B     		ldr	r3, .L10+48
+ 338 0094 2C4A     		ldr	r2, .L10+80
  339 0096 1A60     		str	r2, [r3]
- 249:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_16_CTL0, 0x00002200u);
+ 249:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_16_CTL4, 0x005DBF00u);
  340              		.loc 1 249 0
- 341 0098 284B     		ldr	r3, .L10+84
- 342 009a 8822     		movs	r2, #136
- 343 009c 9201     		lsls	r2, r2, #6
- 344 009e 1A60     		str	r2, [r3]
- 250:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_CMD, 0x8000FF40u);
- 345              		.loc 1 250 0
- 346 00a0 1D4B     		ldr	r3, .L10+48
- 347 00a2 274A     		ldr	r2, .L10+88
- 348 00a4 1A60     		str	r2, [r3]
- 251:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 252:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_CLK_IMO_CONFIG Starting address: CYDEV_CLK_IMO_CONFIG */
- 253:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_CLK_IMO_CONFIG), 0x80000000u);
- 349              		.loc 1 253 0
- 350 00a6 274B     		ldr	r3, .L10+92
- 351 00a8 8022     		movs	r2, #128
- 352 00aa 1206     		lsls	r2, r2, #24
- 353 00ac 1A60     		str	r2, [r3]
- 254:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 255:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_CLK_SELECT Starting address: CYDEV_CLK_SELECT */
- 256:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_CLK_SELECT), 0x00000000u);
- 354              		.loc 1 256 0
- 355 00ae 264B     		ldr	r3, .L10+96
- 356 00b0 0022     		movs	r2, #0
- 357 00b2 1A60     		str	r2, [r3]
- 257:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 258:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_PERI_PCLK_CTL11 Starting address: CYDEV_PERI_PCLK_CTL11 */
- 259:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_PERI_PCLK_CTL11), 0x00000041u);
- 358              		.loc 1 259 0
- 359 00b4 254B     		ldr	r3, .L10+100
- 360 00b6 4122     		movs	r2, #65
+ 341 0098 2C4B     		ldr	r3, .L10+84
+ 342 009a 264A     		ldr	r2, .L10+60
+ 343 009c 1A60     		str	r2, [r3]
+ 250:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_CMD, 0x8000FF44u);
+ 344              		.loc 1 250 0
+ 345 009e 224B     		ldr	r3, .L10+48
+ 346 00a0 2B4A     		ldr	r2, .L10+88
+ 347 00a2 1A60     		str	r2, [r3]
+ 251:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_16_CTL0, 0x00002200u);
+ 348              		.loc 1 251 0
+ 349 00a4 2B4B     		ldr	r3, .L10+92
+ 350 00a6 8822     		movs	r2, #136
+ 351 00a8 9201     		lsls	r2, r2, #6
+ 352 00aa 1A60     		str	r2, [r3]
+ 252:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_CMD, 0x8000FF40u);
+ 353              		.loc 1 252 0
+ 354 00ac 1E4B     		ldr	r3, .L10+48
+ 355 00ae 2A4A     		ldr	r2, .L10+96
+ 356 00b0 1A60     		str	r2, [r3]
+ 253:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 254:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_CLK_IMO_CONFIG Starting address: CYDEV_CLK_IMO_CONFIG */
+ 255:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_CLK_IMO_CONFIG), 0x80000000u);
+ 357              		.loc 1 255 0
+ 358 00b2 2A4B     		ldr	r3, .L10+100
+ 359 00b4 8022     		movs	r2, #128
+ 360 00b6 1206     		lsls	r2, r2, #24
  361 00b8 1A60     		str	r2, [r3]
- 260:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 261:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_PERI_PCLK_CTL9 Starting address: CYDEV_PERI_PCLK_CTL9 */
- 262:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_PERI_PCLK_CTL9), 0x00000043u);
- 362              		.loc 1 262 0
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 12
-
-
- 363 00ba 254B     		ldr	r3, .L10+104
- 364 00bc 4322     		movs	r2, #67
+ 256:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 257:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_CLK_SELECT Starting address: CYDEV_CLK_SELECT */
+ 258:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_CLK_SELECT), 0x00000000u);
+ 362              		.loc 1 258 0
+ 363 00ba 294B     		ldr	r3, .L10+104
+ 364 00bc 0022     		movs	r2, #0
  365 00be 1A60     		str	r2, [r3]
- 263:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 264:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_PERI_PCLK_CTL8 Starting address: CYDEV_PERI_PCLK_CTL8 */
- 265:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_PERI_PCLK_CTL8), 0x00000042u);
- 366              		.loc 1 265 0
- 367 00c0 244B     		ldr	r3, .L10+108
- 368 00c2 4222     		movs	r2, #66
+ 259:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 12
+
+
+ 260:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_PERI_PCLK_CTL11 Starting address: CYDEV_PERI_PCLK_CTL11 */
+ 261:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_PERI_PCLK_CTL11), 0x00000041u);
+ 366              		.loc 1 261 0
+ 367 00c0 284B     		ldr	r3, .L10+108
+ 368 00c2 4122     		movs	r2, #65
  369 00c4 1A60     		str	r2, [r3]
- 266:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 267:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_PERI_PCLK_CTL7 Starting address: CYDEV_PERI_PCLK_CTL7 */
- 268:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_PERI_PCLK_CTL7), 0x00000044u);
- 370              		.loc 1 268 0
- 371 00c6 244B     		ldr	r3, .L10+112
- 372 00c8 4422     		movs	r2, #68
+ 262:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 263:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_PERI_PCLK_CTL10 Starting address: CYDEV_PERI_PCLK_CTL10 */
+ 264:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_PERI_PCLK_CTL10), 0x00000043u);
+ 370              		.loc 1 264 0
+ 371 00c6 284B     		ldr	r3, .L10+112
+ 372 00c8 4322     		movs	r2, #67
  373 00ca 1A60     		str	r2, [r3]
- 269:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 270:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_PERI_PCLK_CTL1 Starting address: CYDEV_PERI_PCLK_CTL1 */
- 271:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_PERI_PCLK_CTL1), 0x00000040u);
- 374              		.loc 1 271 0
- 375 00cc 234B     		ldr	r3, .L10+116
- 376 00ce 4022     		movs	r2, #64
+ 265:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 266:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_PERI_PCLK_CTL9 Starting address: CYDEV_PERI_PCLK_CTL9 */
+ 267:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_PERI_PCLK_CTL9), 0x00000045u);
+ 374              		.loc 1 267 0
+ 375 00cc 274B     		ldr	r3, .L10+116
+ 376 00ce 4522     		movs	r2, #69
  377 00d0 1A60     		str	r2, [r3]
- 272:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 273:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_WDT_CONFIG), 0x40000000u);
- 378              		.loc 1 273 0
- 379 00d2 094B     		ldr	r3, .L10+16
- 380 00d4 8022     		movs	r2, #128
- 381 00d6 D205     		lsls	r2, r2, #23
- 382 00d8 1A60     		str	r2, [r3]
- 274:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Set Flash Cycles based on newly configured 24.00MHz HFCLK. */
- 275:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void CYXDATA *)(CYREG_CPUSS_FLASH_CTL), (0x0011u));
- 383              		.loc 1 275 0
- 384 00da 034B     		ldr	r3, .L10
- 385 00dc 1122     		movs	r2, #17
- 386 00de 1A60     		str	r2, [r3]
- 276:Generated_Source\PSoC4/cyfitter_cfg.c **** }
- 387              		.loc 1 276 0
- 388 00e0 C046     		nop
- 389 00e2 BD46     		mov	sp, r7
- 390              		@ sp needed
- 391 00e4 80BD     		pop	{r7, pc}
- 392              	.L11:
- 393 00e6 C046     		.align	2
- 394              	.L10:
- 395 00e8 30001040 		.word	1074790448
- 396 00ec 001BB700 		.word	12000000
- 397 00f0 04010B40 		.word	1074462980
- 398 00f4 06000080 		.word	-2147483642
- 399 00f8 0C020B40 		.word	1074463244
- 400 00fc 78002E40 		.word	1076756600
- 401 0100 7C002E40 		.word	1076756604
- 402 0104 2D3E0000 		.word	15917
- 403 0108 64F02E40 		.word	1076818020
- 404 010c 6CF02E40 		.word	1076818028
- 405 0110 DC050000 		.word	1500
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 13
-
-
- 406 0114 04030140 		.word	1073808132
- 407 0118 00000140 		.word	1073807360
- 408 011c 41FF0080 		.word	-2147418303
- 409 0120 0C030140 		.word	1073808140
- 410 0124 00BF5D00 		.word	6143744
- 411 0128 43FF0080 		.word	-2147418301
- 412 012c 08030140 		.word	1073808136
- 413 0130 42FF0080 		.word	-2147418302
- 414 0134 10030140 		.word	1073808144
- 415 0138 44FF0080 		.word	-2147418300
- 416 013c 00030140 		.word	1073808128
- 417 0140 40FF0080 		.word	-2147418304
- 418 0144 08010B40 		.word	1074462984
- 419 0148 00010B40 		.word	1074462976
- 420 014c 2C010140 		.word	1073807660
- 421 0150 24010140 		.word	1073807652
- 422 0154 20010140 		.word	1073807648
- 423 0158 1C010140 		.word	1073807644
- 424 015c 04010140 		.word	1073807620
- 425              		.cfi_endproc
- 426              	.LFE6:
- 427              		.size	ClockSetup, .-ClockSetup
- 428              		.section	.text.AnalogSetDefault,"ax",%progbits
- 429              		.align	2
- 430              		.code	16
- 431              		.thumb_func
- 432              		.type	AnalogSetDefault, %function
- 433              	AnalogSetDefault:
- 434              	.LFB7:
+ 268:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 269:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_PERI_PCLK_CTL8 Starting address: CYDEV_PERI_PCLK_CTL8 */
+ 270:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_PERI_PCLK_CTL8), 0x00000042u);
+ 378              		.loc 1 270 0
+ 379 00d2 274B     		ldr	r3, .L10+120
+ 380 00d4 4222     		movs	r2, #66
+ 381 00d6 1A60     		str	r2, [r3]
+ 271:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 272:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_PERI_PCLK_CTL7 Starting address: CYDEV_PERI_PCLK_CTL7 */
+ 273:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_PERI_PCLK_CTL7), 0x00000044u);
+ 382              		.loc 1 273 0
+ 383 00d8 264B     		ldr	r3, .L10+124
+ 384 00da 4422     		movs	r2, #68
+ 385 00dc 1A60     		str	r2, [r3]
+ 274:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 275:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_PERI_PCLK_CTL1 Starting address: CYDEV_PERI_PCLK_CTL1 */
+ 276:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_PERI_PCLK_CTL1), 0x00000040u);
+ 386              		.loc 1 276 0
+ 387 00de 264B     		ldr	r3, .L10+128
+ 388 00e0 4022     		movs	r2, #64
+ 389 00e2 1A60     		str	r2, [r3]
  277:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 278:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 279:Generated_Source\PSoC4/cyfitter_cfg.c **** /* Analog API Functions */
- 280:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 281:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 282:Generated_Source\PSoC4/cyfitter_cfg.c **** /*******************************************************************************
- 283:Generated_Source\PSoC4/cyfitter_cfg.c **** * Function Name: AnalogSetDefault
- 284:Generated_Source\PSoC4/cyfitter_cfg.c **** ********************************************************************************
- 285:Generated_Source\PSoC4/cyfitter_cfg.c **** *
- 286:Generated_Source\PSoC4/cyfitter_cfg.c **** * Summary:
- 287:Generated_Source\PSoC4/cyfitter_cfg.c **** *  Sets up the analog portions of the chip to default values based on chip
- 288:Generated_Source\PSoC4/cyfitter_cfg.c **** *  configuration options from the project.
- 289:Generated_Source\PSoC4/cyfitter_cfg.c **** *
- 290:Generated_Source\PSoC4/cyfitter_cfg.c **** * Parameters:
- 291:Generated_Source\PSoC4/cyfitter_cfg.c **** *  void
- 292:Generated_Source\PSoC4/cyfitter_cfg.c **** *
- 293:Generated_Source\PSoC4/cyfitter_cfg.c **** * Return:
- 294:Generated_Source\PSoC4/cyfitter_cfg.c **** *  void
- 295:Generated_Source\PSoC4/cyfitter_cfg.c **** *
- 296:Generated_Source\PSoC4/cyfitter_cfg.c **** *******************************************************************************/
- 297:Generated_Source\PSoC4/cyfitter_cfg.c **** static void AnalogSetDefault(void);
- 298:Generated_Source\PSoC4/cyfitter_cfg.c **** static void AnalogSetDefault(void)
- 299:Generated_Source\PSoC4/cyfitter_cfg.c **** {
- 435              		.loc 1 299 0
- 436              		.cfi_startproc
- 437              		@ args = 0, pretend = 0, frame = 0
- 438              		@ frame_needed = 1, uses_anonymous_args = 0
- 439 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 14
+ 278:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_WDT_CONFIG), 0x40000000u);
+ 390              		.loc 1 278 0
+ 391 00e4 084B     		ldr	r3, .L10+16
+ 392 00e6 8022     		movs	r2, #128
+ 393 00e8 D205     		lsls	r2, r2, #23
+ 394 00ea 1A60     		str	r2, [r3]
+ 279:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Set Flash Cycles based on newly configured 24.00MHz HFCLK. */
+ 280:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void CYXDATA *)(CYREG_CPUSS_FLASH_CTL), (0x0011u));
+ 395              		.loc 1 280 0
+ 396 00ec 024B     		ldr	r3, .L10
+ 397 00ee 1122     		movs	r2, #17
+ 398 00f0 1A60     		str	r2, [r3]
+ 281:Generated_Source\PSoC4/cyfitter_cfg.c **** }
+ 399              		.loc 1 281 0
+ 400 00f2 C046     		nop
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 13
 
 
- 440              		.cfi_def_cfa_offset 8
- 441              		.cfi_offset 7, -8
- 442              		.cfi_offset 14, -4
- 443 0002 00AF     		add	r7, sp, #0
- 444              		.cfi_def_cfa_register 7
- 300:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)CYREG_CTBM0_DFT_CTRL, 0x00000003u);
- 445              		.loc 1 300 0
- 446 0004 054B     		ldr	r3, .L13
- 447 0006 0322     		movs	r2, #3
- 448 0008 1A60     		str	r2, [r3]
- 301:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)CYREG_CTBM1_DFT_CTRL, 0x00000003u);
- 449              		.loc 1 301 0
- 450 000a 054B     		ldr	r3, .L13+4
- 451 000c 0322     		movs	r2, #3
- 452 000e 1A60     		str	r2, [r3]
- 302:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)CYREG_PASS_DSAB_DSAB_CTRL, 0x00000000u);
- 453              		.loc 1 302 0
- 454 0010 044B     		ldr	r3, .L13+8
- 455 0012 0022     		movs	r2, #0
- 456 0014 1A60     		str	r2, [r3]
- 303:Generated_Source\PSoC4/cyfitter_cfg.c **** }
- 457              		.loc 1 303 0
- 458 0016 C046     		nop
- 459 0018 BD46     		mov	sp, r7
- 460              		@ sp needed
- 461 001a 80BD     		pop	{r7, pc}
- 462              	.L14:
- 463              		.align	2
- 464              	.L13:
- 465 001c 30003040 		.word	1076887600
- 466 0020 30003140 		.word	1076953136
- 467 0024 000E3F40 		.word	1077874176
- 468              		.cfi_endproc
- 469              	.LFE7:
- 470              		.size	AnalogSetDefault, .-AnalogSetDefault
- 471              		.section	.psocinit
- 472              		.align	2
- 473              		.global	cyfitter_cfg
- 474              		.code	16
- 475              		.thumb_func
- 476              		.type	cyfitter_cfg, %function
- 477              	cyfitter_cfg:
- 478              	.LFB8:
- 304:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 305:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 306:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 307:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 308:Generated_Source\PSoC4/cyfitter_cfg.c **** /*******************************************************************************
- 309:Generated_Source\PSoC4/cyfitter_cfg.c **** * Function Name: cyfitter_cfg
- 310:Generated_Source\PSoC4/cyfitter_cfg.c **** ********************************************************************************
- 311:Generated_Source\PSoC4/cyfitter_cfg.c **** * Summary:
- 312:Generated_Source\PSoC4/cyfitter_cfg.c **** *  This function is called by the start-up code for the selected device. It
- 313:Generated_Source\PSoC4/cyfitter_cfg.c **** *  performs all of the necessary device configuration based on the design
- 314:Generated_Source\PSoC4/cyfitter_cfg.c **** *  settings.  This includes settings from the Design Wide Resources (DWR) such
- 315:Generated_Source\PSoC4/cyfitter_cfg.c **** *  as Clocks and Pins as well as any component configuration that is necessary.
- 316:Generated_Source\PSoC4/cyfitter_cfg.c **** *
- 317:Generated_Source\PSoC4/cyfitter_cfg.c **** * Parameters:
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 15
+ 401 00f4 BD46     		mov	sp, r7
+ 402              		@ sp needed
+ 403 00f6 80BD     		pop	{r7, pc}
+ 404              	.L11:
+ 405              		.align	2
+ 406              	.L10:
+ 407 00f8 30001040 		.word	1074790448
+ 408 00fc 001BB700 		.word	12000000
+ 409 0100 04010B40 		.word	1074462980
+ 410 0104 06000080 		.word	-2147483642
+ 411 0108 0C020B40 		.word	1074463244
+ 412 010c 78002E40 		.word	1076756600
+ 413 0110 7C002E40 		.word	1076756604
+ 414 0114 2D3E0000 		.word	15917
+ 415 0118 64F02E40 		.word	1076818020
+ 416 011c 6CF02E40 		.word	1076818028
+ 417 0120 DC050000 		.word	1500
+ 418 0124 04030140 		.word	1073808132
+ 419 0128 00000140 		.word	1073807360
+ 420 012c 41FF0080 		.word	-2147418303
+ 421 0130 0C030140 		.word	1073808140
+ 422 0134 00BF5D00 		.word	6143744
+ 423 0138 43FF0080 		.word	-2147418301
+ 424 013c 14030140 		.word	1073808148
+ 425 0140 45FF0080 		.word	-2147418299
+ 426 0144 08030140 		.word	1073808136
+ 427 0148 42FF0080 		.word	-2147418302
+ 428 014c 10030140 		.word	1073808144
+ 429 0150 44FF0080 		.word	-2147418300
+ 430 0154 00030140 		.word	1073808128
+ 431 0158 40FF0080 		.word	-2147418304
+ 432 015c 08010B40 		.word	1074462984
+ 433 0160 00010B40 		.word	1074462976
+ 434 0164 2C010140 		.word	1073807660
+ 435 0168 28010140 		.word	1073807656
+ 436 016c 24010140 		.word	1073807652
+ 437 0170 20010140 		.word	1073807648
+ 438 0174 1C010140 		.word	1073807644
+ 439 0178 04010140 		.word	1073807620
+ 440              		.cfi_endproc
+ 441              	.LFE6:
+ 442              		.size	ClockSetup, .-ClockSetup
+ 443              		.section	.text.AnalogSetDefault,"ax",%progbits
+ 444              		.align	2
+ 445              		.code	16
+ 446              		.thumb_func
+ 447              		.type	AnalogSetDefault, %function
+ 448              	AnalogSetDefault:
+ 449              	.LFB7:
+ 282:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 283:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 284:Generated_Source\PSoC4/cyfitter_cfg.c **** /* Analog API Functions */
+ 285:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 286:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 287:Generated_Source\PSoC4/cyfitter_cfg.c **** /*******************************************************************************
+ 288:Generated_Source\PSoC4/cyfitter_cfg.c **** * Function Name: AnalogSetDefault
+ 289:Generated_Source\PSoC4/cyfitter_cfg.c **** ********************************************************************************
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 14
 
 
- 318:Generated_Source\PSoC4/cyfitter_cfg.c **** *   void
- 319:Generated_Source\PSoC4/cyfitter_cfg.c **** *
- 320:Generated_Source\PSoC4/cyfitter_cfg.c **** * Return:
- 321:Generated_Source\PSoC4/cyfitter_cfg.c **** *   void
- 322:Generated_Source\PSoC4/cyfitter_cfg.c **** *
- 323:Generated_Source\PSoC4/cyfitter_cfg.c **** *******************************************************************************/
- 324:Generated_Source\PSoC4/cyfitter_cfg.c **** CY_CFG_SECTION
- 325:Generated_Source\PSoC4/cyfitter_cfg.c **** void cyfitter_cfg(void)
- 326:Generated_Source\PSoC4/cyfitter_cfg.c **** {
- 479              		.loc 1 326 0
- 480              		.cfi_startproc
- 481              		@ args = 0, pretend = 0, frame = 8
- 482              		@ frame_needed = 1, uses_anonymous_args = 0
- 483 0160 80B5     		push	{r7, lr}
- 484              		.cfi_def_cfa_offset 8
- 485              		.cfi_offset 7, -8
- 486              		.cfi_offset 14, -4
- 487 0162 82B0     		sub	sp, sp, #8
- 488              		.cfi_def_cfa_offset 16
- 489 0164 00AF     		add	r7, sp, #0
- 490              		.cfi_def_cfa_register 7
- 327:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Disable interrupts by default. Let user enable if/when they want. */
- 328:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CyGlobalIntDisable;
- 491              		.loc 1 328 0
- 492              		.syntax divided
- 493              	@ 328 "Generated_Source\PSoC4\cyfitter_cfg.c" 1
- 494 0166 72B6     		CPSID   i
- 495              	@ 0 "" 2
- 329:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 330:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_BLE_BLESS_LL_DSM_CTRL), 0x00000000u);
- 496              		.loc 1 330 0
- 497              		.thumb
- 498              		.syntax unified
- 499 0168 494B     		ldr	r3, .L18
- 500 016a 0022     		movs	r2, #0
- 501 016c 1A60     		str	r2, [r3]
- 502              	.LBB3:
- 331:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 332:Generated_Source\PSoC4/cyfitter_cfg.c **** 	{
- 333:Generated_Source\PSoC4/cyfitter_cfg.c **** 		static const uint32 CYCODE cy_cfg_addr_table[] = {
- 334:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F3241u, /* Base address: 0x400F3200 Count: 65 */
- 335:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F3326u, /* Base address: 0x400F3300 Count: 38 */
- 336:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F4202u, /* Base address: 0x400F4200 Count: 2 */
- 337:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F4308u, /* Base address: 0x400F4300 Count: 8 */
- 338:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F6002u, /* Base address: 0x400F6000 Count: 2 */
- 339:Generated_Source\PSoC4/cyfitter_cfg.c **** 		};
- 340:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 341:Generated_Source\PSoC4/cyfitter_cfg.c **** 		static const cy_cfg_addrvalue_t CYCODE cy_cfg_data_table[] = {
- 342:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x08u, 0x01u},
- 343:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Au, 0x02u},
- 344:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x13u, 0x01u},
- 345:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x14u, 0x01u},
- 346:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x18u, 0x01u},
- 347:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Au, 0x02u},
- 348:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x30u, 0x03u},
- 349:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x35u, 0x01u},
- 350:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x38u, 0x02u},
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 16
+ 290:Generated_Source\PSoC4/cyfitter_cfg.c **** *
+ 291:Generated_Source\PSoC4/cyfitter_cfg.c **** * Summary:
+ 292:Generated_Source\PSoC4/cyfitter_cfg.c **** *  Sets up the analog portions of the chip to default values based on chip
+ 293:Generated_Source\PSoC4/cyfitter_cfg.c **** *  configuration options from the project.
+ 294:Generated_Source\PSoC4/cyfitter_cfg.c **** *
+ 295:Generated_Source\PSoC4/cyfitter_cfg.c **** * Parameters:
+ 296:Generated_Source\PSoC4/cyfitter_cfg.c **** *  void
+ 297:Generated_Source\PSoC4/cyfitter_cfg.c **** *
+ 298:Generated_Source\PSoC4/cyfitter_cfg.c **** * Return:
+ 299:Generated_Source\PSoC4/cyfitter_cfg.c **** *  void
+ 300:Generated_Source\PSoC4/cyfitter_cfg.c **** *
+ 301:Generated_Source\PSoC4/cyfitter_cfg.c **** *******************************************************************************/
+ 302:Generated_Source\PSoC4/cyfitter_cfg.c **** static void AnalogSetDefault(void);
+ 303:Generated_Source\PSoC4/cyfitter_cfg.c **** static void AnalogSetDefault(void)
+ 304:Generated_Source\PSoC4/cyfitter_cfg.c **** {
+ 450              		.loc 1 304 0
+ 451              		.cfi_startproc
+ 452              		@ args = 0, pretend = 0, frame = 0
+ 453              		@ frame_needed = 1, uses_anonymous_args = 0
+ 454 0000 80B5     		push	{r7, lr}
+ 455              		.cfi_def_cfa_offset 8
+ 456              		.cfi_offset 7, -8
+ 457              		.cfi_offset 14, -4
+ 458 0002 00AF     		add	r7, sp, #0
+ 459              		.cfi_def_cfa_register 7
+ 305:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)CYREG_CTBM0_DFT_CTRL, 0x00000003u);
+ 460              		.loc 1 305 0
+ 461 0004 054B     		ldr	r3, .L13
+ 462 0006 0322     		movs	r2, #3
+ 463 0008 1A60     		str	r2, [r3]
+ 306:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)CYREG_CTBM1_DFT_CTRL, 0x00000003u);
+ 464              		.loc 1 306 0
+ 465 000a 054B     		ldr	r3, .L13+4
+ 466 000c 0322     		movs	r2, #3
+ 467 000e 1A60     		str	r2, [r3]
+ 307:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)CYREG_PASS_DSAB_DSAB_CTRL, 0x00000000u);
+ 468              		.loc 1 307 0
+ 469 0010 044B     		ldr	r3, .L13+8
+ 470 0012 0022     		movs	r2, #0
+ 471 0014 1A60     		str	r2, [r3]
+ 308:Generated_Source\PSoC4/cyfitter_cfg.c **** }
+ 472              		.loc 1 308 0
+ 473 0016 C046     		nop
+ 474 0018 BD46     		mov	sp, r7
+ 475              		@ sp needed
+ 476 001a 80BD     		pop	{r7, pc}
+ 477              	.L14:
+ 478              		.align	2
+ 479              	.L13:
+ 480 001c 30003040 		.word	1076887600
+ 481 0020 30003140 		.word	1076953136
+ 482 0024 000E3F40 		.word	1077874176
+ 483              		.cfi_endproc
+ 484              	.LFE7:
+ 485              		.size	AnalogSetDefault, .-AnalogSetDefault
+ 486              		.section	.psocinit
+ 487              		.align	2
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 15
 
 
- 351:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x39u, 0x80u},
- 352:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Fu, 0x40u},
- 353:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x40u, 0x01u},
- 354:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x45u, 0x01u},
- 355:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x48u, 0x09u},
- 356:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x49u, 0xFFu},
- 357:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Au, 0xFFu},
- 358:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Bu, 0xFFu},
- 359:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Cu, 0x02u},
- 360:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Du, 0x20u},
- 361:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Eu, 0xF0u},
- 362:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x52u, 0x03u},
- 363:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x58u, 0x0Eu},
- 364:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x59u, 0x04u},
- 365:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Au, 0x0Eu},
- 366:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Bu, 0x04u},
- 367:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Fu, 0x01u},
- 368:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x62u, 0x48u},
- 369:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x63u, 0xADu},
- 370:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x64u, 0xC0u},
- 371:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x66u, 0xC0u},
- 372:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x85u, 0x01u},
- 373:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x87u, 0x02u},
- 374:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x89u, 0x01u},
- 375:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Bu, 0x02u},
- 376:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Du, 0x01u},
- 377:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x99u, 0x04u},
- 378:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Bu, 0x08u},
- 379:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Du, 0x04u},
- 380:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA5u, 0x04u},
- 381:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA7u, 0x08u},
- 382:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAEu, 0x01u},
- 383:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB0u, 0x01u},
- 384:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB5u, 0x0Cu},
- 385:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB7u, 0x03u},
- 386:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB9u, 0xA0u},
- 387:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0x01u},
- 388:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC5u, 0x45u},
- 389:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC7u, 0x01u},
- 390:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC8u, 0x17u},
- 391:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC9u, 0xFFu},
- 392:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCAu, 0xFFu},
- 393:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCBu, 0xFFu},
- 394:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCCu, 0x02u},
- 395:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCDu, 0x20u},
- 396:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCEu, 0xF0u},
- 397:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD2u, 0x07u},
- 398:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD8u, 0x04u},
- 399:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD9u, 0x0Cu},
- 400:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDAu, 0x0Cu},
- 401:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDBu, 0x04u},
- 402:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDFu, 0x01u},
- 403:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE2u, 0x48u},
- 404:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE3u, 0xADu},
- 405:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE4u, 0xC0u},
- 406:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE6u, 0xC0u},
- 407:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x07u, 0x04u},
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 17
+ 488              		.global	cyfitter_cfg
+ 489              		.code	16
+ 490              		.thumb_func
+ 491              		.type	cyfitter_cfg, %function
+ 492              	cyfitter_cfg:
+ 493              	.LFB8:
+ 309:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 310:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 311:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 312:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 313:Generated_Source\PSoC4/cyfitter_cfg.c **** /*******************************************************************************
+ 314:Generated_Source\PSoC4/cyfitter_cfg.c **** * Function Name: cyfitter_cfg
+ 315:Generated_Source\PSoC4/cyfitter_cfg.c **** ********************************************************************************
+ 316:Generated_Source\PSoC4/cyfitter_cfg.c **** * Summary:
+ 317:Generated_Source\PSoC4/cyfitter_cfg.c **** *  This function is called by the start-up code for the selected device. It
+ 318:Generated_Source\PSoC4/cyfitter_cfg.c **** *  performs all of the necessary device configuration based on the design
+ 319:Generated_Source\PSoC4/cyfitter_cfg.c **** *  settings.  This includes settings from the Design Wide Resources (DWR) such
+ 320:Generated_Source\PSoC4/cyfitter_cfg.c **** *  as Clocks and Pins as well as any component configuration that is necessary.
+ 321:Generated_Source\PSoC4/cyfitter_cfg.c **** *
+ 322:Generated_Source\PSoC4/cyfitter_cfg.c **** * Parameters:
+ 323:Generated_Source\PSoC4/cyfitter_cfg.c **** *   void
+ 324:Generated_Source\PSoC4/cyfitter_cfg.c **** *
+ 325:Generated_Source\PSoC4/cyfitter_cfg.c **** * Return:
+ 326:Generated_Source\PSoC4/cyfitter_cfg.c **** *   void
+ 327:Generated_Source\PSoC4/cyfitter_cfg.c **** *
+ 328:Generated_Source\PSoC4/cyfitter_cfg.c **** *******************************************************************************/
+ 329:Generated_Source\PSoC4/cyfitter_cfg.c **** CY_CFG_SECTION
+ 330:Generated_Source\PSoC4/cyfitter_cfg.c **** void cyfitter_cfg(void)
+ 331:Generated_Source\PSoC4/cyfitter_cfg.c **** {
+ 494              		.loc 1 331 0
+ 495              		.cfi_startproc
+ 496              		@ args = 0, pretend = 0, frame = 8
+ 497              		@ frame_needed = 1, uses_anonymous_args = 0
+ 498 017c 80B5     		push	{r7, lr}
+ 499              		.cfi_def_cfa_offset 8
+ 500              		.cfi_offset 7, -8
+ 501              		.cfi_offset 14, -4
+ 502 017e 82B0     		sub	sp, sp, #8
+ 503              		.cfi_def_cfa_offset 16
+ 504 0180 00AF     		add	r7, sp, #0
+ 505              		.cfi_def_cfa_register 7
+ 332:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Disable interrupts by default. Let user enable if/when they want. */
+ 333:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CyGlobalIntDisable;
+ 506              		.loc 1 333 0
+ 507              		.syntax divided
+ 508              	@ 333 "Generated_Source\PSoC4\cyfitter_cfg.c" 1
+ 509 0182 72B6     		CPSID   i
+ 510              	@ 0 "" 2
+ 334:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 335:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_BLE_BLESS_LL_DSM_CTRL), 0x00000000u);
+ 511              		.loc 1 335 0
+ 512              		.thumb
+ 513              		.syntax unified
+ 514 0184 494B     		ldr	r3, .L18
+ 515 0186 0022     		movs	r2, #0
+ 516 0188 1A60     		str	r2, [r3]
+ 517              	.LBB3:
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 16
 
 
- 408:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Fu, 0x28u},
- 409:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x10u, 0x02u},
- 410:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Bu, 0x01u},
- 411:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Fu, 0x02u},
- 412:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x20u, 0x01u},
- 413:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x22u, 0x10u},
- 414:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x25u, 0x80u},
- 415:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x26u, 0x20u},
- 416:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x29u, 0x04u},
- 417:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x30u, 0xA0u},
- 418:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x37u, 0x01u},
- 419:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x38u, 0x88u},
- 420:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x39u, 0x20u},
- 421:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x41u, 0x80u},
- 422:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x45u, 0x80u},
- 423:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x48u, 0x80u},
- 424:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x49u, 0x04u},
- 425:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Fu, 0x08u},
- 426:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x50u, 0x44u},
- 427:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x57u, 0x10u},
- 428:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x68u, 0x22u},
- 429:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x69u, 0x20u},
- 430:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Fu, 0x05u},
- 431:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x7Bu, 0x01u},
- 432:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x7Eu, 0x20u},
- 433:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x82u, 0x10u},
- 434:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Bu, 0x02u},
- 435:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Cu, 0x01u},
- 436:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0x40u},
- 437:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC2u, 0x60u},
- 438:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC4u, 0x01u},
- 439:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCAu, 0x02u},
- 440:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCCu, 0x8Cu},
- 441:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCEu, 0x0Eu},
- 442:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD0u, 0x18u},
- 443:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDEu, 0x48u},
- 444:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE4u, 0x04u},
- 445:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x61u, 0x02u},
- 446:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD8u, 0x02u},
- 447:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Au, 0x01u},
- 448:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Cu, 0x08u},
- 449:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x80u, 0x08u},
- 450:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Au, 0x01u},
- 451:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Du, 0x02u},
- 452:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA5u, 0x02u},
- 453:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD6u, 0x03u},
- 454:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE4u, 0x09u},
- 455:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x01u, 0x01u},
- 456:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x10u, 0x01u},
- 457:Generated_Source\PSoC4/cyfitter_cfg.c **** 		};
- 458:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 459:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 460:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 461:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CYPACKED typedef struct {
- 462:Generated_Source\PSoC4/cyfitter_cfg.c **** 			void CYFAR *address;
- 463:Generated_Source\PSoC4/cyfitter_cfg.c **** 			uint16 size;
- 464:Generated_Source\PSoC4/cyfitter_cfg.c **** 		} CYPACKED_ATTR cfg_memset_t;
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 18
+ 336:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 337:Generated_Source\PSoC4/cyfitter_cfg.c **** 	{
+ 338:Generated_Source\PSoC4/cyfitter_cfg.c **** 		static const uint32 CYCODE cy_cfg_addr_table[] = {
+ 339:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F3241u, /* Base address: 0x400F3200 Count: 65 */
+ 340:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F3325u, /* Base address: 0x400F3300 Count: 37 */
+ 341:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F4202u, /* Base address: 0x400F4200 Count: 2 */
+ 342:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F4308u, /* Base address: 0x400F4300 Count: 8 */
+ 343:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F6002u, /* Base address: 0x400F6000 Count: 2 */
+ 344:Generated_Source\PSoC4/cyfitter_cfg.c **** 		};
+ 345:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 346:Generated_Source\PSoC4/cyfitter_cfg.c **** 		static const cy_cfg_addrvalue_t CYCODE cy_cfg_data_table[] = {
+ 347:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x05u, 0x01u},
+ 348:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x09u, 0x01u},
+ 349:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Bu, 0x02u},
+ 350:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Du, 0x01u},
+ 351:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Fu, 0x02u},
+ 352:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Eu, 0x01u},
+ 353:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x33u, 0x03u},
+ 354:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x36u, 0x01u},
+ 355:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x39u, 0x88u},
+ 356:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Fu, 0x40u},
+ 357:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x40u, 0x01u},
+ 358:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x46u, 0x01u},
+ 359:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x48u, 0x05u},
+ 360:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x49u, 0xFFu},
+ 361:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Au, 0xFFu},
+ 362:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Bu, 0xFFu},
+ 363:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Cu, 0x02u},
+ 364:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Du, 0x20u},
+ 365:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Eu, 0xF0u},
+ 366:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x52u, 0x03u},
+ 367:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x58u, 0x04u},
+ 368:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x59u, 0x0Fu},
+ 369:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Au, 0x0Fu},
+ 370:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Bu, 0x04u},
+ 371:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Fu, 0x01u},
+ 372:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x62u, 0x48u},
+ 373:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x63u, 0xADu},
+ 374:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x64u, 0xC0u},
+ 375:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x66u, 0xC0u},
+ 376:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x81u, 0x01u},
+ 377:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x83u, 0x02u},
+ 378:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x85u, 0x04u},
+ 379:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x87u, 0x08u},
+ 380:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x89u, 0x01u},
+ 381:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Bu, 0x02u},
+ 382:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x95u, 0x01u},
+ 383:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x99u, 0x04u},
+ 384:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA5u, 0x04u},
+ 385:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA7u, 0x08u},
+ 386:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAEu, 0x01u},
+ 387:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB0u, 0x01u},
+ 388:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB3u, 0x0Cu},
+ 389:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB7u, 0x03u},
+ 390:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB9u, 0x88u},
+ 391:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0x01u},
+ 392:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC5u, 0x04u},
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 17
 
 
- 465:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 466:Generated_Source\PSoC4/cyfitter_cfg.c **** 		static const cfg_memset_t CYCODE cfg_memset_list[] = {
- 467:Generated_Source\PSoC4/cyfitter_cfg.c **** 			/* address, size */
- 468:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{(void CYFAR *)(CYDEV_UDB_P0_U0_BASE), 1024u},
- 469:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{(void CYFAR *)(CYDEV_UDB_DSI0_BASE), 1024u},
- 470:Generated_Source\PSoC4/cyfitter_cfg.c **** 		};
- 471:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 472:Generated_Source\PSoC4/cyfitter_cfg.c **** 		uint8 CYDATA i;
- 473:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 474:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* Zero out critical memory blocks before beginning configuration */
- 475:Generated_Source\PSoC4/cyfitter_cfg.c **** 		for (i = 0u; i < (sizeof(cfg_memset_list)/sizeof(cfg_memset_list[0])); i++)
- 503              		.loc 1 475 0
- 504 016e FB1D     		adds	r3, r7, #7
- 505 0170 0022     		movs	r2, #0
- 506 0172 1A70     		strb	r2, [r3]
- 507 0174 22E0     		b	.L16
- 508              	.L17:
- 509              	.LBB4:
- 476:Generated_Source\PSoC4/cyfitter_cfg.c **** 		{
- 477:Generated_Source\PSoC4/cyfitter_cfg.c **** 			const cfg_memset_t CYCODE * CYDATA ms = &cfg_memset_list[i];
- 510              		.loc 1 477 0 discriminator 3
- 511 0176 FB1D     		adds	r3, r7, #7
- 512 0178 1A78     		ldrb	r2, [r3]
- 513 017a 1300     		movs	r3, r2
- 514 017c 5B00     		lsls	r3, r3, #1
- 515 017e 9B18     		adds	r3, r3, r2
- 516 0180 5B00     		lsls	r3, r3, #1
- 517 0182 444A     		ldr	r2, .L18+4
- 518 0184 9B18     		adds	r3, r3, r2
- 519 0186 3B60     		str	r3, [r7]
- 478:Generated_Source\PSoC4/cyfitter_cfg.c **** 			CYMEMZERO(ms->address, (size_t)(uint32)(ms->size));
- 520              		.loc 1 478 0 discriminator 3
- 521 0188 3B68     		ldr	r3, [r7]
- 522 018a 1A78     		ldrb	r2, [r3]
- 523 018c 5978     		ldrb	r1, [r3, #1]
- 524 018e 0902     		lsls	r1, r1, #8
- 525 0190 0A43     		orrs	r2, r1
- 526 0192 9978     		ldrb	r1, [r3, #2]
- 527 0194 0904     		lsls	r1, r1, #16
- 528 0196 0A43     		orrs	r2, r1
- 529 0198 DB78     		ldrb	r3, [r3, #3]
- 530 019a 1B06     		lsls	r3, r3, #24
- 531 019c 1343     		orrs	r3, r2
- 532 019e 1800     		movs	r0, r3
- 533 01a0 3B68     		ldr	r3, [r7]
- 534 01a2 1A79     		ldrb	r2, [r3, #4]
- 535 01a4 5B79     		ldrb	r3, [r3, #5]
- 536 01a6 1B02     		lsls	r3, r3, #8
- 537 01a8 1343     		orrs	r3, r2
- 538 01aa 9BB2     		uxth	r3, r3
- 539 01ac 1900     		movs	r1, r3
- 540 01ae FFF7FEFF 		bl	CYMEMZERO
- 541              	.LBE4:
- 475:Generated_Source\PSoC4/cyfitter_cfg.c **** 		{
- 542              		.loc 1 475 0 discriminator 3
- 543 01b2 FB1D     		adds	r3, r7, #7
- 544 01b4 1A78     		ldrb	r2, [r3]
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 19
+ 393:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC6u, 0x50u},
+ 394:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC7u, 0x10u},
+ 395:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC8u, 0x39u},
+ 396:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC9u, 0xFFu},
+ 397:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCAu, 0xFFu},
+ 398:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCBu, 0xFFu},
+ 399:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCCu, 0x02u},
+ 400:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCDu, 0x20u},
+ 401:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCEu, 0xF0u},
+ 402:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD2u, 0x07u},
+ 403:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD8u, 0x04u},
+ 404:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD9u, 0x0Cu},
+ 405:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDAu, 0x0Cu},
+ 406:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDBu, 0x04u},
+ 407:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDFu, 0x01u},
+ 408:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE2u, 0x48u},
+ 409:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE3u, 0xADu},
+ 410:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE4u, 0xC0u},
+ 411:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE6u, 0xC0u},
+ 412:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x10u, 0x02u},
+ 413:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x15u, 0x40u},
+ 414:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Bu, 0x01u},
+ 415:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Fu, 0x80u},
+ 416:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x20u, 0x01u},
+ 417:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x21u, 0x08u},
+ 418:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x25u, 0x80u},
+ 419:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x27u, 0x20u},
+ 420:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Bu, 0x20u},
+ 421:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x30u, 0x28u},
+ 422:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x38u, 0x02u},
+ 423:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x39u, 0x14u},
+ 424:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Eu, 0x10u},
+ 425:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Fu, 0x88u},
+ 426:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x41u, 0x80u},
+ 427:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x45u, 0x80u},
+ 428:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x48u, 0x20u},
+ 429:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Fu, 0x08u},
+ 430:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x50u, 0x09u},
+ 431:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x53u, 0x20u},
+ 432:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x57u, 0x40u},
+ 433:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x68u, 0x02u},
+ 434:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x69u, 0x14u},
+ 435:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Du, 0x40u},
+ 436:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Eu, 0x10u},
+ 437:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x7Bu, 0x01u},
+ 438:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x7Fu, 0x80u},
+ 439:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x83u, 0x20u},
+ 440:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x89u, 0x08u},
+ 441:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Cu, 0x01u},
+ 442:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC4u, 0x81u},
+ 443:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCAu, 0x02u},
+ 444:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCCu, 0x06u},
+ 445:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCEu, 0x77u},
+ 446:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD0u, 0x18u},
+ 447:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDEu, 0x88u},
+ 448:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE0u, 0x01u},
+ 449:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x61u, 0x02u},
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 18
 
 
- 545 01b6 FB1D     		adds	r3, r7, #7
- 546 01b8 0132     		adds	r2, r2, #1
- 547 01ba 1A70     		strb	r2, [r3]
- 548              	.L16:
- 475:Generated_Source\PSoC4/cyfitter_cfg.c **** 		{
- 549              		.loc 1 475 0 is_stmt 0 discriminator 1
- 550 01bc FB1D     		adds	r3, r7, #7
- 551 01be 1B78     		ldrb	r3, [r3]
- 552 01c0 012B     		cmp	r3, #1
- 553 01c2 D8D9     		bls	.L17
- 479:Generated_Source\PSoC4/cyfitter_cfg.c **** 		}
- 480:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 481:Generated_Source\PSoC4/cyfitter_cfg.c **** 		cfg_write_bytes32(cy_cfg_addr_table, cy_cfg_data_table);
- 554              		.loc 1 481 0 is_stmt 1
- 555 01c4 344A     		ldr	r2, .L18+8
- 556 01c6 354B     		ldr	r3, .L18+12
- 557 01c8 1100     		movs	r1, r2
- 558 01ca 1800     		movs	r0, r3
- 559 01cc FFF7FEFF 		bl	cfg_write_bytes32
- 482:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 483:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* HSIOM Starting address: CYDEV_HSIOM_BASE */
- 484:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYDEV_HSIOM_BASE), 0xEE000000u);
- 560              		.loc 1 484 0
- 561 01d0 334B     		ldr	r3, .L18+16
- 562 01d2 EE22     		movs	r2, #238
- 563 01d4 1206     		lsls	r2, r2, #24
- 564 01d6 1A60     		str	r2, [r3]
- 485:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYREG_HSIOM_PORT_SEL1), 0x00990000u);
- 565              		.loc 1 485 0
- 566 01d8 324B     		ldr	r3, .L18+20
- 567 01da 9922     		movs	r2, #153
- 568 01dc 1204     		lsls	r2, r2, #16
- 569 01de 1A60     		str	r2, [r3]
- 486:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYREG_HSIOM_PORT_SEL2), 0x03000000u);
- 570              		.loc 1 486 0
- 571 01e0 314B     		ldr	r3, .L18+24
- 572 01e2 C022     		movs	r2, #192
- 573 01e4 9204     		lsls	r2, r2, #18
- 574 01e6 1A60     		str	r2, [r3]
- 487:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYREG_HSIOM_PORT_SEL3), 0x33000000u);
- 575              		.loc 1 487 0
- 576 01e8 304B     		ldr	r3, .L18+28
- 577 01ea CC22     		movs	r2, #204
- 578 01ec 9205     		lsls	r2, r2, #22
- 579 01ee 1A60     		str	r2, [r3]
- 488:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 489:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_0 Starting address: CYDEV_UDB_PA0_BASE */
- 490:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYDEV_UDB_PA0_BASE), 0x00990000u);
- 580              		.loc 1 490 0
- 581 01f0 2F4B     		ldr	r3, .L18+32
- 582 01f2 9922     		movs	r2, #153
- 583 01f4 1204     		lsls	r2, r2, #16
- 584 01f6 1A60     		str	r2, [r3]
- 491:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 492:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_1 Starting address: CYDEV_UDB_PA1_BASE */
- 493:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYDEV_UDB_PA1_BASE), 0x00990000u);
- 585              		.loc 1 493 0
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 20
+ 450:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD8u, 0x02u},
+ 451:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Bu, 0x01u},
+ 452:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Cu, 0x01u},
+ 453:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x80u, 0x01u},
+ 454:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Bu, 0x01u},
+ 455:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Du, 0x02u},
+ 456:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA5u, 0x02u},
+ 457:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD6u, 0x03u},
+ 458:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE4u, 0x0Cu},
+ 459:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x01u, 0x01u},
+ 460:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x10u, 0x01u},
+ 461:Generated_Source\PSoC4/cyfitter_cfg.c **** 		};
+ 462:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 463:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 464:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 465:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CYPACKED typedef struct {
+ 466:Generated_Source\PSoC4/cyfitter_cfg.c **** 			void CYFAR *address;
+ 467:Generated_Source\PSoC4/cyfitter_cfg.c **** 			uint16 size;
+ 468:Generated_Source\PSoC4/cyfitter_cfg.c **** 		} CYPACKED_ATTR cfg_memset_t;
+ 469:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 470:Generated_Source\PSoC4/cyfitter_cfg.c **** 		static const cfg_memset_t CYCODE cfg_memset_list[] = {
+ 471:Generated_Source\PSoC4/cyfitter_cfg.c **** 			/* address, size */
+ 472:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{(void CYFAR *)(CYDEV_UDB_P0_U0_BASE), 1024u},
+ 473:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{(void CYFAR *)(CYDEV_UDB_DSI0_BASE), 1024u},
+ 474:Generated_Source\PSoC4/cyfitter_cfg.c **** 		};
+ 475:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 476:Generated_Source\PSoC4/cyfitter_cfg.c **** 		uint8 CYDATA i;
+ 477:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 478:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* Zero out critical memory blocks before beginning configuration */
+ 479:Generated_Source\PSoC4/cyfitter_cfg.c **** 		for (i = 0u; i < (sizeof(cfg_memset_list)/sizeof(cfg_memset_list[0])); i++)
+ 518              		.loc 1 479 0
+ 519 018a FB1D     		adds	r3, r7, #7
+ 520 018c 0022     		movs	r2, #0
+ 521 018e 1A70     		strb	r2, [r3]
+ 522 0190 22E0     		b	.L16
+ 523              	.L17:
+ 524              	.LBB4:
+ 480:Generated_Source\PSoC4/cyfitter_cfg.c **** 		{
+ 481:Generated_Source\PSoC4/cyfitter_cfg.c **** 			const cfg_memset_t CYCODE * CYDATA ms = &cfg_memset_list[i];
+ 525              		.loc 1 481 0 discriminator 3
+ 526 0192 FB1D     		adds	r3, r7, #7
+ 527 0194 1A78     		ldrb	r2, [r3]
+ 528 0196 1300     		movs	r3, r2
+ 529 0198 5B00     		lsls	r3, r3, #1
+ 530 019a 9B18     		adds	r3, r3, r2
+ 531 019c 5B00     		lsls	r3, r3, #1
+ 532 019e 444A     		ldr	r2, .L18+4
+ 533 01a0 9B18     		adds	r3, r3, r2
+ 534 01a2 3B60     		str	r3, [r7]
+ 482:Generated_Source\PSoC4/cyfitter_cfg.c **** 			CYMEMZERO(ms->address, (size_t)(uint32)(ms->size));
+ 535              		.loc 1 482 0 discriminator 3
+ 536 01a4 3B68     		ldr	r3, [r7]
+ 537 01a6 1A78     		ldrb	r2, [r3]
+ 538 01a8 5978     		ldrb	r1, [r3, #1]
+ 539 01aa 0902     		lsls	r1, r1, #8
+ 540 01ac 0A43     		orrs	r2, r1
+ 541 01ae 9978     		ldrb	r1, [r3, #2]
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 19
 
 
- 586 01f8 2E4B     		ldr	r3, .L18+36
- 587 01fa 9922     		movs	r2, #153
- 588 01fc 1204     		lsls	r2, r2, #16
- 589 01fe 1A60     		str	r2, [r3]
- 494:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 495:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_2 Starting address: CYDEV_UDB_PA2_BASE */
- 496:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYDEV_UDB_PA2_BASE), 0x00990000u);
- 590              		.loc 1 496 0
- 591 0200 2D4B     		ldr	r3, .L18+40
- 592 0202 9922     		movs	r2, #153
- 593 0204 1204     		lsls	r2, r2, #16
- 594 0206 1A60     		str	r2, [r3]
- 497:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYREG_UDB_PA2_CFG8), 0x20000000u);
- 595              		.loc 1 497 0
- 596 0208 2C4B     		ldr	r3, .L18+44
- 597 020a 8022     		movs	r2, #128
- 598 020c 9205     		lsls	r2, r2, #22
- 599 020e 1A60     		str	r2, [r3]
+ 542 01b0 0904     		lsls	r1, r1, #16
+ 543 01b2 0A43     		orrs	r2, r1
+ 544 01b4 DB78     		ldrb	r3, [r3, #3]
+ 545 01b6 1B06     		lsls	r3, r3, #24
+ 546 01b8 1343     		orrs	r3, r2
+ 547 01ba 1800     		movs	r0, r3
+ 548 01bc 3B68     		ldr	r3, [r7]
+ 549 01be 1A79     		ldrb	r2, [r3, #4]
+ 550 01c0 5B79     		ldrb	r3, [r3, #5]
+ 551 01c2 1B02     		lsls	r3, r3, #8
+ 552 01c4 1343     		orrs	r3, r2
+ 553 01c6 9BB2     		uxth	r3, r3
+ 554 01c8 1900     		movs	r1, r3
+ 555 01ca FFF7FEFF 		bl	CYMEMZERO
+ 556              	.LBE4:
+ 479:Generated_Source\PSoC4/cyfitter_cfg.c **** 		{
+ 557              		.loc 1 479 0 discriminator 3
+ 558 01ce FB1D     		adds	r3, r7, #7
+ 559 01d0 1A78     		ldrb	r2, [r3]
+ 560 01d2 FB1D     		adds	r3, r7, #7
+ 561 01d4 0132     		adds	r2, r2, #1
+ 562 01d6 1A70     		strb	r2, [r3]
+ 563              	.L16:
+ 479:Generated_Source\PSoC4/cyfitter_cfg.c **** 		{
+ 564              		.loc 1 479 0 is_stmt 0 discriminator 1
+ 565 01d8 FB1D     		adds	r3, r7, #7
+ 566 01da 1B78     		ldrb	r3, [r3]
+ 567 01dc 012B     		cmp	r3, #1
+ 568 01de D8D9     		bls	.L17
+ 483:Generated_Source\PSoC4/cyfitter_cfg.c **** 		}
+ 484:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 485:Generated_Source\PSoC4/cyfitter_cfg.c **** 		cfg_write_bytes32(cy_cfg_addr_table, cy_cfg_data_table);
+ 569              		.loc 1 485 0 is_stmt 1
+ 570 01e0 344A     		ldr	r2, .L18+8
+ 571 01e2 354B     		ldr	r3, .L18+12
+ 572 01e4 1100     		movs	r1, r2
+ 573 01e6 1800     		movs	r0, r3
+ 574 01e8 FFF7FEFF 		bl	cfg_write_bytes32
+ 486:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 487:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* HSIOM Starting address: CYDEV_HSIOM_BASE */
+ 488:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYDEV_HSIOM_BASE), 0xEE000000u);
+ 575              		.loc 1 488 0
+ 576 01ec 334B     		ldr	r3, .L18+16
+ 577 01ee EE22     		movs	r2, #238
+ 578 01f0 1206     		lsls	r2, r2, #24
+ 579 01f2 1A60     		str	r2, [r3]
+ 489:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYREG_HSIOM_PORT_SEL1), 0x00990000u);
+ 580              		.loc 1 489 0
+ 581 01f4 324B     		ldr	r3, .L18+20
+ 582 01f6 9922     		movs	r2, #153
+ 583 01f8 1204     		lsls	r2, r2, #16
+ 584 01fa 1A60     		str	r2, [r3]
+ 490:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYREG_HSIOM_PORT_SEL2), 0x03000000u);
+ 585              		.loc 1 490 0
+ 586 01fc 314B     		ldr	r3, .L18+24
+ 587 01fe C022     		movs	r2, #192
+ 588 0200 9204     		lsls	r2, r2, #18
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 20
+
+
+ 589 0202 1A60     		str	r2, [r3]
+ 491:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYREG_HSIOM_PORT_SEL3), 0x33000000u);
+ 590              		.loc 1 491 0
+ 591 0204 304B     		ldr	r3, .L18+28
+ 592 0206 CC22     		movs	r2, #204
+ 593 0208 9205     		lsls	r2, r2, #22
+ 594 020a 1A60     		str	r2, [r3]
+ 492:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 493:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_0 Starting address: CYDEV_UDB_PA0_BASE */
+ 494:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYDEV_UDB_PA0_BASE), 0x00990000u);
+ 595              		.loc 1 494 0
+ 596 020c 2F4B     		ldr	r3, .L18+32
+ 597 020e 9922     		movs	r2, #153
+ 598 0210 1204     		lsls	r2, r2, #16
+ 599 0212 1A60     		str	r2, [r3]
+ 495:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 496:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_1 Starting address: CYDEV_UDB_PA1_BASE */
+ 497:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYDEV_UDB_PA1_BASE), 0x00990000u);
+ 600              		.loc 1 497 0
+ 601 0214 2E4B     		ldr	r3, .L18+36
+ 602 0216 9922     		movs	r2, #153
+ 603 0218 1204     		lsls	r2, r2, #16
+ 604 021a 1A60     		str	r2, [r3]
  498:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 499:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_3 Starting address: CYDEV_UDB_PA3_BASE */
- 500:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYDEV_UDB_PA3_BASE), 0x00990000u);
- 600              		.loc 1 500 0
- 601 0210 2B4B     		ldr	r3, .L18+48
- 602 0212 9922     		movs	r2, #153
- 603 0214 1204     		lsls	r2, r2, #16
- 604 0216 1A60     		str	r2, [r3]
- 501:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYREG_UDB_PA3_CFG8), 0x1A000000u);
- 605              		.loc 1 501 0
- 606 0218 2A4B     		ldr	r3, .L18+52
- 607 021a D022     		movs	r2, #208
- 608 021c 5205     		lsls	r2, r2, #21
- 609 021e 1A60     		str	r2, [r3]
+ 499:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_2 Starting address: CYDEV_UDB_PA2_BASE */
+ 500:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYDEV_UDB_PA2_BASE), 0x00990000u);
+ 605              		.loc 1 500 0
+ 606 021c 2D4B     		ldr	r3, .L18+40
+ 607 021e 9922     		movs	r2, #153
+ 608 0220 1204     		lsls	r2, r2, #16
+ 609 0222 1A60     		str	r2, [r3]
+ 501:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYREG_UDB_PA2_CFG8), 0x20000000u);
+ 610              		.loc 1 501 0
+ 611 0224 2C4B     		ldr	r3, .L18+44
+ 612 0226 8022     		movs	r2, #128
+ 613 0228 9205     		lsls	r2, r2, #22
+ 614 022a 1A60     		str	r2, [r3]
  502:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 503:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* Enable UDB array and digital routing */
- 504:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG8((void *)CYREG_UDB_UDBIF_WAIT_CFG, (uint8)((CY_GET_XTND_REG8((void *)CYREG_UDB_UD
- 610              		.loc 1 504 0
- 611 0220 294A     		ldr	r2, .L18+56
- 612 0222 294B     		ldr	r3, .L18+56
- 613 0224 1B78     		ldrb	r3, [r3]
- 614 0226 DBB2     		uxtb	r3, r3
- 615 0228 3C21     		movs	r1, #60
- 616 022a 8B43     		bics	r3, r1
- 617 022c DBB2     		uxtb	r3, r3
- 618 022e 1421     		movs	r1, #20
- 619 0230 0B43     		orrs	r3, r1
- 620 0232 DBB2     		uxtb	r3, r3
- 621 0234 1370     		strb	r3, [r2]
- 505:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG8((void *)CYREG_UDB_UDBIF_BANK_CTL, (uint8)(CY_GET_XTND_REG8((void *)CYREG_UDB_UDB
- 622              		.loc 1 505 0
- 623 0236 254A     		ldr	r2, .L18+60
- 624 0238 244B     		ldr	r3, .L18+60
- 625 023a 1B78     		ldrb	r3, [r3]
- 626 023c DBB2     		uxtb	r3, r3
- 627 023e 1621     		movs	r1, #22
- 628 0240 0B43     		orrs	r3, r1
+ 503:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_3 Starting address: CYDEV_UDB_PA3_BASE */
+ 504:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYDEV_UDB_PA3_BASE), 0x00990000u);
+ 615              		.loc 1 504 0
+ 616 022c 2B4B     		ldr	r3, .L18+48
+ 617 022e 9922     		movs	r2, #153
+ 618 0230 1204     		lsls	r2, r2, #16
+ 619 0232 1A60     		str	r2, [r3]
+ 505:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYREG_UDB_PA3_CFG8), 0x4A000000u);
+ 620              		.loc 1 505 0
+ 621 0234 2A4B     		ldr	r3, .L18+52
+ 622 0236 9422     		movs	r2, #148
+ 623 0238 D205     		lsls	r2, r2, #23
+ 624 023a 1A60     		str	r2, [r3]
+ 506:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 507:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* Enable UDB array and digital routing */
+ 508:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG8((void *)CYREG_UDB_UDBIF_WAIT_CFG, (uint8)((CY_GET_XTND_REG8((void *)CYREG_UDB_UD
+ 625              		.loc 1 508 0
+ 626 023c 294A     		ldr	r2, .L18+56
+ 627 023e 294B     		ldr	r3, .L18+56
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 21
+
+
+ 628 0240 1B78     		ldrb	r3, [r3]
  629 0242 DBB2     		uxtb	r3, r3
- 630 0244 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 21
-
-
- 631              	.LBE3:
- 506:Generated_Source\PSoC4/cyfitter_cfg.c **** 	}
- 507:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 508:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Perform second pass device configuration. These items must be configured in specific order afte
- 509:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_0 Starting address: CYDEV_GPIO_PRT0_BASE */
- 510:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT0_PC), 0x00D80000u);
- 632              		.loc 1 510 0
- 633 0246 224B     		ldr	r3, .L18+64
- 634 0248 D822     		movs	r2, #216
- 635 024a 1204     		lsls	r2, r2, #16
- 636 024c 1A60     		str	r2, [r3]
+ 630 0244 3C21     		movs	r1, #60
+ 631 0246 8B43     		bics	r3, r1
+ 632 0248 DBB2     		uxtb	r3, r3
+ 633 024a 1421     		movs	r1, #20
+ 634 024c 0B43     		orrs	r3, r1
+ 635 024e DBB2     		uxtb	r3, r3
+ 636 0250 1370     		strb	r3, [r2]
+ 509:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG8((void *)CYREG_UDB_UDBIF_BANK_CTL, (uint8)(CY_GET_XTND_REG8((void *)CYREG_UDB_UDB
+ 637              		.loc 1 509 0
+ 638 0252 254A     		ldr	r2, .L18+60
+ 639 0254 244B     		ldr	r3, .L18+60
+ 640 0256 1B78     		ldrb	r3, [r3]
+ 641 0258 DBB2     		uxtb	r3, r3
+ 642 025a 1621     		movs	r1, #22
+ 643 025c 0B43     		orrs	r3, r1
+ 644 025e DBB2     		uxtb	r3, r3
+ 645 0260 1370     		strb	r3, [r2]
+ 646              	.LBE3:
+ 510:Generated_Source\PSoC4/cyfitter_cfg.c **** 	}
  511:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 512:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_1 Starting address: CYDEV_GPIO_PRT1_BASE */
- 513:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT1_BASE), 0x00000020u);
- 637              		.loc 1 513 0
- 638 024e 214B     		ldr	r3, .L18+68
- 639 0250 2022     		movs	r2, #32
- 640 0252 1A60     		str	r2, [r3]
- 514:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT1_PC), 0x00031000u);
- 641              		.loc 1 514 0
- 642 0254 204B     		ldr	r3, .L18+72
- 643 0256 C422     		movs	r2, #196
- 644 0258 9202     		lsls	r2, r2, #10
- 645 025a 1A60     		str	r2, [r3]
- 515:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT1_PC2), 0x00000020u);
- 646              		.loc 1 515 0
- 647 025c 1F4B     		ldr	r3, .L18+76
- 648 025e 2022     		movs	r2, #32
- 649 0260 1A60     		str	r2, [r3]
- 516:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 517:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_2 Starting address: CYDEV_GPIO_PRT2_BASE */
- 518:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT2_BASE), 0x00000040u);
- 650              		.loc 1 518 0
- 651 0262 1F4B     		ldr	r3, .L18+80
- 652 0264 4022     		movs	r2, #64
- 653 0266 1A60     		str	r2, [r3]
- 519:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT2_PC), 0x00040000u);
- 654              		.loc 1 519 0
- 655 0268 1E4B     		ldr	r3, .L18+84
- 656 026a 8022     		movs	r2, #128
- 657 026c D202     		lsls	r2, r2, #11
- 658 026e 1A60     		str	r2, [r3]
+ 512:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Perform second pass device configuration. These items must be configured in specific order afte
+ 513:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_0 Starting address: CYDEV_GPIO_PRT0_BASE */
+ 514:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT0_PC), 0x00D80000u);
+ 647              		.loc 1 514 0
+ 648 0262 224B     		ldr	r3, .L18+64
+ 649 0264 D822     		movs	r2, #216
+ 650 0266 1204     		lsls	r2, r2, #16
+ 651 0268 1A60     		str	r2, [r3]
+ 515:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 516:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_1 Starting address: CYDEV_GPIO_PRT1_BASE */
+ 517:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT1_BASE), 0x00000020u);
+ 652              		.loc 1 517 0
+ 653 026a 214B     		ldr	r3, .L18+68
+ 654 026c 2022     		movs	r2, #32
+ 655 026e 1A60     		str	r2, [r3]
+ 518:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT1_PC), 0x00031000u);
+ 656              		.loc 1 518 0
+ 657 0270 204B     		ldr	r3, .L18+72
+ 658 0272 C422     		movs	r2, #196
+ 659 0274 9202     		lsls	r2, r2, #10
+ 660 0276 1A60     		str	r2, [r3]
+ 519:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT1_PC2), 0x00000020u);
+ 661              		.loc 1 519 0
+ 662 0278 1F4B     		ldr	r3, .L18+76
+ 663 027a 2022     		movs	r2, #32
+ 664 027c 1A60     		str	r2, [r3]
  520:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 521:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_3 Starting address: CYDEV_GPIO_PRT3_BASE */
- 522:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT3_BASE), 0x000000C0u);
- 659              		.loc 1 522 0
- 660 0270 1D4B     		ldr	r3, .L18+88
- 661 0272 C022     		movs	r2, #192
- 662 0274 1A60     		str	r2, [r3]
- 523:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT3_PC), 0x00240000u);
- 663              		.loc 1 523 0
- 664 0276 1D4B     		ldr	r3, .L18+92
- 665 0278 9022     		movs	r2, #144
- 666 027a 9203     		lsls	r2, r2, #14
- 667 027c 1A60     		str	r2, [r3]
+ 521:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_2 Starting address: CYDEV_GPIO_PRT2_BASE */
+ 522:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT2_BASE), 0x00000040u);
+ 665              		.loc 1 522 0
+ 666 027e 1F4B     		ldr	r3, .L18+80
+ 667 0280 4022     		movs	r2, #64
+ 668 0282 1A60     		str	r2, [r3]
+ 523:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT2_PC), 0x00040000u);
+ 669              		.loc 1 523 0
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 22
+
+
+ 670 0284 1E4B     		ldr	r3, .L18+84
+ 671 0286 8022     		movs	r2, #128
+ 672 0288 D202     		lsls	r2, r2, #11
+ 673 028a 1A60     		str	r2, [r3]
  524:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 525:Generated_Source\PSoC4/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 22
-
-
- 526:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Setup clocks based on selections from Clock DWR */
- 527:Generated_Source\PSoC4/cyfitter_cfg.c **** 	ClockSetup();
- 668              		.loc 1 527 0
- 669 027e FFF7BFFE 		bl	ClockSetup
+ 525:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_3 Starting address: CYDEV_GPIO_PRT3_BASE */
+ 526:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT3_BASE), 0x000000C0u);
+ 674              		.loc 1 526 0
+ 675 028c 1D4B     		ldr	r3, .L18+88
+ 676 028e C022     		movs	r2, #192
+ 677 0290 1A60     		str	r2, [r3]
+ 527:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT3_PC), 0x00240000u);
+ 678              		.loc 1 527 0
+ 679 0292 1D4B     		ldr	r3, .L18+92
+ 680 0294 9022     		movs	r2, #144
+ 681 0296 9203     		lsls	r2, r2, #14
+ 682 0298 1A60     		str	r2, [r3]
  528:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 529:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Perform basic analog initialization to defaults */
- 530:Generated_Source\PSoC4/cyfitter_cfg.c **** 	AnalogSetDefault();
- 670              		.loc 1 530 0
- 671 0282 FFF7FEFF 		bl	AnalogSetDefault
- 531:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 532:Generated_Source\PSoC4/cyfitter_cfg.c **** }
- 672              		.loc 1 532 0
- 673 0286 C046     		nop
- 674 0288 BD46     		mov	sp, r7
- 675 028a 02B0     		add	sp, sp, #8
- 676              		@ sp needed
- 677 028c 80BD     		pop	{r7, pc}
- 678              	.L19:
- 679 028e C046     		.align	2
- 680              	.L18:
- 681 0290 6CF02E40 		.word	1076818028
- 682 0294 00000000 		.word	cfg_memset_list.4916
- 683 0298 20000000 		.word	cy_cfg_data_table.4911
- 684 029c 0C000000 		.word	cy_cfg_addr_table.4910
- 685 02a0 00000240 		.word	1073872896
- 686 02a4 00010240 		.word	1073873152
- 687 02a8 00020240 		.word	1073873408
- 688 02ac 00030240 		.word	1073873664
- 689 02b0 00500F40 		.word	1074745344
- 690 02b4 10500F40 		.word	1074745360
- 691 02b8 20500F40 		.word	1074745376
- 692 02bc 28500F40 		.word	1074745384
- 693 02c0 30500F40 		.word	1074745392
- 694 02c4 38500F40 		.word	1074745400
- 695 02c8 01700F40 		.word	1074753537
- 696 02cc 00700F40 		.word	1074753536
- 697 02d0 08000440 		.word	1074003976
- 698 02d4 00010440 		.word	1074004224
- 699 02d8 08010440 		.word	1074004232
- 700 02dc 18010440 		.word	1074004248
- 701 02e0 00020440 		.word	1074004480
- 702 02e4 08020440 		.word	1074004488
- 703 02e8 00030440 		.word	1074004736
- 704 02ec 08030440 		.word	1074004744
- 705              		.cfi_endproc
- 706              	.LFE8:
- 707              		.size	cyfitter_cfg, .-cyfitter_cfg
- 708              		.section	.rodata
- 709              		.align	2
- 710              		.type	cfg_memset_list.4916, %object
- 711              		.size	cfg_memset_list.4916, 12
- 712              	cfg_memset_list.4916:
- 713 0000 00300F40 		.word	1074737152
- 714 0004 0004     		.short	1024
- 715 0006 00400F40 		.4byte	1074741248
- 716 000a 0004     		.short	1024
- 717              		.align	2
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 23
+ 529:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 530:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Setup clocks based on selections from Clock DWR */
+ 531:Generated_Source\PSoC4/cyfitter_cfg.c **** 	ClockSetup();
+ 683              		.loc 1 531 0
+ 684 029a FFF7B1FE 		bl	ClockSetup
+ 532:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 533:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Perform basic analog initialization to defaults */
+ 534:Generated_Source\PSoC4/cyfitter_cfg.c **** 	AnalogSetDefault();
+ 685              		.loc 1 534 0
+ 686 029e FFF7FEFF 		bl	AnalogSetDefault
+ 535:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 536:Generated_Source\PSoC4/cyfitter_cfg.c **** }
+ 687              		.loc 1 536 0
+ 688 02a2 C046     		nop
+ 689 02a4 BD46     		mov	sp, r7
+ 690 02a6 02B0     		add	sp, sp, #8
+ 691              		@ sp needed
+ 692 02a8 80BD     		pop	{r7, pc}
+ 693              	.L19:
+ 694 02aa C046     		.align	2
+ 695              	.L18:
+ 696 02ac 6CF02E40 		.word	1076818028
+ 697 02b0 00000000 		.word	cfg_memset_list.4916
+ 698 02b4 20000000 		.word	cy_cfg_data_table.4911
+ 699 02b8 0C000000 		.word	cy_cfg_addr_table.4910
+ 700 02bc 00000240 		.word	1073872896
+ 701 02c0 00010240 		.word	1073873152
+ 702 02c4 00020240 		.word	1073873408
+ 703 02c8 00030240 		.word	1073873664
+ 704 02cc 00500F40 		.word	1074745344
+ 705 02d0 10500F40 		.word	1074745360
+ 706 02d4 20500F40 		.word	1074745376
+ 707 02d8 28500F40 		.word	1074745384
+ 708 02dc 30500F40 		.word	1074745392
+ 709 02e0 38500F40 		.word	1074745400
+ 710 02e4 01700F40 		.word	1074753537
+ 711 02e8 00700F40 		.word	1074753536
+ 712 02ec 08000440 		.word	1074003976
+ 713 02f0 00010440 		.word	1074004224
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 23
 
 
- 718              		.type	cy_cfg_addr_table.4910, %object
- 719              		.size	cy_cfg_addr_table.4910, 20
- 720              	cy_cfg_addr_table.4910:
- 721 000c 41320F40 		.word	1074737729
- 722 0010 26330F40 		.word	1074737958
- 723 0014 02420F40 		.word	1074741762
- 724 0018 08430F40 		.word	1074742024
- 725 001c 02600F40 		.word	1074749442
- 726              		.align	2
- 727              		.type	cy_cfg_data_table.4911, %object
- 728              		.size	cy_cfg_data_table.4911, 230
- 729              	cy_cfg_data_table.4911:
- 730 0020 08       		.byte	8
- 731 0021 01       		.byte	1
- 732 0022 0A       		.byte	10
- 733 0023 02       		.byte	2
- 734 0024 13       		.byte	19
- 735 0025 01       		.byte	1
- 736 0026 14       		.byte	20
- 737 0027 01       		.byte	1
- 738 0028 18       		.byte	24
- 739 0029 01       		.byte	1
- 740 002a 1A       		.byte	26
- 741 002b 02       		.byte	2
- 742 002c 30       		.byte	48
- 743 002d 03       		.byte	3
- 744 002e 35       		.byte	53
- 745 002f 01       		.byte	1
- 746 0030 38       		.byte	56
- 747 0031 02       		.byte	2
- 748 0032 39       		.byte	57
- 749 0033 80       		.byte	-128
- 750 0034 3F       		.byte	63
- 751 0035 40       		.byte	64
- 752 0036 40       		.byte	64
- 753 0037 01       		.byte	1
- 754 0038 45       		.byte	69
- 755 0039 01       		.byte	1
- 756 003a 48       		.byte	72
- 757 003b 09       		.byte	9
- 758 003c 49       		.byte	73
- 759 003d FF       		.byte	-1
- 760 003e 4A       		.byte	74
- 761 003f FF       		.byte	-1
- 762 0040 4B       		.byte	75
- 763 0041 FF       		.byte	-1
- 764 0042 4C       		.byte	76
- 765 0043 02       		.byte	2
- 766 0044 4D       		.byte	77
- 767 0045 20       		.byte	32
- 768 0046 4E       		.byte	78
- 769 0047 F0       		.byte	-16
- 770 0048 52       		.byte	82
- 771 0049 03       		.byte	3
- 772 004a 58       		.byte	88
- 773 004b 0E       		.byte	14
- 774 004c 59       		.byte	89
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 24
+ 714 02f4 08010440 		.word	1074004232
+ 715 02f8 18010440 		.word	1074004248
+ 716 02fc 00020440 		.word	1074004480
+ 717 0300 08020440 		.word	1074004488
+ 718 0304 00030440 		.word	1074004736
+ 719 0308 08030440 		.word	1074004744
+ 720              		.cfi_endproc
+ 721              	.LFE8:
+ 722              		.size	cyfitter_cfg, .-cyfitter_cfg
+ 723              		.section	.rodata
+ 724              		.align	2
+ 725              		.type	cfg_memset_list.4916, %object
+ 726              		.size	cfg_memset_list.4916, 12
+ 727              	cfg_memset_list.4916:
+ 728 0000 00300F40 		.word	1074737152
+ 729 0004 0004     		.short	1024
+ 730 0006 00400F40 		.4byte	1074741248
+ 731 000a 0004     		.short	1024
+ 732              		.align	2
+ 733              		.type	cy_cfg_addr_table.4910, %object
+ 734              		.size	cy_cfg_addr_table.4910, 20
+ 735              	cy_cfg_addr_table.4910:
+ 736 000c 41320F40 		.word	1074737729
+ 737 0010 25330F40 		.word	1074737957
+ 738 0014 02420F40 		.word	1074741762
+ 739 0018 08430F40 		.word	1074742024
+ 740 001c 02600F40 		.word	1074749442
+ 741              		.align	2
+ 742              		.type	cy_cfg_data_table.4911, %object
+ 743              		.size	cy_cfg_data_table.4911, 228
+ 744              	cy_cfg_data_table.4911:
+ 745 0020 05       		.byte	5
+ 746 0021 01       		.byte	1
+ 747 0022 09       		.byte	9
+ 748 0023 01       		.byte	1
+ 749 0024 0B       		.byte	11
+ 750 0025 02       		.byte	2
+ 751 0026 0D       		.byte	13
+ 752 0027 01       		.byte	1
+ 753 0028 0F       		.byte	15
+ 754 0029 02       		.byte	2
+ 755 002a 2E       		.byte	46
+ 756 002b 01       		.byte	1
+ 757 002c 33       		.byte	51
+ 758 002d 03       		.byte	3
+ 759 002e 36       		.byte	54
+ 760 002f 01       		.byte	1
+ 761 0030 39       		.byte	57
+ 762 0031 88       		.byte	-120
+ 763 0032 3F       		.byte	63
+ 764 0033 40       		.byte	64
+ 765 0034 40       		.byte	64
+ 766 0035 01       		.byte	1
+ 767 0036 46       		.byte	70
+ 768 0037 01       		.byte	1
+ 769 0038 48       		.byte	72
+ 770 0039 05       		.byte	5
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 24
 
 
- 775 004d 04       		.byte	4
- 776 004e 5A       		.byte	90
- 777 004f 0E       		.byte	14
- 778 0050 5B       		.byte	91
- 779 0051 04       		.byte	4
- 780 0052 5F       		.byte	95
- 781 0053 01       		.byte	1
- 782 0054 62       		.byte	98
- 783 0055 48       		.byte	72
- 784 0056 63       		.byte	99
- 785 0057 AD       		.byte	-83
- 786 0058 64       		.byte	100
- 787 0059 C0       		.byte	-64
- 788 005a 66       		.byte	102
- 789 005b C0       		.byte	-64
- 790 005c 85       		.byte	-123
- 791 005d 01       		.byte	1
- 792 005e 87       		.byte	-121
- 793 005f 02       		.byte	2
- 794 0060 89       		.byte	-119
- 795 0061 01       		.byte	1
- 796 0062 8B       		.byte	-117
- 797 0063 02       		.byte	2
- 798 0064 8D       		.byte	-115
- 799 0065 01       		.byte	1
- 800 0066 99       		.byte	-103
- 801 0067 04       		.byte	4
- 802 0068 9B       		.byte	-101
- 803 0069 08       		.byte	8
- 804 006a 9D       		.byte	-99
- 805 006b 04       		.byte	4
- 806 006c A5       		.byte	-91
- 807 006d 04       		.byte	4
- 808 006e A7       		.byte	-89
- 809 006f 08       		.byte	8
- 810 0070 AE       		.byte	-82
- 811 0071 01       		.byte	1
- 812 0072 B0       		.byte	-80
- 813 0073 01       		.byte	1
- 814 0074 B5       		.byte	-75
- 815 0075 0C       		.byte	12
- 816 0076 B7       		.byte	-73
- 817 0077 03       		.byte	3
- 818 0078 B9       		.byte	-71
- 819 0079 A0       		.byte	-96
- 820 007a C0       		.byte	-64
- 821 007b 01       		.byte	1
- 822 007c C5       		.byte	-59
- 823 007d 45       		.byte	69
- 824 007e C7       		.byte	-57
- 825 007f 01       		.byte	1
- 826 0080 C8       		.byte	-56
- 827 0081 17       		.byte	23
- 828 0082 C9       		.byte	-55
- 829 0083 FF       		.byte	-1
- 830 0084 CA       		.byte	-54
- 831 0085 FF       		.byte	-1
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 25
+ 771 003a 49       		.byte	73
+ 772 003b FF       		.byte	-1
+ 773 003c 4A       		.byte	74
+ 774 003d FF       		.byte	-1
+ 775 003e 4B       		.byte	75
+ 776 003f FF       		.byte	-1
+ 777 0040 4C       		.byte	76
+ 778 0041 02       		.byte	2
+ 779 0042 4D       		.byte	77
+ 780 0043 20       		.byte	32
+ 781 0044 4E       		.byte	78
+ 782 0045 F0       		.byte	-16
+ 783 0046 52       		.byte	82
+ 784 0047 03       		.byte	3
+ 785 0048 58       		.byte	88
+ 786 0049 04       		.byte	4
+ 787 004a 59       		.byte	89
+ 788 004b 0F       		.byte	15
+ 789 004c 5A       		.byte	90
+ 790 004d 0F       		.byte	15
+ 791 004e 5B       		.byte	91
+ 792 004f 04       		.byte	4
+ 793 0050 5F       		.byte	95
+ 794 0051 01       		.byte	1
+ 795 0052 62       		.byte	98
+ 796 0053 48       		.byte	72
+ 797 0054 63       		.byte	99
+ 798 0055 AD       		.byte	-83
+ 799 0056 64       		.byte	100
+ 800 0057 C0       		.byte	-64
+ 801 0058 66       		.byte	102
+ 802 0059 C0       		.byte	-64
+ 803 005a 81       		.byte	-127
+ 804 005b 01       		.byte	1
+ 805 005c 83       		.byte	-125
+ 806 005d 02       		.byte	2
+ 807 005e 85       		.byte	-123
+ 808 005f 04       		.byte	4
+ 809 0060 87       		.byte	-121
+ 810 0061 08       		.byte	8
+ 811 0062 89       		.byte	-119
+ 812 0063 01       		.byte	1
+ 813 0064 8B       		.byte	-117
+ 814 0065 02       		.byte	2
+ 815 0066 95       		.byte	-107
+ 816 0067 01       		.byte	1
+ 817 0068 99       		.byte	-103
+ 818 0069 04       		.byte	4
+ 819 006a A5       		.byte	-91
+ 820 006b 04       		.byte	4
+ 821 006c A7       		.byte	-89
+ 822 006d 08       		.byte	8
+ 823 006e AE       		.byte	-82
+ 824 006f 01       		.byte	1
+ 825 0070 B0       		.byte	-80
+ 826 0071 01       		.byte	1
+ 827 0072 B3       		.byte	-77
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 25
 
 
- 832 0086 CB       		.byte	-53
- 833 0087 FF       		.byte	-1
- 834 0088 CC       		.byte	-52
- 835 0089 02       		.byte	2
- 836 008a CD       		.byte	-51
- 837 008b 20       		.byte	32
- 838 008c CE       		.byte	-50
- 839 008d F0       		.byte	-16
- 840 008e D2       		.byte	-46
- 841 008f 07       		.byte	7
- 842 0090 D8       		.byte	-40
- 843 0091 04       		.byte	4
- 844 0092 D9       		.byte	-39
- 845 0093 0C       		.byte	12
- 846 0094 DA       		.byte	-38
- 847 0095 0C       		.byte	12
- 848 0096 DB       		.byte	-37
- 849 0097 04       		.byte	4
- 850 0098 DF       		.byte	-33
- 851 0099 01       		.byte	1
- 852 009a E2       		.byte	-30
- 853 009b 48       		.byte	72
- 854 009c E3       		.byte	-29
- 855 009d AD       		.byte	-83
- 856 009e E4       		.byte	-28
- 857 009f C0       		.byte	-64
- 858 00a0 E6       		.byte	-26
- 859 00a1 C0       		.byte	-64
- 860 00a2 07       		.byte	7
- 861 00a3 04       		.byte	4
- 862 00a4 0F       		.byte	15
- 863 00a5 28       		.byte	40
- 864 00a6 10       		.byte	16
- 865 00a7 02       		.byte	2
- 866 00a8 1B       		.byte	27
- 867 00a9 01       		.byte	1
- 868 00aa 1F       		.byte	31
- 869 00ab 02       		.byte	2
- 870 00ac 20       		.byte	32
- 871 00ad 01       		.byte	1
- 872 00ae 22       		.byte	34
- 873 00af 10       		.byte	16
- 874 00b0 25       		.byte	37
- 875 00b1 80       		.byte	-128
- 876 00b2 26       		.byte	38
- 877 00b3 20       		.byte	32
- 878 00b4 29       		.byte	41
- 879 00b5 04       		.byte	4
- 880 00b6 30       		.byte	48
- 881 00b7 A0       		.byte	-96
- 882 00b8 37       		.byte	55
- 883 00b9 01       		.byte	1
- 884 00ba 38       		.byte	56
- 885 00bb 88       		.byte	-120
- 886 00bc 39       		.byte	57
- 887 00bd 20       		.byte	32
- 888 00be 41       		.byte	65
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 26
+ 828 0073 0C       		.byte	12
+ 829 0074 B7       		.byte	-73
+ 830 0075 03       		.byte	3
+ 831 0076 B9       		.byte	-71
+ 832 0077 88       		.byte	-120
+ 833 0078 C0       		.byte	-64
+ 834 0079 01       		.byte	1
+ 835 007a C5       		.byte	-59
+ 836 007b 04       		.byte	4
+ 837 007c C6       		.byte	-58
+ 838 007d 50       		.byte	80
+ 839 007e C7       		.byte	-57
+ 840 007f 10       		.byte	16
+ 841 0080 C8       		.byte	-56
+ 842 0081 39       		.byte	57
+ 843 0082 C9       		.byte	-55
+ 844 0083 FF       		.byte	-1
+ 845 0084 CA       		.byte	-54
+ 846 0085 FF       		.byte	-1
+ 847 0086 CB       		.byte	-53
+ 848 0087 FF       		.byte	-1
+ 849 0088 CC       		.byte	-52
+ 850 0089 02       		.byte	2
+ 851 008a CD       		.byte	-51
+ 852 008b 20       		.byte	32
+ 853 008c CE       		.byte	-50
+ 854 008d F0       		.byte	-16
+ 855 008e D2       		.byte	-46
+ 856 008f 07       		.byte	7
+ 857 0090 D8       		.byte	-40
+ 858 0091 04       		.byte	4
+ 859 0092 D9       		.byte	-39
+ 860 0093 0C       		.byte	12
+ 861 0094 DA       		.byte	-38
+ 862 0095 0C       		.byte	12
+ 863 0096 DB       		.byte	-37
+ 864 0097 04       		.byte	4
+ 865 0098 DF       		.byte	-33
+ 866 0099 01       		.byte	1
+ 867 009a E2       		.byte	-30
+ 868 009b 48       		.byte	72
+ 869 009c E3       		.byte	-29
+ 870 009d AD       		.byte	-83
+ 871 009e E4       		.byte	-28
+ 872 009f C0       		.byte	-64
+ 873 00a0 E6       		.byte	-26
+ 874 00a1 C0       		.byte	-64
+ 875 00a2 10       		.byte	16
+ 876 00a3 02       		.byte	2
+ 877 00a4 15       		.byte	21
+ 878 00a5 40       		.byte	64
+ 879 00a6 1B       		.byte	27
+ 880 00a7 01       		.byte	1
+ 881 00a8 1F       		.byte	31
+ 882 00a9 80       		.byte	-128
+ 883 00aa 20       		.byte	32
+ 884 00ab 01       		.byte	1
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 26
 
 
- 889 00bf 80       		.byte	-128
- 890 00c0 45       		.byte	69
- 891 00c1 80       		.byte	-128
- 892 00c2 48       		.byte	72
- 893 00c3 80       		.byte	-128
- 894 00c4 49       		.byte	73
- 895 00c5 04       		.byte	4
- 896 00c6 4F       		.byte	79
- 897 00c7 08       		.byte	8
- 898 00c8 50       		.byte	80
- 899 00c9 44       		.byte	68
- 900 00ca 57       		.byte	87
- 901 00cb 10       		.byte	16
- 902 00cc 68       		.byte	104
- 903 00cd 22       		.byte	34
- 904 00ce 69       		.byte	105
- 905 00cf 20       		.byte	32
- 906 00d0 6F       		.byte	111
- 907 00d1 05       		.byte	5
- 908 00d2 7B       		.byte	123
- 909 00d3 01       		.byte	1
- 910 00d4 7E       		.byte	126
- 911 00d5 20       		.byte	32
- 912 00d6 82       		.byte	-126
- 913 00d7 10       		.byte	16
- 914 00d8 8B       		.byte	-117
- 915 00d9 02       		.byte	2
- 916 00da 8C       		.byte	-116
- 917 00db 01       		.byte	1
- 918 00dc C0       		.byte	-64
- 919 00dd 40       		.byte	64
- 920 00de C2       		.byte	-62
- 921 00df 60       		.byte	96
- 922 00e0 C4       		.byte	-60
- 923 00e1 01       		.byte	1
- 924 00e2 CA       		.byte	-54
- 925 00e3 02       		.byte	2
- 926 00e4 CC       		.byte	-52
- 927 00e5 8C       		.byte	-116
- 928 00e6 CE       		.byte	-50
- 929 00e7 0E       		.byte	14
- 930 00e8 D0       		.byte	-48
- 931 00e9 18       		.byte	24
- 932 00ea DE       		.byte	-34
- 933 00eb 48       		.byte	72
- 934 00ec E4       		.byte	-28
- 935 00ed 04       		.byte	4
- 936 00ee 61       		.byte	97
- 937 00ef 02       		.byte	2
- 938 00f0 D8       		.byte	-40
- 939 00f1 02       		.byte	2
- 940 00f2 5A       		.byte	90
- 941 00f3 01       		.byte	1
- 942 00f4 5C       		.byte	92
- 943 00f5 08       		.byte	8
- 944 00f6 80       		.byte	-128
- 945 00f7 08       		.byte	8
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 27
+ 885 00ac 21       		.byte	33
+ 886 00ad 08       		.byte	8
+ 887 00ae 25       		.byte	37
+ 888 00af 80       		.byte	-128
+ 889 00b0 27       		.byte	39
+ 890 00b1 20       		.byte	32
+ 891 00b2 2B       		.byte	43
+ 892 00b3 20       		.byte	32
+ 893 00b4 30       		.byte	48
+ 894 00b5 28       		.byte	40
+ 895 00b6 38       		.byte	56
+ 896 00b7 02       		.byte	2
+ 897 00b8 39       		.byte	57
+ 898 00b9 14       		.byte	20
+ 899 00ba 3E       		.byte	62
+ 900 00bb 10       		.byte	16
+ 901 00bc 3F       		.byte	63
+ 902 00bd 88       		.byte	-120
+ 903 00be 41       		.byte	65
+ 904 00bf 80       		.byte	-128
+ 905 00c0 45       		.byte	69
+ 906 00c1 80       		.byte	-128
+ 907 00c2 48       		.byte	72
+ 908 00c3 20       		.byte	32
+ 909 00c4 4F       		.byte	79
+ 910 00c5 08       		.byte	8
+ 911 00c6 50       		.byte	80
+ 912 00c7 09       		.byte	9
+ 913 00c8 53       		.byte	83
+ 914 00c9 20       		.byte	32
+ 915 00ca 57       		.byte	87
+ 916 00cb 40       		.byte	64
+ 917 00cc 68       		.byte	104
+ 918 00cd 02       		.byte	2
+ 919 00ce 69       		.byte	105
+ 920 00cf 14       		.byte	20
+ 921 00d0 6D       		.byte	109
+ 922 00d1 40       		.byte	64
+ 923 00d2 6E       		.byte	110
+ 924 00d3 10       		.byte	16
+ 925 00d4 7B       		.byte	123
+ 926 00d5 01       		.byte	1
+ 927 00d6 7F       		.byte	127
+ 928 00d7 80       		.byte	-128
+ 929 00d8 83       		.byte	-125
+ 930 00d9 20       		.byte	32
+ 931 00da 89       		.byte	-119
+ 932 00db 08       		.byte	8
+ 933 00dc 8C       		.byte	-116
+ 934 00dd 01       		.byte	1
+ 935 00de C4       		.byte	-60
+ 936 00df 81       		.byte	-127
+ 937 00e0 CA       		.byte	-54
+ 938 00e1 02       		.byte	2
+ 939 00e2 CC       		.byte	-52
+ 940 00e3 06       		.byte	6
+ 941 00e4 CE       		.byte	-50
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 27
 
 
- 946 00f8 8A       		.byte	-118
- 947 00f9 01       		.byte	1
- 948 00fa 8D       		.byte	-115
- 949 00fb 02       		.byte	2
- 950 00fc A5       		.byte	-91
- 951 00fd 02       		.byte	2
- 952 00fe D6       		.byte	-42
- 953 00ff 03       		.byte	3
- 954 0100 E4       		.byte	-28
- 955 0101 09       		.byte	9
- 956 0102 01       		.byte	1
- 957 0103 01       		.byte	1
- 958 0104 10       		.byte	16
- 959 0105 01       		.byte	1
- 960              		.text
- 961              	.Letext0:
- 962              		.file 2 "d:\\programs\\cypress\\psoc_creator\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5
- 963              		.file 3 "Generated_Source\\PSoC4\\cytypes.h"
- 964              		.section	.debug_info,"",%progbits
- 965              	.Ldebug_info0:
- 966 0000 5A030000 		.4byte	0x35a
- 967 0004 0400     		.2byte	0x4
- 968 0006 00000000 		.4byte	.Ldebug_abbrev0
- 969 000a 04       		.byte	0x4
- 970 000b 01       		.uleb128 0x1
- 971 000c 06010000 		.4byte	.LASF40
- 972 0010 0C       		.byte	0xc
- 973 0011 A8020000 		.4byte	.LASF41
- 974 0015 90000000 		.4byte	.LASF42
- 975 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 976 001d 00000000 		.4byte	0
- 977 0021 00000000 		.4byte	.Ldebug_line0
- 978 0025 02       		.uleb128 0x2
- 979 0026 04       		.byte	0x4
- 980 0027 05       		.byte	0x5
- 981 0028 696E7400 		.ascii	"int\000"
- 982 002c 03       		.uleb128 0x3
- 983 002d 06000000 		.4byte	.LASF12
- 984 0031 02       		.byte	0x2
- 985 0032 D8       		.byte	0xd8
- 986 0033 37000000 		.4byte	0x37
- 987 0037 04       		.uleb128 0x4
- 988 0038 04       		.byte	0x4
- 989 0039 07       		.byte	0x7
- 990 003a EC010000 		.4byte	.LASF0
- 991 003e 04       		.uleb128 0x4
- 992 003f 08       		.byte	0x8
- 993 0040 05       		.byte	0x5
- 994 0041 4A020000 		.4byte	.LASF1
- 995 0045 04       		.uleb128 0x4
- 996 0046 08       		.byte	0x8
- 997 0047 04       		.byte	0x4
- 998 0048 90020000 		.4byte	.LASF2
- 999 004c 04       		.uleb128 0x4
- 1000 004d 01       		.byte	0x1
- 1001 004e 06       		.byte	0x6
- 1002 004f 9C020000 		.4byte	.LASF3
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 28
+ 942 00e5 77       		.byte	119
+ 943 00e6 D0       		.byte	-48
+ 944 00e7 18       		.byte	24
+ 945 00e8 DE       		.byte	-34
+ 946 00e9 88       		.byte	-120
+ 947 00ea E0       		.byte	-32
+ 948 00eb 01       		.byte	1
+ 949 00ec 61       		.byte	97
+ 950 00ed 02       		.byte	2
+ 951 00ee D8       		.byte	-40
+ 952 00ef 02       		.byte	2
+ 953 00f0 5B       		.byte	91
+ 954 00f1 01       		.byte	1
+ 955 00f2 5C       		.byte	92
+ 956 00f3 01       		.byte	1
+ 957 00f4 80       		.byte	-128
+ 958 00f5 01       		.byte	1
+ 959 00f6 8B       		.byte	-117
+ 960 00f7 01       		.byte	1
+ 961 00f8 8D       		.byte	-115
+ 962 00f9 02       		.byte	2
+ 963 00fa A5       		.byte	-91
+ 964 00fb 02       		.byte	2
+ 965 00fc D6       		.byte	-42
+ 966 00fd 03       		.byte	3
+ 967 00fe E4       		.byte	-28
+ 968 00ff 0C       		.byte	12
+ 969 0100 01       		.byte	1
+ 970 0101 01       		.byte	1
+ 971 0102 10       		.byte	16
+ 972 0103 01       		.byte	1
+ 973              		.text
+ 974              	.Letext0:
+ 975              		.file 2 "d:\\programs\\cypress\\psoc_creator\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5
+ 976              		.file 3 "Generated_Source\\PSoC4\\cytypes.h"
+ 977              		.section	.debug_info,"",%progbits
+ 978              	.Ldebug_info0:
+ 979 0000 5A030000 		.4byte	0x35a
+ 980 0004 0400     		.2byte	0x4
+ 981 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 982 000a 04       		.byte	0x4
+ 983 000b 01       		.uleb128 0x1
+ 984 000c 06010000 		.4byte	.LASF40
+ 985 0010 0C       		.byte	0xc
+ 986 0011 A8020000 		.4byte	.LASF41
+ 987 0015 90000000 		.4byte	.LASF42
+ 988 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 989 001d 00000000 		.4byte	0
+ 990 0021 00000000 		.4byte	.Ldebug_line0
+ 991 0025 02       		.uleb128 0x2
+ 992 0026 04       		.byte	0x4
+ 993 0027 05       		.byte	0x5
+ 994 0028 696E7400 		.ascii	"int\000"
+ 995 002c 03       		.uleb128 0x3
+ 996 002d 06000000 		.4byte	.LASF12
+ 997 0031 02       		.byte	0x2
+ 998 0032 D8       		.byte	0xd8
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 28
 
 
- 1003 0053 04       		.uleb128 0x4
- 1004 0054 01       		.byte	0x1
- 1005 0055 08       		.byte	0x8
- 1006 0056 94010000 		.4byte	.LASF4
- 1007 005a 04       		.uleb128 0x4
- 1008 005b 02       		.byte	0x2
- 1009 005c 05       		.byte	0x5
- 1010 005d 77020000 		.4byte	.LASF5
- 1011 0061 04       		.uleb128 0x4
- 1012 0062 02       		.byte	0x2
- 1013 0063 07       		.byte	0x7
- 1014 0064 37020000 		.4byte	.LASF6
- 1015 0068 04       		.uleb128 0x4
- 1016 0069 04       		.byte	0x4
- 1017 006a 05       		.byte	0x5
- 1018 006b 87020000 		.4byte	.LASF7
- 1019 006f 04       		.uleb128 0x4
- 1020 0070 04       		.byte	0x4
- 1021 0071 07       		.byte	0x7
- 1022 0072 7E000000 		.4byte	.LASF8
- 1023 0076 04       		.uleb128 0x4
- 1024 0077 08       		.byte	0x8
- 1025 0078 07       		.byte	0x7
- 1026 0079 01020000 		.4byte	.LASF9
- 1027 007d 04       		.uleb128 0x4
- 1028 007e 04       		.byte	0x4
- 1029 007f 07       		.byte	0x7
- 1030 0080 2E020000 		.4byte	.LASF10
- 1031 0084 05       		.uleb128 0x5
- 1032 0085 04       		.byte	0x4
- 1033 0086 04       		.uleb128 0x4
- 1034 0087 01       		.byte	0x1
- 1035 0088 08       		.byte	0x8
- 1036 0089 58020000 		.4byte	.LASF11
- 1037 008d 06       		.uleb128 0x6
- 1038 008e 81020000 		.4byte	.LASF13
- 1039 0092 03       		.byte	0x3
- 1040 0093 E601     		.2byte	0x1e6
- 1041 0095 53000000 		.4byte	0x53
- 1042 0099 06       		.uleb128 0x6
- 1043 009a D3010000 		.4byte	.LASF14
- 1044 009e 03       		.byte	0x3
- 1045 009f E701     		.2byte	0x1e7
- 1046 00a1 61000000 		.4byte	0x61
- 1047 00a5 06       		.uleb128 0x6
- 1048 00a6 E5010000 		.4byte	.LASF15
- 1049 00aa 03       		.byte	0x3
- 1050 00ab E801     		.2byte	0x1e8
- 1051 00ad 6F000000 		.4byte	0x6f
- 1052 00b1 04       		.uleb128 0x4
- 1053 00b2 04       		.byte	0x4
- 1054 00b3 04       		.byte	0x4
- 1055 00b4 59000000 		.4byte	.LASF16
- 1056 00b8 04       		.uleb128 0x4
- 1057 00b9 08       		.byte	0x8
- 1058 00ba 04       		.byte	0x4
- 1059 00bb A2010000 		.4byte	.LASF17
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 29
+ 999 0033 37000000 		.4byte	0x37
+ 1000 0037 04       		.uleb128 0x4
+ 1001 0038 04       		.byte	0x4
+ 1002 0039 07       		.byte	0x7
+ 1003 003a EC010000 		.4byte	.LASF0
+ 1004 003e 04       		.uleb128 0x4
+ 1005 003f 08       		.byte	0x8
+ 1006 0040 05       		.byte	0x5
+ 1007 0041 4A020000 		.4byte	.LASF1
+ 1008 0045 04       		.uleb128 0x4
+ 1009 0046 08       		.byte	0x8
+ 1010 0047 04       		.byte	0x4
+ 1011 0048 90020000 		.4byte	.LASF2
+ 1012 004c 04       		.uleb128 0x4
+ 1013 004d 01       		.byte	0x1
+ 1014 004e 06       		.byte	0x6
+ 1015 004f 9C020000 		.4byte	.LASF3
+ 1016 0053 04       		.uleb128 0x4
+ 1017 0054 01       		.byte	0x1
+ 1018 0055 08       		.byte	0x8
+ 1019 0056 94010000 		.4byte	.LASF4
+ 1020 005a 04       		.uleb128 0x4
+ 1021 005b 02       		.byte	0x2
+ 1022 005c 05       		.byte	0x5
+ 1023 005d 77020000 		.4byte	.LASF5
+ 1024 0061 04       		.uleb128 0x4
+ 1025 0062 02       		.byte	0x2
+ 1026 0063 07       		.byte	0x7
+ 1027 0064 37020000 		.4byte	.LASF6
+ 1028 0068 04       		.uleb128 0x4
+ 1029 0069 04       		.byte	0x4
+ 1030 006a 05       		.byte	0x5
+ 1031 006b 87020000 		.4byte	.LASF7
+ 1032 006f 04       		.uleb128 0x4
+ 1033 0070 04       		.byte	0x4
+ 1034 0071 07       		.byte	0x7
+ 1035 0072 7E000000 		.4byte	.LASF8
+ 1036 0076 04       		.uleb128 0x4
+ 1037 0077 08       		.byte	0x8
+ 1038 0078 07       		.byte	0x7
+ 1039 0079 01020000 		.4byte	.LASF9
+ 1040 007d 04       		.uleb128 0x4
+ 1041 007e 04       		.byte	0x4
+ 1042 007f 07       		.byte	0x7
+ 1043 0080 2E020000 		.4byte	.LASF10
+ 1044 0084 05       		.uleb128 0x5
+ 1045 0085 04       		.byte	0x4
+ 1046 0086 04       		.uleb128 0x4
+ 1047 0087 01       		.byte	0x1
+ 1048 0088 08       		.byte	0x8
+ 1049 0089 58020000 		.4byte	.LASF11
+ 1050 008d 06       		.uleb128 0x6
+ 1051 008e 81020000 		.4byte	.LASF13
+ 1052 0092 03       		.byte	0x3
+ 1053 0093 E601     		.2byte	0x1e6
+ 1054 0095 53000000 		.4byte	0x53
+ 1055 0099 06       		.uleb128 0x6
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 29
 
 
- 1060 00bf 06       		.uleb128 0x6
- 1061 00c0 79000000 		.4byte	.LASF18
- 1062 00c4 03       		.byte	0x3
- 1063 00c5 9002     		.2byte	0x290
- 1064 00c7 CB000000 		.4byte	0xcb
- 1065 00cb 07       		.uleb128 0x7
- 1066 00cc 8D000000 		.4byte	0x8d
- 1067 00d0 06       		.uleb128 0x6
- 1068 00d1 00000000 		.4byte	.LASF19
- 1069 00d5 03       		.byte	0x3
- 1070 00d6 9202     		.2byte	0x292
- 1071 00d8 DC000000 		.4byte	0xdc
- 1072 00dc 07       		.uleb128 0x7
- 1073 00dd A5000000 		.4byte	0xa5
- 1074 00e1 08       		.uleb128 0x8
- 1075 00e2 02       		.byte	0x2
- 1076 00e3 01       		.byte	0x1
- 1077 00e4 95       		.byte	0x95
- 1078 00e5 02010000 		.4byte	0x102
- 1079 00e9 09       		.uleb128 0x9
- 1080 00ea 70020000 		.4byte	.LASF20
- 1081 00ee 01       		.byte	0x1
- 1082 00ef 97       		.byte	0x97
- 1083 00f0 8D000000 		.4byte	0x8d
- 1084 00f4 00       		.byte	0
- 1085 00f5 09       		.uleb128 0x9
- 1086 00f6 1E000000 		.4byte	.LASF21
- 1087 00fa 01       		.byte	0x1
- 1088 00fb 98       		.byte	0x98
- 1089 00fc 8D000000 		.4byte	0x8d
- 1090 0100 01       		.byte	0x1
- 1091 0101 00       		.byte	0
- 1092 0102 03       		.uleb128 0x3
- 1093 0103 5D020000 		.4byte	.LASF22
- 1094 0107 01       		.byte	0x1
- 1095 0108 99       		.byte	0x99
- 1096 0109 E1000000 		.4byte	0xe1
- 1097 010d 0A       		.uleb128 0xa
- 1098 010e FC000000 		.4byte	.LASF23
- 1099 0112 01       		.byte	0x1
- 1100 0113 4A       		.byte	0x4a
- 1101 0114 00000000 		.4byte	.LFB2
- 1102 0118 1E000000 		.4byte	.LFE2-.LFB2
- 1103 011c 01       		.uleb128 0x1
- 1104 011d 9C       		.byte	0x9c
- 1105 011e 3B010000 		.4byte	0x13b
- 1106 0122 0B       		.uleb128 0xb
- 1107 0123 7300     		.ascii	"s\000"
- 1108 0125 01       		.byte	0x1
- 1109 0126 4A       		.byte	0x4a
- 1110 0127 84000000 		.4byte	0x84
- 1111 012b 02       		.uleb128 0x2
- 1112 012c 91       		.byte	0x91
- 1113 012d 74       		.sleb128 -12
- 1114 012e 0B       		.uleb128 0xb
- 1115 012f 6E00     		.ascii	"n\000"
- 1116 0131 01       		.byte	0x1
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 30
+ 1056 009a D3010000 		.4byte	.LASF14
+ 1057 009e 03       		.byte	0x3
+ 1058 009f E701     		.2byte	0x1e7
+ 1059 00a1 61000000 		.4byte	0x61
+ 1060 00a5 06       		.uleb128 0x6
+ 1061 00a6 E5010000 		.4byte	.LASF15
+ 1062 00aa 03       		.byte	0x3
+ 1063 00ab E801     		.2byte	0x1e8
+ 1064 00ad 6F000000 		.4byte	0x6f
+ 1065 00b1 04       		.uleb128 0x4
+ 1066 00b2 04       		.byte	0x4
+ 1067 00b3 04       		.byte	0x4
+ 1068 00b4 59000000 		.4byte	.LASF16
+ 1069 00b8 04       		.uleb128 0x4
+ 1070 00b9 08       		.byte	0x8
+ 1071 00ba 04       		.byte	0x4
+ 1072 00bb A2010000 		.4byte	.LASF17
+ 1073 00bf 06       		.uleb128 0x6
+ 1074 00c0 79000000 		.4byte	.LASF18
+ 1075 00c4 03       		.byte	0x3
+ 1076 00c5 9002     		.2byte	0x290
+ 1077 00c7 CB000000 		.4byte	0xcb
+ 1078 00cb 07       		.uleb128 0x7
+ 1079 00cc 8D000000 		.4byte	0x8d
+ 1080 00d0 06       		.uleb128 0x6
+ 1081 00d1 00000000 		.4byte	.LASF19
+ 1082 00d5 03       		.byte	0x3
+ 1083 00d6 9202     		.2byte	0x292
+ 1084 00d8 DC000000 		.4byte	0xdc
+ 1085 00dc 07       		.uleb128 0x7
+ 1086 00dd A5000000 		.4byte	0xa5
+ 1087 00e1 08       		.uleb128 0x8
+ 1088 00e2 02       		.byte	0x2
+ 1089 00e3 01       		.byte	0x1
+ 1090 00e4 95       		.byte	0x95
+ 1091 00e5 02010000 		.4byte	0x102
+ 1092 00e9 09       		.uleb128 0x9
+ 1093 00ea 70020000 		.4byte	.LASF20
+ 1094 00ee 01       		.byte	0x1
+ 1095 00ef 97       		.byte	0x97
+ 1096 00f0 8D000000 		.4byte	0x8d
+ 1097 00f4 00       		.byte	0
+ 1098 00f5 09       		.uleb128 0x9
+ 1099 00f6 1E000000 		.4byte	.LASF21
+ 1100 00fa 01       		.byte	0x1
+ 1101 00fb 98       		.byte	0x98
+ 1102 00fc 8D000000 		.4byte	0x8d
+ 1103 0100 01       		.byte	0x1
+ 1104 0101 00       		.byte	0
+ 1105 0102 03       		.uleb128 0x3
+ 1106 0103 5D020000 		.4byte	.LASF22
+ 1107 0107 01       		.byte	0x1
+ 1108 0108 99       		.byte	0x99
+ 1109 0109 E1000000 		.4byte	0xe1
+ 1110 010d 0A       		.uleb128 0xa
+ 1111 010e FC000000 		.4byte	.LASF23
+ 1112 0112 01       		.byte	0x1
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 30
 
 
- 1117 0132 4A       		.byte	0x4a
- 1118 0133 2C000000 		.4byte	0x2c
- 1119 0137 02       		.uleb128 0x2
- 1120 0138 91       		.byte	0x91
- 1121 0139 70       		.sleb128 -16
- 1122 013a 00       		.byte	0
- 1123 013b 0A       		.uleb128 0xa
- 1124 013c DE020000 		.4byte	.LASF24
- 1125 0140 01       		.byte	0x1
- 1126 0141 51       		.byte	0x51
- 1127 0142 00000000 		.4byte	.LFB3
- 1128 0146 20000000 		.4byte	.LFE3-.LFB3
- 1129 014a 01       		.uleb128 0x1
- 1130 014b 9C       		.byte	0x9c
- 1131 014c 79010000 		.4byte	0x179
- 1132 0150 0C       		.uleb128 0xc
- 1133 0151 5F000000 		.4byte	.LASF25
- 1134 0155 01       		.byte	0x1
- 1135 0156 51       		.byte	0x51
- 1136 0157 84000000 		.4byte	0x84
- 1137 015b 02       		.uleb128 0x2
- 1138 015c 91       		.byte	0x91
- 1139 015d 74       		.sleb128 -12
- 1140 015e 0B       		.uleb128 0xb
- 1141 015f 73726300 		.ascii	"src\000"
- 1142 0163 01       		.byte	0x1
- 1143 0164 51       		.byte	0x51
- 1144 0165 79010000 		.4byte	0x179
- 1145 0169 02       		.uleb128 0x2
- 1146 016a 91       		.byte	0x91
- 1147 016b 70       		.sleb128 -16
- 1148 016c 0B       		.uleb128 0xb
- 1149 016d 6E00     		.ascii	"n\000"
- 1150 016f 01       		.byte	0x1
- 1151 0170 51       		.byte	0x51
- 1152 0171 2C000000 		.4byte	0x2c
- 1153 0175 02       		.uleb128 0x2
- 1154 0176 91       		.byte	0x91
- 1155 0177 6C       		.sleb128 -20
- 1156 0178 00       		.byte	0
- 1157 0179 0D       		.uleb128 0xd
- 1158 017a 04       		.byte	0x4
- 1159 017b 7F010000 		.4byte	0x17f
- 1160 017f 0E       		.uleb128 0xe
- 1161 0180 0A       		.uleb128 0xa
- 1162 0181 CE020000 		.4byte	.LASF26
- 1163 0185 01       		.byte	0x1
- 1164 0186 58       		.byte	0x58
- 1165 0187 00000000 		.4byte	.LFB4
- 1166 018b 20000000 		.4byte	.LFE4-.LFB4
- 1167 018f 01       		.uleb128 0x1
- 1168 0190 9C       		.byte	0x9c
- 1169 0191 BE010000 		.4byte	0x1be
- 1170 0195 0C       		.uleb128 0xc
- 1171 0196 5F000000 		.4byte	.LASF25
- 1172 019a 01       		.byte	0x1
- 1173 019b 58       		.byte	0x58
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 31
+ 1113 0113 4A       		.byte	0x4a
+ 1114 0114 00000000 		.4byte	.LFB2
+ 1115 0118 1E000000 		.4byte	.LFE2-.LFB2
+ 1116 011c 01       		.uleb128 0x1
+ 1117 011d 9C       		.byte	0x9c
+ 1118 011e 3B010000 		.4byte	0x13b
+ 1119 0122 0B       		.uleb128 0xb
+ 1120 0123 7300     		.ascii	"s\000"
+ 1121 0125 01       		.byte	0x1
+ 1122 0126 4A       		.byte	0x4a
+ 1123 0127 84000000 		.4byte	0x84
+ 1124 012b 02       		.uleb128 0x2
+ 1125 012c 91       		.byte	0x91
+ 1126 012d 74       		.sleb128 -12
+ 1127 012e 0B       		.uleb128 0xb
+ 1128 012f 6E00     		.ascii	"n\000"
+ 1129 0131 01       		.byte	0x1
+ 1130 0132 4A       		.byte	0x4a
+ 1131 0133 2C000000 		.4byte	0x2c
+ 1132 0137 02       		.uleb128 0x2
+ 1133 0138 91       		.byte	0x91
+ 1134 0139 70       		.sleb128 -16
+ 1135 013a 00       		.byte	0
+ 1136 013b 0A       		.uleb128 0xa
+ 1137 013c DE020000 		.4byte	.LASF24
+ 1138 0140 01       		.byte	0x1
+ 1139 0141 51       		.byte	0x51
+ 1140 0142 00000000 		.4byte	.LFB3
+ 1141 0146 20000000 		.4byte	.LFE3-.LFB3
+ 1142 014a 01       		.uleb128 0x1
+ 1143 014b 9C       		.byte	0x9c
+ 1144 014c 79010000 		.4byte	0x179
+ 1145 0150 0C       		.uleb128 0xc
+ 1146 0151 5F000000 		.4byte	.LASF25
+ 1147 0155 01       		.byte	0x1
+ 1148 0156 51       		.byte	0x51
+ 1149 0157 84000000 		.4byte	0x84
+ 1150 015b 02       		.uleb128 0x2
+ 1151 015c 91       		.byte	0x91
+ 1152 015d 74       		.sleb128 -12
+ 1153 015e 0B       		.uleb128 0xb
+ 1154 015f 73726300 		.ascii	"src\000"
+ 1155 0163 01       		.byte	0x1
+ 1156 0164 51       		.byte	0x51
+ 1157 0165 79010000 		.4byte	0x179
+ 1158 0169 02       		.uleb128 0x2
+ 1159 016a 91       		.byte	0x91
+ 1160 016b 70       		.sleb128 -16
+ 1161 016c 0B       		.uleb128 0xb
+ 1162 016d 6E00     		.ascii	"n\000"
+ 1163 016f 01       		.byte	0x1
+ 1164 0170 51       		.byte	0x51
+ 1165 0171 2C000000 		.4byte	0x2c
+ 1166 0175 02       		.uleb128 0x2
+ 1167 0176 91       		.byte	0x91
+ 1168 0177 6C       		.sleb128 -20
+ 1169 0178 00       		.byte	0
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 31
 
 
- 1174 019c 84000000 		.4byte	0x84
- 1175 01a0 02       		.uleb128 0x2
- 1176 01a1 91       		.byte	0x91
- 1177 01a2 74       		.sleb128 -12
- 1178 01a3 0B       		.uleb128 0xb
- 1179 01a4 73726300 		.ascii	"src\000"
- 1180 01a8 01       		.byte	0x1
- 1181 01a9 58       		.byte	0x58
- 1182 01aa 79010000 		.4byte	0x179
- 1183 01ae 02       		.uleb128 0x2
- 1184 01af 91       		.byte	0x91
- 1185 01b0 70       		.sleb128 -16
- 1186 01b1 0B       		.uleb128 0xb
- 1187 01b2 6E00     		.ascii	"n\000"
- 1188 01b4 01       		.byte	0x1
- 1189 01b5 58       		.byte	0x58
- 1190 01b6 2C000000 		.4byte	0x2c
- 1191 01ba 02       		.uleb128 0x2
- 1192 01bb 91       		.byte	0x91
- 1193 01bc 6C       		.sleb128 -20
- 1194 01bd 00       		.byte	0
- 1195 01be 0F       		.uleb128 0xf
- 1196 01bf A9010000 		.4byte	.LASF27
- 1197 01c3 01       		.byte	0x1
- 1198 01c4 AC       		.byte	0xac
- 1199 01c5 00000000 		.4byte	.LFB5
- 1200 01c9 82000000 		.4byte	.LFE5-.LFB5
- 1201 01cd 01       		.uleb128 0x1
- 1202 01ce 9C       		.byte	0x9c
- 1203 01cf 2E020000 		.4byte	0x22e
- 1204 01d3 0C       		.uleb128 0xc
- 1205 01d4 C8010000 		.4byte	.LASF28
- 1206 01d8 01       		.byte	0x1
- 1207 01d9 AC       		.byte	0xac
- 1208 01da 2E020000 		.4byte	0x22e
- 1209 01de 02       		.uleb128 0x2
- 1210 01df 91       		.byte	0x91
- 1211 01e0 64       		.sleb128 -28
- 1212 01e1 0C       		.uleb128 0xc
- 1213 01e2 DA010000 		.4byte	.LASF29
- 1214 01e6 01       		.byte	0x1
- 1215 01e7 AC       		.byte	0xac
- 1216 01e8 39020000 		.4byte	0x239
- 1217 01ec 02       		.uleb128 0x2
- 1218 01ed 91       		.byte	0x91
- 1219 01ee 60       		.sleb128 -32
- 1220 01ef 10       		.uleb128 0x10
- 1221 01f0 6900     		.ascii	"i\000"
- 1222 01f2 01       		.byte	0x1
- 1223 01f3 AF       		.byte	0xaf
- 1224 01f4 A5000000 		.4byte	0xa5
- 1225 01f8 02       		.uleb128 0x2
- 1226 01f9 91       		.byte	0x91
- 1227 01fa 74       		.sleb128 -12
- 1228 01fb 10       		.uleb128 0x10
- 1229 01fc 6A00     		.ascii	"j\000"
- 1230 01fe 01       		.byte	0x1
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 32
+ 1170 0179 0D       		.uleb128 0xd
+ 1171 017a 04       		.byte	0x4
+ 1172 017b 7F010000 		.4byte	0x17f
+ 1173 017f 0E       		.uleb128 0xe
+ 1174 0180 0A       		.uleb128 0xa
+ 1175 0181 CE020000 		.4byte	.LASF26
+ 1176 0185 01       		.byte	0x1
+ 1177 0186 58       		.byte	0x58
+ 1178 0187 00000000 		.4byte	.LFB4
+ 1179 018b 20000000 		.4byte	.LFE4-.LFB4
+ 1180 018f 01       		.uleb128 0x1
+ 1181 0190 9C       		.byte	0x9c
+ 1182 0191 BE010000 		.4byte	0x1be
+ 1183 0195 0C       		.uleb128 0xc
+ 1184 0196 5F000000 		.4byte	.LASF25
+ 1185 019a 01       		.byte	0x1
+ 1186 019b 58       		.byte	0x58
+ 1187 019c 84000000 		.4byte	0x84
+ 1188 01a0 02       		.uleb128 0x2
+ 1189 01a1 91       		.byte	0x91
+ 1190 01a2 74       		.sleb128 -12
+ 1191 01a3 0B       		.uleb128 0xb
+ 1192 01a4 73726300 		.ascii	"src\000"
+ 1193 01a8 01       		.byte	0x1
+ 1194 01a9 58       		.byte	0x58
+ 1195 01aa 79010000 		.4byte	0x179
+ 1196 01ae 02       		.uleb128 0x2
+ 1197 01af 91       		.byte	0x91
+ 1198 01b0 70       		.sleb128 -16
+ 1199 01b1 0B       		.uleb128 0xb
+ 1200 01b2 6E00     		.ascii	"n\000"
+ 1201 01b4 01       		.byte	0x1
+ 1202 01b5 58       		.byte	0x58
+ 1203 01b6 2C000000 		.4byte	0x2c
+ 1204 01ba 02       		.uleb128 0x2
+ 1205 01bb 91       		.byte	0x91
+ 1206 01bc 6C       		.sleb128 -20
+ 1207 01bd 00       		.byte	0
+ 1208 01be 0F       		.uleb128 0xf
+ 1209 01bf A9010000 		.4byte	.LASF27
+ 1210 01c3 01       		.byte	0x1
+ 1211 01c4 AC       		.byte	0xac
+ 1212 01c5 00000000 		.4byte	.LFB5
+ 1213 01c9 82000000 		.4byte	.LFE5-.LFB5
+ 1214 01cd 01       		.uleb128 0x1
+ 1215 01ce 9C       		.byte	0x9c
+ 1216 01cf 2E020000 		.4byte	0x22e
+ 1217 01d3 0C       		.uleb128 0xc
+ 1218 01d4 C8010000 		.4byte	.LASF28
+ 1219 01d8 01       		.byte	0x1
+ 1220 01d9 AC       		.byte	0xac
+ 1221 01da 2E020000 		.4byte	0x22e
+ 1222 01de 02       		.uleb128 0x2
+ 1223 01df 91       		.byte	0x91
+ 1224 01e0 64       		.sleb128 -28
+ 1225 01e1 0C       		.uleb128 0xc
+ 1226 01e2 DA010000 		.4byte	.LASF29
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 32
 
 
- 1231 01ff AF       		.byte	0xaf
- 1232 0200 A5000000 		.4byte	0xa5
- 1233 0204 02       		.uleb128 0x2
- 1234 0205 91       		.byte	0x91
- 1235 0206 70       		.sleb128 -16
- 1236 0207 11       		.uleb128 0x11
- 1237 0208 14000000 		.4byte	.LBB2
- 1238 020c 5A000000 		.4byte	.LBE2-.LBB2
- 1239 0210 12       		.uleb128 0x12
- 1240 0211 25020000 		.4byte	.LASF30
- 1241 0215 01       		.byte	0x1
- 1242 0216 B2       		.byte	0xb2
- 1243 0217 A5000000 		.4byte	0xa5
- 1244 021b 02       		.uleb128 0x2
- 1245 021c 91       		.byte	0x91
- 1246 021d 68       		.sleb128 -24
- 1247 021e 12       		.uleb128 0x12
- 1248 021f 24000000 		.4byte	.LASF31
- 1249 0223 01       		.byte	0x1
- 1250 0224 B3       		.byte	0xb3
- 1251 0225 8D000000 		.4byte	0x8d
- 1252 0229 02       		.uleb128 0x2
- 1253 022a 91       		.byte	0x91
- 1254 022b 6F       		.sleb128 -17
- 1255 022c 00       		.byte	0
- 1256 022d 00       		.byte	0
- 1257 022e 0D       		.uleb128 0xd
- 1258 022f 04       		.byte	0x4
- 1259 0230 34020000 		.4byte	0x234
- 1260 0234 13       		.uleb128 0x13
- 1261 0235 A5000000 		.4byte	0xa5
- 1262 0239 0D       		.uleb128 0xd
- 1263 023a 04       		.byte	0x4
- 1264 023b 3F020000 		.4byte	0x23f
- 1265 023f 13       		.uleb128 0x13
- 1266 0240 02010000 		.4byte	0x102
- 1267 0244 14       		.uleb128 0x14
- 1268 0245 2A000000 		.4byte	.LASF32
- 1269 0249 01       		.byte	0x1
- 1270 024a D1       		.byte	0xd1
- 1271 024b 00000000 		.4byte	.LFB6
- 1272 024f 60010000 		.4byte	.LFE6-.LFB6
- 1273 0253 01       		.uleb128 0x1
- 1274 0254 9C       		.byte	0x9c
- 1275 0255 15       		.uleb128 0x15
- 1276 0256 0D000000 		.4byte	.LASF33
- 1277 025a 01       		.byte	0x1
- 1278 025b 2A01     		.2byte	0x12a
- 1279 025d 00000000 		.4byte	.LFB7
- 1280 0261 28000000 		.4byte	.LFE7-.LFB7
- 1281 0265 01       		.uleb128 0x1
- 1282 0266 9C       		.byte	0x9c
- 1283 0267 16       		.uleb128 0x16
- 1284 0268 BB010000 		.4byte	.LASF43
- 1285 026c 01       		.byte	0x1
- 1286 026d 4501     		.2byte	0x145
- 1287 026f 60010000 		.4byte	.LFB8
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 33
+ 1227 01e6 01       		.byte	0x1
+ 1228 01e7 AC       		.byte	0xac
+ 1229 01e8 39020000 		.4byte	0x239
+ 1230 01ec 02       		.uleb128 0x2
+ 1231 01ed 91       		.byte	0x91
+ 1232 01ee 60       		.sleb128 -32
+ 1233 01ef 10       		.uleb128 0x10
+ 1234 01f0 6900     		.ascii	"i\000"
+ 1235 01f2 01       		.byte	0x1
+ 1236 01f3 AF       		.byte	0xaf
+ 1237 01f4 A5000000 		.4byte	0xa5
+ 1238 01f8 02       		.uleb128 0x2
+ 1239 01f9 91       		.byte	0x91
+ 1240 01fa 74       		.sleb128 -12
+ 1241 01fb 10       		.uleb128 0x10
+ 1242 01fc 6A00     		.ascii	"j\000"
+ 1243 01fe 01       		.byte	0x1
+ 1244 01ff AF       		.byte	0xaf
+ 1245 0200 A5000000 		.4byte	0xa5
+ 1246 0204 02       		.uleb128 0x2
+ 1247 0205 91       		.byte	0x91
+ 1248 0206 70       		.sleb128 -16
+ 1249 0207 11       		.uleb128 0x11
+ 1250 0208 14000000 		.4byte	.LBB2
+ 1251 020c 5A000000 		.4byte	.LBE2-.LBB2
+ 1252 0210 12       		.uleb128 0x12
+ 1253 0211 25020000 		.4byte	.LASF30
+ 1254 0215 01       		.byte	0x1
+ 1255 0216 B2       		.byte	0xb2
+ 1256 0217 A5000000 		.4byte	0xa5
+ 1257 021b 02       		.uleb128 0x2
+ 1258 021c 91       		.byte	0x91
+ 1259 021d 68       		.sleb128 -24
+ 1260 021e 12       		.uleb128 0x12
+ 1261 021f 24000000 		.4byte	.LASF31
+ 1262 0223 01       		.byte	0x1
+ 1263 0224 B3       		.byte	0xb3
+ 1264 0225 8D000000 		.4byte	0x8d
+ 1265 0229 02       		.uleb128 0x2
+ 1266 022a 91       		.byte	0x91
+ 1267 022b 6F       		.sleb128 -17
+ 1268 022c 00       		.byte	0
+ 1269 022d 00       		.byte	0
+ 1270 022e 0D       		.uleb128 0xd
+ 1271 022f 04       		.byte	0x4
+ 1272 0230 34020000 		.4byte	0x234
+ 1273 0234 13       		.uleb128 0x13
+ 1274 0235 A5000000 		.4byte	0xa5
+ 1275 0239 0D       		.uleb128 0xd
+ 1276 023a 04       		.byte	0x4
+ 1277 023b 3F020000 		.4byte	0x23f
+ 1278 023f 13       		.uleb128 0x13
+ 1279 0240 02010000 		.4byte	0x102
+ 1280 0244 14       		.uleb128 0x14
+ 1281 0245 2A000000 		.4byte	.LASF32
+ 1282 0249 01       		.byte	0x1
+ 1283 024a D1       		.byte	0xd1
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 33
 
 
- 1288 0273 90010000 		.4byte	.LFE8-.LFB8
- 1289 0277 01       		.uleb128 0x1
- 1290 0278 9C       		.byte	0x9c
- 1291 0279 33030000 		.4byte	0x333
- 1292 027d 11       		.uleb128 0x11
- 1293 027e 6E010000 		.4byte	.LBB3
- 1294 0282 D8000000 		.4byte	.LBE3-.LBB3
- 1295 0286 17       		.uleb128 0x17
- 1296 0287 35000000 		.4byte	.LASF34
- 1297 028b 01       		.byte	0x1
- 1298 028c 4D01     		.2byte	0x14d
- 1299 028e 43030000 		.4byte	0x343
- 1300 0292 05       		.uleb128 0x5
- 1301 0293 03       		.byte	0x3
- 1302 0294 0C000000 		.4byte	cy_cfg_addr_table.4910
- 1303 0298 17       		.uleb128 0x17
- 1304 0299 47000000 		.4byte	.LASF35
- 1305 029d 01       		.byte	0x1
- 1306 029e 5501     		.2byte	0x155
- 1307 02a0 58030000 		.4byte	0x358
- 1308 02a4 05       		.uleb128 0x5
- 1309 02a5 03       		.byte	0x3
- 1310 02a6 20000000 		.4byte	cy_cfg_data_table.4911
- 1311 02aa 18       		.uleb128 0x18
- 1312 02ab 06       		.byte	0x6
- 1313 02ac 01       		.byte	0x1
- 1314 02ad CD01     		.2byte	0x1cd
- 1315 02af CE020000 		.4byte	0x2ce
- 1316 02b3 19       		.uleb128 0x19
- 1317 02b4 F9010000 		.4byte	.LASF36
- 1318 02b8 01       		.byte	0x1
- 1319 02b9 CE01     		.2byte	0x1ce
- 1320 02bb 84000000 		.4byte	0x84
- 1321 02bf 00       		.byte	0
- 1322 02c0 19       		.uleb128 0x19
- 1323 02c1 74000000 		.4byte	.LASF37
- 1324 02c5 01       		.byte	0x1
- 1325 02c6 CF01     		.2byte	0x1cf
- 1326 02c8 99000000 		.4byte	0x99
- 1327 02cc 04       		.byte	0x4
- 1328 02cd 00       		.byte	0
- 1329 02ce 06       		.uleb128 0x6
- 1330 02cf 18020000 		.4byte	.LASF38
- 1331 02d3 01       		.byte	0x1
- 1332 02d4 D001     		.2byte	0x1d0
- 1333 02d6 AA020000 		.4byte	0x2aa
- 1334 02da 1A       		.uleb128 0x1a
- 1335 02db EA020000 		.4byte	0x2ea
- 1336 02df EA020000 		.4byte	0x2ea
- 1337 02e3 1B       		.uleb128 0x1b
- 1338 02e4 7D000000 		.4byte	0x7d
- 1339 02e8 01       		.byte	0x1
- 1340 02e9 00       		.byte	0
- 1341 02ea 13       		.uleb128 0x13
- 1342 02eb CE020000 		.4byte	0x2ce
- 1343 02ef 17       		.uleb128 0x17
- 1344 02f0 64000000 		.4byte	.LASF39
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 34
+ 1284 024b 00000000 		.4byte	.LFB6
+ 1285 024f 7C010000 		.4byte	.LFE6-.LFB6
+ 1286 0253 01       		.uleb128 0x1
+ 1287 0254 9C       		.byte	0x9c
+ 1288 0255 15       		.uleb128 0x15
+ 1289 0256 0D000000 		.4byte	.LASF33
+ 1290 025a 01       		.byte	0x1
+ 1291 025b 2F01     		.2byte	0x12f
+ 1292 025d 00000000 		.4byte	.LFB7
+ 1293 0261 28000000 		.4byte	.LFE7-.LFB7
+ 1294 0265 01       		.uleb128 0x1
+ 1295 0266 9C       		.byte	0x9c
+ 1296 0267 16       		.uleb128 0x16
+ 1297 0268 BB010000 		.4byte	.LASF43
+ 1298 026c 01       		.byte	0x1
+ 1299 026d 4A01     		.2byte	0x14a
+ 1300 026f 7C010000 		.4byte	.LFB8
+ 1301 0273 90010000 		.4byte	.LFE8-.LFB8
+ 1302 0277 01       		.uleb128 0x1
+ 1303 0278 9C       		.byte	0x9c
+ 1304 0279 33030000 		.4byte	0x333
+ 1305 027d 11       		.uleb128 0x11
+ 1306 027e 8A010000 		.4byte	.LBB3
+ 1307 0282 D8000000 		.4byte	.LBE3-.LBB3
+ 1308 0286 17       		.uleb128 0x17
+ 1309 0287 35000000 		.4byte	.LASF34
+ 1310 028b 01       		.byte	0x1
+ 1311 028c 5201     		.2byte	0x152
+ 1312 028e 43030000 		.4byte	0x343
+ 1313 0292 05       		.uleb128 0x5
+ 1314 0293 03       		.byte	0x3
+ 1315 0294 0C000000 		.4byte	cy_cfg_addr_table.4910
+ 1316 0298 17       		.uleb128 0x17
+ 1317 0299 47000000 		.4byte	.LASF35
+ 1318 029d 01       		.byte	0x1
+ 1319 029e 5A01     		.2byte	0x15a
+ 1320 02a0 58030000 		.4byte	0x358
+ 1321 02a4 05       		.uleb128 0x5
+ 1322 02a5 03       		.byte	0x3
+ 1323 02a6 20000000 		.4byte	cy_cfg_data_table.4911
+ 1324 02aa 18       		.uleb128 0x18
+ 1325 02ab 06       		.byte	0x6
+ 1326 02ac 01       		.byte	0x1
+ 1327 02ad D101     		.2byte	0x1d1
+ 1328 02af CE020000 		.4byte	0x2ce
+ 1329 02b3 19       		.uleb128 0x19
+ 1330 02b4 F9010000 		.4byte	.LASF36
+ 1331 02b8 01       		.byte	0x1
+ 1332 02b9 D201     		.2byte	0x1d2
+ 1333 02bb 84000000 		.4byte	0x84
+ 1334 02bf 00       		.byte	0
+ 1335 02c0 19       		.uleb128 0x19
+ 1336 02c1 74000000 		.4byte	.LASF37
+ 1337 02c5 01       		.byte	0x1
+ 1338 02c6 D301     		.2byte	0x1d3
+ 1339 02c8 99000000 		.4byte	0x99
+ 1340 02cc 04       		.byte	0x4
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 34
 
 
- 1345 02f4 01       		.byte	0x1
- 1346 02f5 D201     		.2byte	0x1d2
- 1347 02f7 01030000 		.4byte	0x301
- 1348 02fb 05       		.uleb128 0x5
- 1349 02fc 03       		.byte	0x3
- 1350 02fd 00000000 		.4byte	cfg_memset_list.4916
- 1351 0301 13       		.uleb128 0x13
- 1352 0302 DA020000 		.4byte	0x2da
- 1353 0306 1C       		.uleb128 0x1c
- 1354 0307 6900     		.ascii	"i\000"
- 1355 0309 01       		.byte	0x1
- 1356 030a D801     		.2byte	0x1d8
- 1357 030c 8D000000 		.4byte	0x8d
- 1358 0310 02       		.uleb128 0x2
- 1359 0311 91       		.byte	0x91
- 1360 0312 77       		.sleb128 -9
- 1361 0313 11       		.uleb128 0x11
- 1362 0314 76010000 		.4byte	.LBB4
- 1363 0318 3C000000 		.4byte	.LBE4-.LBB4
- 1364 031c 1C       		.uleb128 0x1c
- 1365 031d 6D7300   		.ascii	"ms\000"
- 1366 0320 01       		.byte	0x1
- 1367 0321 DD01     		.2byte	0x1dd
- 1368 0323 2A030000 		.4byte	0x32a
- 1369 0327 02       		.uleb128 0x2
- 1370 0328 91       		.byte	0x91
- 1371 0329 70       		.sleb128 -16
- 1372 032a 0D       		.uleb128 0xd
- 1373 032b 04       		.byte	0x4
- 1374 032c EA020000 		.4byte	0x2ea
- 1375 0330 00       		.byte	0
- 1376 0331 00       		.byte	0
- 1377 0332 00       		.byte	0
- 1378 0333 1A       		.uleb128 0x1a
- 1379 0334 34020000 		.4byte	0x234
- 1380 0338 43030000 		.4byte	0x343
- 1381 033c 1B       		.uleb128 0x1b
- 1382 033d 7D000000 		.4byte	0x7d
- 1383 0341 04       		.byte	0x4
- 1384 0342 00       		.byte	0
- 1385 0343 13       		.uleb128 0x13
- 1386 0344 33030000 		.4byte	0x333
- 1387 0348 1A       		.uleb128 0x1a
- 1388 0349 3F020000 		.4byte	0x23f
- 1389 034d 58030000 		.4byte	0x358
- 1390 0351 1B       		.uleb128 0x1b
- 1391 0352 7D000000 		.4byte	0x7d
- 1392 0356 72       		.byte	0x72
- 1393 0357 00       		.byte	0
- 1394 0358 13       		.uleb128 0x13
- 1395 0359 48030000 		.4byte	0x348
- 1396 035d 00       		.byte	0
- 1397              		.section	.debug_abbrev,"",%progbits
- 1398              	.Ldebug_abbrev0:
- 1399 0000 01       		.uleb128 0x1
- 1400 0001 11       		.uleb128 0x11
- 1401 0002 01       		.byte	0x1
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 35
+ 1341 02cd 00       		.byte	0
+ 1342 02ce 06       		.uleb128 0x6
+ 1343 02cf 18020000 		.4byte	.LASF38
+ 1344 02d3 01       		.byte	0x1
+ 1345 02d4 D401     		.2byte	0x1d4
+ 1346 02d6 AA020000 		.4byte	0x2aa
+ 1347 02da 1A       		.uleb128 0x1a
+ 1348 02db EA020000 		.4byte	0x2ea
+ 1349 02df EA020000 		.4byte	0x2ea
+ 1350 02e3 1B       		.uleb128 0x1b
+ 1351 02e4 7D000000 		.4byte	0x7d
+ 1352 02e8 01       		.byte	0x1
+ 1353 02e9 00       		.byte	0
+ 1354 02ea 13       		.uleb128 0x13
+ 1355 02eb CE020000 		.4byte	0x2ce
+ 1356 02ef 17       		.uleb128 0x17
+ 1357 02f0 64000000 		.4byte	.LASF39
+ 1358 02f4 01       		.byte	0x1
+ 1359 02f5 D601     		.2byte	0x1d6
+ 1360 02f7 01030000 		.4byte	0x301
+ 1361 02fb 05       		.uleb128 0x5
+ 1362 02fc 03       		.byte	0x3
+ 1363 02fd 00000000 		.4byte	cfg_memset_list.4916
+ 1364 0301 13       		.uleb128 0x13
+ 1365 0302 DA020000 		.4byte	0x2da
+ 1366 0306 1C       		.uleb128 0x1c
+ 1367 0307 6900     		.ascii	"i\000"
+ 1368 0309 01       		.byte	0x1
+ 1369 030a DC01     		.2byte	0x1dc
+ 1370 030c 8D000000 		.4byte	0x8d
+ 1371 0310 02       		.uleb128 0x2
+ 1372 0311 91       		.byte	0x91
+ 1373 0312 77       		.sleb128 -9
+ 1374 0313 11       		.uleb128 0x11
+ 1375 0314 92010000 		.4byte	.LBB4
+ 1376 0318 3C000000 		.4byte	.LBE4-.LBB4
+ 1377 031c 1C       		.uleb128 0x1c
+ 1378 031d 6D7300   		.ascii	"ms\000"
+ 1379 0320 01       		.byte	0x1
+ 1380 0321 E101     		.2byte	0x1e1
+ 1381 0323 2A030000 		.4byte	0x32a
+ 1382 0327 02       		.uleb128 0x2
+ 1383 0328 91       		.byte	0x91
+ 1384 0329 70       		.sleb128 -16
+ 1385 032a 0D       		.uleb128 0xd
+ 1386 032b 04       		.byte	0x4
+ 1387 032c EA020000 		.4byte	0x2ea
+ 1388 0330 00       		.byte	0
+ 1389 0331 00       		.byte	0
+ 1390 0332 00       		.byte	0
+ 1391 0333 1A       		.uleb128 0x1a
+ 1392 0334 34020000 		.4byte	0x234
+ 1393 0338 43030000 		.4byte	0x343
+ 1394 033c 1B       		.uleb128 0x1b
+ 1395 033d 7D000000 		.4byte	0x7d
+ 1396 0341 04       		.byte	0x4
+ 1397 0342 00       		.byte	0
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 35
 
 
- 1402 0003 25       		.uleb128 0x25
- 1403 0004 0E       		.uleb128 0xe
- 1404 0005 13       		.uleb128 0x13
- 1405 0006 0B       		.uleb128 0xb
- 1406 0007 03       		.uleb128 0x3
- 1407 0008 0E       		.uleb128 0xe
- 1408 0009 1B       		.uleb128 0x1b
- 1409 000a 0E       		.uleb128 0xe
- 1410 000b 55       		.uleb128 0x55
- 1411 000c 17       		.uleb128 0x17
- 1412 000d 11       		.uleb128 0x11
- 1413 000e 01       		.uleb128 0x1
- 1414 000f 10       		.uleb128 0x10
- 1415 0010 17       		.uleb128 0x17
- 1416 0011 00       		.byte	0
- 1417 0012 00       		.byte	0
- 1418 0013 02       		.uleb128 0x2
- 1419 0014 24       		.uleb128 0x24
- 1420 0015 00       		.byte	0
- 1421 0016 0B       		.uleb128 0xb
- 1422 0017 0B       		.uleb128 0xb
- 1423 0018 3E       		.uleb128 0x3e
- 1424 0019 0B       		.uleb128 0xb
- 1425 001a 03       		.uleb128 0x3
- 1426 001b 08       		.uleb128 0x8
- 1427 001c 00       		.byte	0
- 1428 001d 00       		.byte	0
- 1429 001e 03       		.uleb128 0x3
- 1430 001f 16       		.uleb128 0x16
- 1431 0020 00       		.byte	0
- 1432 0021 03       		.uleb128 0x3
- 1433 0022 0E       		.uleb128 0xe
- 1434 0023 3A       		.uleb128 0x3a
- 1435 0024 0B       		.uleb128 0xb
- 1436 0025 3B       		.uleb128 0x3b
- 1437 0026 0B       		.uleb128 0xb
- 1438 0027 49       		.uleb128 0x49
- 1439 0028 13       		.uleb128 0x13
- 1440 0029 00       		.byte	0
- 1441 002a 00       		.byte	0
- 1442 002b 04       		.uleb128 0x4
- 1443 002c 24       		.uleb128 0x24
- 1444 002d 00       		.byte	0
- 1445 002e 0B       		.uleb128 0xb
- 1446 002f 0B       		.uleb128 0xb
- 1447 0030 3E       		.uleb128 0x3e
- 1448 0031 0B       		.uleb128 0xb
- 1449 0032 03       		.uleb128 0x3
- 1450 0033 0E       		.uleb128 0xe
- 1451 0034 00       		.byte	0
- 1452 0035 00       		.byte	0
- 1453 0036 05       		.uleb128 0x5
- 1454 0037 0F       		.uleb128 0xf
- 1455 0038 00       		.byte	0
- 1456 0039 0B       		.uleb128 0xb
- 1457 003a 0B       		.uleb128 0xb
- 1458 003b 00       		.byte	0
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 36
+ 1398 0343 13       		.uleb128 0x13
+ 1399 0344 33030000 		.4byte	0x333
+ 1400 0348 1A       		.uleb128 0x1a
+ 1401 0349 3F020000 		.4byte	0x23f
+ 1402 034d 58030000 		.4byte	0x358
+ 1403 0351 1B       		.uleb128 0x1b
+ 1404 0352 7D000000 		.4byte	0x7d
+ 1405 0356 71       		.byte	0x71
+ 1406 0357 00       		.byte	0
+ 1407 0358 13       		.uleb128 0x13
+ 1408 0359 48030000 		.4byte	0x348
+ 1409 035d 00       		.byte	0
+ 1410              		.section	.debug_abbrev,"",%progbits
+ 1411              	.Ldebug_abbrev0:
+ 1412 0000 01       		.uleb128 0x1
+ 1413 0001 11       		.uleb128 0x11
+ 1414 0002 01       		.byte	0x1
+ 1415 0003 25       		.uleb128 0x25
+ 1416 0004 0E       		.uleb128 0xe
+ 1417 0005 13       		.uleb128 0x13
+ 1418 0006 0B       		.uleb128 0xb
+ 1419 0007 03       		.uleb128 0x3
+ 1420 0008 0E       		.uleb128 0xe
+ 1421 0009 1B       		.uleb128 0x1b
+ 1422 000a 0E       		.uleb128 0xe
+ 1423 000b 55       		.uleb128 0x55
+ 1424 000c 17       		.uleb128 0x17
+ 1425 000d 11       		.uleb128 0x11
+ 1426 000e 01       		.uleb128 0x1
+ 1427 000f 10       		.uleb128 0x10
+ 1428 0010 17       		.uleb128 0x17
+ 1429 0011 00       		.byte	0
+ 1430 0012 00       		.byte	0
+ 1431 0013 02       		.uleb128 0x2
+ 1432 0014 24       		.uleb128 0x24
+ 1433 0015 00       		.byte	0
+ 1434 0016 0B       		.uleb128 0xb
+ 1435 0017 0B       		.uleb128 0xb
+ 1436 0018 3E       		.uleb128 0x3e
+ 1437 0019 0B       		.uleb128 0xb
+ 1438 001a 03       		.uleb128 0x3
+ 1439 001b 08       		.uleb128 0x8
+ 1440 001c 00       		.byte	0
+ 1441 001d 00       		.byte	0
+ 1442 001e 03       		.uleb128 0x3
+ 1443 001f 16       		.uleb128 0x16
+ 1444 0020 00       		.byte	0
+ 1445 0021 03       		.uleb128 0x3
+ 1446 0022 0E       		.uleb128 0xe
+ 1447 0023 3A       		.uleb128 0x3a
+ 1448 0024 0B       		.uleb128 0xb
+ 1449 0025 3B       		.uleb128 0x3b
+ 1450 0026 0B       		.uleb128 0xb
+ 1451 0027 49       		.uleb128 0x49
+ 1452 0028 13       		.uleb128 0x13
+ 1453 0029 00       		.byte	0
+ 1454 002a 00       		.byte	0
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 36
 
 
- 1459 003c 00       		.byte	0
- 1460 003d 06       		.uleb128 0x6
- 1461 003e 16       		.uleb128 0x16
- 1462 003f 00       		.byte	0
- 1463 0040 03       		.uleb128 0x3
- 1464 0041 0E       		.uleb128 0xe
- 1465 0042 3A       		.uleb128 0x3a
- 1466 0043 0B       		.uleb128 0xb
- 1467 0044 3B       		.uleb128 0x3b
- 1468 0045 05       		.uleb128 0x5
- 1469 0046 49       		.uleb128 0x49
- 1470 0047 13       		.uleb128 0x13
- 1471 0048 00       		.byte	0
- 1472 0049 00       		.byte	0
- 1473 004a 07       		.uleb128 0x7
- 1474 004b 35       		.uleb128 0x35
- 1475 004c 00       		.byte	0
- 1476 004d 49       		.uleb128 0x49
- 1477 004e 13       		.uleb128 0x13
- 1478 004f 00       		.byte	0
- 1479 0050 00       		.byte	0
- 1480 0051 08       		.uleb128 0x8
- 1481 0052 13       		.uleb128 0x13
- 1482 0053 01       		.byte	0x1
- 1483 0054 0B       		.uleb128 0xb
- 1484 0055 0B       		.uleb128 0xb
- 1485 0056 3A       		.uleb128 0x3a
- 1486 0057 0B       		.uleb128 0xb
- 1487 0058 3B       		.uleb128 0x3b
- 1488 0059 0B       		.uleb128 0xb
- 1489 005a 01       		.uleb128 0x1
- 1490 005b 13       		.uleb128 0x13
- 1491 005c 00       		.byte	0
- 1492 005d 00       		.byte	0
- 1493 005e 09       		.uleb128 0x9
- 1494 005f 0D       		.uleb128 0xd
- 1495 0060 00       		.byte	0
- 1496 0061 03       		.uleb128 0x3
- 1497 0062 0E       		.uleb128 0xe
- 1498 0063 3A       		.uleb128 0x3a
- 1499 0064 0B       		.uleb128 0xb
- 1500 0065 3B       		.uleb128 0x3b
- 1501 0066 0B       		.uleb128 0xb
- 1502 0067 49       		.uleb128 0x49
- 1503 0068 13       		.uleb128 0x13
- 1504 0069 38       		.uleb128 0x38
- 1505 006a 0B       		.uleb128 0xb
- 1506 006b 00       		.byte	0
- 1507 006c 00       		.byte	0
- 1508 006d 0A       		.uleb128 0xa
- 1509 006e 2E       		.uleb128 0x2e
- 1510 006f 01       		.byte	0x1
- 1511 0070 03       		.uleb128 0x3
- 1512 0071 0E       		.uleb128 0xe
- 1513 0072 3A       		.uleb128 0x3a
- 1514 0073 0B       		.uleb128 0xb
- 1515 0074 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 37
+ 1455 002b 04       		.uleb128 0x4
+ 1456 002c 24       		.uleb128 0x24
+ 1457 002d 00       		.byte	0
+ 1458 002e 0B       		.uleb128 0xb
+ 1459 002f 0B       		.uleb128 0xb
+ 1460 0030 3E       		.uleb128 0x3e
+ 1461 0031 0B       		.uleb128 0xb
+ 1462 0032 03       		.uleb128 0x3
+ 1463 0033 0E       		.uleb128 0xe
+ 1464 0034 00       		.byte	0
+ 1465 0035 00       		.byte	0
+ 1466 0036 05       		.uleb128 0x5
+ 1467 0037 0F       		.uleb128 0xf
+ 1468 0038 00       		.byte	0
+ 1469 0039 0B       		.uleb128 0xb
+ 1470 003a 0B       		.uleb128 0xb
+ 1471 003b 00       		.byte	0
+ 1472 003c 00       		.byte	0
+ 1473 003d 06       		.uleb128 0x6
+ 1474 003e 16       		.uleb128 0x16
+ 1475 003f 00       		.byte	0
+ 1476 0040 03       		.uleb128 0x3
+ 1477 0041 0E       		.uleb128 0xe
+ 1478 0042 3A       		.uleb128 0x3a
+ 1479 0043 0B       		.uleb128 0xb
+ 1480 0044 3B       		.uleb128 0x3b
+ 1481 0045 05       		.uleb128 0x5
+ 1482 0046 49       		.uleb128 0x49
+ 1483 0047 13       		.uleb128 0x13
+ 1484 0048 00       		.byte	0
+ 1485 0049 00       		.byte	0
+ 1486 004a 07       		.uleb128 0x7
+ 1487 004b 35       		.uleb128 0x35
+ 1488 004c 00       		.byte	0
+ 1489 004d 49       		.uleb128 0x49
+ 1490 004e 13       		.uleb128 0x13
+ 1491 004f 00       		.byte	0
+ 1492 0050 00       		.byte	0
+ 1493 0051 08       		.uleb128 0x8
+ 1494 0052 13       		.uleb128 0x13
+ 1495 0053 01       		.byte	0x1
+ 1496 0054 0B       		.uleb128 0xb
+ 1497 0055 0B       		.uleb128 0xb
+ 1498 0056 3A       		.uleb128 0x3a
+ 1499 0057 0B       		.uleb128 0xb
+ 1500 0058 3B       		.uleb128 0x3b
+ 1501 0059 0B       		.uleb128 0xb
+ 1502 005a 01       		.uleb128 0x1
+ 1503 005b 13       		.uleb128 0x13
+ 1504 005c 00       		.byte	0
+ 1505 005d 00       		.byte	0
+ 1506 005e 09       		.uleb128 0x9
+ 1507 005f 0D       		.uleb128 0xd
+ 1508 0060 00       		.byte	0
+ 1509 0061 03       		.uleb128 0x3
+ 1510 0062 0E       		.uleb128 0xe
+ 1511 0063 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 37
 
 
- 1516 0075 0B       		.uleb128 0xb
- 1517 0076 27       		.uleb128 0x27
- 1518 0077 19       		.uleb128 0x19
- 1519 0078 11       		.uleb128 0x11
- 1520 0079 01       		.uleb128 0x1
- 1521 007a 12       		.uleb128 0x12
- 1522 007b 06       		.uleb128 0x6
- 1523 007c 40       		.uleb128 0x40
- 1524 007d 18       		.uleb128 0x18
- 1525 007e 9642     		.uleb128 0x2116
- 1526 0080 19       		.uleb128 0x19
- 1527 0081 01       		.uleb128 0x1
- 1528 0082 13       		.uleb128 0x13
- 1529 0083 00       		.byte	0
- 1530 0084 00       		.byte	0
- 1531 0085 0B       		.uleb128 0xb
- 1532 0086 05       		.uleb128 0x5
- 1533 0087 00       		.byte	0
- 1534 0088 03       		.uleb128 0x3
- 1535 0089 08       		.uleb128 0x8
- 1536 008a 3A       		.uleb128 0x3a
- 1537 008b 0B       		.uleb128 0xb
- 1538 008c 3B       		.uleb128 0x3b
- 1539 008d 0B       		.uleb128 0xb
- 1540 008e 49       		.uleb128 0x49
- 1541 008f 13       		.uleb128 0x13
- 1542 0090 02       		.uleb128 0x2
- 1543 0091 18       		.uleb128 0x18
- 1544 0092 00       		.byte	0
- 1545 0093 00       		.byte	0
- 1546 0094 0C       		.uleb128 0xc
- 1547 0095 05       		.uleb128 0x5
- 1548 0096 00       		.byte	0
- 1549 0097 03       		.uleb128 0x3
- 1550 0098 0E       		.uleb128 0xe
- 1551 0099 3A       		.uleb128 0x3a
- 1552 009a 0B       		.uleb128 0xb
- 1553 009b 3B       		.uleb128 0x3b
- 1554 009c 0B       		.uleb128 0xb
- 1555 009d 49       		.uleb128 0x49
- 1556 009e 13       		.uleb128 0x13
- 1557 009f 02       		.uleb128 0x2
- 1558 00a0 18       		.uleb128 0x18
- 1559 00a1 00       		.byte	0
- 1560 00a2 00       		.byte	0
- 1561 00a3 0D       		.uleb128 0xd
- 1562 00a4 0F       		.uleb128 0xf
- 1563 00a5 00       		.byte	0
- 1564 00a6 0B       		.uleb128 0xb
- 1565 00a7 0B       		.uleb128 0xb
- 1566 00a8 49       		.uleb128 0x49
- 1567 00a9 13       		.uleb128 0x13
- 1568 00aa 00       		.byte	0
- 1569 00ab 00       		.byte	0
- 1570 00ac 0E       		.uleb128 0xe
- 1571 00ad 26       		.uleb128 0x26
- 1572 00ae 00       		.byte	0
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 38
+ 1512 0064 0B       		.uleb128 0xb
+ 1513 0065 3B       		.uleb128 0x3b
+ 1514 0066 0B       		.uleb128 0xb
+ 1515 0067 49       		.uleb128 0x49
+ 1516 0068 13       		.uleb128 0x13
+ 1517 0069 38       		.uleb128 0x38
+ 1518 006a 0B       		.uleb128 0xb
+ 1519 006b 00       		.byte	0
+ 1520 006c 00       		.byte	0
+ 1521 006d 0A       		.uleb128 0xa
+ 1522 006e 2E       		.uleb128 0x2e
+ 1523 006f 01       		.byte	0x1
+ 1524 0070 03       		.uleb128 0x3
+ 1525 0071 0E       		.uleb128 0xe
+ 1526 0072 3A       		.uleb128 0x3a
+ 1527 0073 0B       		.uleb128 0xb
+ 1528 0074 3B       		.uleb128 0x3b
+ 1529 0075 0B       		.uleb128 0xb
+ 1530 0076 27       		.uleb128 0x27
+ 1531 0077 19       		.uleb128 0x19
+ 1532 0078 11       		.uleb128 0x11
+ 1533 0079 01       		.uleb128 0x1
+ 1534 007a 12       		.uleb128 0x12
+ 1535 007b 06       		.uleb128 0x6
+ 1536 007c 40       		.uleb128 0x40
+ 1537 007d 18       		.uleb128 0x18
+ 1538 007e 9642     		.uleb128 0x2116
+ 1539 0080 19       		.uleb128 0x19
+ 1540 0081 01       		.uleb128 0x1
+ 1541 0082 13       		.uleb128 0x13
+ 1542 0083 00       		.byte	0
+ 1543 0084 00       		.byte	0
+ 1544 0085 0B       		.uleb128 0xb
+ 1545 0086 05       		.uleb128 0x5
+ 1546 0087 00       		.byte	0
+ 1547 0088 03       		.uleb128 0x3
+ 1548 0089 08       		.uleb128 0x8
+ 1549 008a 3A       		.uleb128 0x3a
+ 1550 008b 0B       		.uleb128 0xb
+ 1551 008c 3B       		.uleb128 0x3b
+ 1552 008d 0B       		.uleb128 0xb
+ 1553 008e 49       		.uleb128 0x49
+ 1554 008f 13       		.uleb128 0x13
+ 1555 0090 02       		.uleb128 0x2
+ 1556 0091 18       		.uleb128 0x18
+ 1557 0092 00       		.byte	0
+ 1558 0093 00       		.byte	0
+ 1559 0094 0C       		.uleb128 0xc
+ 1560 0095 05       		.uleb128 0x5
+ 1561 0096 00       		.byte	0
+ 1562 0097 03       		.uleb128 0x3
+ 1563 0098 0E       		.uleb128 0xe
+ 1564 0099 3A       		.uleb128 0x3a
+ 1565 009a 0B       		.uleb128 0xb
+ 1566 009b 3B       		.uleb128 0x3b
+ 1567 009c 0B       		.uleb128 0xb
+ 1568 009d 49       		.uleb128 0x49
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 38
 
 
- 1573 00af 00       		.byte	0
- 1574 00b0 00       		.byte	0
- 1575 00b1 0F       		.uleb128 0xf
- 1576 00b2 2E       		.uleb128 0x2e
- 1577 00b3 01       		.byte	0x1
- 1578 00b4 03       		.uleb128 0x3
- 1579 00b5 0E       		.uleb128 0xe
- 1580 00b6 3A       		.uleb128 0x3a
- 1581 00b7 0B       		.uleb128 0xb
- 1582 00b8 3B       		.uleb128 0x3b
- 1583 00b9 0B       		.uleb128 0xb
- 1584 00ba 27       		.uleb128 0x27
- 1585 00bb 19       		.uleb128 0x19
- 1586 00bc 11       		.uleb128 0x11
- 1587 00bd 01       		.uleb128 0x1
- 1588 00be 12       		.uleb128 0x12
- 1589 00bf 06       		.uleb128 0x6
- 1590 00c0 40       		.uleb128 0x40
- 1591 00c1 18       		.uleb128 0x18
- 1592 00c2 9742     		.uleb128 0x2117
- 1593 00c4 19       		.uleb128 0x19
- 1594 00c5 01       		.uleb128 0x1
- 1595 00c6 13       		.uleb128 0x13
- 1596 00c7 00       		.byte	0
- 1597 00c8 00       		.byte	0
- 1598 00c9 10       		.uleb128 0x10
- 1599 00ca 34       		.uleb128 0x34
- 1600 00cb 00       		.byte	0
- 1601 00cc 03       		.uleb128 0x3
- 1602 00cd 08       		.uleb128 0x8
- 1603 00ce 3A       		.uleb128 0x3a
- 1604 00cf 0B       		.uleb128 0xb
- 1605 00d0 3B       		.uleb128 0x3b
- 1606 00d1 0B       		.uleb128 0xb
- 1607 00d2 49       		.uleb128 0x49
- 1608 00d3 13       		.uleb128 0x13
- 1609 00d4 02       		.uleb128 0x2
- 1610 00d5 18       		.uleb128 0x18
- 1611 00d6 00       		.byte	0
- 1612 00d7 00       		.byte	0
- 1613 00d8 11       		.uleb128 0x11
- 1614 00d9 0B       		.uleb128 0xb
- 1615 00da 01       		.byte	0x1
- 1616 00db 11       		.uleb128 0x11
- 1617 00dc 01       		.uleb128 0x1
- 1618 00dd 12       		.uleb128 0x12
- 1619 00de 06       		.uleb128 0x6
- 1620 00df 00       		.byte	0
- 1621 00e0 00       		.byte	0
- 1622 00e1 12       		.uleb128 0x12
- 1623 00e2 34       		.uleb128 0x34
- 1624 00e3 00       		.byte	0
- 1625 00e4 03       		.uleb128 0x3
- 1626 00e5 0E       		.uleb128 0xe
- 1627 00e6 3A       		.uleb128 0x3a
- 1628 00e7 0B       		.uleb128 0xb
- 1629 00e8 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 39
+ 1569 009e 13       		.uleb128 0x13
+ 1570 009f 02       		.uleb128 0x2
+ 1571 00a0 18       		.uleb128 0x18
+ 1572 00a1 00       		.byte	0
+ 1573 00a2 00       		.byte	0
+ 1574 00a3 0D       		.uleb128 0xd
+ 1575 00a4 0F       		.uleb128 0xf
+ 1576 00a5 00       		.byte	0
+ 1577 00a6 0B       		.uleb128 0xb
+ 1578 00a7 0B       		.uleb128 0xb
+ 1579 00a8 49       		.uleb128 0x49
+ 1580 00a9 13       		.uleb128 0x13
+ 1581 00aa 00       		.byte	0
+ 1582 00ab 00       		.byte	0
+ 1583 00ac 0E       		.uleb128 0xe
+ 1584 00ad 26       		.uleb128 0x26
+ 1585 00ae 00       		.byte	0
+ 1586 00af 00       		.byte	0
+ 1587 00b0 00       		.byte	0
+ 1588 00b1 0F       		.uleb128 0xf
+ 1589 00b2 2E       		.uleb128 0x2e
+ 1590 00b3 01       		.byte	0x1
+ 1591 00b4 03       		.uleb128 0x3
+ 1592 00b5 0E       		.uleb128 0xe
+ 1593 00b6 3A       		.uleb128 0x3a
+ 1594 00b7 0B       		.uleb128 0xb
+ 1595 00b8 3B       		.uleb128 0x3b
+ 1596 00b9 0B       		.uleb128 0xb
+ 1597 00ba 27       		.uleb128 0x27
+ 1598 00bb 19       		.uleb128 0x19
+ 1599 00bc 11       		.uleb128 0x11
+ 1600 00bd 01       		.uleb128 0x1
+ 1601 00be 12       		.uleb128 0x12
+ 1602 00bf 06       		.uleb128 0x6
+ 1603 00c0 40       		.uleb128 0x40
+ 1604 00c1 18       		.uleb128 0x18
+ 1605 00c2 9742     		.uleb128 0x2117
+ 1606 00c4 19       		.uleb128 0x19
+ 1607 00c5 01       		.uleb128 0x1
+ 1608 00c6 13       		.uleb128 0x13
+ 1609 00c7 00       		.byte	0
+ 1610 00c8 00       		.byte	0
+ 1611 00c9 10       		.uleb128 0x10
+ 1612 00ca 34       		.uleb128 0x34
+ 1613 00cb 00       		.byte	0
+ 1614 00cc 03       		.uleb128 0x3
+ 1615 00cd 08       		.uleb128 0x8
+ 1616 00ce 3A       		.uleb128 0x3a
+ 1617 00cf 0B       		.uleb128 0xb
+ 1618 00d0 3B       		.uleb128 0x3b
+ 1619 00d1 0B       		.uleb128 0xb
+ 1620 00d2 49       		.uleb128 0x49
+ 1621 00d3 13       		.uleb128 0x13
+ 1622 00d4 02       		.uleb128 0x2
+ 1623 00d5 18       		.uleb128 0x18
+ 1624 00d6 00       		.byte	0
+ 1625 00d7 00       		.byte	0
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 39
 
 
- 1630 00e9 0B       		.uleb128 0xb
- 1631 00ea 49       		.uleb128 0x49
- 1632 00eb 13       		.uleb128 0x13
- 1633 00ec 02       		.uleb128 0x2
- 1634 00ed 18       		.uleb128 0x18
- 1635 00ee 00       		.byte	0
- 1636 00ef 00       		.byte	0
- 1637 00f0 13       		.uleb128 0x13
- 1638 00f1 26       		.uleb128 0x26
- 1639 00f2 00       		.byte	0
- 1640 00f3 49       		.uleb128 0x49
- 1641 00f4 13       		.uleb128 0x13
- 1642 00f5 00       		.byte	0
- 1643 00f6 00       		.byte	0
- 1644 00f7 14       		.uleb128 0x14
- 1645 00f8 2E       		.uleb128 0x2e
- 1646 00f9 00       		.byte	0
- 1647 00fa 03       		.uleb128 0x3
- 1648 00fb 0E       		.uleb128 0xe
- 1649 00fc 3A       		.uleb128 0x3a
- 1650 00fd 0B       		.uleb128 0xb
- 1651 00fe 3B       		.uleb128 0x3b
- 1652 00ff 0B       		.uleb128 0xb
- 1653 0100 27       		.uleb128 0x27
- 1654 0101 19       		.uleb128 0x19
- 1655 0102 11       		.uleb128 0x11
- 1656 0103 01       		.uleb128 0x1
- 1657 0104 12       		.uleb128 0x12
- 1658 0105 06       		.uleb128 0x6
- 1659 0106 40       		.uleb128 0x40
- 1660 0107 18       		.uleb128 0x18
- 1661 0108 9642     		.uleb128 0x2116
- 1662 010a 19       		.uleb128 0x19
- 1663 010b 00       		.byte	0
- 1664 010c 00       		.byte	0
- 1665 010d 15       		.uleb128 0x15
- 1666 010e 2E       		.uleb128 0x2e
- 1667 010f 00       		.byte	0
- 1668 0110 03       		.uleb128 0x3
- 1669 0111 0E       		.uleb128 0xe
- 1670 0112 3A       		.uleb128 0x3a
- 1671 0113 0B       		.uleb128 0xb
- 1672 0114 3B       		.uleb128 0x3b
- 1673 0115 05       		.uleb128 0x5
- 1674 0116 27       		.uleb128 0x27
- 1675 0117 19       		.uleb128 0x19
- 1676 0118 11       		.uleb128 0x11
- 1677 0119 01       		.uleb128 0x1
- 1678 011a 12       		.uleb128 0x12
- 1679 011b 06       		.uleb128 0x6
- 1680 011c 40       		.uleb128 0x40
- 1681 011d 18       		.uleb128 0x18
- 1682 011e 9742     		.uleb128 0x2117
- 1683 0120 19       		.uleb128 0x19
- 1684 0121 00       		.byte	0
- 1685 0122 00       		.byte	0
- 1686 0123 16       		.uleb128 0x16
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 40
+ 1626 00d8 11       		.uleb128 0x11
+ 1627 00d9 0B       		.uleb128 0xb
+ 1628 00da 01       		.byte	0x1
+ 1629 00db 11       		.uleb128 0x11
+ 1630 00dc 01       		.uleb128 0x1
+ 1631 00dd 12       		.uleb128 0x12
+ 1632 00de 06       		.uleb128 0x6
+ 1633 00df 00       		.byte	0
+ 1634 00e0 00       		.byte	0
+ 1635 00e1 12       		.uleb128 0x12
+ 1636 00e2 34       		.uleb128 0x34
+ 1637 00e3 00       		.byte	0
+ 1638 00e4 03       		.uleb128 0x3
+ 1639 00e5 0E       		.uleb128 0xe
+ 1640 00e6 3A       		.uleb128 0x3a
+ 1641 00e7 0B       		.uleb128 0xb
+ 1642 00e8 3B       		.uleb128 0x3b
+ 1643 00e9 0B       		.uleb128 0xb
+ 1644 00ea 49       		.uleb128 0x49
+ 1645 00eb 13       		.uleb128 0x13
+ 1646 00ec 02       		.uleb128 0x2
+ 1647 00ed 18       		.uleb128 0x18
+ 1648 00ee 00       		.byte	0
+ 1649 00ef 00       		.byte	0
+ 1650 00f0 13       		.uleb128 0x13
+ 1651 00f1 26       		.uleb128 0x26
+ 1652 00f2 00       		.byte	0
+ 1653 00f3 49       		.uleb128 0x49
+ 1654 00f4 13       		.uleb128 0x13
+ 1655 00f5 00       		.byte	0
+ 1656 00f6 00       		.byte	0
+ 1657 00f7 14       		.uleb128 0x14
+ 1658 00f8 2E       		.uleb128 0x2e
+ 1659 00f9 00       		.byte	0
+ 1660 00fa 03       		.uleb128 0x3
+ 1661 00fb 0E       		.uleb128 0xe
+ 1662 00fc 3A       		.uleb128 0x3a
+ 1663 00fd 0B       		.uleb128 0xb
+ 1664 00fe 3B       		.uleb128 0x3b
+ 1665 00ff 0B       		.uleb128 0xb
+ 1666 0100 27       		.uleb128 0x27
+ 1667 0101 19       		.uleb128 0x19
+ 1668 0102 11       		.uleb128 0x11
+ 1669 0103 01       		.uleb128 0x1
+ 1670 0104 12       		.uleb128 0x12
+ 1671 0105 06       		.uleb128 0x6
+ 1672 0106 40       		.uleb128 0x40
+ 1673 0107 18       		.uleb128 0x18
+ 1674 0108 9642     		.uleb128 0x2116
+ 1675 010a 19       		.uleb128 0x19
+ 1676 010b 00       		.byte	0
+ 1677 010c 00       		.byte	0
+ 1678 010d 15       		.uleb128 0x15
+ 1679 010e 2E       		.uleb128 0x2e
+ 1680 010f 00       		.byte	0
+ 1681 0110 03       		.uleb128 0x3
+ 1682 0111 0E       		.uleb128 0xe
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 40
 
 
- 1687 0124 2E       		.uleb128 0x2e
- 1688 0125 01       		.byte	0x1
- 1689 0126 3F       		.uleb128 0x3f
- 1690 0127 19       		.uleb128 0x19
- 1691 0128 03       		.uleb128 0x3
- 1692 0129 0E       		.uleb128 0xe
- 1693 012a 3A       		.uleb128 0x3a
- 1694 012b 0B       		.uleb128 0xb
- 1695 012c 3B       		.uleb128 0x3b
- 1696 012d 05       		.uleb128 0x5
- 1697 012e 27       		.uleb128 0x27
- 1698 012f 19       		.uleb128 0x19
- 1699 0130 11       		.uleb128 0x11
- 1700 0131 01       		.uleb128 0x1
- 1701 0132 12       		.uleb128 0x12
- 1702 0133 06       		.uleb128 0x6
- 1703 0134 40       		.uleb128 0x40
- 1704 0135 18       		.uleb128 0x18
- 1705 0136 9642     		.uleb128 0x2116
- 1706 0138 19       		.uleb128 0x19
- 1707 0139 01       		.uleb128 0x1
- 1708 013a 13       		.uleb128 0x13
- 1709 013b 00       		.byte	0
- 1710 013c 00       		.byte	0
- 1711 013d 17       		.uleb128 0x17
- 1712 013e 34       		.uleb128 0x34
- 1713 013f 00       		.byte	0
- 1714 0140 03       		.uleb128 0x3
- 1715 0141 0E       		.uleb128 0xe
- 1716 0142 3A       		.uleb128 0x3a
- 1717 0143 0B       		.uleb128 0xb
- 1718 0144 3B       		.uleb128 0x3b
- 1719 0145 05       		.uleb128 0x5
- 1720 0146 49       		.uleb128 0x49
- 1721 0147 13       		.uleb128 0x13
- 1722 0148 02       		.uleb128 0x2
- 1723 0149 18       		.uleb128 0x18
- 1724 014a 00       		.byte	0
- 1725 014b 00       		.byte	0
- 1726 014c 18       		.uleb128 0x18
- 1727 014d 13       		.uleb128 0x13
- 1728 014e 01       		.byte	0x1
- 1729 014f 0B       		.uleb128 0xb
- 1730 0150 0B       		.uleb128 0xb
- 1731 0151 3A       		.uleb128 0x3a
- 1732 0152 0B       		.uleb128 0xb
- 1733 0153 3B       		.uleb128 0x3b
- 1734 0154 05       		.uleb128 0x5
- 1735 0155 01       		.uleb128 0x1
- 1736 0156 13       		.uleb128 0x13
- 1737 0157 00       		.byte	0
- 1738 0158 00       		.byte	0
- 1739 0159 19       		.uleb128 0x19
- 1740 015a 0D       		.uleb128 0xd
- 1741 015b 00       		.byte	0
- 1742 015c 03       		.uleb128 0x3
- 1743 015d 0E       		.uleb128 0xe
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 41
+ 1683 0112 3A       		.uleb128 0x3a
+ 1684 0113 0B       		.uleb128 0xb
+ 1685 0114 3B       		.uleb128 0x3b
+ 1686 0115 05       		.uleb128 0x5
+ 1687 0116 27       		.uleb128 0x27
+ 1688 0117 19       		.uleb128 0x19
+ 1689 0118 11       		.uleb128 0x11
+ 1690 0119 01       		.uleb128 0x1
+ 1691 011a 12       		.uleb128 0x12
+ 1692 011b 06       		.uleb128 0x6
+ 1693 011c 40       		.uleb128 0x40
+ 1694 011d 18       		.uleb128 0x18
+ 1695 011e 9742     		.uleb128 0x2117
+ 1696 0120 19       		.uleb128 0x19
+ 1697 0121 00       		.byte	0
+ 1698 0122 00       		.byte	0
+ 1699 0123 16       		.uleb128 0x16
+ 1700 0124 2E       		.uleb128 0x2e
+ 1701 0125 01       		.byte	0x1
+ 1702 0126 3F       		.uleb128 0x3f
+ 1703 0127 19       		.uleb128 0x19
+ 1704 0128 03       		.uleb128 0x3
+ 1705 0129 0E       		.uleb128 0xe
+ 1706 012a 3A       		.uleb128 0x3a
+ 1707 012b 0B       		.uleb128 0xb
+ 1708 012c 3B       		.uleb128 0x3b
+ 1709 012d 05       		.uleb128 0x5
+ 1710 012e 27       		.uleb128 0x27
+ 1711 012f 19       		.uleb128 0x19
+ 1712 0130 11       		.uleb128 0x11
+ 1713 0131 01       		.uleb128 0x1
+ 1714 0132 12       		.uleb128 0x12
+ 1715 0133 06       		.uleb128 0x6
+ 1716 0134 40       		.uleb128 0x40
+ 1717 0135 18       		.uleb128 0x18
+ 1718 0136 9642     		.uleb128 0x2116
+ 1719 0138 19       		.uleb128 0x19
+ 1720 0139 01       		.uleb128 0x1
+ 1721 013a 13       		.uleb128 0x13
+ 1722 013b 00       		.byte	0
+ 1723 013c 00       		.byte	0
+ 1724 013d 17       		.uleb128 0x17
+ 1725 013e 34       		.uleb128 0x34
+ 1726 013f 00       		.byte	0
+ 1727 0140 03       		.uleb128 0x3
+ 1728 0141 0E       		.uleb128 0xe
+ 1729 0142 3A       		.uleb128 0x3a
+ 1730 0143 0B       		.uleb128 0xb
+ 1731 0144 3B       		.uleb128 0x3b
+ 1732 0145 05       		.uleb128 0x5
+ 1733 0146 49       		.uleb128 0x49
+ 1734 0147 13       		.uleb128 0x13
+ 1735 0148 02       		.uleb128 0x2
+ 1736 0149 18       		.uleb128 0x18
+ 1737 014a 00       		.byte	0
+ 1738 014b 00       		.byte	0
+ 1739 014c 18       		.uleb128 0x18
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 41
 
 
- 1744 015e 3A       		.uleb128 0x3a
- 1745 015f 0B       		.uleb128 0xb
- 1746 0160 3B       		.uleb128 0x3b
- 1747 0161 05       		.uleb128 0x5
- 1748 0162 49       		.uleb128 0x49
- 1749 0163 13       		.uleb128 0x13
- 1750 0164 38       		.uleb128 0x38
- 1751 0165 0B       		.uleb128 0xb
- 1752 0166 00       		.byte	0
- 1753 0167 00       		.byte	0
- 1754 0168 1A       		.uleb128 0x1a
- 1755 0169 01       		.uleb128 0x1
- 1756 016a 01       		.byte	0x1
- 1757 016b 49       		.uleb128 0x49
- 1758 016c 13       		.uleb128 0x13
- 1759 016d 01       		.uleb128 0x1
- 1760 016e 13       		.uleb128 0x13
- 1761 016f 00       		.byte	0
- 1762 0170 00       		.byte	0
- 1763 0171 1B       		.uleb128 0x1b
- 1764 0172 21       		.uleb128 0x21
- 1765 0173 00       		.byte	0
- 1766 0174 49       		.uleb128 0x49
- 1767 0175 13       		.uleb128 0x13
- 1768 0176 2F       		.uleb128 0x2f
- 1769 0177 0B       		.uleb128 0xb
- 1770 0178 00       		.byte	0
- 1771 0179 00       		.byte	0
- 1772 017a 1C       		.uleb128 0x1c
- 1773 017b 34       		.uleb128 0x34
- 1774 017c 00       		.byte	0
- 1775 017d 03       		.uleb128 0x3
- 1776 017e 08       		.uleb128 0x8
- 1777 017f 3A       		.uleb128 0x3a
- 1778 0180 0B       		.uleb128 0xb
- 1779 0181 3B       		.uleb128 0x3b
- 1780 0182 05       		.uleb128 0x5
- 1781 0183 49       		.uleb128 0x49
- 1782 0184 13       		.uleb128 0x13
- 1783 0185 02       		.uleb128 0x2
- 1784 0186 18       		.uleb128 0x18
- 1785 0187 00       		.byte	0
- 1786 0188 00       		.byte	0
- 1787 0189 00       		.byte	0
- 1788              		.section	.debug_aranges,"",%progbits
- 1789 0000 4C000000 		.4byte	0x4c
- 1790 0004 0200     		.2byte	0x2
- 1791 0006 00000000 		.4byte	.Ldebug_info0
- 1792 000a 04       		.byte	0x4
- 1793 000b 00       		.byte	0
- 1794 000c 0000     		.2byte	0
- 1795 000e 0000     		.2byte	0
- 1796 0010 00000000 		.4byte	.LFB2
- 1797 0014 1E000000 		.4byte	.LFE2-.LFB2
- 1798 0018 00000000 		.4byte	.LFB3
- 1799 001c 20000000 		.4byte	.LFE3-.LFB3
- 1800 0020 00000000 		.4byte	.LFB4
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 42
+ 1740 014d 13       		.uleb128 0x13
+ 1741 014e 01       		.byte	0x1
+ 1742 014f 0B       		.uleb128 0xb
+ 1743 0150 0B       		.uleb128 0xb
+ 1744 0151 3A       		.uleb128 0x3a
+ 1745 0152 0B       		.uleb128 0xb
+ 1746 0153 3B       		.uleb128 0x3b
+ 1747 0154 05       		.uleb128 0x5
+ 1748 0155 01       		.uleb128 0x1
+ 1749 0156 13       		.uleb128 0x13
+ 1750 0157 00       		.byte	0
+ 1751 0158 00       		.byte	0
+ 1752 0159 19       		.uleb128 0x19
+ 1753 015a 0D       		.uleb128 0xd
+ 1754 015b 00       		.byte	0
+ 1755 015c 03       		.uleb128 0x3
+ 1756 015d 0E       		.uleb128 0xe
+ 1757 015e 3A       		.uleb128 0x3a
+ 1758 015f 0B       		.uleb128 0xb
+ 1759 0160 3B       		.uleb128 0x3b
+ 1760 0161 05       		.uleb128 0x5
+ 1761 0162 49       		.uleb128 0x49
+ 1762 0163 13       		.uleb128 0x13
+ 1763 0164 38       		.uleb128 0x38
+ 1764 0165 0B       		.uleb128 0xb
+ 1765 0166 00       		.byte	0
+ 1766 0167 00       		.byte	0
+ 1767 0168 1A       		.uleb128 0x1a
+ 1768 0169 01       		.uleb128 0x1
+ 1769 016a 01       		.byte	0x1
+ 1770 016b 49       		.uleb128 0x49
+ 1771 016c 13       		.uleb128 0x13
+ 1772 016d 01       		.uleb128 0x1
+ 1773 016e 13       		.uleb128 0x13
+ 1774 016f 00       		.byte	0
+ 1775 0170 00       		.byte	0
+ 1776 0171 1B       		.uleb128 0x1b
+ 1777 0172 21       		.uleb128 0x21
+ 1778 0173 00       		.byte	0
+ 1779 0174 49       		.uleb128 0x49
+ 1780 0175 13       		.uleb128 0x13
+ 1781 0176 2F       		.uleb128 0x2f
+ 1782 0177 0B       		.uleb128 0xb
+ 1783 0178 00       		.byte	0
+ 1784 0179 00       		.byte	0
+ 1785 017a 1C       		.uleb128 0x1c
+ 1786 017b 34       		.uleb128 0x34
+ 1787 017c 00       		.byte	0
+ 1788 017d 03       		.uleb128 0x3
+ 1789 017e 08       		.uleb128 0x8
+ 1790 017f 3A       		.uleb128 0x3a
+ 1791 0180 0B       		.uleb128 0xb
+ 1792 0181 3B       		.uleb128 0x3b
+ 1793 0182 05       		.uleb128 0x5
+ 1794 0183 49       		.uleb128 0x49
+ 1795 0184 13       		.uleb128 0x13
+ 1796 0185 02       		.uleb128 0x2
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 42
 
 
- 1801 0024 20000000 		.4byte	.LFE4-.LFB4
- 1802 0028 00000000 		.4byte	.LFB5
- 1803 002c 82000000 		.4byte	.LFE5-.LFB5
- 1804 0030 00000000 		.4byte	.LFB6
- 1805 0034 60010000 		.4byte	.LFE6-.LFB6
- 1806 0038 00000000 		.4byte	.LFB7
- 1807 003c 28000000 		.4byte	.LFE7-.LFB7
- 1808 0040 60010000 		.4byte	.LFB8
- 1809 0044 90010000 		.4byte	.LFE8-.LFB8
- 1810 0048 00000000 		.4byte	0
- 1811 004c 00000000 		.4byte	0
- 1812              		.section	.debug_ranges,"",%progbits
- 1813              	.Ldebug_ranges0:
- 1814 0000 00000000 		.4byte	.LFB2
- 1815 0004 1E000000 		.4byte	.LFE2
- 1816 0008 00000000 		.4byte	.LFB3
- 1817 000c 20000000 		.4byte	.LFE3
- 1818 0010 00000000 		.4byte	.LFB4
- 1819 0014 20000000 		.4byte	.LFE4
- 1820 0018 00000000 		.4byte	.LFB5
- 1821 001c 82000000 		.4byte	.LFE5
- 1822 0020 00000000 		.4byte	.LFB6
- 1823 0024 60010000 		.4byte	.LFE6
- 1824 0028 00000000 		.4byte	.LFB7
- 1825 002c 28000000 		.4byte	.LFE7
- 1826 0030 60010000 		.4byte	.LFB8
- 1827 0034 F0020000 		.4byte	.LFE8
- 1828 0038 00000000 		.4byte	0
- 1829 003c 00000000 		.4byte	0
- 1830              		.section	.debug_line,"",%progbits
- 1831              	.Ldebug_line0:
- 1832 0000 B1010000 		.section	.debug_str,"MS",%progbits,1
- 1832      0200CD00 
- 1832      00000201 
- 1832      FB0E0D00 
- 1832      01010101 
- 1833              	.LASF19:
- 1834 0000 72656733 		.ascii	"reg32\000"
- 1834      3200
- 1835              	.LASF12:
- 1836 0006 73697A65 		.ascii	"size_t\000"
- 1836      5F7400
- 1837              	.LASF33:
- 1838 000d 416E616C 		.ascii	"AnalogSetDefault\000"
- 1838      6F675365 
- 1838      74446566 
- 1838      61756C74 
- 1838      00
- 1839              	.LASF21:
- 1840 001e 76616C75 		.ascii	"value\000"
- 1840      6500
- 1841              	.LASF31:
- 1842 0024 636F756E 		.ascii	"count\000"
- 1842      7400
- 1843              	.LASF32:
- 1844 002a 436C6F63 		.ascii	"ClockSetup\000"
- 1844      6B536574 
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 43
+ 1797 0186 18       		.uleb128 0x18
+ 1798 0187 00       		.byte	0
+ 1799 0188 00       		.byte	0
+ 1800 0189 00       		.byte	0
+ 1801              		.section	.debug_aranges,"",%progbits
+ 1802 0000 4C000000 		.4byte	0x4c
+ 1803 0004 0200     		.2byte	0x2
+ 1804 0006 00000000 		.4byte	.Ldebug_info0
+ 1805 000a 04       		.byte	0x4
+ 1806 000b 00       		.byte	0
+ 1807 000c 0000     		.2byte	0
+ 1808 000e 0000     		.2byte	0
+ 1809 0010 00000000 		.4byte	.LFB2
+ 1810 0014 1E000000 		.4byte	.LFE2-.LFB2
+ 1811 0018 00000000 		.4byte	.LFB3
+ 1812 001c 20000000 		.4byte	.LFE3-.LFB3
+ 1813 0020 00000000 		.4byte	.LFB4
+ 1814 0024 20000000 		.4byte	.LFE4-.LFB4
+ 1815 0028 00000000 		.4byte	.LFB5
+ 1816 002c 82000000 		.4byte	.LFE5-.LFB5
+ 1817 0030 00000000 		.4byte	.LFB6
+ 1818 0034 7C010000 		.4byte	.LFE6-.LFB6
+ 1819 0038 00000000 		.4byte	.LFB7
+ 1820 003c 28000000 		.4byte	.LFE7-.LFB7
+ 1821 0040 7C010000 		.4byte	.LFB8
+ 1822 0044 90010000 		.4byte	.LFE8-.LFB8
+ 1823 0048 00000000 		.4byte	0
+ 1824 004c 00000000 		.4byte	0
+ 1825              		.section	.debug_ranges,"",%progbits
+ 1826              	.Ldebug_ranges0:
+ 1827 0000 00000000 		.4byte	.LFB2
+ 1828 0004 1E000000 		.4byte	.LFE2
+ 1829 0008 00000000 		.4byte	.LFB3
+ 1830 000c 20000000 		.4byte	.LFE3
+ 1831 0010 00000000 		.4byte	.LFB4
+ 1832 0014 20000000 		.4byte	.LFE4
+ 1833 0018 00000000 		.4byte	.LFB5
+ 1834 001c 82000000 		.4byte	.LFE5
+ 1835 0020 00000000 		.4byte	.LFB6
+ 1836 0024 7C010000 		.4byte	.LFE6
+ 1837 0028 00000000 		.4byte	.LFB7
+ 1838 002c 28000000 		.4byte	.LFE7
+ 1839 0030 7C010000 		.4byte	.LFB8
+ 1840 0034 0C030000 		.4byte	.LFE8
+ 1841 0038 00000000 		.4byte	0
+ 1842 003c 00000000 		.4byte	0
+ 1843              		.section	.debug_line,"",%progbits
+ 1844              	.Ldebug_line0:
+ 1845 0000 B4010000 		.section	.debug_str,"MS",%progbits,1
+ 1845      0200CD00 
+ 1845      00000201 
+ 1845      FB0E0D00 
+ 1845      01010101 
+ 1846              	.LASF19:
+ 1847 0000 72656733 		.ascii	"reg32\000"
+ 1847      3200
+ 1848              	.LASF12:
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 43
 
 
- 1844      757000
- 1845              	.LASF34:
- 1846 0035 63795F63 		.ascii	"cy_cfg_addr_table\000"
- 1846      66675F61 
- 1846      6464725F 
- 1846      7461626C 
- 1846      6500
- 1847              	.LASF35:
- 1848 0047 63795F63 		.ascii	"cy_cfg_data_table\000"
- 1848      66675F64 
- 1848      6174615F 
- 1848      7461626C 
- 1848      6500
- 1849              	.LASF16:
- 1850 0059 666C6F61 		.ascii	"float\000"
- 1850      7400
- 1851              	.LASF25:
- 1852 005f 64657374 		.ascii	"dest\000"
- 1852      00
- 1853              	.LASF39:
- 1854 0064 6366675F 		.ascii	"cfg_memset_list\000"
- 1854      6D656D73 
- 1854      65745F6C 
- 1854      69737400 
- 1855              	.LASF37:
- 1856 0074 73697A65 		.ascii	"size\000"
- 1856      00
- 1857              	.LASF18:
- 1858 0079 72656738 		.ascii	"reg8\000"
- 1858      00
- 1859              	.LASF8:
- 1860 007e 6C6F6E67 		.ascii	"long unsigned int\000"
- 1860      20756E73 
- 1860      69676E65 
- 1860      6420696E 
- 1860      7400
- 1861              	.LASF42:
- 1862 0090 443A5C75 		.ascii	"D:\\ucu\\2_course1_term\\POC\\programs\\my_works\\S"
- 1862      63755C32 
- 1862      5F636F75 
- 1862      72736531 
- 1862      5F746572 
- 1863 00bd 6D617274 		.ascii	"mart_lightning_system\\Mesh_Flood_Main_Auto_Reassig"
- 1863      5F6C6967 
- 1863      68746E69 
- 1863      6E675F73 
- 1863      79737465 
- 1864 00ef 6E6D656E 		.ascii	"nment2.cydsn\000"
- 1864      74322E63 
- 1864      7964736E 
- 1864      00
- 1865              	.LASF23:
- 1866 00fc 43594D45 		.ascii	"CYMEMZERO\000"
- 1866      4D5A4552 
- 1866      4F00
- 1867              	.LASF40:
- 1868 0106 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 44
+ 1849 0006 73697A65 		.ascii	"size_t\000"
+ 1849      5F7400
+ 1850              	.LASF33:
+ 1851 000d 416E616C 		.ascii	"AnalogSetDefault\000"
+ 1851      6F675365 
+ 1851      74446566 
+ 1851      61756C74 
+ 1851      00
+ 1852              	.LASF21:
+ 1853 001e 76616C75 		.ascii	"value\000"
+ 1853      6500
+ 1854              	.LASF31:
+ 1855 0024 636F756E 		.ascii	"count\000"
+ 1855      7400
+ 1856              	.LASF32:
+ 1857 002a 436C6F63 		.ascii	"ClockSetup\000"
+ 1857      6B536574 
+ 1857      757000
+ 1858              	.LASF34:
+ 1859 0035 63795F63 		.ascii	"cy_cfg_addr_table\000"
+ 1859      66675F61 
+ 1859      6464725F 
+ 1859      7461626C 
+ 1859      6500
+ 1860              	.LASF35:
+ 1861 0047 63795F63 		.ascii	"cy_cfg_data_table\000"
+ 1861      66675F64 
+ 1861      6174615F 
+ 1861      7461626C 
+ 1861      6500
+ 1862              	.LASF16:
+ 1863 0059 666C6F61 		.ascii	"float\000"
+ 1863      7400
+ 1864              	.LASF25:
+ 1865 005f 64657374 		.ascii	"dest\000"
+ 1865      00
+ 1866              	.LASF39:
+ 1867 0064 6366675F 		.ascii	"cfg_memset_list\000"
+ 1867      6D656D73 
+ 1867      65745F6C 
+ 1867      69737400 
+ 1868              	.LASF37:
+ 1869 0074 73697A65 		.ascii	"size\000"
+ 1869      00
+ 1870              	.LASF18:
+ 1871 0079 72656738 		.ascii	"reg8\000"
+ 1871      00
+ 1872              	.LASF8:
+ 1873 007e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1873      20756E73 
+ 1873      69676E65 
+ 1873      6420696E 
+ 1873      7400
+ 1874              	.LASF42:
+ 1875 0090 443A5C75 		.ascii	"D:\\ucu\\2_course1_term\\POC\\programs\\my_works\\S"
+ 1875      63755C32 
+ 1875      5F636F75 
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 44
 
 
- 1868      43313120 
- 1868      352E342E 
- 1868      31203230 
- 1868      31363036 
- 1869 0139 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 1869      20726576 
- 1869      6973696F 
- 1869      6E203233 
- 1869      37373135 
- 1870 016c 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 1870      66756E63 
- 1870      74696F6E 
- 1870      2D736563 
- 1870      74696F6E 
- 1871              	.LASF4:
- 1872 0194 756E7369 		.ascii	"unsigned char\000"
- 1872      676E6564 
- 1872      20636861 
- 1872      7200
- 1873              	.LASF17:
- 1874 01a2 646F7562 		.ascii	"double\000"
- 1874      6C6500
- 1875              	.LASF27:
- 1876 01a9 6366675F 		.ascii	"cfg_write_bytes32\000"
- 1876      77726974 
- 1876      655F6279 
- 1876      74657333 
- 1876      3200
- 1877              	.LASF43:
- 1878 01bb 63796669 		.ascii	"cyfitter_cfg\000"
- 1878      74746572 
- 1878      5F636667 
- 1878      00
- 1879              	.LASF28:
- 1880 01c8 61646472 		.ascii	"addr_table\000"
- 1880      5F746162 
- 1880      6C6500
- 1881              	.LASF14:
- 1882 01d3 75696E74 		.ascii	"uint16\000"
- 1882      313600
- 1883              	.LASF29:
- 1884 01da 64617461 		.ascii	"data_table\000"
- 1884      5F746162 
- 1884      6C6500
- 1885              	.LASF15:
- 1886 01e5 75696E74 		.ascii	"uint32\000"
- 1886      333200
- 1887              	.LASF0:
- 1888 01ec 756E7369 		.ascii	"unsigned int\000"
- 1888      676E6564 
- 1888      20696E74 
- 1888      00
- 1889              	.LASF36:
- 1890 01f9 61646472 		.ascii	"address\000"
- 1890      65737300 
- 1891              	.LASF9:
- 1892 0201 6C6F6E67 		.ascii	"long long unsigned int\000"
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 45
+ 1875      72736531 
+ 1875      5F746572 
+ 1876 00bd 6D617274 		.ascii	"mart_lightning_system\\Mesh_Flood_Main_Auto_Reassig"
+ 1876      5F6C6967 
+ 1876      68746E69 
+ 1876      6E675F73 
+ 1876      79737465 
+ 1877 00ef 6E6D656E 		.ascii	"nment2.cydsn\000"
+ 1877      74322E63 
+ 1877      7964736E 
+ 1877      00
+ 1878              	.LASF23:
+ 1879 00fc 43594D45 		.ascii	"CYMEMZERO\000"
+ 1879      4D5A4552 
+ 1879      4F00
+ 1880              	.LASF40:
+ 1881 0106 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1881      43313120 
+ 1881      352E342E 
+ 1881      31203230 
+ 1881      31363036 
+ 1882 0139 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1882      20726576 
+ 1882      6973696F 
+ 1882      6E203233 
+ 1882      37373135 
+ 1883 016c 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1883      66756E63 
+ 1883      74696F6E 
+ 1883      2D736563 
+ 1883      74696F6E 
+ 1884              	.LASF4:
+ 1885 0194 756E7369 		.ascii	"unsigned char\000"
+ 1885      676E6564 
+ 1885      20636861 
+ 1885      7200
+ 1886              	.LASF17:
+ 1887 01a2 646F7562 		.ascii	"double\000"
+ 1887      6C6500
+ 1888              	.LASF27:
+ 1889 01a9 6366675F 		.ascii	"cfg_write_bytes32\000"
+ 1889      77726974 
+ 1889      655F6279 
+ 1889      74657333 
+ 1889      3200
+ 1890              	.LASF43:
+ 1891 01bb 63796669 		.ascii	"cyfitter_cfg\000"
+ 1891      74746572 
+ 1891      5F636667 
+ 1891      00
+ 1892              	.LASF28:
+ 1893 01c8 61646472 		.ascii	"addr_table\000"
+ 1893      5F746162 
+ 1893      6C6500
+ 1894              	.LASF14:
+ 1895 01d3 75696E74 		.ascii	"uint16\000"
+ 1895      313600
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 45
 
 
- 1892      206C6F6E 
- 1892      6720756E 
- 1892      7369676E 
- 1892      65642069 
- 1893              	.LASF38:
- 1894 0218 6366675F 		.ascii	"cfg_memset_t\000"
- 1894      6D656D73 
- 1894      65745F74 
- 1894      00
- 1895              	.LASF30:
- 1896 0225 62617365 		.ascii	"baseAddr\000"
- 1896      41646472 
- 1896      00
- 1897              	.LASF10:
- 1898 022e 73697A65 		.ascii	"sizetype\000"
- 1898      74797065 
- 1898      00
- 1899              	.LASF6:
- 1900 0237 73686F72 		.ascii	"short unsigned int\000"
- 1900      7420756E 
- 1900      7369676E 
- 1900      65642069 
- 1900      6E7400
- 1901              	.LASF1:
- 1902 024a 6C6F6E67 		.ascii	"long long int\000"
- 1902      206C6F6E 
- 1902      6720696E 
- 1902      7400
- 1903              	.LASF11:
- 1904 0258 63686172 		.ascii	"char\000"
- 1904      00
- 1905              	.LASF22:
- 1906 025d 63795F63 		.ascii	"cy_cfg_addrvalue_t\000"
- 1906      66675F61 
- 1906      64647276 
- 1906      616C7565 
- 1906      5F7400
- 1907              	.LASF20:
- 1908 0270 6F666673 		.ascii	"offset\000"
- 1908      657400
- 1909              	.LASF5:
- 1910 0277 73686F72 		.ascii	"short int\000"
- 1910      7420696E 
- 1910      7400
- 1911              	.LASF13:
- 1912 0281 75696E74 		.ascii	"uint8\000"
- 1912      3800
- 1913              	.LASF7:
- 1914 0287 6C6F6E67 		.ascii	"long int\000"
- 1914      20696E74 
- 1914      00
- 1915              	.LASF2:
- 1916 0290 6C6F6E67 		.ascii	"long double\000"
- 1916      20646F75 
- 1916      626C6500 
- 1917              	.LASF3:
- 1918 029c 7369676E 		.ascii	"signed char\000"
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccGuR1Rp.s 			page 46
+ 1896              	.LASF29:
+ 1897 01da 64617461 		.ascii	"data_table\000"
+ 1897      5F746162 
+ 1897      6C6500
+ 1898              	.LASF15:
+ 1899 01e5 75696E74 		.ascii	"uint32\000"
+ 1899      333200
+ 1900              	.LASF0:
+ 1901 01ec 756E7369 		.ascii	"unsigned int\000"
+ 1901      676E6564 
+ 1901      20696E74 
+ 1901      00
+ 1902              	.LASF36:
+ 1903 01f9 61646472 		.ascii	"address\000"
+ 1903      65737300 
+ 1904              	.LASF9:
+ 1905 0201 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1905      206C6F6E 
+ 1905      6720756E 
+ 1905      7369676E 
+ 1905      65642069 
+ 1906              	.LASF38:
+ 1907 0218 6366675F 		.ascii	"cfg_memset_t\000"
+ 1907      6D656D73 
+ 1907      65745F74 
+ 1907      00
+ 1908              	.LASF30:
+ 1909 0225 62617365 		.ascii	"baseAddr\000"
+ 1909      41646472 
+ 1909      00
+ 1910              	.LASF10:
+ 1911 022e 73697A65 		.ascii	"sizetype\000"
+ 1911      74797065 
+ 1911      00
+ 1912              	.LASF6:
+ 1913 0237 73686F72 		.ascii	"short unsigned int\000"
+ 1913      7420756E 
+ 1913      7369676E 
+ 1913      65642069 
+ 1913      6E7400
+ 1914              	.LASF1:
+ 1915 024a 6C6F6E67 		.ascii	"long long int\000"
+ 1915      206C6F6E 
+ 1915      6720696E 
+ 1915      7400
+ 1916              	.LASF11:
+ 1917 0258 63686172 		.ascii	"char\000"
+ 1917      00
+ 1918              	.LASF22:
+ 1919 025d 63795F63 		.ascii	"cy_cfg_addrvalue_t\000"
+ 1919      66675F61 
+ 1919      64647276 
+ 1919      616C7565 
+ 1919      5F7400
+ 1920              	.LASF20:
+ 1921 0270 6F666673 		.ascii	"offset\000"
+ 1921      657400
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cclDIfIw.s 			page 46
 
 
- 1918      65642063 
- 1918      68617200 
- 1919              	.LASF41:
- 1920 02a8 47656E65 		.ascii	"Generated_Source\\PSoC4\\cyfitter_cfg.c\000"
- 1920      72617465 
- 1920      645F536F 
- 1920      75726365 
- 1920      5C50536F 
- 1921              	.LASF26:
- 1922 02ce 4359434F 		.ascii	"CYCONFIGCPYCODE\000"
- 1922      4E464947 
- 1922      43505943 
- 1922      4F444500 
- 1923              	.LASF24:
- 1924 02de 4359434F 		.ascii	"CYCONFIGCPY\000"
- 1924      4E464947 
- 1924      43505900 
- 1925              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1922              	.LASF5:
+ 1923 0277 73686F72 		.ascii	"short int\000"
+ 1923      7420696E 
+ 1923      7400
+ 1924              	.LASF13:
+ 1925 0281 75696E74 		.ascii	"uint8\000"
+ 1925      3800
+ 1926              	.LASF7:
+ 1927 0287 6C6F6E67 		.ascii	"long int\000"
+ 1927      20696E74 
+ 1927      00
+ 1928              	.LASF2:
+ 1929 0290 6C6F6E67 		.ascii	"long double\000"
+ 1929      20646F75 
+ 1929      626C6500 
+ 1930              	.LASF3:
+ 1931 029c 7369676E 		.ascii	"signed char\000"
+ 1931      65642063 
+ 1931      68617200 
+ 1932              	.LASF41:
+ 1933 02a8 47656E65 		.ascii	"Generated_Source\\PSoC4\\cyfitter_cfg.c\000"
+ 1933      72617465 
+ 1933      645F536F 
+ 1933      75726365 
+ 1933      5C50536F 
+ 1934              	.LASF26:
+ 1935 02ce 4359434F 		.ascii	"CYCONFIGCPYCODE\000"
+ 1935      4E464947 
+ 1935      43505943 
+ 1935      4F444500 
+ 1936              	.LASF24:
+ 1937 02de 4359434F 		.ascii	"CYCONFIGCPY\000"
+ 1937      4E464947 
+ 1937      43505900 
+ 1938              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
