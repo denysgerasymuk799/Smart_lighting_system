@@ -1,9 +1,9 @@
 /*******************************************************************************
-* File Name: Timer_1.c
+* File Name: Timer_Waiting_Time.c
 * Version 2.10
 *
 * Description:
-*  This file provides the source code to the API for the Timer_1
+*  This file provides the source code to the API for the Timer_Waiting_Time
 *  component
 *
 * Note:
@@ -16,17 +16,17 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#include "Timer_1.h"
+#include "Timer_Waiting_Time.h"
 
-uint8 Timer_1_initVar = 0u;
+uint8 Timer_Waiting_Time_initVar = 0u;
 
 
 /*******************************************************************************
-* Function Name: Timer_1_Init
+* Function Name: Timer_Waiting_Time_Init
 ********************************************************************************
 *
 * Summary:
-*  Initialize/Restore default Timer_1 configuration.
+*  Initialize/Restore default Timer_Waiting_Time configuration.
 *
 * Parameters:
 *  None
@@ -35,137 +35,137 @@ uint8 Timer_1_initVar = 0u;
 *  None
 *
 *******************************************************************************/
-void Timer_1_Init(void)
+void Timer_Waiting_Time_Init(void)
 {
 
     /* Set values from customizer to CTRL */
-    #if (Timer_1__QUAD == Timer_1_CONFIG)
-        Timer_1_CONTROL_REG = Timer_1_CTRL_QUAD_BASE_CONFIG;
+    #if (Timer_Waiting_Time__QUAD == Timer_Waiting_Time_CONFIG)
+        Timer_Waiting_Time_CONTROL_REG = Timer_Waiting_Time_CTRL_QUAD_BASE_CONFIG;
         
         /* Set values from customizer to CTRL1 */
-        Timer_1_TRIG_CONTROL1_REG  = Timer_1_QUAD_SIGNALS_MODES;
+        Timer_Waiting_Time_TRIG_CONTROL1_REG  = Timer_Waiting_Time_QUAD_SIGNALS_MODES;
 
         /* Set values from customizer to INTR */
-        Timer_1_SetInterruptMode(Timer_1_QUAD_INTERRUPT_MASK);
+        Timer_Waiting_Time_SetInterruptMode(Timer_Waiting_Time_QUAD_INTERRUPT_MASK);
         
          /* Set other values */
-        Timer_1_SetCounterMode(Timer_1_COUNT_DOWN);
-        Timer_1_WritePeriod(Timer_1_QUAD_PERIOD_INIT_VALUE);
-        Timer_1_WriteCounter(Timer_1_QUAD_PERIOD_INIT_VALUE);
-    #endif  /* (Timer_1__QUAD == Timer_1_CONFIG) */
+        Timer_Waiting_Time_SetCounterMode(Timer_Waiting_Time_COUNT_DOWN);
+        Timer_Waiting_Time_WritePeriod(Timer_Waiting_Time_QUAD_PERIOD_INIT_VALUE);
+        Timer_Waiting_Time_WriteCounter(Timer_Waiting_Time_QUAD_PERIOD_INIT_VALUE);
+    #endif  /* (Timer_Waiting_Time__QUAD == Timer_Waiting_Time_CONFIG) */
 
-    #if (Timer_1__TIMER == Timer_1_CONFIG)
-        Timer_1_CONTROL_REG = Timer_1_CTRL_TIMER_BASE_CONFIG;
+    #if (Timer_Waiting_Time__TIMER == Timer_Waiting_Time_CONFIG)
+        Timer_Waiting_Time_CONTROL_REG = Timer_Waiting_Time_CTRL_TIMER_BASE_CONFIG;
         
         /* Set values from customizer to CTRL1 */
-        Timer_1_TRIG_CONTROL1_REG  = Timer_1_TIMER_SIGNALS_MODES;
+        Timer_Waiting_Time_TRIG_CONTROL1_REG  = Timer_Waiting_Time_TIMER_SIGNALS_MODES;
     
         /* Set values from customizer to INTR */
-        Timer_1_SetInterruptMode(Timer_1_TC_INTERRUPT_MASK);
+        Timer_Waiting_Time_SetInterruptMode(Timer_Waiting_Time_TC_INTERRUPT_MASK);
         
         /* Set other values from customizer */
-        Timer_1_WritePeriod(Timer_1_TC_PERIOD_VALUE );
+        Timer_Waiting_Time_WritePeriod(Timer_Waiting_Time_TC_PERIOD_VALUE );
 
-        #if (Timer_1__COMPARE == Timer_1_TC_COMP_CAP_MODE)
-            Timer_1_WriteCompare(Timer_1_TC_COMPARE_VALUE);
+        #if (Timer_Waiting_Time__COMPARE == Timer_Waiting_Time_TC_COMP_CAP_MODE)
+            Timer_Waiting_Time_WriteCompare(Timer_Waiting_Time_TC_COMPARE_VALUE);
 
-            #if (1u == Timer_1_TC_COMPARE_SWAP)
-                Timer_1_SetCompareSwap(1u);
-                Timer_1_WriteCompareBuf(Timer_1_TC_COMPARE_BUF_VALUE);
-            #endif  /* (1u == Timer_1_TC_COMPARE_SWAP) */
-        #endif  /* (Timer_1__COMPARE == Timer_1_TC_COMP_CAP_MODE) */
+            #if (1u == Timer_Waiting_Time_TC_COMPARE_SWAP)
+                Timer_Waiting_Time_SetCompareSwap(1u);
+                Timer_Waiting_Time_WriteCompareBuf(Timer_Waiting_Time_TC_COMPARE_BUF_VALUE);
+            #endif  /* (1u == Timer_Waiting_Time_TC_COMPARE_SWAP) */
+        #endif  /* (Timer_Waiting_Time__COMPARE == Timer_Waiting_Time_TC_COMP_CAP_MODE) */
 
         /* Initialize counter value */
-        #if (Timer_1_CY_TCPWM_V2 && Timer_1_TIMER_UPDOWN_CNT_USED && !Timer_1_CY_TCPWM_4000)
-            Timer_1_WriteCounter(1u);
-        #elif(Timer_1__COUNT_DOWN == Timer_1_TC_COUNTER_MODE)
-            Timer_1_WriteCounter(Timer_1_TC_PERIOD_VALUE);
+        #if (Timer_Waiting_Time_CY_TCPWM_V2 && Timer_Waiting_Time_TIMER_UPDOWN_CNT_USED && !Timer_Waiting_Time_CY_TCPWM_4000)
+            Timer_Waiting_Time_WriteCounter(1u);
+        #elif(Timer_Waiting_Time__COUNT_DOWN == Timer_Waiting_Time_TC_COUNTER_MODE)
+            Timer_Waiting_Time_WriteCounter(Timer_Waiting_Time_TC_PERIOD_VALUE);
         #else
-            Timer_1_WriteCounter(0u);
-        #endif /* (Timer_1_CY_TCPWM_V2 && Timer_1_TIMER_UPDOWN_CNT_USED && !Timer_1_CY_TCPWM_4000) */
-    #endif  /* (Timer_1__TIMER == Timer_1_CONFIG) */
+            Timer_Waiting_Time_WriteCounter(0u);
+        #endif /* (Timer_Waiting_Time_CY_TCPWM_V2 && Timer_Waiting_Time_TIMER_UPDOWN_CNT_USED && !Timer_Waiting_Time_CY_TCPWM_4000) */
+    #endif  /* (Timer_Waiting_Time__TIMER == Timer_Waiting_Time_CONFIG) */
 
-    #if (Timer_1__PWM_SEL == Timer_1_CONFIG)
-        Timer_1_CONTROL_REG = Timer_1_CTRL_PWM_BASE_CONFIG;
+    #if (Timer_Waiting_Time__PWM_SEL == Timer_Waiting_Time_CONFIG)
+        Timer_Waiting_Time_CONTROL_REG = Timer_Waiting_Time_CTRL_PWM_BASE_CONFIG;
 
-        #if (Timer_1__PWM_PR == Timer_1_PWM_MODE)
-            Timer_1_CONTROL_REG |= Timer_1_CTRL_PWM_RUN_MODE;
-            Timer_1_WriteCounter(Timer_1_PWM_PR_INIT_VALUE);
+        #if (Timer_Waiting_Time__PWM_PR == Timer_Waiting_Time_PWM_MODE)
+            Timer_Waiting_Time_CONTROL_REG |= Timer_Waiting_Time_CTRL_PWM_RUN_MODE;
+            Timer_Waiting_Time_WriteCounter(Timer_Waiting_Time_PWM_PR_INIT_VALUE);
         #else
-            Timer_1_CONTROL_REG |= Timer_1_CTRL_PWM_ALIGN | Timer_1_CTRL_PWM_KILL_EVENT;
+            Timer_Waiting_Time_CONTROL_REG |= Timer_Waiting_Time_CTRL_PWM_ALIGN | Timer_Waiting_Time_CTRL_PWM_KILL_EVENT;
             
             /* Initialize counter value */
-            #if (Timer_1_CY_TCPWM_V2 && Timer_1_PWM_UPDOWN_CNT_USED && !Timer_1_CY_TCPWM_4000)
-                Timer_1_WriteCounter(1u);
-            #elif (Timer_1__RIGHT == Timer_1_PWM_ALIGN)
-                Timer_1_WriteCounter(Timer_1_PWM_PERIOD_VALUE);
+            #if (Timer_Waiting_Time_CY_TCPWM_V2 && Timer_Waiting_Time_PWM_UPDOWN_CNT_USED && !Timer_Waiting_Time_CY_TCPWM_4000)
+                Timer_Waiting_Time_WriteCounter(1u);
+            #elif (Timer_Waiting_Time__RIGHT == Timer_Waiting_Time_PWM_ALIGN)
+                Timer_Waiting_Time_WriteCounter(Timer_Waiting_Time_PWM_PERIOD_VALUE);
             #else 
-                Timer_1_WriteCounter(0u);
-            #endif  /* (Timer_1_CY_TCPWM_V2 && Timer_1_PWM_UPDOWN_CNT_USED && !Timer_1_CY_TCPWM_4000) */
-        #endif  /* (Timer_1__PWM_PR == Timer_1_PWM_MODE) */
+                Timer_Waiting_Time_WriteCounter(0u);
+            #endif  /* (Timer_Waiting_Time_CY_TCPWM_V2 && Timer_Waiting_Time_PWM_UPDOWN_CNT_USED && !Timer_Waiting_Time_CY_TCPWM_4000) */
+        #endif  /* (Timer_Waiting_Time__PWM_PR == Timer_Waiting_Time_PWM_MODE) */
 
-        #if (Timer_1__PWM_DT == Timer_1_PWM_MODE)
-            Timer_1_CONTROL_REG |= Timer_1_CTRL_PWM_DEAD_TIME_CYCLE;
-        #endif  /* (Timer_1__PWM_DT == Timer_1_PWM_MODE) */
+        #if (Timer_Waiting_Time__PWM_DT == Timer_Waiting_Time_PWM_MODE)
+            Timer_Waiting_Time_CONTROL_REG |= Timer_Waiting_Time_CTRL_PWM_DEAD_TIME_CYCLE;
+        #endif  /* (Timer_Waiting_Time__PWM_DT == Timer_Waiting_Time_PWM_MODE) */
 
-        #if (Timer_1__PWM == Timer_1_PWM_MODE)
-            Timer_1_CONTROL_REG |= Timer_1_CTRL_PWM_PRESCALER;
-        #endif  /* (Timer_1__PWM == Timer_1_PWM_MODE) */
+        #if (Timer_Waiting_Time__PWM == Timer_Waiting_Time_PWM_MODE)
+            Timer_Waiting_Time_CONTROL_REG |= Timer_Waiting_Time_CTRL_PWM_PRESCALER;
+        #endif  /* (Timer_Waiting_Time__PWM == Timer_Waiting_Time_PWM_MODE) */
 
         /* Set values from customizer to CTRL1 */
-        Timer_1_TRIG_CONTROL1_REG  = Timer_1_PWM_SIGNALS_MODES;
+        Timer_Waiting_Time_TRIG_CONTROL1_REG  = Timer_Waiting_Time_PWM_SIGNALS_MODES;
     
         /* Set values from customizer to INTR */
-        Timer_1_SetInterruptMode(Timer_1_PWM_INTERRUPT_MASK);
+        Timer_Waiting_Time_SetInterruptMode(Timer_Waiting_Time_PWM_INTERRUPT_MASK);
 
         /* Set values from customizer to CTRL2 */
-        #if (Timer_1__PWM_PR == Timer_1_PWM_MODE)
-            Timer_1_TRIG_CONTROL2_REG =
-                    (Timer_1_CC_MATCH_NO_CHANGE    |
-                    Timer_1_OVERLOW_NO_CHANGE      |
-                    Timer_1_UNDERFLOW_NO_CHANGE);
+        #if (Timer_Waiting_Time__PWM_PR == Timer_Waiting_Time_PWM_MODE)
+            Timer_Waiting_Time_TRIG_CONTROL2_REG =
+                    (Timer_Waiting_Time_CC_MATCH_NO_CHANGE    |
+                    Timer_Waiting_Time_OVERLOW_NO_CHANGE      |
+                    Timer_Waiting_Time_UNDERFLOW_NO_CHANGE);
         #else
-            #if (Timer_1__LEFT == Timer_1_PWM_ALIGN)
-                Timer_1_TRIG_CONTROL2_REG = Timer_1_PWM_MODE_LEFT;
-            #endif  /* ( Timer_1_PWM_LEFT == Timer_1_PWM_ALIGN) */
+            #if (Timer_Waiting_Time__LEFT == Timer_Waiting_Time_PWM_ALIGN)
+                Timer_Waiting_Time_TRIG_CONTROL2_REG = Timer_Waiting_Time_PWM_MODE_LEFT;
+            #endif  /* ( Timer_Waiting_Time_PWM_LEFT == Timer_Waiting_Time_PWM_ALIGN) */
 
-            #if (Timer_1__RIGHT == Timer_1_PWM_ALIGN)
-                Timer_1_TRIG_CONTROL2_REG = Timer_1_PWM_MODE_RIGHT;
-            #endif  /* ( Timer_1_PWM_RIGHT == Timer_1_PWM_ALIGN) */
+            #if (Timer_Waiting_Time__RIGHT == Timer_Waiting_Time_PWM_ALIGN)
+                Timer_Waiting_Time_TRIG_CONTROL2_REG = Timer_Waiting_Time_PWM_MODE_RIGHT;
+            #endif  /* ( Timer_Waiting_Time_PWM_RIGHT == Timer_Waiting_Time_PWM_ALIGN) */
 
-            #if (Timer_1__CENTER == Timer_1_PWM_ALIGN)
-                Timer_1_TRIG_CONTROL2_REG = Timer_1_PWM_MODE_CENTER;
-            #endif  /* ( Timer_1_PWM_CENTER == Timer_1_PWM_ALIGN) */
+            #if (Timer_Waiting_Time__CENTER == Timer_Waiting_Time_PWM_ALIGN)
+                Timer_Waiting_Time_TRIG_CONTROL2_REG = Timer_Waiting_Time_PWM_MODE_CENTER;
+            #endif  /* ( Timer_Waiting_Time_PWM_CENTER == Timer_Waiting_Time_PWM_ALIGN) */
 
-            #if (Timer_1__ASYMMETRIC == Timer_1_PWM_ALIGN)
-                Timer_1_TRIG_CONTROL2_REG = Timer_1_PWM_MODE_ASYM;
-            #endif  /* (Timer_1__ASYMMETRIC == Timer_1_PWM_ALIGN) */
-        #endif  /* (Timer_1__PWM_PR == Timer_1_PWM_MODE) */
+            #if (Timer_Waiting_Time__ASYMMETRIC == Timer_Waiting_Time_PWM_ALIGN)
+                Timer_Waiting_Time_TRIG_CONTROL2_REG = Timer_Waiting_Time_PWM_MODE_ASYM;
+            #endif  /* (Timer_Waiting_Time__ASYMMETRIC == Timer_Waiting_Time_PWM_ALIGN) */
+        #endif  /* (Timer_Waiting_Time__PWM_PR == Timer_Waiting_Time_PWM_MODE) */
 
         /* Set other values from customizer */
-        Timer_1_WritePeriod(Timer_1_PWM_PERIOD_VALUE );
-        Timer_1_WriteCompare(Timer_1_PWM_COMPARE_VALUE);
+        Timer_Waiting_Time_WritePeriod(Timer_Waiting_Time_PWM_PERIOD_VALUE );
+        Timer_Waiting_Time_WriteCompare(Timer_Waiting_Time_PWM_COMPARE_VALUE);
 
-        #if (1u == Timer_1_PWM_COMPARE_SWAP)
-            Timer_1_SetCompareSwap(1u);
-            Timer_1_WriteCompareBuf(Timer_1_PWM_COMPARE_BUF_VALUE);
-        #endif  /* (1u == Timer_1_PWM_COMPARE_SWAP) */
+        #if (1u == Timer_Waiting_Time_PWM_COMPARE_SWAP)
+            Timer_Waiting_Time_SetCompareSwap(1u);
+            Timer_Waiting_Time_WriteCompareBuf(Timer_Waiting_Time_PWM_COMPARE_BUF_VALUE);
+        #endif  /* (1u == Timer_Waiting_Time_PWM_COMPARE_SWAP) */
 
-        #if (1u == Timer_1_PWM_PERIOD_SWAP)
-            Timer_1_SetPeriodSwap(1u);
-            Timer_1_WritePeriodBuf(Timer_1_PWM_PERIOD_BUF_VALUE);
-        #endif  /* (1u == Timer_1_PWM_PERIOD_SWAP) */
-    #endif  /* (Timer_1__PWM_SEL == Timer_1_CONFIG) */
+        #if (1u == Timer_Waiting_Time_PWM_PERIOD_SWAP)
+            Timer_Waiting_Time_SetPeriodSwap(1u);
+            Timer_Waiting_Time_WritePeriodBuf(Timer_Waiting_Time_PWM_PERIOD_BUF_VALUE);
+        #endif  /* (1u == Timer_Waiting_Time_PWM_PERIOD_SWAP) */
+    #endif  /* (Timer_Waiting_Time__PWM_SEL == Timer_Waiting_Time_CONFIG) */
     
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_Enable
+* Function Name: Timer_Waiting_Time_Enable
 ********************************************************************************
 *
 * Summary:
-*  Enables the Timer_1.
+*  Enables the Timer_Waiting_Time.
 *
 * Parameters:
 *  None
@@ -174,42 +174,42 @@ void Timer_1_Init(void)
 *  None
 *
 *******************************************************************************/
-void Timer_1_Enable(void)
+void Timer_Waiting_Time_Enable(void)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
-    Timer_1_BLOCK_CONTROL_REG |= Timer_1_MASK;
+    Timer_Waiting_Time_BLOCK_CONTROL_REG |= Timer_Waiting_Time_MASK;
     CyExitCriticalSection(enableInterrupts);
 
     /* Start Timer or PWM if start input is absent */
-    #if (Timer_1__PWM_SEL == Timer_1_CONFIG)
-        #if (0u == Timer_1_PWM_START_SIGNAL_PRESENT)
-            Timer_1_TriggerCommand(Timer_1_MASK, Timer_1_CMD_START);
-        #endif /* (0u == Timer_1_PWM_START_SIGNAL_PRESENT) */
-    #endif /* (Timer_1__PWM_SEL == Timer_1_CONFIG) */
+    #if (Timer_Waiting_Time__PWM_SEL == Timer_Waiting_Time_CONFIG)
+        #if (0u == Timer_Waiting_Time_PWM_START_SIGNAL_PRESENT)
+            Timer_Waiting_Time_TriggerCommand(Timer_Waiting_Time_MASK, Timer_Waiting_Time_CMD_START);
+        #endif /* (0u == Timer_Waiting_Time_PWM_START_SIGNAL_PRESENT) */
+    #endif /* (Timer_Waiting_Time__PWM_SEL == Timer_Waiting_Time_CONFIG) */
 
-    #if (Timer_1__TIMER == Timer_1_CONFIG)
-        #if (0u == Timer_1_TC_START_SIGNAL_PRESENT)
-            Timer_1_TriggerCommand(Timer_1_MASK, Timer_1_CMD_START);
-        #endif /* (0u == Timer_1_TC_START_SIGNAL_PRESENT) */
-    #endif /* (Timer_1__TIMER == Timer_1_CONFIG) */
+    #if (Timer_Waiting_Time__TIMER == Timer_Waiting_Time_CONFIG)
+        #if (0u == Timer_Waiting_Time_TC_START_SIGNAL_PRESENT)
+            Timer_Waiting_Time_TriggerCommand(Timer_Waiting_Time_MASK, Timer_Waiting_Time_CMD_START);
+        #endif /* (0u == Timer_Waiting_Time_TC_START_SIGNAL_PRESENT) */
+    #endif /* (Timer_Waiting_Time__TIMER == Timer_Waiting_Time_CONFIG) */
     
-    #if (Timer_1__QUAD == Timer_1_CONFIG)
-        #if (0u != Timer_1_QUAD_AUTO_START)
-            Timer_1_TriggerCommand(Timer_1_MASK, Timer_1_CMD_RELOAD);
-        #endif /* (0u != Timer_1_QUAD_AUTO_START) */
-    #endif  /* (Timer_1__QUAD == Timer_1_CONFIG) */
+    #if (Timer_Waiting_Time__QUAD == Timer_Waiting_Time_CONFIG)
+        #if (0u != Timer_Waiting_Time_QUAD_AUTO_START)
+            Timer_Waiting_Time_TriggerCommand(Timer_Waiting_Time_MASK, Timer_Waiting_Time_CMD_RELOAD);
+        #endif /* (0u != Timer_Waiting_Time_QUAD_AUTO_START) */
+    #endif  /* (Timer_Waiting_Time__QUAD == Timer_Waiting_Time_CONFIG) */
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_Start
+* Function Name: Timer_Waiting_Time_Start
 ********************************************************************************
 *
 * Summary:
-*  Initializes the Timer_1 with default customizer
-*  values when called the first time and enables the Timer_1.
+*  Initializes the Timer_Waiting_Time with default customizer
+*  values when called the first time and enables the Timer_Waiting_Time.
 *  For subsequent calls the configuration is left unchanged and the component is
 *  just enabled.
 *
@@ -220,31 +220,31 @@ void Timer_1_Enable(void)
 *  None
 *
 * Global variables:
-*  Timer_1_initVar: global variable is used to indicate initial
+*  Timer_Waiting_Time_initVar: global variable is used to indicate initial
 *  configuration of this component.  The variable is initialized to zero and set
-*  to 1 the first time Timer_1_Start() is called. This allows
+*  to 1 the first time Timer_Waiting_Time_Start() is called. This allows
 *  enabling/disabling a component without re-initialization in all subsequent
-*  calls to the Timer_1_Start() routine.
+*  calls to the Timer_Waiting_Time_Start() routine.
 *
 *******************************************************************************/
-void Timer_1_Start(void)
+void Timer_Waiting_Time_Start(void)
 {
-    if (0u == Timer_1_initVar)
+    if (0u == Timer_Waiting_Time_initVar)
     {
-        Timer_1_Init();
-        Timer_1_initVar = 1u;
+        Timer_Waiting_Time_Init();
+        Timer_Waiting_Time_initVar = 1u;
     }
 
-    Timer_1_Enable();
+    Timer_Waiting_Time_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_Stop
+* Function Name: Timer_Waiting_Time_Stop
 ********************************************************************************
 *
 * Summary:
-*  Disables the Timer_1.
+*  Disables the Timer_Waiting_Time.
 *
 * Parameters:
 *  None
@@ -253,58 +253,58 @@ void Timer_1_Start(void)
 *  None
 *
 *******************************************************************************/
-void Timer_1_Stop(void)
+void Timer_Waiting_Time_Stop(void)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    Timer_1_BLOCK_CONTROL_REG &= (uint32)~Timer_1_MASK;
+    Timer_Waiting_Time_BLOCK_CONTROL_REG &= (uint32)~Timer_Waiting_Time_MASK;
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetMode
+* Function Name: Timer_Waiting_Time_SetMode
 ********************************************************************************
 *
 * Summary:
-*  Sets the operation mode of the Timer_1. This function is used when
-*  configured as a generic Timer_1 and the actual mode of operation is
+*  Sets the operation mode of the Timer_Waiting_Time. This function is used when
+*  configured as a generic Timer_Waiting_Time and the actual mode of operation is
 *  set at runtime. The mode must be set while the component is disabled.
 *
 * Parameters:
-*  mode: Mode for the Timer_1 to operate in
+*  mode: Mode for the Timer_Waiting_Time to operate in
 *   Values:
-*   - Timer_1_MODE_TIMER_COMPARE - Timer / Counter with
+*   - Timer_Waiting_Time_MODE_TIMER_COMPARE - Timer / Counter with
 *                                                 compare capability
-*         - Timer_1_MODE_TIMER_CAPTURE - Timer / Counter with
+*         - Timer_Waiting_Time_MODE_TIMER_CAPTURE - Timer / Counter with
 *                                                 capture capability
-*         - Timer_1_MODE_QUAD - Quadrature decoder
-*         - Timer_1_MODE_PWM - PWM
-*         - Timer_1_MODE_PWM_DT - PWM with dead time
-*         - Timer_1_MODE_PWM_PR - PWM with pseudo random capability
+*         - Timer_Waiting_Time_MODE_QUAD - Quadrature decoder
+*         - Timer_Waiting_Time_MODE_PWM - PWM
+*         - Timer_Waiting_Time_MODE_PWM_DT - PWM with dead time
+*         - Timer_Waiting_Time_MODE_PWM_PR - PWM with pseudo random capability
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetMode(uint32 mode)
+void Timer_Waiting_Time_SetMode(uint32 mode)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    Timer_1_CONTROL_REG &= (uint32)~Timer_1_MODE_MASK;
-    Timer_1_CONTROL_REG |= mode;
+    Timer_Waiting_Time_CONTROL_REG &= (uint32)~Timer_Waiting_Time_MODE_MASK;
+    Timer_Waiting_Time_CONTROL_REG |= mode;
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetQDMode
+* Function Name: Timer_Waiting_Time_SetQDMode
 ********************************************************************************
 *
 * Summary:
@@ -314,30 +314,30 @@ void Timer_1_SetMode(uint32 mode)
 * Parameters:
 *  qdMode: Quadrature Decoder mode
 *   Values:
-*         - Timer_1_MODE_X1 - Counts on phi 1 rising
-*         - Timer_1_MODE_X2 - Counts on both edges of phi1 (2x faster)
-*         - Timer_1_MODE_X4 - Counts on both edges of phi1 and phi2
+*         - Timer_Waiting_Time_MODE_X1 - Counts on phi 1 rising
+*         - Timer_Waiting_Time_MODE_X2 - Counts on both edges of phi1 (2x faster)
+*         - Timer_Waiting_Time_MODE_X4 - Counts on both edges of phi1 and phi2
 *                                        (4x faster)
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetQDMode(uint32 qdMode)
+void Timer_Waiting_Time_SetQDMode(uint32 qdMode)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    Timer_1_CONTROL_REG &= (uint32)~Timer_1_QUAD_MODE_MASK;
-    Timer_1_CONTROL_REG |= qdMode;
+    Timer_Waiting_Time_CONTROL_REG &= (uint32)~Timer_Waiting_Time_QUAD_MODE_MASK;
+    Timer_Waiting_Time_CONTROL_REG |= qdMode;
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetPrescaler
+* Function Name: Timer_Waiting_Time_SetPrescaler
 ********************************************************************************
 *
 * Summary:
@@ -347,40 +347,40 @@ void Timer_1_SetQDMode(uint32 qdMode)
 * Parameters:
 *  prescaler: Prescaler divider value
 *   Values:
-*         - Timer_1_PRESCALE_DIVBY1    - Divide by 1 (no prescaling)
-*         - Timer_1_PRESCALE_DIVBY2    - Divide by 2
-*         - Timer_1_PRESCALE_DIVBY4    - Divide by 4
-*         - Timer_1_PRESCALE_DIVBY8    - Divide by 8
-*         - Timer_1_PRESCALE_DIVBY16   - Divide by 16
-*         - Timer_1_PRESCALE_DIVBY32   - Divide by 32
-*         - Timer_1_PRESCALE_DIVBY64   - Divide by 64
-*         - Timer_1_PRESCALE_DIVBY128  - Divide by 128
+*         - Timer_Waiting_Time_PRESCALE_DIVBY1    - Divide by 1 (no prescaling)
+*         - Timer_Waiting_Time_PRESCALE_DIVBY2    - Divide by 2
+*         - Timer_Waiting_Time_PRESCALE_DIVBY4    - Divide by 4
+*         - Timer_Waiting_Time_PRESCALE_DIVBY8    - Divide by 8
+*         - Timer_Waiting_Time_PRESCALE_DIVBY16   - Divide by 16
+*         - Timer_Waiting_Time_PRESCALE_DIVBY32   - Divide by 32
+*         - Timer_Waiting_Time_PRESCALE_DIVBY64   - Divide by 64
+*         - Timer_Waiting_Time_PRESCALE_DIVBY128  - Divide by 128
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetPrescaler(uint32 prescaler)
+void Timer_Waiting_Time_SetPrescaler(uint32 prescaler)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    Timer_1_CONTROL_REG &= (uint32)~Timer_1_PRESCALER_MASK;
-    Timer_1_CONTROL_REG |= prescaler;
+    Timer_Waiting_Time_CONTROL_REG &= (uint32)~Timer_Waiting_Time_PRESCALER_MASK;
+    Timer_Waiting_Time_CONTROL_REG |= prescaler;
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetOneShot
+* Function Name: Timer_Waiting_Time_SetOneShot
 ********************************************************************************
 *
 * Summary:
-*  Writes the register that controls whether the Timer_1 runs
+*  Writes the register that controls whether the Timer_Waiting_Time runs
 *  continuously or stops when terminal count is reached.  By default the
-*  Timer_1 operates in the continuous mode.
+*  Timer_Waiting_Time operates in the continuous mode.
 *
 * Parameters:
 *  oneShotEnable
@@ -392,22 +392,22 @@ void Timer_1_SetPrescaler(uint32 prescaler)
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetOneShot(uint32 oneShotEnable)
+void Timer_Waiting_Time_SetOneShot(uint32 oneShotEnable)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    Timer_1_CONTROL_REG &= (uint32)~Timer_1_ONESHOT_MASK;
-    Timer_1_CONTROL_REG |= ((uint32)((oneShotEnable & Timer_1_1BIT_MASK) <<
-                                                               Timer_1_ONESHOT_SHIFT));
+    Timer_Waiting_Time_CONTROL_REG &= (uint32)~Timer_Waiting_Time_ONESHOT_MASK;
+    Timer_Waiting_Time_CONTROL_REG |= ((uint32)((oneShotEnable & Timer_Waiting_Time_1BIT_MASK) <<
+                                                               Timer_Waiting_Time_ONESHOT_SHIFT));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetPWMMode
+* Function Name: Timer_Waiting_Time_SetPWMMode
 ********************************************************************************
 *
 * Summary:
@@ -446,15 +446,15 @@ void Timer_1_SetOneShot(uint32 oneShotEnable)
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetPWMMode(uint32 modeMask)
+void Timer_Waiting_Time_SetPWMMode(uint32 modeMask)
 {
-    Timer_1_TRIG_CONTROL2_REG = (modeMask & Timer_1_6BIT_MASK);
+    Timer_Waiting_Time_TRIG_CONTROL2_REG = (modeMask & Timer_Waiting_Time_6BIT_MASK);
 }
 
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetPWMSyncKill
+* Function Name: Timer_Waiting_Time_SetPWMSyncKill
 ********************************************************************************
 *
 * Summary:
@@ -482,22 +482,22 @@ void Timer_1_SetPWMMode(uint32 modeMask)
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetPWMSyncKill(uint32 syncKillEnable)
+void Timer_Waiting_Time_SetPWMSyncKill(uint32 syncKillEnable)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    Timer_1_CONTROL_REG &= (uint32)~Timer_1_PWM_SYNC_KILL_MASK;
-    Timer_1_CONTROL_REG |= ((uint32)((syncKillEnable & Timer_1_1BIT_MASK)  <<
-                                               Timer_1_PWM_SYNC_KILL_SHIFT));
+    Timer_Waiting_Time_CONTROL_REG &= (uint32)~Timer_Waiting_Time_PWM_SYNC_KILL_MASK;
+    Timer_Waiting_Time_CONTROL_REG |= ((uint32)((syncKillEnable & Timer_Waiting_Time_1BIT_MASK)  <<
+                                               Timer_Waiting_Time_PWM_SYNC_KILL_SHIFT));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetPWMStopOnKill
+* Function Name: Timer_Waiting_Time_SetPWMStopOnKill
 ********************************************************************************
 *
 * Summary:
@@ -516,22 +516,22 @@ void Timer_1_SetPWMSyncKill(uint32 syncKillEnable)
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetPWMStopOnKill(uint32 stopOnKillEnable)
+void Timer_Waiting_Time_SetPWMStopOnKill(uint32 stopOnKillEnable)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    Timer_1_CONTROL_REG &= (uint32)~Timer_1_PWM_STOP_KILL_MASK;
-    Timer_1_CONTROL_REG |= ((uint32)((stopOnKillEnable & Timer_1_1BIT_MASK)  <<
-                                                         Timer_1_PWM_STOP_KILL_SHIFT));
+    Timer_Waiting_Time_CONTROL_REG &= (uint32)~Timer_Waiting_Time_PWM_STOP_KILL_MASK;
+    Timer_Waiting_Time_CONTROL_REG |= ((uint32)((stopOnKillEnable & Timer_Waiting_Time_1BIT_MASK)  <<
+                                                         Timer_Waiting_Time_PWM_STOP_KILL_SHIFT));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetPWMDeadTime
+* Function Name: Timer_Waiting_Time_SetPWMDeadTime
 ********************************************************************************
 *
 * Summary:
@@ -549,22 +549,22 @@ void Timer_1_SetPWMStopOnKill(uint32 stopOnKillEnable)
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetPWMDeadTime(uint32 deadTime)
+void Timer_Waiting_Time_SetPWMDeadTime(uint32 deadTime)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    Timer_1_CONTROL_REG &= (uint32)~Timer_1_PRESCALER_MASK;
-    Timer_1_CONTROL_REG |= ((uint32)((deadTime & Timer_1_8BIT_MASK) <<
-                                                          Timer_1_PRESCALER_SHIFT));
+    Timer_Waiting_Time_CONTROL_REG &= (uint32)~Timer_Waiting_Time_PRESCALER_MASK;
+    Timer_Waiting_Time_CONTROL_REG |= ((uint32)((deadTime & Timer_Waiting_Time_8BIT_MASK) <<
+                                                          Timer_Waiting_Time_PRESCALER_SHIFT));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetPWMInvert
+* Function Name: Timer_Waiting_Time_SetPWMInvert
 ********************************************************************************
 *
 * Summary:
@@ -575,21 +575,21 @@ void Timer_1_SetPWMDeadTime(uint32 deadTime)
 * Parameters:
 *  mask: Mask of outputs to invert.
 *   Values:
-*         - Timer_1_INVERT_LINE   - Inverts the line output
-*         - Timer_1_INVERT_LINE_N - Inverts the line_n output
+*         - Timer_Waiting_Time_INVERT_LINE   - Inverts the line output
+*         - Timer_Waiting_Time_INVERT_LINE_N - Inverts the line_n output
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetPWMInvert(uint32 mask)
+void Timer_Waiting_Time_SetPWMInvert(uint32 mask)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    Timer_1_CONTROL_REG &= (uint32)~Timer_1_INV_OUT_MASK;
-    Timer_1_CONTROL_REG |= mask;
+    Timer_Waiting_Time_CONTROL_REG &= (uint32)~Timer_Waiting_Time_INV_OUT_MASK;
+    Timer_Waiting_Time_CONTROL_REG |= mask;
 
     CyExitCriticalSection(enableInterrupts);
 }
@@ -597,7 +597,7 @@ void Timer_1_SetPWMInvert(uint32 mask)
 
 
 /*******************************************************************************
-* Function Name: Timer_1_WriteCounter
+* Function Name: Timer_Waiting_Time_WriteCounter
 ********************************************************************************
 *
 * Summary:
@@ -612,14 +612,14 @@ void Timer_1_SetPWMInvert(uint32 mask)
 *  None
 *
 *******************************************************************************/
-void Timer_1_WriteCounter(uint32 count)
+void Timer_Waiting_Time_WriteCounter(uint32 count)
 {
-    Timer_1_COUNTER_REG = (count & Timer_1_16BIT_MASK);
+    Timer_Waiting_Time_COUNTER_REG = (count & Timer_Waiting_Time_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_ReadCounter
+* Function Name: Timer_Waiting_Time_ReadCounter
 ********************************************************************************
 *
 * Summary:
@@ -632,14 +632,14 @@ void Timer_1_WriteCounter(uint32 count)
 *  Current counter value
 *
 *******************************************************************************/
-uint32 Timer_1_ReadCounter(void)
+uint32 Timer_Waiting_Time_ReadCounter(void)
 {
-    return (Timer_1_COUNTER_REG & Timer_1_16BIT_MASK);
+    return (Timer_Waiting_Time_COUNTER_REG & Timer_Waiting_Time_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetCounterMode
+* Function Name: Timer_Waiting_Time_SetCounterMode
 ********************************************************************************
 *
 * Summary:
@@ -649,11 +649,11 @@ uint32 Timer_1_ReadCounter(void)
 * Parameters:
 *  counterMode: Enumerated counter type values
 *   Values:
-*     - Timer_1_COUNT_UP       - Counts up
-*     - Timer_1_COUNT_DOWN     - Counts down
-*     - Timer_1_COUNT_UPDOWN0  - Counts up and down. Terminal count
+*     - Timer_Waiting_Time_COUNT_UP       - Counts up
+*     - Timer_Waiting_Time_COUNT_DOWN     - Counts down
+*     - Timer_Waiting_Time_COUNT_UPDOWN0  - Counts up and down. Terminal count
 *                                         generated when counter reaches 0
-*     - Timer_1_COUNT_UPDOWN1  - Counts up and down. Terminal count
+*     - Timer_Waiting_Time_COUNT_UPDOWN1  - Counts up and down. Terminal count
 *                                         generated both when counter reaches 0
 *                                         and period
 *
@@ -661,21 +661,21 @@ uint32 Timer_1_ReadCounter(void)
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetCounterMode(uint32 counterMode)
+void Timer_Waiting_Time_SetCounterMode(uint32 counterMode)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    Timer_1_CONTROL_REG &= (uint32)~Timer_1_UPDOWN_MASK;
-    Timer_1_CONTROL_REG |= counterMode;
+    Timer_Waiting_Time_CONTROL_REG &= (uint32)~Timer_Waiting_Time_UPDOWN_MASK;
+    Timer_Waiting_Time_CONTROL_REG |= counterMode;
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_WritePeriod
+* Function Name: Timer_Waiting_Time_WritePeriod
 ********************************************************************************
 *
 * Summary:
@@ -690,14 +690,14 @@ void Timer_1_SetCounterMode(uint32 counterMode)
 *  None
 *
 *******************************************************************************/
-void Timer_1_WritePeriod(uint32 period)
+void Timer_Waiting_Time_WritePeriod(uint32 period)
 {
-    Timer_1_PERIOD_REG = (period & Timer_1_16BIT_MASK);
+    Timer_Waiting_Time_PERIOD_REG = (period & Timer_Waiting_Time_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_ReadPeriod
+* Function Name: Timer_Waiting_Time_ReadPeriod
 ********************************************************************************
 *
 * Summary:
@@ -710,14 +710,14 @@ void Timer_1_WritePeriod(uint32 period)
 *  Period value
 *
 *******************************************************************************/
-uint32 Timer_1_ReadPeriod(void)
+uint32 Timer_Waiting_Time_ReadPeriod(void)
 {
-    return (Timer_1_PERIOD_REG & Timer_1_16BIT_MASK);
+    return (Timer_Waiting_Time_PERIOD_REG & Timer_Waiting_Time_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetCompareSwap
+* Function Name: Timer_Waiting_Time_SetCompareSwap
 ********************************************************************************
 *
 * Summary:
@@ -736,21 +736,21 @@ uint32 Timer_1_ReadPeriod(void)
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetCompareSwap(uint32 swapEnable)
+void Timer_Waiting_Time_SetCompareSwap(uint32 swapEnable)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    Timer_1_CONTROL_REG &= (uint32)~Timer_1_RELOAD_CC_MASK;
-    Timer_1_CONTROL_REG |= (swapEnable & Timer_1_1BIT_MASK);
+    Timer_Waiting_Time_CONTROL_REG &= (uint32)~Timer_Waiting_Time_RELOAD_CC_MASK;
+    Timer_Waiting_Time_CONTROL_REG |= (swapEnable & Timer_Waiting_Time_1BIT_MASK);
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_WritePeriodBuf
+* Function Name: Timer_Waiting_Time_WritePeriodBuf
 ********************************************************************************
 *
 * Summary:
@@ -763,14 +763,14 @@ void Timer_1_SetCompareSwap(uint32 swapEnable)
 *  None
 *
 *******************************************************************************/
-void Timer_1_WritePeriodBuf(uint32 periodBuf)
+void Timer_Waiting_Time_WritePeriodBuf(uint32 periodBuf)
 {
-    Timer_1_PERIOD_BUF_REG = (periodBuf & Timer_1_16BIT_MASK);
+    Timer_Waiting_Time_PERIOD_BUF_REG = (periodBuf & Timer_Waiting_Time_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_ReadPeriodBuf
+* Function Name: Timer_Waiting_Time_ReadPeriodBuf
 ********************************************************************************
 *
 * Summary:
@@ -783,14 +783,14 @@ void Timer_1_WritePeriodBuf(uint32 periodBuf)
 *  Period value
 *
 *******************************************************************************/
-uint32 Timer_1_ReadPeriodBuf(void)
+uint32 Timer_Waiting_Time_ReadPeriodBuf(void)
 {
-    return (Timer_1_PERIOD_BUF_REG & Timer_1_16BIT_MASK);
+    return (Timer_Waiting_Time_PERIOD_BUF_REG & Timer_Waiting_Time_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetPeriodSwap
+* Function Name: Timer_Waiting_Time_SetPeriodSwap
 ********************************************************************************
 *
 * Summary:
@@ -809,22 +809,22 @@ uint32 Timer_1_ReadPeriodBuf(void)
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetPeriodSwap(uint32 swapEnable)
+void Timer_Waiting_Time_SetPeriodSwap(uint32 swapEnable)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    Timer_1_CONTROL_REG &= (uint32)~Timer_1_RELOAD_PERIOD_MASK;
-    Timer_1_CONTROL_REG |= ((uint32)((swapEnable & Timer_1_1BIT_MASK) <<
-                                                            Timer_1_RELOAD_PERIOD_SHIFT));
+    Timer_Waiting_Time_CONTROL_REG &= (uint32)~Timer_Waiting_Time_RELOAD_PERIOD_MASK;
+    Timer_Waiting_Time_CONTROL_REG |= ((uint32)((swapEnable & Timer_Waiting_Time_1BIT_MASK) <<
+                                                            Timer_Waiting_Time_RELOAD_PERIOD_SHIFT));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_WriteCompare
+* Function Name: Timer_Waiting_Time_WriteCompare
 ********************************************************************************
 *
 * Summary:
@@ -846,20 +846,20 @@ void Timer_1_SetPeriodSwap(uint32 swapEnable)
 *  compare value in the Down counting mode (except 0xFFFFu).
 *
 *******************************************************************************/
-void Timer_1_WriteCompare(uint32 compare)
+void Timer_Waiting_Time_WriteCompare(uint32 compare)
 {
-    #if (Timer_1_CY_TCPWM_4000)
+    #if (Timer_Waiting_Time_CY_TCPWM_4000)
         uint32 currentMode;
-    #endif /* (Timer_1_CY_TCPWM_4000) */
+    #endif /* (Timer_Waiting_Time_CY_TCPWM_4000) */
 
-    #if (Timer_1_CY_TCPWM_4000)
-        currentMode = ((Timer_1_CONTROL_REG & Timer_1_UPDOWN_MASK) >> Timer_1_UPDOWN_SHIFT);
+    #if (Timer_Waiting_Time_CY_TCPWM_4000)
+        currentMode = ((Timer_Waiting_Time_CONTROL_REG & Timer_Waiting_Time_UPDOWN_MASK) >> Timer_Waiting_Time_UPDOWN_SHIFT);
 
-        if (((uint32)Timer_1__COUNT_DOWN == currentMode) && (0xFFFFu != compare))
+        if (((uint32)Timer_Waiting_Time__COUNT_DOWN == currentMode) && (0xFFFFu != compare))
         {
             compare++;
         }
-        else if (((uint32)Timer_1__COUNT_UP == currentMode) && (0u != compare))
+        else if (((uint32)Timer_Waiting_Time__COUNT_UP == currentMode) && (0u != compare))
         {
             compare--;
         }
@@ -868,14 +868,14 @@ void Timer_1_WriteCompare(uint32 compare)
         }
         
     
-    #endif /* (Timer_1_CY_TCPWM_4000) */
+    #endif /* (Timer_Waiting_Time_CY_TCPWM_4000) */
     
-    Timer_1_COMP_CAP_REG = (compare & Timer_1_16BIT_MASK);
+    Timer_Waiting_Time_COMP_CAP_REG = (compare & Timer_Waiting_Time_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_ReadCompare
+* Function Name: Timer_Waiting_Time_ReadCompare
 ********************************************************************************
 *
 * Summary:
@@ -897,23 +897,23 @@ void Timer_1_WriteCompare(uint32 compare)
 *  Down counting mode (except 0x0u).
 *
 *******************************************************************************/
-uint32 Timer_1_ReadCompare(void)
+uint32 Timer_Waiting_Time_ReadCompare(void)
 {
-    #if (Timer_1_CY_TCPWM_4000)
+    #if (Timer_Waiting_Time_CY_TCPWM_4000)
         uint32 currentMode;
         uint32 regVal;
-    #endif /* (Timer_1_CY_TCPWM_4000) */
+    #endif /* (Timer_Waiting_Time_CY_TCPWM_4000) */
 
-    #if (Timer_1_CY_TCPWM_4000)
-        currentMode = ((Timer_1_CONTROL_REG & Timer_1_UPDOWN_MASK) >> Timer_1_UPDOWN_SHIFT);
+    #if (Timer_Waiting_Time_CY_TCPWM_4000)
+        currentMode = ((Timer_Waiting_Time_CONTROL_REG & Timer_Waiting_Time_UPDOWN_MASK) >> Timer_Waiting_Time_UPDOWN_SHIFT);
         
-        regVal = Timer_1_COMP_CAP_REG;
+        regVal = Timer_Waiting_Time_COMP_CAP_REG;
         
-        if (((uint32)Timer_1__COUNT_DOWN == currentMode) && (0u != regVal))
+        if (((uint32)Timer_Waiting_Time__COUNT_DOWN == currentMode) && (0u != regVal))
         {
             regVal--;
         }
-        else if (((uint32)Timer_1__COUNT_UP == currentMode) && (0xFFFFu != regVal))
+        else if (((uint32)Timer_Waiting_Time__COUNT_UP == currentMode) && (0xFFFFu != regVal))
         {
             regVal++;
         }
@@ -921,15 +921,15 @@ uint32 Timer_1_ReadCompare(void)
         {
         }
 
-        return (regVal & Timer_1_16BIT_MASK);
+        return (regVal & Timer_Waiting_Time_16BIT_MASK);
     #else
-        return (Timer_1_COMP_CAP_REG & Timer_1_16BIT_MASK);
-    #endif /* (Timer_1_CY_TCPWM_4000) */
+        return (Timer_Waiting_Time_COMP_CAP_REG & Timer_Waiting_Time_16BIT_MASK);
+    #endif /* (Timer_Waiting_Time_CY_TCPWM_4000) */
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_WriteCompareBuf
+* Function Name: Timer_Waiting_Time_WriteCompareBuf
 ********************************************************************************
 *
 * Summary:
@@ -951,34 +951,34 @@ uint32 Timer_1_ReadCompare(void)
 *  compare value in the Down counting mode (except 0xFFFFu).
 *
 *******************************************************************************/
-void Timer_1_WriteCompareBuf(uint32 compareBuf)
+void Timer_Waiting_Time_WriteCompareBuf(uint32 compareBuf)
 {
-    #if (Timer_1_CY_TCPWM_4000)
+    #if (Timer_Waiting_Time_CY_TCPWM_4000)
         uint32 currentMode;
-    #endif /* (Timer_1_CY_TCPWM_4000) */
+    #endif /* (Timer_Waiting_Time_CY_TCPWM_4000) */
 
-    #if (Timer_1_CY_TCPWM_4000)
-        currentMode = ((Timer_1_CONTROL_REG & Timer_1_UPDOWN_MASK) >> Timer_1_UPDOWN_SHIFT);
+    #if (Timer_Waiting_Time_CY_TCPWM_4000)
+        currentMode = ((Timer_Waiting_Time_CONTROL_REG & Timer_Waiting_Time_UPDOWN_MASK) >> Timer_Waiting_Time_UPDOWN_SHIFT);
 
-        if (((uint32)Timer_1__COUNT_DOWN == currentMode) && (0xFFFFu != compareBuf))
+        if (((uint32)Timer_Waiting_Time__COUNT_DOWN == currentMode) && (0xFFFFu != compareBuf))
         {
             compareBuf++;
         }
-        else if (((uint32)Timer_1__COUNT_UP == currentMode) && (0u != compareBuf))
+        else if (((uint32)Timer_Waiting_Time__COUNT_UP == currentMode) && (0u != compareBuf))
         {
             compareBuf --;
         }
         else
         {
         }
-    #endif /* (Timer_1_CY_TCPWM_4000) */
+    #endif /* (Timer_Waiting_Time_CY_TCPWM_4000) */
     
-    Timer_1_COMP_CAP_BUF_REG = (compareBuf & Timer_1_16BIT_MASK);
+    Timer_Waiting_Time_COMP_CAP_BUF_REG = (compareBuf & Timer_Waiting_Time_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_ReadCompareBuf
+* Function Name: Timer_Waiting_Time_ReadCompareBuf
 ********************************************************************************
 *
 * Summary:
@@ -997,23 +997,23 @@ void Timer_1_WriteCompareBuf(uint32 compareBuf)
 *  Down counting mode (except 0x0u).
 *
 *******************************************************************************/
-uint32 Timer_1_ReadCompareBuf(void)
+uint32 Timer_Waiting_Time_ReadCompareBuf(void)
 {
-    #if (Timer_1_CY_TCPWM_4000)
+    #if (Timer_Waiting_Time_CY_TCPWM_4000)
         uint32 currentMode;
         uint32 regVal;
-    #endif /* (Timer_1_CY_TCPWM_4000) */
+    #endif /* (Timer_Waiting_Time_CY_TCPWM_4000) */
 
-    #if (Timer_1_CY_TCPWM_4000)
-        currentMode = ((Timer_1_CONTROL_REG & Timer_1_UPDOWN_MASK) >> Timer_1_UPDOWN_SHIFT);
+    #if (Timer_Waiting_Time_CY_TCPWM_4000)
+        currentMode = ((Timer_Waiting_Time_CONTROL_REG & Timer_Waiting_Time_UPDOWN_MASK) >> Timer_Waiting_Time_UPDOWN_SHIFT);
 
-        regVal = Timer_1_COMP_CAP_BUF_REG;
+        regVal = Timer_Waiting_Time_COMP_CAP_BUF_REG;
         
-        if (((uint32)Timer_1__COUNT_DOWN == currentMode) && (0u != regVal))
+        if (((uint32)Timer_Waiting_Time__COUNT_DOWN == currentMode) && (0u != regVal))
         {
             regVal--;
         }
-        else if (((uint32)Timer_1__COUNT_UP == currentMode) && (0xFFFFu != regVal))
+        else if (((uint32)Timer_Waiting_Time__COUNT_UP == currentMode) && (0xFFFFu != regVal))
         {
             regVal++;
         }
@@ -1021,15 +1021,15 @@ uint32 Timer_1_ReadCompareBuf(void)
         {
         }
 
-        return (regVal & Timer_1_16BIT_MASK);
+        return (regVal & Timer_Waiting_Time_16BIT_MASK);
     #else
-        return (Timer_1_COMP_CAP_BUF_REG & Timer_1_16BIT_MASK);
-    #endif /* (Timer_1_CY_TCPWM_4000) */
+        return (Timer_Waiting_Time_COMP_CAP_BUF_REG & Timer_Waiting_Time_16BIT_MASK);
+    #endif /* (Timer_Waiting_Time_CY_TCPWM_4000) */
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_ReadCapture
+* Function Name: Timer_Waiting_Time_ReadCapture
 ********************************************************************************
 *
 * Summary:
@@ -1043,14 +1043,14 @@ uint32 Timer_1_ReadCompareBuf(void)
 *  Capture value
 *
 *******************************************************************************/
-uint32 Timer_1_ReadCapture(void)
+uint32 Timer_Waiting_Time_ReadCapture(void)
 {
-    return (Timer_1_COMP_CAP_REG & Timer_1_16BIT_MASK);
+    return (Timer_Waiting_Time_COMP_CAP_REG & Timer_Waiting_Time_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_ReadCaptureBuf
+* Function Name: Timer_Waiting_Time_ReadCaptureBuf
 ********************************************************************************
 *
 * Summary:
@@ -1064,14 +1064,14 @@ uint32 Timer_1_ReadCapture(void)
 *  Capture buffer value
 *
 *******************************************************************************/
-uint32 Timer_1_ReadCaptureBuf(void)
+uint32 Timer_Waiting_Time_ReadCaptureBuf(void)
 {
-    return (Timer_1_COMP_CAP_BUF_REG & Timer_1_16BIT_MASK);
+    return (Timer_Waiting_Time_COMP_CAP_BUF_REG & Timer_Waiting_Time_16BIT_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetCaptureMode
+* Function Name: Timer_Waiting_Time_SetCaptureMode
 ********************************************************************************
 *
 * Summary:
@@ -1082,30 +1082,30 @@ uint32 Timer_1_ReadCaptureBuf(void)
 * Parameters:
 *  triggerMode: Enumerated trigger mode value
 *   Values:
-*     - Timer_1_TRIG_LEVEL     - Level
-*     - Timer_1_TRIG_RISING    - Rising edge
-*     - Timer_1_TRIG_FALLING   - Falling edge
-*     - Timer_1_TRIG_BOTH      - Both rising and falling edge
+*     - Timer_Waiting_Time_TRIG_LEVEL     - Level
+*     - Timer_Waiting_Time_TRIG_RISING    - Rising edge
+*     - Timer_Waiting_Time_TRIG_FALLING   - Falling edge
+*     - Timer_Waiting_Time_TRIG_BOTH      - Both rising and falling edge
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetCaptureMode(uint32 triggerMode)
+void Timer_Waiting_Time_SetCaptureMode(uint32 triggerMode)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    Timer_1_TRIG_CONTROL1_REG &= (uint32)~Timer_1_CAPTURE_MASK;
-    Timer_1_TRIG_CONTROL1_REG |= triggerMode;
+    Timer_Waiting_Time_TRIG_CONTROL1_REG &= (uint32)~Timer_Waiting_Time_CAPTURE_MASK;
+    Timer_Waiting_Time_TRIG_CONTROL1_REG |= triggerMode;
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetReloadMode
+* Function Name: Timer_Waiting_Time_SetReloadMode
 ********************************************************************************
 *
 * Summary:
@@ -1115,30 +1115,30 @@ void Timer_1_SetCaptureMode(uint32 triggerMode)
 * Parameters:
 *  triggerMode: Enumerated trigger mode value
 *   Values:
-*     - Timer_1_TRIG_LEVEL     - Level
-*     - Timer_1_TRIG_RISING    - Rising edge
-*     - Timer_1_TRIG_FALLING   - Falling edge
-*     - Timer_1_TRIG_BOTH      - Both rising and falling edge
+*     - Timer_Waiting_Time_TRIG_LEVEL     - Level
+*     - Timer_Waiting_Time_TRIG_RISING    - Rising edge
+*     - Timer_Waiting_Time_TRIG_FALLING   - Falling edge
+*     - Timer_Waiting_Time_TRIG_BOTH      - Both rising and falling edge
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetReloadMode(uint32 triggerMode)
+void Timer_Waiting_Time_SetReloadMode(uint32 triggerMode)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    Timer_1_TRIG_CONTROL1_REG &= (uint32)~Timer_1_RELOAD_MASK;
-    Timer_1_TRIG_CONTROL1_REG |= ((uint32)(triggerMode << Timer_1_RELOAD_SHIFT));
+    Timer_Waiting_Time_TRIG_CONTROL1_REG &= (uint32)~Timer_Waiting_Time_RELOAD_MASK;
+    Timer_Waiting_Time_TRIG_CONTROL1_REG |= ((uint32)(triggerMode << Timer_Waiting_Time_RELOAD_SHIFT));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetStartMode
+* Function Name: Timer_Waiting_Time_SetStartMode
 ********************************************************************************
 *
 * Summary:
@@ -1148,30 +1148,30 @@ void Timer_1_SetReloadMode(uint32 triggerMode)
 * Parameters:
 *  triggerMode: Enumerated trigger mode value
 *   Values:
-*     - Timer_1_TRIG_LEVEL     - Level
-*     - Timer_1_TRIG_RISING    - Rising edge
-*     - Timer_1_TRIG_FALLING   - Falling edge
-*     - Timer_1_TRIG_BOTH      - Both rising and falling edge
+*     - Timer_Waiting_Time_TRIG_LEVEL     - Level
+*     - Timer_Waiting_Time_TRIG_RISING    - Rising edge
+*     - Timer_Waiting_Time_TRIG_FALLING   - Falling edge
+*     - Timer_Waiting_Time_TRIG_BOTH      - Both rising and falling edge
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetStartMode(uint32 triggerMode)
+void Timer_Waiting_Time_SetStartMode(uint32 triggerMode)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    Timer_1_TRIG_CONTROL1_REG &= (uint32)~Timer_1_START_MASK;
-    Timer_1_TRIG_CONTROL1_REG |= ((uint32)(triggerMode << Timer_1_START_SHIFT));
+    Timer_Waiting_Time_TRIG_CONTROL1_REG &= (uint32)~Timer_Waiting_Time_START_MASK;
+    Timer_Waiting_Time_TRIG_CONTROL1_REG |= ((uint32)(triggerMode << Timer_Waiting_Time_START_SHIFT));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetStopMode
+* Function Name: Timer_Waiting_Time_SetStopMode
 ********************************************************************************
 *
 * Summary:
@@ -1180,30 +1180,30 @@ void Timer_1_SetStartMode(uint32 triggerMode)
 * Parameters:
 *  triggerMode: Enumerated trigger mode value
 *   Values:
-*     - Timer_1_TRIG_LEVEL     - Level
-*     - Timer_1_TRIG_RISING    - Rising edge
-*     - Timer_1_TRIG_FALLING   - Falling edge
-*     - Timer_1_TRIG_BOTH      - Both rising and falling edge
+*     - Timer_Waiting_Time_TRIG_LEVEL     - Level
+*     - Timer_Waiting_Time_TRIG_RISING    - Rising edge
+*     - Timer_Waiting_Time_TRIG_FALLING   - Falling edge
+*     - Timer_Waiting_Time_TRIG_BOTH      - Both rising and falling edge
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetStopMode(uint32 triggerMode)
+void Timer_Waiting_Time_SetStopMode(uint32 triggerMode)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    Timer_1_TRIG_CONTROL1_REG &= (uint32)~Timer_1_STOP_MASK;
-    Timer_1_TRIG_CONTROL1_REG |= ((uint32)(triggerMode << Timer_1_STOP_SHIFT));
+    Timer_Waiting_Time_TRIG_CONTROL1_REG &= (uint32)~Timer_Waiting_Time_STOP_MASK;
+    Timer_Waiting_Time_TRIG_CONTROL1_REG |= ((uint32)(triggerMode << Timer_Waiting_Time_STOP_SHIFT));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetCountMode
+* Function Name: Timer_Waiting_Time_SetCountMode
 ********************************************************************************
 *
 * Summary:
@@ -1213,30 +1213,30 @@ void Timer_1_SetStopMode(uint32 triggerMode)
 * Parameters:
 *  triggerMode: Enumerated trigger mode value
 *   Values:
-*     - Timer_1_TRIG_LEVEL     - Level
-*     - Timer_1_TRIG_RISING    - Rising edge
-*     - Timer_1_TRIG_FALLING   - Falling edge
-*     - Timer_1_TRIG_BOTH      - Both rising and falling edge
+*     - Timer_Waiting_Time_TRIG_LEVEL     - Level
+*     - Timer_Waiting_Time_TRIG_RISING    - Rising edge
+*     - Timer_Waiting_Time_TRIG_FALLING   - Falling edge
+*     - Timer_Waiting_Time_TRIG_BOTH      - Both rising and falling edge
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetCountMode(uint32 triggerMode)
+void Timer_Waiting_Time_SetCountMode(uint32 triggerMode)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    Timer_1_TRIG_CONTROL1_REG &= (uint32)~Timer_1_COUNT_MASK;
-    Timer_1_TRIG_CONTROL1_REG |= ((uint32)(triggerMode << Timer_1_COUNT_SHIFT));
+    Timer_Waiting_Time_TRIG_CONTROL1_REG &= (uint32)~Timer_Waiting_Time_COUNT_MASK;
+    Timer_Waiting_Time_TRIG_CONTROL1_REG |= ((uint32)(triggerMode << Timer_Waiting_Time_COUNT_SHIFT));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_TriggerCommand
+* Function Name: Timer_Waiting_Time_TriggerCommand
 ********************************************************************************
 *
 * Summary:
@@ -1253,33 +1253,33 @@ void Timer_1_SetCountMode(uint32 triggerMode)
 *  command: Enumerated command values. Capture command only applicable for
 *           Timer/Counter with Capture and PWM modes.
 *   Values:
-*     - Timer_1_CMD_CAPTURE    - Trigger Capture/Switch command
-*     - Timer_1_CMD_RELOAD     - Trigger Reload/Index command
-*     - Timer_1_CMD_STOP       - Trigger Stop/Kill command
-*     - Timer_1_CMD_START      - Trigger Start/phiB command
+*     - Timer_Waiting_Time_CMD_CAPTURE    - Trigger Capture/Switch command
+*     - Timer_Waiting_Time_CMD_RELOAD     - Trigger Reload/Index command
+*     - Timer_Waiting_Time_CMD_STOP       - Trigger Stop/Kill command
+*     - Timer_Waiting_Time_CMD_START      - Trigger Start/phiB command
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void Timer_1_TriggerCommand(uint32 mask, uint32 command)
+void Timer_Waiting_Time_TriggerCommand(uint32 mask, uint32 command)
 {
     uint8 enableInterrupts;
 
     enableInterrupts = CyEnterCriticalSection();
 
-    Timer_1_COMMAND_REG = ((uint32)(mask << command));
+    Timer_Waiting_Time_COMMAND_REG = ((uint32)(mask << command));
 
     CyExitCriticalSection(enableInterrupts);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_ReadStatus
+* Function Name: Timer_Waiting_Time_ReadStatus
 ********************************************************************************
 *
 * Summary:
-*  Reads the status of the Timer_1.
+*  Reads the status of the Timer_Waiting_Time.
 *
 * Parameters:
 *  None
@@ -1287,19 +1287,19 @@ void Timer_1_TriggerCommand(uint32 mask, uint32 command)
 * Return:
 *  Status
 *   Values:
-*     - Timer_1_STATUS_DOWN    - Set if counting down
-*     - Timer_1_STATUS_RUNNING - Set if counter is running
+*     - Timer_Waiting_Time_STATUS_DOWN    - Set if counting down
+*     - Timer_Waiting_Time_STATUS_RUNNING - Set if counter is running
 *
 *******************************************************************************/
-uint32 Timer_1_ReadStatus(void)
+uint32 Timer_Waiting_Time_ReadStatus(void)
 {
-    return ((Timer_1_STATUS_REG >> Timer_1_RUNNING_STATUS_SHIFT) |
-            (Timer_1_STATUS_REG & Timer_1_STATUS_DOWN));
+    return ((Timer_Waiting_Time_STATUS_REG >> Timer_Waiting_Time_RUNNING_STATUS_SHIFT) |
+            (Timer_Waiting_Time_STATUS_REG & Timer_Waiting_Time_STATUS_DOWN));
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetInterruptMode
+* Function Name: Timer_Waiting_Time_SetInterruptMode
 ********************************************************************************
 *
 * Summary:
@@ -1309,21 +1309,21 @@ uint32 Timer_1_ReadStatus(void)
 * Parameters:
 *   interruptMask: Mask of bits to be enabled
 *   Values:
-*     - Timer_1_INTR_MASK_TC       - Terminal count mask
-*     - Timer_1_INTR_MASK_CC_MATCH - Compare count / capture mask
+*     - Timer_Waiting_Time_INTR_MASK_TC       - Terminal count mask
+*     - Timer_Waiting_Time_INTR_MASK_CC_MATCH - Compare count / capture mask
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetInterruptMode(uint32 interruptMask)
+void Timer_Waiting_Time_SetInterruptMode(uint32 interruptMask)
 {
-    Timer_1_INTERRUPT_MASK_REG =  interruptMask;
+    Timer_Waiting_Time_INTERRUPT_MASK_REG =  interruptMask;
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_GetInterruptSourceMasked
+* Function Name: Timer_Waiting_Time_GetInterruptSourceMasked
 ********************************************************************************
 *
 * Summary:
@@ -1335,18 +1335,18 @@ void Timer_1_SetInterruptMode(uint32 interruptMask)
 * Return:
 *  Masked interrupt source
 *   Values:
-*     - Timer_1_INTR_MASK_TC       - Terminal count mask
-*     - Timer_1_INTR_MASK_CC_MATCH - Compare count / capture mask
+*     - Timer_Waiting_Time_INTR_MASK_TC       - Terminal count mask
+*     - Timer_Waiting_Time_INTR_MASK_CC_MATCH - Compare count / capture mask
 *
 *******************************************************************************/
-uint32 Timer_1_GetInterruptSourceMasked(void)
+uint32 Timer_Waiting_Time_GetInterruptSourceMasked(void)
 {
-    return (Timer_1_INTERRUPT_MASKED_REG);
+    return (Timer_Waiting_Time_INTERRUPT_MASKED_REG);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_GetInterruptSource
+* Function Name: Timer_Waiting_Time_GetInterruptSource
 ********************************************************************************
 *
 * Summary:
@@ -1358,18 +1358,18 @@ uint32 Timer_1_GetInterruptSourceMasked(void)
 * Return:
 *  Interrupt request value
 *   Values:
-*     - Timer_1_INTR_MASK_TC       - Terminal count mask
-*     - Timer_1_INTR_MASK_CC_MATCH - Compare count / capture mask
+*     - Timer_Waiting_Time_INTR_MASK_TC       - Terminal count mask
+*     - Timer_Waiting_Time_INTR_MASK_CC_MATCH - Compare count / capture mask
 *
 *******************************************************************************/
-uint32 Timer_1_GetInterruptSource(void)
+uint32 Timer_Waiting_Time_GetInterruptSource(void)
 {
-    return (Timer_1_INTERRUPT_REQ_REG);
+    return (Timer_Waiting_Time_INTERRUPT_REQ_REG);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_ClearInterrupt
+* Function Name: Timer_Waiting_Time_ClearInterrupt
 ********************************************************************************
 *
 * Summary:
@@ -1378,21 +1378,21 @@ uint32 Timer_1_GetInterruptSource(void)
 * Parameters:
 *   interruptMask: Mask of interrupts to clear
 *   Values:
-*     - Timer_1_INTR_MASK_TC       - Terminal count mask
-*     - Timer_1_INTR_MASK_CC_MATCH - Compare count / capture mask
+*     - Timer_Waiting_Time_INTR_MASK_TC       - Terminal count mask
+*     - Timer_Waiting_Time_INTR_MASK_CC_MATCH - Compare count / capture mask
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void Timer_1_ClearInterrupt(uint32 interruptMask)
+void Timer_Waiting_Time_ClearInterrupt(uint32 interruptMask)
 {
-    Timer_1_INTERRUPT_REQ_REG = interruptMask;
+    Timer_Waiting_Time_INTERRUPT_REQ_REG = interruptMask;
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SetInterrupt
+* Function Name: Timer_Waiting_Time_SetInterrupt
 ********************************************************************************
 *
 * Summary:
@@ -1401,16 +1401,16 @@ void Timer_1_ClearInterrupt(uint32 interruptMask)
 * Parameters:
 *   interruptMask: Mask of interrupts to set
 *   Values:
-*     - Timer_1_INTR_MASK_TC       - Terminal count mask
-*     - Timer_1_INTR_MASK_CC_MATCH - Compare count / capture mask
+*     - Timer_Waiting_Time_INTR_MASK_TC       - Terminal count mask
+*     - Timer_Waiting_Time_INTR_MASK_CC_MATCH - Compare count / capture mask
 *
 * Return:
 *  None
 *
 *******************************************************************************/
-void Timer_1_SetInterrupt(uint32 interruptMask)
+void Timer_Waiting_Time_SetInterrupt(uint32 interruptMask)
 {
-    Timer_1_INTERRUPT_SET_REG = interruptMask;
+    Timer_Waiting_Time_INTERRUPT_SET_REG = interruptMask;
 }
 
 

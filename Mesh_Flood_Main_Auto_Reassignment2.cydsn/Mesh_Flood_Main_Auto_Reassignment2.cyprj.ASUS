@@ -11,160 +11,32 @@
 <CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256 type_name="CyDesigner.Common.ProjMgmt.Model.CyConfigDependencies" version="1">
 <dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" xml_contents_version="2">
 <CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
-<file name=".\CortexM0\ARM_GCC_541\Debug\utils.o">
-<dep name=".\Generated_Source\PSoC4\BLE.h" />
-<dep name=".\Generated_Source\PSoC4\BLE_HAL_PVT.h" />
-<dep name=".\Generated_Source\PSoC4\BLE_STACK_PVT.h" />
-<dep name=".\Generated_Source\PSoC4\BLE_Stack.h" />
-<dep name=".\Generated_Source\PSoC4\BLE_StackGap.h" />
-<dep name=".\Generated_Source\PSoC4\BLE_StackGatt.h" />
-<dep name=".\Generated_Source\PSoC4\BLE_StackGattClient.h" />
-<dep name=".\Generated_Source\PSoC4\BLE_StackGattDb.h" />
-<dep name=".\Generated_Source\PSoC4\BLE_StackGattServer.h" />
-<dep name=".\Generated_Source\PSoC4\BLE_StackHostMain.h" />
-<dep name=".\Generated_Source\PSoC4\BLE_StackL2cap.h" />
-<dep name=".\Generated_Source\PSoC4\BLE_bless_isr.h" />
-<dep name=".\Generated_Source\PSoC4\BLE_custom.h" />
-<dep name=".\Generated_Source\PSoC4\BLE_eventHandler.h" />
-<dep name=".\Generated_Source\PSoC4\BLE_gatt.h" />
-<dep name=".\Generated_Source\PSoC4\BLUE.h" />
-<dep name=".\Generated_Source\PSoC4\BLUE_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Clock_1kHz.h" />
-<dep name=".\Generated_Source\PSoC4\CyDMA.h" />
-<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_Is_Free.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\GREEN.h" />
-<dep name=".\Generated_Source\PSoC4\GREEN_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\PrISM_1.h" />
-<dep name=".\Generated_Source\PSoC4\PrISM_2.h" />
-<dep name=".\Generated_Source\PSoC4\PrISM_Clock.h" />
-<dep name=".\Generated_Source\PSoC4\RED.h" />
-<dep name=".\Generated_Source\PSoC4\RED_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1_Clock.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1_isr.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_2.h" />
-<dep name=".\Generated_Source\PSoC4\UART.h" />
-<dep name=".\Generated_Source\PSoC4\UART_BOOT.h" />
-<dep name=".\Generated_Source\PSoC4\UART_PINS.h" />
-<dep name=".\Generated_Source\PSoC4\UART_PVT.h" />
-<dep name=".\Generated_Source\PSoC4\UART_SCBCLK.h" />
-<dep name=".\Generated_Source\PSoC4\UART_SPI_UART.h" />
-<dep name=".\Generated_Source\PSoC4\UART_SPI_UART_PVT.h" />
-<dep name=".\Generated_Source\PSoC4\UART_rx.h" />
-<dep name=".\Generated_Source\PSoC4\UART_rx_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\UART_tx.h" />
-<dep name=".\Generated_Source\PSoC4\UART_tx_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
-<dep name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
-<dep name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
-<dep name=".\Generated_Source\PSoC4\core_cm0.h" />
-<dep name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
-<dep name=".\Generated_Source\PSoC4\cyPm.h" />
-<dep name=".\Generated_Source\PSoC4\cy_em_eeprom.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free.c" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free.h" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
-<dep name=".\Generated_Source\PSoC4\cypins.h" />
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
-<dep name=".\Generated_Source\PSoC4\isr_Counter.h" />
-<dep name=".\Generated_Source\PSoC4\isr_WDT.h" />
-<dep name=".\Generated_Source\PSoC4\project.h" />
-<dep name=".\WDT.h" />
-<dep name=".\ble_process.h" />
-<dep name=".\debug.h" />
-<dep name=".\main.h" />
-<dep name=".\utils.c" />
-<dep name=".\utils.h" />
 </file>
-<file name=".\Generated_Source\PSoC4\BLE.h" />
-<file name=".\Generated_Source\PSoC4\BLE_HAL_PVT.h" />
-<file name=".\Generated_Source\PSoC4\BLE_STACK_PVT.h" />
-<file name=".\Generated_Source\PSoC4\BLE_Stack.h" />
-<file name=".\Generated_Source\PSoC4\BLE_StackGap.h" />
-<file name=".\Generated_Source\PSoC4\BLE_StackGatt.h" />
-<file name=".\Generated_Source\PSoC4\BLE_StackGattClient.h" />
-<file name=".\Generated_Source\PSoC4\BLE_StackGattDb.h" />
-<file name=".\Generated_Source\PSoC4\BLE_StackGattServer.h" />
-<file name=".\Generated_Source\PSoC4\BLE_StackHostMain.h" />
-<file name=".\Generated_Source\PSoC4\BLE_StackL2cap.h" />
-<file name=".\Generated_Source\PSoC4\BLE_bless_isr.h" />
-<file name=".\Generated_Source\PSoC4\BLE_custom.h" />
-<file name=".\Generated_Source\PSoC4\BLE_eventHandler.h" />
-<file name=".\Generated_Source\PSoC4\BLE_gatt.h" />
-<file name=".\Generated_Source\PSoC4\BLUE.h" />
-<file name=".\Generated_Source\PSoC4\BLUE_aliases.h" />
-<file name=".\Generated_Source\PSoC4\Clock_1kHz.h" />
-<file name=".\Generated_Source\PSoC4\CyDMA.h" />
-<file name=".\Generated_Source\PSoC4\CyFlash.h" />
 <file name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <file name=".\Generated_Source\PSoC4\CyLib.h" />
-<file name=".\Generated_Source\PSoC4\GREEN.h" />
-<file name=".\Generated_Source\PSoC4\GREEN_aliases.h" />
-<file name=".\Generated_Source\PSoC4\PrISM_1.h" />
-<file name=".\Generated_Source\PSoC4\PrISM_2.h" />
-<file name=".\Generated_Source\PSoC4\PrISM_Clock.h" />
-<file name=".\Generated_Source\PSoC4\RED.h" />
-<file name=".\Generated_Source\PSoC4\RED_aliases.h" />
-<file name=".\Generated_Source\PSoC4\Timer_1.h" />
-<file name=".\Generated_Source\PSoC4\Timer_1_Clock.h" />
-<file name=".\Generated_Source\PSoC4\Timer_1_isr.h" />
-<file name=".\Generated_Source\PSoC4\Timer_2.h" />
-<file name=".\Generated_Source\PSoC4\UART.h" />
-<file name=".\Generated_Source\PSoC4\UART_BOOT.h" />
-<file name=".\Generated_Source\PSoC4\UART_PINS.h" />
-<file name=".\Generated_Source\PSoC4\UART_PVT.h" />
-<file name=".\Generated_Source\PSoC4\UART_SCBCLK.h" />
-<file name=".\Generated_Source\PSoC4\UART_SPI_UART.h" />
-<file name=".\Generated_Source\PSoC4\UART_SPI_UART_PVT.h" />
-<file name=".\Generated_Source\PSoC4\UART_rx.h" />
-<file name=".\Generated_Source\PSoC4\UART_rx_aliases.h" />
-<file name=".\Generated_Source\PSoC4\UART_tx.h" />
-<file name=".\Generated_Source\PSoC4\UART_tx_aliases.h" />
-<file name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
-<file name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
-<file name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
-<file name=".\Generated_Source\PSoC4\core_cm0.h" />
-<file name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
-<file name=".\Generated_Source\PSoC4\cyPm.h" />
-<file name=".\Generated_Source\PSoC4\cy_em_eeprom.h" />
+<file name=".\Generated_Source\PSoC4\Timer_Is_Free.c" />
+<file name=".\Generated_Source\PSoC4\Timer_Is_Free.h" />
 <file name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<file name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
 <file name=".\Generated_Source\PSoC4\cyfitter.h" />
-<file name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
-<file name=".\Generated_Source\PSoC4\cypins.h" />
 <file name=".\Generated_Source\PSoC4\cytypes.h" />
-<file name=".\Generated_Source\PSoC4\isr_Counter.h" />
-<file name=".\Generated_Source\PSoC4\isr_WDT.h" />
-<file name=".\Generated_Source\PSoC4\project.h" />
-<file name=".\WDT.h" />
-<file name=".\ble_process.h" />
-<file name=".\debug.h" />
-<file name=".\main.h" />
-<file name=".\utils.c" />
-<file name=".\utils.h" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_1.o">
+<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_Is_Free_PM.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1.c" />
-<dep name=".\Generated_Source\PSoC4\Timer_1.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free_PM.c" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
-<file name=".\Generated_Source\PSoC4\Timer_1.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_1_PM.o">
-<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
-<dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1_PM.c" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-</file>
-<file name=".\Generated_Source\PSoC4\Timer_1_PM.c" />
+<file name=".\Generated_Source\PSoC4\Timer_Is_Free_PM.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\WDT.o">
 <dep name=".\Generated_Source\PSoC4\BLE.h" />
 <dep name=".\Generated_Source\PSoC4\BLE_HAL_PVT.h" />
@@ -183,19 +55,22 @@
 <dep name=".\Generated_Source\PSoC4\BLE_gatt.h" />
 <dep name=".\Generated_Source\PSoC4\BLUE.h" />
 <dep name=".\Generated_Source\PSoC4\BLUE_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Clock_1kHz.h" />
+<dep name=".\Generated_Source\PSoC4\Clock_Timer_Change_Color.h" />
+<dep name=".\Generated_Source\PSoC4\Clock_Waiting_Time.h" />
 <dep name=".\Generated_Source\PSoC4\CyDMA.h" />
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC4\GREEN.h" />
 <dep name=".\Generated_Source\PSoC4\GREEN_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Isr_Waiting_Time.h" />
 <dep name=".\Generated_Source\PSoC4\PrISM_1.h" />
 <dep name=".\Generated_Source\PSoC4\PrISM_2.h" />
 <dep name=".\Generated_Source\PSoC4\PrISM_Clock.h" />
 <dep name=".\Generated_Source\PSoC4\RED.h" />
 <dep name=".\Generated_Source\PSoC4\RED_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1_Clock.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1_isr.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_2.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Change_Color.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free_Clock.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free_isr.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Waiting_Time.h" />
 <dep name=".\Generated_Source\PSoC4\UART.h" />
 <dep name=".\Generated_Source\PSoC4\UART_BOOT.h" />
 <dep name=".\Generated_Source\PSoC4\UART_PINS.h" />
@@ -217,12 +92,12 @@
 <dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
 <dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\isr_Counter.h" />
+<dep name=".\Generated_Source\PSoC4\isr_Timer_Change_Color.h" />
 <dep name=".\Generated_Source\PSoC4\isr_WDT.h" />
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free.h" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
@@ -232,7 +107,68 @@
 <dep name=".\debug.h" />
 <dep name=".\main.h" />
 </file>
+<file name=".\Generated_Source\PSoC4\BLE.h" />
+<file name=".\Generated_Source\PSoC4\BLE_HAL_PVT.h" />
+<file name=".\Generated_Source\PSoC4\BLE_STACK_PVT.h" />
+<file name=".\Generated_Source\PSoC4\BLE_Stack.h" />
+<file name=".\Generated_Source\PSoC4\BLE_StackGap.h" />
+<file name=".\Generated_Source\PSoC4\BLE_StackGatt.h" />
+<file name=".\Generated_Source\PSoC4\BLE_StackGattClient.h" />
+<file name=".\Generated_Source\PSoC4\BLE_StackGattDb.h" />
+<file name=".\Generated_Source\PSoC4\BLE_StackGattServer.h" />
+<file name=".\Generated_Source\PSoC4\BLE_StackHostMain.h" />
+<file name=".\Generated_Source\PSoC4\BLE_StackL2cap.h" />
+<file name=".\Generated_Source\PSoC4\BLE_bless_isr.h" />
+<file name=".\Generated_Source\PSoC4\BLE_custom.h" />
+<file name=".\Generated_Source\PSoC4\BLE_eventHandler.h" />
+<file name=".\Generated_Source\PSoC4\BLE_gatt.h" />
+<file name=".\Generated_Source\PSoC4\BLUE.h" />
+<file name=".\Generated_Source\PSoC4\BLUE_aliases.h" />
+<file name=".\Generated_Source\PSoC4\Clock_Timer_Change_Color.h" />
+<file name=".\Generated_Source\PSoC4\Clock_Waiting_Time.h" />
+<file name=".\Generated_Source\PSoC4\CyDMA.h" />
+<file name=".\Generated_Source\PSoC4\CyFlash.h" />
+<file name=".\Generated_Source\PSoC4\GREEN.h" />
+<file name=".\Generated_Source\PSoC4\GREEN_aliases.h" />
+<file name=".\Generated_Source\PSoC4\Isr_Waiting_Time.h" />
+<file name=".\Generated_Source\PSoC4\PrISM_1.h" />
+<file name=".\Generated_Source\PSoC4\PrISM_2.h" />
+<file name=".\Generated_Source\PSoC4\PrISM_Clock.h" />
+<file name=".\Generated_Source\PSoC4\RED.h" />
+<file name=".\Generated_Source\PSoC4\RED_aliases.h" />
+<file name=".\Generated_Source\PSoC4\Timer_Change_Color.h" />
+<file name=".\Generated_Source\PSoC4\Timer_Is_Free_Clock.h" />
+<file name=".\Generated_Source\PSoC4\Timer_Is_Free_isr.h" />
+<file name=".\Generated_Source\PSoC4\Timer_Waiting_Time.h" />
+<file name=".\Generated_Source\PSoC4\UART.h" />
+<file name=".\Generated_Source\PSoC4\UART_BOOT.h" />
+<file name=".\Generated_Source\PSoC4\UART_PINS.h" />
+<file name=".\Generated_Source\PSoC4\UART_PVT.h" />
+<file name=".\Generated_Source\PSoC4\UART_SCBCLK.h" />
+<file name=".\Generated_Source\PSoC4\UART_SPI_UART.h" />
+<file name=".\Generated_Source\PSoC4\UART_SPI_UART_PVT.h" />
+<file name=".\Generated_Source\PSoC4\UART_rx.h" />
+<file name=".\Generated_Source\PSoC4\UART_rx_aliases.h" />
+<file name=".\Generated_Source\PSoC4\UART_tx.h" />
+<file name=".\Generated_Source\PSoC4\UART_tx_aliases.h" />
+<file name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
+<file name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
+<file name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
+<file name=".\Generated_Source\PSoC4\core_cm0.h" />
+<file name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
+<file name=".\Generated_Source\PSoC4\cyPm.h" />
+<file name=".\Generated_Source\PSoC4\cy_em_eeprom.h" />
+<file name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
+<file name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
+<file name=".\Generated_Source\PSoC4\cypins.h" />
+<file name=".\Generated_Source\PSoC4\isr_Timer_Change_Color.h" />
+<file name=".\Generated_Source\PSoC4\isr_WDT.h" />
+<file name=".\Generated_Source\PSoC4\project.h" />
 <file name=".\WDT.c" />
+<file name=".\WDT.h" />
+<file name=".\ble_process.h" />
+<file name=".\debug.h" />
+<file name=".\main.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\ble_process.o">
 <dep name=".\Generated_Source\PSoC4\BLE.h" />
 <dep name=".\Generated_Source\PSoC4\BLE_HAL_PVT.h" />
@@ -251,19 +187,22 @@
 <dep name=".\Generated_Source\PSoC4\BLE_gatt.h" />
 <dep name=".\Generated_Source\PSoC4\BLUE.h" />
 <dep name=".\Generated_Source\PSoC4\BLUE_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Clock_1kHz.h" />
+<dep name=".\Generated_Source\PSoC4\Clock_Timer_Change_Color.h" />
+<dep name=".\Generated_Source\PSoC4\Clock_Waiting_Time.h" />
 <dep name=".\Generated_Source\PSoC4\CyDMA.h" />
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC4\GREEN.h" />
 <dep name=".\Generated_Source\PSoC4\GREEN_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Isr_Waiting_Time.h" />
 <dep name=".\Generated_Source\PSoC4\PrISM_1.h" />
 <dep name=".\Generated_Source\PSoC4\PrISM_2.h" />
 <dep name=".\Generated_Source\PSoC4\PrISM_Clock.h" />
 <dep name=".\Generated_Source\PSoC4\RED.h" />
 <dep name=".\Generated_Source\PSoC4\RED_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1_Clock.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1_isr.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_2.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Change_Color.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free_Clock.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free_isr.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Waiting_Time.h" />
 <dep name=".\Generated_Source\PSoC4\UART.h" />
 <dep name=".\Generated_Source\PSoC4\UART_BOOT.h" />
 <dep name=".\Generated_Source\PSoC4\UART_PINS.h" />
@@ -285,12 +224,12 @@
 <dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
 <dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\isr_Counter.h" />
+<dep name=".\Generated_Source\PSoC4\isr_Timer_Change_Color.h" />
 <dep name=".\Generated_Source\PSoC4\isr_WDT.h" />
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free.h" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
@@ -302,6 +241,7 @@
 <dep name=".\utils.h" />
 </file>
 <file name=".\ble_process.c" />
+<file name=".\utils.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\customize.o">
 <dep name=".\Generated_Source\PSoC4\BLE.h" />
 <dep name=".\Generated_Source\PSoC4\BLE_HAL_PVT.h" />
@@ -320,19 +260,22 @@
 <dep name=".\Generated_Source\PSoC4\BLE_gatt.h" />
 <dep name=".\Generated_Source\PSoC4\BLUE.h" />
 <dep name=".\Generated_Source\PSoC4\BLUE_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Clock_1kHz.h" />
+<dep name=".\Generated_Source\PSoC4\Clock_Timer_Change_Color.h" />
+<dep name=".\Generated_Source\PSoC4\Clock_Waiting_Time.h" />
 <dep name=".\Generated_Source\PSoC4\CyDMA.h" />
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC4\GREEN.h" />
 <dep name=".\Generated_Source\PSoC4\GREEN_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Isr_Waiting_Time.h" />
 <dep name=".\Generated_Source\PSoC4\PrISM_1.h" />
 <dep name=".\Generated_Source\PSoC4\PrISM_2.h" />
 <dep name=".\Generated_Source\PSoC4\PrISM_Clock.h" />
 <dep name=".\Generated_Source\PSoC4\RED.h" />
 <dep name=".\Generated_Source\PSoC4\RED_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1_Clock.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1_isr.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_2.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Change_Color.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free_Clock.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free_isr.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Waiting_Time.h" />
 <dep name=".\Generated_Source\PSoC4\UART.h" />
 <dep name=".\Generated_Source\PSoC4\UART_BOOT.h" />
 <dep name=".\Generated_Source\PSoC4\UART_PINS.h" />
@@ -354,12 +297,12 @@
 <dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
 <dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\isr_Counter.h" />
+<dep name=".\Generated_Source\PSoC4\isr_Timer_Change_Color.h" />
 <dep name=".\Generated_Source\PSoC4\isr_WDT.h" />
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free.h" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
@@ -388,19 +331,22 @@
 <dep name=".\Generated_Source\PSoC4\BLE_gatt.h" />
 <dep name=".\Generated_Source\PSoC4\BLUE.h" />
 <dep name=".\Generated_Source\PSoC4\BLUE_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Clock_1kHz.h" />
+<dep name=".\Generated_Source\PSoC4\Clock_Timer_Change_Color.h" />
+<dep name=".\Generated_Source\PSoC4\Clock_Waiting_Time.h" />
 <dep name=".\Generated_Source\PSoC4\CyDMA.h" />
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC4\GREEN.h" />
 <dep name=".\Generated_Source\PSoC4\GREEN_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Isr_Waiting_Time.h" />
 <dep name=".\Generated_Source\PSoC4\PrISM_1.h" />
 <dep name=".\Generated_Source\PSoC4\PrISM_2.h" />
 <dep name=".\Generated_Source\PSoC4\PrISM_Clock.h" />
 <dep name=".\Generated_Source\PSoC4\RED.h" />
 <dep name=".\Generated_Source\PSoC4\RED_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1_Clock.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1_isr.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_2.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Change_Color.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free_Clock.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free_isr.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Waiting_Time.h" />
 <dep name=".\Generated_Source\PSoC4\UART.h" />
 <dep name=".\Generated_Source\PSoC4\UART_BOOT.h" />
 <dep name=".\Generated_Source\PSoC4\UART_PINS.h" />
@@ -422,12 +368,12 @@
 <dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
 <dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\isr_Counter.h" />
+<dep name=".\Generated_Source\PSoC4\isr_Timer_Change_Color.h" />
 <dep name=".\Generated_Source\PSoC4\isr_WDT.h" />
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free.h" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
@@ -456,19 +402,22 @@
 <dep name=".\Generated_Source\PSoC4\BLE_gatt.h" />
 <dep name=".\Generated_Source\PSoC4\BLUE.h" />
 <dep name=".\Generated_Source\PSoC4\BLUE_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Clock_1kHz.h" />
+<dep name=".\Generated_Source\PSoC4\Clock_Timer_Change_Color.h" />
+<dep name=".\Generated_Source\PSoC4\Clock_Waiting_Time.h" />
 <dep name=".\Generated_Source\PSoC4\CyDMA.h" />
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC4\GREEN.h" />
 <dep name=".\Generated_Source\PSoC4\GREEN_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Isr_Waiting_Time.h" />
 <dep name=".\Generated_Source\PSoC4\PrISM_1.h" />
 <dep name=".\Generated_Source\PSoC4\PrISM_2.h" />
 <dep name=".\Generated_Source\PSoC4\PrISM_Clock.h" />
 <dep name=".\Generated_Source\PSoC4\RED.h" />
 <dep name=".\Generated_Source\PSoC4\RED_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1_Clock.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1_isr.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_2.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Change_Color.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free_Clock.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free_isr.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Waiting_Time.h" />
 <dep name=".\Generated_Source\PSoC4\UART.h" />
 <dep name=".\Generated_Source\PSoC4\UART_BOOT.h" />
 <dep name=".\Generated_Source\PSoC4\UART_PINS.h" />
@@ -490,12 +439,12 @@
 <dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
 <dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\isr_Counter.h" />
+<dep name=".\Generated_Source\PSoC4\isr_Timer_Change_Color.h" />
 <dep name=".\Generated_Source\PSoC4\isr_WDT.h" />
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free.h" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
@@ -506,6 +455,78 @@
 <dep name=".\main.h" />
 </file>
 <file name=".\main.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\utils.o">
+<dep name=".\Generated_Source\PSoC4\BLE.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_HAL_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_STACK_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_Stack.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_StackGap.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_StackGatt.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_StackGattClient.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_StackGattDb.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_StackGattServer.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_StackHostMain.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_StackL2cap.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_bless_isr.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_custom.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_eventHandler.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_gatt.h" />
+<dep name=".\Generated_Source\PSoC4\BLUE.h" />
+<dep name=".\Generated_Source\PSoC4\BLUE_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Clock_Timer_Change_Color.h" />
+<dep name=".\Generated_Source\PSoC4\Clock_Waiting_Time.h" />
+<dep name=".\Generated_Source\PSoC4\CyDMA.h" />
+<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC4\GREEN.h" />
+<dep name=".\Generated_Source\PSoC4\GREEN_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Isr_Waiting_Time.h" />
+<dep name=".\Generated_Source\PSoC4\PrISM_1.h" />
+<dep name=".\Generated_Source\PSoC4\PrISM_2.h" />
+<dep name=".\Generated_Source\PSoC4\PrISM_Clock.h" />
+<dep name=".\Generated_Source\PSoC4\RED.h" />
+<dep name=".\Generated_Source\PSoC4\RED_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Change_Color.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free_Clock.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free_isr.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Waiting_Time.h" />
+<dep name=".\Generated_Source\PSoC4\UART.h" />
+<dep name=".\Generated_Source\PSoC4\UART_BOOT.h" />
+<dep name=".\Generated_Source\PSoC4\UART_PINS.h" />
+<dep name=".\Generated_Source\PSoC4\UART_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\UART_SCBCLK.h" />
+<dep name=".\Generated_Source\PSoC4\UART_SPI_UART.h" />
+<dep name=".\Generated_Source\PSoC4\UART_SPI_UART_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\UART_rx.h" />
+<dep name=".\Generated_Source\PSoC4\UART_rx_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\UART_tx.h" />
+<dep name=".\Generated_Source\PSoC4\UART_tx_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
+<dep name=".\Generated_Source\PSoC4\core_cm0.h" />
+<dep name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
+<dep name=".\Generated_Source\PSoC4\cyPm.h" />
+<dep name=".\Generated_Source\PSoC4\cy_em_eeprom.h" />
+<dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\isr_Timer_Change_Color.h" />
+<dep name=".\Generated_Source\PSoC4\isr_WDT.h" />
+<dep name=".\Generated_Source\PSoC4\project.h" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\WDT.h" />
+<dep name=".\ble_process.h" />
+<dep name=".\debug.h" />
+<dep name=".\main.h" />
+<dep name=".\utils.c" />
+<dep name=".\utils.h" />
+</file>
+<file name=".\utils.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\BLE.o">
 <dep name=".\Generated_Source\PSoC4\BLE.c" />
 <dep name=".\Generated_Source\PSoC4\BLE.h" />
@@ -677,14 +698,22 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\BLUE_PM.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\Clock_1kHz.o">
-<dep name=".\Generated_Source\PSoC4\Clock_1kHz.c" />
-<dep name=".\Generated_Source\PSoC4\Clock_1kHz.h" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Clock_Timer_Change_Color.o">
+<dep name=".\Generated_Source\PSoC4\Clock_Timer_Change_Color.c" />
+<dep name=".\Generated_Source\PSoC4\Clock_Timer_Change_Color.h" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
-<file name=".\Generated_Source\PSoC4\Clock_1kHz.c" />
+<file name=".\Generated_Source\PSoC4\Clock_Timer_Change_Color.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Clock_Waiting_Time.o">
+<dep name=".\Generated_Source\PSoC4\Clock_Waiting_Time.c" />
+<dep name=".\Generated_Source\PSoC4\Clock_Waiting_Time.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Clock_Waiting_Time.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\Cm0Start.o">
 <dep name=".\Generated_Source\PSoC4\Cm0Start.c" />
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
@@ -754,6 +783,16 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\GREEN_PM.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Isr_Waiting_Time.o">
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\Isr_Waiting_Time.c" />
+<dep name=".\Generated_Source\PSoC4\Isr_Waiting_Time.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Isr_Waiting_Time.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\PrISM_1.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -822,44 +861,64 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\RED_PM.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_1_Clock.o">
-<dep name=".\Generated_Source\PSoC4\Timer_1_Clock.c" />
-<dep name=".\Generated_Source\PSoC4\Timer_1_Clock.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-</file>
-<file name=".\Generated_Source\PSoC4\Timer_1_Clock.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_1_isr.o">
+<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_Change_Color.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_1_isr.c" />
-<dep name=".\Generated_Source\PSoC4\Timer_1_isr.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Change_Color.c" />
+<dep name=".\Generated_Source\PSoC4\Timer_Change_Color.h" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
-<file name=".\Generated_Source\PSoC4\Timer_1_isr.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_2.o">
+<file name=".\Generated_Source\PSoC4\Timer_Change_Color.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_Change_Color_PM.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_2.c" />
-<dep name=".\Generated_Source\PSoC4\Timer_2.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Change_Color.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Change_Color_PM.c" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
-<file name=".\Generated_Source\PSoC4\Timer_2.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_2_PM.o">
+<file name=".\Generated_Source\PSoC4\Timer_Change_Color_PM.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_Is_Free_Clock.o">
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free_Clock.c" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free_Clock.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Timer_Is_Free_Clock.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_Is_Free_isr.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_2.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_2_PM.c" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free_isr.c" />
+<dep name=".\Generated_Source\PSoC4\Timer_Is_Free_isr.h" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
-<file name=".\Generated_Source\PSoC4\Timer_2_PM.c" />
+<file name=".\Generated_Source\PSoC4\Timer_Is_Free_isr.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_Waiting_Time.o">
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Waiting_Time.c" />
+<dep name=".\Generated_Source\PSoC4\Timer_Waiting_Time.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Timer_Waiting_Time.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_Waiting_Time_PM.o">
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Waiting_Time.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Waiting_Time_PM.c" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Timer_Waiting_Time_PM.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\UART.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -1081,10 +1140,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\cyfitter_cfg.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\cymetadata.o">
-<dep name=".\Generated_Source\PSoC4\cymetadata.c" />
-</file>
-<file name=".\Generated_Source\PSoC4\cymetadata.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\cyutils.o">
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
@@ -1092,16 +1147,16 @@
 <dep name=".\Generated_Source\PSoC4\cyutils.c" />
 </file>
 <file name=".\Generated_Source\PSoC4\cyutils.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\isr_Counter.o">
+<file name=".\CortexM0\ARM_GCC_541\Debug\isr_Timer_Change_Color.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
-<dep name=".\Generated_Source\PSoC4\isr_Counter.c" />
-<dep name=".\Generated_Source\PSoC4\isr_Counter.h" />
+<dep name=".\Generated_Source\PSoC4\isr_Timer_Change_Color.c" />
+<dep name=".\Generated_Source\PSoC4\isr_Timer_Change_Color.h" />
 </file>
-<file name=".\Generated_Source\PSoC4\isr_Counter.c" />
+<file name=".\Generated_Source\PSoC4\isr_Timer_Change_Color.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\isr_WDT.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -1120,6 +1175,92 @@
 <file name=".\Generated_Source\PSoC4\CyBootAsmGnu.s" />
 <file name=".\Generated_Source\PSoC4\cydevicegnu_trm.inc" />
 <file name=".\Generated_Source\PSoC4\cyfittergnu.inc" />
+<file name=".\Generated_Source\PSoC4\Clock_1kHz.h" />
+<file name=".\Generated_Source\PSoC4\Timer_1.h" />
+<file name=".\Generated_Source\PSoC4\Timer_1_Clock.h" />
+<file name=".\Generated_Source\PSoC4\Timer_1_isr.h" />
+<file name=".\Generated_Source\PSoC4\Timer_2.h" />
+<file name=".\Generated_Source\PSoC4\isr_Counter.h" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_1.o">
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_1.c" />
+<dep name=".\Generated_Source\PSoC4\Timer_1.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Timer_1.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_1_PM.o">
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_1.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_1_PM.c" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Timer_1_PM.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Clock_1kHz.o">
+<dep name=".\Generated_Source\PSoC4\Clock_1kHz.c" />
+<dep name=".\Generated_Source\PSoC4\Clock_1kHz.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Clock_1kHz.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_1_Clock.o">
+<dep name=".\Generated_Source\PSoC4\Timer_1_Clock.c" />
+<dep name=".\Generated_Source\PSoC4\Timer_1_Clock.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Timer_1_Clock.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_1_isr.o">
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_1_isr.c" />
+<dep name=".\Generated_Source\PSoC4\Timer_1_isr.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Timer_1_isr.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_2.o">
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_2.c" />
+<dep name=".\Generated_Source\PSoC4\Timer_2.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Timer_2.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Timer_2_PM.o">
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_2.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_2_PM.c" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Timer_2_PM.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\cymetadata.o">
+<dep name=".\Generated_Source\PSoC4\cymetadata.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\cymetadata.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\isr_Counter.o">
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\isr_Counter.c" />
+<dep name=".\Generated_Source\PSoC4\isr_Counter.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\isr_Counter.c" />
 <file name=".\Generated_Source\PSoC4\PWM_1sWindow.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\PWM_1sWindow.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
@@ -1198,14 +1339,18 @@
 <dep name=".\CortexM0\ARM_GCC_541\Debug\CyDMA.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\CyLFClk.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\cy_em_eeprom.o" />
-<dep name=".\CortexM0\ARM_GCC_541\Debug\Clock_1kHz.o" />
-<dep name=".\CortexM0\ARM_GCC_541\Debug\isr_Counter.o" />
-<dep name=".\CortexM0\ARM_GCC_541\Debug\Timer_1.o" />
-<dep name=".\CortexM0\ARM_GCC_541\Debug\Timer_1_PM.o" />
-<dep name=".\CortexM0\ARM_GCC_541\Debug\Timer_2.o" />
-<dep name=".\CortexM0\ARM_GCC_541\Debug\Timer_2_PM.o" />
-<dep name=".\CortexM0\ARM_GCC_541\Debug\Timer_1_isr.o" />
-<dep name=".\CortexM0\ARM_GCC_541\Debug\Timer_1_Clock.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Timer_Is_Free.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Timer_Is_Free_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Timer_Is_Free_isr.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Timer_Is_Free_Clock.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Clock_Timer_Change_Color.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\isr_Timer_Change_Color.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Timer_Change_Color.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Timer_Change_Color_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Clock_Waiting_Time.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Timer_Waiting_Time.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Timer_Waiting_Time_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Isr_Waiting_Time.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_Main_Auto_Reassignment2.a" />
 </file>
 </CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021>
@@ -1278,6 +1423,18 @@
 <name_val_pair name="Generated_Source\PSoC4\Timer_2_PM.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
 <name_val_pair name="Generated_Source\PSoC4\Timer_1_isr.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
 <name_val_pair name="Generated_Source\PSoC4\Timer_1_Clock.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC4\Timer_Is_Free.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC4\Timer_Is_Free_PM.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC4\Timer_Is_Free_isr.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC4\Timer_Is_Free_Clock.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC4\Clock_Timer_Change_Color.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC4\isr_Timer_Change_Color.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC4\Timer_Change_Color.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC4\Timer_Change_Color_PM.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC4\Clock_Waiting_Time.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC4\Timer_Waiting_Time.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC4\Timer_Waiting_Time_PM.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC4\Isr_Waiting_Time.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
 </name>
 </genericCmdLineData>
 <codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\ASUS\AppData\Local\Cypress Semiconductor\PSoC Creator\4.2&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\Mesh_Flood_Main_Auto_Reassignment2.cyprj -d CY8C4248FLI-BL583 -s D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
@@ -1784,6 +1941,27 @@
 <v>Generated_Source\PSoC4\Timer_1_isr.h</v>
 <v>Generated_Source\PSoC4\Timer_1_Clock.c</v>
 <v>Generated_Source\PSoC4\Timer_1_Clock.h</v>
+<v>Generated_Source\PSoC4\Timer_Is_Free.c</v>
+<v>Generated_Source\PSoC4\Timer_Is_Free.h</v>
+<v>Generated_Source\PSoC4\Timer_Is_Free_PM.c</v>
+<v>Generated_Source\PSoC4\Timer_Is_Free_isr.c</v>
+<v>Generated_Source\PSoC4\Timer_Is_Free_isr.h</v>
+<v>Generated_Source\PSoC4\Timer_Is_Free_Clock.c</v>
+<v>Generated_Source\PSoC4\Timer_Is_Free_Clock.h</v>
+<v>Generated_Source\PSoC4\Clock_Timer_Change_Color.c</v>
+<v>Generated_Source\PSoC4\Clock_Timer_Change_Color.h</v>
+<v>Generated_Source\PSoC4\isr_Timer_Change_Color.c</v>
+<v>Generated_Source\PSoC4\isr_Timer_Change_Color.h</v>
+<v>Generated_Source\PSoC4\Timer_Change_Color.c</v>
+<v>Generated_Source\PSoC4\Timer_Change_Color.h</v>
+<v>Generated_Source\PSoC4\Timer_Change_Color_PM.c</v>
+<v>Generated_Source\PSoC4\Clock_Waiting_Time.c</v>
+<v>Generated_Source\PSoC4\Clock_Waiting_Time.h</v>
+<v>Generated_Source\PSoC4\Timer_Waiting_Time.c</v>
+<v>Generated_Source\PSoC4\Timer_Waiting_Time.h</v>
+<v>Generated_Source\PSoC4\Timer_Waiting_Time_PM.c</v>
+<v>Generated_Source\PSoC4\Isr_Waiting_Time.c</v>
+<v>Generated_Source\PSoC4\Isr_Waiting_Time.h</v>
 </gen_list>
 <warp_dep>
 <v>D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
@@ -1793,7 +1971,7 @@
 <v>D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="132547721284190749" />
+<deps_time v="132548775978595078" />
 <top_block v="TopDesign" />
 <last_generation v="1" />
 <pdl_path v="" />
@@ -1803,7 +1981,7 @@
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" v="132547734694452179" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" v="132548776010055425" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>
@@ -1811,8 +1989,6 @@
 <CyGuid_504337dd-7d07-4bc7-9057-90e60cf6c469 type_name="CyDesigner.Common.Debugger.CyBreakpointList" version="1">
 <debugger_breakpoint_list>
 <CyGuid_76464711-0ae1-4583-b869-f07a0403fc6e type_name="CyDesigner.Common.Debugger.CyFileLineBreakpoint" version="1" hitcount="0" condition="" enabled="True" hardware="True" temparary="False" filename=".\ble_process.c" linenumber="176" />
-<CyGuid_76464711-0ae1-4583-b869-f07a0403fc6e type_name="CyDesigner.Common.Debugger.CyFileLineBreakpoint" version="1" hitcount="0" condition="" enabled="True" hardware="True" temparary="False" filename=".\main.c" linenumber="207" />
-<CyGuid_76464711-0ae1-4583-b869-f07a0403fc6e type_name="CyDesigner.Common.Debugger.CyFileLineBreakpoint" version="1" hitcount="0" condition="" enabled="True" hardware="True" temparary="False" filename=".\main.c" linenumber="226" />
 </debugger_breakpoint_list>
 </CyGuid_504337dd-7d07-4bc7-9057-90e60cf6c469>
 </dataGuid>

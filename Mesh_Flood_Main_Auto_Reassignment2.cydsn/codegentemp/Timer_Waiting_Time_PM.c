@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: Timer_1_PM.c
+* File Name: Timer_Waiting_Time_PM.c
 * Version 2.10
 *
 * Description:
@@ -16,13 +16,13 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#include "Timer_1.h"
+#include "Timer_Waiting_Time.h"
 
-static Timer_1_BACKUP_STRUCT Timer_1_backup;
+static Timer_Waiting_Time_BACKUP_STRUCT Timer_Waiting_Time_backup;
 
 
 /*******************************************************************************
-* Function Name: Timer_1_SaveConfig
+* Function Name: Timer_Waiting_Time_SaveConfig
 ********************************************************************************
 *
 * Summary:
@@ -35,14 +35,14 @@ static Timer_1_BACKUP_STRUCT Timer_1_backup;
 *  None
 *
 *******************************************************************************/
-void Timer_1_SaveConfig(void)
+void Timer_Waiting_Time_SaveConfig(void)
 {
 
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_Sleep
+* Function Name: Timer_Waiting_Time_Sleep
 ********************************************************************************
 *
 * Summary:
@@ -55,24 +55,24 @@ void Timer_1_SaveConfig(void)
 *  None
 *
 *******************************************************************************/
-void Timer_1_Sleep(void)
+void Timer_Waiting_Time_Sleep(void)
 {
-    if(0u != (Timer_1_BLOCK_CONTROL_REG & Timer_1_MASK))
+    if(0u != (Timer_Waiting_Time_BLOCK_CONTROL_REG & Timer_Waiting_Time_MASK))
     {
-        Timer_1_backup.enableState = 1u;
+        Timer_Waiting_Time_backup.enableState = 1u;
     }
     else
     {
-        Timer_1_backup.enableState = 0u;
+        Timer_Waiting_Time_backup.enableState = 0u;
     }
 
-    Timer_1_Stop();
-    Timer_1_SaveConfig();
+    Timer_Waiting_Time_Stop();
+    Timer_Waiting_Time_SaveConfig();
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_RestoreConfig
+* Function Name: Timer_Waiting_Time_RestoreConfig
 ********************************************************************************
 *
 * Summary:
@@ -85,14 +85,14 @@ void Timer_1_Sleep(void)
 *  None
 *
 *******************************************************************************/
-void Timer_1_RestoreConfig(void)
+void Timer_Waiting_Time_RestoreConfig(void)
 {
 
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_Wakeup
+* Function Name: Timer_Waiting_Time_Wakeup
 ********************************************************************************
 *
 * Summary:
@@ -105,13 +105,13 @@ void Timer_1_RestoreConfig(void)
 *  None
 *
 *******************************************************************************/
-void Timer_1_Wakeup(void)
+void Timer_Waiting_Time_Wakeup(void)
 {
-    Timer_1_RestoreConfig();
+    Timer_Waiting_Time_RestoreConfig();
 
-    if(0u != Timer_1_backup.enableState)
+    if(0u != Timer_Waiting_Time_backup.enableState)
     {
-        Timer_1_Enable();
+        Timer_Waiting_Time_Enable();
     }
 }
 

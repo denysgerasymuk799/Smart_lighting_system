@@ -1,5 +1,5 @@
 -- Project:   Mesh_Flood_Main_Auto_Reassignment2
--- Generated: 01/10/2021 19:08:44
+-- Generated: 01/12/2021 00:26:34
 -- PSoC Creator  4.2
 
 ENTITY Mesh_Flood_Main_Auto_Reassignment2 IS
@@ -36,26 +36,34 @@ ARCHITECTURE __DEFAULT__ OF Mesh_Flood_Main_Auto_Reassignment2 IS
     SIGNAL ClockBlock_WCO : bit;
     SIGNAL GREEN(0)__PA : bit;
     SIGNAL Net_171 : bit;
-    SIGNAL Net_185_ff8 : bit;
-    ATTRIBUTE global_signal OF Net_185_ff8 : SIGNAL IS true;
+    SIGNAL Net_185_ff9 : bit;
+    ATTRIBUTE global_signal OF Net_185_ff9 : SIGNAL IS true;
     SIGNAL Net_193 : bit;
     SIGNAL Net_194 : bit;
     SIGNAL Net_195 : bit;
     SIGNAL Net_196 : bit;
     SIGNAL Net_197 : bit;
-    SIGNAL Net_238 : bit;
-    SIGNAL Net_239 : bit;
-    SIGNAL Net_240 : bit;
-    SIGNAL Net_241 : bit;
-    SIGNAL Net_242 : bit;
     SIGNAL Net_243_ff7 : bit;
     ATTRIBUTE global_signal OF Net_243_ff7 : SIGNAL IS true;
     SIGNAL Net_248 : bit;
+    SIGNAL Net_416 : bit;
+    SIGNAL Net_417 : bit;
+    SIGNAL Net_418 : bit;
+    SIGNAL Net_419 : bit;
+    SIGNAL Net_420 : bit;
+    SIGNAL Net_434 : bit;
+    SIGNAL Net_441 : bit;
+    SIGNAL Net_447 : bit;
+    SIGNAL Net_453_ff8 : bit;
+    ATTRIBUTE global_signal OF Net_453_ff8 : SIGNAL IS true;
+    SIGNAL Net_466 : bit;
+    SIGNAL Net_467 : bit;
+    SIGNAL Net_468 : bit;
+    SIGNAL Net_469 : bit;
+    SIGNAL Net_470 : bit;
     SIGNAL Net_60_digital : bit;
     ATTRIBUTE udbclken_assigned OF Net_60_digital : SIGNAL IS "True";
     ATTRIBUTE global_signal OF Net_60_digital : SIGNAL IS true;
-    SIGNAL Net_64 : bit;
-    SIGNAL Net_65 : bit;
     SIGNAL Net_69 : bit;
     SIGNAL Net_93 : bit;
     SIGNAL Net_96 : bit;
@@ -130,8 +138,8 @@ ARCHITECTURE __DEFAULT__ OF Mesh_Flood_Main_Auto_Reassignment2 IS
     ATTRIBUTE lib_model OF \PrISM_2:SyncCtl:ControlReg\ : LABEL IS "controlcell2";
     ATTRIBUTE lib_model OF \PrISM_2:sC8:PrISMdp:u0\ : LABEL IS "datapathcell2";
     ATTRIBUTE lib_model OF \PrISM_1:enable_final_reg\ : LABEL IS "macrocell2";
-    ATTRIBUTE lib_model OF Net_64 : LABEL IS "macrocell3";
-    ATTRIBUTE lib_model OF Net_65 : LABEL IS "macrocell4";
+    ATTRIBUTE lib_model OF Net_441 : LABEL IS "macrocell3";
+    ATTRIBUTE lib_model OF Net_434 : LABEL IS "macrocell4";
     ATTRIBUTE lib_model OF Net_69 : LABEL IS "macrocell5";
     ATTRIBUTE lib_model OF \PrISM_2:enable_final_reg\ : LABEL IS "macrocell6";
     COMPONENT controlcell
@@ -548,7 +556,8 @@ BEGIN
             ff_div_1 => \UART:Net_847_ff1\,
             udb_div_0 => dclk_to_genclk,
             ff_div_7 => Net_243_ff7,
-            ff_div_8 => Net_185_ff8);
+            ff_div_8 => Net_453_ff8,
+            ff_div_9 => Net_185_ff9);
 
     RED:logicalport
         GENERIC MAP(
@@ -632,7 +641,7 @@ BEGIN
         PORT MAP(
             pa_out => RED(0)__PA,
             oe => open,
-            pin_input => Net_64,
+            pin_input => Net_441,
             pad_out => RED(0)_PAD,
             pad_in => RED(0)_PAD,
             in_clock => open,
@@ -724,7 +733,7 @@ BEGIN
         PORT MAP(
             pa_out => GREEN(0)__PA,
             oe => open,
-            pin_input => Net_65,
+            pin_input => Net_434,
             pad_out => GREEN(0)_PAD,
             pad_in => GREEN(0)_PAD,
             in_clock => open,
@@ -1185,7 +1194,7 @@ BEGIN
             tr_tx_req => Net_99,
             tr_rx_req => Net_98);
 
-    isr_Counter:interrupt
+    isr_Timer_Change_Color:interrupt
         GENERIC MAP(
             int_type => "10",
             is_nmi => 0)
@@ -1193,11 +1202,11 @@ BEGIN
             interrupt => Net_171,
             clock => ClockBlock_HFCLK);
 
-    \Timer_2:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
+    \Timer_Change_Color:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
         GENERIC MAP(
             cy_registers => "")
         PORT MAP(
-            clock => Net_185_ff8,
+            clock => Net_185_ff9,
             capture => '0',
             count => '1',
             reload => '0',
@@ -1210,7 +1219,7 @@ BEGIN
             line_compl => Net_197,
             interrupt => Net_171);
 
-    \Timer_1:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
+    \Timer_Waiting_Time:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
         GENERIC MAP(
             cy_registers => "")
         PORT MAP(
@@ -1220,19 +1229,44 @@ BEGIN
             reload => '0',
             stop => '0',
             start => '0',
-            tr_underflow => Net_239,
-            tr_overflow => Net_238,
-            tr_compare_match => Net_240,
-            line => Net_241,
-            line_compl => Net_242,
+            tr_underflow => Net_417,
+            tr_overflow => Net_416,
+            tr_compare_match => Net_418,
+            line => Net_419,
+            line_compl => Net_420,
             interrupt => Net_248);
 
-    Timer_1_isr:interrupt
+    Isr_Waiting_Time:interrupt
         GENERIC MAP(
             int_type => "10",
             is_nmi => 0)
         PORT MAP(
             interrupt => Net_248,
+            clock => ClockBlock_HFCLK);
+
+    \Timer_Is_Free:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
+        GENERIC MAP(
+            cy_registers => "")
+        PORT MAP(
+            clock => Net_453_ff8,
+            capture => '0',
+            count => '1',
+            reload => '0',
+            stop => '0',
+            start => '0',
+            tr_underflow => Net_467,
+            tr_overflow => Net_466,
+            tr_compare_match => Net_468,
+            line => Net_469,
+            line_compl => Net_470,
+            interrupt => Net_447);
+
+    Timer_Is_Free_isr:interrupt
+        GENERIC MAP(
+            int_type => "10",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_447,
             clock => ClockBlock_HFCLK);
 
     \PrISM_1:enable_final_reg\:macrocell
@@ -1246,7 +1280,7 @@ BEGIN
             clock_0 => Net_60_digital,
             main_0 => \PrISM_1:ctrl_enable\);
 
-    Net_64:macrocell
+    Net_441:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2) + (main_0 * main_2)",
             regmode => 1,
@@ -1254,14 +1288,14 @@ BEGIN
             clken_inv => '0',
             clken_mode => 3)
         PORT MAP(
-            q => Net_64,
+            q => Net_441,
             clk_en => \PrISM_1:enable_final_reg\,
             clock_0 => Net_60_digital,
             main_0 => \PrISM_1:compare_type0\,
             main_1 => \PrISM_1:ce0\,
             main_2 => \PrISM_1:cl0\);
 
-    Net_65:macrocell
+    Net_434:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2) + (main_0 * main_2)",
             regmode => 1,
@@ -1269,7 +1303,7 @@ BEGIN
             clken_inv => '0',
             clken_mode => 3)
         PORT MAP(
-            q => Net_65,
+            q => Net_434,
             clk_en => \PrISM_1:enable_final_reg\,
             clock_0 => Net_60_digital,
             main_0 => \PrISM_1:compare_type1\,

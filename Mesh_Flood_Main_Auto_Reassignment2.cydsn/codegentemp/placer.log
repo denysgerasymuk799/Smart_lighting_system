@@ -6,7 +6,7 @@
 
 #Build Date:         Dec  5 2017 15:35:27
 
-#File Generated:     Jan 10 2021 19:08:44
+#File Generated:     Jan 12 2021 00:26:34
 
 #Purpose:            
 
@@ -76,9 +76,11 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 15
-Clock: Clock_1kHz           | Frequency: N/A       | Target:   0.0 MHz
-Clock: Clock_1kHz(FFB)      | Frequency: N/A       | Target:   0.0 MHz
+Number of clocks: 17
+Clock: Clock_Timer_Change_Color | Frequency: N/A       | Target:   0.0 MHz
+Clock: Clock_Timer_Change_Color(FFB) | Frequency: N/A       | Target:   0.0 MHz
+Clock: Clock_Waiting_Time   | Frequency: N/A       | Target:   0.0 MHz
+Clock: Clock_Waiting_Time(FFB) | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyECO                | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyHFCLK              | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
@@ -88,8 +90,8 @@ Clock: CyRouted1            | Frequency: N/A       | Target:  24.0 MHz
 Clock: CySYSCLK             | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: PrISM_Clock          | Frequency:  87.5 MHz | Target:   0.1 MHz
-Clock: Timer_1_Clock        | Frequency: N/A       | Target:   0.0 MHz
-Clock: Timer_1_Clock(FFB)   | Frequency: N/A       | Target:   0.0 MHz
+Clock: Timer_Is_Free_Clock  | Frequency: N/A       | Target:   0.0 MHz
+Clock: Timer_Is_Free_Clock(FFB) | Frequency: N/A       | Target:   0.0 MHz
 Clock: UART_SCBCLK          | Frequency: N/A       | Target:   0.7 MHz
 Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   0.7 MHz
 
@@ -103,9 +105,11 @@ Phase 7
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 15
-Clock: Clock_1kHz           | Frequency: N/A       | Target:   0.0 MHz
-Clock: Clock_1kHz(FFB)      | Frequency: N/A       | Target:   0.0 MHz
+Number of clocks: 17
+Clock: Clock_Timer_Change_Color | Frequency: N/A       | Target:   0.0 MHz
+Clock: Clock_Timer_Change_Color(FFB) | Frequency: N/A       | Target:   0.0 MHz
+Clock: Clock_Waiting_Time   | Frequency: N/A       | Target:   0.0 MHz
+Clock: Clock_Waiting_Time(FFB) | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyECO                | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyHFCLK              | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
@@ -115,8 +119,8 @@ Clock: CyRouted1            | Frequency: N/A       | Target:  24.0 MHz
 Clock: CySYSCLK             | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: PrISM_Clock          | Frequency:  87.5 MHz | Target:   0.1 MHz
-Clock: Timer_1_Clock        | Frequency: N/A       | Target:   0.0 MHz
-Clock: Timer_1_Clock(FFB)   | Frequency: N/A       | Target:   0.0 MHz
+Clock: Timer_Is_Free_Clock  | Frequency: N/A       | Target:   0.0 MHz
+Clock: Timer_Is_Free_Clock(FFB) | Frequency: N/A       | Target:   0.0 MHz
 Clock: UART_SCBCLK          | Frequency: N/A       | Target:   0.7 MHz
 Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   0.7 MHz
 
@@ -153,9 +157,11 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 15
-Clock: Clock_1kHz           | Frequency: N/A       | Target:   0.0 MHz
-Clock: Clock_1kHz(FFB)      | Frequency: N/A       | Target:   0.0 MHz
+Number of clocks: 17
+Clock: Clock_Timer_Change_Color | Frequency: N/A       | Target:   0.0 MHz
+Clock: Clock_Timer_Change_Color(FFB) | Frequency: N/A       | Target:   0.0 MHz
+Clock: Clock_Waiting_Time   | Frequency: N/A       | Target:   0.0 MHz
+Clock: Clock_Waiting_Time(FFB) | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyECO                | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyHFCLK              | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
@@ -165,8 +171,8 @@ Clock: CyRouted1            | Frequency: N/A       | Target:  24.0 MHz
 Clock: CySYSCLK             | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: PrISM_Clock          | Frequency:  87.5 MHz | Target:   0.1 MHz
-Clock: Timer_1_Clock        | Frequency: N/A       | Target:   0.0 MHz
-Clock: Timer_1_Clock(FFB)   | Frequency: N/A       | Target:   0.0 MHz
+Clock: Timer_Is_Free_Clock  | Frequency: N/A       | Target:   0.0 MHz
+Clock: Timer_Is_Free_Clock(FFB) | Frequency: N/A       | Target:   0.0 MHz
 Clock: UART_SCBCLK          | Frequency: N/A       | Target:   0.7 MHz
 Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   0.7 MHz
 

@@ -2,7 +2,7 @@
 --	Conversion of Mesh_Flood_Main_Auto_Reassignment2.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sun Jan 10 19:08:43 2021
+--	Tue Jan 12 00:26:33 2021
 --
 
 USE cypress.cypress.all;
@@ -33,7 +33,7 @@ SIGNAL \PrISM_1:control_5\ : bit;
 SIGNAL \PrISM_1:control_4\ : bit;
 SIGNAL \PrISM_1:control_3\ : bit;
 SIGNAL \PrISM_1:enable_final_reg\ : bit;
-SIGNAL Net_61 : bit;
+SIGNAL Net_63 : bit;
 SIGNAL \PrISM_1:clock_op\ : bit;
 SIGNAL \PrISM_1:reset_reg\ : bit;
 SIGNAL Net_62 : bit;
@@ -48,9 +48,9 @@ SIGNAL \PrISM_1:Pd1a\ : bit;
 SIGNAL \PrISM_1:ce1\ : bit;
 SIGNAL \PrISM_1:cl1\ : bit;
 SIGNAL \PrISM_1:Pd1b\ : bit;
-SIGNAL Net_64 : bit;
-SIGNAL Net_63 : bit;
-SIGNAL Net_65 : bit;
+SIGNAL Net_441 : bit;
+SIGNAL Net_256 : bit;
+SIGNAL Net_434 : bit;
 SIGNAL \PrISM_1:sC8:PrISMdp:z0\ : bit;
 ATTRIBUTE port_state_att of \PrISM_1:sC8:PrISMdp:z0\:SIGNAL IS 2;
 SIGNAL \PrISM_1:sC8:PrISMdp:ff0\ : bit;
@@ -81,7 +81,7 @@ SIGNAL \PrISM_1:sC8:PrISMdp:cl0_reg\ : bit;
 ATTRIBUTE port_state_att of \PrISM_1:sC8:PrISMdp:cl0_reg\:SIGNAL IS 2;
 SIGNAL \PrISM_1:sC8:PrISMdp:z0_reg\ : bit;
 ATTRIBUTE port_state_att of \PrISM_1:sC8:PrISMdp:z0_reg\:SIGNAL IS 2;
-SIGNAL Net_88 : bit;
+SIGNAL Net_440 : bit;
 SIGNAL \PrISM_1:sC8:PrISMdp:ce1_reg\ : bit;
 ATTRIBUTE port_state_att of \PrISM_1:sC8:PrISMdp:ce1_reg\:SIGNAL IS 2;
 SIGNAL \PrISM_1:sC8:PrISMdp:cl1_reg\ : bit;
@@ -94,7 +94,7 @@ SIGNAL \PrISM_1:sC8:PrISMdp:ov_msb_reg\ : bit;
 ATTRIBUTE port_state_att of \PrISM_1:sC8:PrISMdp:ov_msb_reg\:SIGNAL IS 2;
 SIGNAL \PrISM_1:sC8:PrISMdp:co_msb_reg\ : bit;
 ATTRIBUTE port_state_att of \PrISM_1:sC8:PrISMdp:co_msb_reg\:SIGNAL IS 2;
-SIGNAL Net_87 : bit;
+SIGNAL Net_439 : bit;
 SIGNAL \PrISM_1:sC8:PrISMdp:so_reg\ : bit;
 ATTRIBUTE port_state_att of \PrISM_1:sC8:PrISMdp:so_reg\:SIGNAL IS 2;
 SIGNAL \PrISM_1:sC8:PrISMdp:f0_bus_stat_reg\ : bit;
@@ -147,7 +147,7 @@ SIGNAL \PrISM_2:Pd1a\ : bit;
 SIGNAL \PrISM_2:ce1\ : bit;
 SIGNAL \PrISM_2:cl1\ : bit;
 SIGNAL \PrISM_2:Pd1b\ : bit;
-SIGNAL Net_84 : bit;
+SIGNAL Net_426 : bit;
 SIGNAL \PrISM_2:sC8:PrISMdp:z0\ : bit;
 ATTRIBUTE port_state_att of \PrISM_2:sC8:PrISMdp:z0\:SIGNAL IS 2;
 SIGNAL \PrISM_2:sC8:PrISMdp:ff0\ : bit;
@@ -178,7 +178,7 @@ SIGNAL \PrISM_2:sC8:PrISMdp:cl0_reg\ : bit;
 ATTRIBUTE port_state_att of \PrISM_2:sC8:PrISMdp:cl0_reg\:SIGNAL IS 2;
 SIGNAL \PrISM_2:sC8:PrISMdp:z0_reg\ : bit;
 ATTRIBUTE port_state_att of \PrISM_2:sC8:PrISMdp:z0_reg\:SIGNAL IS 2;
-SIGNAL Net_86 : bit;
+SIGNAL Net_428 : bit;
 SIGNAL \PrISM_2:sC8:PrISMdp:ce1_reg\ : bit;
 ATTRIBUTE port_state_att of \PrISM_2:sC8:PrISMdp:ce1_reg\:SIGNAL IS 2;
 SIGNAL \PrISM_2:sC8:PrISMdp:cl1_reg\ : bit;
@@ -191,7 +191,7 @@ SIGNAL \PrISM_2:sC8:PrISMdp:ov_msb_reg\ : bit;
 ATTRIBUTE port_state_att of \PrISM_2:sC8:PrISMdp:ov_msb_reg\:SIGNAL IS 2;
 SIGNAL \PrISM_2:sC8:PrISMdp:co_msb_reg\ : bit;
 ATTRIBUTE port_state_att of \PrISM_2:sC8:PrISMdp:co_msb_reg\:SIGNAL IS 2;
-SIGNAL Net_85 : bit;
+SIGNAL Net_427 : bit;
 SIGNAL \PrISM_2:sC8:PrISMdp:so_reg\ : bit;
 ATTRIBUTE port_state_att of \PrISM_2:sC8:PrISMdp:so_reg\:SIGNAL IS 2;
 SIGNAL \PrISM_2:sC8:PrISMdp:f0_bus_stat_reg\ : bit;
@@ -252,49 +252,62 @@ SIGNAL Net_112 : bit;
 SIGNAL Net_115 : bit;
 SIGNAL Net_185 : bit;
 SIGNAL Net_171 : bit;
-SIGNAL \Timer_2:Net_81\ : bit;
-SIGNAL \Timer_2:Net_75\ : bit;
-SIGNAL \Timer_2:Net_69\ : bit;
-SIGNAL \Timer_2:Net_66\ : bit;
-SIGNAL \Timer_2:Net_82\ : bit;
-SIGNAL \Timer_2:Net_72\ : bit;
+SIGNAL \Timer_Change_Color:Net_81\ : bit;
+SIGNAL \Timer_Change_Color:Net_75\ : bit;
+SIGNAL \Timer_Change_Color:Net_69\ : bit;
+SIGNAL \Timer_Change_Color:Net_66\ : bit;
+SIGNAL \Timer_Change_Color:Net_82\ : bit;
+SIGNAL \Timer_Change_Color:Net_72\ : bit;
 SIGNAL Net_194 : bit;
 SIGNAL Net_193 : bit;
 SIGNAL Net_195 : bit;
 SIGNAL Net_196 : bit;
 SIGNAL Net_197 : bit;
 SIGNAL Net_243 : bit;
-SIGNAL \Timer_1:Net_81\ : bit;
-SIGNAL \Timer_1:Net_75\ : bit;
-SIGNAL \Timer_1:Net_69\ : bit;
-SIGNAL \Timer_1:Net_66\ : bit;
-SIGNAL \Timer_1:Net_82\ : bit;
-SIGNAL \Timer_1:Net_72\ : bit;
-SIGNAL Net_239 : bit;
-SIGNAL Net_238 : bit;
-SIGNAL Net_240 : bit;
-SIGNAL Net_241 : bit;
-SIGNAL Net_242 : bit;
+SIGNAL \Timer_Waiting_Time:Net_81\ : bit;
+SIGNAL \Timer_Waiting_Time:Net_75\ : bit;
+SIGNAL \Timer_Waiting_Time:Net_69\ : bit;
+SIGNAL \Timer_Waiting_Time:Net_66\ : bit;
+SIGNAL \Timer_Waiting_Time:Net_82\ : bit;
+SIGNAL \Timer_Waiting_Time:Net_72\ : bit;
+SIGNAL Net_417 : bit;
+SIGNAL Net_416 : bit;
+SIGNAL Net_418 : bit;
+SIGNAL Net_419 : bit;
+SIGNAL Net_420 : bit;
 SIGNAL Net_248 : bit;
+SIGNAL \Timer_Is_Free:Net_81\ : bit;
+SIGNAL \Timer_Is_Free:Net_75\ : bit;
+SIGNAL \Timer_Is_Free:Net_69\ : bit;
+SIGNAL \Timer_Is_Free:Net_66\ : bit;
+SIGNAL \Timer_Is_Free:Net_82\ : bit;
+SIGNAL \Timer_Is_Free:Net_72\ : bit;
+SIGNAL Net_467 : bit;
+SIGNAL Net_466 : bit;
+SIGNAL Net_468 : bit;
+SIGNAL Net_469 : bit;
+SIGNAL Net_470 : bit;
+SIGNAL Net_447 : bit;
+SIGNAL Net_453 : bit;
 SIGNAL \PrISM_1:enable_final_reg\\D\ : bit;
 SIGNAL \PrISM_1:reset_reg\\D\ : bit;
-SIGNAL Net_64D : bit;
-SIGNAL Net_65D : bit;
+SIGNAL Net_441D : bit;
+SIGNAL Net_434D : bit;
 SIGNAL Net_69D : bit;
 SIGNAL \PrISM_2:enable_final_reg\\D\ : bit;
 SIGNAL \PrISM_2:reset_reg\\D\ : bit;
-SIGNAL Net_84D : bit;
+SIGNAL Net_426D : bit;
 BEGIN
 
 one <=  ('1') ;
 
 zero <=  ('0') ;
 
-Net_64D <= ((not \PrISM_1:reset_reg\ and not \PrISM_1:cl0\ and \PrISM_1:ce0\)
+Net_441D <= ((not \PrISM_1:reset_reg\ and not \PrISM_1:cl0\ and \PrISM_1:ce0\)
 	OR (not \PrISM_1:reset_reg\ and not \PrISM_1:cl0\ and \PrISM_1:compare_type0\)
 	OR (not \PrISM_1:compare_type0\ and not \PrISM_1:reset_reg\ and \PrISM_1:cl0\));
 
-Net_65D <= ((not \PrISM_1:reset_reg\ and not \PrISM_1:cl1\ and \PrISM_1:ce1\)
+Net_434D <= ((not \PrISM_1:reset_reg\ and not \PrISM_1:cl1\ and \PrISM_1:ce1\)
 	OR (not \PrISM_1:reset_reg\ and not \PrISM_1:cl1\ and \PrISM_1:compare_type1\)
 	OR (not \PrISM_1:compare_type1\ and not \PrISM_1:reset_reg\ and \PrISM_1:cl1\));
 
@@ -302,7 +315,7 @@ Net_69D <= ((not \PrISM_2:reset_reg\ and not \PrISM_2:cl0\ and \PrISM_2:ce0\)
 	OR (not \PrISM_2:reset_reg\ and not \PrISM_2:cl0\ and \PrISM_2:compare_type0\)
 	OR (not \PrISM_2:compare_type0\ and not \PrISM_2:reset_reg\ and \PrISM_2:cl0\));
 
-Net_84D <= ((not \PrISM_2:reset_reg\ and not \PrISM_2:cl1\ and \PrISM_2:ce1\)
+Net_426D <= ((not \PrISM_2:reset_reg\ and not \PrISM_2:cl1\ and \PrISM_2:ce1\)
 	OR (not \PrISM_2:reset_reg\ and not \PrISM_2:cl1\ and \PrISM_2:compare_type1\)
 	OR (not \PrISM_2:compare_type1\ and not \PrISM_2:reset_reg\ and \PrISM_2:cl1\));
 
@@ -394,14 +407,14 @@ Net_84D <= ((not \PrISM_2:reset_reg\ and not \PrISM_2:cl1\ and \PrISM_2:ce1\)
 		ce0_reg=>open,
 		cl0_reg=>open,
 		z0_reg=>open,
-		ff0_reg=>Net_88,
+		ff0_reg=>Net_440,
 		ce1_reg=>open,
 		cl1_reg=>open,
 		z1_reg=>open,
 		ff1_reg=>open,
 		ov_msb_reg=>open,
 		co_msb_reg=>open,
-		cmsb_reg=>Net_87,
+		cmsb_reg=>Net_439,
 		so_reg=>open,
 		f0_bus_stat_reg=>open,
 		f0_blk_stat_reg=>open,
@@ -497,7 +510,7 @@ RED:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(one),
-		y=>Net_64,
+		y=>Net_441,
 		fb=>(tmpFB_0__RED_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__RED_net_0),
@@ -567,7 +580,7 @@ GREEN:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(one),
-		y=>Net_65,
+		y=>Net_434,
 		fb=>(tmpFB_0__GREEN_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__GREEN_net_0),
@@ -720,14 +733,14 @@ BLUE:cy_psoc3_pins_v1_10
 		ce0_reg=>open,
 		cl0_reg=>open,
 		z0_reg=>open,
-		ff0_reg=>Net_86,
+		ff0_reg=>Net_428,
 		ce1_reg=>open,
 		cl1_reg=>open,
 		z1_reg=>open,
 		ff1_reg=>open,
 		ov_msb_reg=>open,
 		co_msb_reg=>open,
-		cmsb_reg=>Net_85,
+		cmsb_reg=>Net_427,
 		so_reg=>open,
 		f0_bus_stat_reg=>open,
 		f0_blk_stat_reg=>open,
@@ -934,7 +947,7 @@ isr_WDT:cy_isr_v1_0
 		sda=>Net_114,
 		tx_req=>Net_99,
 		rx_req=>Net_98);
-Clock_1kHz:cy_clock_v1_0
+Clock_Timer_Change_Color:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"ebf5d4e5-862d-4cc4-bff1-8f13a435d7e1",
 		source_clock_id=>"",
@@ -944,11 +957,11 @@ Clock_1kHz:cy_clock_v1_0
 		is_digital=>'0')
 	PORT MAP(clock_out=>Net_185,
 		dig_domain_out=>open);
-isr_Counter:cy_isr_v1_0
+isr_Timer_Change_Color:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10",
 		is_nmi=>'0')
 	PORT MAP(int_signal=>Net_171);
-\Timer_2:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
+\Timer_Change_Color:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
 	GENERIC MAP(cy_registers=>"")
 	PORT MAP(clock=>Net_185,
 		capture=>zero,
@@ -962,7 +975,7 @@ isr_Counter:cy_isr_v1_0
 		line_out=>Net_196,
 		line_out_compl=>Net_197,
 		interrupt=>Net_171);
-Timer_1_Clock:cy_clock_v1_0
+Clock_Waiting_Time:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"0d358478-828c-4ed5-9ac4-54dcaeb23934",
 		source_clock_id=>"",
@@ -972,7 +985,7 @@ Timer_1_Clock:cy_clock_v1_0
 		is_digital=>'0')
 	PORT MAP(clock_out=>Net_243,
 		dig_domain_out=>open);
-\Timer_1:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
+\Timer_Waiting_Time:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
 	GENERIC MAP(cy_registers=>"")
 	PORT MAP(clock=>Net_243,
 		capture=>zero,
@@ -980,16 +993,44 @@ Timer_1_Clock:cy_clock_v1_0
 		reload=>zero,
 		stop=>zero,
 		start=>zero,
-		underflow=>Net_239,
-		overflow=>Net_238,
-		compare_match=>Net_240,
-		line_out=>Net_241,
-		line_out_compl=>Net_242,
+		underflow=>Net_417,
+		overflow=>Net_416,
+		compare_match=>Net_418,
+		line_out=>Net_419,
+		line_out_compl=>Net_420,
 		interrupt=>Net_248);
-Timer_1_isr:cy_isr_v1_0
+Isr_Waiting_Time:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10",
 		is_nmi=>'0')
 	PORT MAP(int_signal=>Net_248);
+\Timer_Is_Free:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(clock=>Net_453,
+		capture=>zero,
+		count=>one,
+		reload=>zero,
+		stop=>zero,
+		start=>zero,
+		underflow=>Net_467,
+		overflow=>Net_466,
+		compare_match=>Net_468,
+		line_out=>Net_469,
+		line_out_compl=>Net_470,
+		interrupt=>Net_447);
+Timer_Is_Free_isr:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_447);
+Timer_Is_Free_Clock:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"2d61d40c-32c0-46a8-b2c2-723159644211",
+		source_clock_id=>"",
+		divisor=>0,
+		period=>"1000000000000",
+		is_direct=>'0',
+		is_digital=>'0')
+	PORT MAP(clock_out=>Net_453,
+		dig_domain_out=>open);
 \PrISM_1:enable_final_reg\:cy_dff
 	PORT MAP(d=>\PrISM_1:ctrl_enable\,
 		clk=>\PrISM_1:clock_cnt\,
@@ -998,14 +1039,14 @@ Timer_1_isr:cy_isr_v1_0
 	PORT MAP(d=>zero,
 		clk=>\PrISM_1:clock_op\,
 		q=>\PrISM_1:reset_reg\);
-Net_64:cy_dff
-	PORT MAP(d=>Net_64D,
+Net_441:cy_dff
+	PORT MAP(d=>Net_441D,
 		clk=>\PrISM_1:clock_op\,
-		q=>Net_64);
-Net_65:cy_dff
-	PORT MAP(d=>Net_65D,
+		q=>Net_441);
+Net_434:cy_dff
+	PORT MAP(d=>Net_434D,
 		clk=>\PrISM_1:clock_op\,
-		q=>Net_65);
+		q=>Net_434);
 Net_69:cy_dff
 	PORT MAP(d=>Net_69D,
 		clk=>\PrISM_2:clock_op\,
@@ -1018,9 +1059,9 @@ Net_69:cy_dff
 	PORT MAP(d=>zero,
 		clk=>\PrISM_2:clock_op\,
 		q=>\PrISM_2:reset_reg\);
-Net_84:cy_dff
-	PORT MAP(d=>Net_84D,
+Net_426:cy_dff
+	PORT MAP(d=>Net_426D,
 		clk=>\PrISM_2:clock_op\,
-		q=>Net_84);
+		q=>Net_426);
 
 END R_T_L;

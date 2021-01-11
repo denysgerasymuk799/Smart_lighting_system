@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: Timer_1_isr.c  
+* File Name: isr_Timer_Change_Color.c  
 * Version 1.70
 *
 *  Description:
@@ -18,15 +18,15 @@
 
 #include <cydevice_trm.h>
 #include <CyLib.h>
-#include <Timer_1_isr.h>
+#include <isr_Timer_Change_Color.h>
 
 
-#if !defined(Timer_1_isr__REMOVED) /* Check for removal by optimization */
+#if !defined(isr_Timer_Change_Color__REMOVED) /* Check for removal by optimization */
 
 /*******************************************************************************
 *  Place your includes, defines and code here 
 ********************************************************************************/
-/* `#START Timer_1_isr_intc` */
+/* `#START isr_Timer_Change_Color_intc` */
 
 /* `#END` */
 
@@ -37,7 +37,7 @@ CY_ISR_PROTO(IntDefaultHandler);
 
 
 /*******************************************************************************
-* Function Name: Timer_1_isr_Start
+* Function Name: isr_Timer_Change_Color_Start
 ********************************************************************************
 *
 * Summary:
@@ -53,24 +53,24 @@ CY_ISR_PROTO(IntDefaultHandler);
 *   None
 *
 *******************************************************************************/
-void Timer_1_isr_Start(void)
+void isr_Timer_Change_Color_Start(void)
 {
     /* For all we know the interrupt is active. */
-    Timer_1_isr_Disable();
+    isr_Timer_Change_Color_Disable();
 
-    /* Set the ISR to point to the Timer_1_isr Interrupt. */
-    Timer_1_isr_SetVector(&Timer_1_isr_Interrupt);
+    /* Set the ISR to point to the isr_Timer_Change_Color Interrupt. */
+    isr_Timer_Change_Color_SetVector(&isr_Timer_Change_Color_Interrupt);
 
     /* Set the priority. */
-    Timer_1_isr_SetPriority((uint8)Timer_1_isr_INTC_PRIOR_NUMBER);
+    isr_Timer_Change_Color_SetPriority((uint8)isr_Timer_Change_Color_INTC_PRIOR_NUMBER);
 
     /* Enable it. */
-    Timer_1_isr_Enable();
+    isr_Timer_Change_Color_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_isr_StartEx
+* Function Name: isr_Timer_Change_Color_StartEx
 ********************************************************************************
 *
 * Summary:
@@ -96,24 +96,24 @@ void Timer_1_isr_Start(void)
 *   None
 *
 *******************************************************************************/
-void Timer_1_isr_StartEx(cyisraddress address)
+void isr_Timer_Change_Color_StartEx(cyisraddress address)
 {
     /* For all we know the interrupt is active. */
-    Timer_1_isr_Disable();
+    isr_Timer_Change_Color_Disable();
 
-    /* Set the ISR to point to the Timer_1_isr Interrupt. */
-    Timer_1_isr_SetVector(address);
+    /* Set the ISR to point to the isr_Timer_Change_Color Interrupt. */
+    isr_Timer_Change_Color_SetVector(address);
 
     /* Set the priority. */
-    Timer_1_isr_SetPriority((uint8)Timer_1_isr_INTC_PRIOR_NUMBER);
+    isr_Timer_Change_Color_SetPriority((uint8)isr_Timer_Change_Color_INTC_PRIOR_NUMBER);
 
     /* Enable it. */
-    Timer_1_isr_Enable();
+    isr_Timer_Change_Color_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_isr_Stop
+* Function Name: isr_Timer_Change_Color_Stop
 ********************************************************************************
 *
 * Summary:
@@ -126,22 +126,22 @@ void Timer_1_isr_StartEx(cyisraddress address)
 *   None
 *
 *******************************************************************************/
-void Timer_1_isr_Stop(void)
+void isr_Timer_Change_Color_Stop(void)
 {
     /* Disable this interrupt. */
-    Timer_1_isr_Disable();
+    isr_Timer_Change_Color_Disable();
 
     /* Set the ISR to point to the passive one. */
-    Timer_1_isr_SetVector(&IntDefaultHandler);
+    isr_Timer_Change_Color_SetVector(&IntDefaultHandler);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_isr_Interrupt
+* Function Name: isr_Timer_Change_Color_Interrupt
 ********************************************************************************
 *
 * Summary:
-*   The default Interrupt Service Routine for Timer_1_isr.
+*   The default Interrupt Service Routine for isr_Timer_Change_Color.
 *
 *   Add custom code between the START and END comments to keep the next version
 *   of this file from over-writing your code.
@@ -156,27 +156,27 @@ void Timer_1_isr_Stop(void)
 *   None
 *
 *******************************************************************************/
-CY_ISR(Timer_1_isr_Interrupt)
+CY_ISR(isr_Timer_Change_Color_Interrupt)
 {
-    #ifdef Timer_1_isr_INTERRUPT_INTERRUPT_CALLBACK
-        Timer_1_isr_Interrupt_InterruptCallback();
-    #endif /* Timer_1_isr_INTERRUPT_INTERRUPT_CALLBACK */ 
+    #ifdef isr_Timer_Change_Color_INTERRUPT_INTERRUPT_CALLBACK
+        isr_Timer_Change_Color_Interrupt_InterruptCallback();
+    #endif /* isr_Timer_Change_Color_INTERRUPT_INTERRUPT_CALLBACK */ 
 
     /*  Place your Interrupt code here. */
-    /* `#START Timer_1_isr_Interrupt` */
+    /* `#START isr_Timer_Change_Color_Interrupt` */
 
     /* `#END` */
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_isr_SetVector
+* Function Name: isr_Timer_Change_Color_SetVector
 ********************************************************************************
 *
 * Summary:
-*   Change the ISR vector for the Interrupt. Note calling Timer_1_isr_Start
+*   Change the ISR vector for the Interrupt. Note calling isr_Timer_Change_Color_Start
 *   will override any effect this method would have had. To set the vector 
-*   before the component has been started use Timer_1_isr_StartEx instead.
+*   before the component has been started use isr_Timer_Change_Color_StartEx instead.
 * 
 *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
 *   used to provide consistent definition across compilers:
@@ -196,14 +196,14 @@ CY_ISR(Timer_1_isr_Interrupt)
 *   None
 *
 *******************************************************************************/
-void Timer_1_isr_SetVector(cyisraddress address)
+void isr_Timer_Change_Color_SetVector(cyisraddress address)
 {
-    CyRamVectors[CYINT_IRQ_BASE + Timer_1_isr__INTC_NUMBER] = address;
+    CyRamVectors[CYINT_IRQ_BASE + isr_Timer_Change_Color__INTC_NUMBER] = address;
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_isr_GetVector
+* Function Name: isr_Timer_Change_Color_GetVector
 ********************************************************************************
 *
 * Summary:
@@ -216,22 +216,22 @@ void Timer_1_isr_SetVector(cyisraddress address)
 *   Address of the ISR in the interrupt vector table.
 *
 *******************************************************************************/
-cyisraddress Timer_1_isr_GetVector(void)
+cyisraddress isr_Timer_Change_Color_GetVector(void)
 {
-    return CyRamVectors[CYINT_IRQ_BASE + Timer_1_isr__INTC_NUMBER];
+    return CyRamVectors[CYINT_IRQ_BASE + isr_Timer_Change_Color__INTC_NUMBER];
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_isr_SetPriority
+* Function Name: isr_Timer_Change_Color_SetPriority
 ********************************************************************************
 *
 * Summary:
 *   Sets the Priority of the Interrupt. 
 *
-*   Note calling Timer_1_isr_Start or Timer_1_isr_StartEx will 
+*   Note calling isr_Timer_Change_Color_Start or isr_Timer_Change_Color_StartEx will 
 *   override any effect this API would have had. This API should only be called
-*   after Timer_1_isr_Start or Timer_1_isr_StartEx has been called. 
+*   after isr_Timer_Change_Color_Start or isr_Timer_Change_Color_StartEx has been called. 
 *   To set the initial priority for the component, use the Design-Wide Resources
 *   Interrupt Editor.
 *
@@ -246,20 +246,20 @@ cyisraddress Timer_1_isr_GetVector(void)
 *   None
 *
 *******************************************************************************/
-void Timer_1_isr_SetPriority(uint8 priority)
+void isr_Timer_Change_Color_SetPriority(uint8 priority)
 {
 	uint8 interruptState;
-    uint32 priorityOffset = ((Timer_1_isr__INTC_NUMBER % 4u) * 8u) + 6u;
+    uint32 priorityOffset = ((isr_Timer_Change_Color__INTC_NUMBER % 4u) * 8u) + 6u;
     
 	interruptState = CyEnterCriticalSection();
-    *Timer_1_isr_INTC_PRIOR = (*Timer_1_isr_INTC_PRIOR & (uint32)(~Timer_1_isr__INTC_PRIOR_MASK)) |
+    *isr_Timer_Change_Color_INTC_PRIOR = (*isr_Timer_Change_Color_INTC_PRIOR & (uint32)(~isr_Timer_Change_Color__INTC_PRIOR_MASK)) |
                                     ((uint32)priority << priorityOffset);
 	CyExitCriticalSection(interruptState);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_isr_GetPriority
+* Function Name: isr_Timer_Change_Color_GetPriority
 ********************************************************************************
 *
 * Summary:
@@ -274,19 +274,19 @@ void Timer_1_isr_SetPriority(uint8 priority)
 *    PSoC 4: Priority is from 0 to 3.
 *
 *******************************************************************************/
-uint8 Timer_1_isr_GetPriority(void)
+uint8 isr_Timer_Change_Color_GetPriority(void)
 {
     uint32 priority;
-	uint32 priorityOffset = ((Timer_1_isr__INTC_NUMBER % 4u) * 8u) + 6u;
+	uint32 priorityOffset = ((isr_Timer_Change_Color__INTC_NUMBER % 4u) * 8u) + 6u;
 
-    priority = (*Timer_1_isr_INTC_PRIOR & Timer_1_isr__INTC_PRIOR_MASK) >> priorityOffset;
+    priority = (*isr_Timer_Change_Color_INTC_PRIOR & isr_Timer_Change_Color__INTC_PRIOR_MASK) >> priorityOffset;
 
     return (uint8)priority;
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_isr_Enable
+* Function Name: isr_Timer_Change_Color_Enable
 ********************************************************************************
 *
 * Summary:
@@ -301,15 +301,15 @@ uint8 Timer_1_isr_GetPriority(void)
 *   None
 *
 *******************************************************************************/
-void Timer_1_isr_Enable(void)
+void isr_Timer_Change_Color_Enable(void)
 {
     /* Enable the general interrupt. */
-    *Timer_1_isr_INTC_SET_EN = Timer_1_isr__INTC_MASK;
+    *isr_Timer_Change_Color_INTC_SET_EN = isr_Timer_Change_Color__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_isr_GetState
+* Function Name: isr_Timer_Change_Color_GetState
 ********************************************************************************
 *
 * Summary:
@@ -322,15 +322,15 @@ void Timer_1_isr_Enable(void)
 *   1 if enabled, 0 if disabled.
 *
 *******************************************************************************/
-uint8 Timer_1_isr_GetState(void)
+uint8 isr_Timer_Change_Color_GetState(void)
 {
     /* Get the state of the general interrupt. */
-    return ((*Timer_1_isr_INTC_SET_EN & (uint32)Timer_1_isr__INTC_MASK) != 0u) ? 1u:0u;
+    return ((*isr_Timer_Change_Color_INTC_SET_EN & (uint32)isr_Timer_Change_Color__INTC_MASK) != 0u) ? 1u:0u;
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_isr_Disable
+* Function Name: isr_Timer_Change_Color_Disable
 ********************************************************************************
 *
 * Summary:
@@ -343,15 +343,15 @@ uint8 Timer_1_isr_GetState(void)
 *   None
 *
 *******************************************************************************/
-void Timer_1_isr_Disable(void)
+void isr_Timer_Change_Color_Disable(void)
 {
     /* Disable the general interrupt. */
-    *Timer_1_isr_INTC_CLR_EN = Timer_1_isr__INTC_MASK;
+    *isr_Timer_Change_Color_INTC_CLR_EN = isr_Timer_Change_Color__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_isr_SetPending
+* Function Name: isr_Timer_Change_Color_SetPending
 ********************************************************************************
 *
 * Summary:
@@ -370,14 +370,14 @@ void Timer_1_isr_Disable(void)
 *   interrupts).
 *
 *******************************************************************************/
-void Timer_1_isr_SetPending(void)
+void isr_Timer_Change_Color_SetPending(void)
 {
-    *Timer_1_isr_INTC_SET_PD = Timer_1_isr__INTC_MASK;
+    *isr_Timer_Change_Color_INTC_SET_PD = isr_Timer_Change_Color__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_1_isr_ClearPending
+* Function Name: isr_Timer_Change_Color_ClearPending
 ********************************************************************************
 *
 * Summary:
@@ -395,9 +395,9 @@ void Timer_1_isr_SetPending(void)
 *   None
 *
 *******************************************************************************/
-void Timer_1_isr_ClearPending(void)
+void isr_Timer_Change_Color_ClearPending(void)
 {
-    *Timer_1_isr_INTC_CLR_PD = Timer_1_isr__INTC_MASK;
+    *isr_Timer_Change_Color_INTC_CLR_PD = isr_Timer_Change_Color__INTC_MASK;
 }
 
 #endif /* End check for removal by optimization */

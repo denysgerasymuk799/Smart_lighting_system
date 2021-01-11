@@ -19,6 +19,7 @@
 #include <debug.h>
 #include <ble_process.h>
 #include <WDT.h>
+#include <stdbool.h>
 
 /*****************************************************
 *             Pre-processor Directives
@@ -34,6 +35,7 @@ volatile uint16 current_watchdog_counter;
 
     
 extern int DEVICE_INDEX;
+extern bool NETWORK_IS_FREE;
 
     
 /*****************************************************

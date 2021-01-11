@@ -60,7 +60,8 @@ extern uint8 clientConnectToDevice;
 extern CYBLE_GAP_BD_ADDR_T				peripAddr;
 
 CY_ISR_PROTO(CC_TC_InterruptHandler);
-CY_ISR_PROTO(Timer_1_Interrupt_Handler);
+CY_ISR_PROTO(Timer_Waiting_Time_Interrupt_Handler);
+CY_ISR_PROTO(Timer_Is_Free_Interrupt_Handler);
 
 uint8 RGB_Collection[4][4] = {
     {0, 0, 0xFF, 0xFF},
@@ -71,7 +72,8 @@ uint8 RGB_Collection[4][4] = {
 
 uint8 RED_COLOR[4] = {0xFF, 0, 0, 0xFF};
 
-int DEVICE_INDEX = 1;
+int DEVICE_INDEX = 0;
+bool NETWORK_IS_FREE = true;
 
 int interrupt_counter = 0;
 
@@ -147,11 +149,13 @@ void InitializeSystem(void)
     
     // Define interrupt handle for color changes
     //PWM_1sWindow_Start();
-    Timer_2_Start();
-    isr_Counter_StartEx(CC_TC_InterruptHandler);
+    Timer_Change_Color_Start();
+    isr_Timer_Change_Color_StartEx(CC_TC_InterruptHandler);
     
     
-    Timer_1_isr_StartEx(Timer_1_Interrupt_Handler);
+    Isr_Waiting_Time_StartEx(Timer_Waiting_Time_Interrupt_Handler);
+    Timer_Is_Free_isr_StartEx(Timer_Is_Free_Interrupt_Handler);
+    
 	
 	/* Start the PrISM component and configure drive mode of LED pins to be
 	* initially OFF*/
@@ -200,9 +204,28 @@ void InitializeSystem(void)
 }
 
 
+CY_ISR(Timer_Waiting_Time_Interrupt_Handler)
+{   
+    /* CC_MATCH interrupt is triggered when 1s time window is gone */
+    if(Timer_Waiting_Time_INTR_MASK_CC_MATCH != 0)
+    {
+        UART_UartPutString("==================== Timer_1_Interrupt_Handler ==================== ");
+        Timer_Waiting_Time_ClearInterrupt(Timer_Waiting_Time_INTR_MASK_CC_MATCH);
+    }
+       
+    /* TC interrupt is triggered when overflow is happened */
+    if(Timer_Waiting_Time_INTR_MASK_TC != 0)
+    {
+        UART_UartPutString("\n\n==================== Timer_1_Interrupt_Handler UpdateRGBled ==================== ");
+        UpdateRGBled(RED_COLOR, 4);
+        Timer_Waiting_Time_ClearInterrupt(Timer_Waiting_Time_INTR_MASK_TC);
+    }
+}
+
+
 CY_ISR(CC_TC_InterruptHandler)
-{
-    if (DEVICE_INDEX == 0)
+{   
+    if ((DEVICE_INDEX == 0) && (NETWORK_IS_FREE))
     {
         sendColorDataToNetwork(RGB_Collection[interrupt_counter]);
         SwitchRole();
@@ -212,31 +235,31 @@ CY_ISR(CC_TC_InterruptHandler)
         if (interrupt_counter == 4) {
             interrupt_counter = 0;
         }
+        
+        NETWORK_IS_FREE = false;
+        
+        Timer_Is_Free_Stop();
+        Timer_Is_Free_WriteCounter(0);
+        Timer_Is_Free_Start();
     }
 //    PWM_1sWindow_ClearInterrupt(PWM_1sWindow_INTR_MASK_CC_MATCH);
 //    PWM_1sWindow_ClearInterrupt(PWM_1sWindow_INTR_MASK_TC);
-    Timer_2_ClearInterrupt(Timer_1_INTR_MASK_CC_MATCH);
-    Timer_2_ClearInterrupt(Timer_1_INTR_MASK_TC);
+    Timer_Change_Color_ClearInterrupt(Timer_Change_Color_INTR_MASK_CC_MATCH);
+    Timer_Change_Color_ClearInterrupt(Timer_Change_Color_INTR_MASK_TC);
 }
 
-
-CY_ISR(Timer_1_Interrupt_Handler)
-{   
-    /* CC_MATCH interrupt is triggered when 1s time window is gone */
-    if(Timer_1_INTR_MASK_CC_MATCH != 0)
-    {
-        UART_UartPutString("==================== Timer_1_Interrupt_Handler ==================== ");
-        Timer_1_ClearInterrupt(Timer_1_INTR_MASK_CC_MATCH);
-    }
-       
+CY_ISR(Timer_Is_Free_Interrupt_Handler)
+{
     /* TC interrupt is triggered when overflow is happened */
-    if(Timer_1_INTR_MASK_TC != 0)
+    if(Timer_Is_Free_INTR_MASK_TC != 0)
     {
-        UART_UartPutString("\n\n==================== Timer_1_Interrupt_Handler UpdateRGBled ==================== ");
-        UpdateRGBled(RED_COLOR, 4);
-        Timer_1_ClearInterrupt(Timer_1_INTR_MASK_TC);
+        NETWORK_IS_FREE = true;
+        Timer_Is_Free_ClearInterrupt(Timer_Is_Free_INTR_MASK_TC);
     }
+
+    Timer_Is_Free_ClearInterrupt(Timer_Is_Free_INTR_MASK_CC_MATCH);
 }
+
 
 /*******************************************************************************
 * Function Name: UpdateRGBled
