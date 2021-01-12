@@ -38,6 +38,8 @@
 * Use of this Software may be limited by and subject to the applicable Cypress
 * software license agreement. 
 *******************************************************************************/
+#include <stdio.h>
+
 #include <main.h>
 
 extern uint8 switch_Role;
@@ -74,13 +76,20 @@ uint8 RGB_Collection[4][4] = {
 uint8 RED_COLOR[4] = {0xFF, 0, 0, 0xFF};
 
 
-int DEVICE_INDEX = 0;
+int DEVICE_INDEX = 1;
+
+int Change_Color_Period = 1500;
+int Is_Free_Period = 4500; // of the whole network
+int Waiting_Time_Period;
+
+int Heart_beat_Period;
 
 
 uint8 NEXT_NEIGHBOUR_INDEX = 1;
 bool NETWORK_IS_FREE = true;
 
 int NUM_EXCEEDED_WAITING_TIME = 0;
+char TEXT_BUF[50];
 
 int interrupt_counter = 0;
 
@@ -109,7 +118,7 @@ int main()
 	#endif
    
     for(;;)
-    {
+    {               
 		/* Process BLE Events. This function generates the respective 
 		* events to application layer */
 		CyBle_ProcessEvents();
@@ -156,15 +165,19 @@ void InitializeSystem(void)
     
     // Define interrupt handle for color changes
     //PWM_1sWindow_Start();
+    Timer_Change_Color_WritePeriod(Change_Color_Period);
     Timer_Change_Color_Start();
     isr_Timer_Change_Color_StartEx(CC_TC_InterruptHandler);
     
+    Heart_beat_Period = 2 * Is_Free_Period;
+    Waiting_Time_Period = 2 * Heart_beat_Period;
     
     Isr_Waiting_Time_StartEx(Timer_Waiting_Time_Interrupt_Handler);
     Timer_Is_Free_isr_StartEx(Timer_Is_Free_Interrupt_Handler);
     
     if (DEVICE_INDEX == 0)
     {
+        Timer_Heart_beat_WritePeriod(Heart_beat_Period);
         Timer_Heart_beat_Start();
         Isr_Heart_beat_StartEx(Timer_Heart_beat_Interrupt_Handler);
     }
@@ -233,6 +246,7 @@ void sendColorDataToPeripheral()
     NEXT_NEIGHBOUR_INDEX = 1;
     
     Timer_Is_Free_Stop();
+    Timer_Is_Free_WritePeriod(Is_Free_Period);
     Timer_Is_Free_WriteCounter(0);
     Timer_Is_Free_Start();
 }
@@ -251,7 +265,11 @@ CY_ISR(Timer_Waiting_Time_Interrupt_Handler)
     if(Timer_Waiting_Time_INTR_MASK_TC != 0)
     {
         UART_UartPutString("\n\n==================== Timer_1_Interrupt_Handler UpdateRGBled ==================== ");
+        sprintf(TEXT_BUF, "\n\n DEVICE_INDEX in Timer_Waiting_Time_Interrupt_Handler %d ", DEVICE_INDEX);
+        UART_UartPutString(TEXT_BUF);
+        
         UpdateRGBled(RED_COLOR, 4);
+        CyDelay(5000);
         if (NUM_EXCEEDED_WAITING_TIME + 1 == DEVICE_INDEX)
         {
             DEVICE_INDEX = 0;
@@ -285,6 +303,9 @@ CY_ISR(Timer_Is_Free_Interrupt_Handler)
     if(Timer_Is_Free_INTR_MASK_TC != 0)
     {
         NETWORK_IS_FREE = true;
+        sprintf(TEXT_BUF, "\n\n DEVICE_INDEX in Timer_Is_Free_Interrupt_Handler %d ", DEVICE_INDEX);
+        UART_UartPutString(TEXT_BUF);
+        
         Timer_Is_Free_ClearInterrupt(Timer_Is_Free_INTR_MASK_TC);
     }
 
@@ -310,8 +331,6 @@ CY_ISR(Timer_Heart_beat_Interrupt_Handler)
             sendColorDataToPeripheral();
         }
         
-        
-        Timer_Heart_beat_ClearInterrupt(Timer_Is_Free_INTR_MASK_TC);
     }
     
     Timer_Heart_beat_ClearInterrupt(Timer_Heart_beat_INTR_MASK_CC_MATCH);

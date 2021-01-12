@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 1
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 1
 
 
    1              		.syntax unified
@@ -20,31 +20,24 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 1
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
   19              		.comm	current_watchdog_counter,2,2
-  20              		.global	MIN_WAITING_TIME
-  21              		.data
-  22              		.align	2
-  23              		.type	MIN_WAITING_TIME, %object
-  24              		.size	MIN_WAITING_TIME, 4
-  25              	MIN_WAITING_TIME:
-  26 0000 10270000 		.word	10000
-  27              		.section	.rodata
-  28              		.align	2
-  29              	.LC1:
-  30 0000 0A0A2073 		.ascii	"\012\012 start restart_peripheral_waiting_time \012"
-  30      74617274 
-  30      20726573 
-  30      74617274 
-  30      5F706572 
-  31 002a 200A00   		.ascii	" \012\000"
-  32              		.section	.text.restart_peripheral_waiting_time,"ax",%progbits
-  33              		.align	2
-  34              		.global	restart_peripheral_waiting_time
-  35              		.code	16
-  36              		.thumb_func
-  37              		.type	restart_peripheral_waiting_time, %function
-  38              	restart_peripheral_waiting_time:
-  39              	.LFB35:
-  40              		.file 1 "utils.c"
+  20              		.section	.rodata
+  21              		.align	2
+  22              	.LC1:
+  23 0000 0A0A2073 		.ascii	"\012\012 start restart_peripheral_waiting_time \012"
+  23      74617274 
+  23      20726573 
+  23      74617274 
+  23      5F706572 
+  24 002a 200A00   		.ascii	" \012\000"
+  25              		.section	.text.restart_peripheral_waiting_time,"ax",%progbits
+  26              		.align	2
+  27              		.global	restart_peripheral_waiting_time
+  28              		.code	16
+  29              		.thumb_func
+  30              		.type	restart_peripheral_waiting_time, %function
+  31              	restart_peripheral_waiting_time:
+  32              	.LFB35:
+  33              		.file 1 "utils.c"
    1:utils.c       **** /* ========================================
    2:utils.c       ****  *
    3:utils.c       ****  * Copyright YOUR COMPANY, THE YEAR
@@ -58,1241 +51,1238 @@ ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 1
   11:utils.c       **** */
   12:utils.c       **** 
   13:utils.c       **** #include "main.h"
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 2
-
-
   14:utils.c       **** #include "utils.h"
   15:utils.c       **** 
-  16:utils.c       **** int MIN_WAITING_TIME = 10000;
+  16:utils.c       **** //int MIN_WAITING_TIME = 20000;
   17:utils.c       **** 
   18:utils.c       **** void restart_peripheral_waiting_time()
   19:utils.c       **** {
-  41              		.loc 1 19 0
-  42              		.cfi_startproc
-  43              		@ args = 0, pretend = 0, frame = 0
-  44              		@ frame_needed = 1, uses_anonymous_args = 0
-  45 0000 80B5     		push	{r7, lr}
-  46              		.cfi_def_cfa_offset 8
-  47              		.cfi_offset 7, -8
-  48              		.cfi_offset 14, -4
-  49 0002 00AF     		add	r7, sp, #0
-  50              		.cfi_def_cfa_register 7
-  20:utils.c       ****     if ((DEVICE_INDEX != 0))
-  51              		.loc 1 20 0
-  52 0004 0B4B     		ldr	r3, .L4
-  53 0006 1B68     		ldr	r3, [r3]
-  54 0008 002B     		cmp	r3, #0
-  55 000a 0FD0     		beq	.L3
+  34              		.loc 1 19 0
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 2
+
+
+  35              		.cfi_startproc
+  36              		@ args = 0, pretend = 0, frame = 0
+  37              		@ frame_needed = 1, uses_anonymous_args = 0
+  38 0000 80B5     		push	{r7, lr}
+  39              		.cfi_def_cfa_offset 8
+  40              		.cfi_offset 7, -8
+  41              		.cfi_offset 14, -4
+  42 0002 00AF     		add	r7, sp, #0
+  43              		.cfi_def_cfa_register 7
+  20:utils.c       ****     if (DEVICE_INDEX != 0)
+  44              		.loc 1 20 0
+  45 0004 0B4B     		ldr	r3, .L4
+  46 0006 1B68     		ldr	r3, [r3]
+  47 0008 002B     		cmp	r3, #0
+  48 000a 0FD0     		beq	.L3
   21:utils.c       ****     {    
   22:utils.c       ****         UART_UartPutString("\n\n start restart_peripheral_waiting_time \n \n");
-  56              		.loc 1 22 0
-  57 000c 0A4B     		ldr	r3, .L4+4
-  58 000e 1800     		movs	r0, r3
-  59 0010 FFF7FEFF 		bl	UART_UartPutString
+  49              		.loc 1 22 0
+  50 000c 0A4B     		ldr	r3, .L4+4
+  51 000e 1800     		movs	r0, r3
+  52 0010 FFF7FEFF 		bl	UART_UartPutString
   23:utils.c       ****         Timer_Waiting_Time_Stop();
-  60              		.loc 1 23 0
-  61 0014 FFF7FEFF 		bl	Timer_Waiting_Time_Stop
+  53              		.loc 1 23 0
+  54 0014 FFF7FEFF 		bl	Timer_Waiting_Time_Stop
   24:utils.c       ****         Timer_Waiting_Time_WriteCounter(0);
-  62              		.loc 1 24 0
-  63 0018 0020     		movs	r0, #0
-  64 001a FFF7FEFF 		bl	Timer_Waiting_Time_WriteCounter
+  55              		.loc 1 24 0
+  56 0018 0020     		movs	r0, #0
+  57 001a FFF7FEFF 		bl	Timer_Waiting_Time_WriteCounter
   25:utils.c       ****         
-  26:utils.c       ****         Timer_Waiting_Time_Start();
-  65              		.loc 1 26 0
-  66 001e FFF7FEFF 		bl	Timer_Waiting_Time_Start
-  27:utils.c       ****         Timer_Waiting_Time_WritePeriod(MIN_WAITING_TIME);
-  67              		.loc 1 27 0
-  68 0022 064B     		ldr	r3, .L4+8
-  69 0024 1B68     		ldr	r3, [r3]
-  70 0026 1800     		movs	r0, r3
-  71 0028 FFF7FEFF 		bl	Timer_Waiting_Time_WritePeriod
-  72              	.L3:
+  26:utils.c       ****         Timer_Waiting_Time_WritePeriod(Waiting_Time_Period);
+  58              		.loc 1 26 0
+  59 001e 074B     		ldr	r3, .L4+8
+  60 0020 1B68     		ldr	r3, [r3]
+  61 0022 1800     		movs	r0, r3
+  62 0024 FFF7FEFF 		bl	Timer_Waiting_Time_WritePeriod
+  27:utils.c       ****         Timer_Waiting_Time_Start();
+  63              		.loc 1 27 0
+  64 0028 FFF7FEFF 		bl	Timer_Waiting_Time_Start
+  65              	.L3:
   28:utils.c       ****     }
   29:utils.c       **** }
-  73              		.loc 1 29 0
-  74 002c C046     		nop
-  75 002e BD46     		mov	sp, r7
-  76              		@ sp needed
-  77 0030 80BD     		pop	{r7, pc}
-  78              	.L5:
-  79 0032 C046     		.align	2
-  80              	.L4:
-  81 0034 00000000 		.word	DEVICE_INDEX
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 3
+  66              		.loc 1 29 0
+  67 002c C046     		nop
+  68 002e BD46     		mov	sp, r7
+  69              		@ sp needed
+  70 0030 80BD     		pop	{r7, pc}
+  71              	.L5:
+  72 0032 C046     		.align	2
+  73              	.L4:
+  74 0034 00000000 		.word	DEVICE_INDEX
+  75 0038 00000000 		.word	.LC1
+  76 003c 00000000 		.word	Waiting_Time_Period
+  77              		.cfi_endproc
+  78              	.LFE35:
+  79              		.size	restart_peripheral_waiting_time, .-restart_peripheral_waiting_time
+  80              		.text
+  81              	.Letext0:
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 3
 
 
-  82 0038 00000000 		.word	.LC1
-  83 003c 00000000 		.word	MIN_WAITING_TIME
-  84              		.cfi_endproc
-  85              	.LFE35:
-  86              		.size	restart_peripheral_waiting_time, .-restart_peripheral_waiting_time
-  87              		.text
-  88              	.Letext0:
-  89              		.file 2 "Generated_Source\\PSoC4/BLE_Stack.h"
-  90              		.file 3 "Generated_Source\\PSoC4/BLE_eventHandler.h"
-  91              		.file 4 "main.h"
-  92              		.file 5 "Generated_Source\\PSoC4/cytypes.h"
-  93              		.section	.debug_info,"",%progbits
-  94              	.Ldebug_info0:
-  95 0000 C4020000 		.4byte	0x2c4
-  96 0004 0400     		.2byte	0x4
-  97 0006 00000000 		.4byte	.Ldebug_abbrev0
-  98 000a 04       		.byte	0x4
-  99 000b 01       		.uleb128 0x1
- 100 000c 45040000 		.4byte	.LASF94
- 101 0010 0C       		.byte	0xc
- 102 0011 B0020000 		.4byte	.LASF95
- 103 0015 3B090000 		.4byte	.LASF96
- 104 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 105 001d 00000000 		.4byte	0
- 106 0021 00000000 		.4byte	.Ldebug_line0
- 107 0025 02       		.uleb128 0x2
- 108 0026 01       		.byte	0x1
- 109 0027 06       		.byte	0x6
- 110 0028 B1050000 		.4byte	.LASF0
- 111 002c 02       		.uleb128 0x2
- 112 002d 01       		.byte	0x1
- 113 002e 08       		.byte	0x8
- 114 002f 47050000 		.4byte	.LASF1
- 115 0033 02       		.uleb128 0x2
- 116 0034 02       		.byte	0x2
- 117 0035 05       		.byte	0x5
- 118 0036 B5000000 		.4byte	.LASF2
- 119 003a 02       		.uleb128 0x2
- 120 003b 02       		.byte	0x2
- 121 003c 07       		.byte	0x7
- 122 003d F5060000 		.4byte	.LASF3
- 123 0041 02       		.uleb128 0x2
- 124 0042 04       		.byte	0x4
- 125 0043 05       		.byte	0x5
- 126 0044 72030000 		.4byte	.LASF4
- 127 0048 02       		.uleb128 0x2
- 128 0049 04       		.byte	0x4
- 129 004a 07       		.byte	0x7
- 130 004b 53060000 		.4byte	.LASF5
- 131 004f 02       		.uleb128 0x2
- 132 0050 08       		.byte	0x8
- 133 0051 05       		.byte	0x5
- 134 0052 34010000 		.4byte	.LASF6
- 135 0056 02       		.uleb128 0x2
- 136 0057 08       		.byte	0x8
- 137 0058 07       		.byte	0x7
- 138 0059 21030000 		.4byte	.LASF7
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 4
+  82              		.file 2 "Generated_Source\\PSoC4/BLE_Stack.h"
+  83              		.file 3 "Generated_Source\\PSoC4/BLE_eventHandler.h"
+  84              		.file 4 "main.h"
+  85              		.file 5 "Generated_Source\\PSoC4/cytypes.h"
+  86              		.section	.debug_info,"",%progbits
+  87              	.Ldebug_info0:
+  88 0000 BE020000 		.4byte	0x2be
+  89 0004 0400     		.2byte	0x4
+  90 0006 00000000 		.4byte	.Ldebug_abbrev0
+  91 000a 04       		.byte	0x4
+  92 000b 01       		.uleb128 0x1
+  93 000c 59040000 		.4byte	.LASF94
+  94 0010 0C       		.byte	0xc
+  95 0011 C4020000 		.4byte	.LASF95
+  96 0015 3E090000 		.4byte	.LASF96
+  97 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  98 001d 00000000 		.4byte	0
+  99 0021 00000000 		.4byte	.Ldebug_line0
+ 100 0025 02       		.uleb128 0x2
+ 101 0026 01       		.byte	0x1
+ 102 0027 06       		.byte	0x6
+ 103 0028 C5050000 		.4byte	.LASF0
+ 104 002c 02       		.uleb128 0x2
+ 105 002d 01       		.byte	0x1
+ 106 002e 08       		.byte	0x8
+ 107 002f 5B050000 		.4byte	.LASF1
+ 108 0033 02       		.uleb128 0x2
+ 109 0034 02       		.byte	0x2
+ 110 0035 05       		.byte	0x5
+ 111 0036 B5000000 		.4byte	.LASF2
+ 112 003a 02       		.uleb128 0x2
+ 113 003b 02       		.byte	0x2
+ 114 003c 07       		.byte	0x7
+ 115 003d F8060000 		.4byte	.LASF3
+ 116 0041 02       		.uleb128 0x2
+ 117 0042 04       		.byte	0x4
+ 118 0043 05       		.byte	0x5
+ 119 0044 86030000 		.4byte	.LASF4
+ 120 0048 02       		.uleb128 0x2
+ 121 0049 04       		.byte	0x4
+ 122 004a 07       		.byte	0x7
+ 123 004b 56060000 		.4byte	.LASF5
+ 124 004f 02       		.uleb128 0x2
+ 125 0050 08       		.byte	0x8
+ 126 0051 05       		.byte	0x5
+ 127 0052 48010000 		.4byte	.LASF6
+ 128 0056 02       		.uleb128 0x2
+ 129 0057 08       		.byte	0x8
+ 130 0058 07       		.byte	0x7
+ 131 0059 35030000 		.4byte	.LASF7
+ 132 005d 03       		.uleb128 0x3
+ 133 005e 04       		.byte	0x4
+ 134 005f 05       		.byte	0x5
+ 135 0060 696E7400 		.ascii	"int\000"
+ 136 0064 02       		.uleb128 0x2
+ 137 0065 04       		.byte	0x4
+ 138 0066 07       		.byte	0x7
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 4
 
 
- 139 005d 03       		.uleb128 0x3
- 140 005e 04       		.byte	0x4
- 141 005f 05       		.byte	0x5
- 142 0060 696E7400 		.ascii	"int\000"
- 143 0064 02       		.uleb128 0x2
- 144 0065 04       		.byte	0x4
- 145 0066 07       		.byte	0x7
- 146 0067 1A060000 		.4byte	.LASF8
- 147 006b 04       		.uleb128 0x4
- 148 006c DE010000 		.4byte	.LASF97
- 149 0070 05       		.byte	0x5
- 150 0071 E701     		.2byte	0x1e7
- 151 0073 3A000000 		.4byte	0x3a
- 152 0077 02       		.uleb128 0x2
- 153 0078 04       		.byte	0x4
- 154 0079 04       		.byte	0x4
- 155 007a B8020000 		.4byte	.LASF9
- 156 007e 02       		.uleb128 0x2
- 157 007f 08       		.byte	0x8
- 158 0080 04       		.byte	0x4
- 159 0081 4A080000 		.4byte	.LASF10
- 160 0085 02       		.uleb128 0x2
- 161 0086 01       		.byte	0x1
- 162 0087 08       		.byte	0x8
- 163 0088 70070000 		.4byte	.LASF11
- 164 008c 05       		.uleb128 0x5
- 165 008d 6B000000 		.4byte	0x6b
- 166 0091 02       		.uleb128 0x2
- 167 0092 08       		.byte	0x8
- 168 0093 04       		.byte	0x4
- 169 0094 15050000 		.4byte	.LASF12
- 170 0098 02       		.uleb128 0x2
- 171 0099 04       		.byte	0x4
- 172 009a 07       		.byte	0x7
- 173 009b 0A010000 		.4byte	.LASF13
- 174 009f 06       		.uleb128 0x6
- 175 00a0 01       		.byte	0x1
- 176 00a1 2C000000 		.4byte	0x2c
- 177 00a5 02       		.byte	0x2
- 178 00a6 3501     		.2byte	0x135
- 179 00a8 5D020000 		.4byte	0x25d
- 180 00ac 07       		.uleb128 0x7
- 181 00ad 49020000 		.4byte	.LASF14
- 182 00b1 00       		.byte	0
- 183 00b2 07       		.uleb128 0x7
- 184 00b3 78010000 		.4byte	.LASF15
- 185 00b7 01       		.byte	0x1
- 186 00b8 07       		.uleb128 0x7
- 187 00b9 2E0A0000 		.4byte	.LASF16
- 188 00bd 02       		.byte	0x2
- 189 00be 07       		.uleb128 0x7
- 190 00bf B9080000 		.4byte	.LASF17
- 191 00c3 03       		.byte	0x3
- 192 00c4 07       		.uleb128 0x7
- 193 00c5 42010000 		.4byte	.LASF18
- 194 00c9 04       		.byte	0x4
- 195 00ca 07       		.uleb128 0x7
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 5
+ 139 0067 2E060000 		.4byte	.LASF8
+ 140 006b 04       		.uleb128 0x4
+ 141 006c F2010000 		.4byte	.LASF97
+ 142 0070 05       		.byte	0x5
+ 143 0071 E701     		.2byte	0x1e7
+ 144 0073 3A000000 		.4byte	0x3a
+ 145 0077 02       		.uleb128 0x2
+ 146 0078 04       		.byte	0x4
+ 147 0079 04       		.byte	0x4
+ 148 007a CC020000 		.4byte	.LASF9
+ 149 007e 02       		.uleb128 0x2
+ 150 007f 08       		.byte	0x8
+ 151 0080 04       		.byte	0x4
+ 152 0081 4D080000 		.4byte	.LASF10
+ 153 0085 02       		.uleb128 0x2
+ 154 0086 01       		.byte	0x1
+ 155 0087 08       		.byte	0x8
+ 156 0088 73070000 		.4byte	.LASF11
+ 157 008c 05       		.uleb128 0x5
+ 158 008d 6B000000 		.4byte	0x6b
+ 159 0091 02       		.uleb128 0x2
+ 160 0092 08       		.byte	0x8
+ 161 0093 04       		.byte	0x4
+ 162 0094 29050000 		.4byte	.LASF12
+ 163 0098 02       		.uleb128 0x2
+ 164 0099 04       		.byte	0x4
+ 165 009a 07       		.byte	0x7
+ 166 009b 0A010000 		.4byte	.LASF13
+ 167 009f 06       		.uleb128 0x6
+ 168 00a0 01       		.byte	0x1
+ 169 00a1 2C000000 		.4byte	0x2c
+ 170 00a5 02       		.byte	0x2
+ 171 00a6 3501     		.2byte	0x135
+ 172 00a8 5D020000 		.4byte	0x25d
+ 173 00ac 07       		.uleb128 0x7
+ 174 00ad 5D020000 		.4byte	.LASF14
+ 175 00b1 00       		.byte	0
+ 176 00b2 07       		.uleb128 0x7
+ 177 00b3 8C010000 		.4byte	.LASF15
+ 178 00b7 01       		.byte	0x1
+ 179 00b8 07       		.uleb128 0x7
+ 180 00b9 310A0000 		.4byte	.LASF16
+ 181 00bd 02       		.byte	0x2
+ 182 00be 07       		.uleb128 0x7
+ 183 00bf BC080000 		.4byte	.LASF17
+ 184 00c3 03       		.byte	0x3
+ 185 00c4 07       		.uleb128 0x7
+ 186 00c5 56010000 		.4byte	.LASF18
+ 187 00c9 04       		.byte	0x4
+ 188 00ca 07       		.uleb128 0x7
+ 189 00cb 17040000 		.4byte	.LASF19
+ 190 00cf 05       		.byte	0x5
+ 191 00d0 07       		.uleb128 0x7
+ 192 00d1 5E000000 		.4byte	.LASF20
+ 193 00d5 06       		.byte	0x6
+ 194 00d6 07       		.uleb128 0x7
+ 195 00d7 1A090000 		.4byte	.LASF21
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 5
 
 
- 196 00cb 03040000 		.4byte	.LASF19
- 197 00cf 05       		.byte	0x5
- 198 00d0 07       		.uleb128 0x7
- 199 00d1 5E000000 		.4byte	.LASF20
- 200 00d5 06       		.byte	0x6
- 201 00d6 07       		.uleb128 0x7
- 202 00d7 17090000 		.4byte	.LASF21
- 203 00db 20       		.byte	0x20
- 204 00dc 07       		.uleb128 0x7
- 205 00dd 65060000 		.4byte	.LASF22
- 206 00e1 21       		.byte	0x21
- 207 00e2 07       		.uleb128 0x7
- 208 00e3 00000000 		.4byte	.LASF23
- 209 00e7 22       		.byte	0x22
- 210 00e8 07       		.uleb128 0x7
- 211 00e9 1F040000 		.4byte	.LASF24
- 212 00ed 23       		.byte	0x23
- 213 00ee 07       		.uleb128 0x7
- 214 00ef FE050000 		.4byte	.LASF25
- 215 00f3 24       		.byte	0x24
- 216 00f4 07       		.uleb128 0x7
- 217 00f5 BF000000 		.4byte	.LASF26
- 218 00f9 25       		.byte	0x25
- 219 00fa 07       		.uleb128 0x7
- 220 00fb 91080000 		.4byte	.LASF27
- 221 00ff 26       		.byte	0x26
- 222 0100 07       		.uleb128 0x7
- 223 0101 AC030000 		.4byte	.LASF28
- 224 0105 27       		.byte	0x27
- 225 0106 07       		.uleb128 0x7
- 226 0107 B80A0000 		.4byte	.LASF29
- 227 010b 28       		.byte	0x28
- 228 010c 07       		.uleb128 0x7
- 229 010d 9D060000 		.4byte	.LASF30
- 230 0111 29       		.byte	0x29
- 231 0112 07       		.uleb128 0x7
- 232 0113 20070000 		.4byte	.LASF31
- 233 0117 2A       		.byte	0x2a
- 234 0118 07       		.uleb128 0x7
- 235 0119 EA070000 		.4byte	.LASF32
- 236 011d 2B       		.byte	0x2b
- 237 011e 07       		.uleb128 0x7
- 238 011f E5010000 		.4byte	.LASF33
- 239 0123 2C       		.byte	0x2c
- 240 0124 07       		.uleb128 0x7
- 241 0125 D7020000 		.4byte	.LASF34
- 242 0129 2D       		.byte	0x2d
- 243 012a 07       		.uleb128 0x7
- 244 012b 91000000 		.4byte	.LASF35
- 245 012f 2E       		.byte	0x2e
- 246 0130 07       		.uleb128 0x7
- 247 0131 100B0000 		.4byte	.LASF36
- 248 0135 2F       		.byte	0x2f
- 249 0136 07       		.uleb128 0x7
- 250 0137 13010000 		.4byte	.LASF37
- 251 013b 30       		.byte	0x30
- 252 013c 07       		.uleb128 0x7
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 6
+ 196 00db 20       		.byte	0x20
+ 197 00dc 07       		.uleb128 0x7
+ 198 00dd 68060000 		.4byte	.LASF22
+ 199 00e1 21       		.byte	0x21
+ 200 00e2 07       		.uleb128 0x7
+ 201 00e3 00000000 		.4byte	.LASF23
+ 202 00e7 22       		.byte	0x22
+ 203 00e8 07       		.uleb128 0x7
+ 204 00e9 33040000 		.4byte	.LASF24
+ 205 00ed 23       		.byte	0x23
+ 206 00ee 07       		.uleb128 0x7
+ 207 00ef 12060000 		.4byte	.LASF25
+ 208 00f3 24       		.byte	0x24
+ 209 00f4 07       		.uleb128 0x7
+ 210 00f5 BF000000 		.4byte	.LASF26
+ 211 00f9 25       		.byte	0x25
+ 212 00fa 07       		.uleb128 0x7
+ 213 00fb 94080000 		.4byte	.LASF27
+ 214 00ff 26       		.byte	0x26
+ 215 0100 07       		.uleb128 0x7
+ 216 0101 C0030000 		.4byte	.LASF28
+ 217 0105 27       		.byte	0x27
+ 218 0106 07       		.uleb128 0x7
+ 219 0107 BB0A0000 		.4byte	.LASF29
+ 220 010b 28       		.byte	0x28
+ 221 010c 07       		.uleb128 0x7
+ 222 010d A0060000 		.4byte	.LASF30
+ 223 0111 29       		.byte	0x29
+ 224 0112 07       		.uleb128 0x7
+ 225 0113 23070000 		.4byte	.LASF31
+ 226 0117 2A       		.byte	0x2a
+ 227 0118 07       		.uleb128 0x7
+ 228 0119 ED070000 		.4byte	.LASF32
+ 229 011d 2B       		.byte	0x2b
+ 230 011e 07       		.uleb128 0x7
+ 231 011f F9010000 		.4byte	.LASF33
+ 232 0123 2C       		.byte	0x2c
+ 233 0124 07       		.uleb128 0x7
+ 234 0125 EB020000 		.4byte	.LASF34
+ 235 0129 2D       		.byte	0x2d
+ 236 012a 07       		.uleb128 0x7
+ 237 012b 91000000 		.4byte	.LASF35
+ 238 012f 2E       		.byte	0x2e
+ 239 0130 07       		.uleb128 0x7
+ 240 0131 130B0000 		.4byte	.LASF36
+ 241 0135 2F       		.byte	0x2f
+ 242 0136 07       		.uleb128 0x7
+ 243 0137 13010000 		.4byte	.LASF37
+ 244 013b 30       		.byte	0x30
+ 245 013c 07       		.uleb128 0x7
+ 246 013d 05050000 		.4byte	.LASF38
+ 247 0141 31       		.byte	0x31
+ 248 0142 07       		.uleb128 0x7
+ 249 0143 14030000 		.4byte	.LASF39
+ 250 0147 32       		.byte	0x32
+ 251 0148 07       		.uleb128 0x7
+ 252 0149 4C070000 		.4byte	.LASF40
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 6
 
 
- 253 013d F1040000 		.4byte	.LASF38
- 254 0141 31       		.byte	0x31
- 255 0142 07       		.uleb128 0x7
- 256 0143 00030000 		.4byte	.LASF39
- 257 0147 32       		.byte	0x32
- 258 0148 07       		.uleb128 0x7
- 259 0149 49070000 		.4byte	.LASF40
- 260 014d 33       		.byte	0x33
- 261 014e 07       		.uleb128 0x7
- 262 014f BA060000 		.4byte	.LASF41
- 263 0153 34       		.byte	0x34
- 264 0154 07       		.uleb128 0x7
- 265 0155 74080000 		.4byte	.LASF42
- 266 0159 35       		.byte	0x35
- 267 015a 07       		.uleb128 0x7
- 268 015b 38030000 		.4byte	.LASF43
- 269 015f 36       		.byte	0x36
- 270 0160 07       		.uleb128 0x7
- 271 0161 8B010000 		.4byte	.LASF44
- 272 0165 37       		.byte	0x37
- 273 0166 07       		.uleb128 0x7
- 274 0167 77000000 		.4byte	.LASF45
- 275 016b 40       		.byte	0x40
- 276 016c 07       		.uleb128 0x7
- 277 016d 38060000 		.4byte	.LASF46
- 278 0171 41       		.byte	0x41
- 279 0172 07       		.uleb128 0x7
- 280 0173 D9000000 		.4byte	.LASF47
- 281 0177 42       		.byte	0x42
- 282 0178 07       		.uleb128 0x7
- 283 0179 C0010000 		.4byte	.LASF48
- 284 017d 43       		.byte	0x43
- 285 017e 07       		.uleb128 0x7
- 286 017f EC090000 		.4byte	.LASF49
- 287 0183 44       		.byte	0x44
- 288 0184 07       		.uleb128 0x7
- 289 0185 A7090000 		.4byte	.LASF50
- 290 0189 45       		.byte	0x45
- 291 018a 07       		.uleb128 0x7
- 292 018b 57010000 		.4byte	.LASF51
- 293 018f 46       		.byte	0x46
- 294 0190 07       		.uleb128 0x7
- 295 0191 93050000 		.4byte	.LASF52
- 296 0195 47       		.byte	0x47
- 297 0196 07       		.uleb128 0x7
- 298 0197 D7050000 		.4byte	.LASF53
- 299 019b 48       		.byte	0x48
- 300 019c 07       		.uleb128 0x7
- 301 019d BE020000 		.4byte	.LASF54
- 302 01a1 49       		.byte	0x49
- 303 01a2 07       		.uleb128 0x7
- 304 01a3 9E070000 		.4byte	.LASF55
- 305 01a7 4A       		.byte	0x4a
- 306 01a8 07       		.uleb128 0x7
- 307 01a9 09020000 		.4byte	.LASF56
- 308 01ad 4B       		.byte	0x4b
- 309 01ae 07       		.uleb128 0x7
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 7
+ 253 014d 33       		.byte	0x33
+ 254 014e 07       		.uleb128 0x7
+ 255 014f BD060000 		.4byte	.LASF41
+ 256 0153 34       		.byte	0x34
+ 257 0154 07       		.uleb128 0x7
+ 258 0155 77080000 		.4byte	.LASF42
+ 259 0159 35       		.byte	0x35
+ 260 015a 07       		.uleb128 0x7
+ 261 015b 4C030000 		.4byte	.LASF43
+ 262 015f 36       		.byte	0x36
+ 263 0160 07       		.uleb128 0x7
+ 264 0161 9F010000 		.4byte	.LASF44
+ 265 0165 37       		.byte	0x37
+ 266 0166 07       		.uleb128 0x7
+ 267 0167 77000000 		.4byte	.LASF45
+ 268 016b 40       		.byte	0x40
+ 269 016c 07       		.uleb128 0x7
+ 270 016d 3B060000 		.4byte	.LASF46
+ 271 0171 41       		.byte	0x41
+ 272 0172 07       		.uleb128 0x7
+ 273 0173 D9000000 		.4byte	.LASF47
+ 274 0177 42       		.byte	0x42
+ 275 0178 07       		.uleb128 0x7
+ 276 0179 D4010000 		.4byte	.LASF48
+ 277 017d 43       		.byte	0x43
+ 278 017e 07       		.uleb128 0x7
+ 279 017f EF090000 		.4byte	.LASF49
+ 280 0183 44       		.byte	0x44
+ 281 0184 07       		.uleb128 0x7
+ 282 0185 AA090000 		.4byte	.LASF50
+ 283 0189 45       		.byte	0x45
+ 284 018a 07       		.uleb128 0x7
+ 285 018b 6B010000 		.4byte	.LASF51
+ 286 018f 46       		.byte	0x46
+ 287 0190 07       		.uleb128 0x7
+ 288 0191 A7050000 		.4byte	.LASF52
+ 289 0195 47       		.byte	0x47
+ 290 0196 07       		.uleb128 0x7
+ 291 0197 EB050000 		.4byte	.LASF53
+ 292 019b 48       		.byte	0x48
+ 293 019c 07       		.uleb128 0x7
+ 294 019d D2020000 		.4byte	.LASF54
+ 295 01a1 49       		.byte	0x49
+ 296 01a2 07       		.uleb128 0x7
+ 297 01a3 A1070000 		.4byte	.LASF55
+ 298 01a7 4A       		.byte	0x4a
+ 299 01a8 07       		.uleb128 0x7
+ 300 01a9 1D020000 		.4byte	.LASF56
+ 301 01ad 4B       		.byte	0x4b
+ 302 01ae 07       		.uleb128 0x7
+ 303 01af D1050000 		.4byte	.LASF57
+ 304 01b3 4C       		.byte	0x4c
+ 305 01b4 07       		.uleb128 0x7
+ 306 01b5 44000000 		.4byte	.LASF58
+ 307 01b9 4D       		.byte	0x4d
+ 308 01ba 07       		.uleb128 0x7
+ 309 01bb D1090000 		.4byte	.LASF59
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 7
 
 
- 310 01af BD050000 		.4byte	.LASF57
- 311 01b3 4C       		.byte	0x4c
- 312 01b4 07       		.uleb128 0x7
- 313 01b5 44000000 		.4byte	.LASF58
- 314 01b9 4D       		.byte	0x4d
- 315 01ba 07       		.uleb128 0x7
- 316 01bb CE090000 		.4byte	.LASF59
- 317 01bf 4E       		.byte	0x4e
- 318 01c0 07       		.uleb128 0x7
- 319 01c1 55050000 		.4byte	.LASF60
- 320 01c5 4F       		.byte	0x4f
- 321 01c6 07       		.uleb128 0x7
- 322 01c7 990A0000 		.4byte	.LASF61
- 323 01cb 50       		.byte	0x50
- 324 01cc 07       		.uleb128 0x7
- 325 01cd CB070000 		.4byte	.LASF62
- 326 01d1 51       		.byte	0x51
- 327 01d2 07       		.uleb128 0x7
- 328 01d3 E2030000 		.4byte	.LASF63
- 329 01d7 52       		.byte	0x52
- 330 01d8 07       		.uleb128 0x7
- 331 01d9 7B030000 		.4byte	.LASF64
- 332 01dd 53       		.byte	0x53
- 333 01de 07       		.uleb128 0x7
- 334 01df 28020000 		.4byte	.LASF65
- 335 01e3 54       		.byte	0x54
- 336 01e4 07       		.uleb128 0x7
- 337 01e5 DA0A0000 		.4byte	.LASF66
- 338 01e9 55       		.byte	0x55
- 339 01ea 07       		.uleb128 0x7
- 340 01eb 770A0000 		.4byte	.LASF67
- 341 01ef 56       		.byte	0x56
- 342 01f0 07       		.uleb128 0x7
- 343 01f1 4E0A0000 		.4byte	.LASF68
- 344 01f5 57       		.byte	0x57
- 345 01f6 07       		.uleb128 0x7
- 346 01f7 D2060000 		.4byte	.LASF69
- 347 01fb 58       		.byte	0x58
- 348 01fc 07       		.uleb128 0x7
- 349 01fd 21050000 		.4byte	.LASF70
- 350 0201 70       		.byte	0x70
- 351 0202 07       		.uleb128 0x7
- 352 0203 F1080000 		.4byte	.LASF71
- 353 0207 71       		.byte	0x71
- 354 0208 07       		.uleb128 0x7
- 355 0209 82070000 		.4byte	.LASF72
- 356 020d 72       		.byte	0x72
- 357 020e 07       		.uleb128 0x7
- 358 020f 71020000 		.4byte	.LASF73
- 359 0213 73       		.byte	0x73
- 360 0214 07       		.uleb128 0x7
- 361 0215 D3040000 		.4byte	.LASF74
- 362 0219 74       		.byte	0x74
- 363 021a 07       		.uleb128 0x7
- 364 021b 7C060000 		.4byte	.LASF75
- 365 021f 75       		.byte	0x75
- 366 0220 07       		.uleb128 0x7
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 8
+ 310 01bf 4E       		.byte	0x4e
+ 311 01c0 07       		.uleb128 0x7
+ 312 01c1 69050000 		.4byte	.LASF60
+ 313 01c5 4F       		.byte	0x4f
+ 314 01c6 07       		.uleb128 0x7
+ 315 01c7 9C0A0000 		.4byte	.LASF61
+ 316 01cb 50       		.byte	0x50
+ 317 01cc 07       		.uleb128 0x7
+ 318 01cd CE070000 		.4byte	.LASF62
+ 319 01d1 51       		.byte	0x51
+ 320 01d2 07       		.uleb128 0x7
+ 321 01d3 F6030000 		.4byte	.LASF63
+ 322 01d7 52       		.byte	0x52
+ 323 01d8 07       		.uleb128 0x7
+ 324 01d9 8F030000 		.4byte	.LASF64
+ 325 01dd 53       		.byte	0x53
+ 326 01de 07       		.uleb128 0x7
+ 327 01df 3C020000 		.4byte	.LASF65
+ 328 01e3 54       		.byte	0x54
+ 329 01e4 07       		.uleb128 0x7
+ 330 01e5 DD0A0000 		.4byte	.LASF66
+ 331 01e9 55       		.byte	0x55
+ 332 01ea 07       		.uleb128 0x7
+ 333 01eb 7A0A0000 		.4byte	.LASF67
+ 334 01ef 56       		.byte	0x56
+ 335 01f0 07       		.uleb128 0x7
+ 336 01f1 510A0000 		.4byte	.LASF68
+ 337 01f5 57       		.byte	0x57
+ 338 01f6 07       		.uleb128 0x7
+ 339 01f7 D5060000 		.4byte	.LASF69
+ 340 01fb 58       		.byte	0x58
+ 341 01fc 07       		.uleb128 0x7
+ 342 01fd 35050000 		.4byte	.LASF70
+ 343 0201 70       		.byte	0x70
+ 344 0202 07       		.uleb128 0x7
+ 345 0203 F4080000 		.4byte	.LASF71
+ 346 0207 71       		.byte	0x71
+ 347 0208 07       		.uleb128 0x7
+ 348 0209 85070000 		.4byte	.LASF72
+ 349 020d 72       		.byte	0x72
+ 350 020e 07       		.uleb128 0x7
+ 351 020f 85020000 		.4byte	.LASF73
+ 352 0213 73       		.byte	0x73
+ 353 0214 07       		.uleb128 0x7
+ 354 0215 E7040000 		.4byte	.LASF74
+ 355 0219 74       		.byte	0x74
+ 356 021a 07       		.uleb128 0x7
+ 357 021b 7F060000 		.4byte	.LASF75
+ 358 021f 75       		.byte	0x75
+ 359 0220 07       		.uleb128 0x7
+ 360 0221 A3020000 		.4byte	.LASF76
+ 361 0225 76       		.byte	0x76
+ 362 0226 07       		.uleb128 0x7
+ 363 0227 D5080000 		.4byte	.LASF77
+ 364 022b 77       		.byte	0x77
+ 365 022c 07       		.uleb128 0x7
+ 366 022d 2A080000 		.4byte	.LASF78
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 8
 
 
- 367 0221 8F020000 		.4byte	.LASF76
- 368 0225 76       		.byte	0x76
- 369 0226 07       		.uleb128 0x7
- 370 0227 D2080000 		.4byte	.LASF77
- 371 022b 77       		.byte	0x77
- 372 022c 07       		.uleb128 0x7
- 373 022d 27080000 		.4byte	.LASF78
- 374 0231 78       		.byte	0x78
- 375 0232 07       		.uleb128 0x7
- 376 0233 51080000 		.4byte	.LASF79
- 377 0237 79       		.byte	0x79
- 378 0238 07       		.uleb128 0x7
- 379 0239 0A0A0000 		.4byte	.LASF80
- 380 023d 7A       		.byte	0x7a
- 381 023e 07       		.uleb128 0x7
- 382 023f 09080000 		.4byte	.LASF81
- 383 0243 FA       		.byte	0xfa
- 384 0244 07       		.uleb128 0x7
- 385 0245 74050000 		.4byte	.LASF82
- 386 0249 FB       		.byte	0xfb
- 387 024a 07       		.uleb128 0x7
- 388 024b FE0A0000 		.4byte	.LASF83
- 389 024f FC       		.byte	0xfc
- 390 0250 07       		.uleb128 0x7
- 391 0251 08070000 		.4byte	.LASF84
- 392 0255 FD       		.byte	0xfd
- 393 0256 07       		.uleb128 0x7
- 394 0257 400A0000 		.4byte	.LASF85
- 395 025b FF       		.byte	0xff
- 396 025c 00       		.byte	0
- 397 025d 06       		.uleb128 0x6
- 398 025e 01       		.byte	0x1
- 399 025f 2C000000 		.4byte	0x2c
- 400 0263 03       		.byte	0x3
- 401 0264 EB08     		.2byte	0x8eb
- 402 0266 89020000 		.4byte	0x289
- 403 026a 07       		.uleb128 0x7
- 404 026b BC070000 		.4byte	.LASF86
- 405 026f 00       		.byte	0
- 406 0270 07       		.uleb128 0x7
- 407 0271 9C030000 		.4byte	.LASF87
- 408 0275 01       		.byte	0x1
- 409 0276 07       		.uleb128 0x7
- 410 0277 F7000000 		.4byte	.LASF88
- 411 027b 02       		.byte	0x2
- 412 027c 07       		.uleb128 0x7
- 413 027d CB030000 		.4byte	.LASF89
- 414 0281 02       		.byte	0x2
- 415 0282 07       		.uleb128 0x7
- 416 0283 60020000 		.4byte	.LASF90
- 417 0287 03       		.byte	0x3
- 418 0288 00       		.byte	0
- 419 0289 08       		.uleb128 0x8
- 420 028a 24000000 		.4byte	.LASF98
- 421 028e 01       		.byte	0x1
- 422 028f 12       		.byte	0x12
- 423 0290 00000000 		.4byte	.LFB35
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 9
+ 367 0231 78       		.byte	0x78
+ 368 0232 07       		.uleb128 0x7
+ 369 0233 54080000 		.4byte	.LASF79
+ 370 0237 79       		.byte	0x79
+ 371 0238 07       		.uleb128 0x7
+ 372 0239 0D0A0000 		.4byte	.LASF80
+ 373 023d 7A       		.byte	0x7a
+ 374 023e 07       		.uleb128 0x7
+ 375 023f 0C080000 		.4byte	.LASF81
+ 376 0243 FA       		.byte	0xfa
+ 377 0244 07       		.uleb128 0x7
+ 378 0245 88050000 		.4byte	.LASF82
+ 379 0249 FB       		.byte	0xfb
+ 380 024a 07       		.uleb128 0x7
+ 381 024b 010B0000 		.4byte	.LASF83
+ 382 024f FC       		.byte	0xfc
+ 383 0250 07       		.uleb128 0x7
+ 384 0251 0B070000 		.4byte	.LASF84
+ 385 0255 FD       		.byte	0xfd
+ 386 0256 07       		.uleb128 0x7
+ 387 0257 430A0000 		.4byte	.LASF85
+ 388 025b FF       		.byte	0xff
+ 389 025c 00       		.byte	0
+ 390 025d 06       		.uleb128 0x6
+ 391 025e 01       		.byte	0x1
+ 392 025f 2C000000 		.4byte	0x2c
+ 393 0263 03       		.byte	0x3
+ 394 0264 EB08     		.2byte	0x8eb
+ 395 0266 89020000 		.4byte	0x289
+ 396 026a 07       		.uleb128 0x7
+ 397 026b BF070000 		.4byte	.LASF86
+ 398 026f 00       		.byte	0
+ 399 0270 07       		.uleb128 0x7
+ 400 0271 B0030000 		.4byte	.LASF87
+ 401 0275 01       		.byte	0x1
+ 402 0276 07       		.uleb128 0x7
+ 403 0277 F7000000 		.4byte	.LASF88
+ 404 027b 02       		.byte	0x2
+ 405 027c 07       		.uleb128 0x7
+ 406 027d DF030000 		.4byte	.LASF89
+ 407 0281 02       		.byte	0x2
+ 408 0282 07       		.uleb128 0x7
+ 409 0283 74020000 		.4byte	.LASF90
+ 410 0287 03       		.byte	0x3
+ 411 0288 00       		.byte	0
+ 412 0289 08       		.uleb128 0x8
+ 413 028a 24000000 		.4byte	.LASF98
+ 414 028e 01       		.byte	0x1
+ 415 028f 12       		.byte	0x12
+ 416 0290 00000000 		.4byte	.LFB35
+ 417 0294 40000000 		.4byte	.LFE35-.LFB35
+ 418 0298 01       		.uleb128 0x1
+ 419 0299 9C       		.byte	0x9c
+ 420 029a 09       		.uleb128 0x9
+ 421 029b 6D030000 		.4byte	.LASF91
+ 422 029f 04       		.byte	0x4
+ 423 02a0 22       		.byte	0x22
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 9
 
 
- 424 0294 40000000 		.4byte	.LFE35-.LFB35
- 425 0298 01       		.uleb128 0x1
- 426 0299 9C       		.byte	0x9c
- 427 029a 09       		.uleb128 0x9
- 428 029b 59030000 		.4byte	.LASF91
- 429 029f 04       		.byte	0x4
- 430 02a0 22       		.byte	0x22
- 431 02a1 8C000000 		.4byte	0x8c
- 432 02a5 05       		.uleb128 0x5
- 433 02a6 03       		.byte	0x3
- 434 02a7 00000000 		.4byte	current_watchdog_counter
- 435 02ab 0A       		.uleb128 0xa
- 436 02ac 75070000 		.4byte	.LASF92
- 437 02b0 04       		.byte	0x4
- 438 02b1 25       		.byte	0x25
- 439 02b2 5D000000 		.4byte	0x5d
- 440 02b6 09       		.uleb128 0x9
- 441 02b7 27060000 		.4byte	.LASF93
- 442 02bb 01       		.byte	0x1
- 443 02bc 10       		.byte	0x10
- 444 02bd 5D000000 		.4byte	0x5d
- 445 02c1 05       		.uleb128 0x5
- 446 02c2 03       		.byte	0x3
- 447 02c3 00000000 		.4byte	MIN_WAITING_TIME
- 448 02c7 00       		.byte	0
- 449              		.section	.debug_abbrev,"",%progbits
- 450              	.Ldebug_abbrev0:
- 451 0000 01       		.uleb128 0x1
- 452 0001 11       		.uleb128 0x11
- 453 0002 01       		.byte	0x1
- 454 0003 25       		.uleb128 0x25
- 455 0004 0E       		.uleb128 0xe
- 456 0005 13       		.uleb128 0x13
- 457 0006 0B       		.uleb128 0xb
- 458 0007 03       		.uleb128 0x3
- 459 0008 0E       		.uleb128 0xe
- 460 0009 1B       		.uleb128 0x1b
- 461 000a 0E       		.uleb128 0xe
- 462 000b 55       		.uleb128 0x55
- 463 000c 17       		.uleb128 0x17
- 464 000d 11       		.uleb128 0x11
- 465 000e 01       		.uleb128 0x1
- 466 000f 10       		.uleb128 0x10
- 467 0010 17       		.uleb128 0x17
- 468 0011 00       		.byte	0
- 469 0012 00       		.byte	0
- 470 0013 02       		.uleb128 0x2
- 471 0014 24       		.uleb128 0x24
- 472 0015 00       		.byte	0
- 473 0016 0B       		.uleb128 0xb
- 474 0017 0B       		.uleb128 0xb
- 475 0018 3E       		.uleb128 0x3e
- 476 0019 0B       		.uleb128 0xb
- 477 001a 03       		.uleb128 0x3
- 478 001b 0E       		.uleb128 0xe
- 479 001c 00       		.byte	0
- 480 001d 00       		.byte	0
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 10
+ 424 02a1 8C000000 		.4byte	0x8c
+ 425 02a5 05       		.uleb128 0x5
+ 426 02a6 03       		.byte	0x3
+ 427 02a7 00000000 		.4byte	current_watchdog_counter
+ 428 02ab 0A       		.uleb128 0xa
+ 429 02ac 78070000 		.4byte	.LASF92
+ 430 02b0 04       		.byte	0x4
+ 431 02b1 25       		.byte	0x25
+ 432 02b2 5D000000 		.4byte	0x5d
+ 433 02b6 0A       		.uleb128 0xa
+ 434 02b7 34010000 		.4byte	.LASF93
+ 435 02bb 04       		.byte	0x4
+ 436 02bc 2A       		.byte	0x2a
+ 437 02bd 5D000000 		.4byte	0x5d
+ 438 02c1 00       		.byte	0
+ 439              		.section	.debug_abbrev,"",%progbits
+ 440              	.Ldebug_abbrev0:
+ 441 0000 01       		.uleb128 0x1
+ 442 0001 11       		.uleb128 0x11
+ 443 0002 01       		.byte	0x1
+ 444 0003 25       		.uleb128 0x25
+ 445 0004 0E       		.uleb128 0xe
+ 446 0005 13       		.uleb128 0x13
+ 447 0006 0B       		.uleb128 0xb
+ 448 0007 03       		.uleb128 0x3
+ 449 0008 0E       		.uleb128 0xe
+ 450 0009 1B       		.uleb128 0x1b
+ 451 000a 0E       		.uleb128 0xe
+ 452 000b 55       		.uleb128 0x55
+ 453 000c 17       		.uleb128 0x17
+ 454 000d 11       		.uleb128 0x11
+ 455 000e 01       		.uleb128 0x1
+ 456 000f 10       		.uleb128 0x10
+ 457 0010 17       		.uleb128 0x17
+ 458 0011 00       		.byte	0
+ 459 0012 00       		.byte	0
+ 460 0013 02       		.uleb128 0x2
+ 461 0014 24       		.uleb128 0x24
+ 462 0015 00       		.byte	0
+ 463 0016 0B       		.uleb128 0xb
+ 464 0017 0B       		.uleb128 0xb
+ 465 0018 3E       		.uleb128 0x3e
+ 466 0019 0B       		.uleb128 0xb
+ 467 001a 03       		.uleb128 0x3
+ 468 001b 0E       		.uleb128 0xe
+ 469 001c 00       		.byte	0
+ 470 001d 00       		.byte	0
+ 471 001e 03       		.uleb128 0x3
+ 472 001f 24       		.uleb128 0x24
+ 473 0020 00       		.byte	0
+ 474 0021 0B       		.uleb128 0xb
+ 475 0022 0B       		.uleb128 0xb
+ 476 0023 3E       		.uleb128 0x3e
+ 477 0024 0B       		.uleb128 0xb
+ 478 0025 03       		.uleb128 0x3
+ 479 0026 08       		.uleb128 0x8
+ 480 0027 00       		.byte	0
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 10
 
 
- 481 001e 03       		.uleb128 0x3
- 482 001f 24       		.uleb128 0x24
- 483 0020 00       		.byte	0
- 484 0021 0B       		.uleb128 0xb
- 485 0022 0B       		.uleb128 0xb
- 486 0023 3E       		.uleb128 0x3e
- 487 0024 0B       		.uleb128 0xb
- 488 0025 03       		.uleb128 0x3
- 489 0026 08       		.uleb128 0x8
- 490 0027 00       		.byte	0
- 491 0028 00       		.byte	0
- 492 0029 04       		.uleb128 0x4
- 493 002a 16       		.uleb128 0x16
- 494 002b 00       		.byte	0
- 495 002c 03       		.uleb128 0x3
- 496 002d 0E       		.uleb128 0xe
- 497 002e 3A       		.uleb128 0x3a
- 498 002f 0B       		.uleb128 0xb
- 499 0030 3B       		.uleb128 0x3b
- 500 0031 05       		.uleb128 0x5
- 501 0032 49       		.uleb128 0x49
- 502 0033 13       		.uleb128 0x13
- 503 0034 00       		.byte	0
- 504 0035 00       		.byte	0
- 505 0036 05       		.uleb128 0x5
- 506 0037 35       		.uleb128 0x35
- 507 0038 00       		.byte	0
- 508 0039 49       		.uleb128 0x49
- 509 003a 13       		.uleb128 0x13
- 510 003b 00       		.byte	0
- 511 003c 00       		.byte	0
- 512 003d 06       		.uleb128 0x6
- 513 003e 04       		.uleb128 0x4
- 514 003f 01       		.byte	0x1
- 515 0040 0B       		.uleb128 0xb
- 516 0041 0B       		.uleb128 0xb
- 517 0042 49       		.uleb128 0x49
- 518 0043 13       		.uleb128 0x13
- 519 0044 3A       		.uleb128 0x3a
- 520 0045 0B       		.uleb128 0xb
- 521 0046 3B       		.uleb128 0x3b
- 522 0047 05       		.uleb128 0x5
- 523 0048 01       		.uleb128 0x1
- 524 0049 13       		.uleb128 0x13
- 525 004a 00       		.byte	0
- 526 004b 00       		.byte	0
- 527 004c 07       		.uleb128 0x7
- 528 004d 28       		.uleb128 0x28
- 529 004e 00       		.byte	0
- 530 004f 03       		.uleb128 0x3
- 531 0050 0E       		.uleb128 0xe
- 532 0051 1C       		.uleb128 0x1c
- 533 0052 0B       		.uleb128 0xb
- 534 0053 00       		.byte	0
- 535 0054 00       		.byte	0
- 536 0055 08       		.uleb128 0x8
- 537 0056 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 11
+ 481 0028 00       		.byte	0
+ 482 0029 04       		.uleb128 0x4
+ 483 002a 16       		.uleb128 0x16
+ 484 002b 00       		.byte	0
+ 485 002c 03       		.uleb128 0x3
+ 486 002d 0E       		.uleb128 0xe
+ 487 002e 3A       		.uleb128 0x3a
+ 488 002f 0B       		.uleb128 0xb
+ 489 0030 3B       		.uleb128 0x3b
+ 490 0031 05       		.uleb128 0x5
+ 491 0032 49       		.uleb128 0x49
+ 492 0033 13       		.uleb128 0x13
+ 493 0034 00       		.byte	0
+ 494 0035 00       		.byte	0
+ 495 0036 05       		.uleb128 0x5
+ 496 0037 35       		.uleb128 0x35
+ 497 0038 00       		.byte	0
+ 498 0039 49       		.uleb128 0x49
+ 499 003a 13       		.uleb128 0x13
+ 500 003b 00       		.byte	0
+ 501 003c 00       		.byte	0
+ 502 003d 06       		.uleb128 0x6
+ 503 003e 04       		.uleb128 0x4
+ 504 003f 01       		.byte	0x1
+ 505 0040 0B       		.uleb128 0xb
+ 506 0041 0B       		.uleb128 0xb
+ 507 0042 49       		.uleb128 0x49
+ 508 0043 13       		.uleb128 0x13
+ 509 0044 3A       		.uleb128 0x3a
+ 510 0045 0B       		.uleb128 0xb
+ 511 0046 3B       		.uleb128 0x3b
+ 512 0047 05       		.uleb128 0x5
+ 513 0048 01       		.uleb128 0x1
+ 514 0049 13       		.uleb128 0x13
+ 515 004a 00       		.byte	0
+ 516 004b 00       		.byte	0
+ 517 004c 07       		.uleb128 0x7
+ 518 004d 28       		.uleb128 0x28
+ 519 004e 00       		.byte	0
+ 520 004f 03       		.uleb128 0x3
+ 521 0050 0E       		.uleb128 0xe
+ 522 0051 1C       		.uleb128 0x1c
+ 523 0052 0B       		.uleb128 0xb
+ 524 0053 00       		.byte	0
+ 525 0054 00       		.byte	0
+ 526 0055 08       		.uleb128 0x8
+ 527 0056 2E       		.uleb128 0x2e
+ 528 0057 00       		.byte	0
+ 529 0058 3F       		.uleb128 0x3f
+ 530 0059 19       		.uleb128 0x19
+ 531 005a 03       		.uleb128 0x3
+ 532 005b 0E       		.uleb128 0xe
+ 533 005c 3A       		.uleb128 0x3a
+ 534 005d 0B       		.uleb128 0xb
+ 535 005e 3B       		.uleb128 0x3b
+ 536 005f 0B       		.uleb128 0xb
+ 537 0060 11       		.uleb128 0x11
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 11
 
 
- 538 0057 00       		.byte	0
- 539 0058 3F       		.uleb128 0x3f
- 540 0059 19       		.uleb128 0x19
- 541 005a 03       		.uleb128 0x3
- 542 005b 0E       		.uleb128 0xe
- 543 005c 3A       		.uleb128 0x3a
- 544 005d 0B       		.uleb128 0xb
- 545 005e 3B       		.uleb128 0x3b
- 546 005f 0B       		.uleb128 0xb
- 547 0060 11       		.uleb128 0x11
- 548 0061 01       		.uleb128 0x1
- 549 0062 12       		.uleb128 0x12
- 550 0063 06       		.uleb128 0x6
- 551 0064 40       		.uleb128 0x40
- 552 0065 18       		.uleb128 0x18
- 553 0066 9642     		.uleb128 0x2116
- 554 0068 19       		.uleb128 0x19
- 555 0069 00       		.byte	0
- 556 006a 00       		.byte	0
- 557 006b 09       		.uleb128 0x9
- 558 006c 34       		.uleb128 0x34
- 559 006d 00       		.byte	0
- 560 006e 03       		.uleb128 0x3
- 561 006f 0E       		.uleb128 0xe
- 562 0070 3A       		.uleb128 0x3a
- 563 0071 0B       		.uleb128 0xb
- 564 0072 3B       		.uleb128 0x3b
- 565 0073 0B       		.uleb128 0xb
- 566 0074 49       		.uleb128 0x49
- 567 0075 13       		.uleb128 0x13
- 568 0076 3F       		.uleb128 0x3f
- 569 0077 19       		.uleb128 0x19
- 570 0078 02       		.uleb128 0x2
- 571 0079 18       		.uleb128 0x18
- 572 007a 00       		.byte	0
- 573 007b 00       		.byte	0
- 574 007c 0A       		.uleb128 0xa
- 575 007d 34       		.uleb128 0x34
- 576 007e 00       		.byte	0
- 577 007f 03       		.uleb128 0x3
- 578 0080 0E       		.uleb128 0xe
- 579 0081 3A       		.uleb128 0x3a
- 580 0082 0B       		.uleb128 0xb
- 581 0083 3B       		.uleb128 0x3b
- 582 0084 0B       		.uleb128 0xb
- 583 0085 49       		.uleb128 0x49
- 584 0086 13       		.uleb128 0x13
- 585 0087 3F       		.uleb128 0x3f
- 586 0088 19       		.uleb128 0x19
- 587 0089 3C       		.uleb128 0x3c
- 588 008a 19       		.uleb128 0x19
- 589 008b 00       		.byte	0
- 590 008c 00       		.byte	0
- 591 008d 00       		.byte	0
- 592              		.section	.debug_aranges,"",%progbits
- 593 0000 1C000000 		.4byte	0x1c
- 594 0004 0200     		.2byte	0x2
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 12
+ 538 0061 01       		.uleb128 0x1
+ 539 0062 12       		.uleb128 0x12
+ 540 0063 06       		.uleb128 0x6
+ 541 0064 40       		.uleb128 0x40
+ 542 0065 18       		.uleb128 0x18
+ 543 0066 9642     		.uleb128 0x2116
+ 544 0068 19       		.uleb128 0x19
+ 545 0069 00       		.byte	0
+ 546 006a 00       		.byte	0
+ 547 006b 09       		.uleb128 0x9
+ 548 006c 34       		.uleb128 0x34
+ 549 006d 00       		.byte	0
+ 550 006e 03       		.uleb128 0x3
+ 551 006f 0E       		.uleb128 0xe
+ 552 0070 3A       		.uleb128 0x3a
+ 553 0071 0B       		.uleb128 0xb
+ 554 0072 3B       		.uleb128 0x3b
+ 555 0073 0B       		.uleb128 0xb
+ 556 0074 49       		.uleb128 0x49
+ 557 0075 13       		.uleb128 0x13
+ 558 0076 3F       		.uleb128 0x3f
+ 559 0077 19       		.uleb128 0x19
+ 560 0078 02       		.uleb128 0x2
+ 561 0079 18       		.uleb128 0x18
+ 562 007a 00       		.byte	0
+ 563 007b 00       		.byte	0
+ 564 007c 0A       		.uleb128 0xa
+ 565 007d 34       		.uleb128 0x34
+ 566 007e 00       		.byte	0
+ 567 007f 03       		.uleb128 0x3
+ 568 0080 0E       		.uleb128 0xe
+ 569 0081 3A       		.uleb128 0x3a
+ 570 0082 0B       		.uleb128 0xb
+ 571 0083 3B       		.uleb128 0x3b
+ 572 0084 0B       		.uleb128 0xb
+ 573 0085 49       		.uleb128 0x49
+ 574 0086 13       		.uleb128 0x13
+ 575 0087 3F       		.uleb128 0x3f
+ 576 0088 19       		.uleb128 0x19
+ 577 0089 3C       		.uleb128 0x3c
+ 578 008a 19       		.uleb128 0x19
+ 579 008b 00       		.byte	0
+ 580 008c 00       		.byte	0
+ 581 008d 00       		.byte	0
+ 582              		.section	.debug_aranges,"",%progbits
+ 583 0000 1C000000 		.4byte	0x1c
+ 584 0004 0200     		.2byte	0x2
+ 585 0006 00000000 		.4byte	.Ldebug_info0
+ 586 000a 04       		.byte	0x4
+ 587 000b 00       		.byte	0
+ 588 000c 0000     		.2byte	0
+ 589 000e 0000     		.2byte	0
+ 590 0010 00000000 		.4byte	.LFB35
+ 591 0014 40000000 		.4byte	.LFE35-.LFB35
+ 592 0018 00000000 		.4byte	0
+ 593 001c 00000000 		.4byte	0
+ 594              		.section	.debug_ranges,"",%progbits
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 12
 
 
- 595 0006 00000000 		.4byte	.Ldebug_info0
- 596 000a 04       		.byte	0x4
- 597 000b 00       		.byte	0
- 598 000c 0000     		.2byte	0
- 599 000e 0000     		.2byte	0
- 600 0010 00000000 		.4byte	.LFB35
- 601 0014 40000000 		.4byte	.LFE35-.LFB35
- 602 0018 00000000 		.4byte	0
- 603 001c 00000000 		.4byte	0
- 604              		.section	.debug_ranges,"",%progbits
- 605              	.Ldebug_ranges0:
- 606 0000 00000000 		.4byte	.LFB35
- 607 0004 40000000 		.4byte	.LFE35
- 608 0008 00000000 		.4byte	0
- 609 000c 00000000 		.4byte	0
- 610              		.section	.debug_line,"",%progbits
- 611              	.Ldebug_line0:
- 612 0000 8D000000 		.section	.debug_str,"MS",%progbits,1
- 612      02007100 
- 612      00000201 
- 612      FB0E0D00 
- 612      01010101 
- 613              	.LASF23:
- 614 0000 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_ENTRY_REQUEST\000"
+ 595              	.Ldebug_ranges0:
+ 596 0000 00000000 		.4byte	.LFB35
+ 597 0004 40000000 		.4byte	.LFE35
+ 598 0008 00000000 		.4byte	0
+ 599 000c 00000000 		.4byte	0
+ 600              		.section	.debug_line,"",%progbits
+ 601              	.Ldebug_line0:
+ 602 0000 8D000000 		.section	.debug_str,"MS",%progbits,1
+ 602      02007100 
+ 602      00000201 
+ 602      FB0E0D00 
+ 602      01010101 
+ 603              	.LASF23:
+ 604 0000 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_ENTRY_REQUEST\000"
+ 604      455F4556 
+ 604      545F4741 
+ 604      505F5041 
+ 604      53534B45 
+ 605              	.LASF98:
+ 606 0024 72657374 		.ascii	"restart_peripheral_waiting_time\000"
+ 606      6172745F 
+ 606      70657269 
+ 606      70686572 
+ 606      616C5F77 
+ 607              	.LASF58:
+ 608 0044 4359424C 		.ascii	"CYBLE_EVT_GATTC_WRITE_RSP\000"
+ 608      455F4556 
+ 608      545F4741 
+ 608      5454435F 
+ 608      57524954 
+ 609              	.LASF20:
+ 610 005e 4359424C 		.ascii	"CYBLE_EVT_MEMORY_REQUEST\000"
+ 610      455F4556 
+ 610      545F4D45 
+ 610      4D4F5259 
+ 610      5F524551 
+ 611              	.LASF45:
+ 612 0077 4359424C 		.ascii	"CYBLE_EVT_GATTC_ERROR_RSP\000"
+ 612      455F4556 
+ 612      545F4741 
+ 612      5454435F 
+ 612      4552524F 
+ 613              	.LASF35:
+ 614 0091 4359424C 		.ascii	"CYBLE_EVT_GAP_KEYPRESS_NOTIFICATION\000"
  614      455F4556 
  614      545F4741 
- 614      505F5041 
- 614      53534B45 
- 615              	.LASF98:
- 616 0024 72657374 		.ascii	"restart_peripheral_waiting_time\000"
- 616      6172745F 
- 616      70657269 
- 616      70686572 
- 616      616C5F77 
- 617              	.LASF58:
- 618 0044 4359424C 		.ascii	"CYBLE_EVT_GATTC_WRITE_RSP\000"
+ 614      505F4B45 
+ 614      59505245 
+ 615              	.LASF2:
+ 616 00b5 73686F72 		.ascii	"short int\000"
+ 616      7420696E 
+ 616      7400
+ 617              	.LASF26:
+ 618 00bf 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_FAILED\000"
  618      455F4556 
  618      545F4741 
- 618      5454435F 
- 618      57524954 
- 619              	.LASF20:
- 620 005e 4359424C 		.ascii	"CYBLE_EVT_MEMORY_REQUEST\000"
+ 618      505F4155 
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 13
+
+
+ 618      54485F46 
+ 619              	.LASF47:
+ 620 00d9 4359424C 		.ascii	"CYBLE_EVT_GATT_DISCONNECT_IND\000"
  620      455F4556 
- 620      545F4D45 
- 620      4D4F5259 
- 620      5F524551 
- 621              	.LASF45:
- 622 0077 4359424C 		.ascii	"CYBLE_EVT_GATTC_ERROR_RSP\000"
- 622      455F4556 
- 622      545F4741 
- 622      5454435F 
- 622      4552524F 
- 623              	.LASF35:
- 624 0091 4359424C 		.ascii	"CYBLE_EVT_GAP_KEYPRESS_NOTIFICATION\000"
- 624      455F4556 
- 624      545F4741 
- 624      505F4B45 
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 13
-
-
- 624      59505245 
- 625              	.LASF2:
- 626 00b5 73686F72 		.ascii	"short int\000"
- 626      7420696E 
- 626      7400
- 627              	.LASF26:
- 628 00bf 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_FAILED\000"
- 628      455F4556 
- 628      545F4741 
- 628      505F4155 
- 628      54485F46 
- 629              	.LASF47:
- 630 00d9 4359424C 		.ascii	"CYBLE_EVT_GATT_DISCONNECT_IND\000"
- 630      455F4556 
- 630      545F4741 
- 630      54545F44 
- 630      4953434F 
- 631              	.LASF88:
- 632 00f7 4359424C 		.ascii	"CYBLE_SRVI_CUSTOMS\000"
- 632      455F5352 
- 632      56495F43 
- 632      5553544F 
- 632      4D5300
- 633              	.LASF13:
- 634 010a 73697A65 		.ascii	"sizetype\000"
- 634      74797065 
- 634      00
- 635              	.LASF37:
- 636 0113 4359424C 		.ascii	"CYBLE_EVT_GAP_DATA_LENGTH_CHANGE\000"
+ 620      545F4741 
+ 620      54545F44 
+ 620      4953434F 
+ 621              	.LASF88:
+ 622 00f7 4359424C 		.ascii	"CYBLE_SRVI_CUSTOMS\000"
+ 622      455F5352 
+ 622      56495F43 
+ 622      5553544F 
+ 622      4D5300
+ 623              	.LASF13:
+ 624 010a 73697A65 		.ascii	"sizetype\000"
+ 624      74797065 
+ 624      00
+ 625              	.LASF37:
+ 626 0113 4359424C 		.ascii	"CYBLE_EVT_GAP_DATA_LENGTH_CHANGE\000"
+ 626      455F4556 
+ 626      545F4741 
+ 626      505F4441 
+ 626      54415F4C 
+ 627              	.LASF93:
+ 628 0134 57616974 		.ascii	"Waiting_Time_Period\000"
+ 628      696E675F 
+ 628      54696D65 
+ 628      5F506572 
+ 628      696F6400 
+ 629              	.LASF6:
+ 630 0148 6C6F6E67 		.ascii	"long long int\000"
+ 630      206C6F6E 
+ 630      6720696E 
+ 630      7400
+ 631              	.LASF18:
+ 632 0156 4359424C 		.ascii	"CYBLE_EVT_HCI_STATUS\000"
+ 632      455F4556 
+ 632      545F4843 
+ 632      495F5354 
+ 632      41545553 
+ 633              	.LASF51:
+ 634 016b 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_TYPE_RSP\000"
+ 634      455F4556 
+ 634      545F4741 
+ 634      5454435F 
+ 634      52454144 
+ 635              	.LASF15:
+ 636 018c 4359424C 		.ascii	"CYBLE_EVT_STACK_ON\000"
  636      455F4556 
- 636      545F4741 
- 636      505F4441 
- 636      54415F4C 
- 637              	.LASF6:
- 638 0134 6C6F6E67 		.ascii	"long long int\000"
- 638      206C6F6E 
- 638      6720696E 
- 638      7400
- 639              	.LASF18:
- 640 0142 4359424C 		.ascii	"CYBLE_EVT_HCI_STATUS\000"
- 640      455F4556 
- 640      545F4843 
- 640      495F5354 
- 640      41545553 
- 641              	.LASF51:
- 642 0157 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_TYPE_RSP\000"
- 642      455F4556 
- 642      545F4741 
- 642      5454435F 
- 642      52454144 
- 643              	.LASF15:
- 644 0178 4359424C 		.ascii	"CYBLE_EVT_STACK_ON\000"
- 644      455F4556 
- 644      545F5354 
- 644      41434B5F 
- 644      4F4E00
- 645              	.LASF44:
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 14
+ 636      545F5354 
+ 636      41434B5F 
+ 636      4F4E00
+ 637              	.LASF44:
+ 638 019f 4359424C 		.ascii	"CYBLE_EVT_GAP_SMP_LOC_P256_KEYS_GEN_AND_SET_COMPLET"
+ 638      455F4556 
+ 638      545F4741 
+ 638      505F534D 
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 14
 
 
- 646 018b 4359424C 		.ascii	"CYBLE_EVT_GAP_SMP_LOC_P256_KEYS_GEN_AND_SET_COMPLET"
- 646      455F4556 
- 646      545F4741 
- 646      505F534D 
- 646      505F4C4F 
- 647 01be 4500     		.ascii	"E\000"
- 648              	.LASF48:
- 649 01c0 4359424C 		.ascii	"CYBLE_EVT_GATTS_XCNHG_MTU_REQ\000"
+ 638      505F4C4F 
+ 639 01d2 4500     		.ascii	"E\000"
+ 640              	.LASF48:
+ 641 01d4 4359424C 		.ascii	"CYBLE_EVT_GATTS_XCNHG_MTU_REQ\000"
+ 641      455F4556 
+ 641      545F4741 
+ 641      5454535F 
+ 641      58434E48 
+ 642              	.LASF97:
+ 643 01f2 75696E74 		.ascii	"uint16\000"
+ 643      313600
+ 644              	.LASF33:
+ 645 01f9 4359424C 		.ascii	"CYBLE_EVT_GAP_KEYINFO_EXCHNGE_CMPLT\000"
+ 645      455F4556 
+ 645      545F4741 
+ 645      505F4B45 
+ 645      59494E46 
+ 646              	.LASF56:
+ 647 021d 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_MULTI_RSP\000"
+ 647      455F4556 
+ 647      545F4741 
+ 647      5454435F 
+ 647      52454144 
+ 648              	.LASF65:
+ 649 023c 4359424C 		.ascii	"CYBLE_EVT_GATTS_HANDLE_VALUE_CNF\000"
  649      455F4556 
  649      545F4741 
  649      5454535F 
- 649      58434E48 
- 650              	.LASF97:
- 651 01de 75696E74 		.ascii	"uint16\000"
- 651      313600
- 652              	.LASF33:
- 653 01e5 4359424C 		.ascii	"CYBLE_EVT_GAP_KEYINFO_EXCHNGE_CMPLT\000"
- 653      455F4556 
- 653      545F4741 
- 653      505F4B45 
- 653      59494E46 
- 654              	.LASF56:
- 655 0209 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_MULTI_RSP\000"
+ 649      48414E44 
+ 650              	.LASF14:
+ 651 025d 4359424C 		.ascii	"CYBLE_EVT_HOST_INVALID\000"
+ 651      455F4556 
+ 651      545F484F 
+ 651      53545F49 
+ 651      4E56414C 
+ 652              	.LASF90:
+ 653 0274 4359424C 		.ascii	"CYBLE_SRVI_COUNT\000"
+ 653      455F5352 
+ 653      56495F43 
+ 653      4F554E54 
+ 653      00
+ 654              	.LASF73:
+ 655 0285 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_IND\000"
  655      455F4556 
- 655      545F4741 
- 655      5454435F 
- 655      52454144 
- 656              	.LASF65:
- 657 0228 4359424C 		.ascii	"CYBLE_EVT_GATTS_HANDLE_VALUE_CNF\000"
+ 655      545F4C32 
+ 655      4341505F 
+ 655      43424643 
+ 656              	.LASF76:
+ 657 02a3 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_CNF\000"
  657      455F4556 
- 657      545F4741 
- 657      5454535F 
- 657      48414E44 
- 658              	.LASF14:
- 659 0249 4359424C 		.ascii	"CYBLE_EVT_HOST_INVALID\000"
- 659      455F4556 
- 659      545F484F 
- 659      53545F49 
- 659      4E56414C 
- 660              	.LASF90:
- 661 0260 4359424C 		.ascii	"CYBLE_SRVI_COUNT\000"
- 661      455F5352 
- 661      56495F43 
- 661      4F554E54 
- 661      00
- 662              	.LASF73:
- 663 0271 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_IND\000"
+ 657      545F4C32 
+ 657      4341505F 
+ 657      43424643 
+ 658              	.LASF95:
+ 659 02c4 7574696C 		.ascii	"utils.c\000"
+ 659      732E6300 
+ 660              	.LASF9:
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 15
+
+
+ 661 02cc 666C6F61 		.ascii	"float\000"
+ 661      7400
+ 662              	.LASF54:
+ 663 02d2 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_RSP\000"
  663      455F4556 
- 663      545F4C32 
- 663      4341505F 
- 663      43424643 
- 664              	.LASF76:
- 665 028f 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_CNF\000"
+ 663      545F4741 
+ 663      5454435F 
+ 663      52454144 
+ 664              	.LASF34:
+ 665 02eb 4359424C 		.ascii	"CYBLE_EVT_GAP_NUMERIC_COMPARISON_REQUEST\000"
  665      455F4556 
- 665      545F4C32 
- 665      4341505F 
- 665      43424643 
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 15
-
-
- 666              	.LASF95:
- 667 02b0 7574696C 		.ascii	"utils.c\000"
- 667      732E6300 
- 668              	.LASF9:
- 669 02b8 666C6F61 		.ascii	"float\000"
- 669      7400
- 670              	.LASF54:
- 671 02be 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_RSP\000"
+ 665      545F4741 
+ 665      505F4E55 
+ 665      4D455249 
+ 666              	.LASF39:
+ 667 0314 4359424C 		.ascii	"CYBLE_EVT_GAPC_DIRECT_ADV_REPORT\000"
+ 667      455F4556 
+ 667      545F4741 
+ 667      50435F44 
+ 667      49524543 
+ 668              	.LASF7:
+ 669 0335 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 669      206C6F6E 
+ 669      6720756E 
+ 669      7369676E 
+ 669      65642069 
+ 670              	.LASF43:
+ 671 034c 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_REQ_REPLY_ERR\000"
  671      455F4556 
  671      545F4741 
- 671      5454435F 
- 671      52454144 
- 672              	.LASF34:
- 673 02d7 4359424C 		.ascii	"CYBLE_EVT_GAP_NUMERIC_COMPARISON_REQUEST\000"
- 673      455F4556 
- 673      545F4741 
- 673      505F4E55 
- 673      4D455249 
- 674              	.LASF39:
- 675 0300 4359424C 		.ascii	"CYBLE_EVT_GAPC_DIRECT_ADV_REPORT\000"
- 675      455F4556 
- 675      545F4741 
- 675      50435F44 
- 675      49524543 
- 676              	.LASF7:
- 677 0321 6C6F6E67 		.ascii	"long long unsigned int\000"
- 677      206C6F6E 
- 677      6720756E 
- 677      7369676E 
- 677      65642069 
- 678              	.LASF43:
- 679 0338 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_REQ_REPLY_ERR\000"
- 679      455F4556 
- 679      545F4741 
- 679      505F4155 
- 679      54485F52 
- 680              	.LASF91:
- 681 0359 63757272 		.ascii	"current_watchdog_counter\000"
- 681      656E745F 
- 681      77617463 
- 681      68646F67 
- 681      5F636F75 
- 682              	.LASF4:
- 683 0372 6C6F6E67 		.ascii	"long int\000"
- 683      20696E74 
- 683      00
- 684              	.LASF64:
- 685 037b 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_IND\000"
+ 671      505F4155 
+ 671      54485F52 
+ 672              	.LASF91:
+ 673 036d 63757272 		.ascii	"current_watchdog_counter\000"
+ 673      656E745F 
+ 673      77617463 
+ 673      68646F67 
+ 673      5F636F75 
+ 674              	.LASF4:
+ 675 0386 6C6F6E67 		.ascii	"long int\000"
+ 675      20696E74 
+ 675      00
+ 676              	.LASF64:
+ 677 038f 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_IND\000"
+ 677      455F4556 
+ 677      545F4741 
+ 677      5454435F 
+ 677      48414E44 
+ 678              	.LASF87:
+ 679 03b0 4359424C 		.ascii	"CYBLE_SRVI_GATT\000"
+ 679      455F5352 
+ 679      56495F47 
+ 679      41545400 
+ 680              	.LASF28:
+ 681 03c0 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_CONNECTED\000"
+ 681      455F4556 
+ 681      545F4741 
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 16
+
+
+ 681      505F4445 
+ 681      56494345 
+ 682              	.LASF89:
+ 683 03df 4359424C 		.ascii	"CYBLE_SRVI_CUSTOMS_END\000"
+ 683      455F5352 
+ 683      56495F43 
+ 683      5553544F 
+ 683      4D535F45 
+ 684              	.LASF63:
+ 685 03f6 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_NTF\000"
  685      455F4556 
  685      545F4741 
  685      5454435F 
  685      48414E44 
- 686              	.LASF87:
- 687 039c 4359424C 		.ascii	"CYBLE_SRVI_GATT\000"
- 687      455F5352 
- 687      56495F47 
- 687      41545400 
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 16
-
-
- 688              	.LASF28:
- 689 03ac 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_CONNECTED\000"
+ 686              	.LASF19:
+ 687 0417 4359424C 		.ascii	"CYBLE_EVT_STACK_BUSY_STATUS\000"
+ 687      455F4556 
+ 687      545F5354 
+ 687      41434B5F 
+ 687      42555359 
+ 688              	.LASF24:
+ 689 0433 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_DISPLAY_REQUEST\000"
  689      455F4556 
  689      545F4741 
- 689      505F4445 
- 689      56494345 
- 690              	.LASF89:
- 691 03cb 4359424C 		.ascii	"CYBLE_SRVI_CUSTOMS_END\000"
- 691      455F5352 
- 691      56495F43 
- 691      5553544F 
- 691      4D535F45 
- 692              	.LASF63:
- 693 03e2 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_NTF\000"
- 693      455F4556 
- 693      545F4741 
- 693      5454435F 
- 693      48414E44 
- 694              	.LASF19:
- 695 0403 4359424C 		.ascii	"CYBLE_EVT_STACK_BUSY_STATUS\000"
+ 689      505F5041 
+ 689      53534B45 
+ 690              	.LASF94:
+ 691 0459 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 691      43313120 
+ 691      352E342E 
+ 691      31203230 
+ 691      31363036 
+ 692 048c 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 692      20726576 
+ 692      6973696F 
+ 692      6E203233 
+ 692      37373135 
+ 693 04bf 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 693      66756E63 
+ 693      74696F6E 
+ 693      2D736563 
+ 693      74696F6E 
+ 694              	.LASF74:
+ 695 04e7 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_CNF\000"
  695      455F4556 
- 695      545F5354 
- 695      41434B5F 
- 695      42555359 
- 696              	.LASF24:
- 697 041f 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_DISPLAY_REQUEST\000"
+ 695      545F4C32 
+ 695      4341505F 
+ 695      43424643 
+ 696              	.LASF38:
+ 697 0505 4359424C 		.ascii	"CYBLE_EVT_GAP_ENHANCE_CONN_COMPLETE\000"
  697      455F4556 
  697      545F4741 
- 697      505F5041 
- 697      53534B45 
- 698              	.LASF94:
- 699 0445 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 699      43313120 
- 699      352E342E 
- 699      31203230 
- 699      31363036 
- 700 0478 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 700      20726576 
- 700      6973696F 
- 700      6E203233 
- 700      37373135 
- 701 04ab 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 701      66756E63 
- 701      74696F6E 
- 701      2D736563 
- 701      74696F6E 
- 702              	.LASF74:
- 703 04d3 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_CNF\000"
- 703      455F4556 
- 703      545F4C32 
- 703      4341505F 
- 703      43424643 
- 704              	.LASF38:
- 705 04f1 4359424C 		.ascii	"CYBLE_EVT_GAP_ENHANCE_CONN_COMPLETE\000"
+ 697      505F454E 
+ 697      48414E43 
+ 698              	.LASF12:
+ 699 0529 6C6F6E67 		.ascii	"long double\000"
+ 699      20646F75 
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 17
+
+
+ 699      626C6500 
+ 700              	.LASF70:
+ 701 0535 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_REQ\000"
+ 701      455F4556 
+ 701      545F4C32 
+ 701      4341505F 
+ 701      434F4E4E 
+ 702              	.LASF1:
+ 703 055b 756E7369 		.ascii	"unsigned char\000"
+ 703      676E6564 
+ 703      20636861 
+ 703      7200
+ 704              	.LASF60:
+ 705 0569 4359424C 		.ascii	"CYBLE_EVT_GATTS_PREP_WRITE_REQ\000"
  705      455F4556 
  705      545F4741 
- 705      505F454E 
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 17
-
-
- 705      48414E43 
- 706              	.LASF12:
- 707 0515 6C6F6E67 		.ascii	"long double\000"
- 707      20646F75 
- 707      626C6500 
- 708              	.LASF70:
- 709 0521 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_REQ\000"
+ 705      5454535F 
+ 705      50524550 
+ 706              	.LASF82:
+ 707 0588 4359424C 		.ascii	"CYBLE_EVT_LE_PING_AUTH_TIMEOUT\000"
+ 707      455F4556 
+ 707      545F4C45 
+ 707      5F50494E 
+ 707      475F4155 
+ 708              	.LASF52:
+ 709 05a7 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_INFO_RSP\000"
  709      455F4556 
- 709      545F4C32 
- 709      4341505F 
- 709      434F4E4E 
- 710              	.LASF1:
- 711 0547 756E7369 		.ascii	"unsigned char\000"
- 711      676E6564 
- 711      20636861 
- 711      7200
- 712              	.LASF60:
- 713 0555 4359424C 		.ascii	"CYBLE_EVT_GATTS_PREP_WRITE_REQ\000"
+ 709      545F4741 
+ 709      5454435F 
+ 709      46494E44 
+ 710              	.LASF0:
+ 711 05c5 7369676E 		.ascii	"signed char\000"
+ 711      65642063 
+ 711      68617200 
+ 712              	.LASF57:
+ 713 05d1 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_REQ\000"
  713      455F4556 
  713      545F4741 
  713      5454535F 
- 713      50524550 
- 714              	.LASF82:
- 715 0574 4359424C 		.ascii	"CYBLE_EVT_LE_PING_AUTH_TIMEOUT\000"
+ 713      57524954 
+ 714              	.LASF53:
+ 715 05eb 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_BY_TYPE_VALUE_RSP\000"
  715      455F4556 
- 715      545F4C45 
- 715      5F50494E 
- 715      475F4155 
- 716              	.LASF52:
- 717 0593 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_INFO_RSP\000"
+ 715      545F4741 
+ 715      5454435F 
+ 715      46494E44 
+ 716              	.LASF25:
+ 717 0612 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_COMPLETE\000"
  717      455F4556 
  717      545F4741 
- 717      5454435F 
- 717      46494E44 
- 718              	.LASF0:
- 719 05b1 7369676E 		.ascii	"signed char\000"
- 719      65642063 
- 719      68617200 
- 720              	.LASF57:
- 721 05bd 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_REQ\000"
+ 717      505F4155 
+ 717      54485F43 
+ 718              	.LASF8:
+ 719 062e 756E7369 		.ascii	"unsigned int\000"
+ 719      676E6564 
+ 719      20696E74 
+ 719      00
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 18
+
+
+ 720              	.LASF46:
+ 721 063b 4359424C 		.ascii	"CYBLE_EVT_GATT_CONNECT_IND\000"
  721      455F4556 
  721      545F4741 
- 721      5454535F 
- 721      57524954 
- 722              	.LASF53:
- 723 05d7 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_BY_TYPE_VALUE_RSP\000"
- 723      455F4556 
- 723      545F4741 
- 723      5454435F 
- 723      46494E44 
- 724              	.LASF25:
- 725 05fe 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_COMPLETE\000"
+ 721      54545F43 
+ 721      4F4E4E45 
+ 722              	.LASF5:
+ 723 0656 6C6F6E67 		.ascii	"long unsigned int\000"
+ 723      20756E73 
+ 723      69676E65 
+ 723      6420696E 
+ 723      7400
+ 724              	.LASF22:
+ 725 0668 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_REQ\000"
  725      455F4556 
  725      545F4741 
  725      505F4155 
- 725      54485F43 
- 726              	.LASF8:
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 18
-
-
- 727 061a 756E7369 		.ascii	"unsigned int\000"
- 727      676E6564 
- 727      20696E74 
- 727      00
- 728              	.LASF93:
- 729 0627 4D494E5F 		.ascii	"MIN_WAITING_TIME\000"
- 729      57414954 
- 729      494E475F 
- 729      54494D45 
- 729      00
- 730              	.LASF46:
- 731 0638 4359424C 		.ascii	"CYBLE_EVT_GATT_CONNECT_IND\000"
+ 725      54485F52 
+ 726              	.LASF75:
+ 727 067f 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_IND\000"
+ 727      455F4556 
+ 727      545F4C32 
+ 727      4341505F 
+ 727      43424643 
+ 728              	.LASF30:
+ 729 06a0 4359424C 		.ascii	"CYBLE_EVT_GAP_ENCRYPT_CHANGE\000"
+ 729      455F4556 
+ 729      545F4741 
+ 729      505F454E 
+ 729      43525950 
+ 730              	.LASF41:
+ 731 06bd 4359424C 		.ascii	"CYBLE_EVT_GAP_CONN_ESTB\000"
  731      455F4556 
  731      545F4741 
- 731      54545F43 
- 731      4F4E4E45 
- 732              	.LASF5:
- 733 0653 6C6F6E67 		.ascii	"long unsigned int\000"
- 733      20756E73 
- 733      69676E65 
- 733      6420696E 
- 733      7400
- 734              	.LASF22:
- 735 0665 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_REQ\000"
- 735      455F4556 
- 735      545F4741 
- 735      505F4155 
- 735      54485F52 
- 736              	.LASF75:
- 737 067c 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_IND\000"
+ 731      505F434F 
+ 731      4E4E5F45 
+ 732              	.LASF69:
+ 733 06d5 4359424C 		.ascii	"CYBLE_EVT_GATTC_LONG_PROCEDURE_END\000"
+ 733      455F4556 
+ 733      545F4741 
+ 733      5454435F 
+ 733      4C4F4E47 
+ 734              	.LASF3:
+ 735 06f8 73686F72 		.ascii	"short unsigned int\000"
+ 735      7420756E 
+ 735      7369676E 
+ 735      65642069 
+ 735      6E7400
+ 736              	.LASF84:
+ 737 070b 4359424C 		.ascii	"CYBLE_EVT_FLASH_CORRUPT\000"
  737      455F4556 
- 737      545F4C32 
- 737      4341505F 
- 737      43424643 
- 738              	.LASF30:
- 739 069d 4359424C 		.ascii	"CYBLE_EVT_GAP_ENCRYPT_CHANGE\000"
+ 737      545F464C 
+ 737      4153485F 
+ 737      434F5252 
+ 738              	.LASF31:
+ 739 0723 4359424C 		.ascii	"CYBLE_EVT_GAP_CONNECTION_UPDATE_COMPLETE\000"
  739      455F4556 
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 19
+
+
  739      545F4741 
- 739      505F454E 
- 739      43525950 
- 740              	.LASF41:
- 741 06ba 4359424C 		.ascii	"CYBLE_EVT_GAP_CONN_ESTB\000"
+ 739      505F434F 
+ 739      4E4E4543 
+ 740              	.LASF40:
+ 741 074c 4359424C 		.ascii	"CYBLE_EVT_GAP_SMP_NEGOTIATED_AUTH_INFO\000"
  741      455F4556 
  741      545F4741 
- 741      505F434F 
- 741      4E4E5F45 
- 742              	.LASF69:
- 743 06d2 4359424C 		.ascii	"CYBLE_EVT_GATTC_LONG_PROCEDURE_END\000"
- 743      455F4556 
- 743      545F4741 
- 743      5454435F 
- 743      4C4F4E47 
- 744              	.LASF3:
- 745 06f5 73686F72 		.ascii	"short unsigned int\000"
- 745      7420756E 
- 745      7369676E 
- 745      65642069 
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 19
-
-
- 745      6E7400
- 746              	.LASF84:
- 747 0708 4359424C 		.ascii	"CYBLE_EVT_FLASH_CORRUPT\000"
+ 741      505F534D 
+ 741      505F4E45 
+ 742              	.LASF11:
+ 743 0773 63686172 		.ascii	"char\000"
+ 743      00
+ 744              	.LASF92:
+ 745 0778 44455649 		.ascii	"DEVICE_INDEX\000"
+ 745      43455F49 
+ 745      4E444558 
+ 745      00
+ 746              	.LASF72:
+ 747 0785 4359424C 		.ascii	"CYBLE_EVT_L2CAP_COMMAND_REJ\000"
  747      455F4556 
- 747      545F464C 
- 747      4153485F 
- 747      434F5252 
- 748              	.LASF31:
- 749 0720 4359424C 		.ascii	"CYBLE_EVT_GAP_CONNECTION_UPDATE_COMPLETE\000"
+ 747      545F4C32 
+ 747      4341505F 
+ 747      434F4D4D 
+ 748              	.LASF55:
+ 749 07a1 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BLOB_RSP\000"
  749      455F4556 
  749      545F4741 
- 749      505F434F 
- 749      4E4E4543 
- 750              	.LASF40:
- 751 0749 4359424C 		.ascii	"CYBLE_EVT_GAP_SMP_NEGOTIATED_AUTH_INFO\000"
- 751      455F4556 
- 751      545F4741 
- 751      505F534D 
- 751      505F4E45 
- 752              	.LASF11:
- 753 0770 63686172 		.ascii	"char\000"
- 753      00
- 754              	.LASF92:
- 755 0775 44455649 		.ascii	"DEVICE_INDEX\000"
- 755      43455F49 
- 755      4E444558 
- 755      00
- 756              	.LASF72:
- 757 0782 4359424C 		.ascii	"CYBLE_EVT_L2CAP_COMMAND_REJ\000"
+ 749      5454435F 
+ 749      52454144 
+ 750              	.LASF86:
+ 751 07bf 4359424C 		.ascii	"CYBLE_SRVI_GAP\000"
+ 751      455F5352 
+ 751      56495F47 
+ 751      415000
+ 752              	.LASF62:
+ 753 07ce 4359424C 		.ascii	"CYBLE_EVT_GATTC_EXEC_WRITE_RSP\000"
+ 753      455F4556 
+ 753      545F4741 
+ 753      5454435F 
+ 753      45584543 
+ 754              	.LASF32:
+ 755 07ed 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_START_STOP\000"
+ 755      455F4556 
+ 755      545F4741 
+ 755      50435F53 
+ 755      43414E5F 
+ 756              	.LASF81:
+ 757 080c 4359424C 		.ascii	"CYBLE_EVT_PENDING_FLASH_WRITE\000"
  757      455F4556 
- 757      545F4C32 
- 757      4341505F 
- 757      434F4D4D 
- 758              	.LASF55:
- 759 079e 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BLOB_RSP\000"
+ 757      545F5045 
+ 757      4E44494E 
+ 757      475F464C 
+ 758              	.LASF78:
+ 759 082a 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_RX_CREDIT_IND\000"
  759      455F4556 
- 759      545F4741 
- 759      5454435F 
- 759      52454144 
- 760              	.LASF86:
- 761 07bc 4359424C 		.ascii	"CYBLE_SRVI_GAP\000"
- 761      455F5352 
- 761      56495F47 
- 761      415000
- 762              	.LASF62:
- 763 07cb 4359424C 		.ascii	"CYBLE_EVT_GATTC_EXEC_WRITE_RSP\000"
+ 759      545F4C32 
+ 759      4341505F 
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 20
+
+
+ 759      43424643 
+ 760              	.LASF10:
+ 761 084d 646F7562 		.ascii	"double\000"
+ 761      6C6500
+ 762              	.LASF79:
+ 763 0854 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_TX_CREDIT_IND\000"
  763      455F4556 
- 763      545F4741 
- 763      5454435F 
- 763      45584543 
- 764              	.LASF32:
- 765 07ea 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_START_STOP\000"
+ 763      545F4C32 
+ 763      4341505F 
+ 763      43424643 
+ 764              	.LASF42:
+ 765 0877 4359424C 		.ascii	"CYBLE_EVT_GAP_SCAN_REQ_RECVD\000"
  765      455F4556 
  765      545F4741 
- 765      50435F53 
- 765      43414E5F 
- 766              	.LASF81:
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 20
-
-
- 767 0809 4359424C 		.ascii	"CYBLE_EVT_PENDING_FLASH_WRITE\000"
+ 765      505F5343 
+ 765      414E5F52 
+ 766              	.LASF27:
+ 767 0894 4359424C 		.ascii	"CYBLE_EVT_GAPP_ADVERTISEMENT_START_STOP\000"
  767      455F4556 
- 767      545F5045 
- 767      4E44494E 
- 767      475F464C 
- 768              	.LASF78:
- 769 0827 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_RX_CREDIT_IND\000"
+ 767      545F4741 
+ 767      50505F41 
+ 767      44564552 
+ 768              	.LASF17:
+ 769 08bc 4359424C 		.ascii	"CYBLE_EVT_HARDWARE_ERROR\000"
  769      455F4556 
- 769      545F4C32 
- 769      4341505F 
- 769      43424643 
- 770              	.LASF10:
- 771 084a 646F7562 		.ascii	"double\000"
- 771      6C6500
- 772              	.LASF79:
- 773 0851 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_TX_CREDIT_IND\000"
+ 769      545F4841 
+ 769      52445741 
+ 769      52455F45 
+ 770              	.LASF77:
+ 771 08d5 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_READ\000"
+ 771      455F4556 
+ 771      545F4C32 
+ 771      4341505F 
+ 771      43424643 
+ 772              	.LASF71:
+ 773 08f4 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_RSP\000"
  773      455F4556 
  773      545F4C32 
  773      4341505F 
- 773      43424643 
- 774              	.LASF42:
- 775 0874 4359424C 		.ascii	"CYBLE_EVT_GAP_SCAN_REQ_RECVD\000"
+ 773      434F4E4E 
+ 774              	.LASF21:
+ 775 091a 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT\000"
  775      455F4556 
  775      545F4741 
- 775      505F5343 
- 775      414E5F52 
- 776              	.LASF27:
- 777 0891 4359424C 		.ascii	"CYBLE_EVT_GAPP_ADVERTISEMENT_START_STOP\000"
- 777      455F4556 
- 777      545F4741 
- 777      50505F41 
- 777      44564552 
- 778              	.LASF17:
- 779 08b9 4359424C 		.ascii	"CYBLE_EVT_HARDWARE_ERROR\000"
- 779      455F4556 
- 779      545F4841 
- 779      52445741 
- 779      52455F45 
- 780              	.LASF77:
- 781 08d2 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_READ\000"
+ 775      50435F53 
+ 775      43414E5F 
+ 776              	.LASF96:
+ 777 093e 443A5C75 		.ascii	"D:\\ucu\\2_course1_term\\POC\\programs\\my_works\\S"
+ 777      63755C32 
+ 777      5F636F75 
+ 777      72736531 
+ 777      5F746572 
+ 778 096b 6D617274 		.ascii	"mart_lightning_system\\Mesh_Flood_Main_Auto_Reassig"
+ 778      5F6C6967 
+ 778      68746E69 
+ 778      6E675F73 
+ 778      79737465 
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 21
+
+
+ 779 099d 6E6D656E 		.ascii	"nment2.cydsn\000"
+ 779      74322E63 
+ 779      7964736E 
+ 779      00
+ 780              	.LASF50:
+ 781 09aa 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_GROUP_TYPE_RSP\000"
  781      455F4556 
- 781      545F4C32 
- 781      4341505F 
- 781      43424643 
- 782              	.LASF71:
- 783 08f1 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_RSP\000"
+ 781      545F4741 
+ 781      5454435F 
+ 781      52454144 
+ 782              	.LASF59:
+ 783 09d1 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_CMD_REQ\000"
  783      455F4556 
- 783      545F4C32 
- 783      4341505F 
- 783      434F4E4E 
- 784              	.LASF21:
- 785 0917 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT\000"
+ 783      545F4741 
+ 783      5454535F 
+ 783      57524954 
+ 784              	.LASF49:
+ 785 09ef 4359424C 		.ascii	"CYBLE_EVT_GATTC_XCHNG_MTU_RSP\000"
  785      455F4556 
  785      545F4741 
- 785      50435F53 
- 785      43414E5F 
- 786              	.LASF96:
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 21
-
-
- 787 093b 443A5C75 		.ascii	"D:\\ucu\\2_course1_term\\POC\\programs\\my_works\\S"
- 787      63755C32 
- 787      5F636F75 
- 787      72736531 
- 787      5F746572 
- 788 0968 6D617274 		.ascii	"mart_lightning_system\\Mesh_Flood_Main_Auto_Reassig"
- 788      5F6C6967 
- 788      68746E69 
- 788      6E675F73 
- 788      79737465 
- 789 099a 6E6D656E 		.ascii	"nment2.cydsn\000"
- 789      74322E63 
- 789      7964736E 
- 789      00
- 790              	.LASF50:
- 791 09a7 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_GROUP_TYPE_RSP\000"
+ 785      5454435F 
+ 785      5843484E 
+ 786              	.LASF80:
+ 787 0a0d 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_WRITE_IND\000"
+ 787      455F4556 
+ 787      545F4C32 
+ 787      4341505F 
+ 787      43424643 
+ 788              	.LASF16:
+ 789 0a31 4359424C 		.ascii	"CYBLE_EVT_TIMEOUT\000"
+ 789      455F4556 
+ 789      545F5449 
+ 789      4D454F55 
+ 789      5400
+ 790              	.LASF85:
+ 791 0a43 4359424C 		.ascii	"CYBLE_EVT_MAX\000"
  791      455F4556 
- 791      545F4741 
- 791      5454435F 
- 791      52454144 
- 792              	.LASF59:
- 793 09ce 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_CMD_REQ\000"
+ 791      545F4D41 
+ 791      5800
+ 792              	.LASF68:
+ 793 0a51 4359424C 		.ascii	"CYBLE_EVT_GATTS_READ_CHAR_VAL_ACCESS_REQ\000"
  793      455F4556 
  793      545F4741 
  793      5454535F 
- 793      57524954 
- 794              	.LASF49:
- 795 09ec 4359424C 		.ascii	"CYBLE_EVT_GATTC_XCHNG_MTU_RSP\000"
+ 793      52454144 
+ 794              	.LASF67:
+ 795 0a7a 4359424C 		.ascii	"CYBLE_EVT_GATTC_STOP_CMD_COMPLETE\000"
  795      455F4556 
  795      545F4741 
  795      5454435F 
- 795      5843484E 
- 796              	.LASF80:
- 797 0a0a 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_WRITE_IND\000"
+ 795      53544F50 
+ 796              	.LASF61:
+ 797 0a9c 4359424C 		.ascii	"CYBLE_EVT_GATTS_EXEC_WRITE_REQ\000"
  797      455F4556 
- 797      545F4C32 
- 797      4341505F 
- 797      43424643 
- 798              	.LASF16:
- 799 0a2e 4359424C 		.ascii	"CYBLE_EVT_TIMEOUT\000"
+ 797      545F4741 
+ 797      5454535F 
+ 797      45584543 
+ARM GAS  C:\Users\ASUS\AppData\Local\Temp\cc10CFhb.s 			page 22
+
+
+ 798              	.LASF29:
+ 799 0abb 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_DISCONNECTED\000"
  799      455F4556 
- 799      545F5449 
- 799      4D454F55 
- 799      5400
- 800              	.LASF85:
- 801 0a40 4359424C 		.ascii	"CYBLE_EVT_MAX\000"
+ 799      545F4741 
+ 799      505F4445 
+ 799      56494345 
+ 800              	.LASF66:
+ 801 0add 4359424C 		.ascii	"CYBLE_EVT_GATTS_DATA_SIGNED_CMD_REQ\000"
  801      455F4556 
- 801      545F4D41 
- 801      5800
- 802              	.LASF68:
- 803 0a4e 4359424C 		.ascii	"CYBLE_EVT_GATTS_READ_CHAR_VAL_ACCESS_REQ\000"
+ 801      545F4741 
+ 801      5454535F 
+ 801      44415441 
+ 802              	.LASF83:
+ 803 0b01 4359424C 		.ascii	"CYBLE_EVT_HCI_PKT\000"
  803      455F4556 
- 803      545F4741 
- 803      5454535F 
- 803      52454144 
- 804              	.LASF67:
- 805 0a77 4359424C 		.ascii	"CYBLE_EVT_GATTC_STOP_CMD_COMPLETE\000"
-ARM GAS  C:\Users\ASUS\AppData\Local\Temp\ccg2Tzm6.s 			page 22
-
-
+ 803      545F4843 
+ 803      495F504B 
+ 803      5400
+ 804              	.LASF36:
+ 805 0b13 4359424C 		.ascii	"CYBLE_EVT_GAP_OOB_GENERATED_NOTIFICATION\000"
  805      455F4556 
  805      545F4741 
- 805      5454435F 
- 805      53544F50 
- 806              	.LASF61:
- 807 0a99 4359424C 		.ascii	"CYBLE_EVT_GATTS_EXEC_WRITE_REQ\000"
- 807      455F4556 
- 807      545F4741 
- 807      5454535F 
- 807      45584543 
- 808              	.LASF29:
- 809 0ab8 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_DISCONNECTED\000"
- 809      455F4556 
- 809      545F4741 
- 809      505F4445 
- 809      56494345 
- 810              	.LASF66:
- 811 0ada 4359424C 		.ascii	"CYBLE_EVT_GATTS_DATA_SIGNED_CMD_REQ\000"
- 811      455F4556 
- 811      545F4741 
- 811      5454535F 
- 811      44415441 
- 812              	.LASF83:
- 813 0afe 4359424C 		.ascii	"CYBLE_EVT_HCI_PKT\000"
- 813      455F4556 
- 813      545F4843 
- 813      495F504B 
- 813      5400
- 814              	.LASF36:
- 815 0b10 4359424C 		.ascii	"CYBLE_EVT_GAP_OOB_GENERATED_NOTIFICATION\000"
- 815      455F4556 
- 815      545F4741 
- 815      505F4F4F 
- 815      425F4745 
- 816              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 805      505F4F4F 
+ 805      425F4745 
+ 806              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

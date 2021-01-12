@@ -144,7 +144,7 @@ void GenericEventHandler(uint32 event, void * eventParam)
 			{
 				/* If the Write request is on RGB LED Control Characteristic, then Client is 
 				* trying to set a new color to the device. */
-				if(writeReqData.handleValPair.value.len == RGB_LED_DATA_LEN)
+				if(writeReqData.handleValPair.value.len == RGB_LED_DATA_LEN + 1)
 				{
 					#ifdef DEBUG_ENABLED
 						UART_UartPutString("RGB CYBLE_EVT_GATTS_WRITE_REQ ");
@@ -415,7 +415,7 @@ void GenericEventHandler(uint32 event, void * eventParam)
 					CyBle_GattcWriteWithoutResponse(cyBle_connHandle, &writeADVcounterdata);
 				    
                     uint8 RGBData2[5];
-                    memcpy(RGBData2, RGBData, 4);
+                    memcpy(RGBData2, RGBData, RGB_LED_DATA_LEN);
                     
                     uint8 sendIndex;
                     if (DEVICE_INDEX == 0)
@@ -431,7 +431,7 @@ void GenericEventHandler(uint32 event, void * eventParam)
 					/* Write the RGB LED Value */
 					writeRGBdata.attrHandle = CYBLE_RGB_LED_CONTROL_CHAR_HANDLE;
 					writeRGBdata.value.val = RGBData2;
-					writeRGBdata.value.len = RGB_LED_DATA_LEN;
+					writeRGBdata.value.len = RGB_LED_DATA_LEN + 1;
 					CyBle_GattcWriteCharacteristicValue(cyBle_connHandle, &writeRGBdata);
 				#endif
 			}	

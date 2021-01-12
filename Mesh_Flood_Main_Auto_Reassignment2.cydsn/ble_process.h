@@ -20,7 +20,7 @@
 /*****************************************************
 *                  Enums and macros
 *****************************************************/ 
-#define RGB_LED_DATA_LEN					5
+#define RGB_LED_DATA_LEN					4
 #define RGB_RED_INDEX						0
 #define RGB_GREEN_INDEX						1
 #define RGB_BLUE_INDEX						2
