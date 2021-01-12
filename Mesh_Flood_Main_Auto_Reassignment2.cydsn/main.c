@@ -76,7 +76,7 @@ uint8 RGB_Collection[4][4] = {
 uint8 RED_COLOR[4] = {0xFF, 0, 0, 0xFF};
 
 
-int DEVICE_INDEX = 1;
+int DEVICE_INDEX = 0;
 
 int Change_Color_Period = 1500;
 int Is_Free_Period = 4500; // of the whole network
@@ -273,6 +273,7 @@ CY_ISR(Timer_Waiting_Time_Interrupt_Handler)
         if (NUM_EXCEEDED_WAITING_TIME + 1 == DEVICE_INDEX)
         {
             DEVICE_INDEX = 0;
+            Timer_Waiting_Time_Stop();
         }
         
         NUM_EXCEEDED_WAITING_TIME++;

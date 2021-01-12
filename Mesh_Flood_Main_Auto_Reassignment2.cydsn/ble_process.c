@@ -420,7 +420,8 @@ void GenericEventHandler(uint32 event, void * eventParam)
                     uint8 sendIndex;
                     if (DEVICE_INDEX == 0)
                     {
-                       sendIndex = NEXT_NEIGHBOUR_INDEX++;
+                       //sendIndex = NEXT_NEIGHBOUR_INDEX++;
+                        sendIndex = -1;
                     }
                     else
                     {
