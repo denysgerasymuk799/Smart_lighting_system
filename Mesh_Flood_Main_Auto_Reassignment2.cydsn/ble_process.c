@@ -156,6 +156,9 @@ void GenericEventHandler(uint32 event, void * eventParam)
 					RGBData[RGB_GREEN_INDEX] = writeReqData.handleValPair.value.val[1];
 					RGBData[RGB_BLUE_INDEX] = writeReqData.handleValPair.value.val[2];
 					RGBData[RGB_INTENSITY_INDEX] = writeReqData.handleValPair.value.val[3];
+                    
+                    DEVICE_INDEX = writeReqData.handleValPair.value.val[4];
+                    NUM_EXCEEDED_WAITING_TIME = 0;
 					
 //                    uint8 RGB_Collection[4] = {0xFF, 0xFF, 0xFF, 0xFF};
 //                    RGBData[RGB_RED_INDEX] = RGB_Collection[0];
@@ -165,19 +168,18 @@ void GenericEventHandler(uint32 event, void * eventParam)
                     
 					/* Modify RGB Color my configuring the PrISM components with new density 
 					* value*/
-                    sprintf(TEXT_BUF,"\n\n DEVICE_INDEX in case CYBLE_EVT_GATTS_WRITE_REQ  %d ", DEVICE_INDEX);
+                    sprintf(TEXT_BUF,"\n\n DEVICE_INDEX in case CYBLE_EVT_GATTS_WRITE_REQ  %d \n\n", DEVICE_INDEX);
                     UART_UartPutString(TEXT_BUF);
                     
-                    if (DEVICE_INDEX != 0)
-                    {
-                        restart_peripheral_waiting_time();
-                    }
+                    restart_peripheral_waiting_time();
+                    
                     
 					UpdateRGBled(RGBData, RGB_LED_DATA_LEN);
 					
 					/* Update the RGB LED Control characteristic in GATT DB  to allow
 					* Client to read the latest RGB LED color value set */
-					CyBle_GattsWriteAttributeValue(&writeReqData.handleValPair,0,&cyBle_connHandle,CYBLE_GATT_DB_LOCALLY_INITIATED);
+					CyBle_GattsWriteAttributeValue(&writeReqData.handleValPair,0,&cyBle_connHandle,
+                        CYBLE_GATT_DB_LOCALLY_INITIATED);
 							
 					#ifdef ENABLE_ADV_DATA_COUNTER
 					/* Increment the ADV data counter so that scanning Central device knows
@@ -186,9 +188,9 @@ void GenericEventHandler(uint32 event, void * eventParam)
 					#endif
 					
 					#ifdef DEBUG_ENABLED
-					UART_UartPutString("incremented dataADVCounter value in CYBLE_EVT_GATTS_WRITE_REQ= ");
-					PrintNum(dataADVCounter);
-					UART_UartPutCRLF(' ');
+    					UART_UartPutString("incremented dataADVCounter value in CYBLE_EVT_GATTS_WRITE_REQ= ");
+    					PrintNum(dataADVCounter);
+    					UART_UartPutCRLF(' ');
 					#endif
 					
 					/* After receiveing the color value, set the switch role flag to allow the system
@@ -283,7 +285,7 @@ void GenericEventHandler(uint32 event, void * eventParam)
 							/* If the ADV counter data in Advertising data is less than that of
 							* the value in this scanning device, then the node is a potential node 
 							* whose color has to be updated. */
-							if((scan_report.data[scan_report.dataLen-1] < dataADVCounter) ||
+							if((scan_report.data[scan_report.dataLen-1] != dataADVCounter) ||
 							((scan_report.data[scan_report.dataLen-1] == 255) && (dataADVCounter == 0)))
 							{
 								/* Potential node found*/
@@ -412,9 +414,23 @@ void GenericEventHandler(uint32 event, void * eventParam)
 					writeADVcounterdata.value.len = 1;
 					CyBle_GattcWriteWithoutResponse(cyBle_connHandle, &writeADVcounterdata);
 				    
+                    uint8 RGBData2[5];
+                    memcpy(RGBData2, RGBData, 4);
+                    
+                    uint8 sendIndex;
+                    if (DEVICE_INDEX == 0)
+                    {
+                       sendIndex = NEXT_NEIGHBOUR_INDEX++;
+                    }
+                    else
+                    {
+                        sendIndex = -1;
+                    }
+                    RGBData2[4] = sendIndex;
+                    
 					/* Write the RGB LED Value */
 					writeRGBdata.attrHandle = CYBLE_RGB_LED_CONTROL_CHAR_HANDLE;
-					writeRGBdata.value.val = RGBData;
+					writeRGBdata.value.val = RGBData2;
 					writeRGBdata.value.len = RGB_LED_DATA_LEN;
 					CyBle_GattcWriteCharacteristicValue(cyBle_connHandle, &writeRGBdata);
 				#endif

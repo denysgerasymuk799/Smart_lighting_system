@@ -17,12 +17,15 @@ int MIN_WAITING_TIME = 10000;
 
 void restart_peripheral_waiting_time()
 {
-    UART_UartPutString("\n\n start restart_peripheral_waiting_time \n \n");
-    Timer_Waiting_Time_Stop();
-    Timer_Waiting_Time_WriteCounter(0);
-    
-    Timer_Waiting_Time_Start();
-    Timer_Waiting_Time_WritePeriod(DEVICE_INDEX * MIN_WAITING_TIME);
+    if ((DEVICE_INDEX != 0))
+    {    
+        UART_UartPutString("\n\n start restart_peripheral_waiting_time \n \n");
+        Timer_Waiting_Time_Stop();
+        Timer_Waiting_Time_WriteCounter(0);
+        
+        Timer_Waiting_Time_Start();
+        Timer_Waiting_Time_WritePeriod(MIN_WAITING_TIME);
+    }
 }
 
 

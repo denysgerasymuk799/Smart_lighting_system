@@ -73,8 +73,14 @@ uint8 RGB_Collection[4][4] = {
 
 uint8 RED_COLOR[4] = {0xFF, 0, 0, 0xFF};
 
-int DEVICE_INDEX = 1;
+
+int DEVICE_INDEX = 0;
+
+
+uint8 NEXT_NEIGHBOUR_INDEX = 1;
 bool NETWORK_IS_FREE = true;
+
+int NUM_EXCEEDED_WAITING_TIME = 0;
 
 int interrupt_counter = 0;
 
@@ -211,6 +217,27 @@ void InitializeSystem(void)
 }
 
 
+void sendColorDataToPeripheral()
+{
+    sendColorDataToNetwork(RGB_Collection[interrupt_counter]);
+    SwitchRole();
+	ConnectToPeripheralDevice();
+	RestartCentralScanning();
+    
+    interrupt_counter++;
+    if (interrupt_counter == 4) {
+        interrupt_counter = 0;
+    }
+    
+    NETWORK_IS_FREE = false;
+    NEXT_NEIGHBOUR_INDEX = 1;
+    
+    Timer_Is_Free_Stop();
+    Timer_Is_Free_WriteCounter(0);
+    Timer_Is_Free_Start();
+}
+
+
 CY_ISR(Timer_Waiting_Time_Interrupt_Handler)
 {   
     /* CC_MATCH interrupt is triggered when 1s time window is gone */
@@ -225,6 +252,12 @@ CY_ISR(Timer_Waiting_Time_Interrupt_Handler)
     {
         UART_UartPutString("\n\n==================== Timer_1_Interrupt_Handler UpdateRGBled ==================== ");
         UpdateRGBled(RED_COLOR, 4);
+        if (NUM_EXCEEDED_WAITING_TIME + 1 == DEVICE_INDEX)
+        {
+            DEVICE_INDEX = 0;
+        }
+        
+        NUM_EXCEEDED_WAITING_TIME++;
         Timer_Waiting_Time_ClearInterrupt(Timer_Waiting_Time_INTR_MASK_TC);
     }
 }
@@ -234,20 +267,7 @@ CY_ISR(CC_TC_InterruptHandler)
 {   
     if ((DEVICE_INDEX == 0) && (NETWORK_IS_FREE))
     {
-        sendColorDataToNetwork(RGB_Collection[interrupt_counter]);
-        SwitchRole();
-    	ConnectToPeripheralDevice();
-    	RestartCentralScanning();
-        interrupt_counter++;
-        if (interrupt_counter == 4) {
-            interrupt_counter = 0;
-        }
-        
-        NETWORK_IS_FREE = false;
-        
-        Timer_Is_Free_Stop();
-        Timer_Is_Free_WriteCounter(0);
-        Timer_Is_Free_Start();
+        sendColorDataToPeripheral();
         
         Timer_Heart_beat_Stop();
         Timer_Heart_beat_WriteCounter(0);
@@ -287,28 +307,13 @@ CY_ISR(Timer_Heart_beat_Interrupt_Handler)
                 interrupt_counter = 3;
             }
             
-            sendColorDataToNetwork(RGB_Collection[interrupt_counter]);
-            SwitchRole();
-        	ConnectToPeripheralDevice();
-        	RestartCentralScanning();
-            
-            interrupt_counter++;
-            if (interrupt_counter == 4) {
-                interrupt_counter = 0;
-            }
-            
-            NETWORK_IS_FREE = false;
-            
-            Timer_Is_Free_Stop();
-            Timer_Is_Free_WriteCounter(0);
-            Timer_Is_Free_Start();
+            sendColorDataToPeripheral();
         }
         
         
         Timer_Heart_beat_ClearInterrupt(Timer_Is_Free_INTR_MASK_TC);
     }
     
-
     Timer_Heart_beat_ClearInterrupt(Timer_Heart_beat_INTR_MASK_CC_MATCH);
     Timer_Heart_beat_ClearInterrupt(Timer_Heart_beat_INTR_MASK_TC);
 }
