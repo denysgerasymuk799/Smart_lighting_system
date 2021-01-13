@@ -254,6 +254,8 @@ void GenericEventHandler(uint32 event, void * eventParam)
 			break;
 		
 		case CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT:
+            UART_UartPutString("\n==================== CYBLE_STATE_CONNECTED != CyBle_GetState ==================== ");
+            
 			/* This event is generated whenever there is a peripheral device found by 
 			* while scanning */
 			if(CYBLE_STATE_CONNECTED != CyBle_GetState())	
@@ -272,22 +274,28 @@ void GenericEventHandler(uint32 event, void * eventParam)
 				* if the counter in ADV packet of peripheral is less than its own counter
 				* or not. If yes, then it will consider the peripheral as a potential 
 				* device to connect to.*/
+                UART_UartPutString("\n==================== scan_report.eventType == CYBLE_GAPC_CONN_UNDIRECTED_ADV ==================== ");
 				if(scan_report.eventType == CYBLE_GAPC_CONN_UNDIRECTED_ADV)
 				{
 					/* If the scan report received is of advertising nature and the data 
 					* length is as expected... */
+                    UART_UartPutString("\n==================== scan_report.dataLen == new_advData.advDataLen ==================== ");
 					if(scan_report.dataLen == new_advData.advDataLen)
 					{
 						/* If the second last value of the advertising data matches the custom 
 						* marker, then the peripheral is a node of the network */
+                        UART_UartPutString("\n==================== scan_report.data[scan_report.dataLen-2] == CUSTOM_ADV_DATA_MARKER ==================== ");
 						if(scan_report.data[scan_report.dataLen-2] == CUSTOM_ADV_DATA_MARKER)
 						{
 							/* If the ADV counter data in Advertising data is less than that of
 							* the value in this scanning device, then the node is a potential node 
 							* whose color has to be updated. */
+                            UART_UartPutString("\n==================== scan_report.data[scan_report.dataLen-1] != dataADVCounter ==================== ");
+                            
 							if((scan_report.data[scan_report.dataLen-1] != dataADVCounter) ||
 							((scan_report.data[scan_report.dataLen-1] == 255) && (dataADVCounter == 0)))
 							{
+                                UART_UartPutString("\n==================== potential_node_found = TRUE ==================== ");
 								/* Potential node found*/
 								potential_node_found = TRUE;
 								/* Save the advertising peripheral address and type*/
@@ -421,11 +429,11 @@ void GenericEventHandler(uint32 event, void * eventParam)
                     if (DEVICE_INDEX == 0)
                     {
                        //sendIndex = NEXT_NEIGHBOUR_INDEX++;
-                        sendIndex = -1;
+                        sendIndex = 255;
                     }
                     else
                     {
-                        sendIndex = -1;
+                        sendIndex = 255;
                     }
                     RGBData2[4] = sendIndex;
                     

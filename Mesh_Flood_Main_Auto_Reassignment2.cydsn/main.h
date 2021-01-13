@@ -24,7 +24,7 @@
 /*****************************************************
 *             Pre-processor Directives
 *****************************************************/ 
-//#define DEBUG_ENABLED
+#define DEBUG_ENABLED
 #define ENABLE_ADV_DATA_COUNTER
 //#define ENABLE_CENTRAL_DISCOVERY
 
@@ -35,7 +35,7 @@ volatile uint16 current_watchdog_counter;
 
     
 extern int DEVICE_INDEX;
-extern uint8 NEXT_NEIGHBOUR_INDEX;
+extern int NEXT_NEIGHBOUR_INDEX;
 extern int NUM_EXCEEDED_WAITING_TIME ;
 extern bool NETWORK_IS_FREE;
     

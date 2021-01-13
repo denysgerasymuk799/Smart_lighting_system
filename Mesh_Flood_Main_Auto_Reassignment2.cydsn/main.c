@@ -85,7 +85,7 @@ int Waiting_Time_Period;
 int Heart_beat_Period;
 
 
-uint8 NEXT_NEIGHBOUR_INDEX = 1;
+int NEXT_NEIGHBOUR_INDEX = 1;
 bool NETWORK_IS_FREE = true;
 
 int NUM_EXCEEDED_WAITING_TIME = 0;
@@ -257,7 +257,6 @@ CY_ISR(Timer_Waiting_Time_Interrupt_Handler)
     /* CC_MATCH interrupt is triggered when 1s time window is gone */
     if(Timer_Waiting_Time_INTR_MASK_CC_MATCH != 0)
     {
-        UART_UartPutString("==================== Timer_1_Interrupt_Handler ==================== ");
         Timer_Waiting_Time_ClearInterrupt(Timer_Waiting_Time_INTR_MASK_CC_MATCH);
     }
        
@@ -265,7 +264,7 @@ CY_ISR(Timer_Waiting_Time_Interrupt_Handler)
     if(Timer_Waiting_Time_INTR_MASK_TC != 0)
     {
         UART_UartPutString("\n\n==================== Timer_1_Interrupt_Handler UpdateRGBled ==================== ");
-        sprintf(TEXT_BUF, "\n\n DEVICE_INDEX in Timer_Waiting_Time_Interrupt_Handler %d ", DEVICE_INDEX);
+        sprintf(TEXT_BUF, "\n\n DEVICE_INDEX in Timer_Waiting_Time_Interrupt_Handler %d \n", DEVICE_INDEX);
         UART_UartPutString(TEXT_BUF);
         
         UpdateRGBled(RED_COLOR, 4);
@@ -274,6 +273,10 @@ CY_ISR(Timer_Waiting_Time_Interrupt_Handler)
         {
             DEVICE_INDEX = 0;
             Timer_Waiting_Time_Stop();
+            
+            Timer_Heart_beat_WritePeriod(Heart_beat_Period);
+            Timer_Heart_beat_Start();
+            Isr_Heart_beat_StartEx(Timer_Heart_beat_Interrupt_Handler);
         }
         
         NUM_EXCEEDED_WAITING_TIME++;
