@@ -1,0 +1,7 @@
+C:\Users\janusdg-win\UCU\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Original.cydsn\Mesh_Flood_PSoC4BLE_Original.cyprj|38c4b790-5431-4e5e-9702-ab2d503c0f15
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|3f7ff170-3bcd-4b02-b86d-f7d9e6c0505f
+C:\Users\janusdg-win\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|21e12d1b-21ee-4861-967f-67debf8803ec
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|0f48b67d-4bb9-48dd-a926-549c816bab8e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|acf766d2-19c3-49c6-8617-8fd05d36cd5c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|132b2cd9-71e9-42bc-b32f-ca62be1a2db9
+C:\Users\janusdg-win\UCU\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Main.cydsn\Mesh_Flood_PSoC4BLE_Main.cyprj|e080adf2-3566-4124-8914-5e65bb1a5664
