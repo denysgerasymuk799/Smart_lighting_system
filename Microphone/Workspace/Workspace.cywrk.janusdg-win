@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace\Micro\Micro.cydwr">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace\Micro\Source Files\main.c">
 <ExpandedNodeIds>
 <v>Workspace</v>
 <v>Workspace\Micro</v>
@@ -81,10 +81,6 @@
 <v>Workspace\Micro\Generated_Source\PSoC4\cydisabledsheets.h</v>
 <v>Workspace\Micro\Generated_Source\PSoC4\cyfitter.h</v>
 <v>Workspace\Micro\Generated_Source\PSoC4\cyfitter_cfg.c</v>
-<v>Workspace\Micro\Generated_Source\PSoC4\cyfitter_cfg.h</v>
-<v>Workspace\Micro\Generated_Source\PSoC4\cyfittergnu.inc</v>
-<v>Workspace\Micro\Generated_Source\PSoC4\cyfitteriar.inc</v>
-<v>Workspace\Micro\Generated_Source\PSoC4\cyfitterrv.inc</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -204,10 +200,6 @@
 <v>Workspace\Micro\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_tx.lst</v>
 <v>Workspace\Micro\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_tx_PM.lst</v>
 <v>Workspace\Micro\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_UART.lst</v>
-<v>Workspace\Micro\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_UART_BOOT.lst</v>
-<v>Workspace\Micro\CortexM0\ARM_GCC_541\Debug\Micro.elf</v>
-<v>Workspace\Micro\CortexM0\ARM_GCC_541\Debug\Micro.hex</v>
-<v>Workspace\Micro\CortexM0\ARM_GCC_541\Debug\Micro.map</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
