@@ -233,7 +233,7 @@ void InitializeSystem(void)
 void sendColorDataToPeripheral()
 {
     sendColorDataToNetwork(RGB_Collection[interrupt_counter]);
-    SwitchRole();
+    //SwitchRole();
 	ConnectToPeripheralDevice();
 	RestartCentralScanning();
     
