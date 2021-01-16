@@ -1,0 +1,436 @@
+/******************************************************************************
+* Project Name		: Mesh_Flood_PSoC4BLE
+* File Name			: main.c
+* Version 			: 1.0
+* Device Used		: CY8C4247LQI-BL483
+* Software Used		: PSoC Creator 3.1 SP1
+* Compiler    		: ARM GCC 4.8.4, ARM RVDS Generic, ARM MDK Generic
+* Related Hardware	: CY8CKIT-042-BLE Bluetooth Low Energy Pioneer Kit 
+* Owner             : roit@cypress.com
+*
+********************************************************************************
+* Copyright (2014-15), Cypress Semiconductor Corporation. All Rights Reserved.
+********************************************************************************
+* This software is owned by Cypress Semiconductor Corporation (Cypress)
+* and is protected by and subject to worldwide patent protection (United
+* States and foreign), United States copyright laws and international treaty
+* provisions. Cypress hereby grants to licensee a personal, non-exclusive,
+* non-transferable license to copy, use, modify, create derivative works of,
+* and compile the Cypress Source Code and derivative works for the sole
+* purpose of creating custom software in support of licensee product to be
+* used only in conjunction with a Cypress integrated circuit as specified in
+* the applicable agreement. Any reproduction, modification, translation,
+* compilation, or representation of this software except as specified above 
+* is prohibited without the express written permission of Cypress.
+*
+* Disclaimer: CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH 
+* REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+* WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+* Cypress reserves the right to make changes without further notice to the 
+* materials described herein. Cypress does not assume any liability arising out 
+* of the application or use of any product or circuit described herein. Cypress 
+* does not authorize its products for use as critical components in life-support 
+* systems where a malfunction or failure may reasonably be expected to result in 
+* significant injury to the user. The inclusion of Cypress' product in a life-
+* support systems application implies that the manufacturer assumes all risk of 
+* such use and in doing so indemnifies Cypress against all charges. 
+*
+* Use of this Software may be limited by and subject to the applicable Cypress
+* software license agreement. 
+*******************************************************************************/
+#include <stdio.h>
+
+#include <main.h>
+
+extern uint8 switch_Role;
+extern uint8 ble_gap_state;
+extern uint8 deviceConnected;
+
+extern uint8 restartScanning;
+
+extern uint8 dataADVCounter;
+
+
+#ifdef ENABLE_ADV_DATA_COUNTER
+extern CYBLE_GAPP_DISC_DATA_T  new_advData;
+extern uint8 potential_node_found;
+extern uint8 potential_node_bdAddr[6];
+extern uint8 potential_node_bdAddrType;
+#endif
+
+extern uint8 clientConnectToDevice;
+extern CYBLE_GAP_BD_ADDR_T				peripAddr;
+
+CY_ISR_PROTO(CC_TC_InterruptHandler);
+CY_ISR_PROTO(Timer_Waiting_Time_Interrupt_Handler);
+CY_ISR_PROTO(Timer_Is_Free_Interrupt_Handler);
+CY_ISR_PROTO(Timer_Heart_beat_Interrupt_Handler);
+CY_ISR_PROTO(Change_Role_Interrupt_Handler);
+
+uint8 RGB_Collection[4][4] = {
+    {0, 0, 0xFF, 0xFF},
+    {0xFF, 0, 0xFF, 0xFF},
+    {0, 0xFF, 0, 0xFF},
+    {0xFF, 0xFF, 0, 0xFF},
+};
+
+uint8 RED_COLOR[4] = {0xFF, 0, 0, 0xFF};
+
+
+int DEVICE_INDEX = 255;
+
+int Change_Color_Period = 8000;
+int Is_Free_Period = 10000; // of the whole network
+int Waiting_Time_Period;
+
+int Heart_beat_Period;
+
+
+int NEXT_NEIGHBOUR_INDEX = 1;
+bool NETWORK_IS_FREE = true;
+
+int NUM_EXCEEDED_WAITING_TIME = 0;
+char TEXT_BUF[50];
+
+int interrupt_counter = 0;
+
+/*******************************************************************************
+* Function Name: main
+********************************************************************************
+* Summary:
+*       Entry point for the firmware, Starts the system and continuously processes
+* Application and BLE events.
+*
+* Parameters:
+*  void
+*
+* Return:
+*  int
+*
+*******************************************************************************/
+int main()
+{
+    /* Initialize system */	
+	InitializeSystem();
+	
+	#ifdef DEBUG_ENABLED
+		UART_UartPutString("Sytem Started ");
+		UART_UartPutCRLF(' ');
+	#endif
+   
+    for(;;)
+    {               
+		/* Process BLE Events. This function generates the respective 
+		* events to application layer */
+		CyBle_ProcessEvents();
+
+		/* If flag is set, then switch the GAP role between Peripheral and 
+		* Central. This function disconnects existing connection, if any, 
+		* before switching role. Depending on switched role, the system will
+		* either start scanning or start advertisement */
+		SwitchRole();
+		
+		/* If a valid node is found, then this function will initiate a connection 
+		* to that node. */
+		ConnectToPeripheralDevice();
+		
+		/* This function will restart scanning when earlier connection has been
+		* disconnected. This function also checks internal counter and sets flag to
+		* switch role from Central to Peripheral when the count is above set value. */
+		RestartCentralScanning();
+    }
+}
+
+/*******************************************************************************
+* Function Name: InitializeSystem
+********************************************************************************
+* Summary:
+*       Starts the components in the project and registers BLE event handler 
+* function. It also modifies the advertisement packet and appends data counter
+* at its end.
+*
+* Parameters:
+*  void
+*
+* Return:
+*  void
+*
+*******************************************************************************/
+void InitializeSystem(void)
+{
+	/* Enable global interrupts. */
+	CyGlobalIntEnable;
+	
+	/* Start BLE component and Register the generic Event callback function */
+	CyBle_Start(GenericEventHandler);
+    
+    // Define interrupt handle for color changes
+    //PWM_1sWindow_Start();
+    Change_Role_Isr_StartEx(Change_Role_Interrupt_Handler);
+    
+    //Timer_Change_Color_WritePeriod(Change_Color_Period);
+    Timer_Change_Color_Start();
+    isr_Timer_Change_Color_StartEx(CC_TC_InterruptHandler);
+    
+    Heart_beat_Period = 2 * Is_Free_Period;
+    Waiting_Time_Period = 2.5 * Heart_beat_Period;
+    
+    
+    // Timer_Waiting_Time_WritePeriod(Waiting_Time_Period);
+    //Timer_Heart_beat_WritePeriod(Heart_beat_Period);
+    
+    Isr_Waiting_Time_StartEx(Timer_Waiting_Time_Interrupt_Handler);
+    Timer_Is_Free_isr_StartEx(Timer_Is_Free_Interrupt_Handler);
+    
+    if (DEVICE_INDEX == 0)
+    {
+        // Timer_Heart_beat_WritePeriod(Heart_beat_Period);
+        Timer_Heart_beat_Start();
+        Isr_Heart_beat_StartEx(Timer_Heart_beat_Interrupt_Handler);
+    }
+    
+	
+	/* Start the PrISM component and configure drive mode of LED pins to be
+	* initially OFF*/
+	PrISM_1_Start();
+	PrISM_2_Start();
+	
+	PrISM_1_WritePulse0(255);
+	PrISM_1_WritePulse1(255);
+	PrISM_2_WritePulse0(255);
+	
+	RED_SetDriveMode(RED_DM_STRONG);
+	GREEN_SetDriveMode(GREEN_DM_STRONG);
+	BLUE_SetDriveMode(BLUE_DM_STRONG);
+	
+	/* Configure the Watchdog (WDT) timer for 100 millisecond timing */
+	InitializeWatchdog(WATCHDOG_COUNT_VAL);
+
+	#ifdef ENABLE_ADV_DATA_COUNTER
+	new_advData = *cyBle_discoveryModeInfo.advData;
+	
+	if( cyBle_discoveryModeInfo.advData->advDataLen < 29)
+	{
+		/* Initialize the DataCounter data in advertisement packet. This is custom data in 
+		* ADV packet and used to track whether the RGB LED data is latest or not */
+		new_advData.advData[cyBle_discoveryModeInfo.advData->advDataLen] = CUSTOM_ADV_DATA_MARKER;	
+		new_advData.advData[cyBle_discoveryModeInfo.advData->advDataLen+1] = dataADVCounter;
+		new_advData.advDataLen = cyBle_discoveryModeInfo.advData->advDataLen+2;
+	}
+	
+	/* Assign the new ADV data to stack */
+	cyBle_discoveryModeInfo.advData = &new_advData;
+	#endif
+		
+	/* Provide a color pusle on RGB LED to indicate startup */
+	PrISM_1_WritePulse1(128);
+	CyDelay(20);
+	PrISM_1_WritePulse1(255);
+	
+    UART_Start();
+    UART_UartPutString("Helloushki\n");
+	#ifdef DEBUG_ENABLED
+		
+		UART_UartPutString("--------------------------Mesh Flood------------------------------------------");
+		UART_UartPutCRLF(' ');
+	#endif
+}
+
+
+void sendColorDataToPeripheral()
+{
+    sendColorDataToNetwork(RGB_Collection[interrupt_counter]);
+    //SwitchRole();
+	ConnectToPeripheralDevice();
+	RestartCentralScanning();
+    
+    interrupt_counter++;
+    if (interrupt_counter == 4) {
+        interrupt_counter = 0;
+    }
+    
+    NETWORK_IS_FREE = false;
+    NEXT_NEIGHBOUR_INDEX = 1;
+    
+    Timer_Is_Free_Stop();
+    //Timer_Is_Free_WritePeriod(Is_Free_Period);
+    Timer_Is_Free_WriteCounter(0);
+    Timer_Is_Free_Start();
+}
+
+
+CY_ISR(Change_Role_Interrupt_Handler)
+{
+    UART_UartPutString("= = = = = = = = = Change_Role_Interrupt_Handler\n");
+    
+    sprintf(TEXT_BUF, "Change_Role_Pin_Read() == %d \n", Change_Role_Pin_Read());
+    UART_UartPutString(TEXT_BUF);
+    
+    Change_Role_Pin_Write(~Change_Role_Pin_Read());
+    
+    if (DEVICE_INDEX == 255) 
+    {
+        DEVICE_INDEX = 0;
+    }
+    else if (DEVICE_INDEX == 0)
+    {
+        Timer_Change_Color_Stop();
+        Timer_Heart_beat_Stop();
+        
+        DEVICE_INDEX = 255;
+        
+        
+        switch_Role = TRUE;
+        SwitchRole();
+//        
+//        RED_Write(0);
+//        GREEN_Write(0);
+//        BLUE_Write(0);
+        PrISM_1_WritePulse0(RGB_LED_MAX_VAL);
+		PrISM_1_WritePulse1(RGB_LED_MAX_VAL);
+		PrISM_2_WritePulse0(RGB_LED_MAX_VAL);
+    }
+    
+    Change_Role_Pin_ClearInterrupt();
+}
+
+
+CY_ISR(Timer_Waiting_Time_Interrupt_Handler)
+{   
+    /* CC_MATCH interrupt is triggered when 1s time window is gone */
+    if(Timer_Waiting_Time_INTR_MASK_CC_MATCH != 0)
+    {
+        Timer_Waiting_Time_ClearInterrupt(Timer_Waiting_Time_INTR_MASK_CC_MATCH);
+    }
+       
+    /* TC interrupt is triggered when overflow is happened */
+    if(Timer_Waiting_Time_INTR_MASK_TC != 0)
+    {
+        UART_UartPutString("\n\n==================== Timer_1_Interrupt_Handler UpdateRGBled ==================== ");
+        sprintf(TEXT_BUF, "\n\n DEVICE_INDEX in Timer_Waiting_Time_Interrupt_Handler %d \n", DEVICE_INDEX);
+        UART_UartPutString(TEXT_BUF);
+        
+        UpdateRGBled(RED_COLOR, 4);
+        CyDelay(5000);
+        if (NUM_EXCEEDED_WAITING_TIME + 1 == DEVICE_INDEX)
+        {
+            DEVICE_INDEX = 0;
+            Timer_Waiting_Time_Stop();
+            
+            //Timer_Heart_beat_WritePeriod(Heart_beat_Period);
+            Timer_Heart_beat_Start();
+            Isr_Heart_beat_StartEx(Timer_Heart_beat_Interrupt_Handler);
+            
+            switch_Role = TRUE;
+            SwitchRole();
+        }
+        
+        NUM_EXCEEDED_WAITING_TIME++;
+        Timer_Waiting_Time_ClearInterrupt(Timer_Waiting_Time_INTR_MASK_TC);
+    }
+}
+
+
+CY_ISR(CC_TC_InterruptHandler)
+{   
+    /* TC interrupt is triggered when overflow is happened */
+    if(Timer_Change_Color_INTR_MASK_TC != 0)
+    {
+        if ((DEVICE_INDEX == 0) && (NETWORK_IS_FREE))
+        {
+            sendColorDataToPeripheral();
+            
+            Timer_Heart_beat_Stop();
+            Timer_Heart_beat_WriteCounter(0);
+            Timer_Heart_beat_Start();
+        }
+    }
+//    PWM_1sWindow_ClearInterrupt(PWM_1sWindow_INTR_MASK_CC_MATCH);
+//    PWM_1sWindow_ClearInterrupt(PWM_1sWindow_INTR_MASK_TC);
+    Timer_Change_Color_ClearInterrupt(Timer_Change_Color_INTR_MASK_CC_MATCH);
+    Timer_Change_Color_ClearInterrupt(Timer_Change_Color_INTR_MASK_TC);
+}
+
+CY_ISR(Timer_Is_Free_Interrupt_Handler)
+{
+    /* TC interrupt is triggered when overflow is happened */
+    if(Timer_Is_Free_INTR_MASK_TC != 0)
+    {
+        NETWORK_IS_FREE = true;
+        sprintf(TEXT_BUF, "\n\n DEVICE_INDEX in Timer_Is_Free_Interrupt_Handler %d ", DEVICE_INDEX);
+        UART_UartPutString(TEXT_BUF);
+        
+        Timer_Is_Free_ClearInterrupt(Timer_Is_Free_INTR_MASK_TC);
+    }
+
+    Timer_Is_Free_ClearInterrupt(Timer_Is_Free_INTR_MASK_CC_MATCH);
+}
+
+
+
+CY_ISR(Timer_Heart_beat_Interrupt_Handler)
+{   
+    /* TC interrupt is triggered when overflow is happened */
+    if(Timer_Heart_beat_INTR_MASK_TC != 0)
+    {
+        if ((DEVICE_INDEX == 0) && (NETWORK_IS_FREE))
+        {
+            // MODIFY FOR MICROPHONE -- without changing colors if two times
+            // no interrrupt for micr
+            interrupt_counter--;
+            if (interrupt_counter == -1) {
+                interrupt_counter = 3;
+            }
+            
+            sendColorDataToPeripheral();
+        }
+        
+    }
+    
+    Timer_Heart_beat_ClearInterrupt(Timer_Heart_beat_INTR_MASK_CC_MATCH);
+    Timer_Heart_beat_ClearInterrupt(Timer_Heart_beat_INTR_MASK_TC);
+}
+
+
+/*******************************************************************************
+* Function Name: UpdateRGBled
+********************************************************************************
+* Summary:
+*        Update the RGB LED color by reconfiguring PrISM component. This function 
+* is valid for PSoC 4 BLE parts and not PROC BLE, as PRoC BLE does not have UDBs
+* that makes up the PrISM component. To replace this with software PrISM, refer to
+* CY8CKIT-042-BLE Pioneer Kit example project, PRoC_BLE_CapSense_Slider_LED, from
+* http://www.cypress.com/CY8CKIT-042-BLE
+*
+* Parameters:
+*  rgb_led_data: array storing the RGB and Intensity vlaue
+*  len: length of the array.
+*
+* Return:
+*  void
+*
+*******************************************************************************/
+void UpdateRGBled(uint8 * rgb_led_data, uint8 len)
+{
+	uint8 calc_red, calc_green, calc_blue;
+	
+	if(len == RGB_LED_DATA_LEN)
+	{
+		/* If a valid length packet has been sent, calculate the intensity of each of
+		* R, G and B color and update the PrISM module */
+		calc_red = (uint8)(((uint16)rgb_led_data[RGB_RED_INDEX]*rgb_led_data[RGB_INTENSITY_INDEX])/RGB_LED_MAX_VAL);
+		calc_green = (uint8)(((uint16)rgb_led_data[RGB_GREEN_INDEX]*rgb_led_data[RGB_INTENSITY_INDEX])/RGB_LED_MAX_VAL);
+		calc_blue = (uint8)(((uint16)rgb_led_data[RGB_BLUE_INDEX]*rgb_led_data[RGB_INTENSITY_INDEX])/RGB_LED_MAX_VAL);
+		
+		PrISM_1_WritePulse0(RGB_LED_MAX_VAL - calc_red);
+		PrISM_1_WritePulse1(RGB_LED_MAX_VAL - calc_green);
+		PrISM_2_WritePulse0(RGB_LED_MAX_VAL - calc_blue);
+		
+		#ifdef DEBUG_ENABLED
+			UART_UartPutString("PrISM Updated ");
+			UART_UartPutCRLF(' ');
+		#endif
+	}
+}
+
+/* [] END OF FILE */
