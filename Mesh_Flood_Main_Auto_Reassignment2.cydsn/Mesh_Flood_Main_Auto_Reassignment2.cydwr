@@ -21,6 +21,7 @@
     </Group>
     <Group key="Pin">
       <Data key="7df25566-b708-4647-9898-109cdb70fa76" value="RED" />
+      <Data key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba" value="Change_Role_Pin" />
       <Data key="43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/23b8206d-1c77-4e61-be4a-b4037d5de5fc" value="UART_tx" />
       <Data key="43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/78e33e5d-45ea-4b75-88d5-73274e8a7ce4" value="UART_rx" />
       <Data key="ac0fe466-d225-4ea6-a4da-22e682a94aab" value="BLUE" />
@@ -3555,6 +3556,11 @@
     <Group key="7df25566-b708-4647-9898-109cdb70fa76">
       <Group key="0">
         <Data key="Port Format" value="2,6" />
+      </Group>
+    </Group>
+    <Group key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba">
+      <Group key="0">
+        <Data key="Port Format" value="2,7" />
       </Group>
     </Group>
     <Group key="43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/23b8206d-1c77-4e61-be4a-b4037d5de5fc">

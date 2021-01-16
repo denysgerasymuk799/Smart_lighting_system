@@ -191,6 +191,12 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Isr_Heart_beat.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_Heart_beat.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_Heart_beat.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Change_Role_Pin.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Change_Role_Pin.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Change_Role_Pin_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Change_Role_Pin_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Change_Role_Isr.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Change_Role_Isr.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\Export\ARM_GCC_Generic\BLE_v3_66">

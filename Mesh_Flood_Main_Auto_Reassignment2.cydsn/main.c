@@ -65,6 +65,7 @@ CY_ISR_PROTO(CC_TC_InterruptHandler);
 CY_ISR_PROTO(Timer_Waiting_Time_Interrupt_Handler);
 CY_ISR_PROTO(Timer_Is_Free_Interrupt_Handler);
 CY_ISR_PROTO(Timer_Heart_beat_Interrupt_Handler);
+CY_ISR_PROTO(Change_Role_Interrupt_Handler);
 
 uint8 RGB_Collection[4][4] = {
     {0, 0, 0xFF, 0xFF},
@@ -76,7 +77,7 @@ uint8 RGB_Collection[4][4] = {
 uint8 RED_COLOR[4] = {0xFF, 0, 0, 0xFF};
 
 
-int DEVICE_INDEX = 0;
+int DEVICE_INDEX = 255;
 
 int Change_Color_Period = 1500;
 int Is_Free_Period = 4500; // of the whole network
@@ -165,6 +166,8 @@ void InitializeSystem(void)
     
     // Define interrupt handle for color changes
     //PWM_1sWindow_Start();
+    Change_Role_Isr_StartEx(Change_Role_Interrupt_Handler);
+    
     Timer_Change_Color_WritePeriod(Change_Color_Period);
     Timer_Change_Color_Start();
     isr_Timer_Change_Color_StartEx(CC_TC_InterruptHandler);
@@ -249,6 +252,35 @@ void sendColorDataToPeripheral()
     Timer_Is_Free_WritePeriod(Is_Free_Period);
     Timer_Is_Free_WriteCounter(0);
     Timer_Is_Free_Start();
+}
+
+
+CY_ISR(Change_Role_Interrupt_Handler)
+{
+    UART_UartPutString("= = = = = = = = = Change_Role_Interrupt_Handler\n");
+    
+    sprintf(TEXT_BUF, "Change_Role_Pin_Read() == %d \n", Change_Role_Pin_Read());
+    UART_UartPutString(TEXT_BUF);
+    
+    Change_Role_Pin_Write(~Change_Role_Pin_Read());
+    
+    if (DEVICE_INDEX == 255) 
+    {
+        DEVICE_INDEX = 0;
+    }
+    else if (DEVICE_INDEX == 0)
+    {
+        DEVICE_INDEX = 255;
+        
+        switch_Role = TRUE;
+        SwitchRole();
+        
+        RED_Write(0);
+        GREEN_Write(0);
+        BLUE_Write(0);
+    }
+    
+    Change_Role_Pin_ClearInterrupt();
 }
 
 

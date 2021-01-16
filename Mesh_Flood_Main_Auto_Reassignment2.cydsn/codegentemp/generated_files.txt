@@ -96,6 +96,12 @@
   <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\codegentemp\Isr_Heart_beat.h" value="HEADER;;;;;Isr_Heart_beat" />
   <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\codegentemp\Clock_Heart_beat.c" value="SOURCE_C;CortexM0;;;;Clock_Heart_beat" />
   <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\codegentemp\Clock_Heart_beat.h" value="HEADER;;;;;Clock_Heart_beat" />
+  <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\codegentemp\Change_Role_Pin.c" value="SOURCE_C;CortexM0;;;;Change_Role_Pin" />
+  <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\codegentemp\Change_Role_Pin.h" value="HEADER;;;;;Change_Role_Pin" />
+  <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\codegentemp\Change_Role_Pin_aliases.h" value="HEADER;;;;;Change_Role_Pin" />
+  <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\codegentemp\Change_Role_Pin_PM.c" value="SOURCE_C;CortexM0;;;;Change_Role_Pin" />
+  <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\codegentemp\Change_Role_Isr.c" value="SOURCE_C;CortexM0;;;;Change_Role_Isr" />
+  <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\codegentemp\Change_Role_Isr.h" value="HEADER;;;;;Change_Role_Isr" />
   <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\codegentemp\BLE_bless_isr.c" value="SOURCE_C;CortexM0;;;;BLE_bless_isr" />
   <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\codegentemp\BLE_bless_isr.h" value="HEADER;;;;;BLE_bless_isr" />
   <file name="D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\codegentemp\UART_SCBCLK.c" value="SOURCE_C;CortexM0;;;;UART_SCBCLK" />
