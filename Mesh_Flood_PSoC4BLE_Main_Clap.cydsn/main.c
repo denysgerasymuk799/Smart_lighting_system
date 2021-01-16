@@ -1,4 +1,4 @@
-/******************************************************************************
+    /******************************************************************************
 * Project Name		: Mesh_Flood_PSoC4BLE
 * File Name			: main.c
 * Version 			: 1.0
@@ -72,16 +72,18 @@ uint8 RGB_Collection[4][4] = {
     {0xFF, 0xFF, 0, 0xFF},
 };
 
-uint8 On_Off_collection[2][4] = {
-    {0xFF, 0xFF, 0xFF, 0xFF},
-    {0xFF, 0xFF, 0xFF, 0},
-};
+uint8 On_Off_collection[2] = {0, 0xFF};
 
 int interrupt_counter = 0;
+int on_off_counter = 0;
+
 int compare;
 uint16 val;
 uint16 prev_val;
 uint16 init_val;
+
+int clap_counter = 0;
+
 /*******************************************************************************
 * Function Name: main
 ********************************************************************************
@@ -133,6 +135,21 @@ int main()
     }
 }
 
+CY_ISR(Timer_Int_Handler){
+    clap_counter =Timer_Claps_ReadCapture();
+    //if (counter > 10000){
+      //  counter = 10000;
+    //}
+    char rez[30];
+    sprintf(rez, "counter  = %d \n ", clap_counter);
+    UART_UartPutString(rez);
+    if (clap_counter > 450){
+    }
+    
+    Timer_Claps_ClearInterrupt(Timer_Claps_INTR_MASK_CC_MATCH);
+    
+}
+
 /*******************************************************************************
 * Function Name: InitializeSystem
 ********************************************************************************
@@ -163,9 +180,15 @@ void InitializeSystem(void)
     //PWM_Brightness_Start();
     //int compare;
     
+    
+    
+    
 	/* Enable global interrupts. */
 	CyGlobalIntEnable;
 	
+    Timer_Claps_Start();
+    isr_timer_StartEx(Timer_Int_Handler);
+    
 	/* Start BLE component and Register the generic Event callback function */
 	CyBle_Start(GenericEventHandler);
     
@@ -237,19 +260,78 @@ void Change_brightness(){
 }
 
 CY_ISR(CC_TC_InterruptHandler)
-{
-    CyGlobalIntDisable;
-    CyDelay(100);
-    sendColorDataToNetwork(On_Off_collection[interrupt_counter]);
-    SwitchRole();
-	ConnectToPeripheralDevice();
-	RestartCentralScanning();
-    interrupt_counter++;
-    if (interrupt_counter == 2) {
-        interrupt_counter = 0;
+{   
+    Pin_Timer_Clear_Write(1);
+    //int counter = Timer_Claps_ReadCapture();
+    //Timer_Claps_Stop();
+    char rez[30];
+    sprintf(rez, "counter  = %d \n ", clap_counter);
+    //UART_UartPutString(rez);
+    
+    if (clap_counter < 450){
+        CyDelay(50);
+        CyGlobalIntDisable;
+        
+        on_off_counter++;
+        if (on_off_counter == 2) {
+            on_off_counter = 0;
+        }
+        
+        interrupt_counter++;
+        if (interrupt_counter == 4) {
+                interrupt_counter = 0;
+            }
+        
+        CyDelay(50);
+        
+        uint8 bright = On_Off_collection[on_off_counter];
+        uint8 r[4];
+        r[0] = RGB_Collection[interrupt_counter][0];
+        r[1] = RGB_Collection[interrupt_counter][1];
+        r[2] = RGB_Collection[interrupt_counter][2];
+        r[3] = bright;
+        sendColorDataToNetwork(r);
+        SwitchRole();
+    	ConnectToPeripheralDevice();
+    	RestartCentralScanning();
+        
+        sprintf(rez, "bright  = %d \n ", bright);
+        
+        
+        
+        isr_Counter_ClearPending();
+        CyGlobalIntEnable;
+    }else{
+    
+        on_off_counter++;
+        if (on_off_counter == 2) {
+            on_off_counter = 0;
+        }
+        
+        CyDelay(100);
+        CyGlobalIntDisable;
+        uint8 bright = On_Off_collection[on_off_counter];
+        uint8 r[4];
+        r[0] = RGB_Collection[interrupt_counter][0];
+        r[1] = RGB_Collection[interrupt_counter][1];
+        r[2] = RGB_Collection[interrupt_counter][2];
+        r[3] = bright;
+        sendColorDataToNetwork(r);
+        SwitchRole();
+    	ConnectToPeripheralDevice();
+    	RestartCentralScanning();
+        
+        sprintf(rez, "bright  = %d \n ", bright);
+        
+        
+        isr_Counter_ClearPending();
+        CyGlobalIntEnable;
     }
-    isr_Counter_ClearPending();
-    CyGlobalIntEnable;
+    
+    CyDelay(50);
+    Pin_Timer_Clear_Write(0);
+    
+    CyDelay(50);
     
 }
 
