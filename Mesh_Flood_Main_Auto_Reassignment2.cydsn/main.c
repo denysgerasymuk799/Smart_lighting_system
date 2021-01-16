@@ -77,10 +77,10 @@ uint8 RGB_Collection[4][4] = {
 uint8 RED_COLOR[4] = {0xFF, 0, 0, 0xFF};
 
 
-int DEVICE_INDEX = 0;
+int DEVICE_INDEX = 255;
 
-int Change_Color_Period = 1500;
-int Is_Free_Period = 4500; // of the whole network
+int Change_Color_Period = 8000;
+int Is_Free_Period = 10000; // of the whole network
 int Waiting_Time_Period;
 
 int Heart_beat_Period;
@@ -168,19 +168,23 @@ void InitializeSystem(void)
     //PWM_1sWindow_Start();
     Change_Role_Isr_StartEx(Change_Role_Interrupt_Handler);
     
-    Timer_Change_Color_WritePeriod(Change_Color_Period);
+    //Timer_Change_Color_WritePeriod(Change_Color_Period);
     Timer_Change_Color_Start();
     isr_Timer_Change_Color_StartEx(CC_TC_InterruptHandler);
     
     Heart_beat_Period = 2 * Is_Free_Period;
     Waiting_Time_Period = 2.5 * Heart_beat_Period;
     
+    
+    // Timer_Waiting_Time_WritePeriod(Waiting_Time_Period);
+    //Timer_Heart_beat_WritePeriod(Heart_beat_Period);
+    
     Isr_Waiting_Time_StartEx(Timer_Waiting_Time_Interrupt_Handler);
     Timer_Is_Free_isr_StartEx(Timer_Is_Free_Interrupt_Handler);
     
     if (DEVICE_INDEX == 0)
     {
-        Timer_Heart_beat_WritePeriod(Heart_beat_Period);
+        // Timer_Heart_beat_WritePeriod(Heart_beat_Period);
         Timer_Heart_beat_Start();
         Isr_Heart_beat_StartEx(Timer_Heart_beat_Interrupt_Handler);
     }
@@ -249,7 +253,7 @@ void sendColorDataToPeripheral()
     NEXT_NEIGHBOUR_INDEX = 1;
     
     Timer_Is_Free_Stop();
-    Timer_Is_Free_WritePeriod(Is_Free_Period);
+    //Timer_Is_Free_WritePeriod(Is_Free_Period);
     Timer_Is_Free_WriteCounter(0);
     Timer_Is_Free_Start();
 }
@@ -313,7 +317,7 @@ CY_ISR(Timer_Waiting_Time_Interrupt_Handler)
             DEVICE_INDEX = 0;
             Timer_Waiting_Time_Stop();
             
-            Timer_Heart_beat_WritePeriod(Heart_beat_Period);
+            //Timer_Heart_beat_WritePeriod(Heart_beat_Period);
             Timer_Heart_beat_Start();
             Isr_Heart_beat_StartEx(Timer_Heart_beat_Interrupt_Handler);
             
@@ -329,13 +333,17 @@ CY_ISR(Timer_Waiting_Time_Interrupt_Handler)
 
 CY_ISR(CC_TC_InterruptHandler)
 {   
-    if ((DEVICE_INDEX == 0) && (NETWORK_IS_FREE))
+    /* TC interrupt is triggered when overflow is happened */
+    if(Timer_Change_Color_INTR_MASK_TC != 0)
     {
-        sendColorDataToPeripheral();
-        
-        Timer_Heart_beat_Stop();
-        Timer_Heart_beat_WriteCounter(0);
-        Timer_Heart_beat_Start();
+        if ((DEVICE_INDEX == 0) && (NETWORK_IS_FREE))
+        {
+            sendColorDataToPeripheral();
+            
+            Timer_Heart_beat_Stop();
+            Timer_Heart_beat_WriteCounter(0);
+            Timer_Heart_beat_Start();
+        }
     }
 //    PWM_1sWindow_ClearInterrupt(PWM_1sWindow_INTR_MASK_CC_MATCH);
 //    PWM_1sWindow_ClearInterrupt(PWM_1sWindow_INTR_MASK_TC);
@@ -365,7 +373,7 @@ CY_ISR(Timer_Heart_beat_Interrupt_Handler)
     /* TC interrupt is triggered when overflow is happened */
     if(Timer_Heart_beat_INTR_MASK_TC != 0)
     {
-        if (DEVICE_INDEX == 0)
+        if ((DEVICE_INDEX == 0) && (NETWORK_IS_FREE))
         {
             // MODIFY FOR MICROPHONE -- without changing colors if two times
             // no interrrupt for micr

@@ -129,7 +129,7 @@ extern uint8  Timer_Is_Free_initVar;
 ***************************************/
 
 /* Timer/Counter Mode */
-#define Timer_Is_Free_TC_PERIOD_VALUE                (4499lu)
+#define Timer_Is_Free_TC_PERIOD_VALUE                (10999lu)
 #define Timer_Is_Free_TC_COMPARE_VALUE               (65535lu)
 #define Timer_Is_Free_TC_COMPARE_BUF_VALUE           (65535lu)
 #define Timer_Is_Free_TC_COMPARE_SWAP                (0lu)

@@ -129,7 +129,7 @@ extern uint8  Timer_Heart_beat_initVar;
 ***************************************/
 
 /* Timer/Counter Mode */
-#define Timer_Heart_beat_TC_PERIOD_VALUE                (5999lu)
+#define Timer_Heart_beat_TC_PERIOD_VALUE                (14999lu)
 #define Timer_Heart_beat_TC_COMPARE_VALUE               (65535lu)
 #define Timer_Heart_beat_TC_COMPARE_BUF_VALUE           (65535lu)
 #define Timer_Heart_beat_TC_COMPARE_SWAP                (0lu)

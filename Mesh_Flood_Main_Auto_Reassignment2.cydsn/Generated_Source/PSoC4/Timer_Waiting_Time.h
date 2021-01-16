@@ -129,7 +129,7 @@ extern uint8  Timer_Waiting_Time_initVar;
 ***************************************/
 
 /* Timer/Counter Mode */
-#define Timer_Waiting_Time_TC_PERIOD_VALUE                (9999lu)
+#define Timer_Waiting_Time_TC_PERIOD_VALUE                (24999lu)
 #define Timer_Waiting_Time_TC_COMPARE_VALUE               (65535lu)
 #define Timer_Waiting_Time_TC_COMPARE_BUF_VALUE           (65535lu)
 #define Timer_Waiting_Time_TC_COMPARE_SWAP                (0lu)

@@ -23,7 +23,7 @@ void restart_peripheral_waiting_time()
         Timer_Waiting_Time_Stop();
         Timer_Waiting_Time_WriteCounter(0);
         
-        Timer_Waiting_Time_WritePeriod(Waiting_Time_Period);
+        //Timer_Waiting_Time_WritePeriod(Waiting_Time_Period);
         Timer_Waiting_Time_Start();
     }
 }
