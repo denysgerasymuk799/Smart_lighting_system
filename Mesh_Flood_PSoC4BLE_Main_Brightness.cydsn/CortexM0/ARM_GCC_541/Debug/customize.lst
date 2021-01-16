@@ -1,0 +1,1598 @@
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"customize.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.comm	current_watchdog_counter,2,2
+  20              		.section	.rodata
+  21              		.align	2
+  22              	.LC0:
+  23 0000 64696666 		.ascii	"diff  = %d \012 \000"
+  23      20203D20 
+  23      2564200A 
+  23      2000
+  24              		.section	.text.get_compare_from_analog,"ax",%progbits
+  25              		.align	2
+  26              		.global	get_compare_from_analog
+  27              		.code	16
+  28              		.thumb_func
+  29              		.type	get_compare_from_analog, %function
+  30              	get_compare_from_analog:
+  31              	.LFB36:
+  32              		.file 1 "customize.c"
+   1:customize.c   **** #include <main.h>
+   2:customize.c   **** #include <customize.h>
+   3:customize.c   **** #include <stdio.h>
+   4:customize.c   **** 
+   5:customize.c   **** extern uint8 RGBData;
+   6:customize.c   **** 
+   7:customize.c   **** int get_compare_from_analog(uint16 val, uint16 init_val, uint16 prev_val){
+  33              		.loc 1 7 0
+  34              		.cfi_startproc
+  35              		@ args = 0, pretend = 0, frame = 48
+  36              		@ frame_needed = 1, uses_anonymous_args = 0
+  37 0000 90B5     		push	{r4, r7, lr}
+  38              		.cfi_def_cfa_offset 12
+  39              		.cfi_offset 4, -12
+  40              		.cfi_offset 7, -8
+  41              		.cfi_offset 14, -4
+  42 0002 8DB0     		sub	sp, sp, #52
+  43              		.cfi_def_cfa_offset 64
+  44 0004 00AF     		add	r7, sp, #0
+  45              		.cfi_def_cfa_register 7
+  46 0006 0400     		movs	r4, r0
+  47 0008 0800     		movs	r0, r1
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 2
+
+
+  48 000a 1100     		movs	r1, r2
+  49 000c BB1D     		adds	r3, r7, #6
+  50 000e 221C     		adds	r2, r4, #0
+  51 0010 1A80     		strh	r2, [r3]
+  52 0012 3B1D     		adds	r3, r7, #4
+  53 0014 021C     		adds	r2, r0, #0
+  54 0016 1A80     		strh	r2, [r3]
+  55 0018 BB1C     		adds	r3, r7, #2
+  56 001a 0A1C     		adds	r2, r1, #0
+  57 001c 1A80     		strh	r2, [r3]
+   8:customize.c   ****     /*if (val < init_val){
+   9:customize.c   ****         val = init_val;
+  10:customize.c   ****     }*/
+  11:customize.c   ****     int diff = val > init_val ? val-init_val : init_val - val;
+  58              		.loc 1 11 0
+  59 001e BA1D     		adds	r2, r7, #6
+  60 0020 3B1D     		adds	r3, r7, #4
+  61 0022 1288     		ldrh	r2, [r2]
+  62 0024 1B88     		ldrh	r3, [r3]
+  63 0026 9A42     		cmp	r2, r3
+  64 0028 05D9     		bls	.L2
+  65              		.loc 1 11 0 is_stmt 0 discriminator 1
+  66 002a BB1D     		adds	r3, r7, #6
+  67 002c 1A88     		ldrh	r2, [r3]
+  68 002e 3B1D     		adds	r3, r7, #4
+  69 0030 1B88     		ldrh	r3, [r3]
+  70 0032 D31A     		subs	r3, r2, r3
+  71 0034 04E0     		b	.L3
+  72              	.L2:
+  73              		.loc 1 11 0 discriminator 2
+  74 0036 3B1D     		adds	r3, r7, #4
+  75 0038 1A88     		ldrh	r2, [r3]
+  76 003a BB1D     		adds	r3, r7, #6
+  77 003c 1B88     		ldrh	r3, [r3]
+  78 003e D31A     		subs	r3, r2, r3
+  79              	.L3:
+  80              		.loc 1 11 0 discriminator 4
+  81 0040 FB62     		str	r3, [r7, #44]
+  12:customize.c   ****     
+  13:customize.c   ****     char rez[30];
+  14:customize.c   ****     sprintf(rez, "diff  = %d \n ", diff);
+  82              		.loc 1 14 0 is_stmt 1 discriminator 4
+  83 0042 FA6A     		ldr	r2, [r7, #44]
+  84 0044 0949     		ldr	r1, .L5
+  85 0046 0C23     		movs	r3, #12
+  86 0048 FB18     		adds	r3, r7, r3
+  87 004a 1800     		movs	r0, r3
+  88 004c FFF7FEFF 		bl	sprintf
+  15:customize.c   ****     UART_UartPutString(rez);
+  89              		.loc 1 15 0 discriminator 4
+  90 0050 0C23     		movs	r3, #12
+  91 0052 FB18     		adds	r3, r7, r3
+  92 0054 1800     		movs	r0, r3
+  93 0056 FFF7FEFF 		bl	UART_UartPutString
+  16:customize.c   ****     CyDelay(50);
+  94              		.loc 1 16 0 discriminator 4
+  95 005a 3220     		movs	r0, #50
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 3
+
+
+  96 005c FFF7FEFF 		bl	CyDelay
+  17:customize.c   ****     return diff ;
+  97              		.loc 1 17 0 discriminator 4
+  98 0060 FB6A     		ldr	r3, [r7, #44]
+  18:customize.c   **** }
+  99              		.loc 1 18 0 discriminator 4
+ 100 0062 1800     		movs	r0, r3
+ 101 0064 BD46     		mov	sp, r7
+ 102 0066 0DB0     		add	sp, sp, #52
+ 103              		@ sp needed
+ 104 0068 90BD     		pop	{r4, r7, pc}
+ 105              	.L6:
+ 106 006a C046     		.align	2
+ 107              	.L5:
+ 108 006c 00000000 		.word	.LC0
+ 109              		.cfi_endproc
+ 110              	.LFE36:
+ 111              		.size	get_compare_from_analog, .-get_compare_from_analog
+ 112              		.section	.text.get_brightness_from_analog,"ax",%progbits
+ 113              		.align	2
+ 114              		.global	get_brightness_from_analog
+ 115              		.code	16
+ 116              		.thumb_func
+ 117              		.type	get_brightness_from_analog, %function
+ 118              	get_brightness_from_analog:
+ 119              	.LFB37:
+  19:customize.c   **** 
+  20:customize.c   **** int get_brightness_from_analog(uint16 val, uint16 init_val, uint16 prev_val){
+ 120              		.loc 1 20 0
+ 121              		.cfi_startproc
+ 122              		@ args = 0, pretend = 0, frame = 48
+ 123              		@ frame_needed = 1, uses_anonymous_args = 0
+ 124 0000 90B5     		push	{r4, r7, lr}
+ 125              		.cfi_def_cfa_offset 12
+ 126              		.cfi_offset 4, -12
+ 127              		.cfi_offset 7, -8
+ 128              		.cfi_offset 14, -4
+ 129 0002 8DB0     		sub	sp, sp, #52
+ 130              		.cfi_def_cfa_offset 64
+ 131 0004 00AF     		add	r7, sp, #0
+ 132              		.cfi_def_cfa_register 7
+ 133 0006 0400     		movs	r4, r0
+ 134 0008 0800     		movs	r0, r1
+ 135 000a 1100     		movs	r1, r2
+ 136 000c BB1D     		adds	r3, r7, #6
+ 137 000e 221C     		adds	r2, r4, #0
+ 138 0010 1A80     		strh	r2, [r3]
+ 139 0012 3B1D     		adds	r3, r7, #4
+ 140 0014 021C     		adds	r2, r0, #0
+ 141 0016 1A80     		strh	r2, [r3]
+ 142 0018 BB1C     		adds	r3, r7, #2
+ 143 001a 0A1C     		adds	r2, r1, #0
+ 144 001c 1A80     		strh	r2, [r3]
+  21:customize.c   ****     /*if (val < init_val){
+  22:customize.c   ****         val = init_val;
+  23:customize.c   ****     }*/
+  24:customize.c   ****     int diff = val > init_val ? val-init_val : init_val - val;
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 4
+
+
+ 145              		.loc 1 24 0
+ 146 001e BA1D     		adds	r2, r7, #6
+ 147 0020 3B1D     		adds	r3, r7, #4
+ 148 0022 1288     		ldrh	r2, [r2]
+ 149 0024 1B88     		ldrh	r3, [r3]
+ 150 0026 9A42     		cmp	r2, r3
+ 151 0028 05D9     		bls	.L8
+ 152              		.loc 1 24 0 is_stmt 0 discriminator 1
+ 153 002a BB1D     		adds	r3, r7, #6
+ 154 002c 1A88     		ldrh	r2, [r3]
+ 155 002e 3B1D     		adds	r3, r7, #4
+ 156 0030 1B88     		ldrh	r3, [r3]
+ 157 0032 D31A     		subs	r3, r2, r3
+ 158 0034 04E0     		b	.L9
+ 159              	.L8:
+ 160              		.loc 1 24 0 discriminator 2
+ 161 0036 3B1D     		adds	r3, r7, #4
+ 162 0038 1A88     		ldrh	r2, [r3]
+ 163 003a BB1D     		adds	r3, r7, #6
+ 164 003c 1B88     		ldrh	r3, [r3]
+ 165 003e D31A     		subs	r3, r2, r3
+ 166              	.L9:
+ 167              		.loc 1 24 0 discriminator 4
+ 168 0040 FB62     		str	r3, [r7, #44]
+  25:customize.c   ****     
+  26:customize.c   ****     char rez[30];
+  27:customize.c   ****     sprintf(rez, "diff  = %d \n ", diff);
+ 169              		.loc 1 27 0 is_stmt 1 discriminator 4
+ 170 0042 FA6A     		ldr	r2, [r7, #44]
+ 171 0044 0C49     		ldr	r1, .L11
+ 172 0046 0C23     		movs	r3, #12
+ 173 0048 FB18     		adds	r3, r7, r3
+ 174 004a 1800     		movs	r0, r3
+ 175 004c FFF7FEFF 		bl	sprintf
+  28:customize.c   ****     UART_UartPutString(rez);
+ 176              		.loc 1 28 0 discriminator 4
+ 177 0050 0C23     		movs	r3, #12
+ 178 0052 FB18     		adds	r3, r7, r3
+ 179 0054 1800     		movs	r0, r3
+ 180 0056 FFF7FEFF 		bl	UART_UartPutString
+  29:customize.c   ****     //CyDelay(150);
+  30:customize.c   ****     CyDelay(50);
+ 181              		.loc 1 30 0 discriminator 4
+ 182 005a 3220     		movs	r0, #50
+ 183 005c FFF7FEFF 		bl	CyDelay
+  31:customize.c   ****     
+  32:customize.c   ****     return (val- 1110)*10;
+ 184              		.loc 1 32 0 discriminator 4
+ 185 0060 BB1D     		adds	r3, r7, #6
+ 186 0062 1B88     		ldrh	r3, [r3]
+ 187 0064 054A     		ldr	r2, .L11+4
+ 188 0066 9A18     		adds	r2, r3, r2
+ 189 0068 1300     		movs	r3, r2
+ 190 006a 9B00     		lsls	r3, r3, #2
+ 191 006c 9B18     		adds	r3, r3, r2
+ 192 006e 5B00     		lsls	r3, r3, #1
+  33:customize.c   **** }...
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 5
+
+
+ 193              		.loc 1 33 0 discriminator 4
+ 194 0070 1800     		movs	r0, r3
+ 195 0072 BD46     		mov	sp, r7
+ 196 0074 0DB0     		add	sp, sp, #52
+ 197              		@ sp needed
+ 198 0076 90BD     		pop	{r4, r7, pc}
+ 199              	.L12:
+ 200              		.align	2
+ 201              	.L11:
+ 202 0078 00000000 		.word	.LC0
+ 203 007c AAFBFFFF 		.word	-1110
+ 204              		.cfi_endproc
+ 205              	.LFE37:
+ 206              		.size	get_brightness_from_analog, .-get_brightness_from_analog
+ 207              		.text
+ 208              	.Letext0:
+ 209              		.file 2 "Generated_Source\\PSoC4/BLE_Stack.h"
+ 210              		.file 3 "Generated_Source\\PSoC4/BLE_eventHandler.h"
+ 211              		.file 4 "Generated_Source\\PSoC4/cytypes.h"
+ 212              		.file 5 "./main.h"
+ 213              		.section	.debug_info,"",%progbits
+ 214              	.Ldebug_info0:
+ 215 0000 67030000 		.4byte	0x367
+ 216 0004 0400     		.2byte	0x4
+ 217 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 218 000a 04       		.byte	0x4
+ 219 000b 01       		.uleb128 0x1
+ 220 000c 3D040000 		.4byte	.LASF96
+ 221 0010 0C       		.byte	0xc
+ 222 0011 CC0A0000 		.4byte	.LASF97
+ 223 0015 46000000 		.4byte	.LASF98
+ 224 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 225 001d 00000000 		.4byte	0
+ 226 0021 00000000 		.4byte	.Ldebug_line0
+ 227 0025 02       		.uleb128 0x2
+ 228 0026 01       		.byte	0x1
+ 229 0027 06       		.byte	0x6
+ 230 0028 D5050000 		.4byte	.LASF0
+ 231 002c 02       		.uleb128 0x2
+ 232 002d 01       		.byte	0x1
+ 233 002e 08       		.byte	0x8
+ 234 002f 6B050000 		.4byte	.LASF1
+ 235 0033 02       		.uleb128 0x2
+ 236 0034 02       		.byte	0x2
+ 237 0035 05       		.byte	0x5
+ 238 0036 A5000000 		.4byte	.LASF2
+ 239 003a 02       		.uleb128 0x2
+ 240 003b 02       		.byte	0x2
+ 241 003c 07       		.byte	0x7
+ 242 003d 42070000 		.4byte	.LASF3
+ 243 0041 02       		.uleb128 0x2
+ 244 0042 04       		.byte	0x4
+ 245 0043 05       		.byte	0x5
+ 246 0044 61030000 		.4byte	.LASF4
+ 247 0048 02       		.uleb128 0x2
+ 248 0049 04       		.byte	0x4
+ 249 004a 07       		.byte	0x7
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 6
+
+
+ 250 004b A7010000 		.4byte	.LASF5
+ 251 004f 02       		.uleb128 0x2
+ 252 0050 08       		.byte	0x8
+ 253 0051 05       		.byte	0x5
+ 254 0052 F0080000 		.4byte	.LASF6
+ 255 0056 02       		.uleb128 0x2
+ 256 0057 08       		.byte	0x8
+ 257 0058 07       		.byte	0x7
+ 258 0059 10030000 		.4byte	.LASF7
+ 259 005d 03       		.uleb128 0x3
+ 260 005e 04       		.byte	0x4
+ 261 005f 05       		.byte	0x5
+ 262 0060 696E7400 		.ascii	"int\000"
+ 263 0064 02       		.uleb128 0x2
+ 264 0065 04       		.byte	0x4
+ 265 0066 07       		.byte	0x7
+ 266 0067 7E0A0000 		.4byte	.LASF8
+ 267 006b 04       		.uleb128 0x4
+ 268 006c D7010000 		.4byte	.LASF99
+ 269 0070 04       		.byte	0x4
+ 270 0071 E701     		.2byte	0x1e7
+ 271 0073 3A000000 		.4byte	0x3a
+ 272 0077 02       		.uleb128 0x2
+ 273 0078 04       		.byte	0x4
+ 274 0079 04       		.byte	0x4
+ 275 007a B6020000 		.4byte	.LASF9
+ 276 007e 02       		.uleb128 0x2
+ 277 007f 08       		.byte	0x8
+ 278 0080 04       		.byte	0x4
+ 279 0081 A9080000 		.4byte	.LASF10
+ 280 0085 02       		.uleb128 0x2
+ 281 0086 01       		.byte	0x1
+ 282 0087 08       		.byte	0x8
+ 283 0088 BD070000 		.4byte	.LASF11
+ 284 008c 05       		.uleb128 0x5
+ 285 008d 6B000000 		.4byte	0x6b
+ 286 0091 02       		.uleb128 0x2
+ 287 0092 08       		.byte	0x8
+ 288 0093 04       		.byte	0x4
+ 289 0094 39050000 		.4byte	.LASF12
+ 290 0098 02       		.uleb128 0x2
+ 291 0099 04       		.byte	0x4
+ 292 009a 07       		.byte	0x7
+ 293 009b 8B030000 		.4byte	.LASF13
+ 294 009f 06       		.uleb128 0x6
+ 295 00a0 01       		.byte	0x1
+ 296 00a1 2C000000 		.4byte	0x2c
+ 297 00a5 02       		.byte	0x2
+ 298 00a6 3501     		.2byte	0x135
+ 299 00a8 5D020000 		.4byte	0x25d
+ 300 00ac 07       		.uleb128 0x7
+ 301 00ad 42020000 		.4byte	.LASF14
+ 302 00b1 00       		.byte	0
+ 303 00b2 07       		.uleb128 0x7
+ 304 00b3 6A020000 		.4byte	.LASF15
+ 305 00b7 01       		.byte	0x1
+ 306 00b8 07       		.uleb128 0x7
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 7
+
+
+ 307 00b9 210A0000 		.4byte	.LASF16
+ 308 00bd 02       		.byte	0x2
+ 309 00be 07       		.uleb128 0x7
+ 310 00bf FE080000 		.4byte	.LASF17
+ 311 00c3 03       		.byte	0x3
+ 312 00c4 07       		.uleb128 0x7
+ 313 00c5 68010000 		.4byte	.LASF18
+ 314 00c9 04       		.byte	0x4
+ 315 00ca 07       		.uleb128 0x7
+ 316 00cb FB030000 		.4byte	.LASF19
+ 317 00cf 05       		.byte	0x5
+ 318 00d0 07       		.uleb128 0x7
+ 319 00d1 2D000000 		.4byte	.LASF20
+ 320 00d5 06       		.byte	0x6
+ 321 00d6 07       		.uleb128 0x7
+ 322 00d7 5C090000 		.4byte	.LASF21
+ 323 00db 20       		.byte	0x20
+ 324 00dc 07       		.uleb128 0x7
+ 325 00dd 8B060000 		.4byte	.LASF22
+ 326 00e1 21       		.byte	0x21
+ 327 00e2 07       		.uleb128 0x7
+ 328 00e3 09000000 		.4byte	.LASF23
+ 329 00e7 22       		.byte	0x22
+ 330 00e8 07       		.uleb128 0x7
+ 331 00e9 17040000 		.4byte	.LASF24
+ 332 00ed 23       		.byte	0x23
+ 333 00ee 07       		.uleb128 0x7
+ 334 00ef 2C060000 		.4byte	.LASF25
+ 335 00f3 24       		.byte	0x24
+ 336 00f4 07       		.uleb128 0x7
+ 337 00f5 AF000000 		.4byte	.LASF26
+ 338 00f9 25       		.byte	0x25
+ 339 00fa 07       		.uleb128 0x7
+ 340 00fb DC000000 		.4byte	.LASF27
+ 341 00ff 26       		.byte	0x26
+ 342 0100 07       		.uleb128 0x7
+ 343 0101 A4030000 		.4byte	.LASF28
+ 344 0105 27       		.byte	0x27
+ 345 0106 07       		.uleb128 0x7
+ 346 0107 AA0A0000 		.4byte	.LASF29
+ 347 010b 28       		.byte	0x28
+ 348 010c 07       		.uleb128 0x7
+ 349 010d EA060000 		.4byte	.LASF30
+ 350 0111 29       		.byte	0x29
+ 351 0112 07       		.uleb128 0x7
+ 352 0113 6D070000 		.4byte	.LASF31
+ 353 0117 2A       		.byte	0x2a
+ 354 0118 07       		.uleb128 0x7
+ 355 0119 2A080000 		.4byte	.LASF32
+ 356 011d 2B       		.byte	0x2b
+ 357 011e 07       		.uleb128 0x7
+ 358 011f DE010000 		.4byte	.LASF33
+ 359 0123 2C       		.byte	0x2c
+ 360 0124 07       		.uleb128 0x7
+ 361 0125 25010000 		.4byte	.LASF34
+ 362 0129 2D       		.byte	0x2d
+ 363 012a 07       		.uleb128 0x7
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 8
+
+
+ 364 012b E1050000 		.4byte	.LASF35
+ 365 012f 2E       		.byte	0x2e
+ 366 0130 07       		.uleb128 0x7
+ 367 0131 0E0B0000 		.4byte	.LASF36
+ 368 0135 2F       		.byte	0x2f
+ 369 0136 07       		.uleb128 0x7
+ 370 0137 04010000 		.4byte	.LASF37
+ 371 013b 30       		.byte	0x30
+ 372 013c 07       		.uleb128 0x7
+ 373 013d 85080000 		.4byte	.LASF38
+ 374 0141 31       		.byte	0x31
+ 375 0142 07       		.uleb128 0x7
+ 376 0143 EF020000 		.4byte	.LASF39
+ 377 0147 32       		.byte	0x32
+ 378 0148 07       		.uleb128 0x7
+ 379 0149 96070000 		.4byte	.LASF40
+ 380 014d 33       		.byte	0x33
+ 381 014e 07       		.uleb128 0x7
+ 382 014f 07070000 		.4byte	.LASF41
+ 383 0153 34       		.byte	0x34
+ 384 0154 07       		.uleb128 0x7
+ 385 0155 D3080000 		.4byte	.LASF42
+ 386 0159 35       		.byte	0x35
+ 387 015a 07       		.uleb128 0x7
+ 388 015b 27030000 		.4byte	.LASF43
+ 389 015f 36       		.byte	0x36
+ 390 0160 07       		.uleb128 0x7
+ 391 0161 04050000 		.4byte	.LASF44
+ 392 0165 37       		.byte	0x37
+ 393 0166 07       		.uleb128 0x7
+ 394 0167 4E010000 		.4byte	.LASF45
+ 395 016b 40       		.byte	0x40
+ 396 016c 07       		.uleb128 0x7
+ 397 016d 62060000 		.4byte	.LASF46
+ 398 0171 41       		.byte	0x41
+ 399 0172 07       		.uleb128 0x7
+ 400 0173 A3090000 		.4byte	.LASF47
+ 401 0177 42       		.byte	0x42
+ 402 0178 07       		.uleb128 0x7
+ 403 0179 B9010000 		.4byte	.LASF48
+ 404 017d 43       		.byte	0x43
+ 405 017e 07       		.uleb128 0x7
+ 406 017f DF090000 		.4byte	.LASF49
+ 407 0183 44       		.byte	0x44
+ 408 0184 07       		.uleb128 0x7
+ 409 0185 A2060000 		.4byte	.LASF50
+ 410 0189 45       		.byte	0x45
+ 411 018a 07       		.uleb128 0x7
+ 412 018b 7D010000 		.4byte	.LASF51
+ 413 018f 46       		.byte	0x46
+ 414 0190 07       		.uleb128 0x7
+ 415 0191 B7050000 		.4byte	.LASF52
+ 416 0195 47       		.byte	0x47
+ 417 0196 07       		.uleb128 0x7
+ 418 0197 05060000 		.4byte	.LASF53
+ 419 019b 48       		.byte	0x48
+ 420 019c 07       		.uleb128 0x7
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 9
+
+
+ 421 019d BC020000 		.4byte	.LASF54
+ 422 01a1 49       		.byte	0x49
+ 423 01a2 07       		.uleb128 0x7
+ 424 01a3 DE070000 		.4byte	.LASF55
+ 425 01a7 4A       		.byte	0x4a
+ 426 01a8 07       		.uleb128 0x7
+ 427 01a9 02020000 		.4byte	.LASF56
+ 428 01ad 4B       		.byte	0x4b
+ 429 01ae 07       		.uleb128 0x7
+ 430 01af 48060000 		.4byte	.LASF57
+ 431 01b3 4C       		.byte	0x4c
+ 432 01b4 07       		.uleb128 0x7
+ 433 01b5 D5020000 		.4byte	.LASF58
+ 434 01b9 4D       		.byte	0x4d
+ 435 01ba 07       		.uleb128 0x7
+ 436 01bb C1090000 		.4byte	.LASF59
+ 437 01bf 4E       		.byte	0x4e
+ 438 01c0 07       		.uleb128 0x7
+ 439 01c1 79050000 		.4byte	.LASF60
+ 440 01c5 4F       		.byte	0x4f
+ 441 01c6 07       		.uleb128 0x7
+ 442 01c7 8B0A0000 		.4byte	.LASF61
+ 443 01cb 50       		.byte	0x50
+ 444 01cc 07       		.uleb128 0x7
+ 445 01cd 0B080000 		.4byte	.LASF62
+ 446 01d1 51       		.byte	0x51
+ 447 01d2 07       		.uleb128 0x7
+ 448 01d3 DA030000 		.4byte	.LASF63
+ 449 01d7 52       		.byte	0x52
+ 450 01d8 07       		.uleb128 0x7
+ 451 01d9 6A030000 		.4byte	.LASF64
+ 452 01dd 53       		.byte	0x53
+ 453 01de 07       		.uleb128 0x7
+ 454 01df 21020000 		.4byte	.LASF65
+ 455 01e3 54       		.byte	0x54
+ 456 01e4 07       		.uleb128 0x7
+ 457 01e5 D80A0000 		.4byte	.LASF66
+ 458 01e9 55       		.byte	0x55
+ 459 01ea 07       		.uleb128 0x7
+ 460 01eb 5C0A0000 		.4byte	.LASF67
+ 461 01ef 56       		.byte	0x56
+ 462 01f0 07       		.uleb128 0x7
+ 463 01f1 330A0000 		.4byte	.LASF68
+ 464 01f5 57       		.byte	0x57
+ 465 01f6 07       		.uleb128 0x7
+ 466 01f7 1F070000 		.4byte	.LASF69
+ 467 01fb 58       		.byte	0x58
+ 468 01fc 07       		.uleb128 0x7
+ 469 01fd 45050000 		.4byte	.LASF70
+ 470 0201 70       		.byte	0x70
+ 471 0202 07       		.uleb128 0x7
+ 472 0203 36090000 		.4byte	.LASF71
+ 473 0207 71       		.byte	0x71
+ 474 0208 07       		.uleb128 0x7
+ 475 0209 C2070000 		.4byte	.LASF72
+ 476 020d 72       		.byte	0x72
+ 477 020e 07       		.uleb128 0x7
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 10
+
+
+ 478 020f 67080000 		.4byte	.LASF73
+ 479 0213 73       		.byte	0x73
+ 480 0214 07       		.uleb128 0x7
+ 481 0215 E6040000 		.4byte	.LASF74
+ 482 0219 74       		.byte	0x74
+ 483 021a 07       		.uleb128 0x7
+ 484 021b C9060000 		.4byte	.LASF75
+ 485 021f 75       		.byte	0x75
+ 486 0220 07       		.uleb128 0x7
+ 487 0221 7D020000 		.4byte	.LASF76
+ 488 0225 76       		.byte	0x76
+ 489 0226 07       		.uleb128 0x7
+ 490 0227 17090000 		.4byte	.LASF77
+ 491 022b 77       		.byte	0x77
+ 492 022c 07       		.uleb128 0x7
+ 493 022d 80090000 		.4byte	.LASF78
+ 494 0231 78       		.byte	0x78
+ 495 0232 07       		.uleb128 0x7
+ 496 0233 B0080000 		.4byte	.LASF79
+ 497 0237 79       		.byte	0x79
+ 498 0238 07       		.uleb128 0x7
+ 499 0239 FD090000 		.4byte	.LASF80
+ 500 023d 7A       		.byte	0x7a
+ 501 023e 07       		.uleb128 0x7
+ 502 023f 49080000 		.4byte	.LASF81
+ 503 0243 FA       		.byte	0xfa
+ 504 0244 07       		.uleb128 0x7
+ 505 0245 98050000 		.4byte	.LASF82
+ 506 0249 FB       		.byte	0xfb
+ 507 024a 07       		.uleb128 0x7
+ 508 024b FC0A0000 		.4byte	.LASF83
+ 509 024f FC       		.byte	0xfc
+ 510 0250 07       		.uleb128 0x7
+ 511 0251 55070000 		.4byte	.LASF84
+ 512 0255 FD       		.byte	0xfd
+ 513 0256 07       		.uleb128 0x7
+ 514 0257 7D060000 		.4byte	.LASF85
+ 515 025b FF       		.byte	0xff
+ 516 025c 00       		.byte	0
+ 517 025d 06       		.uleb128 0x6
+ 518 025e 01       		.byte	0x1
+ 519 025f 2C000000 		.4byte	0x2c
+ 520 0263 03       		.byte	0x3
+ 521 0264 EB08     		.2byte	0x8eb
+ 522 0266 89020000 		.4byte	0x289
+ 523 026a 07       		.uleb128 0x7
+ 524 026b FC070000 		.4byte	.LASF86
+ 525 026f 00       		.byte	0
+ 526 0270 07       		.uleb128 0x7
+ 527 0271 94030000 		.4byte	.LASF87
+ 528 0275 01       		.byte	0x1
+ 529 0276 07       		.uleb128 0x7
+ 530 0277 C9000000 		.4byte	.LASF88
+ 531 027b 02       		.byte	0x2
+ 532 027c 07       		.uleb128 0x7
+ 533 027d C3030000 		.4byte	.LASF89
+ 534 0281 02       		.byte	0x2
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 11
+
+
+ 535 0282 07       		.uleb128 0x7
+ 536 0283 59020000 		.4byte	.LASF90
+ 537 0287 03       		.byte	0x3
+ 538 0288 00       		.byte	0
+ 539 0289 08       		.uleb128 0x8
+ 540 028a 9E020000 		.4byte	.LASF94
+ 541 028e 01       		.byte	0x1
+ 542 028f 07       		.byte	0x7
+ 543 0290 5D000000 		.4byte	0x5d
+ 544 0294 00000000 		.4byte	.LFB36
+ 545 0298 70000000 		.4byte	.LFE36-.LFB36
+ 546 029c 01       		.uleb128 0x1
+ 547 029d 9C       		.byte	0x9c
+ 548 029e E9020000 		.4byte	0x2e9
+ 549 02a2 09       		.uleb128 0x9
+ 550 02a3 76616C00 		.ascii	"val\000"
+ 551 02a7 01       		.byte	0x1
+ 552 02a8 07       		.byte	0x7
+ 553 02a9 6B000000 		.4byte	0x6b
+ 554 02ad 02       		.uleb128 0x2
+ 555 02ae 91       		.byte	0x91
+ 556 02af 46       		.sleb128 -58
+ 557 02b0 0A       		.uleb128 0xa
+ 558 02b1 9E010000 		.4byte	.LASF91
+ 559 02b5 01       		.byte	0x1
+ 560 02b6 07       		.byte	0x7
+ 561 02b7 6B000000 		.4byte	0x6b
+ 562 02bb 02       		.uleb128 0x2
+ 563 02bc 91       		.byte	0x91
+ 564 02bd 44       		.sleb128 -60
+ 565 02be 0A       		.uleb128 0xa
+ 566 02bf 00000000 		.4byte	.LASF92
+ 567 02c3 01       		.byte	0x1
+ 568 02c4 07       		.byte	0x7
+ 569 02c5 6B000000 		.4byte	0x6b
+ 570 02c9 02       		.uleb128 0x2
+ 571 02ca 91       		.byte	0x91
+ 572 02cb 42       		.sleb128 -62
+ 573 02cc 0B       		.uleb128 0xb
+ 574 02cd A0000000 		.4byte	.LASF93
+ 575 02d1 01       		.byte	0x1
+ 576 02d2 0B       		.byte	0xb
+ 577 02d3 5D000000 		.4byte	0x5d
+ 578 02d7 02       		.uleb128 0x2
+ 579 02d8 91       		.byte	0x91
+ 580 02d9 6C       		.sleb128 -20
+ 581 02da 0C       		.uleb128 0xc
+ 582 02db 72657A00 		.ascii	"rez\000"
+ 583 02df 01       		.byte	0x1
+ 584 02e0 0D       		.byte	0xd
+ 585 02e1 E9020000 		.4byte	0x2e9
+ 586 02e5 02       		.uleb128 0x2
+ 587 02e6 91       		.byte	0x91
+ 588 02e7 4C       		.sleb128 -52
+ 589 02e8 00       		.byte	0
+ 590 02e9 0D       		.uleb128 0xd
+ 591 02ea 85000000 		.4byte	0x85
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 12
+
+
+ 592 02ee F9020000 		.4byte	0x2f9
+ 593 02f2 0E       		.uleb128 0xe
+ 594 02f3 98000000 		.4byte	0x98
+ 595 02f7 1D       		.byte	0x1d
+ 596 02f8 00       		.byte	0
+ 597 02f9 08       		.uleb128 0x8
+ 598 02fa CB040000 		.4byte	.LASF95
+ 599 02fe 01       		.byte	0x1
+ 600 02ff 14       		.byte	0x14
+ 601 0300 5D000000 		.4byte	0x5d
+ 602 0304 00000000 		.4byte	.LFB37
+ 603 0308 80000000 		.4byte	.LFE37-.LFB37
+ 604 030c 01       		.uleb128 0x1
+ 605 030d 9C       		.byte	0x9c
+ 606 030e 59030000 		.4byte	0x359
+ 607 0312 09       		.uleb128 0x9
+ 608 0313 76616C00 		.ascii	"val\000"
+ 609 0317 01       		.byte	0x1
+ 610 0318 14       		.byte	0x14
+ 611 0319 6B000000 		.4byte	0x6b
+ 612 031d 02       		.uleb128 0x2
+ 613 031e 91       		.byte	0x91
+ 614 031f 46       		.sleb128 -58
+ 615 0320 0A       		.uleb128 0xa
+ 616 0321 9E010000 		.4byte	.LASF91
+ 617 0325 01       		.byte	0x1
+ 618 0326 14       		.byte	0x14
+ 619 0327 6B000000 		.4byte	0x6b
+ 620 032b 02       		.uleb128 0x2
+ 621 032c 91       		.byte	0x91
+ 622 032d 44       		.sleb128 -60
+ 623 032e 0A       		.uleb128 0xa
+ 624 032f 00000000 		.4byte	.LASF92
+ 625 0333 01       		.byte	0x1
+ 626 0334 14       		.byte	0x14
+ 627 0335 6B000000 		.4byte	0x6b
+ 628 0339 02       		.uleb128 0x2
+ 629 033a 91       		.byte	0x91
+ 630 033b 42       		.sleb128 -62
+ 631 033c 0B       		.uleb128 0xb
+ 632 033d A0000000 		.4byte	.LASF93
+ 633 0341 01       		.byte	0x1
+ 634 0342 18       		.byte	0x18
+ 635 0343 5D000000 		.4byte	0x5d
+ 636 0347 02       		.uleb128 0x2
+ 637 0348 91       		.byte	0x91
+ 638 0349 6C       		.sleb128 -20
+ 639 034a 0C       		.uleb128 0xc
+ 640 034b 72657A00 		.ascii	"rez\000"
+ 641 034f 01       		.byte	0x1
+ 642 0350 1A       		.byte	0x1a
+ 643 0351 E9020000 		.4byte	0x2e9
+ 644 0355 02       		.uleb128 0x2
+ 645 0356 91       		.byte	0x91
+ 646 0357 4C       		.sleb128 -52
+ 647 0358 00       		.byte	0
+ 648 0359 0F       		.uleb128 0xf
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 13
+
+
+ 649 035a 48030000 		.4byte	.LASF100
+ 650 035e 05       		.byte	0x5
+ 651 035f 21       		.byte	0x21
+ 652 0360 8C000000 		.4byte	0x8c
+ 653 0364 05       		.uleb128 0x5
+ 654 0365 03       		.byte	0x3
+ 655 0366 00000000 		.4byte	current_watchdog_counter
+ 656 036a 00       		.byte	0
+ 657              		.section	.debug_abbrev,"",%progbits
+ 658              	.Ldebug_abbrev0:
+ 659 0000 01       		.uleb128 0x1
+ 660 0001 11       		.uleb128 0x11
+ 661 0002 01       		.byte	0x1
+ 662 0003 25       		.uleb128 0x25
+ 663 0004 0E       		.uleb128 0xe
+ 664 0005 13       		.uleb128 0x13
+ 665 0006 0B       		.uleb128 0xb
+ 666 0007 03       		.uleb128 0x3
+ 667 0008 0E       		.uleb128 0xe
+ 668 0009 1B       		.uleb128 0x1b
+ 669 000a 0E       		.uleb128 0xe
+ 670 000b 55       		.uleb128 0x55
+ 671 000c 17       		.uleb128 0x17
+ 672 000d 11       		.uleb128 0x11
+ 673 000e 01       		.uleb128 0x1
+ 674 000f 10       		.uleb128 0x10
+ 675 0010 17       		.uleb128 0x17
+ 676 0011 00       		.byte	0
+ 677 0012 00       		.byte	0
+ 678 0013 02       		.uleb128 0x2
+ 679 0014 24       		.uleb128 0x24
+ 680 0015 00       		.byte	0
+ 681 0016 0B       		.uleb128 0xb
+ 682 0017 0B       		.uleb128 0xb
+ 683 0018 3E       		.uleb128 0x3e
+ 684 0019 0B       		.uleb128 0xb
+ 685 001a 03       		.uleb128 0x3
+ 686 001b 0E       		.uleb128 0xe
+ 687 001c 00       		.byte	0
+ 688 001d 00       		.byte	0
+ 689 001e 03       		.uleb128 0x3
+ 690 001f 24       		.uleb128 0x24
+ 691 0020 00       		.byte	0
+ 692 0021 0B       		.uleb128 0xb
+ 693 0022 0B       		.uleb128 0xb
+ 694 0023 3E       		.uleb128 0x3e
+ 695 0024 0B       		.uleb128 0xb
+ 696 0025 03       		.uleb128 0x3
+ 697 0026 08       		.uleb128 0x8
+ 698 0027 00       		.byte	0
+ 699 0028 00       		.byte	0
+ 700 0029 04       		.uleb128 0x4
+ 701 002a 16       		.uleb128 0x16
+ 702 002b 00       		.byte	0
+ 703 002c 03       		.uleb128 0x3
+ 704 002d 0E       		.uleb128 0xe
+ 705 002e 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 14
+
+
+ 706 002f 0B       		.uleb128 0xb
+ 707 0030 3B       		.uleb128 0x3b
+ 708 0031 05       		.uleb128 0x5
+ 709 0032 49       		.uleb128 0x49
+ 710 0033 13       		.uleb128 0x13
+ 711 0034 00       		.byte	0
+ 712 0035 00       		.byte	0
+ 713 0036 05       		.uleb128 0x5
+ 714 0037 35       		.uleb128 0x35
+ 715 0038 00       		.byte	0
+ 716 0039 49       		.uleb128 0x49
+ 717 003a 13       		.uleb128 0x13
+ 718 003b 00       		.byte	0
+ 719 003c 00       		.byte	0
+ 720 003d 06       		.uleb128 0x6
+ 721 003e 04       		.uleb128 0x4
+ 722 003f 01       		.byte	0x1
+ 723 0040 0B       		.uleb128 0xb
+ 724 0041 0B       		.uleb128 0xb
+ 725 0042 49       		.uleb128 0x49
+ 726 0043 13       		.uleb128 0x13
+ 727 0044 3A       		.uleb128 0x3a
+ 728 0045 0B       		.uleb128 0xb
+ 729 0046 3B       		.uleb128 0x3b
+ 730 0047 05       		.uleb128 0x5
+ 731 0048 01       		.uleb128 0x1
+ 732 0049 13       		.uleb128 0x13
+ 733 004a 00       		.byte	0
+ 734 004b 00       		.byte	0
+ 735 004c 07       		.uleb128 0x7
+ 736 004d 28       		.uleb128 0x28
+ 737 004e 00       		.byte	0
+ 738 004f 03       		.uleb128 0x3
+ 739 0050 0E       		.uleb128 0xe
+ 740 0051 1C       		.uleb128 0x1c
+ 741 0052 0B       		.uleb128 0xb
+ 742 0053 00       		.byte	0
+ 743 0054 00       		.byte	0
+ 744 0055 08       		.uleb128 0x8
+ 745 0056 2E       		.uleb128 0x2e
+ 746 0057 01       		.byte	0x1
+ 747 0058 3F       		.uleb128 0x3f
+ 748 0059 19       		.uleb128 0x19
+ 749 005a 03       		.uleb128 0x3
+ 750 005b 0E       		.uleb128 0xe
+ 751 005c 3A       		.uleb128 0x3a
+ 752 005d 0B       		.uleb128 0xb
+ 753 005e 3B       		.uleb128 0x3b
+ 754 005f 0B       		.uleb128 0xb
+ 755 0060 27       		.uleb128 0x27
+ 756 0061 19       		.uleb128 0x19
+ 757 0062 49       		.uleb128 0x49
+ 758 0063 13       		.uleb128 0x13
+ 759 0064 11       		.uleb128 0x11
+ 760 0065 01       		.uleb128 0x1
+ 761 0066 12       		.uleb128 0x12
+ 762 0067 06       		.uleb128 0x6
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 15
+
+
+ 763 0068 40       		.uleb128 0x40
+ 764 0069 18       		.uleb128 0x18
+ 765 006a 9642     		.uleb128 0x2116
+ 766 006c 19       		.uleb128 0x19
+ 767 006d 01       		.uleb128 0x1
+ 768 006e 13       		.uleb128 0x13
+ 769 006f 00       		.byte	0
+ 770 0070 00       		.byte	0
+ 771 0071 09       		.uleb128 0x9
+ 772 0072 05       		.uleb128 0x5
+ 773 0073 00       		.byte	0
+ 774 0074 03       		.uleb128 0x3
+ 775 0075 08       		.uleb128 0x8
+ 776 0076 3A       		.uleb128 0x3a
+ 777 0077 0B       		.uleb128 0xb
+ 778 0078 3B       		.uleb128 0x3b
+ 779 0079 0B       		.uleb128 0xb
+ 780 007a 49       		.uleb128 0x49
+ 781 007b 13       		.uleb128 0x13
+ 782 007c 02       		.uleb128 0x2
+ 783 007d 18       		.uleb128 0x18
+ 784 007e 00       		.byte	0
+ 785 007f 00       		.byte	0
+ 786 0080 0A       		.uleb128 0xa
+ 787 0081 05       		.uleb128 0x5
+ 788 0082 00       		.byte	0
+ 789 0083 03       		.uleb128 0x3
+ 790 0084 0E       		.uleb128 0xe
+ 791 0085 3A       		.uleb128 0x3a
+ 792 0086 0B       		.uleb128 0xb
+ 793 0087 3B       		.uleb128 0x3b
+ 794 0088 0B       		.uleb128 0xb
+ 795 0089 49       		.uleb128 0x49
+ 796 008a 13       		.uleb128 0x13
+ 797 008b 02       		.uleb128 0x2
+ 798 008c 18       		.uleb128 0x18
+ 799 008d 00       		.byte	0
+ 800 008e 00       		.byte	0
+ 801 008f 0B       		.uleb128 0xb
+ 802 0090 34       		.uleb128 0x34
+ 803 0091 00       		.byte	0
+ 804 0092 03       		.uleb128 0x3
+ 805 0093 0E       		.uleb128 0xe
+ 806 0094 3A       		.uleb128 0x3a
+ 807 0095 0B       		.uleb128 0xb
+ 808 0096 3B       		.uleb128 0x3b
+ 809 0097 0B       		.uleb128 0xb
+ 810 0098 49       		.uleb128 0x49
+ 811 0099 13       		.uleb128 0x13
+ 812 009a 02       		.uleb128 0x2
+ 813 009b 18       		.uleb128 0x18
+ 814 009c 00       		.byte	0
+ 815 009d 00       		.byte	0
+ 816 009e 0C       		.uleb128 0xc
+ 817 009f 34       		.uleb128 0x34
+ 818 00a0 00       		.byte	0
+ 819 00a1 03       		.uleb128 0x3
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 16
+
+
+ 820 00a2 08       		.uleb128 0x8
+ 821 00a3 3A       		.uleb128 0x3a
+ 822 00a4 0B       		.uleb128 0xb
+ 823 00a5 3B       		.uleb128 0x3b
+ 824 00a6 0B       		.uleb128 0xb
+ 825 00a7 49       		.uleb128 0x49
+ 826 00a8 13       		.uleb128 0x13
+ 827 00a9 02       		.uleb128 0x2
+ 828 00aa 18       		.uleb128 0x18
+ 829 00ab 00       		.byte	0
+ 830 00ac 00       		.byte	0
+ 831 00ad 0D       		.uleb128 0xd
+ 832 00ae 01       		.uleb128 0x1
+ 833 00af 01       		.byte	0x1
+ 834 00b0 49       		.uleb128 0x49
+ 835 00b1 13       		.uleb128 0x13
+ 836 00b2 01       		.uleb128 0x1
+ 837 00b3 13       		.uleb128 0x13
+ 838 00b4 00       		.byte	0
+ 839 00b5 00       		.byte	0
+ 840 00b6 0E       		.uleb128 0xe
+ 841 00b7 21       		.uleb128 0x21
+ 842 00b8 00       		.byte	0
+ 843 00b9 49       		.uleb128 0x49
+ 844 00ba 13       		.uleb128 0x13
+ 845 00bb 2F       		.uleb128 0x2f
+ 846 00bc 0B       		.uleb128 0xb
+ 847 00bd 00       		.byte	0
+ 848 00be 00       		.byte	0
+ 849 00bf 0F       		.uleb128 0xf
+ 850 00c0 34       		.uleb128 0x34
+ 851 00c1 00       		.byte	0
+ 852 00c2 03       		.uleb128 0x3
+ 853 00c3 0E       		.uleb128 0xe
+ 854 00c4 3A       		.uleb128 0x3a
+ 855 00c5 0B       		.uleb128 0xb
+ 856 00c6 3B       		.uleb128 0x3b
+ 857 00c7 0B       		.uleb128 0xb
+ 858 00c8 49       		.uleb128 0x49
+ 859 00c9 13       		.uleb128 0x13
+ 860 00ca 3F       		.uleb128 0x3f
+ 861 00cb 19       		.uleb128 0x19
+ 862 00cc 02       		.uleb128 0x2
+ 863 00cd 18       		.uleb128 0x18
+ 864 00ce 00       		.byte	0
+ 865 00cf 00       		.byte	0
+ 866 00d0 00       		.byte	0
+ 867              		.section	.debug_aranges,"",%progbits
+ 868 0000 24000000 		.4byte	0x24
+ 869 0004 0200     		.2byte	0x2
+ 870 0006 00000000 		.4byte	.Ldebug_info0
+ 871 000a 04       		.byte	0x4
+ 872 000b 00       		.byte	0
+ 873 000c 0000     		.2byte	0
+ 874 000e 0000     		.2byte	0
+ 875 0010 00000000 		.4byte	.LFB36
+ 876 0014 70000000 		.4byte	.LFE36-.LFB36
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 17
+
+
+ 877 0018 00000000 		.4byte	.LFB37
+ 878 001c 80000000 		.4byte	.LFE37-.LFB37
+ 879 0020 00000000 		.4byte	0
+ 880 0024 00000000 		.4byte	0
+ 881              		.section	.debug_ranges,"",%progbits
+ 882              	.Ldebug_ranges0:
+ 883 0000 00000000 		.4byte	.LFB36
+ 884 0004 70000000 		.4byte	.LFE36
+ 885 0008 00000000 		.4byte	.LFB37
+ 886 000c 80000000 		.4byte	.LFE37
+ 887 0010 00000000 		.4byte	0
+ 888 0014 00000000 		.4byte	0
+ 889              		.section	.debug_line,"",%progbits
+ 890              	.Ldebug_line0:
+ 891 0000 EF000000 		.section	.debug_str,"MS",%progbits,1
+ 891      02007700 
+ 891      00000201 
+ 891      FB0E0D00 
+ 891      01010101 
+ 892              	.LASF92:
+ 893 0000 70726576 		.ascii	"prev_val\000"
+ 893      5F76616C 
+ 893      00
+ 894              	.LASF23:
+ 895 0009 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_ENTRY_REQUEST\000"
+ 895      455F4556 
+ 895      545F4741 
+ 895      505F5041 
+ 895      53534B45 
+ 896              	.LASF20:
+ 897 002d 4359424C 		.ascii	"CYBLE_EVT_MEMORY_REQUEST\000"
+ 897      455F4556 
+ 897      545F4D45 
+ 897      4D4F5259 
+ 897      5F524551 
+ 898              	.LASF98:
+ 899 0046 433A5C55 		.ascii	"C:\\Users\\janusdg-win\\UCU\\Smart_lightning_system"
+ 899      73657273 
+ 899      5C6A616E 
+ 899      75736467 
+ 899      2D77696E 
+ 900 0075 5C4D6573 		.ascii	"\\Mesh_Flood_PSoC4BLE_Main_Brightness.cydsn\000"
+ 900      685F466C 
+ 900      6F6F645F 
+ 900      50536F43 
+ 900      34424C45 
+ 901              	.LASF93:
+ 902 00a0 64696666 		.ascii	"diff\000"
+ 902      00
+ 903              	.LASF2:
+ 904 00a5 73686F72 		.ascii	"short int\000"
+ 904      7420696E 
+ 904      7400
+ 905              	.LASF26:
+ 906 00af 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_FAILED\000"
+ 906      455F4556 
+ 906      545F4741 
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 18
+
+
+ 906      505F4155 
+ 906      54485F46 
+ 907              	.LASF88:
+ 908 00c9 4359424C 		.ascii	"CYBLE_SRVI_CUSTOMS\000"
+ 908      455F5352 
+ 908      56495F43 
+ 908      5553544F 
+ 908      4D5300
+ 909              	.LASF27:
+ 910 00dc 4359424C 		.ascii	"CYBLE_EVT_GAPP_ADVERTISEMENT_START_STOP\000"
+ 910      455F4556 
+ 910      545F4741 
+ 910      50505F41 
+ 910      44564552 
+ 911              	.LASF37:
+ 912 0104 4359424C 		.ascii	"CYBLE_EVT_GAP_DATA_LENGTH_CHANGE\000"
+ 912      455F4556 
+ 912      545F4741 
+ 912      505F4441 
+ 912      54415F4C 
+ 913              	.LASF34:
+ 914 0125 4359424C 		.ascii	"CYBLE_EVT_GAP_NUMERIC_COMPARISON_REQUEST\000"
+ 914      455F4556 
+ 914      545F4741 
+ 914      505F4E55 
+ 914      4D455249 
+ 915              	.LASF45:
+ 916 014e 4359424C 		.ascii	"CYBLE_EVT_GATTC_ERROR_RSP\000"
+ 916      455F4556 
+ 916      545F4741 
+ 916      5454435F 
+ 916      4552524F 
+ 917              	.LASF18:
+ 918 0168 4359424C 		.ascii	"CYBLE_EVT_HCI_STATUS\000"
+ 918      455F4556 
+ 918      545F4843 
+ 918      495F5354 
+ 918      41545553 
+ 919              	.LASF51:
+ 920 017d 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_TYPE_RSP\000"
+ 920      455F4556 
+ 920      545F4741 
+ 920      5454435F 
+ 920      52454144 
+ 921              	.LASF91:
+ 922 019e 696E6974 		.ascii	"init_val\000"
+ 922      5F76616C 
+ 922      00
+ 923              	.LASF5:
+ 924 01a7 6C6F6E67 		.ascii	"long unsigned int\000"
+ 924      20756E73 
+ 924      69676E65 
+ 924      6420696E 
+ 924      7400
+ 925              	.LASF48:
+ 926 01b9 4359424C 		.ascii	"CYBLE_EVT_GATTS_XCNHG_MTU_REQ\000"
+ 926      455F4556 
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 19
+
+
+ 926      545F4741 
+ 926      5454535F 
+ 926      58434E48 
+ 927              	.LASF99:
+ 928 01d7 75696E74 		.ascii	"uint16\000"
+ 928      313600
+ 929              	.LASF33:
+ 930 01de 4359424C 		.ascii	"CYBLE_EVT_GAP_KEYINFO_EXCHNGE_CMPLT\000"
+ 930      455F4556 
+ 930      545F4741 
+ 930      505F4B45 
+ 930      59494E46 
+ 931              	.LASF56:
+ 932 0202 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_MULTI_RSP\000"
+ 932      455F4556 
+ 932      545F4741 
+ 932      5454435F 
+ 932      52454144 
+ 933              	.LASF65:
+ 934 0221 4359424C 		.ascii	"CYBLE_EVT_GATTS_HANDLE_VALUE_CNF\000"
+ 934      455F4556 
+ 934      545F4741 
+ 934      5454535F 
+ 934      48414E44 
+ 935              	.LASF14:
+ 936 0242 4359424C 		.ascii	"CYBLE_EVT_HOST_INVALID\000"
+ 936      455F4556 
+ 936      545F484F 
+ 936      53545F49 
+ 936      4E56414C 
+ 937              	.LASF90:
+ 938 0259 4359424C 		.ascii	"CYBLE_SRVI_COUNT\000"
+ 938      455F5352 
+ 938      56495F43 
+ 938      4F554E54 
+ 938      00
+ 939              	.LASF15:
+ 940 026a 4359424C 		.ascii	"CYBLE_EVT_STACK_ON\000"
+ 940      455F4556 
+ 940      545F5354 
+ 940      41434B5F 
+ 940      4F4E00
+ 941              	.LASF76:
+ 942 027d 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_CNF\000"
+ 942      455F4556 
+ 942      545F4C32 
+ 942      4341505F 
+ 942      43424643 
+ 943              	.LASF94:
+ 944 029e 6765745F 		.ascii	"get_compare_from_analog\000"
+ 944      636F6D70 
+ 944      6172655F 
+ 944      66726F6D 
+ 944      5F616E61 
+ 945              	.LASF9:
+ 946 02b6 666C6F61 		.ascii	"float\000"
+ 946      7400
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 20
+
+
+ 947              	.LASF54:
+ 948 02bc 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_RSP\000"
+ 948      455F4556 
+ 948      545F4741 
+ 948      5454435F 
+ 948      52454144 
+ 949              	.LASF58:
+ 950 02d5 4359424C 		.ascii	"CYBLE_EVT_GATTC_WRITE_RSP\000"
+ 950      455F4556 
+ 950      545F4741 
+ 950      5454435F 
+ 950      57524954 
+ 951              	.LASF39:
+ 952 02ef 4359424C 		.ascii	"CYBLE_EVT_GAPC_DIRECT_ADV_REPORT\000"
+ 952      455F4556 
+ 952      545F4741 
+ 952      50435F44 
+ 952      49524543 
+ 953              	.LASF7:
+ 954 0310 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 954      206C6F6E 
+ 954      6720756E 
+ 954      7369676E 
+ 954      65642069 
+ 955              	.LASF43:
+ 956 0327 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_REQ_REPLY_ERR\000"
+ 956      455F4556 
+ 956      545F4741 
+ 956      505F4155 
+ 956      54485F52 
+ 957              	.LASF100:
+ 958 0348 63757272 		.ascii	"current_watchdog_counter\000"
+ 958      656E745F 
+ 958      77617463 
+ 958      68646F67 
+ 958      5F636F75 
+ 959              	.LASF4:
+ 960 0361 6C6F6E67 		.ascii	"long int\000"
+ 960      20696E74 
+ 960      00
+ 961              	.LASF64:
+ 962 036a 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_IND\000"
+ 962      455F4556 
+ 962      545F4741 
+ 962      5454435F 
+ 962      48414E44 
+ 963              	.LASF13:
+ 964 038b 73697A65 		.ascii	"sizetype\000"
+ 964      74797065 
+ 964      00
+ 965              	.LASF87:
+ 966 0394 4359424C 		.ascii	"CYBLE_SRVI_GATT\000"
+ 966      455F5352 
+ 966      56495F47 
+ 966      41545400 
+ 967              	.LASF28:
+ 968 03a4 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_CONNECTED\000"
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 21
+
+
+ 968      455F4556 
+ 968      545F4741 
+ 968      505F4445 
+ 968      56494345 
+ 969              	.LASF89:
+ 970 03c3 4359424C 		.ascii	"CYBLE_SRVI_CUSTOMS_END\000"
+ 970      455F5352 
+ 970      56495F43 
+ 970      5553544F 
+ 970      4D535F45 
+ 971              	.LASF63:
+ 972 03da 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_NTF\000"
+ 972      455F4556 
+ 972      545F4741 
+ 972      5454435F 
+ 972      48414E44 
+ 973              	.LASF19:
+ 974 03fb 4359424C 		.ascii	"CYBLE_EVT_STACK_BUSY_STATUS\000"
+ 974      455F4556 
+ 974      545F5354 
+ 974      41434B5F 
+ 974      42555359 
+ 975              	.LASF24:
+ 976 0417 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_DISPLAY_REQUEST\000"
+ 976      455F4556 
+ 976      545F4741 
+ 976      505F5041 
+ 976      53534B45 
+ 977              	.LASF96:
+ 978 043d 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 978      43313120 
+ 978      352E342E 
+ 978      31203230 
+ 978      31363036 
+ 979 0470 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 979      20726576 
+ 979      6973696F 
+ 979      6E203233 
+ 979      37373135 
+ 980 04a3 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 980      66756E63 
+ 980      74696F6E 
+ 980      2D736563 
+ 980      74696F6E 
+ 981              	.LASF95:
+ 982 04cb 6765745F 		.ascii	"get_brightness_from_analog\000"
+ 982      62726967 
+ 982      68746E65 
+ 982      73735F66 
+ 982      726F6D5F 
+ 983              	.LASF74:
+ 984 04e6 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_CNF\000"
+ 984      455F4556 
+ 984      545F4C32 
+ 984      4341505F 
+ 984      43424643 
+ 985              	.LASF44:
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 22
+
+
+ 986 0504 4359424C 		.ascii	"CYBLE_EVT_GAP_SMP_LOC_P256_KEYS_GEN_AND_SET_COMPLET"
+ 986      455F4556 
+ 986      545F4741 
+ 986      505F534D 
+ 986      505F4C4F 
+ 987 0537 4500     		.ascii	"E\000"
+ 988              	.LASF12:
+ 989 0539 6C6F6E67 		.ascii	"long double\000"
+ 989      20646F75 
+ 989      626C6500 
+ 990              	.LASF70:
+ 991 0545 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_REQ\000"
+ 991      455F4556 
+ 991      545F4C32 
+ 991      4341505F 
+ 991      434F4E4E 
+ 992              	.LASF1:
+ 993 056b 756E7369 		.ascii	"unsigned char\000"
+ 993      676E6564 
+ 993      20636861 
+ 993      7200
+ 994              	.LASF60:
+ 995 0579 4359424C 		.ascii	"CYBLE_EVT_GATTS_PREP_WRITE_REQ\000"
+ 995      455F4556 
+ 995      545F4741 
+ 995      5454535F 
+ 995      50524550 
+ 996              	.LASF82:
+ 997 0598 4359424C 		.ascii	"CYBLE_EVT_LE_PING_AUTH_TIMEOUT\000"
+ 997      455F4556 
+ 997      545F4C45 
+ 997      5F50494E 
+ 997      475F4155 
+ 998              	.LASF52:
+ 999 05b7 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_INFO_RSP\000"
+ 999      455F4556 
+ 999      545F4741 
+ 999      5454435F 
+ 999      46494E44 
+ 1000              	.LASF0:
+ 1001 05d5 7369676E 		.ascii	"signed char\000"
+ 1001      65642063 
+ 1001      68617200 
+ 1002              	.LASF35:
+ 1003 05e1 4359424C 		.ascii	"CYBLE_EVT_GAP_KEYPRESS_NOTIFICATION\000"
+ 1003      455F4556 
+ 1003      545F4741 
+ 1003      505F4B45 
+ 1003      59505245 
+ 1004              	.LASF53:
+ 1005 0605 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_BY_TYPE_VALUE_RSP\000"
+ 1005      455F4556 
+ 1005      545F4741 
+ 1005      5454435F 
+ 1005      46494E44 
+ 1006              	.LASF25:
+ 1007 062c 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_COMPLETE\000"
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 23
+
+
+ 1007      455F4556 
+ 1007      545F4741 
+ 1007      505F4155 
+ 1007      54485F43 
+ 1008              	.LASF57:
+ 1009 0648 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_REQ\000"
+ 1009      455F4556 
+ 1009      545F4741 
+ 1009      5454535F 
+ 1009      57524954 
+ 1010              	.LASF46:
+ 1011 0662 4359424C 		.ascii	"CYBLE_EVT_GATT_CONNECT_IND\000"
+ 1011      455F4556 
+ 1011      545F4741 
+ 1011      54545F43 
+ 1011      4F4E4E45 
+ 1012              	.LASF85:
+ 1013 067d 4359424C 		.ascii	"CYBLE_EVT_MAX\000"
+ 1013      455F4556 
+ 1013      545F4D41 
+ 1013      5800
+ 1014              	.LASF22:
+ 1015 068b 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_REQ\000"
+ 1015      455F4556 
+ 1015      545F4741 
+ 1015      505F4155 
+ 1015      54485F52 
+ 1016              	.LASF50:
+ 1017 06a2 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_GROUP_TYPE_RSP\000"
+ 1017      455F4556 
+ 1017      545F4741 
+ 1017      5454435F 
+ 1017      52454144 
+ 1018              	.LASF75:
+ 1019 06c9 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_IND\000"
+ 1019      455F4556 
+ 1019      545F4C32 
+ 1019      4341505F 
+ 1019      43424643 
+ 1020              	.LASF30:
+ 1021 06ea 4359424C 		.ascii	"CYBLE_EVT_GAP_ENCRYPT_CHANGE\000"
+ 1021      455F4556 
+ 1021      545F4741 
+ 1021      505F454E 
+ 1021      43525950 
+ 1022              	.LASF41:
+ 1023 0707 4359424C 		.ascii	"CYBLE_EVT_GAP_CONN_ESTB\000"
+ 1023      455F4556 
+ 1023      545F4741 
+ 1023      505F434F 
+ 1023      4E4E5F45 
+ 1024              	.LASF69:
+ 1025 071f 4359424C 		.ascii	"CYBLE_EVT_GATTC_LONG_PROCEDURE_END\000"
+ 1025      455F4556 
+ 1025      545F4741 
+ 1025      5454435F 
+ 1025      4C4F4E47 
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 24
+
+
+ 1026              	.LASF3:
+ 1027 0742 73686F72 		.ascii	"short unsigned int\000"
+ 1027      7420756E 
+ 1027      7369676E 
+ 1027      65642069 
+ 1027      6E7400
+ 1028              	.LASF84:
+ 1029 0755 4359424C 		.ascii	"CYBLE_EVT_FLASH_CORRUPT\000"
+ 1029      455F4556 
+ 1029      545F464C 
+ 1029      4153485F 
+ 1029      434F5252 
+ 1030              	.LASF31:
+ 1031 076d 4359424C 		.ascii	"CYBLE_EVT_GAP_CONNECTION_UPDATE_COMPLETE\000"
+ 1031      455F4556 
+ 1031      545F4741 
+ 1031      505F434F 
+ 1031      4E4E4543 
+ 1032              	.LASF40:
+ 1033 0796 4359424C 		.ascii	"CYBLE_EVT_GAP_SMP_NEGOTIATED_AUTH_INFO\000"
+ 1033      455F4556 
+ 1033      545F4741 
+ 1033      505F534D 
+ 1033      505F4E45 
+ 1034              	.LASF11:
+ 1035 07bd 63686172 		.ascii	"char\000"
+ 1035      00
+ 1036              	.LASF72:
+ 1037 07c2 4359424C 		.ascii	"CYBLE_EVT_L2CAP_COMMAND_REJ\000"
+ 1037      455F4556 
+ 1037      545F4C32 
+ 1037      4341505F 
+ 1037      434F4D4D 
+ 1038              	.LASF55:
+ 1039 07de 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BLOB_RSP\000"
+ 1039      455F4556 
+ 1039      545F4741 
+ 1039      5454435F 
+ 1039      52454144 
+ 1040              	.LASF86:
+ 1041 07fc 4359424C 		.ascii	"CYBLE_SRVI_GAP\000"
+ 1041      455F5352 
+ 1041      56495F47 
+ 1041      415000
+ 1042              	.LASF62:
+ 1043 080b 4359424C 		.ascii	"CYBLE_EVT_GATTC_EXEC_WRITE_RSP\000"
+ 1043      455F4556 
+ 1043      545F4741 
+ 1043      5454435F 
+ 1043      45584543 
+ 1044              	.LASF32:
+ 1045 082a 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_START_STOP\000"
+ 1045      455F4556 
+ 1045      545F4741 
+ 1045      50435F53 
+ 1045      43414E5F 
+ 1046              	.LASF81:
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 25
+
+
+ 1047 0849 4359424C 		.ascii	"CYBLE_EVT_PENDING_FLASH_WRITE\000"
+ 1047      455F4556 
+ 1047      545F5045 
+ 1047      4E44494E 
+ 1047      475F464C 
+ 1048              	.LASF73:
+ 1049 0867 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_IND\000"
+ 1049      455F4556 
+ 1049      545F4C32 
+ 1049      4341505F 
+ 1049      43424643 
+ 1050              	.LASF38:
+ 1051 0885 4359424C 		.ascii	"CYBLE_EVT_GAP_ENHANCE_CONN_COMPLETE\000"
+ 1051      455F4556 
+ 1051      545F4741 
+ 1051      505F454E 
+ 1051      48414E43 
+ 1052              	.LASF10:
+ 1053 08a9 646F7562 		.ascii	"double\000"
+ 1053      6C6500
+ 1054              	.LASF79:
+ 1055 08b0 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_TX_CREDIT_IND\000"
+ 1055      455F4556 
+ 1055      545F4C32 
+ 1055      4341505F 
+ 1055      43424643 
+ 1056              	.LASF42:
+ 1057 08d3 4359424C 		.ascii	"CYBLE_EVT_GAP_SCAN_REQ_RECVD\000"
+ 1057      455F4556 
+ 1057      545F4741 
+ 1057      505F5343 
+ 1057      414E5F52 
+ 1058              	.LASF6:
+ 1059 08f0 6C6F6E67 		.ascii	"long long int\000"
+ 1059      206C6F6E 
+ 1059      6720696E 
+ 1059      7400
+ 1060              	.LASF17:
+ 1061 08fe 4359424C 		.ascii	"CYBLE_EVT_HARDWARE_ERROR\000"
+ 1061      455F4556 
+ 1061      545F4841 
+ 1061      52445741 
+ 1061      52455F45 
+ 1062              	.LASF77:
+ 1063 0917 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_READ\000"
+ 1063      455F4556 
+ 1063      545F4C32 
+ 1063      4341505F 
+ 1063      43424643 
+ 1064              	.LASF71:
+ 1065 0936 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_RSP\000"
+ 1065      455F4556 
+ 1065      545F4C32 
+ 1065      4341505F 
+ 1065      434F4E4E 
+ 1066              	.LASF21:
+ 1067 095c 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT\000"
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 26
+
+
+ 1067      455F4556 
+ 1067      545F4741 
+ 1067      50435F53 
+ 1067      43414E5F 
+ 1068              	.LASF78:
+ 1069 0980 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_RX_CREDIT_IND\000"
+ 1069      455F4556 
+ 1069      545F4C32 
+ 1069      4341505F 
+ 1069      43424643 
+ 1070              	.LASF47:
+ 1071 09a3 4359424C 		.ascii	"CYBLE_EVT_GATT_DISCONNECT_IND\000"
+ 1071      455F4556 
+ 1071      545F4741 
+ 1071      54545F44 
+ 1071      4953434F 
+ 1072              	.LASF59:
+ 1073 09c1 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_CMD_REQ\000"
+ 1073      455F4556 
+ 1073      545F4741 
+ 1073      5454535F 
+ 1073      57524954 
+ 1074              	.LASF49:
+ 1075 09df 4359424C 		.ascii	"CYBLE_EVT_GATTC_XCHNG_MTU_RSP\000"
+ 1075      455F4556 
+ 1075      545F4741 
+ 1075      5454435F 
+ 1075      5843484E 
+ 1076              	.LASF80:
+ 1077 09fd 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_WRITE_IND\000"
+ 1077      455F4556 
+ 1077      545F4C32 
+ 1077      4341505F 
+ 1077      43424643 
+ 1078              	.LASF16:
+ 1079 0a21 4359424C 		.ascii	"CYBLE_EVT_TIMEOUT\000"
+ 1079      455F4556 
+ 1079      545F5449 
+ 1079      4D454F55 
+ 1079      5400
+ 1080              	.LASF68:
+ 1081 0a33 4359424C 		.ascii	"CYBLE_EVT_GATTS_READ_CHAR_VAL_ACCESS_REQ\000"
+ 1081      455F4556 
+ 1081      545F4741 
+ 1081      5454535F 
+ 1081      52454144 
+ 1082              	.LASF67:
+ 1083 0a5c 4359424C 		.ascii	"CYBLE_EVT_GATTC_STOP_CMD_COMPLETE\000"
+ 1083      455F4556 
+ 1083      545F4741 
+ 1083      5454435F 
+ 1083      53544F50 
+ 1084              	.LASF8:
+ 1085 0a7e 756E7369 		.ascii	"unsigned int\000"
+ 1085      676E6564 
+ 1085      20696E74 
+ 1085      00
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccalTqDa.s 			page 27
+
+
+ 1086              	.LASF61:
+ 1087 0a8b 4359424C 		.ascii	"CYBLE_EVT_GATTS_EXEC_WRITE_REQ\000"
+ 1087      455F4556 
+ 1087      545F4741 
+ 1087      5454535F 
+ 1087      45584543 
+ 1088              	.LASF29:
+ 1089 0aaa 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_DISCONNECTED\000"
+ 1089      455F4556 
+ 1089      545F4741 
+ 1089      505F4445 
+ 1089      56494345 
+ 1090              	.LASF97:
+ 1091 0acc 63757374 		.ascii	"customize.c\000"
+ 1091      6F6D697A 
+ 1091      652E6300 
+ 1092              	.LASF66:
+ 1093 0ad8 4359424C 		.ascii	"CYBLE_EVT_GATTS_DATA_SIGNED_CMD_REQ\000"
+ 1093      455F4556 
+ 1093      545F4741 
+ 1093      5454535F 
+ 1093      44415441 
+ 1094              	.LASF83:
+ 1095 0afc 4359424C 		.ascii	"CYBLE_EVT_HCI_PKT\000"
+ 1095      455F4556 
+ 1095      545F4843 
+ 1095      495F504B 
+ 1095      5400
+ 1096              	.LASF36:
+ 1097 0b0e 4359424C 		.ascii	"CYBLE_EVT_GAP_OOB_GENERATED_NOTIFICATION\000"
+ 1097      455F4556 
+ 1097      545F4741 
+ 1097      505F4F4F 
+ 1097      425F4745 
+ 1098              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
