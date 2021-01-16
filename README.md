@@ -44,5 +44,7 @@ depending on the music bits.
 
 - Mesh_Flood_Main_Auto_Reassignment.cydsn -- a code with the function of auto reassignment of the main control board;
 
+- Code_Morse.cydsn -- code Morse realisation with blinking and changing brightness of the lights;
+
 # License:
 [MIT](https://choosealicense.com/licenses/mit/)
