@@ -141,13 +141,80 @@ CY_ISR(Timer_Int_Handler){
       //  counter = 10000;
     //}
     char rez[30];
-    sprintf(rez, "counter  = %d \n ", clap_counter);
+    sprintf(rez, "rewrite  = %d \n ", clap_counter);
     UART_UartPutString(rez);
     if (clap_counter > 450){
     }
     
     Timer_Claps_ClearInterrupt(Timer_Claps_INTR_MASK_CC_MATCH);
     
+}
+
+CY_ISR(Complete_Int_Handler){
+    char rez[30];
+    sprintf(rez, "counter  = %d \n ", clap_counter);
+    //UART_UartPutString(rez);
+    clap_counter = Timer_Claps_ReadCapture();
+    if (clap_counter < 350){
+        CyDelay(100);
+        CyGlobalIntDisable;
+        
+        on_off_counter++;
+        if (on_off_counter == 2) {
+            on_off_counter = 0;
+        }
+        
+        interrupt_counter++;
+        if (interrupt_counter == 4) {
+                interrupt_counter = 0;
+            }
+        //CyDelay(50);
+        
+        uint8 bright = On_Off_collection[on_off_counter];
+        uint8 r[4];
+        r[0] = RGB_Collection[interrupt_counter][0];
+        r[1] = RGB_Collection[interrupt_counter][1];
+        r[2] = RGB_Collection[interrupt_counter][2];
+        r[3] = bright;
+        sendColorDataToNetwork(r);
+        SwitchRole();
+    	ConnectToPeripheralDevice();
+    	RestartCentralScanning();
+        
+        sprintf(rez, "small  = %d \n ", clap_counter);
+        UART_UartPutString(rez);
+        
+        
+        isr_Counter_ClearPending();
+        CyGlobalIntEnable;
+    }else{
+    
+        on_off_counter++;
+        if (on_off_counter == 2) {
+            on_off_counter = 0;
+        }
+        
+        CyDelay(100);
+        CyGlobalIntDisable;
+        uint8 bright = On_Off_collection[on_off_counter];
+        uint8 r[4];
+        r[0] = RGB_Collection[interrupt_counter][0];
+        r[1] = RGB_Collection[interrupt_counter][1];
+        r[2] = RGB_Collection[interrupt_counter][2];
+        r[3] = bright;
+        sendColorDataToNetwork(r);
+        SwitchRole();
+    	ConnectToPeripheralDevice();
+    	RestartCentralScanning();
+        
+        sprintf(rez, "big  = %d \n ", clap_counter);
+        UART_UartPutString(rez);
+        
+        
+        isr_Counter_ClearPending();
+        CyGlobalIntEnable;
+    }
+    Pin_Timer_Clear_Write(0);
 }
 
 /*******************************************************************************
@@ -181,13 +248,14 @@ void InitializeSystem(void)
     //int compare;
     
     
-    
+    //isr_Counter_SetPriority(0);
     
 	/* Enable global interrupts. */
 	CyGlobalIntEnable;
 	
     Timer_Claps_Start();
     isr_timer_StartEx(Timer_Int_Handler);
+    isr_complete_StartEx(Complete_Int_Handler);
     
 	/* Start BLE component and Register the generic Event callback function */
 	CyBle_Start(GenericEventHandler);
@@ -262,76 +330,15 @@ void Change_brightness(){
 CY_ISR(CC_TC_InterruptHandler)
 {   
     Pin_Timer_Clear_Write(1);
-    //int counter = Timer_Claps_ReadCapture();
-    //Timer_Claps_Stop();
-    char rez[30];
-    sprintf(rez, "counter  = %d \n ", clap_counter);
-    //UART_UartPutString(rez);
     
-    if (clap_counter < 450){
-        CyDelay(50);
-        CyGlobalIntDisable;
-        
-        on_off_counter++;
-        if (on_off_counter == 2) {
-            on_off_counter = 0;
-        }
-        
-        interrupt_counter++;
-        if (interrupt_counter == 4) {
-                interrupt_counter = 0;
-            }
-        
-        CyDelay(50);
-        
-        uint8 bright = On_Off_collection[on_off_counter];
-        uint8 r[4];
-        r[0] = RGB_Collection[interrupt_counter][0];
-        r[1] = RGB_Collection[interrupt_counter][1];
-        r[2] = RGB_Collection[interrupt_counter][2];
-        r[3] = bright;
-        sendColorDataToNetwork(r);
-        SwitchRole();
-    	ConnectToPeripheralDevice();
-    	RestartCentralScanning();
-        
-        sprintf(rez, "bright  = %d \n ", bright);
-        
-        
-        
-        isr_Counter_ClearPending();
-        CyGlobalIntEnable;
-    }else{
+    Pin_Led_Int_Write(1);
+    Pin_Led_Int_Write(0);
     
-        on_off_counter++;
-        if (on_off_counter == 2) {
-            on_off_counter = 0;
-        }
-        
-        CyDelay(100);
-        CyGlobalIntDisable;
-        uint8 bright = On_Off_collection[on_off_counter];
-        uint8 r[4];
-        r[0] = RGB_Collection[interrupt_counter][0];
-        r[1] = RGB_Collection[interrupt_counter][1];
-        r[2] = RGB_Collection[interrupt_counter][2];
-        r[3] = bright;
-        sendColorDataToNetwork(r);
-        SwitchRole();
-    	ConnectToPeripheralDevice();
-    	RestartCentralScanning();
-        
-        sprintf(rez, "bright  = %d \n ", bright);
-        
-        
-        isr_Counter_ClearPending();
-        CyGlobalIntEnable;
-    }
     
-    CyDelay(50);
-    Pin_Timer_Clear_Write(0);
     
-    CyDelay(50);
+    //CyDelay(50);
+    
+    //CyDelay(50);
     
 }
 

@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
-  <block name="Clock_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="isr_Counter" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Clock_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_ALed" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_Mic_A" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Timer_Claps" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+    <block name="VMux_count" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VMux_reload" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VMux_start" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VMux_stop" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VMux_capture" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VMux_clock" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="cy_m0s8_tcpwm_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <register name="COUNTER" address="0x40200108" bitWidth="32" desc="Current counter value" hidden="false" />
+    <register name="CC" address="0x4020010C" bitWidth="32" desc="Compare / capture value" hidden="false" />
+    <register name="CC_BUF" address="0x40200110" bitWidth="32" desc="Compare / capture buffer value" hidden="false" />
+    <register name="PERIOD" address="0x40200114" bitWidth="32" desc="Period value" hidden="false" />
+    <register name="PERIOD_BUF" address="0x40200118" bitWidth="32" desc="Period buffer value" hidden="false" />
+  </block>
+  <block name="Clock_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="ADC_MIC" BASE="0x0" SIZE="0x0" desc="Sequencing SAR ADC" visible="true" hidden="false">
     <block name="cy_analog_noconnect_30" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="cy_analog_noconnect_31" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -406,6 +418,8 @@
     <register name="PERIOD" address="0x40200154" bitWidth="32" desc="Period value" hidden="false" />
     <register name="PERIOD_BUF" address="0x40200158" bitWidth="32" desc="Period buffer value" hidden="false" />
   </block>
+  <block name="Pin_ALed" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="isr_timer" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="DMAC" BASE="0x0" SIZE="0x0" desc="DMAC Registers" visible="true" hidden="false">
     <register name="DMAC_CH_CTL17" address="0x40000000" bitWidth="32" desc="DMA channel 17 control register" hidden="true">
@@ -1788,23 +1802,10 @@
   </block>
   <block name="cy_lfclk" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Em_EEPROM_Dynamic" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Timer_Claps" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <block name="VMux_count" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VMux_reload" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VMux_start" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VMux_stop" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VMux_capture" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VMux_clock" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="cy_m0s8_tcpwm_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="COUNTER" address="0x40200108" bitWidth="32" desc="Current counter value" hidden="false" />
-    <register name="CC" address="0x4020010C" bitWidth="32" desc="Compare / capture value" hidden="false" />
-    <register name="CC_BUF" address="0x40200110" bitWidth="32" desc="Compare / capture buffer value" hidden="false" />
-    <register name="PERIOD" address="0x40200114" bitWidth="32" desc="Period value" hidden="false" />
-    <register name="PERIOD_BUF" address="0x40200118" bitWidth="32" desc="Period buffer value" hidden="false" />
-  </block>
-  <block name="isr_timer" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Pin_Timer_Clear" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_DLed" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="isr_complete" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Led_Int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Mic_A" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_constant_6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="PrISM_Clock" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="RED" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -1829,7 +1830,7 @@
     </register>
   </block>
   <block name="cy_constant_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="isr_WDT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GREEN" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="UART" BASE="0x0" SIZE="0x0" desc="Serial Communication Block" visible="true" hidden="false">
     <block name="clock_VM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="sclk_s_VM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -2176,8 +2177,8 @@
     </register>
   </block>
   <block name="Pin_Mic_D" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="GlobalSignal" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="GREEN" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_DLed" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="isr_WDT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="BLUE" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="PrISM_2" BASE="0x0" SIZE="0x0" desc="PrISM" visible="true" hidden="false">
     <register name="PrISM_SEED" address="0x400F0002" bitWidth="8" desc="Current seed value" hidden="false" />
@@ -2191,4 +2192,5 @@
       <field name="ctrl enable" from="0" to="0" access="RW" resetVal="" desc="" hidden="false" />
     </register>
   </block>
+  <block name="GlobalSignal" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
 </blockRegMap>

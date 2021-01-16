@@ -1,5 +1,5 @@
 # Mesh_Flood_PSoC4BLE_Main_Clap
-# 2021-01-16 15:04:59Z
+# 2021-01-16 18:46:26Z
 
 # IO_6@[IOP=(0)][IoId=(6)] is reserved: SWDDebugEnabled
 dont_use_io iocell 0 6
@@ -20,10 +20,11 @@ set_io "Pin_Mic_D(0)" iocell 3 3
 set_io "Pin_DLed(0)" iocell 0 3
 set_io "Pin_Mic_A(0)" iocell 3 2
 set_io "Pin_ALed(0)" iocell 0 2
-set_io "Pin_Timer_Clear(0)" iocell 0 0
+set_io "Pin_Timer_Clear(0)" iocell 0 1
+set_io "Pin_Led_Int(0)" iocell 0 0
 set_location "\BLE:cy_m0s8_ble\" p4blecell -1 -1 0
 set_location "\BLE:bless_isr\" interrupt -1 -1 12
-set_location "__ONE__" 1 0 0 1
+set_location "__ONE__" 1 1 0 2
 set_location "\PrISM_1:SyncCtl:ControlReg\" 0 0 6
 set_location "\PrISM_1:sC8:PrISMdp:u0\" 0 0 2
 set_location "\PrISM_2:SyncCtl:ControlReg\" 1 0 6
@@ -36,9 +37,10 @@ set_location "\PWM_Brightness:cy_m0s8_tcpwm_1\" m0s8tcpwmcell -1 -1 1
 set_location "isr_Counter" interrupt -1 -1 1
 set_location "\Timer_Claps:cy_m0s8_tcpwm_1\" m0s8tcpwmcell -1 -1 0
 set_location "isr_timer" interrupt -1 -1 17
-set_location "\PrISM_1:enable_final_reg\" 0 0 0 1
+set_location "isr_complete" interrupt -1 -1 2
+set_location "\PrISM_1:enable_final_reg\" 0 0 0 3
 set_location "Net_162" 0 0 1 0
 set_location "Net_161" 0 0 1 1
-set_location "Net_157" 1 0 0 0
-set_location "\PrISM_2:enable_final_reg\" 1 0 1 2
+set_location "Net_157" 1 0 1 1
+set_location "\PrISM_2:enable_final_reg\" 1 0 0 1
 set_location "SRSS" m0s8srsscell -1 -1 0
