@@ -151,10 +151,15 @@ CY_ISR(Timer_Int_Handler){
 }
 
 CY_ISR(Complete_Int_Handler){
+    Pin_Timer_Clear_Write(1);
+    //Pin_Timer_Clear_Write(0);
+    //Pin_Timer_Clear_Write(1);
     char rez[30];
     sprintf(rez, "counter  = %d \n ", clap_counter);
-    //UART_UartPutString(rez);
+    UART_UartPutString(rez);
     clap_counter = Timer_Claps_ReadCapture();
+    sprintf(rez, "counter  = %d \n ", clap_counter);
+    UART_UartPutString(rez);
     if (clap_counter < 350){
         CyDelay(100);
         CyGlobalIntDisable;
@@ -329,7 +334,7 @@ void Change_brightness(){
 
 CY_ISR(CC_TC_InterruptHandler)
 {   
-    Pin_Timer_Clear_Write(1);
+    
     
     Pin_Led_Int_Write(1);
     Pin_Led_Int_Write(0);
