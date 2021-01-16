@@ -10,23 +10,20 @@
 **The main target** of the project is to design a dynamic system of lighting devices on the soft and hard level,
 which have special functionality and can be controlled with the main board or your smartphone via Bluetooth.
 
-This  project  demonstrates how  to  transform  BLE  Pioneer  Kits  with  PSoC  4  BLE  into  nodes  of  a  Mesh  Network 
-and  relay common  data  over  that  network  using  flooding mechanism.  This  project  employs  connection  method,
+This  project  demonstrates how  to  transform  BLE  Pioneer  Kits  with  PSoC  4  BLE  into  nodes  of  a  **Mesh  Network** 
+and  relay common  data  over  that  network  using  flooding mechanism.  The system  employs  connection  method,
 where  a  BLE connection  is  made  between  two  nodes  before  data  is  transferred.
     
 Once  the  data  has  been  received  by  a  node,  the  node switches GAP role to connect to other nodes and relay the same data.
-The data relayed in this project is of RGB LED color and  intensity  control  and  the  Mesh  Network  allows  it
-to  be  relayed  to  each  node  in  that  network. The  project  can  be  easily modified to relay any other form of data.
+The data relayed in this project is of **RGB LED color** and  **intensity  control**  and  the  Mesh  Network  allows  it
+to  be  relayed  to  each  node  in  that  network. The  project  can  be  **easily modified to relay any other form of data.**
 
-
-Note: From here on, the BLE Pioneer Kits with PSoC 4 BLE Module will be referred to as nodes of this Mesh network,
-unless explicitly specified.
  
 Based on such approach, we have developed the following **functionality**:
 
-1. **Auto reassignment** of the main control board: in the main mode, there is the main board, which initialises changing the color
-and its spread throughout the mesh system. Furthermore, if the main board disappears, so the system lights up red color
-and auto reassignment of the main control board is starting -- as the result one of the peripherals becomes main control board.
+1. **Auto reassignment** of the main control board: in the main mode, there is the main control board, which initialises changing the color
+and its spread throughout the Mesh system. Furthermore, if the main board disappears, so the system lights up red color
+and auto reassignment of the main control board is starting -- as the result one of the peripherals becomes the main control board.
 
 2. **Synchronisation with music**: the system is able to make the lighting show by changing the color and brightness
 depending on the music bits.
