@@ -329,24 +329,33 @@ void GenericEventHandler(uint32 event, void * eventParam)
 				}
 				#endif
 				
+                UART_UartPutString("\nscan_report.eventType == CYBLE_GAPC_SCAN_RSP\n");
+                
 				/* If the received scan data is part of scan response from a peripheral... */
 				if(scan_report.eventType == CYBLE_GAPC_SCAN_RSP)
 				{
+                    UART_UartPutString("\n scan_report.dataLen == SCAN_TAG_DATA_LEN\n");
 					/* If the data lenght of the scan reponse packet is equal to expected
 					* scan response data lenght...*/
 					if(scan_report.dataLen == SCAN_TAG_DATA_LEN)
 					{
+                        UART_UartPutString("\n if(potential_node_found) \n");
+                        
 						#ifdef ENABLE_ADV_DATA_COUNTER
 						/* If a potential node had been found earlier as part of received 
 						* advertising data, then compare the address of stored potential 
 						* node and received address of the scan response */
 						if(potential_node_found)
 						{
+                            UART_UartPutString("\n if((!memcmp(scan_report \n");
+                            
 							/* Compare the two addresses and type */
 							if((!memcmp(scan_report.peerBdAddr, potential_node_bdAddr, 6))  
 								&& (potential_node_bdAddrType == scan_report.peerAddrType))
 							{
 						#endif
+                                UART_UartPutString("\n if(!memcmp(scan_report.data, scan_tag, \n");
+                        
 								/* If the scan report data matches the expected data (scan_tag),
 								* then it is our desired node */
 								if(!memcmp(scan_report.data, scan_tag, scan_report.dataLen))

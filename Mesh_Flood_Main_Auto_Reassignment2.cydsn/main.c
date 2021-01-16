@@ -77,7 +77,7 @@ uint8 RGB_Collection[4][4] = {
 uint8 RED_COLOR[4] = {0xFF, 0, 0, 0xFF};
 
 
-int DEVICE_INDEX = 255;
+int DEVICE_INDEX = 0;
 
 int Change_Color_Period = 1500;
 int Is_Free_Period = 4500; // of the whole network
@@ -173,7 +173,7 @@ void InitializeSystem(void)
     isr_Timer_Change_Color_StartEx(CC_TC_InterruptHandler);
     
     Heart_beat_Period = 2 * Is_Free_Period;
-    Waiting_Time_Period = 2 * Heart_beat_Period;
+    Waiting_Time_Period = 2.5 * Heart_beat_Period;
     
     Isr_Waiting_Time_StartEx(Timer_Waiting_Time_Interrupt_Handler);
     Timer_Is_Free_isr_StartEx(Timer_Is_Free_Interrupt_Handler);
@@ -270,14 +270,21 @@ CY_ISR(Change_Role_Interrupt_Handler)
     }
     else if (DEVICE_INDEX == 0)
     {
+        Timer_Change_Color_Stop();
+        Timer_Heart_beat_Stop();
+        
         DEVICE_INDEX = 255;
+        
         
         switch_Role = TRUE;
         SwitchRole();
-        
-        RED_Write(0);
-        GREEN_Write(0);
-        BLUE_Write(0);
+//        
+//        RED_Write(0);
+//        GREEN_Write(0);
+//        BLUE_Write(0);
+        PrISM_1_WritePulse0(RGB_LED_MAX_VAL);
+		PrISM_1_WritePulse1(RGB_LED_MAX_VAL);
+		PrISM_2_WritePulse0(RGB_LED_MAX_VAL);
     }
     
     Change_Role_Pin_ClearInterrupt();
@@ -309,6 +316,9 @@ CY_ISR(Timer_Waiting_Time_Interrupt_Handler)
             Timer_Heart_beat_WritePeriod(Heart_beat_Period);
             Timer_Heart_beat_Start();
             Isr_Heart_beat_StartEx(Timer_Heart_beat_Interrupt_Handler);
+            
+            switch_Role = TRUE;
+            SwitchRole();
         }
         
         NUM_EXCEEDED_WAITING_TIME++;
