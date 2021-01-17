@@ -7,6 +7,9 @@
     
 ## Description: :sparkler:
 
+
+[Presentation of the project](https://docs.google.com/presentation/d/1DGcEqJRXP8czo2zyCl8CyPnZSvJ-RltvOb1ijSbHqpk/edit?usp=sharing)
+
 **The main target** of the project is to design a dynamic system of lighting devices on the soft and hard level,
 which have special functionality and can be controlled with the main board or your smartphone via Bluetooth.
 
