@@ -13,9 +13,10 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness">
 <ExpandedNodeIds>
 <v>Workspace_Mic</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness</v>
 <v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\TopDesign</v>
 <v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr</v>
 <v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr\Pins</v>
@@ -68,7 +69,50 @@
 <VisibleNodeIds>
 <v>Workspace_Mic</v>
 <v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness</v>
-<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\TopDesign</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr\Pins</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr\Analog</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr\DMA</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr\Clocks</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr\Interrupts</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr\System</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr\Directives</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr\Flash Security</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Header Files</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Header Files\ble_process.h</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Header Files\customize.h</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Header Files\debug.h</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Header Files\main.h</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Header Files\WDT.h</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Source Files</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Source Files\ble_process.c</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Source Files\customize.c</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Source Files\debug.c</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Source Files\main.c</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Source Files\WDT.c</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\ADC_MIC</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\ADC_MIC_intClock</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\ADC_MIC_IRQ</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\BLE</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\BLE_bless_isr</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\BLUE</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\Clock_1</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\Clock_2</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\cy_boot</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\cy_dmac</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\cy_lfclk</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\Em_EEPROM_Dynamic</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\GREEN</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\isr_complete</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\isr_Counter</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\isr_timer</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\isr_WDT</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\Pin_ALed</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\Pin_DLed</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness\Generated_Source\PSoC4\Pin_Led_Int</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -240,6 +284,7 @@
 <v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\PrISM_v2_20</v>
 <v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\PrISM_v2_20\PrISM_v2_20.pdf</v>
 <v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\SCB_P4_v4_0.pdf</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\TCPWM_P4_v2_10</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -253,14 +298,16 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\Mesh_Flood_PSoC4BLE_Main_Brightness.cydsn\main.c" />
+</OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
   Actipro Docking/MDI for WinForms
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1269, 670" SelectedTabbedMdiWindow="293abfe3-5635-4e9c-bb28-a5ea73c70f4a"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="293abfe3-5635-4e9c-bb28-a5ea73c70f4a" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="771, 670" SelectedTabbedMdiWindow="03ed3e13-d840-474b-8b8d-525d1b16cdcc"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="293abfe3-5635-4e9c-bb28-a5ea73c70f4a" /><DocumentWindow Key="C:\Users\janusdg-win\UCU\Smart_lighting_system\Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Brightness.cydsn\main.c" Guid="03ed3e13-d840-474b-8b8d-525d1b16cdcc" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
