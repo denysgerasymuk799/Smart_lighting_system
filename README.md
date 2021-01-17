@@ -21,7 +21,7 @@ to  be  relayed  to  each  node  in  that  network. The  project  can  be  **eas
  
 Based on such approach, we have developed the following **functionality**:
 
-1. **Auto reassignment** of the main control board: in the main mode, there is the main control board, which initialises changing the color
+1. **Auto reassignment of the main control board**: in the main mode, there is the main control board, which initialises changing the color
 and its spread throughout the Mesh system. Furthermore, if the main board disappears, so the system lights up red color
 and auto reassignment of the main control board is starting -- as the result one of the peripherals becomes the main control board.
 
