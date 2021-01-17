@@ -174,6 +174,25 @@
 <v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\PSoC 4 Architecture TRM</v>
 <v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\PSoC 4200 BLE Family Datasheet</v>
 <v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\System Reference Guides</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\System Reference Guides\cy_boot_v5_81</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\System Reference Guides\cy_dmac_v1_10</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\ADC_SAR_SEQ_P4_v2_50.pdf</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\BLE_v3_66.pdf</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\cy_clock_v2_20</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\cy_constant_v1_0</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\cy_gsref_v2_10.pdf</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\cy_isr_v1_70</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\cy_pins_v2_20</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\PrISM_v2_20</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\PrISM_v2_20\PrISM_v2_20.pdf</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\SCB_P4_v4_0.pdf</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\TCPWM_P4_v2_10</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\TCPWM_P4_v2_10\TCPWM_P4_v2_10.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Workspace_Mic</v>
@@ -204,6 +223,23 @@
 <v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\PSoC 4 Architecture TRM</v>
 <v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\PSoC 4200 BLE Family Datasheet</v>
 <v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\System Reference Guides</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\System Reference Guides\cy_boot_v5_81</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\System Reference Guides\cy_dmac_v1_10</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\ADC_SAR_SEQ_P4_v2_50.pdf</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\BLE_v3_66.pdf</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\cy_clock_v2_20</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\cy_constant_v1_0</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\cy_gsref_v2_10.pdf</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\cy_isr_v1_70</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\cy_pins_v2_20</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\PrISM_v2_20</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\PrISM_v2_20\PrISM_v2_20.pdf</v>
+<v>Workspace_Mic\Mesh_Flood_PSoC4BLE_Main_Clap\SCB_P4_v4_0.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
