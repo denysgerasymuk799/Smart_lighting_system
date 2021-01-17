@@ -1,14 +1,14 @@
---------------- Build Started: 01/16/2021 23:57:48 Project: Mesh_Flood_PSoC4BLE_Main_Brightness, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 01/17/2021 04:57:56 Project: Mesh_Flood_PSoC4BLE_Main_Brightness, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
 main.c: In function 'InitializeSystem':
-main.c:247:12: warning: unused variable 'init_val' [-Wunused-variable]
+main.c:248:12: warning: unused variable 'init_val' [-Wunused-variable]
      uint16 init_val = ADC_MIC_GetResult16(0);
             ^
-main.c:246:12: warning: unused variable 'prev_val' [-Wunused-variable]
+main.c:247:12: warning: unused variable 'prev_val' [-Wunused-variable]
      uint16 prev_val;
             ^
-main.c:245:12: warning: unused variable 'val' [-Wunused-variable]
+main.c:246:12: warning: unused variable 'val' [-Wunused-variable]
      uint16 val = ADC_MIC_GetResult16(0);
             ^
 arm-none-eabi-ar.exe -rs .\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_PSoC4BLE_Main_Brightness.a .\CortexM0\ARM_GCC_541\Debug\BLE.o .\CortexM0\ARM_GCC_541\Debug\BLE_gatt.o .\CortexM0\ARM_GCC_541\Debug\BLE_eventHandler.o .\CortexM0\ARM_GCC_541\Debug\BLE_HAL_INT.o .\CortexM0\ARM_GCC_541\Debug\BLE_HAL_PVT.o .\CortexM0\ARM_GCC_541\Debug\BLE_custom.o .\CortexM0\ARM_GCC_541\Debug\PrISM_1.o .\CortexM0\ARM_GCC_541\Debug\PrISM_1_PM.o .\CortexM0\ARM_GCC_541\Debug\PrISM_Clock.o .\CortexM0\ARM_GCC_541\Debug\RED.o .\CortexM0\ARM_GCC_541\Debug\RED_PM.o .\CortexM0\ARM_GCC_541\Debug\GREEN.o .\CortexM0\ARM_GCC_541\Debug\GREEN_PM.o .\CortexM0\ARM_GCC_541\Debug\BLUE.o .\CortexM0\ARM_GCC_541\Debug\BLUE_PM.o .\CortexM0\ARM_GCC_541\Debug\PrISM_2.o .\CortexM0\ARM_GCC_541\Debug\PrISM_2_PM.o .\CortexM0\ARM_GCC_541\Debug\isr_WDT.o .\CortexM0\ARM_GCC_541\Debug\UART.o .\CortexM0\ARM_GCC_541\Debug\UART_SPI_UART.o .\CortexM0\ARM_GCC_541\Debug\UART_SPI_UART_INT.o .\CortexM0\ARM_GCC_541\Debug\UART_PM.o .\CortexM0\ARM_GCC_541\Debug\UART_UART.o .\CortexM0\ARM_GCC_541\Debug\UART_BOOT.o .\CortexM0\ARM_GCC_541\Debug\UART_UART_BOOT.o .\CortexM0\ARM_GCC_541\Debug\BLE_bless_isr.o .\CortexM0\ARM_GCC_541\Debug\UART_SCBCLK.o .\CortexM0\ARM_GCC_541\Debug\UART_tx.o .\CortexM0\ARM_GCC_541\Debug\UART_tx_PM.o .\CortexM0\ARM_GCC_541\Debug\UART_rx.o .\CortexM0\ARM_GCC_541\Debug\UART_rx_PM.o .\CortexM0\ARM_GCC_541\Debug\CyFlash.o .\CortexM0\ARM_GCC_541\Debug\CyLib.o .\CortexM0\ARM_GCC_541\Debug\cyPm.o .\CortexM0\ARM_GCC_541\Debug\cyutils.o .\CortexM0\ARM_GCC_541\Debug\CyDMA.o .\CortexM0\ARM_GCC_541\Debug\CyLFClk.o .\CortexM0\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM0\ARM_GCC_541\Debug\isr_Counter.o .\CortexM0\ARM_GCC_541\Debug\Pin_Mic_D.o .\CortexM0\ARM_GCC_541\Debug\Pin_Mic_D_PM.o .\CortexM0\ARM_GCC_541\Debug\Pin_DLed.o .\CortexM0\ARM_GCC_541\Debug\Pin_DLed_PM.o .\CortexM0\ARM_GCC_541\Debug\Pin_Mic_A.o .\CortexM0\ARM_GCC_541\Debug\Pin_Mic_A_PM.o .\CortexM0\ARM_GCC_541\Debug\ADC_MIC.o .\CortexM0\ARM_GCC_541\Debug\ADC_MIC_PM.o .\CortexM0\ARM_GCC_541\Debug\ADC_MIC_INT.o .\CortexM0\ARM_GCC_541\Debug\PWM_Brightness.o .\CortexM0\ARM_GCC_541\Debug\PWM_Brightness_PM.o .\CortexM0\ARM_GCC_541\Debug\Pin_ALed.o .\CortexM0\ARM_GCC_541\Debug\Pin_ALed_PM.o .\CortexM0\ARM_GCC_541\Debug\Clock_1.o .\CortexM0\ARM_GCC_541\Debug\ADC_MIC_IRQ.o .\CortexM0\ARM_GCC_541\Debug\ADC_MIC_intClock.o .\CortexM0\ARM_GCC_541\Debug\Clock_2.o .\CortexM0\ARM_GCC_541\Debug\Timer_Claps.o .\CortexM0\ARM_GCC_541\Debug\Timer_Claps_PM.o .\CortexM0\ARM_GCC_541\Debug\isr_timer.o .\CortexM0\ARM_GCC_541\Debug\Pin_Timer_Clear.o .\CortexM0\ARM_GCC_541\Debug\Pin_Timer_Clear_PM.o .\CortexM0\ARM_GCC_541\Debug\isr_complete.o .\CortexM0\ARM_GCC_541\Debug\Pin_Led_Int.o .\CortexM0\ARM_GCC_541\Debug\Pin_Led_Int_PM.o .\CortexM0\ARM_GCC_541\Debug\CyBootAsmGnu.o
@@ -19,6 +19,6 @@ No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S C:\Users\janusdg-win\UCU\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Main_Brightness.cydsn\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_PSoC4BLE_Main_Brightness.elf
-Flash used: 108837 of 262144 bytes (41.5%).
+Flash used: 108573 of 262144 bytes (41.4%).
 SRAM used: 11376 of 32768 bytes (34.7%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 01/16/2021 23:57:50 ---------------
+--------------- Build Succeeded: 01/17/2021 04:57:58 ---------------

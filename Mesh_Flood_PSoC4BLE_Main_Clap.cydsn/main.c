@@ -173,7 +173,7 @@ CY_ISR(Complete_Int_Handler){
         if (interrupt_counter == 4) {
                 interrupt_counter = 0;
             }
-        CyDelay(300);
+        CyDelay(100);
         
         uint8 bright = On_Off_collection[on_off_counter];
         uint8 r[4];

@@ -1,4 +1,4 @@
---------------- Build Started: 01/17/2021 03:50:34 Project: Mesh_Flood_PSoC4BLE_Main_Clap, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 01/17/2021 05:11:33 Project: Mesh_Flood_PSoC4BLE_Main_Clap, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
 main.c: In function 'InitializeSystem':
@@ -21,4 +21,4 @@ Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S C:\Users\janusdg-win\UCU\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Main_Clap.cydsn\CortexM0\ARM_GCC_541\Debug\Mesh_Flood_PSoC4BLE_Main_Clap.elf
 Flash used: 107813 of 262144 bytes (41.1%).
 SRAM used: 11376 of 32768 bytes (34.7%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 01/17/2021 03:50:36 ---------------
+--------------- Build Succeeded: 01/17/2021 05:11:35 ---------------

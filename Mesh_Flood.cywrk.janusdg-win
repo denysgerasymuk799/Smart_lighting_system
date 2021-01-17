@@ -13,9 +13,10 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\TopDesign">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Brightness">
 <ExpandedNodeIds>
 <v>Mesh_Flood</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main</v>
 <v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\TopDesign</v>
 <v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Mesh_Flood_PSoC4BLE_Main.cydwr</v>
 <v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Mesh_Flood_PSoC4BLE_Main.cydwr\Pins</v>
@@ -39,6 +40,7 @@
 <v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Source Files\WDT.c</v>
 <v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source</v>
 <v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Brightness</v>
 <v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Brightness\TopDesign</v>
 <v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr</v>
 <v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr\Pins</v>
@@ -92,51 +94,51 @@
 <v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Original\Source Files</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>Mesh_Flood</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\BLUE</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\cy_boot</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\cy_dmac</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\cy_lfclk</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\Em_EEPROM_Dynamic</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\GREEN</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\isr_Counter</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\isr_WDT</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\Pin_1</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\PrISM_1</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\PrISM_2</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\PrISM_Clock</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\RED</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\UART</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\UART_rx</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\UART_SCBCLK</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\UART_tx</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\cycodeshareexport.ld</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\cycodeshareimport.ld</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\cycodeshareimport.scat</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\cydevice_trm.h</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\cydevicerv_trm.inc</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\cydisabledsheets.h</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\cyfitter.h</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\cyfitter_cfg.c</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\cyfitter_cfg.h</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\cyfittergnu.inc</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\cyfitteriar.inc</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\cyfitterrv.inc</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\cymetadata.c</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\Generated_Source\PSoC4\project.h</v>
 <v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Brightness</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\TopDesign</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Mesh_Flood_PSoC4BLE_Main_Clap.cydwr</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Mesh_Flood_PSoC4BLE_Main_Clap.cydwr\Pins</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Mesh_Flood_PSoC4BLE_Main_Clap.cydwr\Analog</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Mesh_Flood_PSoC4BLE_Main_Clap.cydwr\DMA</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Mesh_Flood_PSoC4BLE_Main_Clap.cydwr\Clocks</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Mesh_Flood_PSoC4BLE_Main_Clap.cydwr\Interrupts</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Mesh_Flood_PSoC4BLE_Main_Clap.cydwr\System</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Mesh_Flood_PSoC4BLE_Main_Clap.cydwr\Directives</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Mesh_Flood_PSoC4BLE_Main_Clap.cydwr\Flash Security</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Header Files</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Header Files\ble_process.h</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Header Files\customize.h</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Header Files\debug.h</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Header Files\main.h</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Header Files\WDT.h</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Source Files</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Source Files\ble_process.c</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Source Files\customize.c</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Source Files\debug.c</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Source Files\main.c</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Source Files\WDT.c</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source\PSoC4</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source\PSoC4\ADC_MIC</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source\PSoC4\ADC_MIC_intClock</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source\PSoC4\ADC_MIC_IRQ</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source\PSoC4\BLE</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source\PSoC4\BLE_bless_isr</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source\PSoC4\BLUE</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source\PSoC4\Clock_1</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source\PSoC4\Clock_2</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source\PSoC4\cy_boot</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source\PSoC4\cy_dmac</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source\PSoC4\cy_lfclk</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source\PSoC4\Em_EEPROM_Dynamic</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source\PSoC4\GREEN</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source\PSoC4\isr_complete</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source\PSoC4\isr_timer</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source\PSoC4\isr_WDT</v>
-<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Clap\Generated_Source\PSoC4\Pin_ALed</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Brightness\TopDesign</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr\Pins</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr\Analog</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr\DMA</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr\Clocks</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr\Interrupts</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr\System</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr\Directives</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Brightness\Mesh_Flood_PSoC4BLE_Main_Brightness.cydwr\Flash Security</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main_Brightness\Header Files</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -454,6 +456,49 @@
 <VisibleNodeIds>
 <v>Mesh_Flood</v>
 <v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_bless_isr.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_custom.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_eventHandler.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_gatt.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_HAL_INT.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_HAL_PVT.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\ble_process.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\BLUE.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\BLUE_PM.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\customize.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\debug.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\GREEN.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\GREEN_PM.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\isr_Counter.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\isr_WDT.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_1_PM.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\PrISM_1.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\PrISM_1_PM.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\PrISM_2.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\PrISM_2_PM.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\PrISM_Clock.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\RED.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\RED_PM.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>Mesh_Flood\Mesh_Flood_PSoC4BLE_Main\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -607,10 +652,11 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v="..\TEST_MUL_74173.cydsn\TopDesign\TopDesign.cysch" />
-<name v="..\TEST_MUL_74173.cydsn\main.c" />
-<name v="..\TEST_MUL_74173.cydsn\Generated_Source\PSoC4\cypins.h" />
-<name v="..\TEST_MUL_74173.cydsn\TEST_MUL_74173.cydwr" />
+<name v=".\Mesh_Flood_PSoC4BLE_Main_Clap.cydsn\main.c" />
+<name v=".\Mesh_Flood_PSoC4BLE_Main_Clap.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Mesh_Flood_PSoC4BLE_Main_Brightness.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Mesh_Flood_PSoC4BLE_Main_Brightness.cydsn\main.c" />
+<name v=".\Mesh_Flood_PSoC4BLE_Main_Brightness.cydsn\customize.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -618,7 +664,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1028, 670" SelectedTabbedMdiWindow="0c1accf4-3f3a-49ec-8e5b-42510a5f1624"><DocumentWindow Key="C:\Users\janusdg-win\UCU\TEST_MUL_74173.cydsn\TopDesign\TopDesign.cysch" Guid="a5c7b69a-2a77-4e97-bb2a-b4391ee180b2" /><DocumentWindow Key="C:\Users\janusdg-win\UCU\TEST_MUL_74173.cydsn\main.c" Guid="0c1accf4-3f3a-49ec-8e5b-42510a5f1624" /><DocumentWindow Key="C:\Users\janusdg-win\UCU\TEST_MUL_74173.cydsn\Generated_Source\PSoC4\cypins.h" Guid="b8911cf6-7c90-40de-a690-ea5bf69e718e" /><DocumentWindow Key="C:\Users\janusdg-win\UCU\TEST_MUL_74173.cydsn\TEST_MUL_74173.cydwr" Guid="56289b75-b026-4b40-afe3-5c0d1d38aa7a" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1036, 670" SelectedTabbedMdiWindow="7f3225e6-54e5-44f6-b0f3-47eddc41e833"><DocumentWindow Key="C:\Users\janusdg-win\UCU\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Main_Clap.cydsn\main.c" Guid="7f3225e6-54e5-44f6-b0f3-47eddc41e833" /><DocumentWindow Key="C:\Users\janusdg-win\UCU\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Main_Clap.cydsn\TopDesign\TopDesign.cysch" Guid="4909af86-498b-4aaa-8d9f-97bc9d3b3583" /><DocumentWindow Key="C:\Users\janusdg-win\UCU\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Main_Brightness.cydsn\TopDesign\TopDesign.cysch" Guid="ac4b050c-a065-4fee-a62a-ceae45a16131" /><DocumentWindow Key="C:\Users\janusdg-win\UCU\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Main_Brightness.cydsn\main.c" Guid="0200342b-c664-4a43-965a-336370415740" /><DocumentWindow Key="C:\Users\janusdg-win\UCU\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Main_Brightness.cydsn\customize.c" Guid="17211fba-3add-42b5-b39d-fbd6e756c7c2" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

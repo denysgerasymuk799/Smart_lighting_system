@@ -76,6 +76,7 @@ uint8 On_Off_collection[2] = {0, 0xFF};
 
 int interrupt_counter = 0;
 int on_off_counter = 0;
+int brightness_counter = 80;
 
 int compare;
 uint16 val;
@@ -83,7 +84,7 @@ uint16 prev_val;
 uint16 init_val;
 
 int clap_counter = 0;
-
+int inter_counter = 0;
 /*******************************************************************************
 * Function Name: main
 ********************************************************************************
@@ -318,28 +319,42 @@ void InitializeSystem(void)
 }
 
 void Change_brightness(){
-    prev_val = val;
-    val = ADC_MIC_GetResult16(0); // analog value from microphone
-    if (init_val == 0){
-    init_val = ADC_MIC_GetResult16(0);}
-    compare = get_compare_from_analog(val, init_val, prev_val);
-    int brightness = get_brightness_from_analog(val, init_val, prev_val);
-    if (compare > 3){
-    interrupt_counter++;
-    if (interrupt_counter == 4) {
-            interrupt_counter = 0;
-        }}
-    RGB_Collection[interrupt_counter][3] = brightness;
-    char rez[30];
-    sprintf(rez, "analog = %d led = %d \n ", val, brightness);
-    UART_UartPutString(rez);
-    //PWM_Brightness_WriteCompare(compare); // change the brightness of LED
+    if (brightness_counter > 20){
+        brightness_counter -= 15;
+        CyDelay(150);
+        uint8 r[4];
+        r[0] = RGB_Collection[interrupt_counter][0];
+        r[1] = RGB_Collection[interrupt_counter][1];
+        r[2] = RGB_Collection[interrupt_counter][2];
+        r[3] = brightness_counter;
+        sendColorDataToNetwork(r);
+        SwitchRole();
+    	ConnectToPeripheralDevice();
+    	RestartCentralScanning();
+    }
     
-    sendColorDataToNetwork(RGB_Collection[interrupt_counter]);
+    inter_counter++;
+    if (inter_counter > 5){
+        inter_counter = 0;
+        CyGlobalIntEnable;
+        isr_Counter_ClearPending();
+        
+        
+    }
 }
 
 CY_ISR(CC_TC_InterruptHandler)
 {   
+    UART_Start();
+    UART_UartPutString("Helloushkkkki\n");
+    brightness_counter = 200;
+    interrupt_counter++;
+    if (interrupt_counter == 4) {
+            interrupt_counter = 0;
+        }
+    isr_Counter_ClearPending();
+    CyGlobalIntDisable;
+    
     
     //CyDelay(50);
     
