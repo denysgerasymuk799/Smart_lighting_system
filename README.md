@@ -46,5 +46,8 @@ depending on the music bits.
 
 - Code_Morse.cydsn -- code Morse realisation with blinking and changing brightness of the lights;
 
+- Workspace_Mic -- workspace with mic functions -- music synchronisation and switching modes with clapping;
+
+
 # License:
 [MIT](https://choosealicense.com/licenses/mit/)
