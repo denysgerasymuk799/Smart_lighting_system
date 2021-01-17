@@ -239,18 +239,20 @@ void InitializeSystem(void)
 
 void sendColorDataToPeripheral()
 {
-    sendColorDataToNetwork(RGB_Collection[interrupt_counter]);
-    //SwitchRole();
-	ConnectToPeripheralDevice();
-	RestartCentralScanning();
-    
+    NEXT_NEIGHBOUR_INDEX = 1;
+    for (uint i = 0; i < 2; i++)
+    {
+        sendColorDataToNetwork(RGB_Collection[interrupt_counter]);
+        //SwitchRole();
+    	ConnectToPeripheralDevice();
+    	RestartCentralScanning();
+        
+    }
     interrupt_counter++;
     if (interrupt_counter == 4) {
         interrupt_counter = 0;
     }
-    
     NETWORK_IS_FREE = false;
-    NEXT_NEIGHBOUR_INDEX = 1;
     
     Timer_Is_Free_Stop();
     //Timer_Is_Free_WritePeriod(Is_Free_Period);

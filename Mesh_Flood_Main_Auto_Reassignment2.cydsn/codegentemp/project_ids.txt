@@ -1,8 +1,8 @@
-D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Original.cydsn\Mesh_Flood_PSoC4BLE_Original.cyprj|0b0540af-a602-43c1-9710-e10b2b550849
-D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|437cb63c-10cc-4d7b-b5f8-3a1aa88c65cd
-C:\Users\ASUS\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|adc0e281-0bde-4c48-93a8-ccc536c29dc5
-D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|01be15ab-4ffb-49a6-b757-a2ed225d0e67
-D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|5fec5f79-dd5a-4407-af21-ea8d8cae4e79
-D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|71717ffe-8bf8-4711-9c5e-bfe68f5abad6
-D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Main.cydsn\Mesh_Flood_PSoC4BLE_Main.cyprj|ff7efbd4-9907-47ce-837a-0f604bf8c8cc
-D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\Mesh_Flood_Main_Auto_Reassignment2.cyprj|56f6c981-d53b-42fa-ba0e-95d3585c2f9c
+D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Original.cydsn\Mesh_Flood_PSoC4BLE_Original.cyprj|1c3ebc2f-7ff3-41cd-8413-2f8992f9333b
+D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|a610d574-a1dd-4a61-877e-f9c50583e757
+C:\Users\ASUS\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|56562a4f-0aa4-40e5-90db-4bd9fb99c79f
+D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|e8cec9c6-81f8-4ff5-8959-499668f9de73
+D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|589229e9-c419-4174-8472-8c71922eb1d5
+D:\programs\Cypress\PSoc_creator\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|c842e8f7-38ad-46ca-b603-f07ce96f439f
+D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Main.cydsn\Mesh_Flood_PSoC4BLE_Main.cyprj|20725d80-3a16-430e-ae53-451bdb758da5
+D:\ucu\2_course1_term\POC\programs\my_works\Smart_lightning_system\Mesh_Flood_Main_Auto_Reassignment2.cydsn\Mesh_Flood_Main_Auto_Reassignment2.cyprj|f68e6eb2-dcd0-4fa1-bb9b-1bd1d0b9a06d
