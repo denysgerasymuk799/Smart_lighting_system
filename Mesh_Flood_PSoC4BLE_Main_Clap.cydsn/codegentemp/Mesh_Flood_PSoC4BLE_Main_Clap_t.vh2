@@ -1,5 +1,5 @@
 -- Project:   C:\Users\janusdg-win\UCU\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Main_Clap.cydsn\Mesh_Flood_PSoC4BLE_Main_Clap.cyprj
--- Generated: 01/16/2021 20:46:27
+-- Generated: 01/17/2021 03:38:51
 -- PSoC Creator  4.2
 
 ENTITY Mesh_Flood_PSoC4BLE_Main_Clap IS
@@ -12,8 +12,7 @@ ENTITY Mesh_Flood_PSoC4BLE_Main_Clap IS
         Pin_Mic_D(0)_PAD : IN std_ulogic;
         Pin_DLed(0)_PAD : OUT std_ulogic;
         Pin_ALed(0)_PAD : OUT std_ulogic;
-        Pin_Timer_Clear(0)_PAD : IN std_ulogic;
-        Pin_Led_Int(0)_PAD : IN std_ulogic);
+        Pin_Timer_Clear(0)_PAD : IN std_ulogic);
     ATTRIBUTE voltage_VDDA OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDA_CTB OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDIO_0 OF __DEFAULT__ : ENTITY IS 3.3e0;
@@ -41,7 +40,7 @@ ARCHITECTURE __DEFAULT__ OF Mesh_Flood_PSoC4BLE_Main_Clap IS
     SIGNAL ClockBlock_WCO : bit;
     SIGNAL GREEN(0)__PA : bit;
     SIGNAL Net_157 : bit;
-    ATTRIBUTE placement_force OF Net_157 : SIGNAL IS "U(1,0,B)1";
+    ATTRIBUTE placement_force OF Net_157 : SIGNAL IS "U(1,0,A)0";
     SIGNAL Net_161 : bit;
     ATTRIBUTE placement_force OF Net_161 : SIGNAL IS "U(0,0,B)1";
     SIGNAL Net_162 : bit;
@@ -69,14 +68,12 @@ ARCHITECTURE __DEFAULT__ OF Mesh_Flood_PSoC4BLE_Main_Clap IS
     SIGNAL Net_631 : bit;
     SIGNAL Net_632 : bit;
     SIGNAL Net_634 : bit;
-    SIGNAL Net_636 : bit;
     SIGNAL Net_93 : bit;
     SIGNAL Net_96 : bit;
     SIGNAL Net_98 : bit;
     SIGNAL Net_99 : bit;
     SIGNAL Pin_ALed(0)__PA : bit;
     SIGNAL Pin_DLed(0)__PA : bit;
-    SIGNAL Pin_Led_Int(0)__PA : bit;
     SIGNAL Pin_Mic_A(0)__PA : bit;
     SIGNAL Pin_Mic_D(0)__PA : bit;
     SIGNAL Pin_Timer_Clear(0)__PA : bit;
@@ -117,7 +114,7 @@ ARCHITECTURE __DEFAULT__ OF Mesh_Flood_PSoC4BLE_Main_Clap IS
     SIGNAL \PrISM_1:control_7\ : bit;
     SIGNAL \PrISM_1:ctrl_enable\ : bit;
     SIGNAL \PrISM_1:enable_final_reg\ : bit;
-    ATTRIBUTE placement_force OF \PrISM_1:enable_final_reg\ : SIGNAL IS "U(0,0,A)3";
+    ATTRIBUTE placement_force OF \PrISM_1:enable_final_reg\ : SIGNAL IS "U(0,0,A)1";
     SIGNAL \PrISM_2:ce0\ : bit;
     SIGNAL \PrISM_2:ce1\ : bit;
     SIGNAL \PrISM_2:cl0\ : bit;
@@ -131,7 +128,7 @@ ARCHITECTURE __DEFAULT__ OF Mesh_Flood_PSoC4BLE_Main_Clap IS
     SIGNAL \PrISM_2:control_7\ : bit;
     SIGNAL \PrISM_2:ctrl_enable\ : bit;
     SIGNAL \PrISM_2:enable_final_reg\ : bit;
-    ATTRIBUTE placement_force OF \PrISM_2:enable_final_reg\ : SIGNAL IS "U(1,0,A)1";
+    ATTRIBUTE placement_force OF \PrISM_2:enable_final_reg\ : SIGNAL IS "U(1,0,B)2";
     SIGNAL \UART:Net_847_ff1\ : bit;
     ATTRIBUTE global_signal OF \UART:Net_847_ff1\ : SIGNAL IS true;
     SIGNAL \UART:miso_s_wire\ : bit;
@@ -147,7 +144,7 @@ ARCHITECTURE __DEFAULT__ OF Mesh_Flood_PSoC4BLE_Main_Clap IS
     SIGNAL \\\UART:tx(0)\\__PA\ : bit;
     SIGNAL \UART:tx_wire\ : bit;
     SIGNAL __ONE__ : bit;
-    ATTRIBUTE placement_force OF __ONE__ : SIGNAL IS "U(1,1,A)2";
+    ATTRIBUTE placement_force OF __ONE__ : SIGNAL IS "U(1,0,A)1";
     ATTRIBUTE POWER OF __ONE__ : SIGNAL IS true;
     SIGNAL __ZERO__ : bit;
     ATTRIBUTE GROUND OF __ZERO__ : SIGNAL IS true;
@@ -177,13 +174,11 @@ ARCHITECTURE __DEFAULT__ OF Mesh_Flood_PSoC4BLE_Main_Clap IS
     ATTRIBUTE lib_model OF Pin_ALed(0) : LABEL IS "iocell9";
     ATTRIBUTE Location OF Pin_ALed(0) : LABEL IS "P0[2]";
     ATTRIBUTE lib_model OF Pin_Timer_Clear(0) : LABEL IS "iocell10";
-    ATTRIBUTE Location OF Pin_Timer_Clear(0) : LABEL IS "P0[1]";
-    ATTRIBUTE lib_model OF Pin_Led_Int(0) : LABEL IS "iocell11";
-    ATTRIBUTE Location OF Pin_Led_Int(0) : LABEL IS "P0[0]";
+    ATTRIBUTE Location OF Pin_Timer_Clear(0) : LABEL IS "P0[0]";
     ATTRIBUTE Location OF \BLE:cy_m0s8_ble\ : LABEL IS "F(BLE,0)";
     ATTRIBUTE Location OF \BLE:bless_isr\ : LABEL IS "[IntrContainer=(0)][IntrId=(12)]";
     ATTRIBUTE lib_model OF __ONE__ : LABEL IS "macrocell1";
-    ATTRIBUTE Location OF __ONE__ : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF __ONE__ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \PrISM_1:SyncCtl:ControlReg\ : LABEL IS "controlcell1";
     ATTRIBUTE Location OF \PrISM_1:SyncCtl:ControlReg\ : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF \PrISM_1:sC8:PrISMdp:u0\ : LABEL IS "datapathcell1";
@@ -197,10 +192,9 @@ ARCHITECTURE __DEFAULT__ OF Mesh_Flood_PSoC4BLE_Main_Clap IS
     ATTRIBUTE Location OF \ADC_MIC:IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(15)]";
     ATTRIBUTE Location OF \ADC_MIC:cy_psoc4_sar\ : LABEL IS "F(SARADC,0)";
     ATTRIBUTE Location OF \PWM_Brightness:cy_m0s8_tcpwm_1\ : LABEL IS "F(TCPWM,1)";
-    ATTRIBUTE Location OF isr_Counter : LABEL IS "[IntrContainer=(0)][IntrId=(1)]";
     ATTRIBUTE Location OF \Timer_Claps:cy_m0s8_tcpwm_1\ : LABEL IS "F(TCPWM,0)";
     ATTRIBUTE Location OF isr_timer : LABEL IS "[IntrContainer=(0)][IntrId=(17)]";
-    ATTRIBUTE Location OF isr_complete : LABEL IS "[IntrContainer=(0)][IntrId=(2)]";
+    ATTRIBUTE Location OF isr_complete : LABEL IS "[IntrContainer=(0)][IntrId=(1)]";
     ATTRIBUTE lib_model OF \PrISM_1:enable_final_reg\ : LABEL IS "macrocell2";
     ATTRIBUTE Location OF \PrISM_1:enable_final_reg\ : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF Net_162 : LABEL IS "macrocell3";
@@ -1587,97 +1581,6 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    Pin_Led_Int:logicalport
-        GENERIC MAP(
-            drive_mode => "111",
-            ibuf_enabled => "1",
-            id => "3322875b-9556-466c-9cf7-cc4785b0f640",
-            init_dr_st => "1",
-            input_buffer_sel => "00",
-            input_clk_en => 0,
-            input_sync => "0",
-            input_sync_mode => "0",
-            intr_mode => "00",
-            invert_in_clock => 0,
-            invert_in_clock_en => 0,
-            invert_in_reset => 0,
-            invert_out_clock => 0,
-            invert_out_clock_en => 0,
-            invert_out_reset => 0,
-            io_voltage => "",
-            layout_mode => "CONTIGUOUS",
-            oe_conn => "0",
-            oe_reset => 0,
-            oe_sync => "0",
-            output_clk_en => 0,
-            output_clock_mode => "0",
-            output_conn => "0",
-            output_mode => "0",
-            output_reset => 0,
-            output_sync => "0",
-            ovt_hyst_trim => "0",
-            ovt_needed => "0",
-            ovt_slew_control => "00",
-            pa_in_clock => -1,
-            pa_in_clock_en => -1,
-            pa_in_reset => -1,
-            pa_out_clock => -1,
-            pa_out_clock_en => -1,
-            pa_out_reset => -1,
-            pin_aliases => "",
-            pin_mode => "I",
-            por_state => 4,
-            port_alias_group => "",
-            port_alias_required => 0,
-            sio_group_cnt => 0,
-            sio_hifreq => "00000000",
-            sio_hyst => "1",
-            sio_ibuf => "00000000",
-            sio_info => "00",
-            sio_obuf => "00000000",
-            sio_refsel => "00000000",
-            sio_vohsel => "00000000",
-            sio_vtrip => "00000000",
-            slew_rate => "0",
-            spanning => 0,
-            sw_only => 0,
-            use_annotation => "0",
-            vtrip => "00",
-            width => 1,
-            in_clk_inv => 0,
-            in_clken_inv => 0,
-            in_clken_mode => 1,
-            in_rst_inv => 0,
-            out_clk_inv => 0,
-            out_clken_inv => 0,
-            out_clken_mode => 1,
-            out_rst_inv => 0)
-        PORT MAP(
-            in_clock_en => open,
-            in_reset => open,
-            out_clock_en => open,
-            out_reset => open);
-
-    Pin_Led_Int(0):iocell
-        GENERIC MAP(
-            in_sync_mode => 0,
-            out_sync_mode => 0,
-            oe_sync_mode => 0,
-            logicalport => "Pin_Led_Int",
-            logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
-        PORT MAP(
-            pa_out => Pin_Led_Int(0)__PA,
-            oe => open,
-            fb => Net_636,
-            pad_in => Pin_Led_Int(0)_PAD,
-            in_clock => open,
-            in_clock_en => '1',
-            in_reset => '0',
-            out_clock => open,
-            out_clock_en => '1',
-            out_reset => '0');
-
     \BLE:cy_m0s8_ble\:p4blecell
         GENERIC MAP(
             cy_registers => "")
@@ -1914,14 +1817,6 @@ BEGIN
             line_compl => Net_445,
             interrupt => Net_441);
 
-    isr_Counter:interrupt
-        GENERIC MAP(
-            int_type => "10",
-            is_nmi => 0)
-        PORT MAP(
-            interrupt => Net_200,
-            clock => ClockBlock_HFCLK);
-
     \Timer_Claps:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
         GENERIC MAP(
             cy_registers => "")
@@ -1952,7 +1847,7 @@ BEGIN
             int_type => "10",
             is_nmi => 0)
         PORT MAP(
-            interrupt => Net_636,
+            interrupt => Net_200,
             clock => ClockBlock_HFCLK);
 
     \PrISM_1:enable_final_reg\:macrocell

@@ -162,8 +162,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareimport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareexport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareimport.scat</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_Counter.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_Counter.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Mic_D.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Mic_D.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Mic_D_aliases.h</File>
@@ -206,10 +204,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Timer_Clear_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_complete.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_complete.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Led_Int.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Led_Int.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Led_Int_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Led_Int_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\janusdg-win\UCU\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Main_Clap.cydsn\Export\ARM_GCC_Generic\BLE_v3_66">

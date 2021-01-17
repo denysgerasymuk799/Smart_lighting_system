@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
   22:Generated_Source\PSoC4/Timer_Claps.c **** 
   23:Generated_Source\PSoC4/Timer_Claps.c **** 
   24:Generated_Source\PSoC4/Timer_Claps.c **** /*******************************************************************************
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 2
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 2
 
 
   25:Generated_Source\PSoC4/Timer_Claps.c **** * Function Name: Timer_Claps_Init
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
   51 000e 8E22     		movs	r2, #142
   52 0010 5200     		lsls	r2, r2, #1
   53 0012 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 3
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 3
 
 
   62:Generated_Source\PSoC4/Timer_Claps.c ****     
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  106:Generated_Source\PSoC4/Timer_Claps.c **** 
  107:Generated_Source\PSoC4/Timer_Claps.c ****         #if (Timer_Claps__PWM_DT == Timer_Claps_PWM_MODE)
  108:Generated_Source\PSoC4/Timer_Claps.c ****             Timer_Claps_CONTROL_REG |= Timer_Claps_CTRL_PWM_DEAD_TIME_CYCLE;
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 4
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 4
 
 
  109:Generated_Source\PSoC4/Timer_Claps.c ****         #endif  /* (Timer_Claps__PWM_DT == Timer_Claps_PWM_MODE) */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
   66 002a BD46     		mov	sp, r7
   67              		@ sp needed
   68 002c 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 5
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 5
 
 
   69              	.L3:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  102 000c 0300     		movs	r3, r0
  103 000e 2370     		strb	r3, [r4]
  182:Generated_Source\PSoC4/Timer_Claps.c ****     Timer_Claps_BLOCK_CONTROL_REG |= Timer_Claps_MASK;
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 6
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 6
 
 
  104              		.loc 1 182 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  204:Generated_Source\PSoC4/Timer_Claps.c **** 
  205:Generated_Source\PSoC4/Timer_Claps.c **** 
  206:Generated_Source\PSoC4/Timer_Claps.c **** /*******************************************************************************
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 7
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 7
 
 
  207:Generated_Source\PSoC4/Timer_Claps.c **** * Function Name: Timer_Claps_Start
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  159              		.loc 1 238 0
  160 0016 FFF7FEFF 		bl	Timer_Claps_Enable
  239:Generated_Source\PSoC4/Timer_Claps.c **** }
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 8
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 8
 
 
  161              		.loc 1 239 0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  194              		.loc 1 260 0
  195 0006 FC1D     		adds	r4, r7, #7
  196 0008 FFF7FEFF 		bl	CyEnterCriticalSection
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 9
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 9
 
 
  197 000c 0300     		movs	r3, r0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  280:Generated_Source\PSoC4/Timer_Claps.c **** *   - Timer_Claps_MODE_TIMER_COMPARE - Timer / Counter with
  281:Generated_Source\PSoC4/Timer_Claps.c **** *                                                 compare capability
  282:Generated_Source\PSoC4/Timer_Claps.c **** *         - Timer_Claps_MODE_TIMER_CAPTURE - Timer / Counter with
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 10
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 10
 
 
  283:Generated_Source\PSoC4/Timer_Claps.c **** *                                                 capture capability
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  266              		.loc 1 302 0
  267 002c 0F23     		movs	r3, #15
  268 002e FB18     		adds	r3, r7, r3
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 11
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 11
 
 
  269 0030 1B78     		ldrb	r3, [r3]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  298 0000 90B5     		push	{r4, r7, lr}
  299              		.cfi_def_cfa_offset 12
  300              		.cfi_offset 4, -12
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 12
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 12
 
 
  301              		.cfi_offset 7, -8
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  346              	.LFE7:
  347              		.size	Timer_Claps_SetQDMode, .-Timer_Claps_SetQDMode
  348              		.section	.text.Timer_Claps_SetPrescaler,"ax",%progbits
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 13
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 13
 
 
  349              		.align	2
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  372 000a FC18     		adds	r4, r7, r3
  373 000c FFF7FEFF 		bl	CyEnterCriticalSection
  374 0010 0300     		movs	r3, r0
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 14
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 14
 
 
  375 0012 2370     		strb	r3, [r4]
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  379:Generated_Source\PSoC4/Timer_Claps.c **** *
  380:Generated_Source\PSoC4/Timer_Claps.c **** * Summary:
  381:Generated_Source\PSoC4/Timer_Claps.c **** *  Writes the register that controls whether the Timer_Claps runs
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 15
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 15
 
 
  382:Generated_Source\PSoC4/Timer_Claps.c **** *  continuously or stops when terminal count is reached.  By default the
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  451 002a 8022     		movs	r2, #128
  452 002c D202     		lsls	r2, r2, #11
  453 002e 0240     		ands	r2, r0
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 16
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 16
 
 
  454 0030 0A43     		orrs	r2, r1
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  427:Generated_Source\PSoC4/Timer_Claps.c **** *     - CC_MATCH_NO_CHANGE  - No change on comparison match
  428:Generated_Source\PSoC4/Timer_Claps.c **** *     - OVERLOW_SET         - Set on overflow
  429:Generated_Source\PSoC4/Timer_Claps.c **** *     - OVERLOW_CLEAR       - Clear on  overflow
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 17
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 17
 
 
  430:Generated_Source\PSoC4/Timer_Claps.c **** *     - OVERLOW_INVERT      - Invert on overflow
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  515              		.size	Timer_Claps_SetPWMMode, .-Timer_Claps_SetPWMMode
  516              		.section	.text.Timer_Claps_SetPWMSyncKill,"ax",%progbits
  517              		.align	2
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 18
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 18
 
 
  518              		.global	Timer_Claps_SetPWMSyncKill
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  487:Generated_Source\PSoC4/Timer_Claps.c ****     uint8 enableInterrupts;
  488:Generated_Source\PSoC4/Timer_Claps.c **** 
  489:Generated_Source\PSoC4/Timer_Claps.c ****     enableInterrupts = CyEnterCriticalSection();
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 19
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 19
 
 
  538              		.loc 1 489 0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  585              		.type	Timer_Claps_SetPWMStopOnKill, %function
  586              	Timer_Claps_SetPWMStopOnKill:
  587              	.LFB12:
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 20
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 20
 
 
  497:Generated_Source\PSoC4/Timer_Claps.c **** 
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  613 001c 8A43     		bics	r2, r1
  614 001e 1A60     		str	r2, [r3]
  526:Generated_Source\PSoC4/Timer_Claps.c ****     Timer_Claps_CONTROL_REG |= ((uint32)((stopOnKillEnable & Timer_Claps_1BIT_MASK)  <<
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 21
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 21
 
 
  615              		.loc 1 526 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  544:Generated_Source\PSoC4/Timer_Claps.c **** * Parameters:
  545:Generated_Source\PSoC4/Timer_Claps.c **** *  Dead time to insert
  546:Generated_Source\PSoC4/Timer_Claps.c **** *   Values: 0 to 255
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 22
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 22
 
 
  547:Generated_Source\PSoC4/Timer_Claps.c **** *
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  690 0032 0F23     		movs	r3, #15
  691 0034 FB18     		adds	r3, r7, r3
  692 0036 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 23
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 23
 
 
  693 0038 1800     		movs	r0, r3
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  723              		.cfi_offset 4, -12
  724              		.cfi_offset 7, -8
  725              		.cfi_offset 14, -4
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 24
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 24
 
 
  726 0002 85B0     		sub	sp, sp, #20
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  771              		.section	.text.Timer_Claps_WriteCounter,"ax",%progbits
  772              		.align	2
  773              		.global	Timer_Claps_WriteCounter
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 25
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 25
 
 
  774              		.code	16
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  805 001a C046     		.align	2
  806              	.L42:
  807 001c 08012040 		.word	1075839240
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 26
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 26
 
 
  808              		.cfi_endproc
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  842 0014 08012040 		.word	1075839240
  843              		.cfi_endproc
  844              	.LFE16:
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 27
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 27
 
 
  845              		.size	Timer_Claps_ReadCounter, .-Timer_Claps_ReadCounter
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  869 0008 0F23     		movs	r3, #15
  870 000a FC18     		adds	r4, r7, r3
  871 000c FFF7FEFF 		bl	CyEnterCriticalSection
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 28
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 28
 
 
  872 0010 0300     		movs	r3, r0
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  679:Generated_Source\PSoC4/Timer_Claps.c **** ********************************************************************************
  680:Generated_Source\PSoC4/Timer_Claps.c **** *
  681:Generated_Source\PSoC4/Timer_Claps.c **** * Summary:
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 29
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 29
 
 
  682:Generated_Source\PSoC4/Timer_Claps.c **** *  Writes the 16 bit period register with the new period value.
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  955              	.LFB19:
  697:Generated_Source\PSoC4/Timer_Claps.c **** 
  698:Generated_Source\PSoC4/Timer_Claps.c **** 
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 30
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 30
 
 
  699:Generated_Source\PSoC4/Timer_Claps.c **** /*******************************************************************************
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  718:Generated_Source\PSoC4/Timer_Claps.c **** 
  719:Generated_Source\PSoC4/Timer_Claps.c **** /*******************************************************************************
  720:Generated_Source\PSoC4/Timer_Claps.c **** * Function Name: Timer_Claps_SetCompareSwap
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 31
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 31
 
 
  721:Generated_Source\PSoC4/Timer_Claps.c **** ********************************************************************************
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  1019 0020 084B     		ldr	r3, .L59
  1020 0022 084A     		ldr	r2, .L59
  1021 0024 1168     		ldr	r1, [r2]
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 32
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 32
 
 
  1022 0026 7A68     		ldr	r2, [r7, #4]
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  1055              		.cfi_startproc
  1056              		@ args = 0, pretend = 0, frame = 8
  1057              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 33
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 33
 
 
  1058 0000 80B5     		push	{r7, lr}
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  786:Generated_Source\PSoC4/Timer_Claps.c **** uint32 Timer_Claps_ReadPeriodBuf(void)
  787:Generated_Source\PSoC4/Timer_Claps.c **** {
  1094              		.loc 1 787 0
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 34
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 34
 
 
  1095              		.cfi_startproc
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  808:Generated_Source\PSoC4/Timer_Claps.c **** * Return:
  809:Generated_Source\PSoC4/Timer_Claps.c **** *  None
  810:Generated_Source\PSoC4/Timer_Claps.c **** *
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 35
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 35
 
 
  811:Generated_Source\PSoC4/Timer_Claps.c **** *******************************************************************************/
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  1171 003a FFF7FEFF 		bl	CyExitCriticalSection
  823:Generated_Source\PSoC4/Timer_Claps.c **** }
  1172              		.loc 1 823 0
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 36
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 36
 
 
  1173 003e C046     		nop
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  1200              		.cfi_offset 14, -4
  1201 0002 82B0     		sub	sp, sp, #8
  1202              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 37
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 37
 
 
  1203 0004 00AF     		add	r7, sp, #0
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  875:Generated_Source\PSoC4/Timer_Claps.c **** 
  876:Generated_Source\PSoC4/Timer_Claps.c **** 
  877:Generated_Source\PSoC4/Timer_Claps.c **** /*******************************************************************************
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 38
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 38
 
 
  878:Generated_Source\PSoC4/Timer_Claps.c **** * Function Name: Timer_Claps_ReadCompare
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  922:Generated_Source\PSoC4/Timer_Claps.c ****         }
  923:Generated_Source\PSoC4/Timer_Claps.c **** 
  924:Generated_Source\PSoC4/Timer_Claps.c ****         return (regVal & Timer_Claps_16BIT_MASK);
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 39
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 39
 
 
  925:Generated_Source\PSoC4/Timer_Claps.c ****     #else
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  954:Generated_Source\PSoC4/Timer_Claps.c **** void Timer_Claps_WriteCompareBuf(uint32 compareBuf)
  955:Generated_Source\PSoC4/Timer_Claps.c **** {
  1268              		.loc 1 955 0
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 40
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 40
 
 
  1269              		.cfi_startproc
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  1301              		.align	2
  1302              		.global	Timer_Claps_ReadCompareBuf
  1303              		.code	16
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 41
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 41
 
 
  1304              		.thumb_func
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
 1018:Generated_Source\PSoC4/Timer_Claps.c ****             regVal++;
 1019:Generated_Source\PSoC4/Timer_Claps.c ****         }
 1020:Generated_Source\PSoC4/Timer_Claps.c ****         else
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 42
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 42
 
 
 1021:Generated_Source\PSoC4/Timer_Claps.c ****         {
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  1345              		@ args = 0, pretend = 0, frame = 0
  1346              		@ frame_needed = 1, uses_anonymous_args = 0
  1347 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 43
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 43
 
 
  1348              		.cfi_def_cfa_offset 8
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  1381              		@ frame_needed = 1, uses_anonymous_args = 0
  1382 0000 80B5     		push	{r7, lr}
  1383              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 44
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 44
 
 
  1384              		.cfi_offset 7, -8
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
 1094:Generated_Source\PSoC4/Timer_Claps.c **** void Timer_Claps_SetCaptureMode(uint32 triggerMode)
 1095:Generated_Source\PSoC4/Timer_Claps.c **** {
  1413              		.loc 1 1095 0
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 45
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 45
 
 
  1414              		.cfi_startproc
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  1459              	.L95:
  1460              		.align	2
  1461              	.L94:
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 46
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 46
 
 
  1462 0040 24012040 		.word	1075839268
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  1489 0008 0F23     		movs	r3, #15
  1490 000a FC18     		adds	r4, r7, r3
  1491 000c FFF7FEFF 		bl	CyEnterCriticalSection
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 47
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 47
 
 
  1492 0010 0300     		movs	r3, r0
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
 1142:Generated_Source\PSoC4/Timer_Claps.c **** ********************************************************************************
 1143:Generated_Source\PSoC4/Timer_Claps.c **** *
 1144:Generated_Source\PSoC4/Timer_Claps.c **** * Summary:
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 48
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 48
 
 
 1145:Generated_Source\PSoC4/Timer_Claps.c **** *  Sets the start trigger mode. For Quadrature Decoder mode this is the
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  1567 0026 7A68     		ldr	r2, [r7, #4]
  1568 0028 1202     		lsls	r2, r2, #8
  1569 002a 0A43     		orrs	r2, r1
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 49
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 49
 
 
  1570 002c 1A60     		str	r2, [r3]
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
 1193:Generated_Source\PSoC4/Timer_Claps.c **** {
  1599              		.loc 1 1193 0
  1600              		.cfi_startproc
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 50
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 50
 
 
  1601              		@ args = 0, pretend = 0, frame = 16
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  1646              	.L104:
  1647 0042 C046     		.align	2
  1648              	.L103:
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 51
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 51
 
 
  1649 0044 24012040 		.word	1075839268
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  1676 0008 0F23     		movs	r3, #15
  1677 000a FC18     		adds	r4, r7, r3
  1678 000c FFF7FEFF 		bl	CyEnterCriticalSection
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 52
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 52
 
 
  1679 0010 0300     		movs	r3, r0
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
 1240:Generated_Source\PSoC4/Timer_Claps.c **** ********************************************************************************
 1241:Generated_Source\PSoC4/Timer_Claps.c **** *
 1242:Generated_Source\PSoC4/Timer_Claps.c **** * Summary:
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 53
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 53
 
 
 1243:Generated_Source\PSoC4/Timer_Claps.c **** *  Triggers the designated command to occur on the designated TCPWM instances.
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  1748 001c 9140     		lsls	r1, r1, r2
  1749 001e 0A00     		movs	r2, r1
  1750 0020 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 54
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 54
 
 
 1272:Generated_Source\PSoC4/Timer_Claps.c **** 
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  1781              		@ frame_needed = 1, uses_anonymous_args = 0
  1782 0000 80B5     		push	{r7, lr}
  1783              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 55
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 55
 
 
  1784              		.cfi_offset 7, -8
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
 1314:Generated_Source\PSoC4/Timer_Claps.c **** *
 1315:Generated_Source\PSoC4/Timer_Claps.c **** * Return:
 1316:Generated_Source\PSoC4/Timer_Claps.c **** *  None
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 56
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 56
 
 
 1317:Generated_Source\PSoC4/Timer_Claps.c **** *
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
 1333:Generated_Source\PSoC4/Timer_Claps.c **** *   None
 1334:Generated_Source\PSoC4/Timer_Claps.c **** *
 1335:Generated_Source\PSoC4/Timer_Claps.c **** * Return:
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 57
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 57
 
 
 1336:Generated_Source\PSoC4/Timer_Claps.c **** *  Masked interrupt source
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
 1357:Generated_Source\PSoC4/Timer_Claps.c **** *
 1358:Generated_Source\PSoC4/Timer_Claps.c **** * Return:
 1359:Generated_Source\PSoC4/Timer_Claps.c **** *  Interrupt request value
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 58
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 58
 
 
 1360:Generated_Source\PSoC4/Timer_Claps.c **** *   Values:
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
 1381:Generated_Source\PSoC4/Timer_Claps.c **** *     - Timer_Claps_INTR_MASK_TC       - Terminal count mask
 1382:Generated_Source\PSoC4/Timer_Claps.c **** *     - Timer_Claps_INTR_MASK_CC_MATCH - Compare count / capture mask
 1383:Generated_Source\PSoC4/Timer_Claps.c **** *
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 59
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 59
 
 
 1384:Generated_Source\PSoC4/Timer_Claps.c **** * Return:
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
 1400:Generated_Source\PSoC4/Timer_Claps.c **** *
 1401:Generated_Source\PSoC4/Timer_Claps.c **** * Parameters:
 1402:Generated_Source\PSoC4/Timer_Claps.c **** *   interruptMask: Mask of interrupts to set
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 60
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 60
 
 
 1403:Generated_Source\PSoC4/Timer_Claps.c **** *   Values:
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  2003 0011 E9000000 		.4byte	.LASF78
  2004 0015 AA040000 		.4byte	.LASF79
  2005 0019 00000000 		.4byte	.Ldebug_ranges0+0
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 61
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 61
 
 
  2006 001d 00000000 		.4byte	0
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  2060 0085 04       		.byte	0x4
  2061 0086 18040000 		.4byte	.LASF11
  2062 008a 02       		.uleb128 0x2
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 62
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 62
 
 
  2063 008b 08       		.byte	0x8
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  2117 00fb 01       		.uleb128 0x1
  2118 00fc 9C       		.byte	0x9c
  2119 00fd 09       		.uleb128 0x9
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 63
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 63
 
 
  2120 00fe 8B050000 		.4byte	.LASF20
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  2174 0173 01       		.byte	0x1
  2175 0174 4601     		.2byte	0x146
  2176 0176 77000000 		.4byte	0x77
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 64
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 64
 
 
  2177 017a 02       		.uleb128 0x2
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  2231 01e6 64       		.sleb128 -28
  2232 01e7 0A       		.uleb128 0xa
  2233 01e8 9C050000 		.4byte	.LASF21
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 65
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 65
 
 
  2234 01ec 01       		.byte	0x1
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  2288 0258 0702     		.2byte	0x207
  2289 025a 00000000 		.4byte	.LFB12
  2290 025e 4C000000 		.4byte	.LFE12-.LFB12
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 66
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 66
 
 
  2291 0262 01       		.uleb128 0x1
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  2345 02ce F1020000 		.4byte	0x2f1
  2346 02d2 0B       		.uleb128 0xb
  2347 02d3 AF010000 		.4byte	.LASF39
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 67
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 67
 
 
  2348 02d7 01       		.byte	0x1
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  2402 0349 9802     		.2byte	0x298
  2403 034b 77000000 		.4byte	0x77
  2404 034f 02       		.uleb128 0x2
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 68
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 68
 
 
  2405 0350 91       		.byte	0x91
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  2459 03c2 64       		.sleb128 -28
  2460 03c3 0A       		.uleb128 0xa
  2461 03c4 9C050000 		.4byte	.LASF21
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 69
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 69
 
 
  2462 03c8 01       		.byte	0x1
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  2516 043a 2E03     		.2byte	0x32e
  2517 043c 6B000000 		.4byte	0x6b
  2518 0440 02       		.uleb128 0x2
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 70
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 70
 
 
  2519 0441 91       		.byte	0x91
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  2573 04b6 18000000 		.4byte	.LFE27-.LFB27
  2574 04ba 01       		.uleb128 0x1
  2575 04bb 9C       		.byte	0x9c
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 71
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 71
 
 
  2576 04bc 0D       		.uleb128 0xd
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  2630 0534 A3010000 		.4byte	.LASF63
  2631 0538 01       		.byte	0x1
  2632 0539 6704     		.2byte	0x467
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 72
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 72
 
 
  2633 053b 77000000 		.4byte	0x77
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  2687 05aa 91       		.byte	0x91
  2688 05ab 64       		.sleb128 -28
  2689 05ac 0A       		.uleb128 0xa
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 73
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 73
 
 
  2690 05ad 9C050000 		.4byte	.LASF21
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  2744 061c F104     		.2byte	0x4f1
  2745 061e 77000000 		.4byte	0x77
  2746 0622 02       		.uleb128 0x2
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 74
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 74
 
 
  2747 0623 91       		.byte	0x91
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  2801 069b 01       		.uleb128 0x1
  2802 069c 9C       		.byte	0x9c
  2803 069d 0C       		.uleb128 0xc
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 75
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 75
 
 
  2804 069e C8050000 		.4byte	.LASF75
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  2858 0008 0E       		.uleb128 0xe
  2859 0009 1B       		.uleb128 0x1b
  2860 000a 0E       		.uleb128 0xe
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 76
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 76
 
 
  2861 000b 55       		.uleb128 0x55
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  2915 0041 19       		.uleb128 0x19
  2916 0042 03       		.uleb128 0x3
  2917 0043 0E       		.uleb128 0xe
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 77
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 77
 
 
  2918 0044 3A       		.uleb128 0x3a
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  2972 007c 00       		.byte	0
  2973 007d 00       		.byte	0
  2974 007e 09       		.uleb128 0x9
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 78
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 78
 
 
  2975 007f 2E       		.uleb128 0x2e
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  3029 00b6 0C       		.uleb128 0xc
  3030 00b7 2E       		.uleb128 0x2e
  3031 00b8 01       		.byte	0x1
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 79
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 79
 
 
  3032 00b9 3F       		.uleb128 0x3f
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  3086 00f1 3B       		.uleb128 0x3b
  3087 00f2 0B       		.uleb128 0xb
  3088 00f3 49       		.uleb128 0x49
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 80
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 80
 
 
  3089 00f4 13       		.uleb128 0x13
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  3143 00a8 00000000 		.4byte	.LFB21
  3144 00ac 20000000 		.4byte	.LFE21-.LFB21
  3145 00b0 00000000 		.4byte	.LFB22
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 81
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 81
 
 
  3146 00b4 18000000 		.4byte	.LFE22-.LFB22
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  3200 002c 48000000 		.4byte	.LFE7
  3201 0030 00000000 		.4byte	.LFB8
  3202 0034 48000000 		.4byte	.LFE8
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 82
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 82
 
 
  3203 0038 00000000 		.4byte	.LFB9
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  3257 0110 00000000 		.4byte	.LFB36
  3258 0114 20000000 		.4byte	.LFE36
  3259 0118 00000000 		.4byte	.LFB37
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 83
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 83
 
 
  3260 011c 1C000000 		.4byte	.LFE37
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  3288              	.LASF7:
  3289 0084 6C6F6E67 		.ascii	"long long unsigned int\000"
  3289      206C6F6E 
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 84
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 84
 
 
  3289      6720756E 
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  3311      6C6500
  3312              	.LASF32:
  3313 0158 54696D65 		.ascii	"Timer_Claps_SetPWMSyncKill\000"
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 85
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 85
 
 
  3313      725F436C 
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  3335      47657449 
  3335      6E746572 
  3336              	.LASF5:
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 86
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 86
 
 
  3337 022a 6C6F6E67 		.ascii	"long unsigned int\000"
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  3354      37373135 
  3355 0338 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
  3355      66756E63 
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 87
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 87
 
 
  3355      74696F6E 
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  3377 0418 666C6F61 		.ascii	"float\000"
  3377      7400
  3378              	.LASF27:
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 88
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 88
 
 
  3379 041e 70726573 		.ascii	"prescaler\000"
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  3398      00
  3399              	.LASF24:
  3400 0503 6D6F6465 		.ascii	"mode\000"
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 89
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 89
 
 
  3400      00
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 1
  3420      67657243 
  3421              	.LASF75:
  3422 05c8 54696D65 		.ascii	"Timer_Claps_ClearInterrupt\000"
-ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccxD6cDk.s 			page 90
+ARM GAS  C:\Users\JANUSD~1\AppData\Local\Temp\ccv6mF1c.s 			page 90
 
 
  3422      725F436C 

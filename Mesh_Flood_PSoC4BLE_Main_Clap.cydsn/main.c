@@ -134,7 +134,7 @@ int main()
         //Change_brightness();
     }
 }
-
+/*
 CY_ISR(Timer_Int_Handler){
     clap_counter =Timer_Claps_ReadCapture();
     //if (counter > 10000){
@@ -148,7 +148,7 @@ CY_ISR(Timer_Int_Handler){
     
     Timer_Claps_ClearInterrupt(Timer_Claps_INTR_MASK_CC_MATCH);
     
-}
+}*/
 
 CY_ISR(Complete_Int_Handler){
     Pin_Timer_Clear_Write(1);
@@ -161,7 +161,7 @@ CY_ISR(Complete_Int_Handler){
     sprintf(rez, "counter  = %d \n ", clap_counter);
     UART_UartPutString(rez);
     if (clap_counter < 350){
-        CyDelay(100);
+        
         CyGlobalIntDisable;
         
         on_off_counter++;
@@ -173,7 +173,7 @@ CY_ISR(Complete_Int_Handler){
         if (interrupt_counter == 4) {
                 interrupt_counter = 0;
             }
-        //CyDelay(50);
+        CyDelay(300);
         
         uint8 bright = On_Off_collection[on_off_counter];
         uint8 r[4];
@@ -181,6 +181,7 @@ CY_ISR(Complete_Int_Handler){
         r[1] = RGB_Collection[interrupt_counter][1];
         r[2] = RGB_Collection[interrupt_counter][2];
         r[3] = bright;
+        
         sendColorDataToNetwork(r);
         SwitchRole();
     	ConnectToPeripheralDevice();
@@ -190,7 +191,8 @@ CY_ISR(Complete_Int_Handler){
         UART_UartPutString(rez);
         
         
-        isr_Counter_ClearPending();
+        isr_complete_ClearPending();
+        CyDelay(100);
         CyGlobalIntEnable;
     }else{
     
@@ -199,7 +201,7 @@ CY_ISR(Complete_Int_Handler){
             on_off_counter = 0;
         }
         
-        CyDelay(100);
+        
         CyGlobalIntDisable;
         uint8 bright = On_Off_collection[on_off_counter];
         uint8 r[4];
@@ -216,7 +218,8 @@ CY_ISR(Complete_Int_Handler){
         UART_UartPutString(rez);
         
         
-        isr_Counter_ClearPending();
+        isr_complete_ClearPending();
+        CyDelay(100);
         CyGlobalIntEnable;
     }
     Pin_Timer_Clear_Write(0);
@@ -246,7 +249,7 @@ void InitializeSystem(void)
     uint16 prev_val;
     uint16 init_val = ADC_MIC_GetResult16(0);
     
-    isr_Counter_StartEx(CC_TC_InterruptHandler);
+    //isr_Counter_StartEx(CC_TC_InterruptHandler);
     
     // PWM
     //PWM_Brightness_Start();
@@ -259,7 +262,7 @@ void InitializeSystem(void)
 	CyGlobalIntEnable;
 	
     Timer_Claps_Start();
-    isr_timer_StartEx(Timer_Int_Handler);
+    //isr_timer_StartEx(Timer_Int_Handler);
     isr_complete_StartEx(Complete_Int_Handler);
     
 	/* Start BLE component and Register the generic Event callback function */
@@ -332,20 +335,7 @@ void Change_brightness(){
     sendColorDataToNetwork(RGB_Collection[interrupt_counter]);
 }
 
-CY_ISR(CC_TC_InterruptHandler)
-{   
-    
-    
-    Pin_Led_Int_Write(1);
-    Pin_Led_Int_Write(0);
-    
-    
-    
-    //CyDelay(50);
-    
-    //CyDelay(50);
-    
-}
+
 
 
 /*******************************************************************************

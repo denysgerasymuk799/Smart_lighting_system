@@ -8,3 +8,4 @@ C:\Users\janusdg-win\UCU\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Main.cydsn\M
 C:\Users\janusdg-win\UCU\TEST_MUL_74173.cydsn\TEST_MUL_74173.cyprj|3d5ee03c-b965-4a98-8b5a-c62eb1e2330a
 C:\Users\janusdg-win\UCU\Smart_lightning_system\Mic.cydsn\Mic.cyprj|a0e75dff-3712-4d6d-9022-705bed402c94
 C:\Users\janusdg-win\UCU\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Main_Clap.cydsn\Mesh_Flood_PSoC4BLE_Main_Clap.cyprj|c8b5f343-eced-46ae-b84f-9df47fd8649e
+C:\Users\janusdg-win\UCU\Smart_lightning_system\Mesh_Flood_PSoC4BLE_Main_Brightness.cydsn\Mesh_Flood_PSoC4BLE_Main_Brightness.cyprj|f342fd66-b45c-4758-aae8-f7970f9a4eef

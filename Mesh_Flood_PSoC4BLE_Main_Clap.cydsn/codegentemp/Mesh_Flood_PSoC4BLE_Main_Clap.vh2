@@ -2,7 +2,7 @@
 --	Conversion of Mesh_Flood_PSoC4BLE_Main_Clap.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sat Jan 16 20:46:25 2021
+--	Sun Jan 17 03:38:48 2021
 --
 
 USE cypress.cypress.all;
@@ -420,11 +420,6 @@ SIGNAL tmpOE__Pin_Timer_Clear_net_0 : bit;
 SIGNAL tmpIO_0__Pin_Timer_Clear_net_0 : bit;
 TERMINAL tmpSIOVREF__Pin_Timer_Clear_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Pin_Timer_Clear_net_0 : bit;
-SIGNAL Net_636 : bit;
-SIGNAL tmpOE__Pin_Led_Int_net_0 : bit;
-SIGNAL tmpIO_0__Pin_Led_Int_net_0 : bit;
-TERMINAL tmpSIOVREF__Pin_Led_Int_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Pin_Led_Int_net_0 : bit;
 SIGNAL \PrISM_1:enable_final_reg\\D\ : bit;
 SIGNAL \PrISM_1:reset_reg\\D\ : bit;
 SIGNAL Net_162D : bit;
@@ -1733,10 +1728,6 @@ Clock_1:cy_clock_v1_0
 		is_digital=>'0')
 	PORT MAP(clock_out=>Net_434,
 		dig_domain_out=>open);
-isr_Counter:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10",
-		is_nmi=>'0')
-	PORT MAP(int_signal=>Net_200);
 Clock_2:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"fe198e88-4290-4b37-be30-289de40a9468",
@@ -1838,77 +1829,7 @@ Pin_Timer_Clear:cy_psoc3_pins_v1_10
 isr_complete:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10",
 		is_nmi=>'0')
-	PORT MAP(int_signal=>Net_636);
-Pin_Led_Int:cy_psoc3_pins_v1_10
-	GENERIC MAP(id=>"3322875b-9556-466c-9cf7-cc4785b0f640",
-		drive_mode=>"111",
-		ibuf_enabled=>"1",
-		init_dr_st=>"1",
-		input_sync=>"0",
-		input_clk_en=>'0',
-		input_sync_mode=>"0",
-		intr_mode=>"00",
-		invert_in_clock=>'0',
-		invert_in_clock_en=>'0',
-		invert_in_reset=>'0',
-		invert_out_clock=>'0',
-		invert_out_clock_en=>'0',
-		invert_out_reset=>'0',
-		io_voltage=>"",
-		layout_mode=>"CONTIGUOUS",
-		output_conn=>"0",
-		output_sync=>"0",
-		output_clk_en=>'0',
-		output_mode=>"0",
-		output_reset=>'0',
-		output_clock_mode=>"0",
-		oe_sync=>"0",
-		oe_conn=>"0",
-		oe_reset=>'0',
-		pin_aliases=>"",
-		pin_mode=>"I",
-		por_state=>4,
-		sio_group_cnt=>0,
-		sio_hifreq=>"00000000",
-		sio_hyst=>"1",
-		sio_ibuf=>"00000000",
-		sio_info=>"00",
-		sio_obuf=>"00000000",
-		sio_refsel=>"00000000",
-		sio_vtrip=>"00000000",
-		sio_vohsel=>"00000000",
-		slew_rate=>"0",
-		spanning=>'0',
-		sw_only=>'0',
-		vtrip=>"00",
-		width=>1,
-		port_alias_required=>'0',
-		port_alias_group=>"",
-		use_annotation=>"0",
-		pa_in_clock=>-1,
-		pa_in_clock_en=>-1,
-		pa_in_reset=>-1,
-		pa_out_clock=>-1,
-		pa_out_clock_en=>-1,
-		pa_out_reset=>-1,
-		ovt_needed=>"0",
-		ovt_slew_control=>"00",
-		ovt_hyst_trim=>"0",
-		input_buffer_sel=>"00")
-	PORT MAP(oe=>(one),
-		y=>(zero),
-		fb=>Net_636,
-		analog=>(open),
-		io=>(tmpIO_0__Pin_Led_Int_net_0),
-		siovref=>(tmpSIOVREF__Pin_Led_Int_net_0),
-		annotation=>(open),
-		in_clock=>zero,
-		in_clock_en=>one,
-		in_reset=>zero,
-		out_clock=>zero,
-		out_clock_en=>one,
-		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Pin_Led_Int_net_0);
+	PORT MAP(int_signal=>Net_200);
 \PrISM_1:enable_final_reg\:cy_dff
 	PORT MAP(d=>\PrISM_1:ctrl_enable\,
 		clk=>\PrISM_1:clock_cnt\,
